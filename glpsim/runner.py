@@ -21,6 +21,7 @@ import json
 import os
 import statistics
 import time
+import unicodedata
 from datetime import datetime, timezone
 
 from . import batch, render, schemas
@@ -82,13 +83,49 @@ def save_state(paths, state: dict) -> None:
     dump_json(state_path(paths, state["step"], state["kind"]), state)
 
 
+LEDGER_FIELDS = ("role", "batch_id", "model", "submitted_at", "collected_at", "request_count",
+                 "estimate_usd", "status", "input_tokens", "output_tokens", "actual_usd", "result_counts")
+
+
+def load_ledger(paths) -> dict:
+    p = paths.spend_ledger
+    return load_json(p) if p.exists() else {"batches": []}
+
+
+def record_spend(paths, state: dict, entry: dict) -> None:
+    """Upsert one batch into runs/spend_ledger.json (keyed by batch_id). Called on submit and
+    on collect, so the ledger holds every batch even after a step's files are cleared."""
+    ledger = load_ledger(paths)
+    row = {"step": state["step"], "kind": state["kind"],
+           **{k: entry[k] for k in LEDGER_FIELDS if k in entry}}
+    for i, b in enumerate(ledger["batches"]):
+        if b["batch_id"] == entry["batch_id"]:
+            ledger["batches"][i] = {**b, **row}
+            break
+    else:
+        ledger["batches"].append(row)
+    errs = schemas.errors(schemas.validator(paths, "spend_ledger"), ledger)
+    if errs:
+        raise RuntimeError("internal: spend ledger failed its schema: " + "; ".join(errs))
+    dump_json(paths.spend_ledger, ledger)
+
+
+def _cost(b: dict) -> float:
+    return b["actual_usd"] if b.get("actual_usd") is not None else b["estimate_usd"]
+
+
 def step_spent(paths, step: int) -> float:
-    """Recorded spend for the step: actual where collected, worst-case estimate otherwise."""
-    total = 0.0
+    """Recorded spend for the step, every attempt included: actual where collected, worst-case
+    estimate otherwise. The ledger is the record; a batch found only in a state file (written
+    before the ledger existed) is counted too, once."""
+    seen, total = set(), 0.0
+    for b in load_ledger(paths)["batches"]:
+        if b["step"] == step:
+            seen.add(b["batch_id"]); total += _cost(b)
     for kind in ("generate", "judge"):
-        st = load_state(paths, step, kind)
-        for b in (st or {}).get("batches", []):
-            total += b["actual_usd"] if b.get("actual_usd") is not None else b["estimate_usd"]
+        for b in (load_state(paths, step, kind) or {}).get("batches", []):
+            if b["batch_id"] not in seen:
+                seen.add(b["batch_id"]); total += _cost(b)
     return total
 
 
@@ -290,6 +327,7 @@ def guarded_submit(paths, cfg, args, client, state: dict, role: str, requests: l
         "batch_file": str(batch_file.relative_to(paths.root)), "collected_at": None,
         "input_tokens": None, "output_tokens": None, "actual_usd": None})
     save_state(paths, state)
+    record_spend(paths, state, state["batches"][-1])
     print(f"submitted {label} {batch_id} ({len(requests)} requests); state in "
           f"{state_path(paths, state['step'], state['kind']).relative_to(paths.root)}")
     return batch_id
@@ -303,6 +341,7 @@ def wait_and_collect(paths, cfg, args, client, state: dict, entry: dict) -> dict
     entry.update(status="collected", collected_at=now(), input_tokens=tin, output_tokens=tout,
                  actual_usd=round(batch.actual_usd(cfg, entry["model"], tin, tout), 4),
                  result_counts=result_counts(results))
+    record_spend(paths, state, entry)
     print(f"  collected {len(results)} result(s): {entry['result_counts']}; "
           f"usage {tin:,} in / {tout:,} out = ${entry['actual_usd']:.2f}")
     return results
@@ -459,14 +498,29 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
 # ---------------------------------------------------------------- judge
 
 def mean_scores(samples: list[dict]) -> dict:
+    """One sample is kept as is. Several are averaged field by field; the composite is
+    recomputed from the averaged sub-axes; claims and rationale come from the first sample."""
     if len(samples) == 1:
         return json.loads(json.dumps(samples[0]))
-    out = {"badness": {k: round(statistics.fmean(s["badness"][k] for s in samples), 2)
-                       for k in samples[0]["badness"]},
-           "plausibility": round(statistics.fmean(s["plausibility"] for s in samples), 2),
-           "generativity": round(statistics.fmean(s["generativity"] for s in samples), 2),
-           "rationale": samples[0]["rationale"]}
-    return out
+    def avg(get):
+        return round(statistics.fmean(get(s) for s in samples), 2)
+    axes = {k: avg(lambda s: s["plausibility_axes"][k]) for k in samples[0]["plausibility_axes"]}
+    return {"least_plausible_claims": samples[0]["least_plausible_claims"],
+            "badness": {k: avg(lambda s: s["badness"][k]) for k in samples[0]["badness"]},
+            "plausibility_axes": axes,
+            "plausibility": plausibility_composite(axes),
+            "generativity": avg(lambda s: s["generativity"]),
+            "rationale": samples[0]["rationale"]}
+
+
+def judge_batch_files(paths, step: int, state: dict | None, resuming: bool = False):
+    """Batch files for a judging pass. Pass 1 keeps the plain names; a re-judge gets its own
+    (`_judge_batch_p2.jsonl`, ...), so earlier passes' records of what was sent survive."""
+    passes = sum(1 for b in (state or {}).get("batches", []) if b["role"] == "main")
+    n = passes if resuming else passes + 1
+    suffix = "" if n <= 1 else f"_p{n}"
+    d = paths.step_runs(step)
+    return d / f"_judge_batch{suffix}.jsonl", d / f"_judge_repair_batch{suffix}.jsonl"
 
 
 def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
@@ -484,8 +538,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
     samples_n = cfg["judging"].get("judge_samples", 1)
     by_id = {r["run_id"]: (p, r) for p, r in loaded}
     cid_to_run = {cid: rid for rid in by_id for cid in judge_custom_ids(rid, samples_n)}
-    jfile = paths.step_runs(step) / "_judge_batch.jsonl"
-    rfile = paths.step_runs(step) / "_judge_repair_batch.jsonl"
+    jfile, rfile = judge_batch_files(paths, step, state, resuming=args.resume)
 
     try:
         if not args.resume:
@@ -505,13 +558,16 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                 rid = cid_to_run[cid]
                 p, run = by_id[rid]
                 if rid not in touched:      # this pass replaces any earlier judgement of the run
+                    if run.get("scores"):       # ...which is kept, not overwritten
+                        run.setdefault("superseded_scores", []).append(
+                            {**run["scores"], "superseded_at": now()})
                     for k in ("scores", "judge_samples"):
                         run.pop(k, None)
                     run.setdefault("provenance", {})["judge"] = []
                     run.setdefault("validation", {})["judge"] = {"errors": [], "repair_attempted": False}
                     touched.add(rid)
                 run["provenance"]["judge"].append(call_record("main", entry["batch_id"], judge_model, res))
-                ok, errs, text = judge_result(paths, res)
+                ok, errs, text = judge_result(paths, res, run)
                 if ok is not None:
                     run.setdefault("judge_samples", []).append({"custom_id": cid, **ok})
                 else:
@@ -534,7 +590,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
             first = collect(client, main["batch_id"])     # failing texts, re-read from the API
             reqs = []
             for cid in state["repair_ids"]:
-                _, errs, text = judge_result(paths, first[cid])
+                _, errs, text = judge_result(paths, first[cid], by_id[cid_to_run[cid]][1])
                 reqs.append(repair_request(paths, originals[cid], text, errs))
             print(f"{len(reqs)} judge response(s) failed validation; one repair attempt each")
             if guarded_submit(paths, cfg, args, client, state, "repair", reqs, rfile,
@@ -559,7 +615,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                         rec["errors"].append(f"{cid}: repair: no result returned by the batch")
                         continue
                     run["provenance"]["judge"].append(call_record("repair", entry["batch_id"], judge_model, res))
-                    ok, errs, text = judge_result(paths, res)
+                    ok, errs, text = judge_result(paths, res, run)
                     if ok is not None:
                         run.setdefault("judge_samples", []).append({"custom_id": cid, **ok})
                     else:
@@ -582,8 +638,52 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
     return summarise(paths, step, "judge", state)
 
 
-def judge_result(paths, res: dict) -> tuple[dict | None, list[str], str | None]:
-    """(parsed scores or None, errors, raw text) for one judge result."""
+def _norm(text: str) -> str:
+    """For verbatim matching: unify quote marks, dashes and whitespace; ignore case."""
+    text = unicodedata.normalize("NFKC", text)
+    for a, b in (("\u2018", "'"), ("\u2019", "'"), ("\u201c", '"'), ("\u201d", '"'),
+                 ("\u2013", "-"), ("\u2014", "-"), ("\u2212", "-")):
+        text = text.replace(a, b)
+    return " ".join(text.split()).casefold()
+
+
+def _strings(node):
+    if isinstance(node, str):
+        yield node
+    elif isinstance(node, dict):
+        for v in node.values():
+            yield from _strings(v)
+    elif isinstance(node, list):
+        for v in node:
+            yield from _strings(v)
+
+
+def candidate_haystack(run: dict) -> str:
+    """Everything the judge was shown of the candidate: every string value of the world and
+    prose, plus the world as rendered in the prompt (so `"key": value` quotes match)."""
+    parts = list(_strings(run.get("world", {}))) + list(_strings(run.get("prose", {})))
+    parts.append(render.pretty(run.get("world", {})))
+    return "\n".join(_norm(p) for p in parts)
+
+
+def quote_errors(claims: list[dict], run: dict) -> list[str]:
+    hay = candidate_haystack(run)
+    errs = []
+    for i, c in enumerate(claims):
+        q = _norm(c["quote"]).strip(" .\"'")
+        if not q or q not in hay:
+            errs.append(f"least_plausible_claims/{i}/quote: not found verbatim in the candidate "
+                        f"({c['quote'][:120]!r}); copy it character for character")
+    return errs
+
+
+def plausibility_composite(axes: dict) -> float:
+    return round(statistics.fmean(axes[k] for k in ("driver_fidelity", "mechanism", "magnitude")), 2)
+
+
+def judge_result(paths, res: dict, run: dict) -> tuple[dict | None, list[str], str | None]:
+    """(parsed scores or None, errors, raw text) for one judge result. A valid response gets
+    its composite `plausibility` (mean of the sub-axes) filled in here, in code."""
     if res["refusal"]:
         return None, [f"refusal (category {res['refusal']})"], None
     if res["type"] != "succeeded":
@@ -592,7 +692,11 @@ def judge_result(paths, res: dict) -> tuple[dict | None, list[str], str | None]:
         return None, [truncation_error()], res["text"]
     obj, errs = parse_json(res["text"])
     errs = errs or check_judge(paths, obj)
-    return (None, errs, res["text"]) if errs else (obj, [], None)
+    errs = errs or quote_errors(obj["least_plausible_claims"], run)
+    if errs:
+        return None, errs, res["text"]
+    obj["plausibility"] = plausibility_composite(obj["plausibility_axes"])
+    return obj, [], None
 
 
 def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str) -> None:
@@ -605,7 +709,8 @@ def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str) -> N
     if not all(c in got for c in cids):
         return
     samples = [{k: v for k, v in got[c].items() if k != "custom_id"} for c in cids]
-    run["scores"] = {"judge_model": judge_model, **mean_scores(samples)}
+    from .judge import JUDGE_RUBRIC
+    run["scores"] = {"judge_model": judge_model, "rubric": JUDGE_RUBRIC, **mean_scores(samples)}
     if samples_n == 1:
         run.pop("judge_samples", None)
     else:

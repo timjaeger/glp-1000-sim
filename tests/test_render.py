@@ -1,4 +1,5 @@
 """Prompt rendering, API schema derivation, request building, cost estimate, dry runs."""
+import copy
 import argparse
 import json
 import sys
@@ -115,17 +116,27 @@ def test_generation_api_schema_accepts_a_real_world_and_pins_fictional(fixture_r
     assert list(v.iter_errors({"world": baseline, "prose": fixture_run["prose"]}))  # fictional=false rejected
 
 
-def test_judge_api_schema_omits_judge_model():
+def test_judge_api_schema_is_rubric_v2_with_claims_first():
     s = batch.judge_api_schema(Paths(ROOT))
-    assert "judge_model" not in s["properties"] and "judge_model" not in s["required"]
-    ok = {"badness": {d: 5 for d in ("flourishing", "autonomy", "inequality", "public_health",
+    for k in ("judge_model", "rubric", "plausibility"):          # filled by code, never asked for
+        assert k not in s["properties"] and k not in s["required"]
+    assert list(s["properties"]) == ["least_plausible_claims", "badness", "plausibility_axes",
+                                     "generativity", "rationale"]
+    assert list(s["properties"]["plausibility_axes"]["properties"]) == ["driver_fidelity", "mechanism", "magnitude"]
+    claim = {"quote": "q", "field": "world/x", "why": "w"}
+    ok = {"least_plausible_claims": [claim] * 3,
+          "badness": {d: 5 for d in ("flourishing", "autonomy", "inequality", "public_health",
                                      "cohesion", "epistemic", "overall")},
-          "plausibility": 7, "generativity": 6,
+          "plausibility_axes": {"driver_fidelity": 7, "mechanism": 6, "magnitude": 5},
+          "generativity": 6,
           "rationale": {"badness": "b", "plausibility": "p", "generativity": "g"}}
     assert list(Draft202012Validator(s).iter_errors(ok)) == []
-    assert list(batch.local_judge_validator(Paths(ROOT)).iter_errors(ok)) == []
-    ok["plausibility"] = 11                                  # bound enforced locally only
-    assert list(batch.local_judge_validator(Paths(ROOT)).iter_errors(ok))
+    local = batch.local_judge_validator(Paths(ROOT))
+    assert list(local.iter_errors(ok)) == []
+    bad = copy.deepcopy(ok); bad["plausibility_axes"]["magnitude"] = 11     # bounds enforced locally only
+    assert list(local.iter_errors(bad))
+    bad = copy.deepcopy(ok); bad["least_plausible_claims"] = [claim] * 2    # exactly three, locally
+    assert list(Draft202012Validator(s).iter_errors(bad)) == [] and list(local.iter_errors(bad))
 
 
 def test_schema_shape_errors_are_caught():

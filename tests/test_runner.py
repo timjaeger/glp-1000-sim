@@ -106,10 +106,20 @@ def gen_responder(bid, req):
     return errored_result(cid)
 
 
-def scores(p=7, b=6, gen=5):
-    return {"badness": {d: b for d in ("flourishing", "autonomy", "inequality", "public_health",
+CLAIMS = [  # quotes that exist verbatim in the fixture world / prose
+    {"quote": "FDA opens shortage-import pathway", "field": "world/events/0/event", "why": "w1"},
+    {"quote": '"us_adults_ever_used_pct": 29', "field": "world/population/us_adults_ever_used_pct", "why": "w2"},
+    {"quote": "hand-written placeholder", "field": "prose/headline", "why": "w3"},
+]
+
+
+def scores(p=7, b=6, gen=5, axes=None):
+    """A rubric-v2 judge response; by default all three sub-axes = p, so the composite is p."""
+    return {"least_plausible_claims": copy.deepcopy(CLAIMS),
+            "badness": {d: b for d in ("flourishing", "autonomy", "inequality", "public_health",
                                        "cohesion", "epistemic", "overall")},
-            "plausibility": p, "generativity": gen,
+            "plausibility_axes": axes or {"driver_fidelity": p, "mechanism": p, "magnitude": p},
+            "generativity": gen,
             "rationale": {"badness": "rb", "plausibility": "rp", "generativity": "rg"}}
 
 
@@ -269,7 +279,7 @@ def judge_responder_factory(plaus_by_run=None, bad_once=()):
         assert "s1-L0" not in json.dumps(req["params"])       # judge never sees the run id
         n_msgs = len(req["params"]["messages"])
         if rid in bad_once and n_msgs == 1:
-            s = scores(); s["plausibility"] = 11                # out of range -> repair
+            s = scores(); s["plausibility_axes"]["magnitude"] = 11                # out of range -> repair
             return text_result(cid, json.dumps(s))
         idx = int(rid[-2:])
         j = int(cid.split("-j")[1]) if "-j" in cid else 0
@@ -397,3 +407,104 @@ def test_missing_glp_sim_api_key_is_a_clear_error(repo, monkeypatch, capsys):
     assert "GLP_SIM_API_KEY is not set" in out and "Nothing submitted" in out
     assert "would-be-ignored" not in out and "Traceback" not in out
     assert not (repo.step_runs(1) / "_state_generate.json").exists()
+
+
+# ---------------------------------------------------------------- spend ledger
+
+def test_spend_ledger_survives_clearing_a_step_and_never_double_counts(repo, client):
+    import shutil
+    assert G.main(repo, gargs()) == 0
+    led = runner.load_ledger(repo)
+    assert [b["role"] for b in led["batches"]] == ["main", "repair"]
+    assert all(b["status"] == "collected" and b["actual_usd"] is not None for b in led["batches"])
+    first = runner.step_spent(repo, 1)
+    assert first == pytest.approx(sum(b["actual_usd"] for b in led["batches"]))
+    shutil.rmtree(repo.step_runs(1))                    # a failed attempt cleared before a rerun
+    assert runner.step_spent(repo, 1) == pytest.approx(first)
+    assert G.main(repo, gargs()) == 0                   # attempt 2: counted on top, once
+    assert len(runner.load_ledger(repo)["batches"]) == 4
+    assert runner.step_spent(repo, 1) == pytest.approx(2 * first)
+    assert runner.step_spent(repo, 2) == 0
+    assert validate_tree(repo)[1] == []
+
+
+def test_guardrail_counts_earlier_attempts(repo, client, capsys):
+    import shutil
+    assert G.main(repo, gargs()) == 0
+    spent = runner.step_spent(repo, 1)
+    shutil.rmtree(repo.step_runs(1))
+    cfg = load_sim_config(repo)
+    cfg["max_usd_per_step"] = spent + 0.01              # the rerun alone would fit; with history it does not
+    (repo.config / "sim.json").write_text(json.dumps(cfg))
+    capsys.readouterr()
+    assert G.main(repo, gargs()) == 2
+    assert f"${spent:.2f} already recorded" in capsys.readouterr().out
+
+
+# ---------------------------------------------------------------- rubric v2
+
+def test_v2_composite_is_the_mean_of_three_sub_axes_and_misquotes_are_repaired(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    axes = {"driver_fidelity": 8, "mechanism": 5, "magnitude": 4}
+
+    def responder(bid, req):
+        cid = req["custom_id"]
+        s = scores(axes=dict(axes))
+        if cid == "s1-L0-r01" and len(req["params"]["messages"]) == 1:
+            s["least_plausible_claims"][1]["quote"] = "a sentence the candidate never wrote"
+        return text_result(cid, json.dumps(s))
+    jc = FakeClient(responder)
+    monkeypatch.setattr(runner, "get_client", lambda: jc)
+    assert J.main(repo, jargs()) == 0
+
+    r0 = run(repo, "s1-L0-r00")["scores"]
+    assert r0["rubric"] == "v2" and r0["plausibility_axes"] == axes
+    assert r0["plausibility"] == pytest.approx(5.67)                 # (8 + 5 + 4) / 3, in code
+    assert [c["field"] for c in r0["least_plausible_claims"]][0] == "world/events/0/event"
+    assert [r["custom_id"] for r in jc.messages.batches.created["msgbatch_02"]] == ["s1-L0-r01"]
+    rep = jc.messages.batches.created["msgbatch_02"][0]["params"]["messages"][2]["content"]
+    assert "least_plausible_claims/1/quote: not found verbatim" in rep
+    r1 = run(repo, "s1-L0-r01")
+    assert r1["scores"]["plausibility"] == pytest.approx(5.67) and r1["validation"]["judge"]["repaired"]
+    assert validate_tree(repo)[1] == []
+
+
+def test_quote_matching_ignores_case_whitespace_and_typographic_quotes():
+    run_ = {"world": {"note": "Imported ‘near-generic’ semaglutide —  under shortage"},
+            "prose": {"headline": "Thin  Got Cheap"}}
+    ok = [{"quote": "imported 'near-generic' semaglutide - under", "field": "f", "why": "w"},
+          {"quote": "“Thin Got Cheap.”", "field": "f", "why": "w"},
+          {"quote": '"note": "Imported', "field": "f", "why": "w"}]
+    assert runner.quote_errors(ok, run_) == []
+    assert len(runner.quote_errors([{"quote": "Thin got expensive", "field": "f", "why": "w"}], run_)) == 1
+
+
+def test_rejudge_keeps_the_superseded_scores(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    jc = FakeClient(lambda bid, req: text_result(req["custom_id"], json.dumps(scores(p=5))))
+    monkeypatch.setattr(runner, "get_client", lambda: jc)
+    assert J.main(repo, jargs()) == 0
+    first = run(repo, "s1-L0-r00")["scores"]
+    jc2 = FakeClient(lambda bid, req: text_result(req["custom_id"], json.dumps(scores(p=8))))
+    monkeypatch.setattr(runner, "get_client", lambda: jc2)
+    assert J.main(repo, jargs(rejudge=True)) == 0
+    r0 = run(repo, "s1-L0-r00")
+    assert r0["scores"]["plausibility"] == 8
+    (old,) = r0["superseded_scores"]
+    assert {k: v for k, v in old.items() if k != "superseded_at"} == first and old["superseded_at"]
+    assert validate_tree(repo)[1] == []
+
+
+def test_each_judging_pass_keeps_its_own_batch_file(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    jc = FakeClient(lambda bid, req: text_result(req["custom_id"], json.dumps(scores())))
+    monkeypatch.setattr(runner, "get_client", lambda: jc)
+    assert J.main(repo, jargs()) == 0
+    p1 = (repo.step_runs(1) / "_judge_batch.jsonl").read_text()
+    assert J.main(repo, jargs(rejudge=True, dry_run=True)) == 0
+    assert (repo.step_runs(1) / "_judge_batch.jsonl").read_text() == p1          # dry run left it alone
+    assert J.main(repo, jargs(rejudge=True)) == 0
+    assert (repo.step_runs(1) / "_judge_batch.jsonl").read_text() == p1
+    st = load_json(repo.step_runs(1) / "_state_judge.json")
+    assert [b["batch_file"] for b in st["batches"]] == ["runs/step1/_judge_batch.jsonl",
+                                                         "runs/step1/_judge_batch_p2.jsonl"]

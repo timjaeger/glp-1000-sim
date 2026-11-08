@@ -54,6 +54,20 @@
       "required": ["judge_model", "badness", "plausibility", "generativity", "rationale"],
       "properties": {
         "judge_model": {"type": "string"},
+        "rubric": {"type": "string", "description": "judge rubric version; absent means v1 (one plausibility score)"},
+        "least_plausible_claims": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "description": "rubric v2: the judge's three least plausible specific claims, each quoted verbatim from the candidate",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["quote", "field", "why"],
+            "properties": {
+              "quote": {"type": "string", "minLength": 1, "maxLength": 300},
+              "field": {"type": "string"},
+              "why": {"type": "string"}
+            }
+          }
+        },
         "badness": {
           "type": "object", "additionalProperties": false,
           "required": ["flourishing", "autonomy", "inequality", "public_health", "cohesion", "epistemic", "overall"],
@@ -67,7 +81,18 @@
             "overall": {"type": "number", "minimum": 1, "maximum": 10}
           }
         },
-        "plausibility": {"type": "number", "minimum": 1, "maximum": 10},
+        "plausibility_axes": {
+          "type": "object", "additionalProperties": false,
+          "description": "rubric v2: plausibility sub-axes, scored separately; `plausibility` is their mean",
+          "required": ["driver_fidelity", "mechanism", "magnitude"],
+          "properties": {
+            "driver_fidelity": {"type": "number", "minimum": 1, "maximum": 10},
+            "mechanism": {"type": "number", "minimum": 1, "maximum": 10},
+            "magnitude": {"type": "number", "minimum": 1, "maximum": 10}
+          }
+        },
+        "plausibility": {"type": "number", "minimum": 1, "maximum": 10,
+                         "description": "v2: mean of plausibility_axes, computed in code; v1: the judge's single score"},
         "generativity": {"type": "number", "minimum": 1, "maximum": 10},
         "rationale": {
           "type": "object",
@@ -96,6 +121,11 @@
         "generation": {"$ref": "#/$defs/validation_record"},
         "judge": {"$ref": "#/$defs/validation_record"}
       }
+    },
+    "superseded_scores": {
+      "type": "array",
+      "description": "earlier `scores` replaced by a re-judge (e.g. under a revised rubric), oldest first, each with superseded_at",
+      "items": {"type": "object", "required": ["superseded_at"]}
     },
     "judge_samples": {
       "type": "array",

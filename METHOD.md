@@ -103,6 +103,13 @@ plausibility and do not raise badness unless the mechanism is shown.
 drivers and the parent state with a visible mechanism; are magnitudes in range
 for two years; would an informed skeptic (an endocrinologist, a health economist,
 a food-industry analyst) accept it as a live possibility rather than dismiss it.
+Scored (rubric v2) as three separate sub-axes, each 1–10: **driver fidelity**
+(every stipulated driver honoured, none contradicted), **mechanism** (every
+change has a shown causal chain; no internal contradictions) and **magnitude**
+(sizes and speeds in range for two years). The `plausibility` used by the floor
+and tie-break in §7 is their mean, computed in code. Before scoring, the judge
+must list the three least plausible specific claims in the run, each quoted
+verbatim (the quotes are checked against the run); they are kept in the dossier.
 
 **Generativity (1–10)**: how much film is in this world — characters implied,
 scenes implied, a visible texture of daily life. Used only as a tie-break.

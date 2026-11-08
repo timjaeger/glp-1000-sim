@@ -63,6 +63,13 @@ def check_run(paths: Paths, run, file: Path, cfg: dict) -> list[str]:
                 errs.append("world.fictional: simulated worlds must be fictional=true")
             if w.get("year") != run.get("year"):
                 errs.append(f"world.year {w.get('year')} != run year {run.get('year')}")
+    sc = run.get("scores")
+    if isinstance(sc, dict) and isinstance(sc.get("plausibility_axes"), dict) and not errs:
+        axes = sc["plausibility_axes"]
+        mean = round(sum(axes.values()) / len(axes), 2)
+        if abs(sc.get("plausibility", -1) - mean) > 0.011:
+            errs.append(f"scores.plausibility {sc.get('plausibility')} is not the mean of "
+                        f"plausibility_axes ({mean})")
     return errs
 
 
@@ -134,7 +141,9 @@ def validate_tree(paths: Paths) -> tuple[list[str], list[tuple[str, str]]]:
             if err:
                 add(p, [err]); continue
             parts = p.relative_to(paths.runs).parts
-            if len(parts) == 2 and STEP_DIR_RE.match(parts[0]) and BATCH_STATE_RE.match(parts[1]):
+            if parts == ("spend_ledger.json",):
+                add(p, schemas.errors(schemas.validator(paths, "spend_ledger"), doc))
+            elif len(parts) == 2 and STEP_DIR_RE.match(parts[0]) and BATCH_STATE_RE.match(parts[1]):
                 add(p, schemas.errors(schemas.validator(paths, "batch_state"), doc))
             elif len(parts) == 3 and STEP_DIR_RE.match(parts[0]):
                 add(p, check_run(paths, doc, p, cfg))

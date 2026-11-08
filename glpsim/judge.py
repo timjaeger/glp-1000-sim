@@ -20,6 +20,9 @@ from .select import load_step_runs
 from .world import MissingParentError, load_parents
 
 
+JUDGE_RUBRIC = "v2"   # prompts/judge.md: plausibility sub-axes + three quoted least-plausible claims
+
+
 def judge_custom_ids(run_id: str, samples: int) -> list[str]:
     return [run_id] if samples == 1 else [f"{run_id}-j{k}" for k in range(samples)]
 
@@ -73,7 +76,9 @@ def main(paths, args) -> int:
 
     if args.dry_run:
         base = paths.dry / f"step{step}" if use_fixture else paths.step_runs(step)
-        batch_path = base / "_judge_batch.jsonl"
+        from .runner import judge_batch_files, load_state
+        batch_path = (base / "_judge_batch.jsonl" if use_fixture
+                      else judge_batch_files(paths, step, load_state(paths, step, "judge"))[0])
         batch.write_batch_file(batch_path, requests)
         out = paths.dry / f"step{step}" / "judge"
         for req in requests:
@@ -84,7 +89,8 @@ def main(paths, args) -> int:
         est = batch.estimate(requests, cfg)
         print(f"DRY RUN — nothing submitted. step {step}: judging {len(runs)} run(s)"
               + (f" (FIXTURE {fixture}, not a generated run)" if use_fixture else ""))
-        print(batch.format_estimate("judge batch", est, cfg, cfg["judging"]))
+        from .runner import step_spent
+        print(batch.format_estimate("judge batch", est, cfg, cfg["judging"], step_spent(paths, step)))
         print(f"wrote {batch_path.relative_to(paths.root)} ({len(requests)} requests)")
         print(f"wrote readable prompts to {out.relative_to(paths.root)}/")
         return 0

@@ -34,6 +34,8 @@ class Paths:
     @property
     def dry(self) -> Path: return self.root / "runs" / "_dry"
     @property
+    def spend_ledger(self) -> Path: return self.root / "runs" / "spend_ledger.json"
+    @property
     def lineage_md(self) -> Path: return self.root / "lineage.md"
     @property
     def report(self) -> Path: return self.root / "report"

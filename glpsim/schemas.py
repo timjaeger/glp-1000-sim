@@ -14,6 +14,7 @@ SCHEMA_FILES = {
     "run": "run.schema.json",
     "world_step": "world_step.schema.json",
     "batch_state": "batch_state.schema.json",
+    "spend_ledger": "spend_ledger.schema.json",
 }
 
 

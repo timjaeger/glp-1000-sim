@@ -79,22 +79,32 @@ def generation_api_schema(paths) -> dict:
             "properties": {"world": world, "prose": prose}}
 
 
-def judge_api_schema(paths) -> dict:
+JUDGE_CODE_FILLED = ("judge_model", "rubric", "plausibility")
+JUDGE_RESPONSE_ORDER = ("least_plausible_claims", "badness", "plausibility_axes", "generativity", "rationale")
+
+
+def judge_response_schema(paths) -> dict:
+    """What the judge returns (rubric v2): the run schema's `scores` without the fields code
+    fills in, every field required, claims first so they are written before any score."""
     scores = copy.deepcopy(schemas.schema(paths, "run")["properties"]["scores"])
-    scores["properties"].pop("judge_model")
-    scores["required"] = [r for r in scores["required"] if r != "judge_model"]
-    rat = scores["properties"]["rationale"]
-    rat.setdefault("additionalProperties", False)
-    return to_api_schema(scores)
+    props = scores["properties"]
+    for k in JUDGE_CODE_FILLED:
+        props.pop(k)
+    assert set(props) == set(JUDGE_RESPONSE_ORDER), sorted(props)
+    scores["properties"] = {k: props[k] for k in JUDGE_RESPONSE_ORDER}
+    scores["required"] = list(JUDGE_RESPONSE_ORDER)
+    scores["properties"]["rationale"].setdefault("additionalProperties", False)
+    return scores
+
+
+def judge_api_schema(paths) -> dict:
+    return to_api_schema(judge_response_schema(paths))
 
 
 def local_judge_validator(paths):
-    """Validates a judge response: the run schema's `scores` minus judge_model (filled by code)."""
+    """Validates a judge response with the bounds the API subset cannot carry (3 claims, 1–10)."""
     from jsonschema import Draft202012Validator
-    s = copy.deepcopy(schemas.schema(paths, "run")["properties"]["scores"])
-    s["properties"].pop("judge_model")
-    s["required"] = [r for r in s["required"] if r != "judge_model"]
-    return Draft202012Validator(s)
+    return Draft202012Validator(judge_response_schema(paths))
 
 
 # ---------------------------------------------------------------- requests
