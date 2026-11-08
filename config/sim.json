@@ -26,8 +26,18 @@
     "judge": "claude-sonnet-5-5",
     "_note": "Judge must differ from generator. claude-fable-5-1 is the tier above Opus if step-1 worlds read thin."
   },
-  "generation": {"temperature": 1.0, "max_tokens": 6000},
-  "judging": {"temperature": 0.0, "max_tokens": 1500, "judge_samples": 1},
+  "generation": {"temperature": null, "effort": "high", "max_tokens": 16000},
+  "judging": {"temperature": null, "effort": "high", "max_tokens": 8000, "judge_samples": 1},
+  "_note_sampling": "temperature is null because both configured models reject it: claude-opus-5-5 returns 400 on any temperature, claude-sonnet-5-5 on any non-default value, and API version 2026-10-21 (anthropic SDK >= 2) on any value at all. Generation at 1.0 was the default, so nothing is lost there; judging at 0.0 has no replacement, so use judge_samples > 1 if score stability matters. A non-null value is sent as-is (for a model that accepts it).",
+  "_note_tokens": "Both models think adaptively and thinking cannot be disabled; thinking tokens count toward max_tokens and are billed as output. 6000/1500 would truncate a full world + prose. effort is the thinking-depth control (Opus 5.5 defaults to medium, so it is set explicitly).",
+  "pricing_usd_per_mtok": {
+    "claude-opus-5-5":   {"input": 4.0, "output": 20.0},
+    "claude-sonnet-5-5": {"input": 2.0, "output": 10.0},
+    "claude-fable-5-1":  {"input": 10.0, "output": 50.0},
+    "_note": "Standard first-party list prices; batch_discount is applied on top. Used only for the pre-submit estimate."
+  },
+  "batch_discount": 0.5,
+  "chars_per_token_estimate": 3.5,
   "max_usd_per_step": 25,
   "seed": 20261107
 }
