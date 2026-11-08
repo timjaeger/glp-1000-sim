@@ -4,8 +4,8 @@ Rendered by `sim.py judge`. Temperature 0. Judge model must differ from the
 generator. The judge never sees other runs, their scores, the step's axis
 weighting, or lineage identity. Response is JSON-schema-constrained to the
 `scores` object in `schema/run.schema.json` without the fields the code fills in:
-`judge_model`, `rubric`, and the composite `plausibility` (the mean of the three
-`plausibility_axes`). Every quote in `least_plausible_claims` is checked against
+`judge_model`, `rubric`, and the composite `plausibility` (0.2 × driver_fidelity
++ 0.3 × mechanism + 0.5 × magnitude, `config/sim.json: plausibility_weights`). Every quote in `least_plausible_claims` is checked against
 the candidate verbatim; a response with a quote that is not found gets the one
 repair attempt.
 
@@ -96,7 +96,7 @@ if unshown, they lower `mechanism` instead.
 
 **Plausibility** — three sub-axes, each 1 to 10, each scored on its own
 question only. Do not let one sub-axis lift or sink another. The composite
-used for selection is their mean, computed in code; do not report it.
+used for selection is computed in code from your three scores; do not report it.
 
 - `driver_fidelity` — Is every stipulated driver honoured, at its stipulated
   value and direction, visibly in the world state, and is nothing in the

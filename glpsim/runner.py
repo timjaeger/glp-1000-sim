@@ -25,7 +25,7 @@ import unicodedata
 from datetime import datetime, timezone
 
 from . import batch, render, schemas
-from .common import dump_json, load_json, step_year
+from .common import dump_json, load_json, load_sim_config, step_year
 
 MAX_ERRORS_IN_REPAIR = 40
 
@@ -275,6 +275,8 @@ def check_generation(paths, obj, year: int) -> list[str]:
     if isinstance(w, dict):
         if w.get("fictional") is not True:
             errs.append("world/fictional: must be true for a simulated step")
+        if "still_true" not in w:
+            errs.append("world/still_true: required in a simulated step (five things unchanged from the parent)")
         if w.get("year") != year:
             errs.append(f"world/year: must be {year}")
     return errs
@@ -497,7 +499,7 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
 
 # ---------------------------------------------------------------- judge
 
-def mean_scores(samples: list[dict]) -> dict:
+def mean_scores(samples: list[dict], weights: dict) -> dict:
     """One sample is kept as is. Several are averaged field by field; the composite is
     recomputed from the averaged sub-axes; claims and rationale come from the first sample."""
     if len(samples) == 1:
@@ -508,7 +510,7 @@ def mean_scores(samples: list[dict]) -> dict:
     return {"least_plausible_claims": samples[0]["least_plausible_claims"],
             "badness": {k: avg(lambda s: s["badness"][k]) for k in samples[0]["badness"]},
             "plausibility_axes": axes,
-            "plausibility": plausibility_composite(axes),
+            "plausibility": plausibility_composite(axes, weights),
             "generativity": avg(lambda s: s["generativity"]),
             "rationale": samples[0]["rationale"]}
 
@@ -578,7 +580,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                         repair_ids.append(cid)      # only bad output is repaired, not API errors or cut-offs
             for rid in touched:
                 p, run = by_id[rid]
-                finish_judgement(run, judge_model, samples_n, rid)
+                finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"])
                 dump_json(p, run)
             state["repair_ids"] = sorted(repair_ids)
             state["phase"] = "awaiting_repair" if repair_ids else "done"
@@ -623,7 +625,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                         rec["raw_output"] = text
                 if not rec["errors"]:
                     rec["repaired"] = True
-                finish_judgement(run, judge_model, samples_n, rid)
+                finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"])
                 dump_json(p, run)
             state["phase"] = "done"
             save_state(paths, state)
@@ -677,8 +679,11 @@ def quote_errors(claims: list[dict], run: dict) -> list[str]:
     return errs
 
 
-def plausibility_composite(axes: dict) -> float:
-    return round(statistics.fmean(axes[k] for k in ("driver_fidelity", "mechanism", "magnitude")), 2)
+def plausibility_composite(axes: dict, weights: dict) -> float:
+    """config plausibility_weights: e.g. 0.2 driver_fidelity + 0.3 mechanism + 0.5 magnitude."""
+    if set(weights) != set(axes) or abs(sum(weights.values()) - 1) > 1e-9:
+        raise ValueError(f"plausibility_weights must cover {sorted(axes)} and sum to 1")
+    return round(sum(weights[k] * axes[k] for k in axes), 2)
 
 
 def judge_result(paths, res: dict, run: dict) -> tuple[dict | None, list[str], str | None]:
@@ -695,11 +700,12 @@ def judge_result(paths, res: dict, run: dict) -> tuple[dict | None, list[str], s
     errs = errs or quote_errors(obj["least_plausible_claims"], run)
     if errs:
         return None, errs, res["text"]
-    obj["plausibility"] = plausibility_composite(obj["plausibility_axes"])
+    obj["plausibility"] = plausibility_composite(obj["plausibility_axes"],
+                                                 load_sim_config(paths)["plausibility_weights"])
     return obj, [], None
 
 
-def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str) -> None:
+def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str, weights: dict) -> None:
     """Fold parsed samples (parked in run['judge_samples'], tagged by custom_id) into `scores`
     once every sample for the run is in. A run missing a sample stays unscored and so is
     excluded by `select`, with the reason in validation.judge.errors."""
@@ -710,7 +716,8 @@ def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str) -> N
         return
     samples = [{k: v for k, v in got[c].items() if k != "custom_id"} for c in cids]
     from .judge import JUDGE_RUBRIC
-    run["scores"] = {"judge_model": judge_model, "rubric": JUDGE_RUBRIC, **mean_scores(samples)}
+    run["scores"] = {"judge_model": judge_model, "rubric": JUDGE_RUBRIC,
+                     **mean_scores(samples, weights), "plausibility_weights": dict(weights)}
     if samples_n == 1:
         run.pop("judge_samples", None)
     else:

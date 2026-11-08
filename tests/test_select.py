@@ -26,9 +26,19 @@ COMBOS = [  # distinct (price_path, cultural_response, personality_layer) per de
 ]
 
 
+def fake_axes(plaus, mag):
+    """Sub-axes with the given magnitude whose weighted composite is `plaus` (fidelity =
+    mechanism, solved from the config weights; clipped to 1-10 for extreme test values)."""
+    w = CFG["plausibility_weights"]
+    other = (plaus - w["magnitude"] * mag) / (w["driver_fidelity"] + w["mechanism"])
+    other = min(10, max(1, round(other, 4)))
+    return {"driver_fidelity": other, "mechanism": other, "magnitude": mag}
+
+
 def fake_run(i, *, bad=5.0, plaus=7, gen=5, parent="L0", step=1, combo=None, status="ok",
-             dims=None, severity=None, scored=True):
-    """One fake run. `bad` sets all six dimensions; `dims` overrides individual ones."""
+             dims=None, severity=None, scored=True, mag=6):
+    """One fake run. `bad` sets all six dimensions; `dims` overrides individual ones;
+    `mag` is the magnitude sub-axis (6 by default, above the magnitude floor)."""
     pp, cr, pl = combo or COMBOS[i % len(COMBOS)]
     run = {
         "run_id": f"s{step}-{parent}-r{i:02d}", "step": step, "year": 2026 + 2 * step,
@@ -46,7 +56,9 @@ def fake_run(i, *, bad=5.0, plaus=7, gen=5, parent="L0", step=1, combo=None, sta
         b = {d: bad for d in DIMS}
         b.update(dims or {})
         b["overall"] = bad
-        run["scores"] = {"judge_model": "judge", "badness": b, "plausibility": plaus,
+        run["scores"] = {"judge_model": "judge", "rubric": "v2", "badness": b,
+                         "plausibility_axes": fake_axes(plaus, mag), "plausibility": plaus,
+                         "plausibility_weights": dict(CFG["plausibility_weights"]),
                          "generativity": gen,
                          "rationale": {"badness": "", "plausibility": "", "generativity": ""}}
     return run
@@ -110,6 +122,43 @@ def test_non_ok_and_unscored_runs_are_excluded_even_if_worst():
                             "s1-L0-r04": "status=invalid"}
     assert sel.per_run["s1-L0-r00"] == {"axis": "health", "survived": False,
                                         "new_lineage": None, "floor_used": 6}
+
+
+def test_magnitude_floor_excludes_before_the_plausibility_floor_and_never_relaxes():
+    runs = [fake_run(0, bad=10, plaus=8, mag=4.5),     # worst and composite-plausible, but magnitude 4.5
+            fake_run(1, bad=6, plaus=7, mag=5),        # exactly at the floor: kept
+            fake_run(2, bad=5, plaus=6.5),
+            fake_run(3, bad=4, plaus=5)]
+    sel = S.select_step(runs, CFG, 1)
+    assert sel.excluded == {"s1-L0-r00": "magnitude 4.5 < magnitude_floor 5"}
+    # the excluded run does not count toward the floor: only 2 left at >= 6, so it drops to 5
+    assert sel.log == ["only 2 run(s) at plausibility >= 6; lowering floor to 5"]
+    assert ids(sel) == ["s1-L0-r01", "s1-L0-r02", "s1-L0-r03"]
+    assert sel.per_run["s1-L0-r00"]["survived"] is False
+
+
+def test_magnitude_floor_is_not_lowered_even_when_it_leaves_too_few():
+    runs = [fake_run(0, plaus=7, mag=4), fake_run(1, plaus=7, mag=3), fake_run(2, plaus=7)]
+    sel = S.select_step(runs, CFG, 1)
+    assert ids(sel) == ["s1-L0-r02"] and len(sel.excluded) == 2
+    assert sel.log[-1].startswith("WARNING: only 1 survivor(s)")
+
+
+def test_v1_scores_without_sub_axes_are_excluded_not_ranked():
+    v1 = fake_run(0, bad=9)
+    del v1["scores"]["plausibility_axes"]
+    sel = S.select_step([v1, fake_run(1), fake_run(2), fake_run(3)], CFG, 1)
+    assert "rubric v1" in sel.excluded["s1-L0-r00"] and "s1-L0-r00" not in ids(sel)
+
+
+def test_composite_uses_config_weights():
+    from glpsim import runner
+    w = CFG["plausibility_weights"]
+    assert w == {"driver_fidelity": 0.2, "mechanism": 0.3, "magnitude": 0.5}
+    assert runner.plausibility_composite({"driver_fidelity": 9, "mechanism": 7, "magnitude": 5}, w) == 6.4
+    with pytest.raises(ValueError):
+        runner.plausibility_composite({"driver_fidelity": 9, "mechanism": 7, "magnitude": 5},
+                                      {"driver_fidelity": 0.5, "mechanism": 0.5, "magnitude": 0.5})
 
 
 # ---------------------------------------------------------------- weighting and ranking

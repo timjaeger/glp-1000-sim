@@ -67,7 +67,7 @@ class Selection:
     ranking: list[Candidate]             # eligible runs at the final floor, ranked
     runner_up: Candidate | None
     runner_up_reason: str | None         # why it lost: rank, or which guard rule skipped it
-    excluded: dict[str, str]             # run_id -> reason (status / unscored)
+    excluded: dict[str, str]             # run_id -> reason (status / unscored / magnitude floor)
     below_floor: list[Candidate]
     skipped: list[tuple[str, str]]       # (run_id, guard rule that skipped it) at the final floor
     log: list[str]
@@ -86,11 +86,18 @@ def axis_badness(run: dict, axis_cfg: dict, section_weight: float) -> float:
     return num / den
 
 
-def exclusion_reason(run: dict) -> str | None:
+def exclusion_reason(run: dict, magnitude_floor: float) -> str | None:
+    """Why a run cannot be ranked at all. The magnitude floor is applied here, before the
+    plausibility floor, and is never lowered."""
     if run.get("status") != "ok":
         return f"status={run.get('status')}"
     if not run.get("scores"):
         return "unscored"
+    axes = run["scores"].get("plausibility_axes")
+    if not axes:
+        return "judged without plausibility sub-axes (rubric v1); re-judge"
+    if axes["magnitude"] < magnitude_floor:
+        return f"magnitude {axes['magnitude']:g} < magnitude_floor {magnitude_floor:g}"
     return None
 
 
@@ -127,7 +134,7 @@ def select_step(runs: list[dict], cfg: dict, step: int) -> Selection:
     excluded: dict[str, str] = {}
     scored: list[Candidate] = []
     for run in sorted(runs, key=lambda r: r["run_id"]):
-        reason = exclusion_reason(run)
+        reason = exclusion_reason(run, cfg["magnitude_floor"])
         if reason:
             excluded[run["run_id"]] = reason
             continue
@@ -255,6 +262,8 @@ def lineage_section(sel: Selection, cfg: dict, year: int, runs: list[dict], sele
          + (f"; seed {', '.join(map(str, seeds))}" if seeds else ""),
          f"- Generator {', '.join(gen_models) or '?'} · judge {', '.join(judge_models) or '?'}",
          f"- Weights: {_weights_line(axis_cfg, cfg['section_severity_weight'])}",
+         f"- Magnitude floor (hard): {cfg['magnitude_floor']:g} · composite plausibility = "
+         + " + ".join(f"{w:g}×{k}" for k, w in cfg["plausibility_weights"].items()),
          f"- Plausibility floor used: {sel.floor_used}"
          + (f" (configured {cfg['plausibility_floor']})" if sel.floor_used != cfg["plausibility_floor"] else ""),
          f"- Excluded before ranking: {excl}; below floor: {len(sel.below_floor)}; "

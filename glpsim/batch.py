@@ -71,7 +71,9 @@ def to_api_schema(node, defs: dict | None = None, where: str = "#"):
 
 
 def generation_api_schema(paths) -> dict:
-    world = to_api_schema(schemas.schema(paths, "world_state"))
+    ws = copy.deepcopy(schemas.schema(paths, "world_state"))
+    ws["required"] = ws["required"] + ["still_true"]       # optional at step 0, required in a simulated step
+    world = to_api_schema(ws)
     world["properties"]["fictional"] = {"type": "boolean", "enum": [True],
                                         "description": "always true for a simulated step"}
     prose = to_api_schema(schemas.schema(paths, "run")["properties"]["prose"])
@@ -79,7 +81,7 @@ def generation_api_schema(paths) -> dict:
             "properties": {"world": world, "prose": prose}}
 
 
-JUDGE_CODE_FILLED = ("judge_model", "rubric", "plausibility")
+JUDGE_CODE_FILLED = ("judge_model", "rubric", "plausibility_weights", "plausibility")
 JUDGE_RESPONSE_ORDER = ("least_plausible_claims", "badness", "plausibility_axes", "generativity", "rationale")
 
 

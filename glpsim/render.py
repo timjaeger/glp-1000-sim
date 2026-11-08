@@ -100,8 +100,31 @@ def generation_prompt(paths, *, parent_world: dict, parent_prose: dict | None, p
         "parent_world_json": pretty(parent_world),
         "parent_prose_world_in_600_words": (parent_prose or {}).get("world_in_600_words") or NO_PARENT_PROSE,
         "drivers_table": drivers_table(drivers, dcfg, parent_world, parent_year, target_year),
+        **population_bounds(parent_world, drivers),
     }
     return fill(system_t, values), fill(user_t, values)
+
+
+def _pct(x: float) -> str:
+    return f"{round(x, 1):g}"
+
+
+def population_bounds(parent_world: dict, drivers: dict) -> dict:
+    """The numbers behind generate.md rule 3: current use = parent + adoption_delta_pp ±2;
+    ever-use rises by at most adoption_delta_pp + 6 and never falls (so the rise is capped
+    at no less than 0 when adoption_delta_pp < -6)."""
+    pop = parent_world["population"]
+    on, ever, delta = pop["us_adults_on_drug_pct"], pop["us_adults_ever_used_pct"], drivers["adoption_delta_pp"]
+    rise = max(delta + 6, 0)
+    return {
+        "parent_on_drug_pct": _pct(on),
+        "adoption_delta_pp": _pct(delta),
+        "current_use_low": _pct(min(100, max(0, on + delta - 2))),
+        "current_use_high": _pct(min(100, max(0, on + delta + 2))),
+        "parent_ever_used_pct": _pct(ever),
+        "ever_rise_max": _pct(rise),
+        "ever_use_max": _pct(min(100, ever + rise)),
+    }
 
 
 def judge_prompt(paths, *, parent_world: dict, parent_year: int, target_year: int, drivers: dict,

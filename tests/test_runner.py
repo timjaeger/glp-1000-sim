@@ -14,6 +14,8 @@ from glpsim.common import load_json, load_sim_config
 from glpsim.validate import validate_tree
 
 from conftest import ROOT
+from glpsim.common import Paths as _P
+ROOT_PATHS = _P(ROOT)
 
 FIXTURE = load_json(ROOT / "tests" / "fixtures" / "s1-L0-r00.fixture.json")
 GOOD = {"world": FIXTURE["world"], "prose": FIXTURE["prose"]}
@@ -121,6 +123,13 @@ def scores(p=7, b=6, gen=5, axes=None):
             "plausibility_axes": axes or {"driver_fidelity": p, "mechanism": p, "magnitude": p},
             "generativity": gen,
             "rationale": {"badness": "rb", "plausibility": "rp", "generativity": "rg"}}
+
+
+def single_sample(repo):
+    """Pin judge_samples to 1 in the test repo's config (the path most tests exercise)."""
+    cfg = load_sim_config(repo)
+    cfg["judging"]["judge_samples"] = 1
+    (repo.config / "sim.json").write_text(json.dumps(cfg))
 
 
 def gargs(**kw):
@@ -289,6 +298,7 @@ def judge_responder_factory(plaus_by_run=None, bad_once=()):
 
 def test_judge_then_select_end_to_end(repo, client, monkeypatch):
     assert G.main(repo, gargs()) == 0
+    single_sample(repo)
     jc = FakeClient(judge_responder_factory(bad_once=("s1-L0-r04",)))
     monkeypatch.setattr(runner, "get_client", lambda: jc)
     assert J.main(repo, jargs()) == 0
@@ -329,6 +339,7 @@ def test_judge_samples_are_averaged(repo, client, monkeypatch):
 
 def test_judge_refusal_leaves_run_unscored_with_reason(repo, client, monkeypatch):
     assert G.main(repo, gargs()) == 0
+    single_sample(repo)
 
     def responder(bid, req):
         cid = req["custom_id"]
@@ -443,8 +454,9 @@ def test_guardrail_counts_earlier_attempts(repo, client, capsys):
 
 # ---------------------------------------------------------------- rubric v2
 
-def test_v2_composite_is_the_mean_of_three_sub_axes_and_misquotes_are_repaired(repo, client, monkeypatch):
+def test_v2_composite_is_the_weighted_sub_axes_and_misquotes_are_repaired(repo, client, monkeypatch):
     assert G.main(repo, gargs()) == 0
+    single_sample(repo)
     axes = {"driver_fidelity": 8, "mechanism": 5, "magnitude": 4}
 
     def responder(bid, req):
@@ -459,13 +471,14 @@ def test_v2_composite_is_the_mean_of_three_sub_axes_and_misquotes_are_repaired(r
 
     r0 = run(repo, "s1-L0-r00")["scores"]
     assert r0["rubric"] == "v2" and r0["plausibility_axes"] == axes
-    assert r0["plausibility"] == pytest.approx(5.67)                 # (8 + 5 + 4) / 3, in code
+    assert r0["plausibility"] == pytest.approx(5.1)                  # 0.2·8 + 0.3·5 + 0.5·4, in code
+    assert r0["plausibility_weights"] == {"driver_fidelity": 0.2, "mechanism": 0.3, "magnitude": 0.5}
     assert [c["field"] for c in r0["least_plausible_claims"]][0] == "world/events/0/event"
     assert [r["custom_id"] for r in jc.messages.batches.created["msgbatch_02"]] == ["s1-L0-r01"]
     rep = jc.messages.batches.created["msgbatch_02"][0]["params"]["messages"][2]["content"]
     assert "least_plausible_claims/1/quote: not found verbatim" in rep
     r1 = run(repo, "s1-L0-r01")
-    assert r1["scores"]["plausibility"] == pytest.approx(5.67) and r1["validation"]["judge"]["repaired"]
+    assert r1["scores"]["plausibility"] == pytest.approx(5.1) and r1["validation"]["judge"]["repaired"]
     assert validate_tree(repo)[1] == []
 
 
@@ -508,3 +521,13 @@ def test_each_judging_pass_keeps_its_own_batch_file(repo, client, monkeypatch):
     st = load_json(repo.step_runs(1) / "_state_judge.json")
     assert [b["batch_file"] for b in st["batches"]] == ["runs/step1/_judge_batch.jsonl",
                                                          "runs/step1/_judge_batch_p2.jsonl"]
+
+
+def test_three_samples_average_sub_axes_then_weight_the_composite():
+    w = load_sim_config(ROOT_PATHS)["plausibility_weights"]
+    s = [scores(axes={"driver_fidelity": f, "mechanism": m, "magnitude": g})
+         for f, m, g in ((9, 6, 4), (8, 7, 5), (7, 8, 6))]
+    out = runner.mean_scores(s, w)
+    assert out["plausibility_axes"] == {"driver_fidelity": 8, "mechanism": 7, "magnitude": 5}
+    assert out["plausibility"] == pytest.approx(0.2 * 8 + 0.3 * 7 + 0.5 * 5)   # 6.2
+    assert out["least_plausible_claims"] == s[0]["least_plausible_claims"]

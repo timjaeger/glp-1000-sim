@@ -83,7 +83,7 @@
         },
         "plausibility_axes": {
           "type": "object", "additionalProperties": false,
-          "description": "rubric v2: plausibility sub-axes, scored separately; `plausibility` is their mean",
+          "description": "rubric v2: plausibility sub-axes, scored separately; `plausibility` is their weighted composite (config plausibility_weights)",
           "required": ["driver_fidelity", "mechanism", "magnitude"],
           "properties": {
             "driver_fidelity": {"type": "number", "minimum": 1, "maximum": 10},
@@ -91,8 +91,16 @@
             "magnitude": {"type": "number", "minimum": 1, "maximum": 10}
           }
         },
+        "plausibility_weights": {
+          "type": "object", "additionalProperties": false,
+          "description": "the weights the composite was computed with (config plausibility_weights at judging time)",
+          "required": ["driver_fidelity", "mechanism", "magnitude"],
+          "properties": {
+            "driver_fidelity": {"type": "number"}, "mechanism": {"type": "number"}, "magnitude": {"type": "number"}
+          }
+        },
         "plausibility": {"type": "number", "minimum": 1, "maximum": 10,
-                         "description": "v2: mean of plausibility_axes, computed in code; v1: the judge's single score"},
+                         "description": "v2: weighted composite of plausibility_axes (config plausibility_weights), computed in code; v1: the judge's single score"},
         "generativity": {"type": "number", "minimum": 1, "maximum": 10},
         "rationale": {
           "type": "object",

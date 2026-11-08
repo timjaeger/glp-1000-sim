@@ -60,26 +60,67 @@ Rules you must follow:
 2. **Magnitudes.** Two years. Population shares move by single-digit to low
    double-digit percentage points unless a driver says otherwise. Industries
    contract or adapt; they rarely vanish. Prices move the way `price_path` says.
-3. **Carry the ledger.** `safety_ledger` keeps every prior entry (status may
+3. **Population arithmetic.** These are bounds, not suggestions:
+   - `us_adults_on_drug_pct` = parent {{parent_on_drug_pct}} + `adoption_delta_pp`
+     {{adoption_delta_pp}}, ±2: between **{{current_use_low}}** and
+     **{{current_use_high}}**.
+   - `us_adults_ever_used_pct` rises by at most `adoption_delta_pp` + 6 points
+     ({{ever_rise_max}}) and never falls: between **{{parent_ever_used_pct}}** and
+     **{{ever_use_max}}**.
+   - `cycled_off_and_on_pct` (share of ever-users who stopped and restarted) is
+     reconciled to the gap: ever − current is the share of adults who used and
+     are off now. Together with the restarters among current users, it must fit
+     the parent's persistence and restart figures. Write that arithmetic in one
+     line of `population.note`.
+   - `by_income_third_pct`, if you give figures, brackets the national figure:
+     the lowest third at or below `us_adults_on_drug_pct`, the highest at or above.
+4. **Approvals follow the parent pipeline.** Read the parent's
+   `drugs.pipeline_note` and apply it product by product:
+   - Under FDA review in the parent: may be approved this step.
+   - In phase 3: approved no earlier than 12 months after its stated filing. If
+     no filing is stated, the filing is itself an event this step, and approval
+     comes no earlier than 12 months after it.
+   - In phase 2 or earlier, or only "in development": cannot be on the US market
+     at the end of {{target_year}}.
+   - No US generic semaglutide or tirzepatide before 2031 (`access.generic_us`
+     stays false), unless `price_path` is `generic_collapse`, and then the
+     mechanism (the settlement, ruling or authorised generic) is one of the
+     `events`.
+   - If a driver calls for a launch these rules forbid, realise it with what they
+     allow: the filing, a priority review, a launch outside the US, or an
+     existing product in a new form. Say so in `pipeline_note`. Do not break the
+     rule to honour the driver.
+5. **Carry the ledger.** `safety_ledger` keeps every prior entry (status may
    change) and adds what `safety_signal` requires. Nothing is forgotten.
-4. **Off-drug is a population.** Account for people who stopped, who cycle, who
+6. **Off-drug is a population.** Account for people who stopped, who cycle, who
    were never able to afford it, and the children growing up inside this. The
    `population` object must make these visible.
-5. **The interior life is a field, not a flourish.** `interior_life` must follow
+7. **Culture moves locally.** A cultural shift this step shows up in one named
+   demographic, city or industry (for example "nurses in Phoenix" or "the
+   Atlanta restaurant trade"), not as a national mood. No national survey
+   figure for a cultural shift; no "Americans now …".
+8. **The interior life is a field, not a flourish.** `interior_life` must follow
    from `personality_layer` and the indications in play. Be specific about work,
    art, intimacy and politics. Do not moralise; describe.
-6. **No cartoon villains, no mass death, no collapse** unless a driver forces it
+9. **No cartoon villains, no mass death, no collapse** unless a driver forces it
    and you can show the chain. The most frightening worlds in this simulation
    are the ones that look fine from the outside.
-7. **Set `fictional: true`.** Set each section's `severity` honestly as your own
-   1–10 read of harm to ordinary people in that domain; an independent judge
-   will re-score you and penalise inflation.
-8. **Prose.** `headline` ≤ 140 characters, written like a magazine cover line
-   from {{target_year}}. `world_in_600_words`: the state of things, present
-   tense, no lists. `a_day_in_the_life`: one named ordinary person, one ordinary
-   day in {{target_year}}, ~250 words, no explaining — the film lives here.
-9. `open_tensions`: 2–4 pressures that are unresolved at the end of
-   {{target_year}}. The next step will inherit them.
+10. **What has not changed.** Before you write `events`, fill `still_true` with
+    five specific things from the parent world that are still true at the end of
+    {{target_year}}: a price, a law, a product, an institution, a habit, named
+    as in the parent. Nothing else in your world may contradict them.
+11. **Set `fictional: true`.** Set each section's `severity` honestly as your own
+    1–10 read of harm to ordinary people in that domain; an independent judge
+    will re-score you and penalise inflation.
+12. **Prose.** `headline` ≤ 140 characters, written like a magazine cover line
+    from {{target_year}}. `world_in_600_words`: the state of things, present
+    tense, no lists. `a_day_in_the_life`: one named ordinary person, one ordinary
+    day in {{target_year}}, ~250 words, no explaining — the film lives here. That
+    person lives under your world's own rules: their drug, its price, who pays,
+    and what is legal for them must all be possible under the `access`, `drugs`
+    and `state` you wrote.
+13. `open_tensions`: 2–4 pressures that are unresolved at the end of
+    {{target_year}}. The next step will inherit them.
 
 Submit the object with keys `world` and `prose` by calling the `submit_world`
 tool once. Write nothing else.

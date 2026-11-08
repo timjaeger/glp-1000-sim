@@ -66,10 +66,11 @@ def check_run(paths: Paths, run, file: Path, cfg: dict) -> list[str]:
     sc = run.get("scores")
     if isinstance(sc, dict) and isinstance(sc.get("plausibility_axes"), dict) and not errs:
         axes = sc["plausibility_axes"]
-        mean = round(sum(axes.values()) / len(axes), 2)
-        if abs(sc.get("plausibility", -1) - mean) > 0.011:
-            errs.append(f"scores.plausibility {sc.get('plausibility')} is not the mean of "
-                        f"plausibility_axes ({mean})")
+        w = sc.get("plausibility_weights") or {k: 1 / len(axes) for k in axes}   # none stored: equal (rubric v2 first pass)
+        expect = round(sum(w[k] * axes[k] for k in w), 2)
+        if abs(sc.get("plausibility", -1) - expect) > 0.011:
+            errs.append(f"scores.plausibility {sc.get('plausibility')} is not the composite of "
+                        f"plausibility_axes with its weights ({expect})")
     return errs
 
 

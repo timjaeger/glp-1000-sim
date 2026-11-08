@@ -107,7 +107,11 @@ Scored (rubric v2) as three separate sub-axes, each 1–10: **driver fidelity**
 (every stipulated driver honoured, none contradicted), **mechanism** (every
 change has a shown causal chain; no internal contradictions) and **magnitude**
 (sizes and speeds in range for two years). The `plausibility` used by the floor
-and tie-break in §7 is their mean, computed in code. Before scoring, the judge
+and tie-break in §7 is the weighted composite **0.2 × driver fidelity + 0.3 ×
+mechanism + 0.5 × magnitude**, computed in code (`config/sim.json:
+plausibility_weights`). Magnitude carries half the weight because a world can
+honour every driver and still move too far, too fast; §7 also gives it its own
+hard floor. Before scoring, the judge
 must list the three least plausible specific claims in the run, each quoted
 verbatim (the quotes are checked against the run); they are kept in the dossier.
 
@@ -121,8 +125,11 @@ scenes implied, a visible texture of daily life. Used only as a tie-break.
   check current model IDs before running).
 - The judge sees the parent world, the drawn drivers and the run. It does not
   see other runs, scores, the step's axis weighting or lineage identity.
-- Judging runs at temperature 0. Optionally `judge_samples: 3` averages three
-  judge calls per run for stability; default 1 to save cost.
+- Judging runs at temperature 0 where the model allows it (the configured judge
+  does not; see `config/sim.json: _note_sampling`). `judge_samples: 3` (the
+  setting) averages three judge calls per run for stability: each badness
+  dimension, each plausibility sub-axis and generativity are averaged, and the
+  composite is recomputed from the averaged sub-axes.
 - The judge must return a short `rationale` per dimension. These are kept; they
   are part of the dossier and catch judge drift.
 
@@ -141,18 +148,23 @@ than one note struck five times:
 
 Procedure per step:
 
-1. Discard runs with `status != "ok"`.
-2. **Plausibility floor:** discard runs with `plausibility < 6`. If fewer than 3
-   runs survive, lower the floor by 1 and repeat (log it). Never below 4.
-3. Compute `axis_badness` = weighted mean of the six badness dimensions with the
+1. Discard runs with `status != "ok"`, and runs scored without plausibility
+   sub-axes (rubric v1).
+2. **Magnitude floor (hard):** discard runs whose `magnitude` sub-axis is below
+   5. This is applied before the plausibility floor and is never lowered; a
+   discarded run does not count toward the 3 the plausibility floor looks for.
+3. **Plausibility floor:** discard runs with composite `plausibility < 6`. If
+   fewer than 3 runs survive, lower the floor by 1 and repeat (log it). Never
+   below 4.
+4. Compute `axis_badness` = weighted mean of the six badness dimensions with the
    step's weights.
-4. Rank by `axis_badness` desc, tie-break by `plausibility` desc, then
+5. Rank by `axis_badness` desc, tie-break by `plausibility` desc, then
    `generativity` desc.
-5. **Diversity guard:** the 3 survivors must not all share the same parent
+6. **Diversity guard:** the 3 survivors must not all share the same parent
    lineage unless only one lineage has survivors; and no two survivors may have
    identical `price_path` + `cultural_response` + `personality_layer`. Walk down
    the ranking until the constraint is satisfied.
-6. Write each survivor's world state to `world/stepN.json` keyed by a new
+7. Write each survivor's world state to `world/stepN.json` keyed by a new
    lineage id (`L1`, `L2`, `L3`, with parent recorded) and append the selection,
    with scores and the runner-up, to `lineage.md`.
 

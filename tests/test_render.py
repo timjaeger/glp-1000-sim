@@ -217,7 +217,10 @@ def test_judge_dry_run_with_fixture_stays_in_dry_dir(repo, monkeypatch, capsys):
     args = argparse.Namespace(step=1, dry_run=True, fixture=str(FIXTURE), rejudge=False)
     assert J.main(repo, args) == 0
     reqs = [json.loads(l) for l in (repo.dry / "step1" / "_judge_batch.jsonl").read_text().splitlines()]
-    assert len(reqs) == 1 and reqs[0]["params"]["model"] == load_sim_config(repo)["models"]["judge"]
+    cfg = load_sim_config(repo)
+    assert len(reqs) == cfg["judging"]["judge_samples"] == 3            # one request per judge sample
+    assert [r["custom_id"] for r in reqs] == ["s1-L0-r00-j0", "s1-L0-r00-j1", "s1-L0-r00-j2"]
+    assert reqs[0]["params"]["model"] == cfg["models"]["judge"]
     body = json.dumps(reqs[0]["params"])
     assert "s1-L0-r00" not in body                 # custom_id is metadata, not prompt
     assert not repo.step_runs(1).exists()
@@ -238,3 +241,46 @@ def test_same_model_for_generator_and_judge_is_refused(repo):
     (repo.config / "sim.json").write_text(json.dumps(cfg))
     with pytest.raises(SystemExit, match="must differ"):
         G.main(repo, argparse.Namespace(step=1, n=1, seed=None, dry_run=True))
+
+
+def test_generation_requires_still_true_before_events(fixture_run):
+    s = batch.generation_api_schema(Paths(ROOT))
+    world = s["properties"]["world"]
+    keys = list(world["properties"])
+    assert "still_true" in world["required"] and keys.index("still_true") == keys.index("events") - 1
+    from glpsim import runner
+    good = {"world": copy.deepcopy(fixture_run["world"]), "prose": fixture_run["prose"]}
+    assert runner.check_generation(Paths(ROOT), good, 2028) == []
+    del good["world"]["still_true"]
+    assert any("still_true" in e for e in runner.check_generation(Paths(ROOT), good, 2028))
+    good["world"]["still_true"] = ["only one"]
+    assert any("still_true" in e for e in runner.check_generation(Paths(ROOT), good, 2028))
+
+
+def test_population_bounds_render_into_the_prompt(baseline):
+    from glpsim import render
+    b = render.population_bounds(baseline, {"adoption_delta_pp": 7.1})   # parent 11% on, 15% ever
+    assert b == {"parent_on_drug_pct": "11", "adoption_delta_pp": "7.1", "current_use_low": "16.1",
+                 "current_use_high": "20.1", "parent_ever_used_pct": "15", "ever_rise_max": "13.1",
+                 "ever_use_max": "28.1"}
+    neg = render.population_bounds(baseline, {"adoption_delta_pp": -8})
+    assert (neg["current_use_low"], neg["current_use_high"]) == ("1", "5")
+    assert neg["ever_rise_max"] == "0" and neg["ever_use_max"] == "15"   # ever-use never falls
+
+
+def test_generation_prompt_carries_the_new_rules(baseline):
+    from glpsim import render
+    from glpsim.common import load_drivers_config
+    drivers = {"adoption_delta_pp": 7.1, "price_path": "stalled", "coverage_shift": "employer_retreat",
+               "new_indications": [], "safety_signal": "none", "next_gen_launch": "triple_agonist_30pct",
+               "market_shock": "none", "cultural_response": "aesthetic_inversion",
+               "state_action": "restriction", "personality_layer": "marketed_feature"}
+    _, user = render.generation_prompt(Paths(ROOT), parent_world=baseline, parent_prose=None,
+                                       parent_year=2026, target_year=2028, drivers=drivers,
+                                       dcfg=load_drivers_config(Paths(ROOT)))
+    assert "{{" not in user
+    assert "between **16.1** and\n     **20.1**" in user and "**28.1**" in user
+    for phrase in ("no earlier than 12 months after its stated filing", "before 2031",
+                   "one named\n   demographic, city or industry", "fill `still_true` with\n    five",
+                   "must all be possible under the `access`, `drugs`\n    and `state` you wrote"):
+        assert phrase in user, phrase
