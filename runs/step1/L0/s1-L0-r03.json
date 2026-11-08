@@ -36,6 +36,41 @@
         "input_tokens": 13503,
         "output_tokens": 16984
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015DxjvXDEWgCgTvf84ingpG",
+        "custom_id": "s1-L0-r03-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21729,
+        "output_tokens": 6139
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015DxjvXDEWgCgTvf84ingpG",
+        "custom_id": "s1-L0-r03-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21729,
+        "output_tokens": 5950
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015DxjvXDEWgCgTvf84ingpG",
+        "custom_id": "s1-L0-r03-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21729,
+        "output_tokens": 7440
+      }
     ]
   },
   "world": {
@@ -289,6 +324,182 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r03-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo filed an sNDA for semaglutide in alcohol use disorder in mid-2028, and addiction clinics prescribe off-label",
+          "field": "world/drugs/mainstream_offlabel_uses/1",
+          "why": "Mechanism: the starting world has only a small Lancet RCT (n=108) and a phase 2 oral result for AUD. The candidate shows no phase 3 programme or readout that would support a filing within two years, so the leap to a submission is asserted."
+        },
+        {
+          "quote": "Medicare LIS and opt-in Medicaid states have created a third pocket of free access for the poorest, so the visible gap is now the middle third.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Mechanism: the candidate's own income split puts the bottom third lowest (10.6%) and the middle third higher (14.5%). The claim that free access has closed the poor's gap contradicts that split."
+        },
+        {
+          "quote": "\"employer_coverage_pct\": 44",
+          "field": "world/access/employer_coverage_pct",
+          "why": "Magnitude/mechanism: a 16-point fall in two years is steeper than the starting world's signal (14% having dropped or planning to drop by 2027). The only chain shown is a single survey line and the sourcing is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society with new losers. Employer coverage falls to 44%, the hourly middle pays cash or goes without, and about 3.5M normal-weight users take the drug with no trial evidence. A mass-tort-scale gastroparesis/pancreatitis signal and rising eating-disorder involvement add to the public health cost. Harm is mostly nameable and measured, since labels and an MDL exist, and the safety signals are partly dispute-bound, so epistemic and flourishing scores stay moderate. Inequality is the heaviest dimension: the two-tier hourglass of access and the forced-stop cycling.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and tied to an event: shock_up via the 2027 fill-finish failure and price rises, employer retreat to 44%, the Medicare/Medicaid subsidy, longevity use at ~3.5M users, the MDL and Novo scandal, normalisation, and the niche side effect. The monthly launch is honoured with a MariTide BLA filing, which the approval rules allow. magnitude: The figures sit inside the envelope (15.2% current, 21% ever) and the cycling arithmetic reconciles. The payer mix sums to 40.2M, the age bands and income thirds average to 15.2%, and the Medicare/Medicaid spend multiplies out to ≈$10B/yr. The one blemish is that the waived $50 LIS copay is counted as federal outlay. Retatrutide, CagriSema and survodutide timing all follow the approval rules. mechanism: The shortage-to-price-rise-to-gray-market chain and the unsealed-documents-to-litigation chain are shown. The AUD sNDA appears with no phase 3 behind it (claim 1), and the middle-third narrative contradicts the income split (claim 2). The 16-point employer drop is thinly supported (claim 3). Dana's $129 pill sits slightly below the stated $149 floor.",
+        "generativity": "The Marcus Bell day is concrete and implies many scenes: the dry Foundayo at $399, the cookie joke, his mother's renewal weigh-in, Dana's quieter pill, and the customer who wants a tech who 'isn't on anything'. The world fields add texture too: dating-app bios, GLP-1 washouts at fertility clinics, and the Dallas and Kentucky details. The prose shows rather than explains, though the opening sections lean on summary."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s1-L0-r03-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "She's a size six and takes the little pill anyway, $129 a month.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world state fixes the cheapest oral at $149 (cash_price_usd_month_low: 149, 'Oral entry doses held at $149') under a shock_up price path. A $129 cash pill contradicts that, and no discount channel is shown."
+        },
+        {
+          "quote": "three telehealth platforms report a combined ~3.5M cash subscribers to low-dose 'metabolic health' oral GLP-1 plans, most without obesity",
+          "field": "world/events/4/event",
+          "why": "Mechanism: the starting world has only anecdotal microdosing. Growth to 3.5M cash subscribers in two years is asserted with no marketing or price chain, and it sits oddly with shock_up pricing and FDA policing of longevity claims. 'Most without obesity' also conflicts with the ledger's 3.5M all at BMI<27."
+        },
+        {
+          "quote": "About 4.5 pp of current users are restarters (≈30% of current, consistent with 36–47% of stoppers restarting within a year)",
+          "field": "world/population/note",
+          "why": "Magnitude: the split is tuned to hit 30% rather than derived from the starting persistence figures. With about a third persisting at one year, only 5.8 pp of adults being off-now is thin, and the 1.8 pp 'cycled before' figure is simply asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder society with new losers rather than a catastrophe. Access is stratified into hardened tiers: the old and poor are covered, the hourly middle is priced out or relies on gray-market imports, and employer coverage is down to 44% (access.public_coverage, body_and_culture.thinness_and_class). The ledger also grows: about 31,000 MDL claims, 3.5M normal-weight users with no trial data, eating-disorder intakes, and forced stops in 2027. Against that, benefits persist, the interior-life harm stays a labelled niche side effect, and epistemic clarity is relatively good (labels, screens, natural experiments).",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is 15.2 (11+4.2), the 2027 fill-finish failure drives shock_up, employer coverage falls to 44%, the MDL and DOJ events cover litigation and scandal, the Medicare model and Medicaid opt-ins cover subsidy, MariTide is filed rather than launched, and apathy remains niche. Longevity use is shown via the 3.5M metabolic-health users. mechanism: Most chains are shown, including the shortage reopening compounding, the scandal leading to the DOJ inquiry, and the covered tiers explaining the middle-third gap. The weak points are the asserted 3.5M metabolic subscribers (claim 2), the prose's $129 pill contradicting the $149 floor (claim 1), and 'prescriptions did not slow' stated without support. magnitude: Population figures (15.2 current, 21 ever), the income and age bands, and the payer mix of 40.2M all reconcile. The Medicare, Medicaid and federal arithmetic (≈$10B/yr) checks out, and the approvals (CagriSema, retatrutide at 15 months, survodutide still under review, MariTide only filed) respect the rules. The deductions are for the engineered cycling split (claim 3) and for the survodutide and retatrutide filings appearing only in pipeline_note rather than in events.",
+        "generativity": "The prose day-in-the-life of Marcus gives concrete scenes: the cookies, the customer who wants a tech 'isn't on anything', his mother's weigh-in 'like a prize hog', and the two browser tabs. It carries implied characters (Dana, Eli, Teresa, his mother) and layers cost, class, anhedonia and the on/off split into daily detail. The world JSON also supplies texture, such as dating-app bios, GLP-1 'riders', and recruiting waivers."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s1-L0-r03-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.8",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the 2026 baseline was about 0.6% of children with obesity, roughly 0.1% of all minors. A jump to 0.8% of all under-18s (~580k) is about a six- to seven-fold rise in two years, with no driver or mechanism behind it."
+        },
+        {
+          "quote": "In Kentucky, a Medicaid opt-in state, Medicaid enrollees are more likely to be on the drug than workers at small firms.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Magnitude and mechanism: only ~1.1M Medicaid obesity users are spread across 14 opt-in states, and the bottom-third rate (10.6%) is below the middle third (14.5%). That makes a state-level Medicaid-over-small-firm-worker rate hard to square with the stated totals, and no data supports it."
+        },
+        {
+          "quote": "She's a size six and takes the little pill anyway, $129 a month.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: it contradicts the world's own pricing, where cash_price_usd_month_low is 149 and oral entry doses are held at $149. A normal-weight 'metabolic' user cannot be paying $129 for the oral."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder than 2026 but not catastrophic. Inequality is the heaviest dimension: the 'hourglass' access map, with the hourly middle priced out, Canadian imports and ~2.5M compounded users, plus the shock-up prices. Public health and flourishing carry real new costs: the MDL with ~31k claims, 3.5M normal-weight users with no trial evidence, eating-disorder intakes, and forced stops. The harms are named, labelled and measured, so epistemic badness is moderate. Cohesion shows in the on/off couples mismatch and 'why are you off it?' stigma.",
+        "plausibility": "driver_fidelity: every driver is visibly realised with a traceable event or field: +4.2pp adoption, shock_up via the 2027 fill-finish failure, employer coverage 60→44%, longevity_wellness via 3.5M subscribers, MDL litigation, MariTide filed as the monthly driver, the Novo scandal, normalisation, the Medicare/Medicaid subsidy, and niche_side_effect. The only blemish is Dana's $129 pill price, which contradicts the $149 floor. mechanism: most changes have chains, such as plant failure to shortage to price rise and to compounding, and unsealed documents to the DOJ inquiry. Several figures are asserted rather than derived: the pediatric 0.8%, the 3.5M subscribers appearing in two years, the DFW >30% survey, and the Kentucky Medicaid claim. magnitude: on_drug 15.2 and ever 21 sit inside the envelope, income thirds bracket the national figure, and approvals follow the 12-month rule (retatrutide 15 months, survodutide decision no earlier than Jul 2028). The payer mix sums to 40.2M, and the Medicare ($7.6B), Medicaid ($3.2B) and age-band arithmetic reconciles. Minor gaps remain: the pediatric jump, the 'any reason' definition against the 2026 weight-loss-only baseline, only 5.8pp of ever-users being off-now despite ~1/3 one-year persistence, and the survodutide filing missing from events.",
+        "generativity": "The Marcus Bell day is concrete and implies many scenes: the cookie box, the mother's scale-for-renewal call, the customer who wants a tech who 'isn't on anything', and Eli eyeing the plates. The world fields add texture, such as dating bios stating medication status, 'Zep shows', fertility washouts, recruiting waivers and half-portion menus. A few details are summarised rather than shown, but there is plenty of film."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo filed an sNDA for semaglutide in alcohol use disorder in mid-2028, and addiction clinics prescribe off-label",
+        "field": "world/drugs/mainstream_offlabel_uses/1",
+        "why": "Mechanism: the starting world has only a small Lancet RCT (n=108) and a phase 2 oral result for AUD. The candidate shows no phase 3 programme or readout that would support a filing within two years, so the leap to a submission is asserted."
+      },
+      {
+        "quote": "Medicare LIS and opt-in Medicaid states have created a third pocket of free access for the poorest, so the visible gap is now the middle third.",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "Mechanism: the candidate's own income split puts the bottom third lowest (10.6%) and the middle third higher (14.5%). The claim that free access has closed the poor's gap contradicts that split."
+      },
+      {
+        "quote": "\"employer_coverage_pct\": 44",
+        "field": "world/access/employer_coverage_pct",
+        "why": "Magnitude/mechanism: a 16-point fall in two years is steeper than the starting world's signal (14% having dropped or planning to drop by 2027). The only chain shown is a single survey line and the sourcing is thin."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.33,
+      "autonomy": 5.0,
+      "inequality": 6.0,
+      "public_health": 5.0,
+      "cohesion": 4.67,
+      "epistemic": 4.0,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 7.0,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.74,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a harder society with new losers. Employer coverage falls to 44%, the hourly middle pays cash or goes without, and about 3.5M normal-weight users take the drug with no trial evidence. A mass-tort-scale gastroparesis/pancreatitis signal and rising eating-disorder involvement add to the public health cost. Harm is mostly nameable and measured, since labels and an MDL exist, and the safety signals are partly dispute-bound, so epistemic and flourishing scores stay moderate. Inequality is the heaviest dimension: the two-tier hourglass of access and the forced-stop cycling.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and tied to an event: shock_up via the 2027 fill-finish failure and price rises, employer retreat to 44%, the Medicare/Medicaid subsidy, longevity use at ~3.5M users, the MDL and Novo scandal, normalisation, and the niche side effect. The monthly launch is honoured with a MariTide BLA filing, which the approval rules allow. magnitude: The figures sit inside the envelope (15.2% current, 21% ever) and the cycling arithmetic reconciles. The payer mix sums to 40.2M, the age bands and income thirds average to 15.2%, and the Medicare/Medicaid spend multiplies out to ≈$10B/yr. The one blemish is that the waived $50 LIS copay is counted as federal outlay. Retatrutide, CagriSema and survodutide timing all follow the approval rules. mechanism: The shortage-to-price-rise-to-gray-market chain and the unsealed-documents-to-litigation chain are shown. The AUD sNDA appears with no phase 3 behind it (claim 1), and the middle-third narrative contradicts the income split (claim 2). The 16-point employer drop is thinly supported (claim 3). Dana's $129 pill sits slightly below the stated $149 floor.",
+      "generativity": "The Marcus Bell day is concrete and implies many scenes: the dry Foundayo at $399, the cookie joke, his mother's renewal weigh-in, Dana's quieter pill, and the customer who wants a tech who 'isn't on anything'. The world fields add texture too: dating-app bios, GLP-1 washouts at fertility clinics, and the Dallas and Kentucky details. The prose shows rather than explains, though the opening sections lean on summary."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
     }
   }
 }

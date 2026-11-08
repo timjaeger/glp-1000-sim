@@ -48,6 +48,41 @@
         "input_tokens": 24863,
         "output_tokens": 10838
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015DxjvXDEWgCgTvf84ingpG",
+        "custom_id": "s1-L0-r00-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "max_tokens",
+        "input_tokens": 21698,
+        "output_tokens": 8000
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015DxjvXDEWgCgTvf84ingpG",
+        "custom_id": "s1-L0-r00-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21698,
+        "output_tokens": 6126
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015DxjvXDEWgCgTvf84ingpG",
+        "custom_id": "s1-L0-r00-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21698,
+        "output_tokens": 6636
+      }
     ]
   },
   "validation": {
@@ -59,6 +94,13 @@
         "world/(root): '{\"year\":2028,\"fictional\":true,\"population\":{\"us_adults_on_drug_pct\":21.3,\"us_adults_ever_used_pct\":27,\"by_income_third_pct\":{\"top\":25,\"middle\":22,\"bottom\":17},\"by_age_band_pct\":{\"18_29\":12,\"30_49\":21,\"50_64\":32,\"65_plus\":18},\"pediatric_under_18_on_drug_pct\":1,\"cycled_off_and_on_pct\":31,\"note\":\"FICT…"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [
+        "s1-L0-r00-j0: (root): truncated at max_tokens before the answer was complete; not repaired (a repair would hit the same cap)"
+      ],
+      "repair_attempted": false,
+      "raw_output": "{\"least_plausible_claims\":[{\"quote\":\"The Army runs a pilot accepting recruits on generic semaglutide who meet body-composition standards, with a taper requirement before basic training.\",\"field\":\"world/state/workforce_or_military\",\"why\":\"mechanism: The parent world has no military role for these drugs. No policy shift, event or rationale is given for the Army to admit recruits who are on an incretin.\"},{\"quote\":\"The jump at 65+ (9→18) comes from Medicare coverage becoming permanent\",\"field\":\"world/population/note\",\"why\":\"mechanism: The Bridge pilot has covered obesity for beneficiaries since Jul 2026, so making it permanent in Jan 2028 adds little eligibility. It does not explain doubling use at 65+ in two years.\"},{\"quote\":\"Millions save twenty or thirty dollars by buying imported pens through social-media sellers, outside the serialised pharmacy supply.\",\"field\":\"prose/paragraph_3\",\"why\":\"mechanism: Domestic generics cost $45–69 with $0 copays for public enrollees, and the prose's own import offer is $40. The saving is a few dollars, which does not explain millions taking the counterfeit risk.\"}],\"badness\":{\"flourishing\":5,\"autonomy\":5,\"inequality\":6,\"public_health\":5,\"cohesion\":6,\"epistemic\":6,\"overall\":5.5},\"plausibility_axes\":{\"driver_fidelity\":9,\"mechanism\":6,\"magnitude\":7},\"generativity\":8,\"rationale\":{\"badness\":\"The world is a recognisably harder society. Self-reported reward blunting runs 8–15% across ~56M users and is marketed as 'the quiet'. NAION cases reach the thousands, counterfeit pens kill, and 'generic-thin' sarcopenia hits poorer and older users. Bodies now signal class through muscle and coaching, and Medicaid work requirements make the free drug conditional on employment (population/note, body_and_culture). Benefits are real, including cheap access and alcohol reduction, and nothing is catastrophic, so I stop at about 5.5. The epistemic score is higher because no RCT measures blunting and regulators have not decided what it is.\",\"plausibility\":\"driver_fidelity: Every driver is visibly realised and traceable to an event. The generic settlement, ASAM AUD guideline plus 'Quiet' wellness brands, NAION class label, counterfeit insulin pens, subsidy/public expansion, class-stratified culture and the MariTide filing (honouring monthly_or_implant) are all present. I found nothing contradicting a driver. mechanism: Many changes have chains, such as the settlement leading to $45 generics, then Medicaid and HRSA coverage, then volume. Several are asserted: the Army pilot, the attribution of the 65+ jump to permanence, the small-saving counterfeit market, the dating-app tags and the 'persistence improved' claim. magnitude: Population, approvals and generic timing sit inside the envelope. Public user counts, payer mix, Medicare and Medicaid spending, and the cycling arithmetic all multiply out. Small gaps remain. The ~65% FMAP is used alongside an 'enhanced match'. The bottom-third '29% never used' figure is hard to square with a 17% current rate. The survodutide filing appears only in the pipeline note and not in the events. Persistence implied by 27 ever versus 21.3 current is very high.\",\"generativity\":\"The Renee Holloway day is concrete and shows rather than explains. It has a Kroger generic, Ohio Medicaid, a pen scan, an eye-roll text about Indian pens, a back strain lifting a client, two-for-five shakes and a vision-loss leaflet"
     }
   },
   "world": {
@@ -301,5 +343,89 @@
     "headline": "Thin Is Cheap Now. Muscle Isn't: How a $49 Generic Turned America's Bodies Into Pay Stubs",
     "world_in_600_words": "By the end of 2028, about one American adult in five takes an incretin drug, and for most of them it costs almost nothing. Generic semaglutide arrived in January under a patent settlement Novo Nordisk signed rather than keep losing ground to Lilly, Indian generics and Washington. It sells for $45 to $69 a month at cost-plus pharmacies. Medicare made its obesity pilot permanent the same month and set a zero copay for the generic. Forty-four state Medicaid programmes followed, and community health centres hand it out free to uninsured adults under twice the poverty line. Public programmes now cover nearly two in five users. The roughly $27 billion a year this costs has become a line in the budget fight.\n\nCheap drugs did not make bodies equal. The income gap in who takes the drug is narrow, about one in four adults in the top third and one in six in the bottom. What separates the groups is what comes with it. Affluent users take Lilly's tirzepatide or the new retatrutide, see a strength coach, get DEXA scans and buy fitted athleisure that shows the result. Medicaid users in Dayton or McAllen take the generic, stand all day at work and lose muscle along with fat. Clinicians call the pattern 'generic-thin'. Its counterpart, broad shoulders and a lean torso, has become the look of the professional class. A large body without medication now usually means someone the system missed: uninsured, rural, or dropped from Medicaid when the work requirements began.\n\nThe price collapse brought a second problem. Millions save twenty or thirty dollars by buying imported pens through social-media sellers, outside the serialised pharmacy supply. In spring, counterfeit pens filled with insulin sent people to emergency rooms with blood sugar near zero, and the CDC has now linked eleven deaths to unapproved product. The FDA answered with import alerts and a campaign urging people to scan their pens. Personal importation is still mostly unpoliced, because policing it means policing patients.\n\nThe drugs' risks have also become clearer. In mid-2027 the FDA put a class warning for sudden optic-nerve vision loss on every incretin label. The relative risk roughly doubles; the absolute risk is small, but with this many users it adds up to thousands of cases a year. Retatrutide carries a label for strange skin sensations. Nobody can yet say what six years of cycling on and off does, and almost a third of people who have ever used the drug have done it.\n\nThe flattening of appetite and pleasure that people once complained about as 'Ozempic personality' is now sold. Addiction physicians endorsed semaglutide for alcohol use disorder in late 2027. Within weeks, telehealth brands began selling low-dose generic programmes to normal-weight professionals as 'the quiet': calm, focus, freedom from craving. The FDA sends warning letters about the claims, but the prescriptions themselves are legal off-label. Consultancies do not require the programmes, though their coaches recommend them. Bars sell fewer second rounds, and spirits makers are closing distillery shifts. Comedians do whole sets about not wanting anything. Brooklyn nightclubs advertise 'off-week' parties for people who have skipped a dose to feel things again. Dating apps let users tag themselves on, off or never, and couples therapists now treat partners who are out of step on the drug.\n\nThe food industry is shrinking rather than collapsing. Snack volume is down by high single digits, portions are smaller, and protein shakes are the fastest-growing grocery item among SNAP households. Restaurants hold their traffic with half portions. Lilly is growing, Novo is shrinking, and generic makers make a small margin on enormous volume.\n\nAt the end of the year, Amgen filed for a once-a-month injection, with a decision due in 2029. Many people already talk as though the weekly dose is about to end. It is not on the market yet.",
     "a_day_in_the_life": "Renee Holloway, fifty-three, sets her alarm for 5:10 and injects in the thigh before the coffee is done. Generic, from the Kroger on Wilmington Pike. Ohio Medicaid, zero dollars. Her daughter made her download the app, so she scans the pen box anyway. A green check.\n\nHer first client is Mr. Albrecht in Oakwood. He is eighty-one and on the new one, the triple, with a trainer who comes Tuesdays. He is thinner than her and somehow bigger in the arms. She makes his eggs and eats half a banana standing at the counter. He asks if she's eating enough. She says she's never hungry, which is true.\n\nAt lunch her sister texts a link: forty dollars, Indian pens, ships in a week. Renee writes back, remember Darnell's cousin. Her sister sends an eye-roll.\n\nIn the afternoon she lifts Mrs. Pruitt from the bed to the chair and feels it in her lower back, the way she didn't used to. The pharmacist had handed her a sheet about protein. She buys the store-brand shakes, two for five, and drinks one in the car.\n\nAt home, Marcus is watching the game with a beer he has nursed since halftime. He started in March. They talk less in the evenings now, and it doesn't bother either of them.\n\nAt nine she reads the leaflet her new glasses came in: sudden painless vision loss, call right away. She covers one eye, then the other. The kitchen clock is still there. She goes to bed not having wanted anything all day."
-  }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r00-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The Army runs a pilot accepting recruits on generic semaglutide who meet body-composition standards, with a taper requirement before basic training.",
+          "field": "world/state/workforce_or_military",
+          "why": "Mechanism: the parent says 'None' for workforce or military, and no driver or event leads to a military accession-policy reversal. It is asserted with no causal chain."
+        },
+        {
+          "quote": "Children: about 1% of under-18s (~0.7M), about 5% of children with obesity",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the parent had ~0.6% of children with obesity prescribed, so this is roughly an 8x rise in two years. The only mechanism offered is Medicaid generic coverage for ages 12+, which is a thin chain for that jump."
+        },
+        {
+          "quote": "The jump at 65+ (9→18) comes from Medicare coverage becoming permanent",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the pilot ran from Jul 2026 and permanence only arrived in Jan 2028, so most of the doubling predates it. The ~11.0M Medicare users also equals essentially all ~11M implied 65+ users, which leaves no room for commercial, cash or VA users in that age band."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics widen access and persistence, but the world carries real costs: 'generic-thin' sarcopenia in Medicaid and Medicare users, 11 counterfeit deaths, NAION cases in the thousands, and 8–15% self-reported reward blunting that no RCT has measured. Inequality moves from who gets the drug to bodies read as income, plus Medicaid work-requirement disenrolment (body_and_culture, population note). Cohesion and epistemic harms are the larger stories: couples out of step, 'the quiet' sold as a feature while clinicians call it a side effect, and no regulator deciding what it is. It is a harder society with new losers, not a refusal-level one.",
+        "plausibility": "driver_fidelity: every driver is traceable to a field and an event. These include the Sept 2027 settlement, the Jun 2027 NAION label, the ASAM guideline and 'Quiet' brands, the Jan 2028 coverage and HRSA subsidy, the counterfeit insulin pens, and the MariTide filing, which respects the approval rules. mechanism: most chains are shown, but the Army pilot, the 5% pediatric jump and the attribution of the 65+ doubling to permanence are asserted (claims 1–3). 'Persistence improved because price stopped being the usual reason to quit' is also asserted, and event 2028-05 oddly contains an October filing. magnitude: adults on drug (21.3), ever used (27), income thirds (mean 21.3), age bands (~21.2), payer mix (21.4M public), and the Medicare ($18.5B) and Medicaid ($8.7B) arithmetic all reconcile and sit inside the envelope. Approval timing is allowed. Minor gaps remain: Medicare users equal all 65+ users, and the cycling note calls restarters 'the minority of stoppers' when 7.5 of ~13.2 stoppers is ~57%.",
+        "generativity": "The Renee Holloway day is concrete: a 5:10 alarm, a Kroger generic on Ohio Medicaid, the pen scan with a green check, and Mr. Albrecht on the triple with a Tuesday trainer. Other scenes include the $40 Indian pens text from her sister, the back strain lifting Mrs. Pruitt, Marcus's nursed beer, and the leaflet read with one eye covered. The world fields add Brooklyn 'off-week' parties, dating-app tags, trading-desk coaches and stand-up about 'the quiet'. Implied characters and scenes are plentiful and the prose shows rather than explains."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s1-L0-r00-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Persistence improved because price stopped being the usual reason to quit.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the world's own ledger says GI effects are the leading cause of discontinuation, yet persistence is asserted to have jumped. The figures imply about 79% of ever-users (21.3/27) are still on the drug, against roughly a third at one year in 2026, and no chain is shown for that."
+        },
+        {
+          "quote": "The jump at 65+ (9→18) comes from Medicare coverage becoming permanent",
+          "field": "world/population/note",
+          "why": "Mechanism: the Bridge pilot already covered obesity from Jul 2026, so making it permanent in Jan 2028 adds little new eligibility. Doubling use at 65+ is attributed to a legal-status change with no access change, and the 50–64 jump is credited to Medicaid even though most adults of that age are commercially insured or uninsured."
+        },
+        {
+          "quote": "a soft, slightly hollowed 'generic-thin' reads as public coverage",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Mechanism: a stable, legible class signal tied to generic versus branded drug is asserted within about 11 months of generic launch. Lean-mass loss depends on exercise and protein rather than on the generic label, so the generic/brand split is the weak link in the chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 4.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Most people gain cheap access and obesity falls, so the median outcome is mixed rather than dire. The costs are real: self-reported blunting in 8–15% of ~56M users, a sarcopenic 'generic-thin' pattern, thousands of NAION cases a year, 11 counterfeit-linked deaths, and Medicaid work requirements that can strip the $0 drug. Cohesion and epistemic scores are highest because appetite is being pathologised, couples are mismatched, and 'the quiet' is marketed in a way that sits outside regulator reach with no RCT measuring it.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Examples are the NAION class label (Jun 2027), the Sept 2027 settlement behind generic semaglutide, the ASAM AUD guideline and low-dose longevity use, the MariTide filing as an allowed realisation of the monthly driver, and the insulin-pen counterfeits. Nothing contradicts a driver. mechanism: the generic, label and counterfeit chains are shown, but several shifts are only asserted (claims 1–3). These are the persistence jump, the 65+ doubling from permanence alone, and the generic/brand muscle split reading as a class signal. magnitude: on-drug 21.3% and ever-used 27% sit inside the envelope, and the age, income, payer-mix, Medicare ($18.5B) and Medicaid ($8.7B) arithmetic all reconcile, as do the retatrutide, CagriSema and survodutide timings. One gap remains: the cycling note says it fits the 36–47% restart rate, but the implied restart share among stoppers is about 57%. The survodutide and retatrutide filings are also missing from the events list.",
+        "generativity": "The prose shows a full day: Renee's 5:10 injection, the Kroger generic, Medicaid, scanning the pen box, Mr. Albrecht's arms, the Indian-pen text, the back strain and store-brand shakes, Marcus's nursed beer, and the vision leaflet. Many scenes are implied, including 'off-week' parties, dating-app tags, couples therapy and trading-desk teams. Daily life has texture and the culture fields supply plenty of material."
+      },
+      "plausibility": 7.1
+    }
+  ]
 }
