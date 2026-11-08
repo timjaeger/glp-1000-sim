@@ -52,6 +52,41 @@
         "input_tokens": 19512,
         "output_tokens": 21438
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r35-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35999,
+        "output_tokens": 1530
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r35-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35999,
+        "output_tokens": 1329
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r35-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35999,
+        "output_tokens": 1536
+      }
     ]
   },
   "world": {
@@ -327,6 +362,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r35-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Pharmacists explain that a holiday works on Lilly's short-acting Foundayo and barely registers on semaglutide, which stays in the body for a week",
+          "field": "prose/paragraph_2",
+          "why": "Mechanism: the claim that a third of users take drug holidays rests on a pharmacology that the same text says does not work for most users, since oral semaglutide and weekly shots are the bulk of volume. The holiday behaviour is asserted as widespread with no shown chain explaining why people persist."
+        },
+        {
+          "quote": "Applicants up to 6 points over body-fat standards can enlist on a supervised oral incretin, ~19k accessions a year.",
+          "field": "world/state/workforce_military",
+          "why": "Magnitude: ~19k accessions plus ~125k active-duty users are asked to explain a large part of the 10.0-point rise in ever-use (about 27M adults) and the bottom third's jump from 17.5 to 24. Military and police programmes (~1.5M TRICARE/VA/federal users) cannot carry that much of the change."
+        },
+        {
+          "quote": "Whole Appetite's 'Long Table' weekend in Asheville draws about 25,000 people; organisers unveil an 'Own Appetite' pledge against conditioned premiums and pediatric starts, signed by ~140 candidates by autumn",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a new movement goes from nothing to 25,000 attendees and 140 candidate signatories in about two years. The causal chain is thin, and the movement is fully formed, branded and aesthetically coded with no seed in the 2034 world."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 5.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, this world keeps the inherited harms (a ~54k-to-61k-claim EPI mass tort, hip-fracture HR 1.3–1.45, pediatric growth deficits now on a daily tablet from age 6, a persistent gray market with Burkholderia clusters) and adds deeper conditioning. Premium tiers hinge on pill-bottle logs, and military readiness dashboards track missed fills, with holidays barred without command approval. Autonomy and inequality are the heaviest dimensions, since coverage is conditioned, veterans lose weight-only coverage at discharge, and the bottom third is only partly reached. It is a recognisably harder society, but the harm is measured and discussed, and the 41% complaint is openly aired, so epistemic and cohesion stay mid-range.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Managed decline appears as TrumpRx cuts, status quo on coverage holds at 34% of employers, the pediatric under-12 driver comes as the Wegovy pill 6–11, AUD arrives via the VA/DoD guideline, oral parity, the military workforce driver, mainstream_complaint and natural_movement all appear, and no safety signal or market shock is added. mechanism: Several shifts are asserted. The holiday phenomenon contradicts the pharmacology the text itself gives (claim 1), and Whole Appetite appears fully formed (claim 3). The pill 6–11 approval 14 months after a Jan 2035 filing is permitted. magnitude: Headline figures sit inside the envelope (32.4% on drug, 44.6% ever, which is under 45.3), and the payer mix sums to 89.4M. The 10-point ever-use rise leans on tiny military and police populations (claim 2) and on oral amycretin. The Medicare spend of 16.6M × $212 × 12 ≈ $42.2B checks out, but the dementia route (~2.6M, obesity plus CVD) and AUD route (~1.2M) sit awkwardly with the stated user counts and the small AUD population, so reconciliation is only partly clean.",
+        "generativity": "The prose carries a specific officer, a blinking bottle, a holiday-day count, a closed bar with a leftover PILL NIGHT sign, and a daughter kneading bread with a flyer on the fridge. These imply many scenes. The world fields supply rich texture such as Monday ED nausea, 'Friday records' and wrist-bare fashion, though the day-in-the-life ends somewhat tidily on the quota gag."
+      },
+      "plausibility": 6.0
+    },
+    {
+      "custom_id": "s5-L3-r35-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"us_adults_on_drug_pct\": 32.4",
+          "field": "world/population/us_adults_on_drug_pct",
+          "why": "Inside the envelope (30.4–34.4), but at the 2036 level of about one in three adults, the absence of any financing shift or structural change is hard to reconcile with Medicare still paying nothing for weight alone. This is a magnitude claim, flagged mildly."
+        },
+        {
+          "quote": "Applicants up to 6 points over body-fat standards can enlist on a supervised oral incretin, ~19k accessions a year.",
+          "field": "world/state/workforce_military",
+          "why": "Military enlistment waivers and a 125k active-duty user base are asserted as major drivers of the 10-point ever-use rise. At ~19k accessions a year and ~1.5M federal users, they cannot carry that rise, so the mechanism is overstated."
+        },
+        {
+          "quote": "Calm-plan subscriptions grew only 2.4M → 2.9M, with ~45% annual churn.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "With 41% of users saying the drug dulls things and a third taking holidays, the chain from a poll to ~40% of conditioned tracks adding logged-holiday clauses within months is asserted. The 'within months' employer reaction is too fast for benefit-plan cycles."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.0,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.0
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against the 2026 reference, this world carries a one-in-three adult use rate, adherence surveillance reaching military dashboards and police departments (conditioning in the 11.8M tracks), and a pediatric tablet from age 6 with growth deficits. The 2034 harms persist in full: EPI litigation of ~61k claims, hip-fracture HR ~1.3, and re-filled vials in the Gulf South. It is a recognisably harder society with new losers (a veteran regain cohort, priced-out gray-market users), but access widens and prices fall, so it is not structural-hidden harm.",
+        "plausibility": "driver_fidelity: All drivers are visible with events. Managed decline appears in the 2035-01 TrumpRx cuts, workforce_military in the DoD directive and COPS grants, and the pediatric tablet and the VA/DoD AUD guideline are present. coverage_shift stays status_quo, and safety_signal none holds with no new signal. mechanism: Most changes are chained, such as price cuts to the bottom third and the pill to Medicaid children. Claim 2 (military waivers carrying the ever-use rise) and claim 3 (the instant employer holiday clauses) are asserted or oversold. magnitude: Population figures sit inside the envelope, ever-used 44.6 vs the 45.3 cap near the edge, and the income thirds bracket the national figure. The payer mix sums to 89.4M and the Part D arithmetic works (16.6M × $212 × 12 ≈ $42.2B), but ~125k military and 43k officers cannot explain a 10-point ever-use rise, and the Medicare route splits ($7.0B + $2.7B) do not obviously reconcile with the $42.2B total.",
+        "generativity": "Strong texture: the Monday-heavy Foundayo holidaytaker, bare wrists and linen, the Whole Appetite Long Table, police adherence dashboards, base clubs losing sales, and a day-in-the-life with a vendor-app holiday tap. The Dayton officer scenes show rather than explain, with a daughter in the movement and a husband's beer. Some of the world is told rather than dramatized, but characters and scenes are plentiful."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s5-L3-r35-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Whole Appetite's 'Long Table' weekend in Asheville draws about 25,000 people; organisers unveil an 'Own Appetite' pledge against conditioned premiums and pediatric starts, signed by ~140 candidates by autumn",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a movement that did not exist in 2034 reaches 25,000 attendees and ~140 candidate signatories within roughly two years, with no organising chain shown. The 2034 world's backlash was mainly MAHA/Unmuted, so a new secular movement this large is asserted."
+        },
+        {
+          "quote": "a national poll finds 41% of incretin users say the drug dulls things they care about and a third take deliberate 'drug holidays'; within months ~40% of conditioned employer tracks add 'logged holiday' allowances",
+          "field": "world/events/3/event",
+          "why": "Mechanism: employer tracks that conditioned coverage on adherence loosen within months of a poll. Only a pharmacology-based rationale is given, with no benefit-design or cost-driven chain. It also sits oddly with 'about 35% of maintenance users report deliberate holidays' when the flat FDA rate is ~7%."
+        },
+        {
+          "quote": "Applicants up to 6 points over body-fat standards can enlist on a supervised oral incretin, ~19k accessions a year.",
+          "field": "world/state/workforce_military",
+          "why": "Magnitude: ~125k active-duty users on drug and 19k accessions a year as a result of a directive from one year earlier is a very fast ramp. The ~1.5M TRICARE/VA/readiness payer bucket also looks large relative to the stated DoD and COPS programme spending, which implies only ~125k + 43k users."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Compared with 2026, the world has about a third of adults on drug, with adherence-conditioned coverage for 11.8M people, adherence feeds reaching military unit dashboards and police vendors, and daily pills for 6–11-year-olds with a growth deficit of ~0.5 cm/yr. Added to this are 61,000 EPI claims, hip-fracture HR ~1.3–1.45, a re-filled-vial cluster in the Gulf South, a veteran regain cohort, and a 41% 'dulls things' complaint. Mitigations are access broadening to the bottom third and the fact that the harms are named and discussed (a poll, the FDA study, MDL trials), so the epistemic score is moderate. Surveillance and conditioning are normalised, which keeps autonomy high.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised. Managed decline comes through the TrumpRx cuts, status-quo coverage holds at 34%, and pediatric under-12 comes through the Wegovy pill 6–11 as a new form of an existing product. AUD comes through the VA/DoD guideline, oral parity through oral amycretin, workforce_military through the DoD directive, mainstream_complaint through the poll, and natural_movement through Whole Appetite; none is contradicted. mechanism: The military and pediatric chains are shown. The Whole Appetite scale and the fast employer holiday clauses are asserted (claims 1 and 2). The unmedicated group being mostly upper-income is plausibly derived. magnitude: Adults on drug 32.4 and ever-used 44.6 are inside the envelope (30.4–34.4; 34.6–45.3), and the income thirds bracket the national figure. The payer mix sums to 89.4 and the Medicare arithmetic works. However, the $42.2B total is not consistent with its own parts, the 1.5M military/readiness bucket is large against the programme spending (claim 3), and the fast ramp of the military pill is questionable.",
+        "generativity": "The Dayton officer vignette shows rather than explains: the bottle blinking green, the vendor timestamp, the holiday-day budget, the PILL NIGHT sign, her daughter kneading bread and the Whole Appetite flyer, and the beer she isn't sure she is refusing. Strong secondary characters and scenes are implied (Sergeant Diaz, Maya, a Long Table Sunday). The prose summary is more explanatory, but the world offers a lot of film."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Pharmacists explain that a holiday works on Lilly's short-acting Foundayo and barely registers on semaglutide, which stays in the body for a week",
+        "field": "prose/paragraph_2",
+        "why": "Mechanism: the claim that a third of users take drug holidays rests on a pharmacology that the same text says does not work for most users, since oral semaglutide and weekly shots are the bulk of volume. The holiday behaviour is asserted as widespread with no shown chain explaining why people persist."
+      },
+      {
+        "quote": "Applicants up to 6 points over body-fat standards can enlist on a supervised oral incretin, ~19k accessions a year.",
+        "field": "world/state/workforce_military",
+        "why": "Magnitude: ~19k accessions plus ~125k active-duty users are asked to explain a large part of the 10.0-point rise in ever-use (about 27M adults) and the bottom third's jump from 17.5 to 24. Military and police programmes (~1.5M TRICARE/VA/federal users) cannot carry that much of the change."
+      },
+      {
+        "quote": "Whole Appetite's 'Long Table' weekend in Asheville draws about 25,000 people; organisers unveil an 'Own Appetite' pledge against conditioned premiums and pediatric starts, signed by ~140 candidates by autumn",
+        "field": "world/events/5/event",
+        "why": "Mechanism: a new movement goes from nothing to 25,000 attendees and 140 candidate signatories in about two years. The causal chain is thin, and the movement is fully formed, branded and aesthetically coded with no seed in the 2034 world."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 6.67,
+      "inequality": 5.83,
+      "public_health": 6.0,
+      "cohesion": 5.67,
+      "epistemic": 5.17,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.0,
+      "magnitude": 5.83
+    },
+    "plausibility": 6.35,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Measured against 2026, this world keeps the inherited harms (a ~54k-to-61k-claim EPI mass tort, hip-fracture HR 1.3–1.45, pediatric growth deficits now on a daily tablet from age 6, a persistent gray market with Burkholderia clusters) and adds deeper conditioning. Premium tiers hinge on pill-bottle logs, and military readiness dashboards track missed fills, with holidays barred without command approval. Autonomy and inequality are the heaviest dimensions, since coverage is conditioned, veterans lose weight-only coverage at discharge, and the bottom third is only partly reached. It is a recognisably harder society, but the harm is measured and discussed, and the 41% complaint is openly aired, so epistemic and cohesion stay mid-range.",
+      "plausibility": "driver_fidelity: All ten drivers are visible. Managed decline appears as TrumpRx cuts, status quo on coverage holds at 34% of employers, the pediatric under-12 driver comes as the Wegovy pill 6–11, AUD arrives via the VA/DoD guideline, oral parity, the military workforce driver, mainstream_complaint and natural_movement all appear, and no safety signal or market shock is added. mechanism: Several shifts are asserted. The holiday phenomenon contradicts the pharmacology the text itself gives (claim 1), and Whole Appetite appears fully formed (claim 3). The pill 6–11 approval 14 months after a Jan 2035 filing is permitted. magnitude: Headline figures sit inside the envelope (32.4% on drug, 44.6% ever, which is under 45.3), and the payer mix sums to 89.4M. The 10-point ever-use rise leans on tiny military and police populations (claim 2) and on oral amycretin. The Medicare spend of 16.6M × $212 × 12 ≈ $42.2B checks out, but the dementia route (~2.6M, obesity plus CVD) and AUD route (~1.2M) sit awkwardly with the stated user counts and the small AUD population, so reconciliation is only partly clean.",
+      "generativity": "The prose carries a specific officer, a blinking bottle, a holiday-day count, a closed bar with a leftover PILL NIGHT sign, and a daughter kneading bread with a flyer on the fridge. These imply many scenes. The world fields supply rich texture such as Monday ED nausea, 'Friday records' and wrist-bare fashion, though the day-in-the-life ends somewhat tidily on the quota gag."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.585,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 38
   }
 }

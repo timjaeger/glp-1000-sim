@@ -51,6 +51,41 @@
         "input_tokens": 19545,
         "output_tokens": 23616
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r04-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36417,
+        "output_tokens": 5635
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r04-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36417,
+        "output_tokens": 5814
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r04-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36417,
+        "output_tokens": 5712
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r04-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The FDA listed semaglutide in shortage in May 2035, which made 503A/503B compounding legal again.",
+          "field": "world/access/note",
+          "why": "Mechanism: the recall covered only the Wegovy pill and Rybelsus, so a pill-API shortage would not obviously put injectable semaglutide on the shortage list. Without that listing, 503A/503B compounding of injectable vials would not become legal again. The central chain for the gray-market driver is asserted, not shown."
+        },
+        {
+          "quote": "~1.3M users also take bimagrumab.",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: 'Strong' (a $899 bundle with a monthly clinic infusion) launched only in Mar 2036. In 2034 bimagrumab had almost no cash channel at a $1,150 list price. Reaching 1.3M infused users, roughly $14B a year in cash at $899, within about nine months needs infusion capacity and demand the world never shows."
+        },
+        {
+          "quote": "~41% of current users reported a deliberate drug holiday in the past year and ~26% said they had lowered their dose to 'feel more'.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: scheduled holidays are called 'now standard clinical advice', and the world treats them as normal courtship practice. Yet the same world says half to two-thirds of weight regain within 18 months, and only ~7–8% have clinically meaningful anhedonia. A norm-shift this large and fast, with a 41% voluntary-holiday rate, is asserted from a single poll."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.0,
+        "inequality": 7.0,
+        "public_health": 6.5,
+        "cohesion": 6.0,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.0,
+        "magnitude": 7.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Against the 2026 baseline this is a markedly harder society that keeps all its 2034 harms. About 32% of adults are on drug, and ~29M are on compounded or gray product with no label, with ~8× poison-centre calls and ~71k adverse-event reports. Employer coverage fell to 21%, and body shape now reads as payment route (Strong body versus 'vial build'). Blunting is a mainstream complaint, the NAION risk is nameable, and children are affected by growth deficits. Harms are named and partly measured (Kaiser, NIH interim, KFF), so epistemic is mid-range, while inequality is the worst dimension.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Price shock-up is the allocation pricing, employer retreat is 29→21, nicotine is the Apr 2036 approval, and the vision class label is Sep 2035. The muscle-preserving combo is realised as the Strong bundle plus a co-formulation filing, which the approval rules allow. The gray-market resurgence is the shortage and compounding, class stratification is in the body signals, mainstream complaint is 'the flat', and state_action none holds. mechanism: The Clayton plant to shortage to price rise to employer exit to forced-holiday 'thaw' chain is mostly shown. The legal-compounding step (claim 1) and the sudden holiday norm (claim 3) are asserted. Prose and world agree. magnitude: All headline figures sit inside the envelope (32.1% on drug, 42.5% ever, thirds bracket national, age check ≈32.1). The payer mix sums to 88.6M, the legitimate-cash breakdown sums to 29.0M, and the Medicare spend of $40.5B multiplies out. The nicotine approval is 15 months after filing, which is allowed. The weak points are 1.3M bimagrumab users within months of launch (claim 2) and ~9M compounded users regrown quickly.",
+        "generativity": "The prose has a strong day-in-the-life: Tasha's daily eye check, the vial in the butter tray, the skipped dose before the wedding, wanting fries, Marcus's nicotine pill, and Kiara's question. It implies many characters (the vial-build trainee, the app counsellor, the Ohio plaintiff) and scenes (holiday weekends, off-night venues, Strong infusion clinics). Daily life has concrete texture beyond explanation."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s5-L1-r04-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "In a KFF poll (Nov 2035), ~41% of current users reported a deliberate drug holiday in the past year and ~26% said they had lowered their dose to 'feel more'.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism and magnitude: a four-in-ten deliberate-holiday rate and a mass 'dose to feel more' habit appear within about a year of the shortage. The world also stipulates one-year persistence near a third, and shortage-forced breaks are not 'deliberate'. The cultural shift is asserted rather than built up."
+        },
+        {
+          "quote": "FDA class warning in Warnings and Precautions (Sep 2035) across all GLP-1-containing products, following EMA's earlier very-rare listing.",
+          "field": "world/safety_ledger/4/regulatory_response",
+          "why": "Mechanism: a class-wide FDA labelling action lands about three months after a pooled observational emulation (Jun 2035). No advisory committee, safety review or labelling negotiation is shown, which is implausibly fast for a regulator that had declined a class label for years."
+        },
+        {
+          "quote": "compounded ~9.0M (10%, regrown from near zero after semaglutide went on the shortage list in May 2035)",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: about nine million compounded users go from near zero in roughly 12 months, and they persist after the shortage ends in Feb 2036. The telehealth capacity, API supply and demand that would produce this are not shown, and the 2034 state in-person rules and advertising bans cut against it."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Against the 2026 reference this world keeps all of its 2034 harms and adds more. About a third of users (~29M) are on gray or compounded product with no labelling. There is a ~7–11% anhedonia rate, a synchronised shortage regain cohort, a NAION signal that gray users never see, and employer coverage down to 21%. Thinness is now cheap while muscle (the $899 'Strong' bundle) is expensive, and the eleven-state under-12 bans stand. The harms are named and discussed ('the flat', 'the thaw'), which keeps epistemic below the other dimensions, but inequality and autonomy are structurally entrenched.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable. Price shock comes from the Clayton shutdown and allocation pricing, employer coverage falls 29%→21%, nicotine is filed Jan 2035 and approved Apr 2036, the NAION class label arrives Sep 2035, and Strong realises the muscle-preserving combo within the approval rules. Gray-market resurgence, class stratification, the mainstream-complaint framing and no state action are all present and consistent. mechanism: the Clayton → shortage → compounding → price chain is shown, but the 9M compounded regrowth, the 41% deliberate-holiday rate and the three-month FDA class label are asserted or fast (claims 1–3). Medicare's net price holding at $225 is also stated rather than explained. magnitude: 32.1% on drug and 42.5% ever-used sit inside the envelope. The payer mix sums to 88.6M, the cash breakdown sums to 29.0M, Part D is 15.0M×$225×12≈$40.5B, and the age and income checks and the 44.2% cycled figure all reconcile. The nicotine and bimagrumab timings respect the approval rules, with only minor soft spots such as 1.3M bimagrumab users alongside a monthly-clinic bundle launched in Mar 2036.",
+        "generativity": "The Tasha Greer scene is rich and specific: the eye check, the vial in the butter tray, the planned holiday for the wedding cake, Kiara's 'that wasn't the question', and Marcus on the nicotine pill. The world fields add many implied scenes, including the 'shortage Thanksgiving', holiday-calendar apps, 'vial build', Strong infusion sites and the Ohio trial. Daily life has real texture rather than explanation."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s5-L1-r04-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "In a KFF poll (Nov 2035), ~41% of current users reported a deliberate drug holiday in the past year and ~26% said they had lowered their dose to 'feel more'.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: holidays are said to have gone from absent in 2034 to standard clinical advice and a 41% majority-scale practice in about a year. The only cause shown is a one-off shortage, and a 41% holiday rate sits badly with the stated one-third persistence and the regain risk."
+        },
+        {
+          "quote": "Sportsbook handle per account rose ~6% in high-density states in Q3 2035, then fell back as supply recovered.",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism: a precise quarterly effect is asserted with no chain from a semaglutide-specific shortage to betting behaviour. Users could switch to Foundayo or tirzepatide, and the 2034 handle drop was itself only a ~14% association."
+        },
+        {
+          "quote": "compounded ~9.0M (10%, regrown from near zero after semaglutide went on the shortage list in May 2035)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 9M compounded users appear within about a year and stay after the shortage ends. Compounded vials at $119–199 are barely cheaper than the $149 Foundayo starting dose, so the pull toward compounding is weakly explained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 this is a clearly harder society. About a third of adults are on an incretin, a third of users (~29M) are on compounded or imported product with no label (~71,000 adverse-event reports), employer coverage is down to 21%, and the NAION warning reaches only the regulated minority. Inequality is sharpest: the $899 Strong body against the 'vial build', and the 65+ cyclers carrying the hip-fracture risk are locked out of bimagrumab. Anhedonia is a mainstream 'flat', but it is named and measured (Kaiser, NIH interim, KFF), which keeps the epistemic score moderate, and nothing here is melodramatic. The world inherits nearly all the 2034 harms and adds a few.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. Price shock_up comes from the Clayton shortage and allocation pricing. Employer retreat is 29%→21%. Nicotine is filed Jan 2035 and approved Apr 2036, which respects the 12-month rule. The vision class warning is Sep 2035. Strong is realised as a co-pack plus a filing, so the combo launch is allowed. Gray-market resurgence, class stratification and mainstream complaint are all present, and state_action 'none' is respected. mechanism: The shortage-to-compounding-to-price chain is shown. The employer 29%→21% drop is asserted as 'used the price rise as their exit', and holiday normalisation (claim 1), the sportsbook bump (claim 2) and the persistence of 9M compounded users (claim 3) are thinly argued. magnitude: Adult use at 32.1% and ever-use at 42.5% are inside the envelope, and payer mix (88.6M), legitimate cash split (29.0M), Medicare spend ($40.5B), age and income checks, cycling arithmetic and the NAION case count all reconcile. Only a small pediatric-share wobble and the aggressive 9M compounded figure are weak.",
+        "generativity": "The Tasha Greer scene is concrete: the eye check, the butter-tray vial, the app counsellor approving three days, the wedding cake, the fries, Marcus on the nicotine pill, Kiara's 'that wasn't the question'. The world supplies many hooks: 'vial build', 'the thaw', holiday calendars, Strong infusion sites, the Ohio trial. The prose does show rather than explain, though the opening section is more explanatory."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "The FDA listed semaglutide in shortage in May 2035, which made 503A/503B compounding legal again.",
+        "field": "world/access/note",
+        "why": "Mechanism: the recall covered only the Wegovy pill and Rybelsus, so a pill-API shortage would not obviously put injectable semaglutide on the shortage list. Without that listing, 503A/503B compounding of injectable vials would not become legal again. The central chain for the gray-market driver is asserted, not shown."
+      },
+      {
+        "quote": "~1.3M users also take bimagrumab.",
+        "field": "world/population/note",
+        "why": "Magnitude/mechanism: 'Strong' (a $899 bundle with a monthly clinic infusion) launched only in Mar 2036. In 2034 bimagrumab had almost no cash channel at a $1,150 list price. Reaching 1.3M infused users, roughly $14B a year in cash at $899, within about nine months needs infusion capacity and demand the world never shows."
+      },
+      {
+        "quote": "~41% of current users reported a deliberate drug holiday in the past year and ~26% said they had lowered their dose to 'feel more'.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "Mechanism: scheduled holidays are called 'now standard clinical advice', and the world treats them as normal courtship practice. Yet the same world says half to two-thirds of weight regain within 18 months, and only ~7–8% have clinically meaningful anhedonia. A norm-shift this large and fast, with a 41% voluntary-holiday rate, is asserted from a single poll."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 5.83,
+      "inequality": 7.0,
+      "public_health": 6.5,
+      "cohesion": 5.83,
+      "epistemic": 5.5,
+      "overall": 6.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.78,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Against the 2026 baseline this is a markedly harder society that keeps all its 2034 harms. About 32% of adults are on drug, and ~29M are on compounded or gray product with no label, with ~8× poison-centre calls and ~71k adverse-event reports. Employer coverage fell to 21%, and body shape now reads as payment route (Strong body versus 'vial build'). Blunting is a mainstream complaint, the NAION risk is nameable, and children are affected by growth deficits. Harms are named and partly measured (Kaiser, NIH interim, KFF), so epistemic is mid-range, while inequality is the worst dimension.",
+      "plausibility": "driver_fidelity: Every driver is visible and traceable. Price shock-up is the allocation pricing, employer retreat is 29→21, nicotine is the Apr 2036 approval, and the vision class label is Sep 2035. The muscle-preserving combo is realised as the Strong bundle plus a co-formulation filing, which the approval rules allow. The gray-market resurgence is the shortage and compounding, class stratification is in the body signals, mainstream complaint is 'the flat', and state_action none holds. mechanism: The Clayton plant to shortage to price rise to employer exit to forced-holiday 'thaw' chain is mostly shown. The legal-compounding step (claim 1) and the sudden holiday norm (claim 3) are asserted. Prose and world agree. magnitude: All headline figures sit inside the envelope (32.1% on drug, 42.5% ever, thirds bracket national, age check ≈32.1). The payer mix sums to 88.6M, the legitimate-cash breakdown sums to 29.0M, and the Medicare spend of $40.5B multiplies out. The nicotine approval is 15 months after filing, which is allowed. The weak points are 1.3M bimagrumab users within months of launch (claim 2) and ~9M compounded users regrown quickly.",
+      "generativity": "The prose has a strong day-in-the-life: Tasha's daily eye check, the vial in the butter tray, the skipped dose before the wedding, wanting fries, Marcus's nicotine pill, and Kiara's question. It implies many characters (the vial-build trainee, the app counsellor, the Ohio plaintiff) and scenes (holiday weekends, off-night venues, Strong infusion clinics). Daily life has concrete texture beyond explanation."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.95,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 19
   }
 }

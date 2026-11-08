@@ -51,6 +51,41 @@
         "input_tokens": 19484,
         "output_tokens": 18984
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r25-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35744,
+        "output_tokens": 4543
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r25-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35744,
+        "output_tokens": 5990
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r25-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35744,
+        "output_tokens": 5456
+      }
     ]
   },
   "world": {
@@ -334,6 +369,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r25-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Pressed counterfeit 50 mg pills and 'calm' tablets are now the majority of seized product by unit; contents range 0–300% of label.",
+          "field": "world/safety_ledger/counterfeit_oral_tablets/prevalence_note",
+          "why": "mechanism: the parent had counterfeit tablets as a new, emerging entry two years earlier. A majority-of-seizures claim is asserted with no shown chain, while the import share stays flat at 9.2%."
+        },
+        {
+          "quote": "Retail retatrutide made 30% loss cheap enough for the upper-middle, so extreme leanness alone no longer marks the top.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "mechanism: the price is stated as unchanged at $449 direct, and retatrutide 12 mg was already on the US market and in top-third use. The claim that a retail autoinjector newly widened access is a convenient narrative leap, not a shown cost or access change."
+        },
+        {
+          "quote": "two 26-week phase 3 trials (UNBET-1/2, begun 2033–34: ~38% vs 21% achieving ≥50% reduction in gambling days)",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the parent world lists gambling craving reduction as only anecdotal and mentions no such trials, so a pair of positive phase 3 programmes appears with no antecedent. The trials also supply SHAPS data for the 2036 FDA pooled analysis, which is convenient for the narrative."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 30% of adults are on the drugs, with a labelled anhedonia burden (~640k excess cases) and ~17,400 excess hip fractures a year. Federally sanctioned adherence- and kiosk-weight-based premium tiers (`state/conditioning_or_surveillance`) and tenure job-lock (`interior_life/effect_on_work`) make autonomy the worst dimension. Bodies diverge by class while use converges, and about 7.8M people rely on imported or counterfeit product. Epistemic harm is somewhat lower than in 2034 because the anhedonia effect is now measured and labelled, but the world is far harsher than the 2026 reference.",
+        "plausibility": "driver_fidelity: every driver is traceable to events and fields: anhedonia label (2036-03), gambling indication (2036-10), retatrutide via existing-product-in-new-form plus ex-US launch, stalled prices, and class stratification. The two small Gulf Coast clusters sit mildly against market_shock none but are minor. mechanism: the main chains are shown, including the D.D.C. ruling blocking the rival generics' triggers and the tri-agency rule feeding adherence tiers. The weak points are the three claims above: the retail-retatrutide access story at an unchanged price, the counterfeit-majority claim, and the trials with no antecedent. magnitude: current use 30.6, ever-use 43.5 and the income thirds are all inside the envelope, and the age bands sum to ≈84.4M. Payer shares, Medicare, Medicaid and market arithmetic, the hip-fracture and NAION figures, and the gambling approval 13 months after filing all reconcile.",
+        "generativity": "The Rosa Delgado scene is rich in texture: the kiosk tier, the blinking cap, pills hoarded in a sock drawer, Ernesto's Hyderabad pens checked against a Telegram list, and Danny's betting apps. The world fields add Phoenix neighbourhood contrasts, union bargaining over anhedonia stops and sportsbook earnings-call complaints, so many scenes are implied."
+      },
+      "plausibility": 8.15
+    },
+    {
+      "custom_id": "s5-L2-r25-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Sportsbook handle growth slowed in high-uptake states, and operators blame 'the pill' on earnings calls.",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism and magnitude: the gambling indication was only approved in Oct 2036 and off-label use is described as anecdotal, so a measurable, earnings-call-level drag on sportsbook handle in the same year is asserted with no chain."
+        },
+        {
+          "quote": "Retail retatrutide made 30% loss cheap enough for the upper-middle, so extreme leanness alone no longer marks the top.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Mechanism: the price is stated as unchanged at $449 direct and the payer mix is 'essentially unchanged', so retail stocking changes convenience, not affordability. The claimed class-shifting effect is asserted, not shown."
+        },
+        {
+          "quote": "Marisol from returns says she skipped three days last month because she felt flat, and HR moved her to Tier 2.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world defines adherence tiers as pharmacy PDC ≥80%, and three missed days in about thirty is roughly 90%, so the demotion contradicts the world's own rule."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Against 2026, the world keeps every inherited harm and adds more. The ledger shows about 17,400 excess hip fractures a year, about 2,400 NAION cases a year, about 640k excess anhedonia cases and 7.8M people on imports or counterfeits. Employer tenure gates, now federally sanctioned adherence and weight tiers (`state/conditioning_or_surveillance`) and body-based class sorting make it a clearly harder society. Epistemic harm is somewhat lower than in the starting world because anhedonia is now measured and labelled, and the prose is honest about cost, so I score it 6.5.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Retatrutide is an existing product in a new retail form plus an EU/UK/Japan launch, the anhedonia label is in March 2036, and the gambling indication goes sNDA to approval in 13 months. The tri-agency rule realises benefits_conditioning. The two small 2035 Gulf Coast contamination clusters sit slightly uneasily against market_shock: none. mechanism: Several changes are asserted: the claimed affordability shift from retail retatrutide, the sportsbook-handle effect, tobacco falling 'helped by the positive cessation trial' within the same year, and the UNBET trials, which are not in the 2034 pipeline_note. Marisol's tier demotion contradicts the PDC ≥80% rule. The rest follows well, from the court ruling to stalled prices and from the rule to the Texas and Florida tiers. magnitude: Current use of 30.6% and ever-use of 43.5% are inside the envelope. Age bands, Medicare ($37.5B), Medicaid ($29.4B), the payer mix summing to 84.5M and the market arithmetic all reconcile. The only slip is that the bottom-third growth is said to come half from imports, but imports rose only ~0.7M against roughly 2.6M of growth.",
+        "generativity": "The Rosa Delgado scene gives concrete texture: the smart bottle cap, the kiosk 'ON TRACK — TIER 1', the sock-drawer pills, Ernesto's Hyderabad pens checked against a Telegram list, Danny with betting apps open, and the Unhooked ad. Marisol and the tamale remark add implied characters and scenes. The world fields add many hooks (unions bargaining over anhedonia stops, fall-prevention clinics in Maryvale, 'not flat' dating profiles). The prose is partly explanatory in its first half."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s5-L2-r25-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Marisol from returns says she skipped three days last month because she felt flat, and HR moved her to Tier 2.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world's own rule keys tiers to pharmacy PDC ≥80%, and three skipped days in a month is about 90% PDC, so the demotion contradicts the stated threshold."
+        },
+        {
+          "quote": "Surgical-grade loss stopped being a top-tier privilege, and the top moved on to the one thing the shelf cannot sell, which is muscle.",
+          "field": "prose/bodies_paragraph",
+          "why": "Mechanism: retatrutide 12 mg was already $449 direct in 2034 and the price is stipulated as stalled. Retail stocking changes convenience, not cost, so it does not explain why 30% loss became affordable to the upper-middle or why top-third use rose."
+        },
+        {
+          "quote": "A D.C. federal judge rules the first-filer generic semaglutide maker has not forfeited its 180-day exclusivity while remediating its Telangana plant, so rival filers' mid-2035 dates do not trigger.",
+          "field": "world/events/2/event",
+          "why": "Mechanism: the starting world says the exclusivity is 'parked' behind an FDA warning letter. A court holding that this cannot forfeit it, and rival dates failing to trigger, is asserted legal reasoning with little support."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against 2026 the world keeps and extends the 2034 harms. About 30.6% of adults are on the drug, with roughly 17,400 excess hip fractures and 2,400 NAION cases a year, about 640k excess anhedonia cases, and 7.8M people on counterfeit or imported product. Autonomy is hit hardest: the federally sanctioned 2035 rule prices premiums off refill and scale data, and tenure gates create job lock. Body shape now sorts by class (the 'triple-thin' look and the 'cycle' sizing). Epistemic harm is lower because the anhedonia risk is now measured, labelled and discussable.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. The triple-agonist driver is met only thinly, through a retail autoinjector and an EU/UK/Japan launch of a product already on the US market, which the rules permit. mechanism: most chains are shown, but the PDC contradiction in Marisol's demotion, the retail-stocking-makes-30%-cheap claim at an unchanged price, and the loosely argued D.D.C. forfeiture ruling are asserted or inconsistent. Survodutide's MASH approval is missing from the indications list, and the sportsbook and gaming-regulator effects precede the gambling approval. magnitude: population figures sit inside the envelope, and the age bands, payer mix, Medicare and Medicaid users, hip fractures, NAION and anhedonia counts, and the market figure all multiply out. The only gap is a trivial rounding of never-users (≈155M versus ≈156M).",
+        "generativity": "The Rosa Delgado scene gives concrete texture: the blinking cap, the kiosk tier screen, the sock drawer of unused pills, Hyderabad pens checked against a Telegram list, Danny's betting apps and the Unhooked ad. The world fields add many more threads, including union bargaining over anhedonia stops, fall-prevention clinics in Maryvale, couples comparing SHAPS scores, and sportsbook earnings calls. Several of those threads are only gestured at."
+      },
+      "plausibility": 7.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Pressed counterfeit 50 mg pills and 'calm' tablets are now the majority of seized product by unit; contents range 0–300% of label.",
+        "field": "world/safety_ledger/counterfeit_oral_tablets/prevalence_note",
+        "why": "mechanism: the parent had counterfeit tablets as a new, emerging entry two years earlier. A majority-of-seizures claim is asserted with no shown chain, while the import share stays flat at 9.2%."
+      },
+      {
+        "quote": "Retail retatrutide made 30% loss cheap enough for the upper-middle, so extreme leanness alone no longer marks the top.",
+        "field": "world/body_and_culture/what_the_body_signals",
+        "why": "mechanism: the price is stated as unchanged at $449 direct, and retatrutide 12 mg was already on the US market and in top-third use. The claim that a retail autoinjector newly widened access is a convenient narrative leap, not a shown cost or access change."
+      },
+      {
+        "quote": "two 26-week phase 3 trials (UNBET-1/2, begun 2033–34: ~38% vs 21% achieving ≥50% reduction in gambling days)",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: the parent world lists gambling craving reduction as only anecdotal and mentions no such trials, so a pair of positive phase 3 programmes appears with no antecedent. The trials also supply SHAPS data for the 2036 FDA pooled analysis, which is convenient for the narrative."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 7.17,
+      "inequality": 6.83,
+      "public_health": 6.17,
+      "cohesion": 5.83,
+      "epistemic": 4.83,
+      "overall": 6.53
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.5,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.87,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "About 30% of adults are on the drugs, with a labelled anhedonia burden (~640k excess cases) and ~17,400 excess hip fractures a year. Federally sanctioned adherence- and kiosk-weight-based premium tiers (`state/conditioning_or_surveillance`) and tenure job-lock (`interior_life/effect_on_work`) make autonomy the worst dimension. Bodies diverge by class while use converges, and about 7.8M people rely on imported or counterfeit product. Epistemic harm is somewhat lower than in 2034 because the anhedonia effect is now measured and labelled, but the world is far harsher than the 2026 reference.",
+      "plausibility": "driver_fidelity: every driver is traceable to events and fields: anhedonia label (2036-03), gambling indication (2036-10), retatrutide via existing-product-in-new-form plus ex-US launch, stalled prices, and class stratification. The two small Gulf Coast clusters sit mildly against market_shock none but are minor. mechanism: the main chains are shown, including the D.D.C. ruling blocking the rival generics' triggers and the tri-agency rule feeding adherence tiers. The weak points are the three claims above: the retail-retatrutide access story at an unchanged price, the counterfeit-majority claim, and the trials with no antecedent. magnitude: current use 30.6, ever-use 43.5 and the income thirds are all inside the envelope, and the age bands sum to ≈84.4M. Payer shares, Medicare, Medicaid and market arithmetic, the hip-fracture and NAION figures, and the gambling approval 13 months after filing all reconcile.",
+      "generativity": "The Rosa Delgado scene is rich in texture: the kiosk tier, the blinking cap, pills hoarded in a sock drawer, Ernesto's Hyderabad pens checked against a Telegram list, and Danny's betting apps. The world fields add Phoenix neighbourhood contrasts, union bargaining over anhedonia stops and sportsbook earnings-call complaints, so many scenes are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.932,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 21
   }
 }

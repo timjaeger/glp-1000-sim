@@ -52,6 +52,41 @@
         "input_tokens": 19580,
         "output_tokens": 20674
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r24-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35479,
+        "output_tokens": 7030
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r24-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35479,
+        "output_tokens": 10157
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r24-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35479,
+        "output_tokens": 8727
+      }
     ]
   },
   "world": {
@@ -340,6 +375,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r24-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Covering plans restrict it to diabetes, cardiac, OSA, MASH and CKD codes.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: this contradicts `employer_coverage_pct: 49` (covering 'weight management'), the '~90% gate it' note, and the ≈11M commercial users still on weight-management codes. If covering plans exclude obesity codes, they do not cover weight management, and kiosk-weight premium tiers would have nothing to attach to."
+        },
+        {
+          "quote": "smoking and vaping cessation: endorsed in the 2035 Public Health Service tobacco guideline update as an adjunct for smokers with obesity or prior failed quits; dispensed free via state quitlines; ≈2.0M users",
+          "field": "world/drugs/mainstream_offlabel_uses/1",
+          "why": "mechanism: a federal guideline endorsement and mass free quitline dispensing are asserted although the SHAPS smoking trial has not read out (it reads out in 2037) and nothing has been filed. The evidence base that would trigger a PHS guideline is not shown."
+        },
+        {
+          "quote": "Under-30 growth is driven mostly by vaping-cessation and drinking-reduction use, not weight.",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: the 18–29 band adds roughly 3.3M users, but the whole nicotine/alcohol cohort is only ≈4.4M across all ages (≈2.0M smoking, ≈2.4M AUD). That cohort would have to be overwhelmingly young, and the 'calm' subscribers are not shown to fill the gap."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is far harder than 2026. Over a third of adults are on the drug, and about 11M use imported or counterfeit product, including a glibenclamide cluster that killed 23. Excess hip fractures reach ≈22,000 a year, NAION adds ≈2,800 cases a year, and the middle class lost coverage (cycling and fat-dominant regain). 'The grey' is now a measured, mainstream complaint, and thinness is stratified by coaching and class. Mitigations are real: managed price cuts, the free HRSA programme, and an RCT that makes the blunting harm nameable. That keeps the epistemic and autonomy scores below the structural-harm anchor.",
+        "plausibility": "driver_fidelity: every driver is visibly realised in events and fields. The triple-agonist driver is met thinly, through a new pen and Part D listing of retatrutide that was already on the market. The nicotine driver rests on a guideline alone, which the approval rules allow. mechanism: most chains are shown (HHS portal deal, extenders-package subsidy, counterfeit cluster, MDL bellwether). Claims 1 and 2 are the weak points (insurance coverage described as restricted to non-weight codes while 'weight management' coverage is stated at 49%; the PHS guideline arriving before the SHAPS readout), and claim 3 rests on thin support. magnitude: current use of 36.8% and ever-use of 49.0% are inside the envelope, and the age, income and payer-mix shares sum correctly. The Medicare, Medicaid, HRSA ($7.1B vs a $7.5B appropriation), fracture, NAION and market arithmetic all multiply out. Approval timing (AUD filed Feb 2036, bimagrumab filed Jun 2036) is allowed, and `generic_us` stays false with a mechanism given.",
+        "generativity": "The prose gives concrete figures and places (Charlotte SouthPark versus east Charlotte, Milwaukee taverns, Monroe Road clinic). The Okafor household scene is filmable: the $687 pill bill, Marcus no longer laughing at the radio, Tasha's 'Saturday I'm a person', the billboard, and Ada's question. The world fields (holiday weekends, plaintiff ads, grey era comedy) imply many more characters and scenes."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s5-L2-r24-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "endorsed in the 2035 Public Health Service tobacco guideline update as an adjunct for smokers with obesity or prior failed quits",
+          "field": "world/drugs/mainstream_offlabel_uses/1",
+          "why": "Mechanism: a federal guideline endorses and funds cessation use although the only dedicated smoking RCT (SHAPS) is still enrolling in 2034 and, by the candidate's own pipeline_note, does not read out until 2037. No evidence base is shown for the endorsement."
+        },
+        {
+          "quote": "Under-30 growth is driven mostly by vaping-cessation and drinking-reduction use, not weight.",
+          "field": "world/population/note",
+          "why": "Magnitude: under-30 users rise by about 3.3M, but the world has only ≈2.0M nicotine and ≈2.4M AUD users across all ages, and AUD patients skew older. Calling the under-30 rise 'mostly' these uses does not reconcile with the counts given."
+        },
+        {
+          "quote": "Import and counterfeit users rose from 7.1M to ≈11.0M. Vial infections continue at a lower rate as the $299 retatrutide pen undercuts 'research' vials.",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism: imports rise 55% in two years while managed price decline, a $99 free programme and a $299 pen supposedly displace the gray market. The two claims pull in opposite directions and only a thin employer-retreat link is offered."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is well past 2026's level and inherits every 2034 harm: more than a third of adults on drug, about 22,000 excess hip fractures a year, 2,800 NAION cases, 11M import users and a 23-death counterfeit-tablet cluster. Employer retreat strands the middle third, middle-third men cycle through thin-then-soft bodies, and anhedonia is now measured and public. Autonomy is eased by free and cheap routes. The epistemic score is lower because harms are named and measured (the RCT, the MDL, the bone figures), so the world is bad but not hidden.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and dated events. The adoption delta is exactly +8.3, the triple-agonist launch is honestly realised as an existing product in a new pen and Part D channel, and the nicotine and AUD indications are realised as guidelines plus a filing, not an approval. mechanism: most chains are shown (the employer-retreat cause of cycling and imports, the subsidy cause of bottom-third growth), but the tobacco guideline with no RCT, imports rising despite falling prices, and the unsupported 20% bariatric drop are asserted (see claims 1 and 3). magnitude: current and ever-use sit inside the envelope, and the payer shares, user counts, Medicare, Medicaid and HRSA dollar figures, hip-fracture and NAION arithmetic, and age bands all reconcile. The under-30 attribution (claim 2) and a slightly low average net price are the only soft spots.",
+        "generativity": "The Okafor household gives a full set of scenes: the 6am pill, Marcus's flat affect, Tasha's 'Saturday I'm a person', the billboard ad and the daughter's question. The Charlotte class map (SouthPark versus east Charlotte, HVAC men on $25 pens) adds specific texture. World-state fields supply many more hooks, such as dose-holiday weekends, 'grey' stand-up and recovery memoirs."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s5-L2-r24-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Under-30 growth is driven mostly by vaping-cessation and drinking-reduction use, not weight.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: under-30 users grow by about 3.3M (15.5% to 22% of 52M), but only about 4.4M nicotine/alcohol users exist across all ages. The AUD endorsement is second-line and the tobacco guideline is limited to smokers with obesity or prior failed quits, so young adults could not be most of them."
+        },
+        {
+          "quote": "US ≈$196B = ≈90.6M paying users (101.6M − 11.0M imports) × ≈$180 average net × 12",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: this does not reconcile with the payer mix. About 33.6M Medicare and Medicaid fills pay a fixed $199, and cash users pay $229–299 or starter doses at $149–150, so the weighted average is about $195–200. A $180 average needs implausibly cheap cash and commercial prices."
+        },
+        {
+          "quote": "Employer weight-management coverage fell from 64% to 49%.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: a 15-point drop in one open-enrolment cycle is about 1.5 times the 2025–26 decline of 12 points. It happens while unit prices are falling and pharmacy trend is moderating to +6%, so the cost trigger for such a sharp retreat is not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Relative to 2026, more than a third of adults are on the drug and about 11M use imported or counterfeit product, with a 23-death counterfeit cluster. Other inherited harms include roughly 22,000 excess hip fractures a year, NAION, a 92,000-claim mass tort, and anhedonia now measured as a mainstream complaint. Stratification is visible in bodies and in the middle third's coverage loss; the HRSA programme and cheaper pens partly offset it. Epistemic harm is lower than it was because 'the grey' is now named and measured, though low-dose use and cycling remain unmeasured. That is a recognisably harder society, not an unlivable one.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events. Managed decline is the Apr 2035 portal cuts, employer retreat is the 64% to 49% drop, the subsidy is HRSA, and the counterfeit shock is the glibenclamide cluster. The nicotine and AUD indications are realised by guideline endorsement plus a filing, which the approval rules allow. Triple-agonist 30% is realised by an existing product in a new channel. mechanism: Most chains are shown, such as portal agreement to $299 pen to Part D to bariatric decline, and coverage loss to cash pills, imports and cycling. But the 15-point one-year employer drop while prices fall, the under-30 attribution to nicotine and alcohol use, and the convenient coincidence of the guideline trial also delivering the first RCT anhedonia result are thinly supported. There are also small inconsistencies: Foundayo is Lilly's but the $99 contract is described as Novo-sourced, and Marcus gets free clinic pills in a household the prose frames as middle-third. magnitude: Population figures sit inside the envelope (36.8% current, 49.0% ever, income thirds bracketing the national figure, age bands summing to 101.7M). Payer shares, Medicare and Medicaid dollar figures, the HRSA $7.1B, the fracture and NAION arithmetic, and the approval timing all reconcile. The exceptions are the $180 average net price, which is too low given the fixed $199 public rate and $229–299 cash, and the under-30 attribution, which does not fit the nicotine/alcohol user counts.",
+        "generativity": "The prose ends in a concrete Charlotte-area household: Renee's $687 ninety-pill bill, Marcus's free clinic pills and flat affect, Tasha's 'Saturday I'm a person', and the 'STOMACH STILL NOT RIGHT?' billboard. The world fields add sharp class texture, such as SouthPark versus east Charlotte, the HVAC and freight men, weekend dose holidays and Milwaukee taverns. Many scenes are implied: FQHC waiting rooms, bellwether trials, sex-therapy intakes and parcel-seizure raids."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Covering plans restrict it to diabetes, cardiac, OSA, MASH and CKD codes.",
+        "field": "world/economy/insurance/state",
+        "why": "mechanism: this contradicts `employer_coverage_pct: 49` (covering 'weight management'), the '~90% gate it' note, and the ≈11M commercial users still on weight-management codes. If covering plans exclude obesity codes, they do not cover weight management, and kiosk-weight premium tiers would have nothing to attach to."
+      },
+      {
+        "quote": "smoking and vaping cessation: endorsed in the 2035 Public Health Service tobacco guideline update as an adjunct for smokers with obesity or prior failed quits; dispensed free via state quitlines; ≈2.0M users",
+        "field": "world/drugs/mainstream_offlabel_uses/1",
+        "why": "mechanism: a federal guideline endorsement and mass free quitline dispensing are asserted although the SHAPS smoking trial has not read out (it reads out in 2037) and nothing has been filed. The evidence base that would trigger a PHS guideline is not shown."
+      },
+      {
+        "quote": "Under-30 growth is driven mostly by vaping-cessation and drinking-reduction use, not weight.",
+        "field": "world/population/note",
+        "why": "magnitude/mechanism: the 18–29 band adds roughly 3.3M users, but the whole nicotine/alcohol cohort is only ≈4.4M across all ages (≈2.0M smoking, ≈2.4M AUD). That cohort would have to be overwhelmingly young, and the 'calm' subscribers are not shown to fill the gap."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 5.5,
+      "inequality": 6.5,
+      "public_health": 6.67,
+      "cohesion": 5.83,
+      "epistemic": 4.67,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.5,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.6,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is far harder than 2026. Over a third of adults are on the drug, and about 11M use imported or counterfeit product, including a glibenclamide cluster that killed 23. Excess hip fractures reach ≈22,000 a year, NAION adds ≈2,800 cases a year, and the middle class lost coverage (cycling and fat-dominant regain). 'The grey' is now a measured, mainstream complaint, and thinness is stratified by coaching and class. Mitigations are real: managed price cuts, the free HRSA programme, and an RCT that makes the blunting harm nameable. That keeps the epistemic and autonomy scores below the structural-harm anchor.",
+      "plausibility": "driver_fidelity: every driver is visibly realised in events and fields. The triple-agonist driver is met thinly, through a new pen and Part D listing of retatrutide that was already on the market. The nicotine driver rests on a guideline alone, which the approval rules allow. mechanism: most chains are shown (HHS portal deal, extenders-package subsidy, counterfeit cluster, MDL bellwether). Claims 1 and 2 are the weak points (insurance coverage described as restricted to non-weight codes while 'weight management' coverage is stated at 49%; the PHS guideline arriving before the SHAPS readout), and claim 3 rests on thin support. magnitude: current use of 36.8% and ever-use of 49.0% are inside the envelope, and the age, income and payer-mix shares sum correctly. The Medicare, Medicaid, HRSA ($7.1B vs a $7.5B appropriation), fracture, NAION and market arithmetic all multiply out. Approval timing (AUD filed Feb 2036, bimagrumab filed Jun 2036) is allowed, and `generic_us` stays false with a mechanism given.",
+      "generativity": "The prose gives concrete figures and places (Charlotte SouthPark versus east Charlotte, Milwaukee taverns, Monroe Road clinic). The Okafor household scene is filmable: the $687 pill bill, Marcus no longer laughing at the radio, Tasha's 'Saturday I'm a person', the billboard, and Ada's question. The world fields (holiday weekends, plaintiff ads, grey era comedy) imply many more characters and scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.75,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 30
   }
 }

@@ -52,6 +52,41 @@
         "input_tokens": 19513,
         "output_tokens": 27835
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r07-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36991,
+        "output_tokens": 7538
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r07-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36991,
+        "output_tokens": 6796
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r07-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36991,
+        "output_tokens": 8407
+      }
     ]
   },
   "world": {
@@ -314,6 +349,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r07-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036)",
+          "field": "world/access/note",
+          "why": "mechanism: coverage slipped 30%→29% in 2034, and 2026 was a retreat. A six-point rise in a window of price shocks and +8% pharmacy trend is asserted with no employer-side cause. The 2027 guidance had been in force for years without producing growth."
+        },
+        {
+          "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright",
+          "field": "world/population/note",
+          "why": "magnitude: the flows do not reconcile. Outflows of 4M plus 2.5M, less 1.5M of entrants, give a net fall of 5.0M, not the stated 3.4M (15.4M→12.0M)."
+        },
+        {
+          "quote": "Oral semaglutide uses far more API per patient-month than the weekly injection, and AUD, calm, Reset and nicotine demand runs mostly on the pill, so Novo took the hardest cost hit.",
+          "field": "world/access/note",
+          "why": "mechanism: the claim that Novo's licensed oral supply depends on Chinese and Indian peptide APIs and intermediates is asserted. It also ignores the 2026 manufacturer deals that traded price cuts for tariff relief, so the price shock reaching TrumpRx is weakly justified."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 7,
+        "epistemic": 7.5,
+        "overall": 7.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 36% of adults are on an incretin, and adherence now gates Medicaid coverage (five waiver states with monthly fill verification and a 5% weight-loss target), Part D renewal and employer promotion. The Ohio ruling removes the main legal brake on adherence-linked promotion. Inequality is entrenched: the tariff closed the cheap gray route, bodies read as payer, and frail seniors face denials. The epistemic score is high because the anhedonia rate for roughly 17M low-dose users is unmeasured while Novo's 'Less Pull' ads run under label cover. There is no mass death and the harms are normalised and structural, so this sits near 7. It is not higher because the state is largely continuous with 2034, with no new catastrophic signal.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption goes 28→36 (+8.0 against +8.1). Shock_up comes through tariffs and TrumpRx price rises. Conditioning appears in the Medicaid waivers and Part D criteria. Nicotine and dementia are approved 13 months after filing, which the approval rules allow. Safety stays at no new signal, there is no next-gen launch and no market shock, and the marketed-feature layer is the 'Less Pull' campaign. mechanism: most chains are shown, such as the dementia label moving users from cash to the Medicare code and the tariff pushing up gray prices. The employer-coverage rise (claim 1) and the Novo API cost-shock story (claim 3) are asserted. 'Roughly double' gray prices sits awkwardly with the prose's $40→$140. magnitude: population figures sit inside the envelope (36, 45.5), the age and income checks work, the payer mix sums to 99.7M, and the Medicare $56.6B and dementia $19.3B figures multiply out. The gray-user flow arithmetic fails (claim 2: net −5.0M against the stated −3.4M), and 3.3M new-label users in under five months is fast.",
+        "generativity": "The Darlene Hux scene gives a clear character with specific texture: the KY Works check-in, Newports left in the glovebox, her mother's Part D renewal letter, Tray's vials rising from $40 to $140, and the 4.6% against 5% weigh-in. The prose also implies many other scenes: The Villages, Columbus warehouse smoke breaks, Memphis regains. The Ohio appeal and the election-year price politics leave room for further stories."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s5-L1-r07-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright",
+          "field": "world/population/note",
+          "why": "magnitude: the flows do not reconcile. Minus 4M, plus 1.5M and minus 2.5M is a net fall of 5.0M, not the stated 3.4M (15.4M to 12.0M). The 2.5M who stopped also should have enlarged the off pool, yet the off pool is stated as unchanged at 9.5%."
+        },
+        {
+          "quote": "within five months more than three million retirees had moved onto the new code.",
+          "field": "prose/body",
+          "why": "mechanism: about 3.3M prior-authorised Part D starts in under five months after an August 2036 sNDA approval is asserted with no shown onboarding chain. Plan formularies, PA queues and the 2037 premium cycle would not move this fast."
+        },
+        {
+          "quote": "Novo's 'Less Pull' advertisements followed within weeks: a smoker, a drinker and a midnight shopper, each not reaching.",
+          "field": "prose/body",
+          "why": "mechanism: network TV advertising that implies off-label compulsion benefits (shopping) under a smoking-cessation label would fall to FDA drug-advertising enforcement. The candidate gives only the FTC's inaction, so the missing FDA response is an unexplained coincidence."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 6.5,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, the world keeps the 2034 harms and deepens them. Coverage and promotion are tied to adherence through Medicaid waiver portals, Part D continuation criteria, and the Ohio ruling that removes the main legal brake. An unmeasured anhedonia rate sits behind about 17M low-dose users, and a manufacturer campaign sells 'Less Pull' on label language. Stratification hardened after the tariff cut off the cheap gray route, and the fastest regains fall on the poorest regions. Real offsets (obesity down to ~30.5%, smoking cessation, dementia risk reduction) keep this from the 8–9 range.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Price shock is the 2035 tariffs and the TrumpRx increases. Conditioning is the 1115 waivers, Part D criteria and employer tracks. Dementia and nicotine arrive through filings with 13-month approvals that the envelope allows. There is no new safety signal, next-gen launch or market shock. mechanism: the tariff, price and gray-supply chains are well shown, but the three-million-retiree rush and the unchallenged 'Less Pull' advertising (claims 2 and 3) are asserted. magnitude: current use of 36% and ever-used of 45.5% sit inside the envelope, and the payer mix, cash breakdown, age check and Part D arithmetic all reconcile. The gray-market flow in claim 1 does not net to the stated fall, and the street-price 'roughly double' conflicts with the $40 to $140 vial.",
+        "generativity": "The Darlene Hux scene is dense with implied film: the KY Works check-in, a 4.6% weigh-in against a 5% requirement, her mother's Part D renewal letter, her son's vials that now cost $140, and Newports left in the glovebox. The world fields carry texture such as The Villages golf carts, Columbus warehouse smoke breaks and quiet clubs. Several more characters and scenes are clearly implied."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s5-L1-r07-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright after seizures or price doubling",
+          "field": "world/population/note",
+          "why": "magnitude: the flows do not reconcile. 15.4M − 4M − 2.5M + 1.5M = 10.4M, not the stated ~12M. A gap of about 1.6M is left unexplained, and the flows also exceed the 3.4M net decline."
+        },
+        {
+          "quote": "~3.3M on the August 2036 non-CVD dementia label, of whom ~2.1M switched from cash",
+          "field": "world/population/note",
+          "why": "magnitude and mechanism: 3.3M Medicare enrollees reach a prior-authorised label in under five months after an August 2036 approval, which is implausibly fast. It also drives a 65+ rate that jumps from 25% to 38%, with the speed asserted rather than shown."
+        },
+        {
+          "quote": "Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036), and nearly every new plan is conditional",
+          "field": "world/access/note",
+          "why": "mechanism: employer coverage rises six points in a period of tariff-driven price increases and pharmacy trend of +8%, against a 2026 and 2034 trend of retreat or stasis. Conditionality is offered as the cause, but no chain shows why employers expand coverage while costs climb."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6.5,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world has coverage conditioned at every level. Medicaid waivers run through work-requirement portals, Part D sets days-covered continuation rules that already deny frail seniors, and employer tracks carry adherence-linked promotion after the Ohio ruling. It also has about 12M gray users with contaminated product and about 17M low-dose users whose anhedonia rate is unmeasured. The 'Less Pull' marketing of craving suppression, stratified bodies and untreated regain among the poor add to this. Nothing collapses, but the harm is normalised, structural and poorly measured, which puts it near the 'refuse to live in it' anchor.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. These are the 2035 tariffs and TrumpRx price rises, the Medicaid waivers and Part D criteria, the dementia and nicotine labels filed and approved 13 months apart, 'Less Pull' as a marketed feature, and stratification, with no new class launched. mechanism: the tariff-to-TrumpRx pass-through and the dementia uptake are shown, but employer coverage rising during a price shock is asserted (claim 3). The prose also drifts, with 'cash pills' for an injectable tirzepatide label and 'doubled' gray vials against Tray's $40 to $140. magnitude: the on-drug 36%, ever-used 45.5%, income thirds, age check, payer mix summing to 99.7M and the $56.6B and $19.3B spending lines all fit the envelope. Weaknesses are the gray-user flows that fail to reconcile (claim 1) and the aggressive 3.3M dementia-label uptake in four months (claim 2).",
+        "generativity": "The Darlene Hux day-in-the-life shows rather than explains. It has the KY Works check-in, the 31 logged hours, the 4.6% weigh-in against the 5% requirement, the Newports left in the glovebox, her mother's Part D renewal letter, Tray's $140 vials and the 'Less Pull' commercial. Secondary scenes are implied in The Villages, the Columbus corridor, the Delta and the Sixth Circuit appeal, and the world fields carry many named places and institutions. It is dense and filmable."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036)",
+        "field": "world/access/note",
+        "why": "mechanism: coverage slipped 30%→29% in 2034, and 2026 was a retreat. A six-point rise in a window of price shocks and +8% pharmacy trend is asserted with no employer-side cause. The 2027 guidance had been in force for years without producing growth."
+      },
+      {
+        "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright",
+        "field": "world/population/note",
+        "why": "magnitude: the flows do not reconcile. Outflows of 4M plus 2.5M, less 1.5M of entrants, give a net fall of 5.0M, not the stated 3.4M (15.4M→12.0M)."
+      },
+      {
+        "quote": "Oral semaglutide uses far more API per patient-month than the weekly injection, and AUD, calm, Reset and nicotine demand runs mostly on the pill, so Novo took the hardest cost hit.",
+        "field": "world/access/note",
+        "why": "mechanism: the claim that Novo's licensed oral supply depends on Chinese and Indian peptide APIs and intermediates is asserted. It also ignores the 2026 manufacturer deals that traded price cuts for tariff relief, so the price shock reaching TrumpRx is weakly justified."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.67,
+      "inequality": 7.33,
+      "public_health": 6.17,
+      "cohesion": 6.67,
+      "epistemic": 7.17,
+      "overall": 7.07
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.03,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 36% of adults are on an incretin, and adherence now gates Medicaid coverage (five waiver states with monthly fill verification and a 5% weight-loss target), Part D renewal and employer promotion. The Ohio ruling removes the main legal brake on adherence-linked promotion. Inequality is entrenched: the tariff closed the cheap gray route, bodies read as payer, and frail seniors face denials. The epistemic score is high because the anhedonia rate for roughly 17M low-dose users is unmeasured while Novo's 'Less Pull' ads run under label cover. There is no mass death and the harms are normalised and structural, so this sits near 7. It is not higher because the state is largely continuous with 2034, with no new catastrophic signal.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption goes 28→36 (+8.0 against +8.1). Shock_up comes through tariffs and TrumpRx price rises. Conditioning appears in the Medicaid waivers and Part D criteria. Nicotine and dementia are approved 13 months after filing, which the approval rules allow. Safety stays at no new signal, there is no next-gen launch and no market shock, and the marketed-feature layer is the 'Less Pull' campaign. mechanism: most chains are shown, such as the dementia label moving users from cash to the Medicare code and the tariff pushing up gray prices. The employer-coverage rise (claim 1) and the Novo API cost-shock story (claim 3) are asserted. 'Roughly double' gray prices sits awkwardly with the prose's $40→$140. magnitude: population figures sit inside the envelope (36, 45.5), the age and income checks work, the payer mix sums to 99.7M, and the Medicare $56.6B and dementia $19.3B figures multiply out. The gray-user flow arithmetic fails (claim 2: net −5.0M against the stated −3.4M), and 3.3M new-label users in under five months is fast.",
+      "generativity": "The Darlene Hux scene gives a clear character with specific texture: the KY Works check-in, Newports left in the glovebox, her mother's Part D renewal letter, Tray's vials rising from $40 to $140, and the 4.6% against 5% weigh-in. The prose also implies many other scenes: The Villages, Columbus warehouse smoke breaks, Memphis regains. The Ohio appeal and the election-year price politics leave room for further stories."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.618,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 3
   }
 }

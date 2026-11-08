@@ -49,6 +49,41 @@
         "input_tokens": 19585,
         "output_tokens": 19408
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r09-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35130,
+        "output_tokens": 5500
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r09-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35130,
+        "output_tokens": 5573
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r09-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35130,
+        "output_tokens": 5999
+      }
     ]
   },
   "world": {
@@ -310,6 +345,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r09-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "effective 2027-style only from Jul 2037",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "Mechanism: the effective date is garbled and nothing explains how a two-year-old coalition of lifters, churches and unions beat business lobbies in one state. The measure would also face federal conflict with the 2027 tri-agency guidance and ERISA self-insured plans, which the candidate never addresses."
+        },
+        {
+          "quote": "Her paycheck premium stays at $118 instead of $171.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Magnitude: $171 is about 45% above $118, but the stated guidance allows at most a 30% differential, so the prose contradicts the world's own rule."
+        },
+        {
+          "quote": "roughly 2.6M among weight-dose users and 1.0M among low-dose plan users",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Magnitude: the label gives a 1.5-point excess at low doses (4.5% vs 3%), and licensed low-dose plans total ~24M, which gives ~0.36M excess cases. Reaching 1.0M requires about 67M low-dose users, and the note says gray exposure is unmeasured, so the split does not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 7,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference, the world carries 41% of adults on drug, ~28M on gray-market product, and a 2035 label confirming emotional blunting (~3.6M excess cases). Premium and Medicaid eligibility are conditioned on verified fills (~14M workers, six Medicaid waiver states), and unmedicated identity is politicised. Interior-life severity of 7 and the 'label as sales sheet' dynamic (FTC case pending) push autonomy and cohesion high. Epistemic harm is somewhat softened because the harm is labelled, measured and contested openly, and the world is not collapsing.",
+        "plausibility": "driver_fidelity: All ten drivers are visible and traceable: anhedonia labelled Apr 2035, India registration driving gray resurgence, conditioning waivers, the natty movement, and marketed-feature platforms. The Chinese NDA filing is an allowed form for next_gen_launch 'none'. The 2034 line about Illinois's ban was quietly dropped when Colorado arrived. mechanism: The employer coverage rise 29%→36% with ~90% conditional is asserted rather than caused, and the Colorado ballot win by a young movement is thinly explained (claim 1). The prose $118 vs $171 premium contradicts the 30% cap (claim 2). magnitude: Headline figures sit inside the envelope (41.1% on drug, 51.5% ever) and the payer mix, Medicare and Medicaid spend, and age and income checks all multiply out. Reconciliation gaps remain: the low-dose excess-case split (claim 3), 14M adherence-track enrollees counted as workers in some places and as workers plus Medicaid in others, and the BMI<30 user count conflicting with 30.4% obesity.",
+        "generativity": "The Marisol/Dev/Lucía vignette is concrete: the 6:40 clinic visit, the green Verified ping, the blunting questionnaire she answers cautiously, the Ahmedabad vials in the butter door, and the NATTY pin. The world supplies many scenes (Full Table suppers, assay-verified natty gyms, 'living with a label insert' couples, Steady vendors). The closing exchange where Lucía records 'I feel fine' shows rather than explains."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s5-L1-r09-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "a Colorado ballot measure banning adherence-conditioned premiums and employment decisions passed in Nov 2036, effective 2027-style only from Jul 2037",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "Mechanism: a state ballot measure that bans conditioned premiums for employers runs into ERISA preemption for self-insured plans, and the candidate never addresses this. The 'effective 2027-style only' wording is garbled. The candidate also dropped the parent's 'Illinois ... only state ban' line from still_true without explanation."
+        },
+        {
+          "quote": "about 3.6M excess cases at label rates (roughly 2.6M among weight-dose users and 1.0M among low-dose plan users)",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Magnitude: a 1.5-point excess (4.5% vs 3%) across ~24–26M low-dose users gives roughly 0.4M, not 1.0M. Reaching 1.0M would need ~67M low-dose users, which contradicts the payer breakdown."
+        },
+        {
+          "quote": "Her paycheck premium stays at $118 instead of $171.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism and magnitude: $171 is about 45% above $118, but the stipulated guidance and the world state allow a maximum differential of 30%. The scene contradicts the rule it is meant to illustrate."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, this world keeps everything inherited from 2034 and adds more: 41% of adults on drug, ~28M on gray product with endotoxin and counterfeit-pen harms, and 14M workers plus six Medicaid programmes tied to adherence. Employers market labelled emotional blunting, with a ~10% rate on retatrutide, as 'calm'. Autonomy is hit hardest, since premiums and eligibility ride on staying on a drug whose label warns of flattening. Epistemic harm is real too: low-dose and gray-market effects are unmeasured and the label has become a sales sheet. The natty counter-movement and the Colorado ban soften this slightly, but the structure is normalised and hard to see from inside.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and events: 41.1% adoption (+13.1), managed-decline price cuts, conditioned coverage and Medicaid waivers, the April 2035 anhedonia label, no new launch or indication, gray-market resurgence, the natty movement, and a marketed-feature layer. mechanism: Most chains are shown, such as the Indian registration seal driving gray growth and the label language being reused by platforms. The Colorado ballot-measure claim and the $118→$171 premium (a 45% differential against a 30% cap) are the weak points. The rapid appearance of the natty coalition is also thinly argued. magnitude: Population, ever-used and income/age figures are inside the envelope, and payer mix, Medicare and Medicaid spending and cycled share all multiply out. The low-dose blunting excess (1.0M) does not reconcile. The '26M under BMI 30' figure against 30.4% obesity and 13% never-used obese is also inconsistent, though inherited from the parent.",
+        "generativity": "The prose gives concrete scenes: the Groveport clinic at 6:40, the green 'Verified' ping, the blunting questionnaire at lunch, the Ahmedabad vials in the butter door, and Lucía's NATTY pin and school project. The world fields add Full Table suppers, assay-verified natty gyms, billboards and 'Steady' vendors. Characters and conflicts are implied, and the ending shows rather than explains."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s5-L1-r09-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Her paycheck premium stays at $118 instead of $171.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: $171 is about 45% above $118, but the world's rule allows a differential of only up to 30%. The prose contradicts the state it illustrates."
+        },
+        {
+          "quote": "With ~113M users, about 3.6M excess cases at label rates (roughly 2.6M among weight-dose users and 1.0M among low-dose plan users)",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "magnitude: the label gives a low-dose excess of 1.5 points (4.5% vs 3%), and the world counts only ~24M licensed low-dose users, which gives ~0.36M excess cases. The 1.0M figure would need ~67M low-dose users, and gray microdosing is called unmeasured."
+        },
+        {
+          "quote": "About 26M users (~23%) have BMI under 30, ~9M under 25. Adult obesity ~30.4%.",
+          "field": "world/population/note",
+          "why": "magnitude: ~87M current users with BMI 30+ is already ~32% of adults. Add the stated ~13% of adults with obesity who never used a drug and obesity would be ~45%, not 30.4%."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 7,
+        "epistemic": 5.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, where about 11% of adults were on a drug and conditioning barely existed, this world has 41% on drug and ~28M in a gray market with endotoxin and counterfeit harms. Premiums (a 30% adherence differential, Texas/Ohio plans) and Medicaid eligibility (six 1115 waivers) now depend on fill records, which is a heavy autonomy loss. Interior life is severity 7: ~3.6M excess blunting cases, labelled blunting sold as a feature, and workplace promotion tied to adherence. Stratification persists (47/42/34 by income, children's growth data unresolved, fourteen-state ban patchwork). The harm is labelled and discussable, which keeps epistemic badness moderate, but gray microdose effects are unmeasured.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Adoption lands at 41.1 (+13.1), managed decline shows in the price cuts, and conditioning shows in the Medicaid waivers and state employee plans. The April 2035 label, the gray-market doubling, the natty movement and the marketed-feature platforms are all present, and there is no new indication or next-gen launch. mechanism: most chains are shown, such as consent orders binding only four platforms, which lets other platforms quote the label, and conditional coverage widening employer reach. The prose premium of $118 vs $171 breaks the stated 30% cap (claim 1), and the Colorado measure passing amid a federal business hold is mostly asserted. magnitude: all headline figures sit inside the envelope, and payer mix, spending (15.5M×$215×12≈$40B, 4.6M×$190×12≈$10.5B), age and income checks all multiply out. The gaps are the BMI/obesity reconciliation (claim 3), the 1.0M low-dose blunting excess (claim 2), and 14M workers in tracks vs the 14M \"workers and Medicaid enrollees\" in the tensions.",
+        "generativity": "The prose uses concrete scenes: Marisol's 6:40 clinic visit, the green Verified ping, the blunting questionnaire she answers carefully because she doesn't know who reads it, Dev's Ahmedabad vials in the butter door, and Lucía's NATTY pin. The world fields add cultural texture such as Full Table suppers, assay-verified gyms, label insert breakup language and the flat-audience genre. The closing exchange shows rather than explains."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "effective 2027-style only from Jul 2037",
+        "field": "world/interior_life/effect_on_politics",
+        "why": "Mechanism: the effective date is garbled and nothing explains how a two-year-old coalition of lifters, churches and unions beat business lobbies in one state. The measure would also face federal conflict with the 2027 tri-agency guidance and ERISA self-insured plans, which the candidate never addresses."
+      },
+      {
+        "quote": "Her paycheck premium stays at $118 instead of $171.",
+        "field": "prose/a_day_in_the_life",
+        "why": "Magnitude: $171 is about 45% above $118, but the stated guidance allows at most a 30% differential, so the prose contradicts the world's own rule."
+      },
+      {
+        "quote": "roughly 2.6M among weight-dose users and 1.0M among low-dose plan users",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "Magnitude: the label gives a 1.5-point excess at low doses (4.5% vs 3%), and licensed low-dose plans total ~24M, which gives ~0.36M excess cases. Reaching 1.0M requires about 67M low-dose users, and the note says gray exposure is unmeasured, so the split does not reconcile."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 8.0,
+      "inequality": 7.0,
+      "public_health": 6.83,
+      "cohesion": 6.67,
+      "epistemic": 6.17,
+      "overall": 7.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.33,
+      "magnitude": 6.5
+    },
+    "plausibility": 6.88,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against the 2026 reference, the world carries 41% of adults on drug, ~28M on gray-market product, and a 2035 label confirming emotional blunting (~3.6M excess cases). Premium and Medicaid eligibility are conditioned on verified fills (~14M workers, six Medicaid waiver states), and unmedicated identity is politicised. Interior-life severity of 7 and the 'label as sales sheet' dynamic (FTC case pending) push autonomy and cohesion high. Epistemic harm is somewhat softened because the harm is labelled, measured and contested openly, and the world is not collapsing.",
+      "plausibility": "driver_fidelity: All ten drivers are visible and traceable: anhedonia labelled Apr 2035, India registration driving gray resurgence, conditioning waivers, the natty movement, and marketed-feature platforms. The Chinese NDA filing is an allowed form for next_gen_launch 'none'. The 2034 line about Illinois's ban was quietly dropped when Colorado arrived. mechanism: The employer coverage rise 29%→36% with ~90% conditional is asserted rather than caused, and the Colorado ballot win by a young movement is thinly explained (claim 1). The prose $118 vs $171 premium contradicts the 30% cap (claim 2). magnitude: Headline figures sit inside the envelope (41.1% on drug, 51.5% ever) and the payer mix, Medicare and Medicaid spend, and age and income checks all multiply out. Reconciliation gaps remain: the low-dose excess-case split (claim 3), 14M adherence-track enrollees counted as workers in some places and as workers plus Medicaid in others, and the BMI<30 user count conflicting with 30.4% obesity.",
+      "generativity": "The Marisol/Dev/Lucía vignette is concrete: the 6:40 clinic visit, the green Verified ping, the blunting questionnaire she answers cautiously, the Ahmedabad vials in the butter door, and the NATTY pin. The world supplies many scenes (Full Table suppers, assay-verified natty gyms, 'living with a label insert' couples, Steady vendors). The closing exchange where Lucía records 'I feel fine' shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.684,
+    "survived": true,
+    "new_lineage": "L1",
+    "floor_used": 6,
+    "rank": 1
   }
 }

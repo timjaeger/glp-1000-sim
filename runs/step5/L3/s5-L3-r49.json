@@ -52,6 +52,41 @@
         "input_tokens": 19500,
         "output_tokens": 24133
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r49-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36880,
+        "output_tokens": 7902
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r49-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36880,
+        "output_tokens": 9386
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r49-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36880,
+        "output_tokens": 7037
+      }
     ]
   },
   "world": {
@@ -335,6 +370,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r49-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "That implies ~3,000–4,000 excess US cases a year, most of them treated with monthly anti-VEGF eye injections.",
+          "field": "world/safety_ledger/15/prevalence_note",
+          "why": "magnitude: an excess of 0.6 per 1,000 person-years needs about 5–6M person-years of continuous 5+ year exposure in adults 60+. With one-year persistence near one-third and heavy cycling, that population is likely a few million at most."
+        },
+        {
+          "quote": "weekly semaglutide incl. generic, with growth and eating-disorder monitoring",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/6",
+          "why": "mechanism: the 6–11 semaglutide label was approved in Feb 2034, so new-indication exclusivity would normally keep generics off that label until about 2037. Generics are shown labelled for 6–11 within 11 months with no carve-out or off-label explanation."
+        },
+        {
+          "quote": "Pharmacy trend fell from ~+7% to ~+2% as PBMs moved semaglutide to generic step therapy.",
+          "field": "world/economy/insurance/state",
+          "why": "magnitude: users rose, and branded amycretin, tirzepatide, MariTide and retatrutide grew alongside. A drop to +2% for total pharmacy trend from one generic step edit is asserted more than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps every inherited harm: EPI litigation and a $7.0B reserve, a growth deficit in children on Medicaid, anhedonia now mainstream, and bone loss. It adds a wet-AMD signal and a normal-BMI longevity population with no medical indication, heading toward that exposure. About 10M workers are logged and penalised for holidays under conditioned tracks (autonomy). Price relief shrinks the gray market, ends the 'hunger tax' and decouples thinness from money, which keeps this below 7. Stratification now runs through muscle, pills and scans, and the signals are measured but imprecise.",
+        "plausibility": "driver_fidelity: every driver is traceable to a field or event. Adoption rises by exactly 2.8, generic_collapse has its 2035-01 event, AUD and longevity indications are present, wet AMD fills the long-horizon slot, oral parity is realised via oral amycretin scale-up, and coverage, state action and market shock stay still or null. mechanism: most chains are shown, including price to cash share, closed re-filling and holidays. Claim 2 (generic pediatric labelling despite fresh exclusivity) and the very fast AMD signal-to-DSC timeline are asserted. magnitude: ever-use and current-use sit inside the envelope, and the age, income and payer mix, cycling arithmetic and Medicare spend all reconcile. Claims 1 and 3 are soft, and the pediatric percentages inherit a small mismatch from the parent world.",
+        "generativity": "Yolanda, Mr. Albright with his blinking bottle, Kiara's growth chart and Pastor Gaines at the church anniversary dinner give real scenes. The world adds texture such as 'Walmart thin', post-Thanksgiving ED vomiting, 'holiday weekends' dating tags and a songwriter's 'Off Week' album. Some of it is still explained rather than shown, but there is a lot of film here."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s5-L3-r49-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "That implies ~3,000–4,000 excess US cases a year, most of them treated with monthly anti-VEGF eye injections.",
+          "field": "world/safety_ledger/15/prevalence_note",
+          "why": "magnitude/mechanism: an excess of ~0.6 per 1,000 person-years only yields 3,000–4,000 cases if roughly 5–6M person-years of continuous 5+ year exposure exist in adults 60+. That is hard to square with one-year persistence near one-third and with the admission that most longevity users have not reached 5 years."
+        },
+        {
+          "quote": "Route: orals fell from ~55% to ~47% of users, because the cheapest product is a weekly needle.",
+          "field": "world/access/note",
+          "why": "magnitude: 55% of 67.7M is ~37.2M oral users and 47% of 75.9M is ~35.7M, so orals fell in absolute terms. Oral amycretin alone added ~5.3M users, which implies ~6.8M other oral users vanished, and only ~2.2M starting-dose movers are shown. The prose line that 'the needle is gone' for the covered also ignores ~6.1M monthly MariTide users."
+        },
+        {
+          "quote": "Cash share rose from 40% to 46.5% with no change in any payer's rules.",
+          "field": "world/population/note",
+          "why": "mechanism: this contradicts the same world's access fields, which say Part D plans now require generic semaglutide first and most employers require generic before tirzepatide or amycretin. Payer rules did change, so the cash-share shift is explained by a claim the candidate itself contradicts."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap access is a real gain, but the world keeps every inherited harm: ~10M workers in logged, premium-penalising conditioned tracks, a ~0.5 cm/year growth deficit in Medicaid 6–11 starters, ~61,000 EPI claims, hip-fracture HR of 1.3–1.45, and a new wet-AMD signal. Anhedonia has become a mainstream complaint, ~4.6M normal-BMI users have no efficacy data, and class sorting has moved from thinness to muscle, pill and retina scan. That is a recognisably harder society with new losers, but without the structural, hard-to-see harm that would justify 7. Epistemic stays moderate because harms are measured and discussed (FDA communication, JAMA survey).",
+        "plausibility": "driver_fidelity: every driver is visibly realised. The adoption delta is 2.8 pp, generic collapse is traced to a Jan 2035 event, the nAMD signal is the long-horizon safety driver, oral amycretin is the oral-parity driver, and state_action and market_shock stay at none. Longevity is realised only as off-label plans, and the oral-parity launch is really a scale-up of an already-approved product, so both are thin. mechanism: most chains are shown (generic price → Delta re-filling closes, holidays → premium-tier flags), but the settled entry date is asserted, and claim 3 contradicts the world's own access fields. magnitude: population, income, age, cycling and payer-mix arithmetic all reconcile and sit inside the envelope, and the Medicare spend math works ($145 × 15.2M × 12 ≈ $26.4B). The gaps are the oral-share arithmetic (claim 2), the unsupported nAMD exposure base (claim 1), and a pediatric 2.0% that is slightly above what the 12–17 and 6–11 rates imply.",
+        "generativity": "The Yolanda scene is strongly textured: the alarm, the pen in the butter compartment, the blinking pill bottle, the niece's growth chart, caramel cake at the church dinner. Many worlds are implied, including holiday-dosing tags on dating apps, the 'Off Week' album, retina clinics in Naples, and premium-tier penalties for skipped weeks. The prose leans on explanation in places, but the day-in-the-life mostly shows rather than tells."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s5-L3-r49-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "A Nordic registry analysis (Mar 2036), replicated in VA and Medicare data, found no excess under 3 years of continuous semaglutide or tirzepatide but an HR of ~1.7 after 5+ years in adults 60+",
+          "field": "world/safety_ledger/15/prevalence_note",
+          "why": "Mechanism: a registry finding, two independent replications, and an FDA Drug Safety Communication (Jun 2036) all land within about three months. No mechanism or review path is shown, and the signal fits the stipulated driver too neatly."
+        },
+        {
+          "quote": "Route: orals fell from ~55% to ~47% of users, because the cheapest product is a weekly needle.",
+          "field": "world/access/note",
+          "why": "Magnitude: oral amycretin grew from ~2.2M to ~7.5M users while the orals share fell by 8 points. That means other orals lost about 7M users, but the only cause given is generic injectables. The $149 starting-dose pool shrank by only 2.2M, so the shift is asserted and does not fully reconcile."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 2",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the stated bands (~3.7% of 12–17s, ~0.7% of 6–11s, none under 6) imply about 1.5% of under-18s, not 2.0%. The pediatric headline figure does not reconcile with its own components."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps the inherited harms: a ~54k–61k-claim EPI mass tort, hip-fracture excess, pediatric growth deficits (~0.5–0.6 cm/yr) concentrated in Medicaid children, and ~10M workers in logged, premium-penalising tracks. It adds a wet-AMD signal and mainstream flatness. Cheap generics relieve the price-driven stratification and the Delta regain, which keeps this below a 7. Autonomy and public health remain heavy because conditioned coverage punishes holidays, 4.6M normal-BMI users have no data on indefinite use, and children are exposed.",
+        "plausibility": "driver_fidelity: Every driver is traceable. The generic_collapse event (2035-01, settled entry), the longevity plans, the nAMD DSC, the holidays and flatness complaint, and coverage held at 33% with no state action are all present. The prose's claim that thinness 'stopped signalling money' sits slightly against class_stratification, but the muscle and pill stratification covers it. mechanism: Most chains are shown, including price to cash share to re-filling closing, and generic step therapy to trend falling. The $449→$299 amycretin TrumpRx listing and the three-month nAMD replication and FDA response are asserted rather than shown (claim 1). magnitude: Current and ever-use are inside the envelope, and the cycling, age, income, payer-mix (75.9M) and Medicare spend ($26.4B, $2.2B AUD) arithmetic all check out. Deductions are the pediatric 2.0% against its bands (claim 3) and the unexplained orals-share drop (claim 2).",
+        "generativity": "The Yolanda and Mr. Albright scene carries real texture: the 5:10 alarm, the pen in the butter compartment, the blinking pill bottle, and the niece's growth chart bending under the curve. The world fields add concrete detail such as 'Walmart thin', holiday-dosing dessert spikes, 'Off Week' the album, dating-app tags and retina reports as status. Many more scenes are implied, from track enrollees hiding gaps to Medicaid clinic starts and retina clinics in Naples."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "That implies ~3,000–4,000 excess US cases a year, most of them treated with monthly anti-VEGF eye injections.",
+        "field": "world/safety_ledger/15/prevalence_note",
+        "why": "magnitude: an excess of 0.6 per 1,000 person-years needs about 5–6M person-years of continuous 5+ year exposure in adults 60+. With one-year persistence near one-third and heavy cycling, that population is likely a few million at most."
+      },
+      {
+        "quote": "weekly semaglutide incl. generic, with growth and eating-disorder monitoring",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes/6",
+        "why": "mechanism: the 6–11 semaglutide label was approved in Feb 2034, so new-indication exclusivity would normally keep generics off that label until about 2037. Generics are shown labelled for 6–11 within 11 months with no carve-out or off-label explanation."
+      },
+      {
+        "quote": "Pharmacy trend fell from ~+7% to ~+2% as PBMs moved semaglutide to generic step therapy.",
+        "field": "world/economy/insurance/state",
+        "why": "magnitude: users rose, and branded amycretin, tirzepatide, MariTide and retatrutide grew alongside. A drop to +2% for total pharmacy trend from one generic step edit is asserted more than shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.0,
+      "inequality": 5.0,
+      "public_health": 5.83,
+      "cohesion": 5.0,
+      "epistemic": 4.83,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.83,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.33,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Measured against 2026, the world keeps every inherited harm: EPI litigation and a $7.0B reserve, a growth deficit in children on Medicaid, anhedonia now mainstream, and bone loss. It adds a wet-AMD signal and a normal-BMI longevity population with no medical indication, heading toward that exposure. About 10M workers are logged and penalised for holidays under conditioned tracks (autonomy). Price relief shrinks the gray market, ends the 'hunger tax' and decouples thinness from money, which keeps this below 7. Stratification now runs through muscle, pills and scans, and the signals are measured but imprecise.",
+      "plausibility": "driver_fidelity: every driver is traceable to a field or event. Adoption rises by exactly 2.8, generic_collapse has its 2035-01 event, AUD and longevity indications are present, wet AMD fills the long-horizon slot, oral parity is realised via oral amycretin scale-up, and coverage, state action and market shock stay still or null. mechanism: most chains are shown, including price to cash share, closed re-filling and holidays. Claim 2 (generic pediatric labelling despite fresh exclusivity) and the very fast AMD signal-to-DSC timeline are asserted. magnitude: ever-use and current-use sit inside the envelope, and the age, income and payer mix, cycling arithmetic and Medicare spend all reconcile. Claims 1 and 3 are soft, and the pediatric percentages inherit a small mismatch from the parent world.",
+      "generativity": "Yolanda, Mr. Albright with his blinking bottle, Kiara's growth chart and Pastor Gaines at the church anniversary dinner give real scenes. The world adds texture such as 'Walmart thin', post-Thanksgiving ED vomiting, 'holiday weekends' dating tags and a songwriter's 'Off Week' album. Some of it is still explained rather than shown, but there is a lot of film here."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.215,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 48
   }
 }

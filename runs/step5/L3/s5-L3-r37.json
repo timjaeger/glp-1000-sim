@@ -62,6 +62,41 @@
         "input_tokens": 30313,
         "output_tokens": 12782
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r37-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35596,
+        "output_tokens": 5963
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r37-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35596,
+        "output_tokens": 7759
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r37-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35596,
+        "output_tokens": 8114
+      }
     ]
   },
   "validation": {
@@ -73,6 +108,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -343,5 +382,185 @@
     "headline": "Find Your Dose: 84 million Americans are on the drug, a third say it flattens them, and the monthly pen won't let them take a break",
     "world_in_600_words": "At the end of 2036 almost one American adult in three takes an incretin drug, about eighty-four million people, and four in ten have tried one. The rise did not come from a new law. Who pays is the same as two years ago. Medicare still covers no one for weight alone, a third of employers cover the drugs, and most of those want proof. What changed was the price at the cheap end and the calendar at the expensive end.\n\nThe cheap end moved in January, when the latest TrumpRx round listed Novo's oral amycretin at $299 and cut the Wegovy pill's maintenance dose to $179. The $149 starting pill did not move. Seven and a half million people now stay on it indefinitely, a regimen nobody has studied, and it accounts for most of the growth in the bottom income third. Some of them are the people the 2033 tariff priced out of Indian vials, now coming back through a legal door. In Mississippi the back-room refillers are still working. There are fewer of them, and federal agents raided fourteen sites last year.\n\nThe calendar changed in June 2035, when Amgen won approval for a monthly MariTide pen people can use at home. A dose a month is easy to verify, so the employer tracks that hold more than ten million workers made it their default. Nine months earlier, a qui tam complaint unsealed in Boston had shown that Amgen was paying the vendors who run those tracks a fee for every enrolled patient, while the vendors steered enrollees to MariTide and restarted the five-percent clock for anyone who switched. Amgen settled for $1.6 billion and admitted nothing. The federal employee programme will make vendors certify their neutrality starting next year. The tracks, the data feeds and the 30 percent premium spread are all still in place, and MariTide's user count nearly doubled.\n\nThe complaint everyone has heard of is flatness. The clinical number has not changed: about seven percent of people on maintenance doses have measurable anhedonia, twice the rate in controls. The conversation has changed. A Pew survey found more than a third of users say they have felt flat, and nearly half took a deliberate break in the past year. Short-acting Foundayo invites a 'weekend', and semaglutide users stop for two weeks before a wedding. In February the obesity medicine society endorsed 'planned dose interruptions'. Employers' tracks still record an uncoded break as non-adherence. The monthly pen cannot be paused at all, so the workers with the least control over their premiums are the ones who cannot come up for air.\n\nAlcohol kept falling. Lilly's tirzepatide got an alcohol use disorder label in April, the addiction society now calls incretins first-line for drinkers with metabolic disease, and Medicaid had to cover the new label under the same rebate rules that brought in the first one. Bardstown lost another eleven hundred distillery jobs. A federal audit found that a fifth of telehealth alcohol diagnoses had no documented criteria behind them. Some money was clawed back and no rule changed.\n\nThe country now has a chart for what everyone could already see. Federal survey data released last August put obesity at one in five adults in the top income third and two in five in the bottom. In Charlotte the boast is muscle and a body-scan printout. In Memphis local news says 'the 38126 shape' without explaining it. Snack companies print two catalogues. Families in suburban Ohio schedule their breaks so they can eat at Thanksgiving. No state passed anything. Both presidential campaigns promised to protect the $149 price, and neither promised to pay for it.",
     "a_day_in_the_life": "Renee Okafor wakes at 4:50 in Grove City, Ohio, and checks the app before the kettle. Green. Her MariTide pen synced on the 3rd. She is Tier 1 for another twenty-six days.\n\nShe picks at the distribution centre from six to two-thirty. On break, Danielle from returns is eating a gas-station burrito with real attention, eyes half closed. Danielle is on a Foundayo weekend. Renee watches the way you'd watch someone swim.\n\nHer sister's wedding is in Savannah in five weeks. Renee called the track nurse line on Tuesday and asked about skipping October. The nurse was kind. A planned interruption needs a prescriber code, the prescriber is the vendor's telehealth doctor, the next slot is November, and the drug would still be in her anyway. 'It's a long tail,' the nurse said, as if that was good news.\n\nAfter shift she drives her son Theo to his six-month weigh-in at the pediatric clinic. Theo is ten. He isn't on anything. The nurse marks his height and doesn't say anything about it, which Renee has learned to read as fine.\n\nAt dinner she cuts a chicken thigh into eight pieces and eats three. Theo eats the rest of hers. Her husband, Marcus, drinks one beer, slowly, and asks if she wants to watch the thing they used to watch. She says sure. She laughs at the right places. She can hear herself doing it.\n\nIn bed she opens the dress photo her sister sent and zooms in on the cake. She tries to want it. She sets an alarm for 4:50."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r37-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Amgen's sBLA for a self-administered monthly MariTide autoinjector, filed Jun 2034, was approved Jun 2035.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism/magnitude: the 2034 starting world, dated Nov 2034, lists MariTide only as a clinic-administered product and mentions no pending home-pen filing. The approval-timing rule is met only because the filing is backdated into a period the parent world should have recorded."
+        },
+        {
+          "quote": "it accounts for most of the growth in the bottom income third",
+          "field": "prose/article",
+          "why": "mechanism: the indefinite $149 starting-dose population grew only from about 6M to 7.5M across all incomes, while the bottom third rose 6.5 points, roughly 6M users. The arithmetic does not support 'most of the growth'. The claim is asserted, not shown."
+        },
+        {
+          "quote": "~37% of current users say they have felt 'flat' on the drug and ~44% took a deliberate holiday or cut their own dose in the past year",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "magnitude: 44% taking deliberate holidays or self-cutting sits badly with a world where about 70% of employer coverage is conditioned and monthly pens 'made holidays impossible'. It also sits badly with a clinical estimate of only ~7% blunting. The gap is large and the survey figure is unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps every inherited harm and adds to them. About 10.6M people are in adherence-conditioned tracks that sync pen events and gym-scan data, and holidays are punished as non-adherence. The obesity gradient is 20% in the top income third versus 40% in the bottom, and children 6–11 take the drug with a growth deficit. EPI litigation, an unmeasured low-dose anhedonia rate, and a 19% unsupported AUD-coding rate add to the ledger. Obesity is lower nationally and no new catastrophe appears, which keeps it from the top of the scale. The harm is structural and mostly normalised.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Adoption is 30.6% (+5.9pp). The managed-decline TrumpRx round is dated Jan 2036. The MariTide home pen realises monthly_or_implant, with implants correctly left off the market. The Amgen scandal, NHANES stratification, mainstream-complaint flatness and the absence of state action are all present. mechanism: most chains are shown, such as monthly dosing being easy to verify, so tracks default enrollees to it, which makes holidays impossible. Weaker points are the retconned 2034 MariTide filing, the unsupported 'most of the bottom-third growth' claim, and the prose's 'Nine months earlier' dating, which does not match the Mar 2035 event. magnitude: on-drug 30.6 and ever-used 41 sit inside the envelope, and the income thirds bracket the national figure. The age-band check, cycling arithmetic, payer mix (84.5M), Part D spend ($43.7B), dementia and AUD routes, and the 4.3M AUD tally all reconcile. Approval timings of 12–13 months comply. Remaining flaws are minor: the Pew holiday figure and the backdated filing.",
+        "generativity": "The Renee Okafor day is specific and shows rather than explains: the app sync, the distribution-centre break, a coworker on a 'Foundayo weekend', the nurse's 'long tail', the chicken thigh cut into eight, and 'She tries to want it'. The world fields add texture, such as '38126 shape', holiday-off parties, scan-printout dating badges, and track holiday codes. Many secondary characters and scenes are implied, including Danielle, Marcus, Theo, the track nurse and the Ohio rallies."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s5-L3-r37-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "CDC's NHANES 2033–34 release shows adult obesity at ~20% in the top income third and ~40% in the bottom, the widest gradient on record",
+          "field": "world/events/3/event",
+          "why": "Mechanism: a 2:1 obesity gradient appears with no chain behind it. The 2034 drug-use gap between the top and bottom thirds (31 vs 17.5) is too small to produce a 20-point obesity gap, and the bottom third's use rose faster than the top's (6.5 vs 5.5 points). Nothing in the starting world mentions such a gradient."
+        },
+        {
+          "quote": "DOJ intervenes, and in Dec 2035 Amgen settles for $1.6B with a five-year corporate integrity agreement, admitting no liability",
+          "field": "world/events/0/event",
+          "why": "Mechanism and magnitude: a qui tam unsealed in March 2035 reaches intervention and a $1.6B settlement within nine months. False Claims Act cases of this size normally take years, and the speed is not explained."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 2",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 3.7% of 12–17s and 0.7% of 6–11s, with essentially no use under 6, works out to about 1.5% of under-18s. A 2.0% overall figure does not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world is well past a worse version of the present. About 30.6% of adults are on-drug and roughly 10.6M have premium tiers tied to adherence logs. Monthly pens cannot be paused, children on Medicaid start the drug while growth-velocity deficits persist, and the safety ledger carries unresolved EPI, hip-fracture and anhedonia harms. The obesity gradient is stark (20% top, 40% bottom), and 37% of users report feeling flat. Harms are named and discussed, so epistemic harm is moderate, but autonomy and inequality are structural and normalised.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption lands at +5.9pp. Managed decline appears in the Jan 2036 TrumpRx round. Coverage stays unchanged in structure, with only a minor 33→34% and ~two-thirds→~70% drift. AUD is extended to tirzepatide. The MariTide home pen realises the monthly driver through an existing product. The Amgen scandal, the NHANES gradient, the Pew and OMA holiday items, and no state action are all visible in events. Safety signal 'none' is mostly respected. mechanism: Several changes are asserted rather than shown. The 2:1 obesity gradient (claim 1) has no chain behind it. The Amgen settlement is implausibly fast (claim 2). The prose says the complaint was unsealed 'nine months earlier' than June 2035, but the event dates it March 2035. The bottom-third rise of 6.5 points is attributed to channels whose counts, such as 7.5M on $149 and 0.6M returners, cannot account for it. magnitude: On-drug, ever-used and the income and age bands are inside the envelope. The payer mix sums to 84.5M, the Medicare, dementia and AUD spend figures multiply out, the AUD user count sums, and the approval timings respect the 12-month rule. The pediatric 2.0% fails to reconcile (claim 3). 'Nearly doubled' MariTide users is really 5.8M→9.5M, about 64%.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s5-L3-r37-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Nine months earlier, a qui tam complaint unsealed in Boston had shown that Amgen was paying the vendors who run those tracks a fee for every enrolled patient",
+          "field": "prose/the_calendar_changed_paragraph",
+          "why": "Mechanism: the world's own events date the unsealing to 2035-03 and the pen approval to June 2035, which is three months apart, not nine. This is a narrative contradiction with the world state, and it muddles the causal order of scandal and default-to-MariTide."
+        },
+        {
+          "quote": "The income gradient in obesity doubled while adoption rose.",
+          "field": "world/open_tensions/2",
+          "why": "Mechanism: the 2034 parent gives no income-specific obesity baseline, so 'doubled' is asserted rather than derived. The candidate's own figures show the bottom third's use rising faster than the top's (+6.5 vs +5.5 points), which undercuts a widening gradient."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 2",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the stated 3.7% of 12–17s and 0.7% of 6–11s, with no use under 6, imply roughly 1.5% of all under-18s, not 2.0%. This is a reconciliation gap inherited from the 2034 world and carried forward."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Measured against 2026, this world keeps every 2034 harm and adds more. About 30.6% of adults are on drug, and 10.6M are in surveillance-conditioned tracks where a skipped monthly dose drops a premium tier (autonomy, `conditioning_or_surveillance`). Obesity runs ~20% in the top income third and ~40% in the bottom, and children 6–11 grow ~0.5 cm/year slower while mostly on Medicaid. EPI/GI litigation, mainstream 'flatness' and ~7.5M people on an unstudied indefinite starting dose add to this. The harm is structural and normalised but measured and discussable (NHANES, Pew, FDA study), so epistemic stays mid-range and the world stops short of 7+.",
+        "plausibility": "driver_fidelity: every driver is visible in the fields and events. The monthly driver is realised as the MariTide home pen (12-month approval, allowed by the envelope), and managed decline as the Jan 2036 TrumpRx round. The Amgen scandal, the AUD tirzepatide label, the NHANES stratification and the mainstream-complaint layer are all present. There are no new safety signals and no state action. mechanism: most chains are shown, including monthly dosing being easy to log, tracks defaulting to MariTide, holidays counting as non-adherence, and the Medicaid rebate route for the tirzepatide AUD label. Weak points are the prose's 'nine months earlier' contradicting the event dates, the unsupported 'gradient doubled', the quick qui tam-to-settlement, and 'nearly doubled' MariTide users when 5.8M to 9.5M is about 1.6×. magnitude: adult use of 30.6% and ever-use of 41% sit inside the envelope, and the income thirds bracket the national figure. The payer mix sums to 84.5M, the cycling arithmetic gives 48.3%, the age check gives 30.6, the Medicare, dementia and AUD spending products multiply out, and approvals respect the 12-month rule. The one real gap is the pediatric 2.0% against its sub-band rates (~1.5%).",
+        "generativity": "The Renee Okafor day is strongly staged: a 4:50 app check, a pen sync, Danielle's Foundayo-weekend burrito, a nurse saying 'long tail', Theo's weigh-in, the chicken thigh in eight pieces, and trying to want the cake. The world fields add texture such as '38126 shape', scan printouts on dating profiles, holiday-off parties in Ohio, and tracks with a 'planned interruption' code. Characters and scenes are implied throughout (nurse, HR, couples therapists, promoters), though a few details veer cute, like evening campaign rallies."
+      },
+      "plausibility": 7.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Amgen's sBLA for a self-administered monthly MariTide autoinjector, filed Jun 2034, was approved Jun 2035.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism/magnitude: the 2034 starting world, dated Nov 2034, lists MariTide only as a clinic-administered product and mentions no pending home-pen filing. The approval-timing rule is met only because the filing is backdated into a period the parent world should have recorded."
+      },
+      {
+        "quote": "it accounts for most of the growth in the bottom income third",
+        "field": "prose/article",
+        "why": "mechanism: the indefinite $149 starting-dose population grew only from about 6M to 7.5M across all incomes, while the bottom third rose 6.5 points, roughly 6M users. The arithmetic does not support 'most of the growth'. The claim is asserted, not shown."
+      },
+      {
+        "quote": "~37% of current users say they have felt 'flat' on the drug and ~44% took a deliberate holiday or cut their own dose in the past year",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "magnitude: 44% taking deliberate holidays or self-cutting sits badly with a world where about 70% of employer coverage is conditioned and monthly pens 'made holidays impossible'. It also sits badly with a clinical estimate of only ~7% blunting. The gap is large and the survey figure is unexplained."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 7.0,
+      "inequality": 7.17,
+      "public_health": 5.83,
+      "cohesion": 5.83,
+      "epistemic": 5.33,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.4,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Measured against 2026, the world keeps every inherited harm and adds to them. About 10.6M people are in adherence-conditioned tracks that sync pen events and gym-scan data, and holidays are punished as non-adherence. The obesity gradient is 20% in the top income third versus 40% in the bottom, and children 6–11 take the drug with a growth deficit. EPI litigation, an unmeasured low-dose anhedonia rate, and a 19% unsupported AUD-coding rate add to the ledger. Obesity is lower nationally and no new catastrophe appears, which keeps it from the top of the scale. The harm is structural and mostly normalised.",
+      "plausibility": "driver_fidelity: every driver is visible and traceable. Adoption is 30.6% (+5.9pp). The managed-decline TrumpRx round is dated Jan 2036. The MariTide home pen realises monthly_or_implant, with implants correctly left off the market. The Amgen scandal, NHANES stratification, mainstream-complaint flatness and the absence of state action are all present. mechanism: most chains are shown, such as monthly dosing being easy to verify, so tracks default enrollees to it, which makes holidays impossible. Weaker points are the retconned 2034 MariTide filing, the unsupported 'most of the bottom-third growth' claim, and the prose's 'Nine months earlier' dating, which does not match the Mar 2035 event. magnitude: on-drug 30.6 and ever-used 41 sit inside the envelope, and the income thirds bracket the national figure. The age-band check, cycling arithmetic, payer mix (84.5M), Part D spend ($43.7B), dementia and AUD routes, and the 4.3M AUD tally all reconcile. Approval timings of 12–13 months comply. Remaining flaws are minor: the Pew holiday figure and the backdated filing.",
+      "generativity": "The Renee Okafor day is specific and shows rather than explains: the app sync, the distribution-centre break, a coworker on a 'Foundayo weekend', the nurse's 'long tail', the chicken thigh cut into eight, and 'She tries to want it'. The world fields add texture, such as '38126 shape', holiday-off parties, scan-printout dating badges, and track holiday codes. Many secondary characters and scenes are implied, including Danielle, Marcus, Theo, the track nurse and the Ohio rallies."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.783,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 27
   }
 }

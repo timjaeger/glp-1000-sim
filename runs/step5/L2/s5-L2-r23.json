@@ -52,6 +52,41 @@
         "input_tokens": 19539,
         "output_tokens": 19850
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r23-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36811,
+        "output_tokens": 6849
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r23-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36811,
+        "output_tokens": 5821
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r23-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36811,
+        "output_tokens": 7496
+      }
     ]
   },
   "world": {
@@ -342,6 +377,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r23-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Spirits volume fell by about a fifth over two years",
+          "field": "prose/article",
+          "why": "Mechanism: the world state gives spirits down ~7% in 2035 and ~8% in 2036, about 14% compounded, so the prose contradicts the JSON and overstates the drop by roughly half."
+        },
+        {
+          "quote": "Mental-health parity now obliges those same plans to cover the drug for drinking, and PBMs launch AUD coding audits",
+          "field": "world/events/4/event",
+          "why": "Mechanism: parity law requires comparable terms for SUD benefits, not coverage of a specific drug, and plans can still manage it through formulary and prior authorisation. The 'AUD door' that sustains flat commercial use is asserted rather than shown."
+        },
+        {
+          "quote": "Sportsbook handle growth in New Jersey and Ohio slowed sharply.",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism and magnitude: the APA guideline came in May 2036 with no approved indication and about 1.2M compulsion users nationally by year-end. A visible dent in two states' betting handle within months is unsupported and out of scale."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference (3), this world carries all the 2034 harms and adds more. About 36.5% of adults are on the drug, with ≈12.1M on imports or counterfeits and ≈20,000 excess hip fractures a year. Anhedonia is labelled, with ≈2.5–3M implied excess cases. Employer premiums and coverage now key off connected-cap adherence data (the 2035 tri-agency rule, Texas and Georgia state plans, PEth testing). Bodies read as a class signal, and the prose shows the middle-income warehouse split by who has a diagnostic code. Epistemic harm is somewhat eased because the label now names the effect and quantifies it, but the 'calm' brands turn that table into advertising.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +8.0 exactly, prices are stalled via the injunction, employer coverage fell 64→46%, AUD was filed and approved, the compulsion indication runs through the APA guideline, anhedonia was labelled in Oct 2035, oral parity is carried by the 50 mg pill, there is no market shock, and conditioning rests on the 2035 wellness rule. mechanism: the chains are mostly shown (injunction, parity coding route, wellness rule). Weak points are the prose-versus-JSON contradiction on spirits volume, the parity-mandated AUD route that keeps commercial use flat despite an 18-point coverage drop, and the unsupported sportsbook-handle effect. magnitude: current use 36.5 and ever-use 49.0 sit inside the envelope, and the income thirds and age bands sum correctly. The payer mix, Medicare/Medicaid spend, NAION, hip-fracture, anhedonia and market arithmetic all reconcile. The only tension is that Medicare's 18.9M users aged 65+ leave very few of the 19.6M 65+ users on other payers.",
+        "generativity": "The Marcus Bell vignette is strong. The chirping cap and the 94% adherence quarter, the kiosk by the time clock, Troy's 'Should've been a drunk', the NA amber that 'tastes like the idea of beer', the delayed yell at the parlay, Danielle reading a lot number off a padded envelope, and Kayla's horse all carry the world through scene and gesture. The world fields also supply many secondary characters and settings: PEth tests, EAP referrals, sportsbook partnerships, Maryvale versus Scottsdale stores."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s5-L2-r23-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Spirits volume fell by about a fifth over two years",
+          "field": "prose/the_pill_for_wanting",
+          "why": "Fails mechanism and magnitude. The world state gives spirits falling ~7% in 2035 and ~8% in 2036, about 14% compounded, so the prose contradicts the figures it summarises."
+        },
+        {
+          "quote": "Medicare pays 20.5% of fills, ≈20.6M users (≈18.9M aged 65+ and ≈1.7M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude. The 65+ band holds only ≈19.6M users, so 18.9M on Medicare leaves about 0.7M older users to cover every commercial, cash and import route, which is implausibly tight."
+        },
+        {
+          "quote": "MHPAEA parity rules mean commercial plans covering SUD medications must cover the AUD indication on comparable terms, which is now the main non-diabetic route into employer coverage.",
+          "field": "world/state/subsidy_or_mandate",
+          "why": "Fails mechanism. Parity law governs comparability of limits and does not obviously force coverage of a specific new drug, yet this clause carries the whole offset to the employer retreat, with commercial users staying 'roughly flat' as weight coverage fell from 64% to 46%."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference this is far harsher. About 36.5% of adults are on the drug, with employer-tenure and connected-cap conditioning, wellness premiums tied to adherence data, and AUD coding used as a back door to coverage. The harms in the safety ledger are named and large: ≈2.5–3M excess anhedonia cases, ≈20,000 excess hip fractures a year, ≈12M import users and a visible body-by-class split. Epistemic harm is somewhat lower because anhedonia is labelled and quantified, though calm brands turn the label into advertising.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +8.0 pp, prices are stalled by the injunction, employer coverage falls 64→46%, AUD is filed Dec 2034 and approved Jan 2036, compulsion comes via the APA guideline, anhedonia is labelled Oct 2035, the 50 mg pill is the oral-parity product, and there is no new shock. mechanism: The chains are mostly shown (injunction, tri-agency rule, parity-to-AUD route), but the parity law is stretched into a coverage mandate, commercial users stay flat despite the coverage collapse, and the prose says spirits fell 'about a fifth' against ~14% in the world state. magnitude: Population figures sit inside the envelope (36.5% current, 49% ever), and the age, income, payer-mix, Medicare/Medicaid spend, hip-fracture, NAION and market arithmetic all reconcile. The strain is 18.9M Medicare 65+ users against a 19.6M 65+ band, plus the spirits-decline mismatch.",
+        "generativity": "The Marcus Bell vignette shows rather than explains: the green-chirping cap, the kiosk, Troy's 'Should've been a drunk', the yell arriving 'from another room', and Danielle checking lot numbers. The Kayla horse ending carries the film's emotional weight. The world fields add concrete places and institutions: Columbus, Phoenix, Kentucky excise receipts, sportsbook referral deals and NA hours."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s5-L2-r23-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "An American Psychiatric Association practice guideline endorses GLP-1 drugs as a second-line option for gambling disorder and compulsive buying.",
+          "field": "world/events/5/event",
+          "why": "Mechanism: the 2034 parent says gambling and compulsive-shopping use is \"still anecdotal\", and the candidate says a phase 3 gambling trial is only now enrolling. An evidence-based APA practice guideline endorsing the drug within two years rests on no shown RCT evidence."
+        },
+        {
+          "quote": "Spirits volume fell by about a fifth over two years",
+          "field": "prose/article",
+          "why": "Mechanism and narrative consistency: the world state gives declines of ~7% in 2035 and ~8% in 2036, which compound to about 14%, not a fifth. The prose overstates the alcohol collapse relative to the JSON."
+        },
+        {
+          "quote": "commercial 29.5% (29.7M, roughly flat in absolute terms but now mostly diabetes, cardiac, OSA, CKD and AUD codes",
+          "field": "world/access/note",
+          "why": "Mechanism: employer weight coverage fell 18 points (64%→46%) and 'nearly all remaining plans are gated', yet commercial users rose from 29.0M to 29.7M. Only ≈1.9M AUD-coded users are shown to offset the lost obesity coverage, so the flat count looks convenient."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps all the 2034 harms and adds more. About 36.5% of adults are on the drug, with 12.1M on imports or counterfeits. There are ~2.5–3M excess anhedonia cases and ~20,000 excess hip fractures a year. Coverage is job-linked and adherence-verified (connected caps, PEth tests, kiosk data feeding premiums), and bodies sort by class. It is well beyond the 2026 reference (3) and similar to the 2034 start, a little worse in autonomy and inequality. Harms are labelled and discussable, which keeps epistemic below the others, but 'AUD' coding blurs what is being prescribed and calm brands use the label as advertising.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +8.0 pp, prices are stalled by the Delaware injunction, employer coverage falls 64→46%, AUD is approved and compulsion is endorsed via guideline, anhedonia is labelled Oct 2035, oral parity is carried by the existing 50 mg pill, there is no market shock, class sizing continues, and conditioning comes via the 2035 wellness rule. mechanism: the chains are mostly shown (the parity 'AUD door', the injunction, the wellness rule). Weak points are the APA guideline resting on only anecdotal evidence, the prose 'about a fifth' against 7%+8% for spirits, and flat commercial users despite the coverage collapse. magnitude: current use of 36.5% and ever-use of 49.0% sit inside the envelope, income thirds bracket correctly, and age bands sum to 100.7M. Payer shares, Medicare/Medicaid spend ($49.2B, $34.9B) and the $210B US market all multiply out. The only gap is 18.9M of 19.6M 65+ users being on Medicare, which leaves almost no 65+ cash, commercial or import users.",
+        "generativity": "The Marcus Bell scene is strong: the chirping cap, the 94% vs 90% tier, the kiosk, the NA amber, a yell arriving 'as if from another room', Danielle checking a lot number, and Kayla's horse. Troy's 'Should've been a drunk' implies a whole class of characters. The world fields add texture too: NA hours, sportsbook referrals, Dayton discount grocers, and Scottsdale vs Maryvale size curves."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Spirits volume fell by about a fifth over two years",
+        "field": "prose/article",
+        "why": "Mechanism: the world state gives spirits down ~7% in 2035 and ~8% in 2036, about 14% compounded, so the prose contradicts the JSON and overstates the drop by roughly half."
+      },
+      {
+        "quote": "Mental-health parity now obliges those same plans to cover the drug for drinking, and PBMs launch AUD coding audits",
+        "field": "world/events/4/event",
+        "why": "Mechanism: parity law requires comparable terms for SUD benefits, not coverage of a specific drug, and plans can still manage it through formulary and prior authorisation. The 'AUD door' that sustains flat commercial use is asserted rather than shown."
+      },
+      {
+        "quote": "Sportsbook handle growth in New Jersey and Ohio slowed sharply.",
+        "field": "world/interior_life/effect_on_art_and_play",
+        "why": "Mechanism and magnitude: the APA guideline came in May 2036 with no approved indication and about 1.2M compulsion users nationally by year-end. A visible dent in two states' betting handle within months is unsupported and out of scale."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 7.0,
+      "public_health": 6.17,
+      "cohesion": 6.0,
+      "epistemic": 5.33,
+      "overall": 6.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.5,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against the 2026 reference (3), this world carries all the 2034 harms and adds more. About 36.5% of adults are on the drug, with ≈12.1M on imports or counterfeits and ≈20,000 excess hip fractures a year. Anhedonia is labelled, with ≈2.5–3M implied excess cases. Employer premiums and coverage now key off connected-cap adherence data (the 2035 tri-agency rule, Texas and Georgia state plans, PEth testing). Bodies read as a class signal, and the prose shows the middle-income warehouse split by who has a diagnostic code. Epistemic harm is somewhat eased because the label now names the effect and quantifies it, but the 'calm' brands turn that table into advertising.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +8.0 exactly, prices are stalled via the injunction, employer coverage fell 64→46%, AUD was filed and approved, the compulsion indication runs through the APA guideline, anhedonia was labelled in Oct 2035, oral parity is carried by the 50 mg pill, there is no market shock, and conditioning rests on the 2035 wellness rule. mechanism: the chains are mostly shown (injunction, parity coding route, wellness rule). Weak points are the prose-versus-JSON contradiction on spirits volume, the parity-mandated AUD route that keeps commercial use flat despite an 18-point coverage drop, and the unsupported sportsbook-handle effect. magnitude: current use 36.5 and ever-use 49.0 sit inside the envelope, and the income thirds and age bands sum correctly. The payer mix, Medicare/Medicaid spend, NAION, hip-fracture, anhedonia and market arithmetic all reconcile. The only tension is that Medicare's 18.9M users aged 65+ leave very few of the 19.6M 65+ users on other payers.",
+      "generativity": "The Marcus Bell vignette is strong. The chirping cap and the 94% adherence quarter, the kiosk by the time clock, Troy's 'Should've been a drunk', the NA amber that 'tastes like the idea of beer', the delayed yell at the parlay, Danielle reading a lot number off a padded envelope, and Kayla's horse all carry the world through scene and gesture. The world fields also supply many secondary characters and settings: PEth tests, EAP referrals, sportsbook partnerships, Maryvale versus Scottsdale stores."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.083,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 13
   }
 }

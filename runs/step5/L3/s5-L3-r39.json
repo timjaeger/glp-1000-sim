@@ -62,6 +62,41 @@
         "input_tokens": 33087,
         "output_tokens": 15653
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r39-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38310,
+        "output_tokens": 7566
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r39-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38310,
+        "output_tokens": 7828
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r39-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38310,
+        "output_tokens": 8935
+      }
     ]
   },
   "validation": {
@@ -73,6 +108,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -356,5 +395,185 @@
     "headline": "Thin Is Cheap Now: 86 million Americans on the pill, and the rich want to prove they're not",
     "world_in_600_words": "At the end of 2036 nearly one American adult in three takes an incretin drug, about eighty-six million people. More than four in ten have tried one. The growth came from the bottom, not the top, and that is the strangest fact about the country now.\n\nThe price did most of the work, through negotiation rather than collapse. In March 2035 the federal cash channel added Novo's oral amycretin at $299 a month and cut the Wegovy pill's maintenance dose to $179. The starting pill stayed at $149, and about seven and a half million people now take it indefinitely because it is what they can afford, a regimen no one has studied. List prices did not move, and there is still no American generic. But once a pill that works can be had for the price of a phone plan, employers stopped paying for one. Coverage for weight loss fell from a third of employers to under a quarter. Most of those still paying want proof: a smart bottle that reports when it is opened, a scan, five percent of body weight gone in six months. A couple of thousand firms dropped coverage altogether and pay a taxable monthly allowance instead, released when the pharmacy feed confirms a fill. Insurance now follows diagnosis codes, diabetes and heart disease and dementia risk. Everyone else pays cash, and half of all users do.\n\nThe states joined in. In September 2035 Washington let Georgia, Tennessee, Arkansas, Oklahoma and Indiana condition Medicaid coverage of the drugs on logged adherence, alcohol prescriptions included. Ninety thousand adults were suspended in six months for gaps in their logs. Their children were not, because federal rules for children's medical necessity cover them regardless. By April there were two drugs approved for six-to-eleven-year-olds, after tirzepatide joined semaglutide. Both slow growth by about half a centimetre a year, and both are written mostly in Medicaid clinics.\n\nOlder Americans arrived through a different door. In October 2035 tirzepatide's dementia label was widened to anyone over sixty with obesity, heart disease or not. Medicare, which still pays nothing for weight alone, now spends about twelve billion dollars a year on that one route. The same regulatory action carried the bill. A federal analysis had estimated thirteen thousand extra hip fractures a year among long-term Medicare users, most of them women over seventy, and the class warning was strengthened. Medicare began paying for a bone scan every two years, and the T-score became something people mention at dinner. In February Lilly launched Zepbound Strata, tirzepatide packaged with a muscle-preserving antibody, under the line Lose the weight, keep the body. It costs $649 a month in cash. The trial measured muscle and bone density but not fractures.\n\nAs thinness got cheap, it stopped meaning much. In Austin and Brooklyn the boast now is an appetite: long dinners, bread courses, full-fat butter, thick thighs in the fashion pages. A dating app sells a lab-verified unmedicated badge backed by an $89 blood-spot test, and the badge roughly doubles replies. Some people stop before the test, and some hide their pills from partners. The parents' movement that rallied against pediatric approvals took up unmedicated vitality as its look, which leaves it on the same side as the luxury dairy brands.\n\nThe calm platforms grew to three and a half million subscribers. They sell low doses for quiet, and nearly half of them are now written up as alcohol treatment. Federal auditors found one claim in nine unsupported. A study that will finally measure what low doses do to pleasure reports next year. Bourbon is down a fifth. The country is quieter, thinner, logged, and a little more breakable.",
     "a_day_in_the_life": "Tanya Rhodes wakes at 5:10 in Macon and takes the pill before her feet touch the floor, because the bottle on the nightstand counts. The bottle blinks green and the Peach State Medicaid app shows a streak of 212 days. Her cousin Lorraine missed four days in February when her phone died, and they suspended her. Lorraine started drinking again by April.\n\nTanya's pill is written for alcohol, and the code is true. She has not wanted a drink since last spring. Mostly she does not want much of anything before noon. She waters it down in her own head and calls it peace.\n\nDeShawn is nine, and his shot is Thursday. On the fridge is the growth chart from the pediatric clinic, with its dotted line he keeps falling under by a little. Nobody at the clinic asks about her bottle, and nobody at her program asks about his chart.\n\nAt the warehouse the break room television plays an ad for Strata: a silver-haired woman deadlifting, and the line Lose the weight. Keep the body. Her supervisor, a thin guy from Atlanta, says his wife pays cash for it. He says six forty-nine like it's a car payment.\n\nAt lunch Tanya eats half a chicken thigh and saves the rest for DeShawn.\n\nAt night her sister texts a screenshot from a dating app showing a man with a little gold badge: UNMEDICATED. VERIFIED. Look at him, her sister writes, eating a whole pie on purpose.\n\nTanya looks for a while. Then she sets the bottle back where it can see her."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r39-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "About 2,000 mid-size employers replaced coverage with a taxable $75–125 'metabolic allowance' paid on proof of adherence from a pharmacy or smart bottle (~1.8M workers, counted as cash users).",
+          "field": "world/access/note",
+          "why": "magnitude: 1.8M on-drug workers across 2,000 mid-size firms is ~900 users per firm. At about 31% adult use, that implies workforces near 3,000 each, which is not mid-size, so the count does not fit the firm count."
+        },
+        {
+          "quote": "~1.1M bimagrumab users by Dec 2036, ~0.4M of them on Medicare.",
+          "field": "world/access/note",
+          "why": "magnitude: users rise from ~150k in 2034 to 1.1M within ten months of a $649 cash co-pack launch. The 0.4M Medicare figure is tied to a 'high-fracture-risk label only', yet the label was broadened in Feb 2036, so the growth and the payer split are asserted rather than derived."
+        },
+        {
+          "quote": "\"gray_market\": \"contained\"",
+          "field": "world/access/gray_market",
+          "why": "mechanism: the world itself reports ~5.0M imported or counterfeit users, ~36,000 non-approved-product adverse-event reports, a second Burkholderia cluster and persistent domestic re-filling in three states. 'Contained' contradicts these, and the field flips from 'significant' with no stated cause beyond the price gap."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against the 2026 reference this is well beyond 'a worse version of 2026'. Roughly 13,000 excess hip fractures a year with ~2,600 attributable deaths, 5.0M users on imported or counterfeit product, and pediatric growth deficits skewed to Medicaid children all count. Adherence-logged Medicaid waivers (~90k suspensions, rebound drinking in Georgia), employer allowances and calm platforms selling blunting under an AUD code all deepen conditioning. Inequality and autonomy score highest. The epistemic score is lower because harms are named and measured (Sentinel analysis, QUIET-LD, DXA coverage), though low-dose anhedonia and indefinite starting-dose use remain unmeasured.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +6.3pp. Managed decline appears as TrumpRx steps with no list cuts. Employer coverage falls 33→28→24%. Pediatric tirzepatide is approved for 6–11. The fracture wave arrives with the class warning upgrade. The muscle-preserving co-pack is an existing product in a new form, filed Jan 2035 and approved 13 months later. The aesthetic inversion shows in the unmedicated badge, and the Medicaid waivers cover benefits conditioning. mechanism: chains are mostly shown, including the cash floor driving employer retreat and the Sentinel hip-fracture arithmetic. The dementia resubmission is approved in about 7 months. The 'contained' gray market contradicts its own 5.0M users and adverse-event counts. magnitude: population, income, age, payer, Medicare spending and cycling arithmetic all reconcile and sit inside the envelope (31%, 41.8%). Flaws are the 2,000 firms with 1.8M workers and the bimagrumab user jump, and the cash high of $649 against the $1,349 list price is a minor oddity.",
+        "generativity": "The prose gives a Macon vignette with the smart-bottle streak, the cousin suspended for log gaps, a nine-year-old with a growth chart, a break-room Strata ad and a dating-app badge. These turn the policy arithmetic into scenes, and the world fields add concrete places (Austin 'appetite rooms', Bardstown stills, Florida strength studios). The vignette pronouns are muddled around DeShawn, and some scenes lean on explanation."
+      },
+      "plausibility": 7.55
+    },
+    {
+      "custom_id": "s5-L3-r39-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "baseline ~4.5/1,000 × 9.6M ≈ 43,000, × HR 0.3 ≈ 13,000",
+          "field": "world/safety_ledger/Population hip-fracture, fall and frailty burden in older and long-term users/prevalence_note",
+          "why": "magnitude: 9.6M Medicare beneficiaries with more than 2 years of continuous use by June 2035 is about 60% of the 2034 Medicare user base. That sits badly with the ~one-third one-year persistence for new starters, and the 'HR 0.3' step is sloppy (the hazard ratio is 1.3). Mechanism also suffers because ~2,600 attributable deaths a year draw only a Warnings upgrade."
+        },
+        {
+          "quote": "~1.1M bimagrumab users by Dec 2036, ~0.4M of them on Medicare.",
+          "field": "world/access/note",
+          "why": "magnitude: bimagrumab went from ~150k users in 2034 to ~1.1M, about sevenfold. About 0.4M are on Medicare even though Medicare pays only on the narrow high-risk label, and the co-pack launched in Feb 2036 at $649 cash, so the count is hard to build from the stated launch and coverage."
+        },
+        {
+          "quote": "A dried-blood-spot assay (Clearline, $89) now settles the question on dating apps and in some Austin gyms.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "mechanism: an assay that detects current incretin presence cannot show someone is 'provably off drug' for long. The claim also rests on asserted social uptake (~4% of users, double the replies) with no chain explaining how a niche badge became a status marker in a year."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 86M adults are on the drug, with ~13,000 excess hip fractures a year and ~2,600 attributable deaths (safety_ledger). Medicaid adults in five states are suspended over smart-bottle logs, children carry a ~0.6 cm/yr growth deficit, and ~7.5M people stay indefinitely on an unstudied starting dose. Conditioning has spread to employer allowances and state benefit plans, and the state severity of 6 reflects that. Inherited harms (EPI litigation, unmeasured low-dose anhedonia, a counterfeit product market) stay in. The harms are named and measured, which holds epistemic and public_health below the extreme band.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is 31.0 (+6.3), managed_decline is shown through TrumpRx steps, employer coverage falls 33→28→24%, tirzepatide 6–11 is approved, the Sentinel fracture analysis and Strata (bimagrumab co-pack) appear as events, and the unmedicated badge, the 1115 waivers and the marketed_feature framing are all present. Nothing contradicts a driver. mechanism: most chains are shown (the $149 pill leads employers to see coverage as optional; waivers follow from conditioning), but the fracture-estimate chain (claim 1) and the assay/badge diffusion (claim 3) are asserted, and the prose has a 'her bottle' pronoun slip around DeShawn. magnitude: on-drug 31.0 and ever-used 41.8 are inside the envelope. The cycling arithmetic, two-year flows, age and income checks, payer mix (85.9M) and Medicare spend ($45.8B, $11.9B, $2.3B, $2.8B) all reconcile. The weak points are the bimagrumab user count (claim 2), the 9.6M long-term Medicare users (claim 1), and the 65+ rate rising 21.5→31 with nearly all of those users on Medicare.",
+        "generativity": "The prose gives concrete scenes: Tanya's 5:10 smart-bottle streak in Macon, Lorraine's suspension and relapse, DeShawn's growth chart, the warehouse Strata ad, and the gold UNMEDICATED badge. The world fields add texture, including 'appetite rooms', the 'log tax', stealth dosing, and DXA T-scores as dinner talk. The pronoun slip and a few explanatory paragraphs in the article keep it from being tighter."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s5-L3-r39-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The top third rose only 4, because the 'unmedicated' ideal pulls some upper-income users off and they cycle off.",
+          "field": "world/population/note",
+          "why": "Mechanism: the world shows only about 4% of app users in two cities displaying the badge, and says other top-tier users buy Strata and stay medicated. That cannot explain a national top-third gain of 4 points against 8.5 for the bottom third."
+        },
+        {
+          "quote": "~1.1M bimagrumab users by Dec 2036, ~0.4M of them on Medicare.",
+          "field": "world/access/note",
+          "why": "Magnitude: users go from ~150k in 2034 to 1.1M within ten months of the Strata launch. The Medicare line prices bimagrumab at $580 a month for 0.4M users, yet the co-pack with tirzepatide costs $649 cash, so the implied bimagrumab share is about $400-450."
+        },
+        {
+          "quote": "The price did most of the work, through negotiation rather than collapse.",
+          "field": "prose/lede",
+          "why": "Mechanism: the actual price moves are small. The starting dose is unchanged at $149 and maintenance fell only from $199 to $179. They are offered as the main cause of a 6.3-point adoption jump, and no chain is shown for why a $20 cut and a $149 pill that already existed drove it."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps its inherited harms: EPI litigation, anhedonia at ~7-10%, regain after cycling, a 0.6 cm/yr growth deficit in children, and surveillance-tied coverage. It adds ~13,000 excess hip fractures and ~2,600 deaths a year, ~90k Medicaid suspensions linked to rebound drinking, and 7.5M people on an unstudied indefinite starting dose. Coverage is conditioned through employer allowances and 1115 waivers, children are stratified by Medicaid status, and low-dose harm is still unmeasured until 2037. Cheap access, alcohol benefits and a reachable fracture-mitigation product temper it, so it reads as a harder society with structural losers rather than a refusal-level one.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is 31.0%, employer coverage falls 33→28→24%, tirzepatide 6–11 is approved, the fracture analysis and label upgrade appear, the Strata co-pack is realised as an existing product in a new form, the badge and 'appetite' aesthetic are there, and the waivers and allowances condition benefits. The one tension is that the Medicare obesity-plus-dementia route sits uneasily beside the 'Medicare pays nothing for weight alone' still_true. mechanism: the employer retreat, the fracture arithmetic and the waiver suspensions have clear chains. The price-to-adoption story (claim 3), the top-third slowdown (claim 1) and the sudden bimagrumab uptake are asserted. Wording slips such as 'HR 0.3' for an excess and 'two drugs' for 6–11 when three are listed also weaken it. magnitude: on-drug 31, ever-used 41.8, the income thirds and the age band all sit inside the envelope, and the cycling, flow, payer-mix, Part D and hip-fracture arithmetic reconcile. The flaws are the bimagrumab user and price inconsistency (claim 2), the unexplained 65+ jump from 21.5 to 31, annualising year-end user counts, and a cash price high of $649 beside an unchanged $1,349 list price.",
+        "generativity": "The prose follows named characters (Tanya in Macon, her cousin Lorraine, DeShawn and his growth chart) through concrete beats: the blinking smart bottle, a 212-day streak, a suspension after a dead phone, the Strata ad in the break room, the UNMEDICATED badge. The world fields add texture too: appetite rooms, assay gyms, DXA dinner talk, pill nights. Minor pronoun muddling in the DeShawn paragraph and a somewhat explanatory top half keep it from the top score."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "About 2,000 mid-size employers replaced coverage with a taxable $75–125 'metabolic allowance' paid on proof of adherence from a pharmacy or smart bottle (~1.8M workers, counted as cash users).",
+        "field": "world/access/note",
+        "why": "magnitude: 1.8M on-drug workers across 2,000 mid-size firms is ~900 users per firm. At about 31% adult use, that implies workforces near 3,000 each, which is not mid-size, so the count does not fit the firm count."
+      },
+      {
+        "quote": "~1.1M bimagrumab users by Dec 2036, ~0.4M of them on Medicare.",
+        "field": "world/access/note",
+        "why": "magnitude: users rise from ~150k in 2034 to 1.1M within ten months of a $649 cash co-pack launch. The 0.4M Medicare figure is tied to a 'high-fracture-risk label only', yet the label was broadened in Feb 2036, so the growth and the payer split are asserted rather than derived."
+      },
+      {
+        "quote": "\"gray_market\": \"contained\"",
+        "field": "world/access/gray_market",
+        "why": "mechanism: the world itself reports ~5.0M imported or counterfeit users, ~36,000 non-approved-product adverse-event reports, a second Burkholderia cluster and persistent domestic re-filling in three states. 'Contained' contradicts these, and the field flips from 'significant' with no stated cause beyond the price gap."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 6.83,
+      "public_health": 6.5,
+      "cohesion": 5.83,
+      "epistemic": 5.5,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.43,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Against the 2026 reference this is well beyond 'a worse version of 2026'. Roughly 13,000 excess hip fractures a year with ~2,600 attributable deaths, 5.0M users on imported or counterfeit product, and pediatric growth deficits skewed to Medicaid children all count. Adherence-logged Medicaid waivers (~90k suspensions, rebound drinking in Georgia), employer allowances and calm platforms selling blunting under an AUD code all deepen conditioning. Inequality and autonomy score highest. The epistemic score is lower because harms are named and measured (Sentinel analysis, QUIET-LD, DXA coverage), though low-dose anhedonia and indefinite starting-dose use remain unmeasured.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +6.3pp. Managed decline appears as TrumpRx steps with no list cuts. Employer coverage falls 33→28→24%. Pediatric tirzepatide is approved for 6–11. The fracture wave arrives with the class warning upgrade. The muscle-preserving co-pack is an existing product in a new form, filed Jan 2035 and approved 13 months later. The aesthetic inversion shows in the unmedicated badge, and the Medicaid waivers cover benefits conditioning. mechanism: chains are mostly shown, including the cash floor driving employer retreat and the Sentinel hip-fracture arithmetic. The dementia resubmission is approved in about 7 months. The 'contained' gray market contradicts its own 5.0M users and adverse-event counts. magnitude: population, income, age, payer, Medicare spending and cycling arithmetic all reconcile and sit inside the envelope (31%, 41.8%). Flaws are the 2,000 firms with 1.8M workers and the bimagrumab user jump, and the cash high of $649 against the $1,349 list price is a minor oddity.",
+      "generativity": "The prose gives a Macon vignette with the smart-bottle streak, the cousin suspended for log gaps, a nine-year-old with a growth chart, a break-room Strata ad and a dating-app badge. These turn the policy arithmetic into scenes, and the world fields add concrete places (Austin 'appetite rooms', Bardstown stills, Florida strength studios). The vignette pronouns are muddled around DeShawn, and some scenes lean on explanation."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.916,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 23
   }
 }

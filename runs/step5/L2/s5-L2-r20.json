@@ -52,6 +52,41 @@
         "input_tokens": 19504,
         "output_tokens": 24684
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r20-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37146,
+        "output_tokens": 7931
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r20-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37146,
+        "output_tokens": 8001
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r20-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37146,
+        "output_tokens": 6166
+      }
     ]
   },
   "world": {
@@ -341,6 +376,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r20-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo's oral semaglutide cessation trial read out in Jan 2035, with 7-day point-prevalence abstinence at week 26 of 31% versus 18% for placebo",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2034 start world says the smoking-cessation trial was still enrolling. A 26-week endpoint cannot read out by Jan 2035, and the filing and approval timeline built on it is only weakly supported."
+        },
+        {
+          "quote": "plus ≈58.4M branded at ≈$205 net × 12 ≈ $143.7B",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: branded net price is flat (about $200 in 2034) even though $45 generic semaglutide is taking 22M users and Novo is said to be losing 'most semaglutide injectable revenue'. No price-erosion mechanism is shown, so the market arithmetic reconciles but the premise is shaky."
+        },
+        {
+          "quote": "generic semaglutide at $45–69 cash moved about 2.2M people from parcel pens to legal pharmacy fills, and it brought in new users",
+          "field": "world/population/note",
+          "why": "Mechanism: moving existing parcel users to pharmacies does not change the on-drug count. The bottom-third rise of 4.2 points (about 3.9M adults) therefore needs about 3.9M genuinely new users, and the note does not show where they come from."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6.0,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.0,
+        "magnitude": 7.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Against the 2026 reference world this is clearly harder. About 31% of adults are on the drug, with roughly 18,100 excess hip fractures and about 3,600 excess deaths a year, 2.1M older users with sarcopenia, and about 2,400 NAION cases. Estimated reward-blunting excess runs to roughly 900k and 600k cases. Tenure gates act as job lock, and kiosk-weight premiums feed private pricing. Cheap generics reduce the price barrier and the harm is now measured and discussed, which keeps epistemic and cohesion scores moderate, but the bone and muscle burden falls on the least-supported users.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields. Generic collapse follows the forfeiture ruling, nicotine is approved exactly 12 months after filing, the compulsion indication is realised as a filing, and the MariTide every-other-month option is an existing product in a new form. Coverage is unchanged, and the muscle/bone wave, tariff shock, natural movement and mainstream complaint are all present. mechanism: Most chains are shown, but the first and third claims above fail. The nicotine trial timing contradicts the start world's 'still enrolling'. The bottom-third rise is explained by parcel switching that cannot change user counts. Branded net price stays flat under a $45 generic, the 'cash fell to ≈$99 by Dec 2035' note sits oddly with the event's 'July at $99', and the vape-sales drop is attributed too quickly. magnitude: Population figures sit inside the envelope (30.9%, 44.0%) and reconcile. Age bands, payer mix and Medicare and Medicaid spend, the hip-fracture, NAION and anhedonia estimates, and the market total all multiply out. The one gap is that the event calls 2.1M sarcopenia cases 'a year' while the safety ledger treats it as a stock.",
+        "generativity": "The Rhonda Pruitt scene is concrete: month nine of a tenure gate, the pen behind the butter, wall push-ups, a skipped dose to taste the cake, and Kayla's FEEL IT ALL text. The world also implies other scenes, including Dayton and Maryvale women without DEXA, the Scottsdale card-holders, the Feel It All weekend, anaesthesia planning around MariTide, and casino lobbying. Daily life has texture from drug holidays, the $29 video visit and vending-machine protein bars."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s5-L2-r20-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Nicotine: Novo's oral semaglutide cessation trial read out in Jan 2035, with 7-day point-prevalence abstinence at week 26 of 31% versus 18% for placebo, both arms receiving counselling.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the 2034 parent says the smoking-cessation SHAPS trial was still enrolling. A 26-week endpoint reading out in Jan 2035 leaves almost no room for enrolment to finish. The filing in Apr 2035 and approval in Apr 2036 then land exactly on the 12-month minimum, so the timeline looks assembled to fit the approval rule."
+        },
+        {
+          "quote": "convenience-store vape unit sales fell ~9% in two quarters in Ohio and Texas test markets",
+          "field": "world/economy/alcohol/state",
+          "why": "mechanism: a label change for an adjunct to counselling is credited with a measurable retail vape decline within two quarters. No uptake, prescribing or switching chain is shown, and off-label cessation use already existed, so the label alone would add little."
+        },
+        {
+          "quote": "A Medicare claims study estimates about 18,000 excess hip fractures and 2.1 million cases of sarcopenia a year among long-term older incretin users.",
+          "field": "world/events/4/event",
+          "why": "magnitude: the safety ledger describes 2.1M as a prevalent stock of long-term users meeting sarcopenia criteria, up from 1.6M. The event presents it as an annual incidence, which fails to reconcile and would imply far more sarcopenia than the 16.45M users aged 65+ could produce."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, nearly a third of adults are on the drug with ~18,100 excess hip fractures and ~2,400 NAION cases a year, ≈2.1M sarcopenic older users and a few hundred thousand to ~900k possible anhedonia cases. Private tenure gates and kiosk-weight premiums create job lock and surveillance (conditioning_or_surveillance, effect_on_work). Cheap generics ease the price barrier, but fracture and muscle harm concentrates in the least-supported generic users, and bodies sort by class. Harm is now measured and discussed (the SHAPS trial, the joint guideline), which keeps epistemic and cohesion below 7. Overall 6: a recognisably harder society with new losers.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to events. These are generic collapse via forfeiture, status-quo coverage, nicotine approval and a compulsion filing, the muscle-bone wave, bimonthly MariTide, tariff geopolitics, the Feel It All movement, and the grey as a mainstream complaint. No state action beyond existing FDA enforcement. mechanism: most chains are shown, such as forfeiture to generics to the parcel shift, and tariffs to licensing to a price blip. The weak links are claims 1 and 2: the nicotine trial timeline against a parent that said 'still enrolling', and the vape drop attributed to a label. magnitude: age bands, income thirds, payer mix, Medicare and Medicaid spending, the market total and the NAION and fracture arithmetic all reconcile, and ever-use and current-use sit inside the envelope. The one slip is the sarcopenia stock reported as an annual flow (claim 3), plus a MariTide share of 8% that sits oddly against the ~$205 branded net average.",
+        "generativity": "The Rhonda Pruitt scene is concrete: the tenure countdown, the $54 Kroger pen in the butter door, the wall push-ups from the QR-code sheet, the deliberately skipped dose before the cake, and the daughter's Feel It All photo. The world fields add regional texture (Dayton, Maryvale, Scottsdale, Nashville) and implied characters such as the trainer, the DEXA-card women, the union steward and the unmedicated podcaster. Daily life reads as lived rather than explained, though some prose sections are expository."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s5-L2-r20-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo's oral semaglutide cessation trial read out in Jan 2035, with 7-day point-prevalence abstinence at week 26 of 31% versus 18% for placebo",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2034 parent says the smoking-cessation SHAPS trial is 'still enrolling', and a 26-week endpoint cannot read out within weeks of that. The timeline that gets the sNDA to approval in Apr 2036 is therefore compressed and unshown."
+        },
+        {
+          "quote": "convenience-store vape unit sales fell ~9% in two quarters in Ohio and Texas test markets",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: it credits a prescription-plus-counselling adjunct label, approved two months earlier, with a measurable retail drop, and shows no uptake or prescribing path. The 'test markets' are not established anywhere in the world."
+        },
+        {
+          "quote": "about 18,000 excess hip fractures and 2.1 million cases of sarcopenia a year among long-term older incretin users",
+          "field": "world/events/4/event",
+          "why": "Mechanism: the safety ledger gives 2.1M as a prevalent stock of long-term users meeting sarcopenia criteria, up from 1.6M, while the event calls it an annual count. The same figure is both a stock and a yearly flow."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world carries forward 2034's heavy harms: about 31% of adults on an incretin, ≈18,100 excess hip fractures and ≈3,600 excess deaths a year, ≈2,400 NAION cases, ≈2.1M older users with sarcopenia, and an anhedonia signal now randomised (9% vs 5%). Tenure gates, kiosk-weight premiums and job lock persist, and generic cash users get no conditioning or support at all. Cheap generics ease the price barrier, use rates have nearly converged and the harms are named and measured, which tempers autonomy and epistemic scores. Against the 2026 reference this is still a recognisably harder society with new losers, concentrated among the cheapest, least-supported users.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. The generic collapse has a forfeiture event, MariTide every-other-month dosing is an existing product in a new form, nicotine is approved, compulsion is a filing, and the tariff and API squeeze, the 'Feel It All' movement and the muscle/bone guideline all appear. Only thin spots, such as the anhedonia-data request as a regulatory step under 'state_action: none', keep this off the top. mechanism: Most chains are shown, such as generic price to parcel-to-pharmacy shift, API squeeze to price blip and bone guideline to cost gap, but the nicotine trial readout sits awkwardly against 2034's 'still enrolling' (claim 1). The vape-sales drop is asserted without a path (claim 2), the sarcopenia figure is a stock in one place and an annual flow in another (claim 3), and the July $99 launch conflicts with 'fell from $249 to ≈$99 by Dec 2035'. magnitude: Current use 30.9%, ever-use 44.0%, the income-third bracketing and the age-band sum of 85.3M all fit the envelope. The payer mix, Medicare/Medicaid spend, $158B market, hip-fracture and NAION arithmetic all reconcile. The only gaps are the sarcopenia stock/flow mismatch and tight approval timing.",
+        "generativity": "The Rhonda Pruitt scene is concrete: month nine of a tenure gate, a $54 Kroger pen kept behind the butter, wall push-ups from a telehealth sheet, a deliberately skipped dose to taste cake, and a daughter's 'Feel It All' photo. The world fields give many further scenes, including Dayton and Maryvale, Scottsdale DEXA cards, 'appetite suppers', holiday-scheduling couples and union bargaining over bone pauses. The prose mostly shows rather than explains, though the first half is summary."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo's oral semaglutide cessation trial read out in Jan 2035, with 7-day point-prevalence abstinence at week 26 of 31% versus 18% for placebo",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: the 2034 start world says the smoking-cessation trial was still enrolling. A 26-week endpoint cannot read out by Jan 2035, and the filing and approval timeline built on it is only weakly supported."
+      },
+      {
+        "quote": "plus ≈58.4M branded at ≈$205 net × 12 ≈ $143.7B",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude and mechanism: branded net price is flat (about $200 in 2034) even though $45 generic semaglutide is taking 22M users and Novo is said to be losing 'most semaglutide injectable revenue'. No price-erosion mechanism is shown, so the market arithmetic reconciles but the premise is shaky."
+      },
+      {
+        "quote": "generic semaglutide at $45–69 cash moved about 2.2M people from parcel pens to legal pharmacy fills, and it brought in new users",
+        "field": "world/population/note",
+        "why": "Mechanism: moving existing parcel users to pharmacies does not change the on-drug count. The bottom-third rise of 4.2 points (about 3.9M adults) therefore needs about 3.9M genuinely new users, and the note does not show where they come from."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.17,
+      "inequality": 6.17,
+      "public_health": 6.17,
+      "cohesion": 5.0,
+      "epistemic": 4.67,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.5,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.68,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against the 2026 reference world this is clearly harder. About 31% of adults are on the drug, with roughly 18,100 excess hip fractures and about 3,600 excess deaths a year, 2.1M older users with sarcopenia, and about 2,400 NAION cases. Estimated reward-blunting excess runs to roughly 900k and 600k cases. Tenure gates act as job lock, and kiosk-weight premiums feed private pricing. Cheap generics reduce the price barrier and the harm is now measured and discussed, which keeps epistemic and cohesion scores moderate, but the bone and muscle burden falls on the least-supported users.",
+      "plausibility": "driver_fidelity: Every driver is traceable to events and fields. Generic collapse follows the forfeiture ruling, nicotine is approved exactly 12 months after filing, the compulsion indication is realised as a filing, and the MariTide every-other-month option is an existing product in a new form. Coverage is unchanged, and the muscle/bone wave, tariff shock, natural movement and mainstream complaint are all present. mechanism: Most chains are shown, but the first and third claims above fail. The nicotine trial timing contradicts the start world's 'still enrolling'. The bottom-third rise is explained by parcel switching that cannot change user counts. Branded net price stays flat under a $45 generic, the 'cash fell to ≈$99 by Dec 2035' note sits oddly with the event's 'July at $99', and the vape-sales drop is attributed too quickly. magnitude: Population figures sit inside the envelope (30.9%, 44.0%) and reconcile. Age bands, payer mix and Medicare and Medicaid spend, the hip-fracture, NAION and anhedonia estimates, and the market total all multiply out. The one gap is that the event calls 2.1M sarcopenia cases 'a year' while the safety ledger treats it as a stock.",
+      "generativity": "The Rhonda Pruitt scene is concrete: month nine of a tenure gate, the pen behind the butter, wall push-ups, a skipped dose to taste the cake, and Kayla's FEEL IT ALL text. The world also implies other scenes, including Dayton and Maryvale women without DEXA, the Scottsdale card-holders, the Feel It All weekend, anaesthesia planning around MariTide, and casino lobbying. Daily life has texture from drug holidays, the $29 video visit and vending-machine protein bars."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.451,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 42
   }
 }

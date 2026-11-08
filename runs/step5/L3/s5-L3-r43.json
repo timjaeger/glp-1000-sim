@@ -51,6 +51,41 @@
         "input_tokens": 19530,
         "output_tokens": 26497
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r43-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36802,
+        "output_tokens": 7746
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r43-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36802,
+        "output_tokens": 6230
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r43-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36802,
+        "output_tokens": 7709
+      }
     ]
   },
   "world": {
@@ -331,6 +366,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r43-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo and Lilly hold 2036 US net prices flat, ending nine years of decline",
+          "field": "world/events/0/event",
+          "why": "Mechanism: a Delaware ANDA ruling on semaglutide patents only confirms that generic entry stays out of reach, which the envelope already bars before 2031. It does not explain why both Novo and Lilly, whose tirzepatide is not in the case, stop net-price erosion in one year."
+        },
+        {
+          "quote": "Ever-use rose 7.9 points while current use rose 7.4, so the off-now pool grew only 0.5 points (9.9 → 10.4).",
+          "field": "world/population/note",
+          "why": "Magnitude: about 22M new ever-users in two years, with oral one-year persistence near one-third, should push far more people into the off-now pool. The three offsets named (MariTide persistence, HRSA restarts, ordinary restart rates) are asserted and not sized."
+        },
+        {
+          "quote": "the age-adjusted hip-fracture rate in Medicare women 75+ rose ~4% from 2033 to 2035, reversing a two-decade decline",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Magnitude: a 4% rise among women 75+ is on the order of 5,000 fractures a year, yet the attributable excess is stated as 16,000–22,000. That figure cannot fit inside the 75+ women rate without unstated counterfactual-trend and male or younger-user fractures."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 6.5,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, this world keeps every inherited harm and adds a fracture wave: roughly 16–22k excess hip fractures a year and a 1.6 HR in women 75+. It also has premiums conditioned on clinic attendance, about 42M people paying cash, a squeezed middle third, and a federally supplied indefinite starting dose that has never been studied. Unmeasured low-dose anhedonia across 3.4M calm subscribers and 9M starting-dose users, children's growth deficits, re-filled-vial infections, and a fractured backlash politics add autonomy, epistemic and cohesion costs. It is a society many readers would refuse, but mostly through normalised stratification and slow harm, not collapse, so about 7.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Stalled prices, employer retreat, the HRSA subsidy, the bone wave and the second rally are each dated. The monthly_or_implant driver is realised as an existing product in a new form, MariTide q8-week plus a home autoinjector, which the approval rules allow. mechanism: Employer retreat to MariTide tracks, the HRSA subsidy, and fractures leading to the dementia CRL and then class labeling are well chained. The price freeze is weak (claim 1), and the fracture-to-label chain is thin and fast. magnitude: Everything sits inside the envelope (32.1% on drug, 42.5% ever-used), and the payer sum, age and income checks, Medicare/Medicaid/HRSA spending and the cycling arithmetic all reconcile. The off-pool growth of 0.5 points (claim 2) and the 4% versus 16–22k fracture gap (claim 3) are the real gaps.",
+        "generativity": "The Tameka Ruffin and Miss Odessa scenes show daily life: the 1.5 mg pill window, sit-to-stands, whey scrambled into eggs, the Full Table supper, and the CR-dependent funding. The world fields add implied characters such as the DXA-van operators, Stand Tall women, Senate challengers, Kentucky distillers and platform marketers. Tameka's story carries the 2033 tariff regain through to the free pill and the waitlists."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s5-L3-r43-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo and Lilly hold 2036 US net prices flat, ending nine years of decline",
+          "field": "world/events/0/event",
+          "why": "mechanism: the Delaware ruling upheld Novo's semaglutide patents, which has no bearing on Lilly's tirzepatide. US generic entry was already barred until 2031, so the ruling removes no threat that would change pricing, and no chain explains why both firms freeze prices."
+        },
+        {
+          "quote": "Estimated attributable excess: ~16,000–22,000 hip fractures a year among older users",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "magnitude: a ~4% rise in the age-adjusted rate among women 75+ is roughly 6,000 extra fractures at most, well below 16–22k. Reaching that figure needs a far larger excess in men and women 65–74 that the note never shows."
+        },
+        {
+          "quote": "monthly/q8-week MariTide ~11% (~9.6M)",
+          "field": "world/access/note",
+          "why": "magnitude: MariTide users rise from ~5.8M to ~9.6M in two years while the same world says Amgen's fill-finish capacity is the binding constraint on supply. The candidate asserts the growth and does not reconcile it with the shortage."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps all its 2034 harms and adds more. About a third of adults are on drugs. Adherence is conditioned through clinic attendance and premium tiers, and ~42M pay cash while the middle third is squeezed. A measurable hip-fracture wave hits older women, children on drug show a growth deficit, and low-dose anhedonia stays unmeasured across ~12M people. Two Let Them Grow rallies and a gray market with infection clusters show real strain. The harm is largely nameable and discussed, with warnings, registries and CDC/CMS reporting, so it stops short of the structural-and-hidden tier of 9.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Employer coverage falls 33%→26%, prices stall, the HRSA subsidy and bone-wave labelling are present, MariTide q8-week is realised as a new form of an existing product, and the AUD extensions are shown. The prose adds one overclaim, that most employer programmes require MariTide. mechanism: the price stall is the weakest chain, since the Delaware ruling cannot explain Lilly's behaviour or why prices freeze when generics were never imminent (claim 1). The bone chain is shown well (mechanism, CRL, CDC/CMS report, label, DXA code), but the FDA label lands in the same month as the CDC report. magnitude: on-drug 32.1 and ever-used 42.5 sit inside the envelope, and age, income, payer mix, Part D, Medicaid and HRSA arithmetic all multiply out. The gaps are the 16–22k fracture estimate against a ~4% rate rise (claim 2), MariTide growth under a capacity constraint (claim 3), and a pediatric 2.2% that its subgroup rates imply as ~1.7%.",
+        "generativity": "The Tameka Ruffin vignette is concrete. It has the 1.5 mg HRSA bottle, Miss Odessa's walker and hip pin, the whey powder, the cracker sleeve, the Full Table supper and the funding-through-March radio line, and it shows the clinic pill, the regain after the 2033 tariff, and the fracture wave side by side. The world fields add many implied scenes: Sun City hip-protector aisles, DXA vans, Stand Tall marches, 'The Year I Broke' memoirs and primary campaigns against 'pharma welfare'. The opening news-style summary mostly explains rather than shows."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s5-L3-r43-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Estimated attributable excess: ~16,000–22,000 hip fractures a year among older users, implying ~3,000–4,000 deaths within a year at standard post-fracture mortality.",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "Magnitude: the same note says the age-adjusted rate in Medicare women 75+ rose only ~4%, which implies roughly 6–8k extra fractures. An excess of 16–22k is two to three times that and is not reconciled with the 4% figure."
+        },
+        {
+          "quote": "Federal court in Delaware upholds Novo's semaglutide formulation and oral-delivery patents against generic filers; Novo and Lilly hold 2036 US net prices flat, ending nine years of decline",
+          "field": "world/events/0/event",
+          "why": "Mechanism: US generics were not expected before 2031, so a patent ruling should not change net prices in 2035–36. A Novo patent ruling also does not explain Lilly's tirzepatide pricing. The stalled-price driver is asserted through a weak causal link."
+        },
+        {
+          "quote": "Oral amycretin is still ~$449 cash with a $1,299 list price and no TrumpRx price; ~8.5M users.",
+          "field": "world/access/note",
+          "why": "Magnitude and mechanism: users go from ~2.2M to ~8.5M in two years on a premium-priced drug while employers retreat, net prices stay flat, commercial pharmacy trend slows to ~+5% and Medicare average net rises only ~$228 to $232. The note shows no payer chain that fits this uptake."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Against the 2026 reference this is far harder: about a third of adults are on a drug, a hip-fracture rise among older women (CDC/CMS Apr 2036, ~3–4k deaths), ~9M on indefinite starting doses with unstudied effects, and ~7.1M in adherence-conditioned tracks where a missed clinic visit moves the premium tier. Inequality is stratified into cash, clinic-pill, tracked and gray tiers, with a squeezed middle third and children on Medicaid starting at 6–11. Epistemic opacity persists: low-dose anhedonia is unmeasured and the FDA study has no readout. Not scored higher because the HRSA subsidy and the new bone labeling are real partial mitigations, and the harms are named and discussed rather than hidden.",
+        "plausibility": "driver_fidelity: every driver is visible in the fields and events: +7.4pp adoption, stalled prices, employer retreat (33→26%), AUD via the VA/DoD guideline and the tirzepatide sNDA, the muscle-bone wave, MariTide q8-week as an existing product in a new form, no new market shock, backlash rallies, the HRSA subsidy, and the marketed-feature layer. mechanism: the fracture chain (mechanism accepted, HR, CDC/CMS report, labeling) and the employer-retreat-to-stipend-to-cash chain are well shown, but the price stall rests on a patent ruling that should not move 2036 net prices (claim 2) and the amycretin surge is asserted (claim 3). The prose line that most employer programmes require MariTide overstates the world note, where ~70% condition on adherence or progress by any route. magnitude: on-drug 32.1, ever 42.5, the income thirds and the age check all sit inside the envelope, and the payer mix sums to 88.6M. The Medicare, Medicaid, AUD and HRSA dollar figures multiply out, the cycling arithmetic closes, and approvals respect the rules. The main failure is the 16–22k attributable fractures versus a 4% rate rise (claim 1); the 4.0M on-label AUD users is also tight against the payer sub-counts.",
+        "generativity": "The world is dense with implied scenes and characters: Sun City hip-protector aisles, DXA vans, 'federal thin' in Jackson, the 'Stand Tall' grandmothers, stipend open enrolment, and clinic-day couple scheduling. The Tameka and Miss Odessa vignette shows rather than explains, with the 1.5 mg dose, the whey scoop, the Full Table supper and the funded-through-March radio line. The setup of the opening prose is a bit more explanatory than dramatised, but there is plenty of film."
+      },
+      "plausibility": 6.85
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo and Lilly hold 2036 US net prices flat, ending nine years of decline",
+        "field": "world/events/0/event",
+        "why": "Mechanism: a Delaware ANDA ruling on semaglutide patents only confirms that generic entry stays out of reach, which the envelope already bars before 2031. It does not explain why both Novo and Lilly, whose tirzepatide is not in the case, stop net-price erosion in one year."
+      },
+      {
+        "quote": "Ever-use rose 7.9 points while current use rose 7.4, so the off-now pool grew only 0.5 points (9.9 → 10.4).",
+        "field": "world/population/note",
+        "why": "Magnitude: about 22M new ever-users in two years, with oral one-year persistence near one-third, should push far more people into the off-now pool. The three offsets named (MariTide persistence, HRSA restarts, ordinary restart rates) are asserted and not sized."
+      },
+      {
+        "quote": "the age-adjusted hip-fracture rate in Medicare women 75+ rose ~4% from 2033 to 2035, reversing a two-decade decline",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "Magnitude: a 4% rise among women 75+ is on the order of 5,000 fractures a year, yet the attributable excess is stated as 16,000–22,000. That figure cannot fit inside the 75+ women rate without unstated counterfactual-trend and male or younger-user fractures."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.33,
+      "autonomy": 6.83,
+      "inequality": 6.83,
+      "public_health": 7.0,
+      "cohesion": 6.17,
+      "epistemic": 6.5,
+      "overall": 6.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.0,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.87,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Measured against 2026, this world keeps every inherited harm and adds a fracture wave: roughly 16–22k excess hip fractures a year and a 1.6 HR in women 75+. It also has premiums conditioned on clinic attendance, about 42M people paying cash, a squeezed middle third, and a federally supplied indefinite starting dose that has never been studied. Unmeasured low-dose anhedonia across 3.4M calm subscribers and 9M starting-dose users, children's growth deficits, re-filled-vial infections, and a fractured backlash politics add autonomy, epistemic and cohesion costs. It is a society many readers would refuse, but mostly through normalised stratification and slow harm, not collapse, so about 7.",
+      "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Stalled prices, employer retreat, the HRSA subsidy, the bone wave and the second rally are each dated. The monthly_or_implant driver is realised as an existing product in a new form, MariTide q8-week plus a home autoinjector, which the approval rules allow. mechanism: Employer retreat to MariTide tracks, the HRSA subsidy, and fractures leading to the dementia CRL and then class labeling are well chained. The price freeze is weak (claim 1), and the fracture-to-label chain is thin and fast. magnitude: Everything sits inside the envelope (32.1% on drug, 42.5% ever-used), and the payer sum, age and income checks, Medicare/Medicaid/HRSA spending and the cycling arithmetic all reconcile. The off-pool growth of 0.5 points (claim 2) and the 4% versus 16–22k fracture gap (claim 3) are the real gaps.",
+      "generativity": "The Tameka Ruffin and Miss Odessa scenes show daily life: the 1.5 mg pill window, sit-to-stands, whey scrambled into eggs, the Full Table supper, and the CR-dependent funding. The world fields add implied characters such as the DXA-van operators, Stand Tall women, Senate challengers, Kentucky distillers and platform marketers. Tameka's story carries the 2033 tariff regain through to the free pill and the waitlists."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.249,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 10
   }
 }

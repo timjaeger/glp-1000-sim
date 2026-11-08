@@ -52,6 +52,41 @@
         "input_tokens": 19516,
         "output_tokens": 21809
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r30-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36298,
+        "output_tokens": 7501
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r30-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36298,
+        "output_tokens": 7900
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r30-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36298,
+        "output_tokens": 9053
+      }
     ]
   },
   "world": {
@@ -341,6 +376,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r30-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "~44% weekly injectable (mostly cheap generic pens), ~38% daily oral, ~18% other (monthly MariTide, compounded vials)",
+          "field": "world/access/note",
+          "why": "magnitude: the same note puts about 46M users (44%) on generic semaglutide pens, so weekly injectables alone would exceed 44%. That leaves no room for branded tirzepatide, brand semaglutide pens or retatrutide, so the route split does not reconcile."
+        },
+        {
+          "quote": "≈11.5M users aged 65+ have more than 2 years' use.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "magnitude: in 2034 there were only ≈14.5M users aged 65+ in total, with ≈7.0M at over 2 years. Reaching 11.5M with over 2 years' use by 2036 implies retention far above the stated ~35–45% persistence and the heavy off-now share among older users."
+        },
+        {
+          "quote": "approved Jul 2036 with growth monitoring, after the adolescent signal (see ledger) delayed the action date by two months",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: FDA approving a 6–11 obesity indication only four months after a Drug Safety Communication on growth, bone accrual and restrictive eating, with just a two-month delay, is asserted rather than shown. The regulatory chain is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps nearly every 2034 harm and adds more. Use is 38% of adults, with about 24,000 excess hip fractures a year, about 2,950 excess NAION cases a year, and roughly 1.4M or more anhedonia cases implied. A new pediatric growth and bone signal sits alongside a 6–11 approval, 8.5M gray-market users, and compounded-retatrutide harms. Autonomy is eroded by the continuation standard, which can suspend coverage for skip weeks, DUI-diversion mandates, tenure gates and kiosk premiums. Free generics narrow the access gap, and the harms are named and discussed ('the grey', the DSC), which keeps it below 7. It is clearly harder than 2026's world, a recognisably harder society with new losers.",
+        "plausibility": "driver_fidelity: every driver is visibly realised in the events and fields. Generic collapse comes with an FDA forfeiture ruling and settlement dates. AUD and 6–11 are approved 13 months after filing, and next_gen_launch is none. The gray-market resurgence is the thinnest, since gray share fell from 9.1% to 8.1% and only next-generation copies grew. mechanism: most changes have shown chains (generic entry, then the reconciliation act, then public payer dominance, then step therapy pushing users to compounded copies). The pediatric approval after the DSC (claim 3) is asserted. magnitude: population figures, income thirds, age bands, payer mix and Medicare/Medicaid arithmetic all reconcile and sit inside the envelope. The route split contradicts the 46M generic-pen count (claim 1), and the 65+ long-term-user count is too high (claim 2).",
+        "generativity": "Denise Ruiz's morning has texture: the kiosk weigh-in, the cooler-man box in the drawer, the skip week before the quinceañera, and Mr. Halvorsen's compliance worry. The Teo and Marisol call about 'Let kids be hungry' puts the pediatric backlash in a family. Skip-week calendars, Friday full-portion menus, the 'Full Plate' potlucks and the DUI-court diversions each imply scenes. The prose also explains a fair amount before it shows."
+      },
+      "plausibility": 7.2
+    },
+    {
+      "custom_id": "s5-L2-r30-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "~44% weekly injectable (mostly cheap generic pens), ~38% daily oral, ~18% other (monthly MariTide, compounded vials)",
+          "field": "world/access/note",
+          "why": "magnitude: 46M generic semaglutide users already fill the whole 44% weekly-injectable slot. The ~10M on top-dose tirzepatide/retatrutide and the ~6.5M on gray next-generation copies must then sit inside an 18% 'other' bucket labelled MariTide and compounded vials. The route split only barely reconciles with the user counts elsewhere."
+        },
+        {
+          "quote": "Pharmacy trend fell to ~+3% as generic-first step therapy shifts most new starts to $40 semaglutide.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: commercial users rose from 29.0M to 33.0M and 38% of adults are now on the drug. The jump from +11% to +3% is asserted from generic step therapy alone. It is not squared with the branded-tier users, with Lilly's retatrutide and tirzepatide growth, or with the claim that brands held prices."
+        },
+        {
+          "quote": "\"Once a month is allowed. I counted.\"",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: one skipped weekly dose in a four-week month is about 75% PDC, below the ≥80% continuation standard that the world says is unchanged and applies to the generic tier. The scene contradicts the world state's own tension about skip weeks triggering suspensions."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 this is a harder society. 38% of adults are on the drug, about 24,000 excess hip fractures and about 2,950 NAION cases a year are normalised, and 'the grey' is a household phrase. Adolescent growth and bone signals sit alongside a 6–11 approval. About 8.5M people use gray next-generation vials with a contamination cluster behind them. The CMS continuation standard, kiosk weights, DUI-diversion conditions and tenure gates run through employment, courts and coverage, so autonomy and public health score highest. Broad cheap access, the narrowed use gap and large alcohol reductions keep it from rising further. Inequality persists mainly in bodies and coaching, and the harm is now nameable and measured in RCTs.",
+        "plausibility": "driver_fidelity: every driver is traceable to events and fields: generic collapse (2035-06), public expansion and subsidy (2035-09), AUD and under-12 approvals, the pediatric growth signal, gray-market next-gen copies, the Full Plate backlash, mainstream 'the grey', and next_gen none with the bimagrumab filing. The gray-market resurgence is the thinnest: the share fell and the absolute number rose modestly, with a shift upmarket. mechanism: most chains are shown (forfeiture ruling, nine launches, step therapy pushing users to gray copies, the reconciliation act). The trend drop to +3% and the route split are asserted, and the prose skip-week line conflicts with the ≥80% PDC rule (claims 2 and 3). magnitude: on-drug 38.1% and ever-used 50.5% are inside the envelope, and the age bands, income thirds, payer mix (sums to 105.2M), Medicare and Medicaid spending, and the market arithmetic all reconcile. The AUD approval at 13 months respects the approval rules. The only gap is the loose route split (claim 1).",
+        "generativity": "The Denise Ruiz scene is built from concrete details: the kiosk thumb scan, the drawer of parcel pens behind the batteries, the skip week before the quinceañera, Mr. Halvorsen's compliance worry, and the 'Let kids be hungry' flyer. It implies a daughter, a grandson, a client and a church, and it shows rather than explains. The world fields add texture: Full Plate potlucks, skip-week calendars, DUI-diversion courts, and the Tampa peptide clinic."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s5-L2-r30-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "One-year persistence improved from ~35% to ~45% in the generic tier, and restart within a year stays at ~40%.",
+          "field": "world/population/note",
+          "why": "mechanism: this carries the claim that off-now rose only 0.9 pts (11.5 to 12.4) while ever-use rose 10.5 pts and current use 9.6 pts. It is asserted, and a roughly 55% first-year attrition rate cannot leave that little residue among about 29M new starters."
+        },
+        {
+          "quote": "\"65_plus\": 33.5",
+          "field": "world/population/by_age_band_pct",
+          "why": "magnitude: the 65+ band jumps 12.5 pts in two years, the largest rise of any band, from a 2034 baseline held down by bone-pause and post-NAION stops that are said to continue. The $0-copay tier is a cause, but nothing shows those stops easing, and the 2026 pattern is that use falls after 65."
+        },
+        {
+          "quote": "Pharmacy trend fell to ~+3% as generic-first step therapy shifts most new starts to $40 semaglutide.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: commercial users rise from 29.0M to 33.0M and employer coverage rises to 71%. Yet the world also says US incretin revenue fell about 9% ($170B to $155B), and the +3% trend is not tied to either figure."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 4.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, nearly 4 in 10 adults are on drug. The costs are about 24,000 excess hip fractures a year, about 2,950 NAION cases, a pediatric growth and bone signal followed by a 6–11 approval anyway, and 8.5M gray-market users with contaminated-vial deaths. Gating, 80% PDC suspensions, kiosk-weight premiums and DUI-diversion adherence conditions limit autonomy. Cheap and free generics narrow the access gap (bottom third 35.3% vs top 40.5%) and the harms are measured and discussed ('the grey', the SHAPS data, DSC), so the score sits at a harder society with new losers (older users, children, gated workers), not a refusal-grade one.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields. Adoption is exactly +9.6, generics arrive through the forfeiture ruling, the 2035 act expands public coverage and subsidy, AUD and 6–11 approvals follow a filing, the pediatric DSC appears, no new class launches, peptide-clinic copies and contamination stand for gray-market resurgence, Full Plate is the backlash, and 'the grey' is the mainstream complaint. Resurgence is modest (7.1M to 8.5M total). mechanism: The chains for generics, public expansion, AUD and the backlash are shown. The persistence-and-off-now claim, the 65+ jump and the pharmacy-trend figure (the three claims listed above) are asserted rather than derived. magnitude: All population figures sit inside the envelope, and the age bands, payer mix (sums to 105.2M), Medicare, Medicaid and FQHC dollar figures, market revenue and cycling arithmetic all reconcile. The only strain is the implied flow of starters and stoppers.",
+        "generativity": "The prose offers a concrete protagonist (Denise at the Maryvale clinic with kiosk, pens and a skip week), a client on the brand pen who recites the PDC rule, and a daughter with the 'Let kids be hungry' flyer. Skip-week calendars, the NAION and bone costs, and the Friday dinners all imply scenes. The closing 'noticing the not-feeling' shows the grey rather than explaining it."
+      },
+      "plausibility": 7.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "~44% weekly injectable (mostly cheap generic pens), ~38% daily oral, ~18% other (monthly MariTide, compounded vials)",
+        "field": "world/access/note",
+        "why": "magnitude: the same note puts about 46M users (44%) on generic semaglutide pens, so weekly injectables alone would exceed 44%. That leaves no room for branded tirzepatide, brand semaglutide pens or retatrutide, so the route split does not reconcile."
+      },
+      {
+        "quote": "≈11.5M users aged 65+ have more than 2 years' use.",
+        "field": "world/safety_ledger/4/prevalence_note",
+        "why": "magnitude: in 2034 there were only ≈14.5M users aged 65+ in total, with ≈7.0M at over 2 years. Reaching 11.5M with over 2 years' use by 2036 implies retention far above the stated ~35–45% persistence and the heavy off-now share among older users."
+      },
+      {
+        "quote": "approved Jul 2036 with growth monitoring, after the adolescent signal (see ledger) delayed the action date by two months",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: FDA approving a 6–11 obesity indication only four months after a Drug Safety Communication on growth, bone accrual and restrictive eating, with just a two-month delay, is asserted rather than shown. The regulatory chain is thin."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.17,
+      "inequality": 4.83,
+      "public_health": 6.0,
+      "cohesion": 5.67,
+      "epistemic": 4.83,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 7.17,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.69,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world keeps nearly every 2034 harm and adds more. Use is 38% of adults, with about 24,000 excess hip fractures a year, about 2,950 excess NAION cases a year, and roughly 1.4M or more anhedonia cases implied. A new pediatric growth and bone signal sits alongside a 6–11 approval, 8.5M gray-market users, and compounded-retatrutide harms. Autonomy is eroded by the continuation standard, which can suspend coverage for skip weeks, DUI-diversion mandates, tenure gates and kiosk premiums. Free generics narrow the access gap, and the harms are named and discussed ('the grey', the DSC), which keeps it below 7. It is clearly harder than 2026's world, a recognisably harder society with new losers.",
+      "plausibility": "driver_fidelity: every driver is visibly realised in the events and fields. Generic collapse comes with an FDA forfeiture ruling and settlement dates. AUD and 6–11 are approved 13 months after filing, and next_gen_launch is none. The gray-market resurgence is the thinnest, since gray share fell from 9.1% to 8.1% and only next-generation copies grew. mechanism: most changes have shown chains (generic entry, then the reconciliation act, then public payer dominance, then step therapy pushing users to compounded copies). The pediatric approval after the DSC (claim 3) is asserted. magnitude: population figures, income thirds, age bands, payer mix and Medicare/Medicaid arithmetic all reconcile and sit inside the envelope. The route split contradicts the 46M generic-pen count (claim 1), and the 65+ long-term-user count is too high (claim 2).",
+      "generativity": "Denise Ruiz's morning has texture: the kiosk weigh-in, the cooler-man box in the drawer, the skip week before the quinceañera, and Mr. Halvorsen's compliance worry. The Teo and Marisol call about 'Let kids be hungry' puts the pediatric backlash in a family. Skip-week calendars, Friday full-portion menus, the 'Full Plate' potlucks and the DUI-court diversions each imply scenes. The prose also explains a fair amount before it shows."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.267,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 45
   }
 }

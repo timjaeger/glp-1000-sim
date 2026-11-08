@@ -49,6 +49,41 @@
         "input_tokens": 19532,
         "output_tokens": 26559
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r48-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36543,
+        "output_tokens": 7823
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r48-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36543,
+        "output_tokens": 7531
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r48-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36543,
+        "output_tokens": 6733
+      }
     ]
   },
   "world": {
@@ -326,6 +361,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r48-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Public payers cover 32.5M (36%), and Medicare is now the largest single payer.",
+          "field": "world/population/note",
+          "why": "magnitude: the payer mix in the same note puts legitimate cash at 28.0M (31.3%) and Medicare at 23.0M (25.7%), so Medicare is not the largest single payer. The prose repeats the claim."
+        },
+        {
+          "quote": "A $79 direct-to-consumer incretin-free blood panel sells as a credential, and dating apps let users display a verified result.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "mechanism: no chain is shown for how a cheap panel verifies 'unmedicated' status when drug holidays are mainstream and clearance takes only weeks. Reaching 600,000 tests and app integration within months is asserted, not derived."
+        },
+        {
+          "quote": "pharmacies open MariTide administration suites billed under Medicare Part B, and monthly users nearly triple to ~15.5 million by late 2036",
+          "field": "world/events/2/event",
+          "why": "mechanism: the event approves a self-administered autoinjector, yet its Part B billing is by pharmacy suites, and Part B generally does not pay for self-administered drugs or pharmacy administration. Growth of about 10M users in one year is asserted without a capacity or logistics chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 90M adults are on the drug, and the inherited harms stay: the hip-fracture HR of ~1.3–1.45, EPI litigation, growth deficits in Medicaid children, and ~10M on unapproved product with Burkholderia and dosing-error harms. New pressures include several million frail over-65 first-time starters and the 60-day gap rule turning drug holidays into a compliance calendar. Mass access cuts the price-based inequality of 2034, and the flatness is now named and discussed, so it is not as hidden as before. It is still a recognisably harder society with new losers (the uncovered South, regainers, delisted compounded users), so overall sits just above the 5 anchor.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. The 2035 price round is managed_decline, the 2035 law is public_expansion, the MariTide autoinjector is the monthly form, the Mar 2036 shortage listing is the gray-market resurgence, and 'government thin' and the unmedicated panel are the aesthetic inversion. No new indication was approved, and the Medicaid mandate is federal rather than a state action. mechanism: the Medicare-launch-to-shortage-to-503B and Mexican finishing chain is shown, but the Part B pharmacy billing (claim 3) and the $79 verification credential (claim 2) are asserted, as is a 3M compounded base within months of listing. magnitude: on-drug 32.3, ever 42 and the income and age splits sit inside the envelope, and the Medicare ($56.0B), Medicaid ($17.1B) and cycling arithmetic reconcile. The payer mix contradicts 'largest single payer' (claim 1), and the CBO ~$194B is a loose product of 10M × $170 × 12 × 10 years.",
+        "generativity": ""
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s5-L3-r48-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "A $79 direct-to-consumer incretin-free blood panel sells as a credential, and dating apps let users display a verified result.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Mechanism: a $79 test that credibly proves someone is 'unmedicated' is asserted, not shown. Users on short 'holidays' would still carry weeks of residual drug, so the badge would not separate the 'quietly on a drug' upper tier from the truly unmedicated. The 600,000-test uptake is also unsupported."
+        },
+        {
+          "quote": "503B compounding of amycretin, legal while it sits on FDA's shortage list since Mar 2036, sold by telehealth platforms at $99–159",
+          "field": "world/access/note",
+          "why": "Mechanism: a shortage listing two months into the benefit for a newly launched, patented peptide is asserted. The chain for compounders getting API despite the 2033 tariff is thin. The same note's 'MariTide-substitute regimens' implies compounding an antibody conjugate (a biologic), which 503B does not normally allow."
+        },
+        {
+          "quote": "Most users say the drug dulls something they miss, and more than a third have taken a deliberate holiday from it.",
+          "field": "prose/article",
+          "why": "Mechanism and internal consistency: the world state reports 44% of users saying the drug 'dulls' something, which is not 'most'. The prose overstates the figure the world state supports."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5.5,
+        "public_health": 5.8,
+        "cohesion": 5.3,
+        "epistemic": 5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, about 90M users, 10M on non-approved product, and ~39,000 adverse-event reports tied to non-approved product mean a materially harder society. Several million first-time over-65 users face a hip-fracture HR of ~1.3 with unread data. Conditioning is written into Medicare and Medicaid (5% rule, 60-day gap, adherence records), and anhedonia is mainstream but unmeasured at low doses and on MariTide (epistemic). Inequality eases somewhat, since the bottom third rose to 27% via public coverage, but the uncovered working-age South and Medicaid children remain losers. Obesity falls and coverage widens, so this is a recognisably harder society, not one most readers would refuse to live in.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Price round, Medicare/Medicaid statute with no state action, MariTide autoinjector as the monthly form, no new indication (dementia CRL), gray market regrowth to 10M, 'government thin' inversion, and mainstream complaint via Gallup. The one soft spot is that the gray-market resurgence rests partly on legal compounding. mechanism: The shortage chain (Medicare demand outrunning fill-finish) and the 60-day-gap holiday behaviour are shown. Claims 1–3 are weaker. The unmedicated-test badge is asserted, the two-month shortage listing and compounding of a new peptide are thin, and the prose's 'most users' overstates the 44% in the world state. magnitude: Current use 32.3 and ever-use 42 sit inside the envelope, and the income and age checks work. The payer mix sums to 89.5M, Medicare ($56.0B) and Medicaid ($17.1B) arithmetic is right, and the cycling arithmetic closes. Small gaps remain: a $49 Part B copay against a $190–229 price, a ~$194B vs $204B CBO decade figure, and a pediatric 2.1% that does not reconcile with the age-band rates (inherited from 2034).",
+        "generativity": "The Dolores Pruitt scene is concrete: the CVS back room, the 7.1% weigh-in, a Medigap receipt, Carol's holiday lemon squares, Renée's mg-versus-units confusion and the closed Golden Platter. The world fields add much more material: '59-day holiday' forums, the 'long month', verified-unmedicated dating badges, and the HBO comedy about a couple on opposite drug schedules. A few lines explain rather than show, but the film is rich."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s5-L3-r48-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Clinic-administered monthly MariTide is paid under Part B at 20% coinsurance, usually picked up by Medigap.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: Part B generally excludes drugs that are usually self-administered, and the candidate says the autoinjector is self-administered (approved Sep 2035). The claim that Part B clinic administration makes the shot the default for Medicare starters is asserted without a coverage rationale. The ASP-based Part B payment also sits oddly beside the statutory $190/$210 ceilings."
+        },
+        {
+          "quote": "The non-approved market regrows to about 10 million users",
+          "field": "world/events/4/event",
+          "why": "magnitude/mechanism: the 2034 gray market was 5.8M. A shortage listing in Mar 2036 is credited with adding ~4M users, about 3M of them on new 503B amycretin product, within months of a launch. No chain shows how compounders obtain API and scale under the 100% tariff and licence checks."
+        },
+        {
+          "quote": "Most users say the drug dulls something they miss",
+          "field": "prose/article",
+          "why": "mechanism: the world state's own Gallup figure is 44% of current users, which is not a majority. The prose contradicts the world fields and overstates the mainstream-complaint driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 6.0,
+        "cohesion": 5.5,
+        "epistemic": 6.0,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.0
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Compared with 2026, about a third of adults are on an incretin, with 5-severity fields throughout and every 2034 harm retained. Those harms are the EPI and GI litigation, the hip-fracture HR of ~1.3, anhedonia complaints now mainstream, and ~39,000 adverse-event reports tied to non-approved product. The federal 5% continuation rule and 60-day gap rule write conditioning and surveillance into Medicare and Medicaid, which gives the world a strong autonomy cost. Medicaid children on semaglutide with unknown adult height, millions of first-time 65+ users with unmeasured fracture risk, and a re-grown unsafe gray market are real harms. Broad coverage and falling prices are real benefits, so this is a harder society but not a structural catastrophe: about 6.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Prices managed down (the 2035 TrumpRx round), Medicare and Medicaid expansion by the July 2035 statute, a MariTide autoinjector as the monthly form, no new indication (the dementia CRL), a gray-market resurgence, aesthetic inversion ('government thin', the unmedicated panel), no state action, and anhedonia as a mainstream complaint. mechanism: most chains are shown (the 60-day rule producing '59-day holidays', the shortage listing opening 503B compounding). The Part B claim for a self-administered autoinjector, the rapid regrowth of the gray market to ~10M, and the prose line 'Most users' against the 44% figure are asserted or inconsistent (see claims 1–3). magnitude: current use of 32.3% and ever-use of 42% are inside the envelope, and the age, income and payer-mix arithmetic reconcile. Medicare spend ($56.0B) and Medicaid ($17.1B) multiply out. One small gap is that the CBO figure of '$194B over 2036–2045' sits under the 10M×$170×12×10 ≈ $204B the note implies.",
+        "generativity": "The prose gives a vivid, specific scene: Dolores, Marisol, the CVS back-room recliners, the Part B receipt, Carol's lemon squares, Renée's cooler-bag amycretin and the unit/mg confusion, and the closed Golden Platter. The world fields add texture through verified 'unmedicated' dating badges, 'holiday couples', the 'long month', the HBO Ocala comedy and the day-58 lapse clusters. Many further characters and scenes are implied."
+      },
+      "plausibility": 7.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Public payers cover 32.5M (36%), and Medicare is now the largest single payer.",
+        "field": "world/population/note",
+        "why": "magnitude: the payer mix in the same note puts legitimate cash at 28.0M (31.3%) and Medicare at 23.0M (25.7%), so Medicare is not the largest single payer. The prose repeats the claim."
+      },
+      {
+        "quote": "A $79 direct-to-consumer incretin-free blood panel sells as a credential, and dating apps let users display a verified result.",
+        "field": "world/body_and_culture/what_the_body_signals",
+        "why": "mechanism: no chain is shown for how a cheap panel verifies 'unmedicated' status when drug holidays are mainstream and clearance takes only weeks. Reaching 600,000 tests and app integration within months is asserted, not derived."
+      },
+      {
+        "quote": "pharmacies open MariTide administration suites billed under Medicare Part B, and monthly users nearly triple to ~15.5 million by late 2036",
+        "field": "world/events/2/event",
+        "why": "mechanism: the event approves a self-administered autoinjector, yet its Part B billing is by pharmacy suites, and Part B generally does not pay for self-administered drugs or pharmacy administration. Growth of about 10M users in one year is asserted without a capacity or logistics chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.0,
+      "inequality": 5.33,
+      "public_health": 5.93,
+      "cohesion": 5.1,
+      "epistemic": 5.33,
+      "overall": 5.7
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.33,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.26,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "About 90M adults are on the drug, and the inherited harms stay: the hip-fracture HR of ~1.3–1.45, EPI litigation, growth deficits in Medicaid children, and ~10M on unapproved product with Burkholderia and dosing-error harms. New pressures include several million frail over-65 first-time starters and the 60-day gap rule turning drug holidays into a compliance calendar. Mass access cuts the price-based inequality of 2034, and the flatness is now named and discussed, so it is not as hidden as before. It is still a recognisably harder society with new losers (the uncovered South, regainers, delisted compounded users), so overall sits just above the 5 anchor.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. The 2035 price round is managed_decline, the 2035 law is public_expansion, the MariTide autoinjector is the monthly form, the Mar 2036 shortage listing is the gray-market resurgence, and 'government thin' and the unmedicated panel are the aesthetic inversion. No new indication was approved, and the Medicaid mandate is federal rather than a state action. mechanism: the Medicare-launch-to-shortage-to-503B and Mexican finishing chain is shown, but the Part B pharmacy billing (claim 3) and the $79 verification credential (claim 2) are asserted, as is a 3M compounded base within months of listing. magnitude: on-drug 32.3, ever 42 and the income and age splits sit inside the envelope, and the Medicare ($56.0B), Medicaid ($17.1B) and cycling arithmetic reconcile. The payer mix contradicts 'largest single payer' (claim 1), and the CBO ~$194B is a loose product of 10M × $170 × 12 × 10 years.",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.336,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 43
   }
 }

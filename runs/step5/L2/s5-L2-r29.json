@@ -51,6 +51,41 @@
         "input_tokens": 19496,
         "output_tokens": 24498
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r29-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35969,
+        "output_tokens": 6670
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r29-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35969,
+        "output_tokens": 12069
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r29-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35969,
+        "output_tokens": 9964
+      }
     ]
   },
   "world": {
@@ -334,6 +369,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r29-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "as Medicaid grew 11.5 → 20.0M and 2.0M uninsured adults entered the HRSA free-provision programme",
+          "field": "world/population/note",
+          "why": "Mechanism/magnitude: Nine states, mostly non-expansion Southern ones with thin adult Medicaid rolls, are said to add 8.5M users (+74%) within about a year of the Jan 2036 start. Nothing shows enrolment or uptake large enough to produce that."
+        },
+        {
+          "quote": "Texas and Tennessee then bar kiosk weights in fully insured premiums, a law self-insured employer plans are exempt from",
+          "field": "world/events/4/event",
+          "why": "Mechanism: Two state legislatures pass binding laws within weeks of an April march. Texas meets in odd years, so this would need a special session, and none is shown."
+        },
+        {
+          "quote": "The 18–29 band rose fastest (15.5 → 23.5%) because alcohol-use-disorder prescribing (guideline-endorsed Jul 2035, FDA-approved Aug 2036) and free provision at health centres reached young uninsured drinkers.",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: The 18–29 band gains about 4.1M users, but only ≈2.6M adults of all ages are on the drug for AUD and HRSA serves 2.0M in total. A moderate effect (≈2.1 heavy-drinking days a month) and a pre-approval label do not reach that number."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, this world carries 36% of adults on the drug and about 20,000 excess hip fractures and 2,800 NAION cases a year. It also has 6.2M gray-market users and a CMS standard that counts drug holidays as misses, plus tenure gates and kiosk-weight premiums that turn coverage into conditioning. Public expansion and the HRSA programme narrow the income gap (7.5 to 3.8 points) and ease inequality somewhat. The 38% reporting dulled pleasure and the undercounted AUD data (safety-sensitive workers coding obesity instead) keep autonomy and epistemic harms near 5–6. It is a recognisably harder society with new losers, not a refusal-level one.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised: managed decline ($199→$169, $119 HRSA), public expansion (Medicaid 40+DC, HRSA), AUD indication, the Novo settlement, the Memphis backlash, the subsidy law and the mainstream complaint. Nothing contradicts them, and next_gen_launch and safety_signal stay at none. mechanism: The Act, the settlement and parity-law chains are shown. Several links are asserted or oddly sequenced: the May 2035 Act funds AUD provision before the Jul 2035 endorsement and the Aug 2036 approval, the Medicaid jump and the young-user surge are not explained (claims 1 and 3), and the Texas/Tennessee law is too fast (claim 2). Renee, a childless 56-year-old in non-expansion Tennessee, being on TennCare is also thin. magnitude: Current use (36.4), ever-use (48.5) and the age and income splits all sit inside the envelope and add up. The payer shares, Medicare, Medicaid and HRSA spending, fracture and NAION arithmetic, and the $209B market all reconcile. Minor gaps remain: the AUD sNDA was filed Sep 2035 and approved Aug 2036, about 11 months and under the 12-month rule, and Medicare 65+ users are 97% of all 65+ users versus 90% in 2034.",
+        "generativity": "The prose has distinct people: Renee at the 5:10 kiosk, Marcus's nine days without a beer, Mr. Dade's pending scan and Pastor Givens. It has concrete scenes: verification day, the PDC calendar app, Full Table Sunday pies, the white bottle at the clinic. The world fields supply further texture (holiday records, AUD coding for pilots, Kentucky warehouses, church bakeries), so many films are implied."
+      },
+      "plausibility": 6.4
+    },
+    {
+      "custom_id": "s5-L2-r29-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom-third gap narrowed from 7.5 to 3.8 pts as Medicaid grew 11.5 → 20.0M and 2.0M uninsured adults entered the HRSA free-provision programme.",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: nine mostly non-expansion states (Georgia, Tennessee, South Carolina) starting in Jan 2036 are asked to supply about 8.5M new Medicaid incretin users in one year, a 74% jump. The adult Medicaid pool in those states is narrow, so the figure is asserted rather than derived."
+        },
+        {
+          "quote": "Texas and Tennessee then bar kiosk weights in fully insured premiums, a law self-insured employer plans are exempt from",
+          "field": "world/events/4/event",
+          "why": "mechanism: two state laws are said to follow a single April 2036 march. Texas holds no regular legislative session in 2036 and Tennessee's session ends around April, so the speed is implausible and no chain is shown."
+        },
+        {
+          "quote": "The sNDA was filed Sep 2035 and approved Aug 2036 for the 2.4 mg injection and the Wegovy pill.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: the candidate describes phase 3 trials, and the envelope allows approval no earlier than 12 months after filing. Sep 2035 to Aug 2036 is 11 months, so the approval comes a month too early."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 (3), this world keeps the inherited harms in full. About 20,000 excess hip fractures a year, about 2,800 NAION cases and 1.0M adolescents on the drug remain. Kiosk-weight surveillance now covers 40 state programmes plus DC, PDC rules count dose holidays as missed days, and tenure gates persist. 'The grey' is a common complaint with no randomised low-dose measurement. AUD coding is undercounted because FAA/DOT reportability pushes safety-sensitive workers to code obesity instead. Offsets are real: the use gap between income thirds narrows, imports fall to 6.2M, and AUD treatment and free HRSA pills widen access, so it is slightly better than the 2034 start but still a harder society with new losers.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. The adoption delta is exactly +7.9, the Act and the $199 to $169 cut give managed decline, the 40-state Medicaid match and HRSA provision give public expansion and subsidy, the AUD indication is met by an existing molecule, the DOJ settlement is the scandal, the Memphis march is the backlash, and the 38%/41% survey gives the mainstream complaint. next_gen_launch and safety_signal stay 'none'. mechanism: The chain from scandal to Act to rate cut to payer shift is shown, but several links are asserted. The scandal 'changed the bargaining' with no detail. The Medicaid jump is claim 1 and the Texas/Tennessee law is claim 2. The Act funds AUD provision before the Jul 2035 guideline endorsement. AUD patients (2.6M across all ages) cannot account for the 18–29 band rising 4.1M. The 65+ band rises 7 points while bone pauses and NAION stops are said to hold it down. magnitude: Headline figures sit inside the envelope (36.4%, ever-use 48.5%) and the age, payer-mix, Medicare and HRSA arithmetic reconciles. Flaws: the AUD approval at 11 months (claim 3), Medicare covering 19.0M of 19.6M users aged 65+ (97%, up from 90%), 'eighth straight year' of spirits decline when 2034 was already the seventh, and pharmacy trend of +6% against about 14% a year volume growth with net price down about 4% a year.",
+        "generativity": ""
+      },
+      "plausibility": 6.0
+    },
+    {
+      "custom_id": "s5-L2-r29-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The 18–29 band rose fastest (15.5 → 23.5%) because alcohol-use-disorder prescribing (guideline-endorsed Jul 2035, FDA-approved Aug 2036) and free provision at health centres reached young uninsured drinkers.",
+          "field": "world/population/note",
+          "why": "Mechanism: the world's own figures put AUD-primary users at ≈2.6M across all ages and HRSA at 2.0M for adults under 200% FPL with obesity or AUD. That cannot account for +4.1M users and an 8-point rise in the 18–29 band, and AUD approval came only in Aug 2036."
+        },
+        {
+          "quote": "Mental-health parity law (MHPAEA) means plans that cover AUD medications cannot exclude semaglutide once it is approved for AUD, which opened a coded 'AUD door' into commercial coverage.",
+          "field": "world/access/note",
+          "why": "Mechanism: MHPAEA requires parity in treatment limits, not coverage of a named drug. Plans can still manage formularies and gate use, and the world itself says ≈85% of plans remain gated. The 'door' is asserted rather than shown, and it sits oddly beside employer coverage falling from 64% to 61%."
+        },
+        {
+          "quote": "showed a reduction of ≈2.1 heavy-drinking days a month versus placebo",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: this effect is modest, below the 2026 Lancet signal, yet it produced guideline endorsement within weeks and FDA approval within 11 months of the Sep 2035 filing. That is under the envelope's 12-month floor for a not-yet-filed phase 3 programme, and no AUD programme appears in the 2034 pipeline."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference this is a recognisably harder society, and the 2034 harms are inherited in full: ≈20,000 excess hip fractures a year, ≈2,800 NAION cases, 6.2M gray-market users and counterfeit tablets. Autonomy is weighed down by PDC≥80% rules that count holidays as misses, kiosk-weight verification now covering 40 state programmes plus DC, and tenure gates. Reward blunting is a mainstream complaint, and AUD coding is distorted by FAA/DOT reportability. Inequality and access improved somewhat through Medicaid, HRSA and the narrowed income gap, which keeps this from rising past 6.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (current use 28.5→36.4, the $199→$169 managed decline, Medicaid and HRSA expansion, AUD approval, the $3.8B Novo settlement, the Memphis march, the Act's subsidy, the complaint framing), and nothing contradicts them. mechanism: several chains are asserted rather than shown, namely the 18–29 surge (claim 1), the MHPAEA coverage 'door' (claim 2), and a weak AUD effect that still yields rapid endorsement and approval (claim 3). Legislative responses such as the Texas and Tennessee kiosk bans also arrive very quickly. magnitude: current and ever-use sit inside the envelope, and the payer mix, Medicare, Medicaid and HRSA arithmetic, the $209B market and the age bands all reconcile. Minor gaps are Medicare's 19.0M aged 65+ against 19.6M total 65+ users, '21M new starters' against +24.3M ever-users, and AUD approval at 11 months, below the 12-month floor (claim 3).",
+        "generativity": "The Renee Holloway day shows rather than explains: the 5:10 kiosk weigh-in, the 6.8% reading, the PDC calendar with skipped Full Table weekends, Mr. Dade's twelve-week DEXA wait, and Marcus's nine days without wanting a beer. The world supplies named places and institutions (Whitehaven, Riverside Community Health, New Direction Baptist, Kroger kiosks), and several more scenes are implied, such as pilots coding for obesity, church bakeries and college-town bars."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "as Medicaid grew 11.5 → 20.0M and 2.0M uninsured adults entered the HRSA free-provision programme",
+        "field": "world/population/note",
+        "why": "Mechanism/magnitude: Nine states, mostly non-expansion Southern ones with thin adult Medicaid rolls, are said to add 8.5M users (+74%) within about a year of the Jan 2036 start. Nothing shows enrolment or uptake large enough to produce that."
+      },
+      {
+        "quote": "Texas and Tennessee then bar kiosk weights in fully insured premiums, a law self-insured employer plans are exempt from",
+        "field": "world/events/4/event",
+        "why": "Mechanism: Two state legislatures pass binding laws within weeks of an April march. Texas meets in odd years, so this would need a special session, and none is shown."
+      },
+      {
+        "quote": "The 18–29 band rose fastest (15.5 → 23.5%) because alcohol-use-disorder prescribing (guideline-endorsed Jul 2035, FDA-approved Aug 2036) and free provision at health centres reached young uninsured drinkers.",
+        "field": "world/population/note",
+        "why": "Magnitude/mechanism: The 18–29 band gains about 4.1M users, but only ≈2.6M adults of all ages are on the drug for AUD and HRSA serves 2.0M in total. A moderate effect (≈2.1 heavy-drinking days a month) and a pre-approval label do not reach that number."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.0,
+      "inequality": 5.0,
+      "public_health": 5.5,
+      "cohesion": 5.17,
+      "epistemic": 5.33,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.0,
+      "magnitude": 6.0
+    },
+    "plausibility": 6.5,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Measured against 2026, this world carries 36% of adults on the drug and about 20,000 excess hip fractures and 2,800 NAION cases a year. It also has 6.2M gray-market users and a CMS standard that counts drug holidays as misses, plus tenure gates and kiosk-weight premiums that turn coverage into conditioning. Public expansion and the HRSA programme narrow the income gap (7.5 to 3.8 points) and ease inequality somewhat. The 38% reporting dulled pleasure and the undercounted AUD data (safety-sensitive workers coding obesity instead) keep autonomy and epistemic harms near 5–6. It is a recognisably harder society with new losers, not a refusal-level one.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised: managed decline ($199→$169, $119 HRSA), public expansion (Medicaid 40+DC, HRSA), AUD indication, the Novo settlement, the Memphis backlash, the subsidy law and the mainstream complaint. Nothing contradicts them, and next_gen_launch and safety_signal stay at none. mechanism: The Act, the settlement and parity-law chains are shown. Several links are asserted or oddly sequenced: the May 2035 Act funds AUD provision before the Jul 2035 endorsement and the Aug 2036 approval, the Medicaid jump and the young-user surge are not explained (claims 1 and 3), and the Texas/Tennessee law is too fast (claim 2). Renee, a childless 56-year-old in non-expansion Tennessee, being on TennCare is also thin. magnitude: Current use (36.4), ever-use (48.5) and the age and income splits all sit inside the envelope and add up. The payer shares, Medicare, Medicaid and HRSA spending, fracture and NAION arithmetic, and the $209B market all reconcile. Minor gaps remain: the AUD sNDA was filed Sep 2035 and approved Aug 2036, about 11 months and under the 12-month rule, and Medicare 65+ users are 97% of all 65+ users versus 90% in 2034.",
+      "generativity": "The prose has distinct people: Renee at the 5:10 kiosk, Marcus's nine days without a beer, Mr. Dade's pending scan and Pastor Givens. It has concrete scenes: verification day, the PDC calendar app, Full Table Sunday pies, the white bottle at the clinic. The world fields supply further texture (holiday records, AUD coding for pilots, Kentucky warehouses, church bakeries), so many films are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.267,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 46
   }
 }

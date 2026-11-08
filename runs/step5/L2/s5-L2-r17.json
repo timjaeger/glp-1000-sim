@@ -51,6 +51,41 @@
         "input_tokens": 19494,
         "output_tokens": 22348
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r17-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37185,
+        "output_tokens": 5534
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r17-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37185,
+        "output_tokens": 7029
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r17-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37185,
+        "output_tokens": 5195
+      }
     ]
   },
   "world": {
@@ -354,6 +389,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r17-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "In Nov 2035 CMS ruled that bimagrumab is not an 'anti-obesity medication' under the benefit statute.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: CMS rules on coverage status for a drug that FDA did not approve until Apr 2036, five months later. The coverage exclusion that anchors the main inequality story is not shown to have a causal chain."
+        },
+        {
+          "quote": "≈0.42M on the new bimagrumab combination",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 0.42M users at $899/month, mostly cash-paying, within about eight months of an Apr 2036 approval, with 15% of plans covering it, is an implausibly fast ramp. It is also listed as an offset to current-use change over a window that begins in 2034."
+        },
+        {
+          "quote": "A top-three PBM's 'Verified Adherence' programme is now in ≈40% of gated plans",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "Mechanism and magnitude: one PBM cannot plausibly reach 40% of all gated employer plans within about two months of a Dec 2035 FAQ. Smart-cap and connected-pen requirements need hardware logistics and contract cycles, and the jump is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm and adds more. It carries about 1.6M excess anhedonia cases, about 16,800 excess hip fractures a year, and about 2,200 NAION cases a year. Connected-cap dosing timestamps now feed employer plans, Indiana's 12-month lockout is upheld, and 110k children aged 6–11 are on the drug. Muscle preservation is sold at $899/month while Medicare is excluded. The harm is also now named and quantified on the label, which keeps epistemic badness moderate. Overall this is a society most readers would refuse to live in if they understood it, though not structurally invisible.",
+        "plausibility": "driver_fidelity: All ten drivers appear in fields and dated events. Adoption is −0.2, prices are stalled, the tariff shock is Apr 2035, the anhedonia label is Jun 2035, bimagrumab is filed Feb 2035 and approved 14 months later, and the pediatric under-12 approval is Oct 2035. None is contradicted. mechanism: The tariff, import squeeze and gray-market shift chain is well shown. The pre-approval CMS ruling, the 40% PBM penetration and the 0.42M bimagrumab ramp are asserted (claims 1–3). Pharmacy trend falling to +6% with flat price and flat volume is also unexplained. magnitude: Population is inside the envelope (28.3% current, 42.5% ever), and the age, income, payer-mix, Medicare and Medicaid dollar and market arithmetic all reconcile. The bimagrumab approval at 14 months respects the 12-month rule. Minor gaps: the off-now rise of about 7.5M is only partly explained, and the 0.42M uptake is fast.",
+        "generativity": "The day in the life of Lorena Vásquez is strong: the blinking cap, the vendor logging 4:51, the nurse's note on Teo's lanyard, the HOLD WHAT YOU BUILT billboard, and Marisol with the tamales. Fields supply place-specific texture such as Maryvale versus Scottsdale, parents' wings in Texas and Ohio, and unions bargaining over coding of dose-downs. Several implied scenes, including the school nurse dose log, the kiosk weigh-in and couples negotiating dose-downs, could each be shot."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s5-L2-r17-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "In Nov 2035 CMS ruled that bimagrumab is not an 'anti-obesity medication' under the benefit statute.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: CMS issues a coverage-category ruling on a drug FDA does not approve until Apr 2036, five months later. Nothing in the candidate shows what triggered a ruling on a pending product."
+        },
+        {
+          "quote": "≈0.42M on the new bimagrumab combination",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: about 420k people would be on an $899/month add-on within roughly eight months of approval. Medicare excludes it, only about 15% of plans cover it, and DEXA monitoring and cash payment are required, so this uptake is implausibly fast and no ramp is shown."
+        },
+        {
+          "quote": "Pharmacy trend has slowed to ~+6% (flat price, flat volume).",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: a +6% trend cannot follow from flat price and flat volume as stated. Pharma elsewhere says volume and net price are flat, and the payer-mix arithmetic shows nothing that would produce a +6% trend."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Against 2026, the 2036 world keeps all of its 2034 harms and adds more. Those include tenure-gated coverage, Verified Adherence caps feeding dose timestamps to plan vendors, a Seventh Circuit-upheld lockout, ≈16,800 excess hip fractures a year, ≈1.6M excess anhedonia cases, ≈2,200 NAION cases a year, and a bone-accrual signal in children 6–11. Inequality is the sharpest harm: muscle preservation is sold at $899 a month while Medicare, which holds the most sarcopenic users, is excluded. Epistemic harm is lower than in the parent because anhedonia is now measured and labelled, but conditioning and normalisation keep the overall score near 6.5.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and dated events: adoption -0.2 (28.3%), stalled prices, pediatric 6–11 approval, the anhedonia label, bimagrumab, China API licensing with the 100% tariff, class sorting, Verified Adherence/Indiana, and the marketed 'calm' feature. mechanism: the chains for the gray-market squeeze and the generic block are shown, but the CMS ruling on an unapproved drug (claim 1), the quickly appearing 14 RCTs with prospective SHAPS data, and the +6% trend from flat price and volume (claim 3) are asserted or contradictory. magnitude: current use, ever-use (42.5 against a 42.8 limit), the income and age arithmetic, the payer mix, the Medicare and Medicaid dollars, the cycling share and the anhedonia and fracture computations all reconcile. Bimagrumab approval 14 months after filing respects the 12-month rule, with only the ≈0.42M uptake (claim 2) and the unlisted filing event slightly off.",
+        "generativity": "The Lorena Vásquez scene is rich: the blinking cap logging 4:51, a school lunch line with a nurse's note on a third-grader, the insert's '3 in 100' set against a felt flatness at Christmas, Marisol's tamales and tears, and the HOLD WHAT YOU BUILT billboard. The world fields carry many hooks, including the Scottsdale and Maryvale contrast, the parents' bloc, union bargaining over anhedonia coding, and 'I'm on the label'. A few scenes lean on explanation."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s5-L2-r17-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Pharmacy trend has slowed to ~+6% (flat price, flat volume).",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism and magnitude: flat price and flat volume cannot produce a +6% spend trend, and nothing like mix shift toward the $2,190 kit is shown. The 2034 parent's +11% was explicitly 'volume plus price'."
+        },
+        {
+          "quote": "These losses are offset by top-third growth (retatrutide, MariTide, and ≈0.42M on the new bimagrumab combination)",
+          "field": "world/population/note",
+          "why": "Mechanism: bimagrumab is an add-on to tirzepatide, so its users are existing on-drug people and add no net headcount. Reaching ≈0.42M cash payers at $899/month within about 8 months of an Apr 2036 approval is also very fast."
+        },
+        {
+          "quote": "about 110,000 children are on it by late 2036",
+          "field": "world/events/3/event",
+          "why": "Magnitude: 110k children aged 6–11 on a specialist-initiated drug within about 14 months implies a very steep ramp. The 2026 reference has only ~0.6% of children with obesity treated, and the requirements for bone-age X-ray, DEXA and a dietitian would throttle uptake."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm and adds more. Employers now use connected-cap 'Verified Adherence' (~40% of gated plans), tenure gates cause job lock, the Indiana lockout is upheld, and ≈1.6M excess anhedonia cases are marketed as 'calm'. There are ≈16,800 excess hip fractures a year, 110k children aged 6–11 on weekly pens, and bodies sorted by class (the $899 'hold' body versus Medicare exclusion). The harms are labelled and quantified, so epistemic is lower, but autonomy and inequality are heavily structural and normalised, well past 2026.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events. Adoption is −0.2, prices stalled, status-quo coverage, the 6–11 indication, the anhedonia label, bimagrumab filed Feb 2035 and approved 14 months later, China's licensing and the 100% tariff, class stratification, and Verified Adherence. mechanism: Most chains are shown, but the bimagrumab 'offset' to flat current use is not a real net addition, pharmacy trend of +6% with flat price and volume is unexplained, and the 110k pediatric ramp and Lilly's DPA designation are asserted. magnitude: Population is inside the envelope (28.3, ever 42.5 vs a 42.8 cap), and payer shares, Medicare/Medicaid spend, age bands, income thirds, anhedonia and NAION arithmetic all reconcile. Deductions are for the trend inconsistency and the aggressive bimagrumab and pediatric uptake.",
+        "generativity": "The Lorena Vásquez day gives strong texture: the blinking cap, the logged 4:51, Teo's nurse's note, the insert she refolds, Marisol's tamales, and the HOLD WHAT YOU BUILT billboard. The world fields supply specific places, institutions and tensions (Maryvale vs Scottsdale, school nurses, union bargaining over medical holds), so many scenes are implied beyond the one shown."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "In Nov 2035 CMS ruled that bimagrumab is not an 'anti-obesity medication' under the benefit statute.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: CMS rules on coverage status for a drug that FDA did not approve until Apr 2036, five months later. The coverage exclusion that anchors the main inequality story is not shown to have a causal chain."
+      },
+      {
+        "quote": "≈0.42M on the new bimagrumab combination",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: 0.42M users at $899/month, mostly cash-paying, within about eight months of an Apr 2036 approval, with 15% of plans covering it, is an implausibly fast ramp. It is also listed as an offset to current-use change over a window that begins in 2034."
+      },
+      {
+        "quote": "A top-three PBM's 'Verified Adherence' programme is now in ≈40% of gated plans",
+        "field": "world/state/conditioning_or_surveillance",
+        "why": "Mechanism and magnitude: one PBM cannot plausibly reach 40% of all gated employer plans within about two months of a Dec 2035 FAQ. Smart-cap and connected-pen requirements need hardware logistics and contract cycles, and the jump is asserted rather than shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 7.5,
+      "public_health": 6.5,
+      "cohesion": 6.0,
+      "epistemic": 4.67,
+      "overall": 6.6
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.5,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world keeps every 2034 harm and adds more. It carries about 1.6M excess anhedonia cases, about 16,800 excess hip fractures a year, and about 2,200 NAION cases a year. Connected-cap dosing timestamps now feed employer plans, Indiana's 12-month lockout is upheld, and 110k children aged 6–11 are on the drug. Muscle preservation is sold at $899/month while Medicare is excluded. The harm is also now named and quantified on the label, which keeps epistemic badness moderate. Overall this is a society most readers would refuse to live in if they understood it, though not structurally invisible.",
+      "plausibility": "driver_fidelity: All ten drivers appear in fields and dated events. Adoption is −0.2, prices are stalled, the tariff shock is Apr 2035, the anhedonia label is Jun 2035, bimagrumab is filed Feb 2035 and approved 14 months later, and the pediatric under-12 approval is Oct 2035. None is contradicted. mechanism: The tariff, import squeeze and gray-market shift chain is well shown. The pre-approval CMS ruling, the 40% PBM penetration and the 0.42M bimagrumab ramp are asserted (claims 1–3). Pharmacy trend falling to +6% with flat price and flat volume is also unexplained. magnitude: Population is inside the envelope (28.3% current, 42.5% ever), and the age, income, payer-mix, Medicare and Medicaid dollar and market arithmetic all reconcile. The bimagrumab approval at 14 months respects the 12-month rule. Minor gaps: the off-now rise of about 7.5M is only partly explained, and the 0.42M uptake is fast.",
+      "generativity": "The day in the life of Lorena Vásquez is strong: the blinking cap, the vendor logging 4:51, the nurse's note on Teo's lanyard, the HOLD WHAT YOU BUILT billboard, and Marisol with the tamales. Fields supply place-specific texture such as Maryvale versus Scottsdale, parents' wings in Texas and Ohio, and unions bargaining over coding of dose-downs. Several implied scenes, including the school nurse dose log, the kiosk weigh-in and couples negotiating dose-downs, could each be shot."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.834,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 26
   }
 }

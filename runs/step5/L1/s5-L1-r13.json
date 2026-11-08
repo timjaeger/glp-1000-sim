@@ -51,6 +51,41 @@
         "input_tokens": 19564,
         "output_tokens": 22049
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r13-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36144,
+        "output_tokens": 6303
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r13-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36144,
+        "output_tokens": 5262
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r13-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36144,
+        "output_tokens": 5866
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r13-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "an obesity drug that Congress never agreed to pay for is now covered, behind step therapy, for some thirty million smokers.",
+          "field": "prose/body",
+          "why": "Fails magnitude and mechanism. The world state counts only ~1.1M tobacco-dependence fills across Medicare, Medicaid and commercial, and the label is under a year old and sits behind varenicline-first step therapy. The prose turns eligibility into coverage and inflates it ~25-fold."
+        },
+        {
+          "quote": "Real but uncommon at the doses calm and longevity users take, and the same trials found no focus or calm benefit separable from placebo.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Fails mechanism. Smoking and vaping cessation trials are not designed to measure calm or focus benefit in a general population. The conclusion that employer 'steadiness' was mostly expectation, and the cultural reversal it drives, rest on this assertion."
+        },
+        {
+          "quote": "~19M users 65+ × ~0.5% annual baseline risk × ~0.3 excess ≈ 28,000 excess hip fractures a year, about one in eleven US hip fractures.",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "Fails magnitude. The population note puts 36.5% of adults 65+ on drug, which is roughly 23M of ~63–65M, not ~19M. A ~7% rise in the age-adjusted rate in two years while per-user HR stays flat is also asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 the world is much harder. Roughly 105M users, ~25M on gray product with a Houston repackager outbreak (340 sepsis/abscess cases, 4 deaths), and ~28,000 excess hip fractures a year concentrated in women 70+, cyclers and unscanned cash/gray users. Access is stratified by payer route, with DXA, coaching and bimagrumab going to the insured. Inherited harms (EPI, pediatric growth deficit, 7.4M→7.0M adherence-tracked workers) still count. Some relief comes from the Ohio settlement, a measured and labelled anhedonia rate, and cheap $199 access, so it is not a 7+ world.",
+        "plausibility": "driver_fidelity: every driver is visible. Adoption is +10.2pp, managed decline appears in the MariTide $219→$199 and retatrutide $299→$279 cuts, employer coverage falls 29→22%, the nicotine approval comes 13 months after filing, the bone wave shows in the hip fracture data, counterfeits are present, class stratification is present, no state acted, and anhedonia is a niche side effect. The monthly driver is a home autoinjector, with implants still not on the market. mechanism: most chains are shown, such as India's registration rerouting supply through UAE and Malaysia to vial kitchens, and ACA/Part D cessation rules opening a door to the nicotine label. Some are asserted: the calm/focus null from cessation trials, the Ohio settlement collapsing LSA reimbursement from 19% to 12%, the 21→32% bottom-third jump credited partly to tiny Medicaid tobacco fills, and the prose's 'thirty million smokers'. magnitude: the headline figures sit inside the envelope (38.2% current, 48.5% ever). Payer mix sums to 105.4M, the cash breakdown sums to 47.9M, the age check gives 38.2, and Part D spend is $42.1B. The minor gaps are ~19M 65+ users in the hip fracture arithmetic against ~23M implied by the 36.5% age-band figure, and the prose 30M overstating ~1.1M fills.",
+        "generativity": "The Darlene Pruitt day is dense and concrete: the green-blinking pen cap, the TRACK badge sticker, the Chantix denial and the 'appeal' written on her hand, the mother's hip at Mount Carmel, and the unsettling absence of tears. It shows the world's mechanisms without explaining them. The world fields add implied scenes such as Scottsdale strength classes, hip-protector underwear at Kohl's, 'bone verified' on Hinge, the Methodist falls clinic and Houston vial kitchens."
+      },
+      "plausibility": 7.55
+    },
+    {
+      "custom_id": "s5-L1-r13-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Attributable estimate: ~19M users 65+ × ~0.5% annual baseline risk × ~0.3 excess ≈ 28,000 excess hip fractures a year, about one in eleven US hip fractures.",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "magnitude: the world's own age table puts 36.5% of 65+ adults on drug, which is about 23M of roughly 63M, not 19M. The headline 28,000 figure therefore does not reconcile with the population block."
+        },
+        {
+          "quote": "is now covered, behind step therapy, for some thirty million smokers",
+          "field": "prose/body",
+          "why": "magnitude: the world state counts only ~1.0M tobacco-dependence fills across Part D, Medicaid and commercial plans (0.3M+0.3M+0.4M), plus ~2.1M cash. The prose also overstates coverage given the varenicline-first prior authorisation and 12-week limits described elsewhere."
+        },
+        {
+          "quote": "and the same trials found no focus or calm benefit separable from placebo.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "mechanism: smoking and vaping cessation trials in smokers are not designed to test calm or focus in non-smoking microdosers. This conveniently debunks the 'steadiness' market and supports the employer retreat and the fall in LSA reimbursement, without any shown chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference (3), this world carries about 105M users, ~25M on unapproved product, 28,000 excess hip fractures a year, and contaminated 'reta' vials that killed four people. Employer retreat has pushed ~1.5M commercial users to cash or off the drug, and the 2034 harms (EPI, pediatric growth deficit, regain cycling) are all inherited. Inequality is the heaviest dimension: DXA, coaching and bimagrumab go to the insured, while cash and gray users get no scans. Epistemic harm is somewhat mitigated, since anhedonia is now labelled and measured and the bone signal is named. Autonomy pressure from employers eased after the Ohio settlement.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: +10.2pp adoption, managed price decline, employer retreat 29→22%, nicotine approval with a 13-month lag, the bone wave, home MariTide as an existing product in a new form, the counterfeit shift to vial kitchens, class stratification, no new state action, and a niche side effect. mechanism: the tobacco label's route into ACA, Medicaid and Part D coverage is well shown, but the 'no calm benefit' trial finding is convenient (claim 3). The LSA reimbursement drop is attributed to the Ohio settlement, a weak link. magnitude: population, ever-used, approval timing and payer-mix sums all fit the envelope, but the hip-fracture arithmetic uses ~19M 65+ users against ~23M implied by 36.5% (claim 1), and the prose's 'thirty million smokers' has no basis in the ~1M fills (claim 2).",
+        "generativity": "The Darlene Pruitt day-in-the-life shows rather than explains: the green-blinking pen, the leftover TRACK badge, the Chantix denial, the mother's hip, the unspoken 'thin' remark and the $185 bone scan. The world supplies strong texture too: 'mail-thin', vial kitchens, falls clinics, hip-protector aisles, Hinge 'bone verified'. Many scenes and characters are implied across the Columbus, Memphis and Scottsdale settings."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s5-L1-r13-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "is now covered, behind step therapy, for some thirty million smokers",
+          "field": "prose/body",
+          "why": "Fails mechanism and magnitude: the world state counts only ~1.0M tobacco-dependence fills across commercial, Medicare and Medicaid. 'Covered for thirty million' confuses eligibility with coverage, and step therapy and 12-week limits make it more so."
+        },
+        {
+          "quote": "Attributable estimate: ~19M users 65+ × ~0.5% annual baseline risk × ~0.3 excess ≈ 28,000 excess hip fractures a year, about one in eleven US hip fractures.",
+          "field": "world/safety_ledger/population-level hip fracture",
+          "why": "Fails magnitude: the candidate's own 36.5% prevalence in the 65+ band (about 23% of ~276M adults) implies ~23M users 65+, not 19M. The headline hip-fracture figure therefore does not reconcile with the population block."
+        },
+        {
+          "quote": "the same trials found no focus or calm benefit separable from placebo.",
+          "field": "world/safety_ledger/Reward blunting",
+          "why": "Fails mechanism: smoking-cessation trials would not normally measure calm or focus benefit at low microdose. The claim is asserted as the cause of the 'steadiness' collapse, yet calm and Reset users still grow (4.1M→5.5M, 1.6M→2.6M)."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 7.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured absolutely against 2026, the world keeps nearly all its 2034 harms. About 25M people use unapproved product, there is a Houston vial-kitchen sepsis cluster, and adverse-event reports are ~71,000. Hip fractures rise ~28,000 a year, falls clinics and 'mail-thin' signal who could not afford scans, and nothing is reversed. Some pressures ease: promotion-linked tracks end after the Ohio settlement, and anhedonia is measured and labelled, which helps epistemics. Still, a 38% on-drug population stratified by income and scan access, with no regulatory response, is a society many would refuse to live in.",
+        "plausibility": "driver_fidelity: every driver is traceable. Monthly is realised as the MariTide home autoinjector, an existing product in a new form. Nicotine is filed Feb 2035 and approved 13 months later. The bone wave is the hip-fracture data, and employer retreat is 29→22%. Counterfeits, stratification and niche anhedonia are also visible, and state_action none holds. mechanism: most chains are shown, notably the ACA/Medicaid cessation mandate, India's rerouting and the Ohio settlement. Some are asserted, namely the 'thirty million smokers' covered claim and the trial finding of no calm or focus benefit. magnitude: current use (38.2%), ever use (48.5%), the age and income checks, payer mix (105.4M) and Part D spend ($42.1B) all reconcile and sit inside the envelope. The 65+ user count (~19M against ~23M implied by 36.5%) is a gap, and the prose 'thirty million' contradicts ~1M tobacco fills.",
+        "generativity": "The Darlene Pruitt day is concrete: the green-blinking pen, the leftover TRACK badge sticker, the Chantix denial with 'appeal' written on her hand, and her mother's hip. These carry the coverage retreat, the bone wave and the nicotine door as lived detail. The world also supplies many texture hooks, including Dollar General protein shakes, 'bone verified' dating, hip-protector underwear and Bread Alone suppers. The prose is slightly summary-heavy before the scene."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "an obesity drug that Congress never agreed to pay for is now covered, behind step therapy, for some thirty million smokers.",
+        "field": "prose/body",
+        "why": "Fails magnitude and mechanism. The world state counts only ~1.1M tobacco-dependence fills across Medicare, Medicaid and commercial, and the label is under a year old and sits behind varenicline-first step therapy. The prose turns eligibility into coverage and inflates it ~25-fold."
+      },
+      {
+        "quote": "Real but uncommon at the doses calm and longevity users take, and the same trials found no focus or calm benefit separable from placebo.",
+        "field": "world/safety_ledger/7/prevalence_note",
+        "why": "Fails mechanism. Smoking and vaping cessation trials are not designed to measure calm or focus benefit in a general population. The conclusion that employer 'steadiness' was mostly expectation, and the cultural reversal it drives, rest on this assertion."
+      },
+      {
+        "quote": "~19M users 65+ × ~0.5% annual baseline risk × ~0.3 excess ≈ 28,000 excess hip fractures a year, about one in eleven US hip fractures.",
+        "field": "world/safety_ledger/3/prevalence_note",
+        "why": "Fails magnitude. The population note puts 36.5% of adults 65+ on drug, which is roughly 23M of ~63–65M, not ~19M. A ~7% rise in the age-adjusted rate in two years while per-user HR stays flat is also asserted rather than shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.17,
+      "autonomy": 5.33,
+      "inequality": 7.0,
+      "public_health": 7.17,
+      "cohesion": 5.17,
+      "epistemic": 4.83,
+      "overall": 6.53
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.83,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.2,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against 2026 the world is much harder. Roughly 105M users, ~25M on gray product with a Houston repackager outbreak (340 sepsis/abscess cases, 4 deaths), and ~28,000 excess hip fractures a year concentrated in women 70+, cyclers and unscanned cash/gray users. Access is stratified by payer route, with DXA, coaching and bimagrumab going to the insured. Inherited harms (EPI, pediatric growth deficit, 7.4M→7.0M adherence-tracked workers) still count. Some relief comes from the Ohio settlement, a measured and labelled anhedonia rate, and cheap $199 access, so it is not a 7+ world.",
+      "plausibility": "driver_fidelity: every driver is visible. Adoption is +10.2pp, managed decline appears in the MariTide $219→$199 and retatrutide $299→$279 cuts, employer coverage falls 29→22%, the nicotine approval comes 13 months after filing, the bone wave shows in the hip fracture data, counterfeits are present, class stratification is present, no state acted, and anhedonia is a niche side effect. The monthly driver is a home autoinjector, with implants still not on the market. mechanism: most chains are shown, such as India's registration rerouting supply through UAE and Malaysia to vial kitchens, and ACA/Part D cessation rules opening a door to the nicotine label. Some are asserted: the calm/focus null from cessation trials, the Ohio settlement collapsing LSA reimbursement from 19% to 12%, the 21→32% bottom-third jump credited partly to tiny Medicaid tobacco fills, and the prose's 'thirty million smokers'. magnitude: the headline figures sit inside the envelope (38.2% current, 48.5% ever). Payer mix sums to 105.4M, the cash breakdown sums to 47.9M, the age check gives 38.2, and Part D spend is $42.1B. The minor gaps are ~19M 65+ users in the hip fracture arithmetic against ~23M implied by the 36.5% age-band figure, and the prose 30M overstating ~1.1M fills.",
+      "generativity": "The Darlene Pruitt day is dense and concrete: the green-blinking pen cap, the TRACK badge sticker, the Chantix denial and the 'appeal' written on her hand, the mother's hip at Mount Carmel, and the unsettling absence of tears. It shows the world's mechanisms without explaining them. The world fields add implied scenes such as Scottsdale strength classes, hip-protector underwear at Kohl's, 'bone verified' on Hinge, the Methodist falls clinic and Houston vial kitchens."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.467,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 41
   }
 }

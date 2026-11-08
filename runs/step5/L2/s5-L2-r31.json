@@ -51,6 +51,52 @@
         "input_tokens": 19453,
         "output_tokens": 26090
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r31-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36702,
+        "output_tokens": 6916
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r31-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36702,
+        "output_tokens": 7786
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r31-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36702,
+        "output_tokens": 7563
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01EgjQyanB7uwD1GeHgWZaWo",
+        "custom_id": "s5-L2-r31-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38247,
+        "output_tokens": 1517
+      }
     ]
   },
   "world": {
@@ -346,6 +392,194 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": true,
+      "first_errors": [
+        "s5-L2-r31-j1: least_plausible_claims/2/quote: not found verbatim in the candidate ('≈10% monthly MariTide (≈11M, about 5.5M publicly paid, many pharmacy-administered)'); copy it character for character"
+      ],
+      "repaired": true
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r31-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "two rival filers say the 100% tariff on their Indian-made sterile product makes launch uneconomic anyway",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: Indian generics sell at $5–30/month, so even doubling the landed cost would leave a large margin under the US brand price of $249–379. The claim that the tariff makes launch uneconomic is asserted without a cost chain."
+        },
+        {
+          "quote": "CDC reports the age-adjusted 65+ hip-fracture rate rose ~3% over 2033–35 after three decades of decline.",
+          "field": "world/safety_ledger/bone",
+          "why": "Magnitude: the same entry computes ≈26,250 excess hip fractures against ~320,000 total, which is about 8% excess. A 3% age-adjusted rise does not reconcile with that, particularly when 2034 already carried ≈14,700 excess."
+        },
+        {
+          "quote": "(108.4M − 10.9M imports) = 97.5M paying users × ≈$205 blended net × 12 ≈ $239.9B",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the multiplication works, but the $205 blend does not follow from the stated components. About 44M public fills are at $199, commercial net is $225–245, and cash is $299–379 apart from the $149 starters, which gives roughly $225–235. The blend is back-solved."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Measured against 2026, this world carries the 2034 harms in full. Those are ~26k excess hip fractures a year, ~3,000 NAION cases, ~840k excess blunting cases if causal, and 10.9M gray-market users. It adds about 190k children aged 6–11 on drug with an unresolved growth signal, and tenure gates and kiosk-weight premiums that turn the drug into job lock and surveillance. Monthly adherence logging, steering of low-wage staff to Medicaid, and specialist waitlists that function as rationing add to the autonomy and inequality costs. Broad Medicaid access and normalised, nameable harms keep it short of 7: the harms are measured, labelled and argued about, not hidden.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events. Adoption is exactly +10.5. MariTide's monthly form is realised through coverage and an every-8-weeks sBLA, and the pediatric under-12 sNDA is filed and approved 13 months later. Eleven states restrict. Nothing contradicts a driver. mechanism: Most chains are shown, such as the reconciliation law leading to Medicaid expansion and the bone signal leading to the CMS pause. The tariff leading to a $50 brand price rise and to generic launch being uneconomic is thin (claim 1), and the 3% CDC rise sits awkwardly with the excess-fracture arithmetic (claim 2). magnitude: Population, age-band, payer-mix, Medicare and Medicaid spend, pediatric and NAION figures all reconcile and sit inside the envelope, with ever-use at 52.0 against a 53.5 cap. The reconciliation gaps are the back-solved $205 blended net (claim 3) and the hip-fracture rate mismatch (claim 2).",
+        "generativity": "The prose gives a concrete, textured scene in Lorraine Pruitt's shot-day line, with the Medicaid card, the DEXA reading of −2.3, the Telegram lot lists, her sister Tammy off after 'the eye thing', and Kaylee's March specialist wait. Each shows policy through daily life. The world fields add sitcom gags, 'grey days' leave, shot-day protein bundles and trainer certificates, which suggest many more scenes."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s5-L2-r31-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the ≈36.1M off now, about 9M are on a bone pause or stopped after a DEXA result",
+          "field": "world/population/note",
+          "why": "Fails mechanism and magnitude. A 90-day pause that applies only at T ≤ −2.5 and only when no antiresorptive is co-prescribed cannot leave 9M people off at one time. The world itself describes an antiresorptive co-prescribing boom, and 9M off at a time implies a flow of roughly 36M pauses a year."
+        },
+        {
+          "quote": "two rival filers say the 100% tariff on their Indian-made sterile product makes launch uneconomic anyway",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Fails mechanism. Indian generic semaglutide sells for $5–30/month, while US cash prices are $299–379 and public rates $199. A 100% tariff on declared value would leave a large margin, so the stated reason for not launching does not follow."
+        },
+        {
+          "quote": "≈10% monthly MariTide (≈11M, about 5.5M of them publicly paid, many pharmacy-administered)",
+          "field": "world/access/note",
+          "why": "Fails magnitude and mechanism. MariTide was a top-third product at $549 in 2034 and reached Part D only in Sep 2035. About 11M users within roughly 15 months, from a single manufacturer's supply and pharmacy shot-day infrastructure, is asserted with no ramp shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.0,
+        "autonomy": 6.5,
+        "inequality": 6.0,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.0,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "About 39% of adults are on the drug, with ≈26,000 excess hip fractures a year, ≈3,000 NAION cases, ≈840k excess anhedonia cases if causal, 1.3M children on drug, and ≈10.9M gray-market users. Autonomy loss is structural: tenure gates on ≈40% of gated plans, kiosk-weight premiums, employers steering low-wage staff to Medicaid, mandatory bone pauses, and monthly shots that log adherence and remove the dose holiday. Against 2026 this is a clearly harder society with new losers, but harms are named and measured and Medicaid access has widened, so it stays below 7.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events: shock_up through the tariff and price rise, public expansion through the 2035 law, pediatric 6–11 approval, the bone wave, MariTide as an existing product in new forms, eleven restriction states, and the grey as a mainstream complaint. The approval timings fit the envelope rules. mechanism: Most chains are shown, but the 9M bone-pause stock and the claim that the tariff makes generic launch uneconomic (claims 1 and 2) are asserted without a working chain. magnitude: Current use (39.0%), ever use (52.0%), income thirds, age bands (sum 108.4M) and payer mix (sum 108.4M) all reconcile, and the Medicare and Medicaid spending arithmetic checks out. Minor gaps remain: the ≈$205 blended net is below the ≈$220 implied by the stated payer prices, the 3% hip-fracture rate rise sits oddly against an ≈8% excess, and the 11M MariTide ramp (claim 3) is aggressive.",
+        "generativity": "The prose gives a concrete character in Lorraine Pruitt, with specific places (Huber Heights, the Kroger on Wilmington Pike), a DEXA reading of −2.3, the Telegram lot lists, and the Tammy and Kaylee subplots. The world fields add implied scenes: shot-day lines, 'grey days' leave, the nurses' union contract, the sitcom gag, and geofenced apps. Daily life is shown more than explained, though some prose paragraphs summarise."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s5-L2-r31-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the ≈36.1M off now, about 9M are on a bone pause or stopped after a DEXA result",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 9M bone-driven stops is out of scale with ≈12.5M long-term 65+ users and a mandatory pause that applies only at T ≤ −2.5 without an antiresorptive, and only to Medicare-style continuation. The count is asserted without a derivation."
+        },
+        {
+          "quote": "CDC reports the age-adjusted 65+ hip-fracture rate rose ~3% over 2033–35 after three decades of decline.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: a 3% rise in the age-adjusted rate does not reconcile with the ≈26,250 excess fractures claimed on a ~320,000 base, which is about 8%. The surveillance signal and the attributed excess disagree."
+        },
+        {
+          "quote": "≈10% monthly MariTide (≈11M, about 5.5M of them publicly paid, many pharmacy-administered)",
+          "field": "world/access/note",
+          "why": "Mechanism and magnitude: about 11M monthly antibody users within roughly 14 months of public listing, with no supply or manufacturing chain shown. It is also a very fast ramp for a product that was a small segment at the start."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.0,
+        "autonomy": 6.5,
+        "inequality": 6.0,
+        "public_health": 7.0,
+        "cohesion": 5.5,
+        "epistemic": 5.0,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 7.0,
+        "magnitude": 7.0
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm and adds a population-scale bone and sarcopenia wave: ≈26k excess hip fractures, ≈2.7M sarcopenic Medicare users, 9M medically forced stops. It also adds a pediatric approval with an unresolved growth signal, ≈10.9M gray-market users and ≈840k excess blunting cases, and verification-based monthly dosing that removes the dose holiday. Public expansion widens access and the harms are measured and discussed, which holds epistemic and cohesion down. Even so, it is well beyond 2026 (39% of adults on drug versus 11%), with tenure gates, kiosk-weight premiums and rationed pediatric care.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events: shock_up via the tariff and the $50 rise, public_expansion via the reconciliation law, pediatric 6–11 approved 13 months after filing, the bone and muscle wave, MariTide via an existing product in new forms, no new shock, normalisation, eleven-state restriction, and mainstream complaint. mechanism: Most chains are shown, such as tariff to price rise, reconciliation law to Medicaid growth, and bone pause to forced stops. The court stay arriving just as the tariff makes launch uneconomic is convenient, and claims 2 and 3 are asserted rather than derived. magnitude: The population figures, age bands, income thirds, payer mix, Medicare and Medicaid spend, the ≈$240B market and the NAION and hip-fracture arithmetic all reconcile and sit inside the envelope. The soft spots are the 9M bone-stop count (claim 1) and the 3% versus ≈8% hip-fracture mismatch (claim 2).",
+        "generativity": "The prose gives Lorraine Pruitt, a home-health aide on Medicaid medication-only coverage, with the shot-day line at the Kroger pharmacy, a DEXA read of −2.3, a Telegram lot-check list, sister Tammy and granddaughter Kaylee. The world fields add texture: sitcom gags, 'grey days' leave, 'bone pause' wardrobes, and specialist waitlists. Many scenes are implied, though some prose passages explain rather than show."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "two rival filers say the 100% tariff on their Indian-made sterile product makes launch uneconomic anyway",
+        "field": "world/access/generic_rest_of_world",
+        "why": "Mechanism: Indian generics sell at $5–30/month, so even doubling the landed cost would leave a large margin under the US brand price of $249–379. The claim that the tariff makes launch uneconomic is asserted without a cost chain."
+      },
+      {
+        "quote": "CDC reports the age-adjusted 65+ hip-fracture rate rose ~3% over 2033–35 after three decades of decline.",
+        "field": "world/safety_ledger/bone",
+        "why": "Magnitude: the same entry computes ≈26,250 excess hip fractures against ~320,000 total, which is about 8% excess. A 3% age-adjusted rise does not reconcile with that, particularly when 2034 already carried ≈14,700 excess."
+      },
+      {
+        "quote": "(108.4M − 10.9M imports) = 97.5M paying users × ≈$205 blended net × 12 ≈ $239.9B",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: the multiplication works, but the $205 blend does not follow from the stated components. About 44M public fills are at $199, commercial net is $225–245, and cash is $299–379 apart from the $149 starters, which gives roughly $225–235. The blend is back-solved."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 6.5,
+      "inequality": 6.0,
+      "public_health": 6.67,
+      "cohesion": 5.5,
+      "epistemic": 5.0,
+      "overall": 6.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.35,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Measured against 2026, this world carries the 2034 harms in full. Those are ~26k excess hip fractures a year, ~3,000 NAION cases, ~840k excess blunting cases if causal, and 10.9M gray-market users. It adds about 190k children aged 6–11 on drug with an unresolved growth signal, and tenure gates and kiosk-weight premiums that turn the drug into job lock and surveillance. Monthly adherence logging, steering of low-wage staff to Medicaid, and specialist waitlists that function as rationing add to the autonomy and inequality costs. Broad Medicaid access and normalised, nameable harms keep it short of 7: the harms are measured, labelled and argued about, not hidden.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events. Adoption is exactly +10.5. MariTide's monthly form is realised through coverage and an every-8-weeks sBLA, and the pediatric under-12 sNDA is filed and approved 13 months later. Eleven states restrict. Nothing contradicts a driver. mechanism: Most chains are shown, such as the reconciliation law leading to Medicaid expansion and the bone signal leading to the CMS pause. The tariff leading to a $50 brand price rise and to generic launch being uneconomic is thin (claim 1), and the 3% CDC rise sits awkwardly with the excess-fracture arithmetic (claim 2). magnitude: Population, age-band, payer-mix, Medicare and Medicaid spend, pediatric and NAION figures all reconcile and sit inside the envelope, with ever-use at 52.0 against a 53.5 cap. The reconciliation gaps are the back-solved $205 blended net (claim 3) and the hip-fracture rate mismatch (claim 2).",
+      "generativity": "The prose gives a concrete, textured scene in Lorraine Pruitt's shot-day line, with the Medicaid card, the DEXA reading of −2.3, the Telegram lot lists, her sister Tammy off after 'the eye thing', and Kaylee's March specialist wait. Each shows policy through daily life. The world fields add sitcom gags, 'grey days' leave, shot-day protein bundles and trainer certificates, which suggest many more scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.667,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 35
   }
 }

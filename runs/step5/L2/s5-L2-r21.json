@@ -49,6 +49,41 @@
         "input_tokens": 19428,
         "output_tokens": 19630
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r21-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35621,
+        "output_tokens": 4693
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r21-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35621,
+        "output_tokens": 5011
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r21-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35621,
+        "output_tokens": 5041
+      }
     ]
   },
   "world": {
@@ -343,6 +378,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r21-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "A Federal Reserve working paper documents a 'lean-mass gap': DEXA-measured muscle tracks household income among incretin users more closely than weight does.",
+          "field": "world/events/5/event",
+          "why": "Mechanism: no source of DEXA data is shown for a population-wide comparison that would have to include 8.9M import users with no clinical contact. A Fed working paper is a convenient vehicle for the stratification driver, and the finding is asserted rather than shown."
+        },
+        {
+          "quote": "Tomorrow she won't take the pill, and on Monday she'll be sick.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: this contradicts the earlier line \"She didn't take one Saturday or Sunday. She never does.\" The same protagonist both skips weekend doses and never does, so the day-in-the-life disagrees with itself."
+        },
+        {
+          "quote": "connected dynamometers that log to plan portals ship in the millions",
+          "field": "world/economy/fitness/state",
+          "why": "Magnitude and mechanism: the CMS screen only took effect in Nov 2035 and applies to 65+ users with more than 2 years' use. Millions of connected devices shipping within about a year is asserted with no fail-rate or procurement chain behind it."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 7.5,
+        "inequality": 8,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, this world keeps every harm it inherited and deepens them. About 32% of adults are on the drug, ≈18,500 excess hip fractures a year, 2.3M older users with sarcopenia, and ≈8.9M people on imported or pressed-pill product. Coverage is conditioned on kiosk weights, PDC, grip tests and tenure gates, and body shape has become an income marker (body_and_culture, state/conditioning). Autonomy and inequality are the worst dimensions. The blunting question stays unmeasured but widely felt, so epistemic harm is moderate. The world is a society many present-day readers would refuse, though it is not collapse.",
+        "plausibility": "driver_fidelity: every driver is visibly realised in fields and dated events. Current use rises exactly 3.8 pts, prices are flat, the benefit is unchanged, nothing new is approved or filed, the CMS screen and tri-agency guidance supply benefits_conditioning, and the 31% dose-holiday survey supplies mainstream_complaint. mechanism: most changes have chains, such as the injunction behind the parked generic and the NIH–CMS analysis leading to the label change and the CMS screen. The Fed 'lean-mass gap' paper is asserted, and the prose contradicts itself on whether Lorraine skips weekend doses (claims 1 and 2). magnitude: all figures sit inside the envelope. Current 32.3% and ever-used 45.0% are in range, and the age, income, payer-mix, Medicare, Medicaid and market arithmetic all reconcile. The only soft spot is the dynamometer shipment volume in claim 3.",
+        "generativity": "Lorraine's day is shown in concrete scenes: the kiosk at the Kroger, the nurse's pause letter, her mother failing the chair stands, and the Buckhead holiday menu with the 'scan-verified' profile. The world carries rich texture, including weekend mode, restart packs, and grip-sized apparel. The prose is weakened by the Saturday/Sunday contradiction, and the protagonist's arc is thin."
+      },
+      "plausibility": 8.4
+    },
+    {
+      "custom_id": "s5-L2-r21-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "A Federal Reserve working paper documents a 'lean-mass gap': DEXA-measured muscle tracks household income among incretin users more closely than weight does.",
+          "field": "world/events/5/event",
+          "why": "Mechanism: no data source is shown for linking DEXA body composition to household income across incretin users, and a Fed working paper is an odd place for it. The finding is asserted to carry the class_stratification driver rather than derived from the world."
+        },
+        {
+          "quote": "put roughly one in four older ever-users on a pause at any given time",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: the screen only reached users with more than 2 years' use in Nov 2035. Its penalty is a 90-day pause for those who fail and decline to log training. One in four of all older ever-users paused at once (up from one in five in 2034) is far too large for that mechanism and strains the 65+ figures."
+        },
+        {
+          "quote": "She didn't take one Saturday or Sunday. She never does.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism (narrative contradiction): the protagonist is said never to skip weekend doses, yet the scene ends with 'Tomorrow she won't take the pill'. The prose thus contradicts itself on the holiday behaviour it uses to illustrate the world."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 7.5,
+        "inequality": 8,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 the world keeps every 2034 harm and adds more. About a third of adults are on the drug. Roughly 8.9M rely on imports and pressed fakes. Employers price premiums off kiosk weights, pharmacy PDC and tenure gates. CMS now tests grip strength as a condition of coverage. Sarcopenia, fractures, NAION and adolescent bone deficits are established and normalised, and body composition has become a class marker. Inequality and autonomy score highest. Epistemic is lower because the harms are named, measured and debated, even though low-dose blunting is unmeasured.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is +3.8 pp, prices stalled, and conditioning appears in the CMS strength screen and the Jan 2036 guidance. Muscle_bone_wave, class stratification and mainstream_complaint all appear, and no new launches or shocks occur. mechanism: Most chains are shown, such as the court injunction stalling generics and the NIH–CMS analysis leading to labels and the CMS screen. The Fed 'lean-mass gap' paper is asserted, the one-in-four pause rate is inflated, and the prose contradicts itself on Lorraine's weekend doses. The 2036 DOJ settlement appears without an event. magnitude: Every figure reconciles: 89.1M users, the age bands, income thirds, payer shares, Medicare and Medicaid spend, the $192.5B US market, and the hip-fracture and NAION arithmetic. All population figures are inside the envelope, and there is no illegal approval or generic.",
+        "generativity": "The Lorraine Bell scene is vivid and implies several characters: her mother, her daughter Keisha, and the nurse's pause note. The kiosk, grip-meter and nine-week gym wait add texture. Holiday menus, restart nausea and dating-app shields give daily-life detail. The ending is slightly garbled by the weekend-dose contradiction."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s5-L2-r21-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "A Federal Reserve working paper documents a 'lean-mass gap': DEXA-measured muscle tracks household income among incretin users more closely than weight does.",
+          "field": "world/events/5/event",
+          "why": "Mechanism: no dataset or chain links a Fed working paper to DEXA-measured muscle and household income for a drug-user population. It reads as a convenient confirmation of the class_stratification driver rather than something the world produces."
+        },
+        {
+          "quote": "Tomorrow she won't take the pill, and on Monday she'll be sick.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: it contradicts the line just before it, \"She didn't take one Saturday or Sunday. She never does.\" It also sits oddly with a character whose whole routine is kiosk-verified adherence. The narrative disagrees with itself."
+        },
+        {
+          "quote": "put roughly one in four older ever-users on a pause at any given time.",
+          "field": "world/population/note",
+          "why": "Mechanism: the screen applies only to long-term (>2 years) 65+ users who fail it, and it began in Nov 2035. A pause rate of one in four, up from one in five in 2034, is asserted without a chain. It also sits awkwardly beside ≈14.9M of ≈16.5M 65+ users being on Medicare."
+        }
+      ],
+      "badness": {
+        "flourishing": 7,
+        "autonomy": 7.5,
+        "inequality": 8,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world has about a third of adults on the drug and a large muscle-bone ledger (2.3M sarcopenic over-65s, ~18,500 excess hip fractures a year, NAION, adolescent bone deficit). The state now conditions the drug on grip tests, and employers condition it on PDC, kiosk weights and tenure, which is job lock. Body shape has become an income proxy, ~8.9M people rely on counterfeit or imported product, and 'the grey' is widely normalised but unmeasured. This is structural and normalised rather than catastrophic, so it sits near 7, with inequality and autonomy highest.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and dated events: prices flat, the 2035 muscle/bone warning, the CMS screen, the Jan 2036 guidance, the grey as a mainstream complaint, and no new launch or indication. Bimagrumab is correctly kept at an unfiled phase 3 and the generic is parked, so the 'none' drivers are respected. mechanism: Most changes have chains, but the Fed paper, the tri-agency guidance and the Seventh Circuit ruling are asserted, the 65+ pause share is unsupported, and the prose contradicts itself on weekend doses (claims 1–3). magnitude: Current use of 32.3 is exactly 28.5+3.8, ever-use of 45.0 is inside 40–46.8, and the income thirds bracket the national figure. The age bands sum to 89.1M, the payer mix sums to 100% and the Medicare, Medicaid, spending, market, cycling, hip-fracture and anhedonia arithmetic all check. I found no envelope breach.",
+        "generativity": "The prose has a concrete protagonist (Lorraine at the Kroger kiosk), her mother's grip-test scene, the school-nurse pause note and Keisha's dating-profile blue shield. Specific places (Clayton County, Buckhead, Tara Boulevard) and ritual details (restart packs, holiday menus, weekend mode) imply many scenes. The prose contradiction on weekend dosing blurs one beat, but the world is dense with film-ready texture."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "A Federal Reserve working paper documents a 'lean-mass gap': DEXA-measured muscle tracks household income among incretin users more closely than weight does.",
+        "field": "world/events/5/event",
+        "why": "Mechanism: no source of DEXA data is shown for a population-wide comparison that would have to include 8.9M import users with no clinical contact. A Fed working paper is a convenient vehicle for the stratification driver, and the finding is asserted rather than shown."
+      },
+      {
+        "quote": "Tomorrow she won't take the pill, and on Monday she'll be sick.",
+        "field": "prose/a_day_in_the_life",
+        "why": "Mechanism: this contradicts the earlier line \"She didn't take one Saturday or Sunday. She never does.\" The same protagonist both skips weekend doses and never does, so the day-in-the-life disagrees with itself."
+      },
+      {
+        "quote": "connected dynamometers that log to plan portals ship in the millions",
+        "field": "world/economy/fitness/state",
+        "why": "Magnitude and mechanism: the CMS screen only took effect in Nov 2035 and applies to 65+ users with more than 2 years' use. Millions of connected devices shipping within about a year is asserted with no fail-rate or procurement chain behind it."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.67,
+      "autonomy": 7.5,
+      "inequality": 8.0,
+      "public_health": 6.83,
+      "cohesion": 6.0,
+      "epistemic": 6.33,
+      "overall": 7.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 8.67
+    },
+    "plausibility": 8.1,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Measured against 2026, this world keeps every harm it inherited and deepens them. About 32% of adults are on the drug, ≈18,500 excess hip fractures a year, 2.3M older users with sarcopenia, and ≈8.9M people on imported or pressed-pill product. Coverage is conditioned on kiosk weights, PDC, grip tests and tenure gates, and body shape has become an income marker (body_and_culture, state/conditioning). Autonomy and inequality are the worst dimensions. The blunting question stays unmeasured but widely felt, so epistemic harm is moderate. The world is a society many present-day readers would refuse, though it is not collapse.",
+      "plausibility": "driver_fidelity: every driver is visibly realised in fields and dated events. Current use rises exactly 3.8 pts, prices are flat, the benefit is unchanged, nothing new is approved or filed, the CMS screen and tri-agency guidance supply benefits_conditioning, and the 31% dose-holiday survey supplies mainstream_complaint. mechanism: most changes have chains, such as the injunction behind the parked generic and the NIH–CMS analysis leading to the label change and the CMS screen. The Fed 'lean-mass gap' paper is asserted, and the prose contradicts itself on whether Lorraine skips weekend doses (claims 1 and 2). magnitude: all figures sit inside the envelope. Current 32.3% and ever-used 45.0% are in range, and the age, income, payer-mix, Medicare, Medicaid and market arithmetic all reconcile. The only soft spot is the dynamometer shipment volume in claim 3.",
+      "generativity": "Lorraine's day is shown in concrete scenes: the kiosk at the Kroger, the nurse's pause letter, her mother failing the chair stands, and the Buckhead holiday menu with the 'scan-verified' profile. The world carries rich texture, including weekend mode, restart packs, and grip-sized apparel. The prose is weakened by the Saturday/Sunday contradiction, and the protagonist's arc is thin."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.433,
+    "survived": true,
+    "new_lineage": "L3",
+    "floor_used": 6,
+    "rank": 6
   }
 }

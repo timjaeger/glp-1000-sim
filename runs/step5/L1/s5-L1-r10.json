@@ -51,6 +51,41 @@
         "input_tokens": 19482,
         "output_tokens": 20649
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r10-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35264,
+        "output_tokens": 6295
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r10-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35264,
+        "output_tokens": 7986
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r10-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35264,
+        "output_tokens": 5324
+      }
     ]
   },
   "world": {
@@ -312,6 +347,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r10-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "employer coverage reaches 37% by November",
+          "field": "world/events/3/event",
+          "why": "mechanism/magnitude: The rollout starts in July 2035, yet employer coverage supposedly jumps from 29% to 37%, with ~31 of those points in newly designed earned-coverage plans, in about four months. Employers redesigning plans, enrolling workers and being surveyed in that window is asserted, not shown."
+        },
+        {
+          "quote": "weeks later Novo, Lilly and Amgen keep 2035 cash prices unchanged and a Delaware court upholds Novo's semaglutide formulation patents against generic filers",
+          "field": "world/events/1/event",
+          "why": "mechanism: A verdict against Novo and a Novo-only patent ruling are offered as the cause of a three-company freeze. Lilly and Amgen face neither the verdict nor that ruling, and the retatrutide and MariTide price holds have no shown chain from either."
+        },
+        {
+          "quote": "~22M users have BMI under 30, ~7.5M under 25. Adult obesity ~30.9%.",
+          "field": "world/population/note",
+          "why": "magnitude: 97.7M current users minus 22M leaves ~75M users with BMI ≥30. Add the ~16% of adults (~44M) who have obesity and never used, and obesity would be ~43%, not 30.9%. The obesity figure does not reconcile with the user and BMI counts."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 7,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world is clearly worse. 35.4% of adults are on drug, and ~22M use gray or compounded product with ~61,000 adverse-event reports. Coverage is mostly conditional 'earned coverage': a ~22% checkpoint failure rate costs workers coverage and raises premiums, and half of those fail-outs move to gray product. Quiet openly markets 'freedom from wanting' while low-dose anhedonia stays unmeasured and no regulator acts (reward-blunting note, framing). Children 6–11 are on a weekly drug with a persistent growth deficit and no adult-height data, and access to it depends on state of residence and family income. Employer adherence surveillance, being off-drug read as suspect, and flattened couples are structural and normalised, though there is no mass death or collapse.",
+        "plausibility": "driver_fidelity: Every driver is traceable: adoption +7.4pp, stalled prices, conditional coverage, the Wegovy 6–11 filing and approval, no new safety signal, no new class, a retatrutide shortage-driven gray resurgence, Pew normalisation, no new state action, and Quiet as the marketed feature. mechanism: The pediatric path and the shortage listing reopening compounding are well chained. The attribution of the three-company price freeze to one Novo verdict and a Novo patent ruling is thin, and the 29→37% employer coverage jump in about four months is asserted (claims 1 and 2). magnitude: Adult on-drug (35.4), ever-used (45), income thirds, the age check, payer mix (sums to 97.7M), Medicare spend ($41.9B) and pediatric counts all reconcile and sit inside the envelope, and the pediatric approval lands exactly 12 months after filing. The BMI and obesity figures fail to reconcile (claim 3), and the employer coverage jump is large.",
+        "generativity": "The world implies many scenes: intake forms asking 'Current incretin? If no, reason', 'off by choice' on dating profiles, Southaven clinic drives, checkpoint-prep gyms and the Columbus shift-lead track. The day-in-the-life shows rather than explains: Dana's scale reading and SYNCED, the table going quiet over Trey, the child asking about Jaden, Rob drawing vial product into a syringe, and the couple who can't remember what they used to talk about. Daily life has strong texture, with only mild reliance on summary prose."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s5-L1-r10-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "but ~31 of those 37 points are 'earned coverage' designs",
+          "field": "world/access/note",
+          "why": "Mechanism: earned coverage launched in Jul 2035 and the 37% figure is dated Nov 2035. Converting about 31 of 37 points of employer coverage in four months, mostly by redesigning plans that already existed, is far faster than plan-year and open-enrolment cycles allow. The prose's 'nearly all of the increase' is also loosely reconciled with this."
+        },
+        {
+          "quote": "Causes: EPI bellwether verdict and litigation reserves, a 2035 district ruling upholding Novo's semaglutide formulation patents against Paragraph IV filers",
+          "field": "world/access/note",
+          "why": "Mechanism: a $38M verdict against one company, which is trivial next to $1.3B a year in defence spending, is offered as a reason for Novo, Lilly and Amgen all to freeze cash prices at once. Lilly and Amgen were not defendants. The patent ruling concerns exclusivity that already ran to about 2031, so it explains nothing about cash prices."
+        },
+        {
+          "quote": "6–11s ~0.4% nationally",
+          "field": "world/population/note",
+          "why": "Magnitude: 6–11 use was about 0.12% in 2034, and weekly Wegovy was approved only in Dec 2035. Tripling to 0.4% (about 70–100k new children) within roughly six months, in the 39 non-ban states, is an implausibly fast uptake for a new pediatric label with specialist-initiation guidance."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 8,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 7,
+        "epistemic": 7,
+        "overall": 7.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Measured against 2026 (11% on drug, voluntary access, anhedonia a niche complaint), this world carries every 2034 harm and adds more. Coverage depends on weigh-ins: about 22% fail a checkpoint, lose coverage and face higher premiums, and about half move to gray vials. About 18M people use imported or research-peptide product and 4.2M use compounded product, with unmeasured contamination risk. Children aged 6–11 are medicated in a patchwork by state line with a persisting height-velocity deficit. Quiet sells 'freedom from wanting' while the low-dose anhedonia rate stays unmeasured and no regulator acts. Being off the drug now needs an explanation, which is structural, normalised pressure.",
+        "plausibility": "driver_fidelity: All ten drivers are traceable to fields and events. The adoption delta lands at 35.4%, the stalled price path is explicit, earned coverage realises the conditioning driver, the 6–11 Wegovy filing and approval are 12 months apart, and Quiet and the Pew survey realise personality_layer and normalisation. Gray-market 'resurgence' is slightly thin because the gray share of users edged down from 20% to 19% even as the count rose.\nmechanism: The price freeze rests on a $38M verdict and an irrelevant patent ruling, and the earned-coverage conversion is too fast (claims 1 and 2). The shortage listing that reopens compounding, and the Ohio, Tennessee and Mississippi geography, are well chained.\nmagnitude: Every headline figure is inside the envelope: 35.4% current, 45% ever, and income thirds averaging 35.3%. The payer mix sums to 97.7M, the cash breakdown sums to 35.3M, Part D is $41.9B (15.5M × $225 × 12), the pediatric counts reconcile, and the age check works. The only strain is the fast pediatric uptake in claim 3.",
+        "generativity": "The world gives vivid, specific texture: intake forms asking 'Current incretin? If no, reason', 'between courses' on dating profiles, checkpoint-prep gyms, Southaven clinic runs and Mecklenburg pediatric portals. The Dana scene shows rather than explains, with the 5:10 scale reading 171.4 then SYNCED, the clinic-trailer shot, Trey's silent lunch table, Eli asking about Jaden, and Rob's vial in the garage. The last line about no longer remembering what they used to talk about carries the theme without commentary."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s5-L1-r10-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "weeks later Novo, Lilly and Amgen keep 2035 cash prices unchanged and a Delaware court upholds Novo's semaglutide formulation patents against generic filers",
+          "field": "world/events/1/event",
+          "why": "Mechanism: a $38M verdict against Novo alone is asserted to freeze prices at Lilly and Amgen too, whose products (retatrutide, MariTide) are unrelated to semaglutide EPI litigation. The stall is stipulated, but this causal chain is thin."
+        },
+        {
+          "quote": "but ~31 of those 37 points are 'earned coverage' designs",
+          "field": "world/access/note",
+          "why": "Mechanism/magnitude: the 2034 world had 29% mostly conventional coverage and ~13% monitored-only coverage. Converting about 31 points to a design first rolled out in July 2035 within roughly 16 months implies wholesale redesign of existing plans, which the candidate asserts without showing."
+        },
+        {
+          "quote": "6–11s ~0.4% nationally (≈0.6% in the 39 non-ban states holding ~69% of children, ~0% for weight indication in the eleven ban states)",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: 6–11 use rises from ~0.12% to ~0.4%, more than tripling in about a year, on a newly approved specialist-initiation product with growth-monitoring warnings. The speed of uptake is asserted, not explained."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 7,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Against the 2026 reference world this is much harder. 35% of adults are on drug, ~19% use gray or imported product, and ~22% of conditional-track enrollees fail a checkpoint and lose coverage, half of them moving to gray product. Coverage depends on verified adherence and is tied to premiums and promotion (Columbus shift leads). Children 6–11 are now on weekly semaglutide with a persistent height-velocity deficit, and Medicaid families cannot cross state lines. Anhedonia is sold openly as 'freedom from wanting' while the low-dose rate stays unmeasured and no regulator acts, so the harm is structural and normalised ('being off is what reporters ask about'). Mass death is absent, so the score stops short of 9.",
+        "plausibility": "driver_fidelity: All ten drivers are traceable. Adoption +7.4 lands at 35.4%, prices are stalled, earned coverage appears in events, Wegovy 6–11 is filed Dec 2034 and approved Dec 2035, the shortage listing drives the gray resurgence, Quiet is the marketed feature, and no new state action or new class appears. mechanism: Most chains are shown (shortage listing → compounding, India's registration → rerouting, checkpoint failure → gray). Weak links are the $38M verdict freezing prices across three companies and the ~31-of-37-points earned-coverage conversion (claims 1 and 2). magnitude: The population figures are inside the envelope and reconcile: 97.7M users, a payer mix summing to 97.7M, Part D 15.5M×$225×12 ≈ $41.9B, and the age and income checks. The pediatric 6–11 jump (claim 3) and the Nov 2036 gambling topline at the earliest allowed date are the only strained points.",
+        "generativity": "The prose ends in a concrete day for Dana, with a 5:10 scale reading of 171.4, a target of 168, a clinic-trailer shot at the Groveport cross-dock, a new loader asked whether he is 'between courses', Eli asking about Jaden across the bridge, and Rob with an insulin syringe in the garage. The world fields add specific texture such as dentist intake forms, 'off by choice' profiles, Southaven clinic trips and checkpoint-prep gyms. Recurring characters and scenes are easy to picture."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "employer coverage reaches 37% by November",
+        "field": "world/events/3/event",
+        "why": "mechanism/magnitude: The rollout starts in July 2035, yet employer coverage supposedly jumps from 29% to 37%, with ~31 of those points in newly designed earned-coverage plans, in about four months. Employers redesigning plans, enrolling workers and being surveyed in that window is asserted, not shown."
+      },
+      {
+        "quote": "weeks later Novo, Lilly and Amgen keep 2035 cash prices unchanged and a Delaware court upholds Novo's semaglutide formulation patents against generic filers",
+        "field": "world/events/1/event",
+        "why": "mechanism: A verdict against Novo and a Novo-only patent ruling are offered as the cause of a three-company freeze. Lilly and Amgen face neither the verdict nor that ruling, and the retatrutide and MariTide price holds have no shown chain from either."
+      },
+      {
+        "quote": "~22M users have BMI under 30, ~7.5M under 25. Adult obesity ~30.9%.",
+        "field": "world/population/note",
+        "why": "magnitude: 97.7M current users minus 22M leaves ~75M users with BMI ≥30. Add the ~16% of adults (~44M) who have obesity and never used, and obesity would be ~43%, not 30.9%. The obesity figure does not reconcile with the user and BMI counts."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.17,
+      "autonomy": 7.67,
+      "inequality": 7.0,
+      "public_health": 6.5,
+      "cohesion": 7.0,
+      "epistemic": 7.0,
+      "overall": 7.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.17,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.43,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "Measured against 2026, the world is clearly worse. 35.4% of adults are on drug, and ~22M use gray or compounded product with ~61,000 adverse-event reports. Coverage is mostly conditional 'earned coverage': a ~22% checkpoint failure rate costs workers coverage and raises premiums, and half of those fail-outs move to gray product. Quiet openly markets 'freedom from wanting' while low-dose anhedonia stays unmeasured and no regulator acts (reward-blunting note, framing). Children 6–11 are on a weekly drug with a persistent growth deficit and no adult-height data, and access to it depends on state of residence and family income. Employer adherence surveillance, being off-drug read as suspect, and flattened couples are structural and normalised, though there is no mass death or collapse.",
+      "plausibility": "driver_fidelity: Every driver is traceable: adoption +7.4pp, stalled prices, conditional coverage, the Wegovy 6–11 filing and approval, no new safety signal, no new class, a retatrutide shortage-driven gray resurgence, Pew normalisation, no new state action, and Quiet as the marketed feature. mechanism: The pediatric path and the shortage listing reopening compounding are well chained. The attribution of the three-company price freeze to one Novo verdict and a Novo patent ruling is thin, and the 29→37% employer coverage jump in about four months is asserted (claims 1 and 2). magnitude: Adult on-drug (35.4), ever-used (45), income thirds, the age check, payer mix (sums to 97.7M), Medicare spend ($41.9B) and pediatric counts all reconcile and sit inside the envelope, and the pediatric approval lands exactly 12 months after filing. The BMI and obesity figures fail to reconcile (claim 3), and the employer coverage jump is large.",
+      "generativity": "The world implies many scenes: intake forms asking 'Current incretin? If no, reason', 'off by choice' on dating profiles, Southaven clinic drives, checkpoint-prep gyms and the Columbus shift-lead track. The day-in-the-life shows rather than explains: Dana's scale reading and SYNCED, the table going quiet over Trey, the child asking about Jaden, Rob drawing vial product into a syringe, and the couple who can't remember what they used to talk about. Daily life has strong texture, with only mild reliance on summary prose."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.651,
+    "survived": true,
+    "new_lineage": "L2",
+    "floor_used": 6,
+    "rank": 2
   }
 }

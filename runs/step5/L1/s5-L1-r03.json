@@ -52,6 +52,41 @@
         "input_tokens": 19584,
         "output_tokens": 25761
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r03-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35624,
+        "output_tokens": 8334
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r03-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35624,
+        "output_tokens": 7442
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r03-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35624,
+        "output_tokens": 5162
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r03-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo agrees to a $4.1 billion settlement over the withheld mood analysis and undisclosed payments to calm-plan platforms, including $2.6 billion of free oral semaglutide for community health centres over three years",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the settlement lands within three months of the label while oral Wegovy is on the shortage list from an API contamination recall, yet it promises large in-kind oral semaglutide supply. The candidate never explains where the supply comes from, and the speed of the settlement is asserted."
+        },
+        {
+          "quote": "Adult obesity is ~31.0%. ~16% of adults have obesity and have never used a drug, down from 19%",
+          "field": "world/population/note",
+          "why": "Magnitude: about 19M of the 87.2M current users have a BMI under 30, so about 68M (~24.7% of adults) have obesity. Adding the 16% never-used obese gives about 40% obesity, not 31.0%. The inconsistency is inherited from 2034 but widens here."
+        },
+        {
+          "quote": "Pediatric: 1.4% of under-18s, with 12–17s at ~3.0% and 6–11s at ~0.3% after the Nov 2035 semaglutide approval.",
+          "field": "world/population/note",
+          "why": "Magnitude: about 3.0% of ~25M 12–17s plus 0.3% of ~25M 6–11s is roughly 0.8M children, about 1.1% of under-18s, not 1.4%. The 6–11 rate also rises from 0.12% despite twelve ban states and Medicaid denial."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 5.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.9
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against 2026 the world is much harder. 31.6% of adults are on drug, about 13.6M use gray product, and anhedonia is labelled at ~8% (3–4M people with drug-attributable anhedonia). Employer adherence premiums and LSA-funded 'steadiness' packages persist, as does a 6–11 pediatric approval with a persisting height deficit. Public expansion (the Medicare model, Medicaid in 22 states, FQHC free supply) eases access inequality and the frank label eases the epistemic harm, which keeps this below 7. Pressures on autonomy and cohesion are still large, and the model can be ended administratively, so the score sits at 5.9.",
+        "plausibility": "driver_fidelity: every driver is visible in the fields and events. The triple agonist is honoured through the EU/UK/Japan launch, the Medicare formulary and a Chinese product with a US NDA filed in 2036, which the envelope rules allow, and the pediatric, scandal, subsidy and price-shock drivers are all dated. mechanism: most chains are shown (India registration → shortage → price rise, litigation discovery → label → platform ads, Medicare model → senior retail shifts). The weak links are the fast settlement that supplies free oral semaglutide during an oral shortage (claim 1) and Novo's 2031 analysis surfacing only now. magnitude: current use (31.6), ever-use (42.5) and the income and age bands are inside the envelope, and the payer mix, Medicare/Medicaid/free-provision spending and the cycling arithmetic all multiply out. The failures are the obesity prevalence that cannot coexist with 68M current users who have obesity (claim 2) and a pediatric rate that does not match its age bands (claim 3).",
+        "generativity": ""
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s5-L1-r03-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Publicly paid or provided = 28.1M (32%), so public programmes together are now the largest payer of incretin fills.",
+          "field": "world/population/note",
+          "why": "Fails magnitude by the candidate's own numbers: the same note puts legitimate cash at 30.5M (35%), which is larger than public at 28.1M (32%). The headline claim, repeated in the prose and in state.subsidy_or_mandate, is contradicted by the payer mix."
+        },
+        {
+          "quote": "On the label figures, the ~8-point excess at weight doses implies roughly 3–4M Americans with drug-attributable anhedonia.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Fails magnitude: the label gives about 8% vs 3%, a 5-point excess, not 8. Applying 5 points to the user base gives well under 3–4M, so the derived headcount does not reconcile."
+        },
+        {
+          "quote": "Medicaid: 22 states plus DC opted into the model's Medicaid track at a ~$185 supplemental-rebated net, at regular federal match, with no enhanced FMAP.",
+          "field": "world/access/public_coverage",
+          "why": "Fails mechanism: the starting world has only 7 states covering weight-loss use. This jumps to 22 states plus DC, and Medicaid users go from 3.4M to 7.5M within one year. No state fiscal incentive is shown, and states bear ~37% of the cost with no enhanced match."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 32% of adults are on drugs, and ~19M have a BMI under 30 with no outcome data. Anhedonia is labelled at ~8% vs 3% (~11% on retatrutide), and the label wording is now used as ad copy. Employer adherence tracks, LSA-funded 'steadiness' (~24% of large employers) and a pending ADA suit persist, as do the pediatric height deficit and ARFID signal, ~13.6M gray users, and hip-fracture risk in 5.6M seniors on a demonstration that can be ended administratively. Public coverage and a labelled harm soften inequality and epistemic scores somewhat, but the inherited harms of 2034 are all present, so it sits above 'recognisably harder' and below 'refuse to live in'.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: the CMMI model, the Wegovy pill recall and price rise, the Sep 2035 anhedonia label, the 6–11 approval, the Novo scandal and settlement, and the Chinese triple agonist plus the EU launch of retatrutide 12 mg. The triple-agonist driver is realised in an envelope-compliant form, and the 12 mg launch abroad is a modest rather than dramatic realisation. mechanism: The scandal chain (litigation discovery, unsealing, label, settlement, free supply) is well shown. Claim 3 (Medicaid jumping from 7 to 22 states and DC at regular match) is asserted, as are the 35–40% brand price rises attributed to 'allocation and tariffs' and the LSA jump from 19% to 24%. magnitude: Headline adults on drug (31.6) and ever used (42.5) are inside the envelope. Age and payer sums, Medicare, Medicaid and settlement spending, and the approval timing all check out. But claim 1 (public 32% vs cash 35%, yet called the 'largest payer') and claim 2 (8-point vs 5-point excess) are real reconciliation failures. Pediatric 1.4% is also hard to reproduce from the 12–17 and 6–11 subfigures.",
+        "generativity": "The Denise Harlan day carries strong texture: the free pill bottle stamped 'SUPPLIED UNDER SETTLEMENT', Mr. Odom's Medicare card shown 'like a boarding pass', the Telegram reta group, the school call about Tennessee, and Trina's one deviled egg. Several economy and culture fields also imply scenes (Villages retirees, church suppers, couples' therapists running the screen, 'off for the album'). It shows more than it explains."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s5-L1-r03-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Publicly paid or provided = 28.1M (32%), so public programmes together are now the largest payer of incretin fills.",
+          "field": "world/population/note",
+          "why": "Fails magnitude (reconciliation). The candidate's own payer mix gives legitimate cash 30.5M (35%), which is larger than public programmes at 28.1M (32%), so the 'largest payer' claim contradicts its own table. The prose and the subsidy_or_mandate field repeat it."
+        },
+        {
+          "quote": "5.6M × $245 × 12 ≈ $16.5B",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude (reconciliation). The model began in Jan 2036 and enrolment only 'reaches 5.6 million by December', so a full-year spend at the year-end headcount overstates 2036 spending. The ~$53.1B Medicare total inherits the error."
+        },
+        {
+          "quote": "Novo agrees to a $4.1 billion settlement over the withheld mood analysis and undisclosed payments to calm-plan platforms, including $2.6 billion of free oral semaglutide for community health centres over three years",
+          "field": "world/events/3/event",
+          "why": "Fails mechanism. The counterparty and legal vehicle are never named, and a nine-figure-plus in-kind settlement lands only nine months after the March 2035 unsealing. The HRSA/FQHC channel and the 'subsidy' driver are asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against 2026 this is a much harder society. About 32% of adults are on drugs, ~19M have a BMI under 30, and ~5.6M seniors with known fracture risk (HR ~1.3–1.45) are on retatrutide. Anhedonia is labelled at ~8% and ~11%, yet the label became ad copy ('Steady. Less pull'). Employer adherence tracks and LSA-funded 'steadiness' packages persist, and counterfeit and shortage harms continue, with a pediatric approval facing twelve state bans. Medicare and Medicaid expansion and free FQHC supply soften inequality, and the harm is now measured and nameable, so the world is not worse than its 2034 starting point on every axis.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Adoption lands at +3.6pp, price rises, the CMMI model is the public expansion, and the triple agonist is realised via EU/UK/Japan launches and a Chinese NDA, as the approval rules allow. The subsidy driver rests on settlement-funded supply and county programmes.\nmechanism: The recall to shortage to price-rise chain is shown, and so is the Indian registration to Chinese reta shift. The settlement (claim 3), the fast label after unsealing, and TrumpRx not cutting prices back after the shortage are mostly asserted.\nmagnitude: Population, ever-used, income, age and payer-mix sums all fit the envelope (31.6, 42.5, 87.2M). However, 'largest payer' contradicts the 35% cash share (claim 1), the Medicare model spend ignores enrolment ramp (claim 2), and the pediatric 1.4% sits slightly above what the age-band figures imply.",
+        "generativity": "The Denise Harlan day shows rather than explains. It has the settlement-stamped pill bottle, Mr. Odom's Medicare card 'like a boarding pass', the Telegram reta seller, the Tennessee pediatric shot she can't get, and Trina's 'I feel fine' with one deviled egg left. Implied characters and scenes are plentiful: the Ohio plaintiff, MinuteClinic visits, church suppers, shortage regainers. The world fields add texture such as 'Off for the album' and the Villages retirees."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo agrees to a $4.1 billion settlement over the withheld mood analysis and undisclosed payments to calm-plan platforms, including $2.6 billion of free oral semaglutide for community health centres over three years",
+        "field": "world/events/3/event",
+        "why": "Mechanism: the settlement lands within three months of the label while oral Wegovy is on the shortage list from an API contamination recall, yet it promises large in-kind oral semaglutide supply. The candidate never explains where the supply comes from, and the speed of the settlement is asserted."
+      },
+      {
+        "quote": "Adult obesity is ~31.0%. ~16% of adults have obesity and have never used a drug, down from 19%",
+        "field": "world/population/note",
+        "why": "Magnitude: about 19M of the 87.2M current users have a BMI under 30, so about 68M (~24.7% of adults) have obesity. Adding the 16% never-used obese gives about 40% obesity, not 31.0%. The inconsistency is inherited from 2034 but widens here."
+      },
+      {
+        "quote": "Pediatric: 1.4% of under-18s, with 12–17s at ~3.0% and 6–11s at ~0.3% after the Nov 2035 semaglutide approval.",
+        "field": "world/population/note",
+        "why": "Magnitude: about 3.0% of ~25M 12–17s plus 0.3% of ~25M 6–11s is roughly 0.8M children, about 1.1% of under-18s, not 1.4%. The 6–11 rate also rises from 0.12% despite twelve ban states and Medicaid denial."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 6.17,
+      "inequality": 5.5,
+      "public_health": 6.0,
+      "cohesion": 5.83,
+      "epistemic": 5.17,
+      "overall": 6.07
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.67,
+      "magnitude": 6.0
+    },
+    "plausibility": 6.7,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Against 2026 the world is much harder. 31.6% of adults are on drug, about 13.6M use gray product, and anhedonia is labelled at ~8% (3–4M people with drug-attributable anhedonia). Employer adherence premiums and LSA-funded 'steadiness' packages persist, as does a 6–11 pediatric approval with a persisting height deficit. Public expansion (the Medicare model, Medicaid in 22 states, FQHC free supply) eases access inequality and the frank label eases the epistemic harm, which keeps this below 7. Pressures on autonomy and cohesion are still large, and the model can be ended administratively, so the score sits at 5.9.",
+      "plausibility": "driver_fidelity: every driver is visible in the fields and events. The triple agonist is honoured through the EU/UK/Japan launch, the Medicare formulary and a Chinese product with a US NDA filed in 2036, which the envelope rules allow, and the pediatric, scandal, subsidy and price-shock drivers are all dated. mechanism: most chains are shown (India registration → shortage → price rise, litigation discovery → label → platform ads, Medicare model → senior retail shifts). The weak links are the fast settlement that supplies free oral semaglutide during an oral shortage (claim 1) and Novo's 2031 analysis surfacing only now. magnitude: current use (31.6), ever-use (42.5) and the income and age bands are inside the envelope, and the payer mix, Medicare/Medicaid/free-provision spending and the cycling arithmetic all multiply out. The failures are the obesity prevalence that cannot coexist with 68M current users who have obesity (claim 2) and a pediatric rate that does not match its age bands (claim 3).",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.718,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 32
   }
 }

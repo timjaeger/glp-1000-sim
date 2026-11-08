@@ -51,6 +51,41 @@
         "input_tokens": 19575,
         "output_tokens": 21775
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r14-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36694,
+        "output_tokens": 6504
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r14-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36694,
+        "output_tokens": 6783
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r14-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36694,
+        "output_tokens": 5256
+      }
     ]
   },
   "world": {
@@ -325,6 +360,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r14-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "'Unmedicated' is now a dating-app filter, and among under-30s it is selected more often than 'biomarker verified'.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Mechanism: a precise comparative app-usage claim with no source or chain. A natural-movement niche that the economy section puts at under 1% of sales is asserted to outrank an established status filter within two years."
+        },
+        {
+          "quote": "The 65+ band grew more slowly (25→29) than 50–64 (39→50) after the Jan 2036 boxed warning and DXA requirements slowed new starts in older adults.",
+          "field": "world/population/note",
+          "why": "Mechanism: the boxed warning took effect in Jan 2036, so it had under a year to bend a 2034–2036 age-band trend. The fracture data had been public since Sep 2035, and the slowdown is asserted rather than shown."
+        },
+        {
+          "quote": "about a billion dollars a year for some nine hundred thousand people",
+          "field": "prose/body",
+          "why": "Magnitude and mechanism: the programme only began in mid-2035, and nine states reaching ~0.9M enrollees in about a year implies very fast clinic and enrolment build-out. No ramp mechanism is given, and the number sits conveniently at 15% of adults with AUD."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against the 2026 world, this world carries a 35% adult on-drug rate and ~22M gray-market users, with a documented fracture and frailty wave (~20k excess hip fractures, 4–5k deaths a year). Sepsis clusters from fill houses and anhedonia in the 7–11% range appear, with the low-dose rate unmeasured. Class and payment-route stratification persists, as do adherence premiums, an employer promotion lawsuit and a politically split culture. Harm is largely nameable and measured (CMS data, boxed warning, DXA), which keeps it below structural-invisible, so it sits at a society many would refuse but not at 9.",
+        "plausibility": "driver_fidelity: All ten drivers are realised and traceable. The AUD guideline and state-subsidy events, the bimagrumab combo (as an existing product in a new subcutaneous form), the fracture wave with its boxed warning, the Atlanta counterfeit cluster, and the unmedicated movement all appear in fields and events, and approval-timing rules are respected. mechanism: Most chains are shown, such as India's registration rerouting supply through fill houses and the fracture arithmetic from exposure. Claim 1 (dating-app filter) and claim 2 (boxed warning slowing 65+ starts within a year) are asserted rather than shown, and the political reach of the unmedicated movement is quick. magnitude: Current 35.4% and ever-used 45.5% sit inside the envelope, and the age, income, payer-mix, AUD and Medicare ($40.0B) and state ($1.07B) arithmetic all reconcile. The only gaps are a mild tension between 15.5M Medicare-paid users and ~18M users 65+, and the fast 0.9M ramp (claim 3).",
+        "generativity": "The Ray and Carol scene is concrete: a breath-tube app, a DXA T-score, a bima vial for $60, a loaf and a UNMEDICATED sweatshirt, and a husband who \"just doesn't laugh\". The world fields add regional texture, such as Wilkes-Barre, Milwaukee supper clubs, the Columbus corridor and Memphis, plus several implied lawsuits and campaigns. Many characters and scenes are available beyond the one shown."
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s5-L1-r14-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "'Unmedicated' is now a dating-app filter, and among under-30s it is selected more often than 'biomarker verified'.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Mechanism: it asserts an app-behaviour comparison with no source. Only a small self-identified minority of 18–29s is unmedicated, and the world gives no chain from that minority to the filter outranking the premium verification tier."
+        },
+        {
+          "quote": "FICTIONAL arithmetic: ~0.9M enrollees × $99 × 12 ≈ $1.07B a year in drug cost, funded by SUPTRS block-grant flexibility (SAMHSA guidance, Jun 2035) and state alcohol-excise surcharges",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: the multiplication is right, but the funding story is thin. About $1.4B a year across nine states, reached within roughly a year of the guidance, is a large share of the national SUPTRS block grant. The excise surcharges are asserted rather than shown."
+        },
+        {
+          "quote": "age-adjusted hip-fracture incidence in Medicare beneficiaries rose ~6% from 2032 to 2035, reversing a 25-year decline",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "Magnitude: attributing a population-wide 6% rise cleanly to the drug assumes about 18M users aged 65+, yet the ledger counts only 15.5M Medicare users. It also assumes per-user risk stayed flat while exposure grew, with no allowance for confounders."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 35% of adults are on drug, with a hip-fracture wave (~20k excess fractures and 4–5k deaths a year), ~22M gray-market users, a sepsis cluster, and ~7–11% anhedonia at weight doses, with unmeasured low-dose rates. Inherited harms stay in full: stratification by payment route, adherence premiums, unmeasured long-horizon effects, and a pediatric growth deficit. Partial offsets are the boxed warning, DXA coverage, free AUD treatment and a cultural counter-movement, so this is a harder society than 2026, not a refusable one. Epistemic harm is moderate: the fracture harm is named and measured, but the low-dose anhedonia rate and gray-product contents are not.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and tied to events. AUD comes through guideline endorsement and a tirzepatide filing, subsidy through the nine-state programme, and the muscle combo through the filed-then-approved SC bimagrumab 'Preserve'. Fracture wave, counterfeits, natural_movement and marketed_feature ('Quiet') are all present. The only wrinkle is a small edit to the still_true list. mechanism: Most chains are shown, notably exposure growth to fractures to boxed warning to Preserve, and India's rule to transshipment to fill houses to the Atlanta cluster. The unmedicated dating filter and the funding of the state AUD programme are asserted more than shown (claims 1 and 2). magnitude: Current use 35.4% and ever-used 45.5% are inside the envelope. The age, income and payer arithmetic all sums (97.7M), as do Medicare $40.0B, AUD $1.07B and the cycled 39.3%, and the bimagrumab approval is 14 months after filing. Remaining soft spots are 18M users aged 65+ against 15.5M Medicare users, and the very high persistence implied by 35.4/45.5 (inherited from 2034).",
+        "generativity": "The Ray and Carol scene shows daily life through the 30-minute pill wait, the app breathalyzer, the DXA T-score, the $60 'bima' tip, and the daughter eating two plates on purpose. It implies a river-town economy, family rifts and several recurring characters. The world fields add texture too, such as supper clubs, hip-pad underwear, DXA vans and 'Quiet' ads. Some prose paragraphs explain rather than show."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s5-L1-r14-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "an estimated ~1.5M buying 'bima' muscle vials",
+          "field": "world/access/note",
+          "why": "magnitude/mechanism: 1.5M gray buyers of an antibody, within about 18 months of the IV approval and with almost no legitimate cash channel, is large and unsupported. The candidate itself says ~80% of the vials contain no antibody."
+        },
+        {
+          "quote": "'Unmedicated' is now a dating-app filter, and among under-30s it is selected more often than 'biomarker verified'.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "mechanism: a cultural counter-movement going from nothing to out-selecting an established premium app tier in two years is asserted with no adoption chain. The driver only stipulates natural_movement, not this speed or reach."
+        },
+        {
+          "quote": "CBP–India data-sharing began with the 2035 registration rule",
+          "field": "world/safety_ledger/13/regulatory_response",
+          "why": "mechanism: the 2034 world said India's registration came with no CBP mail agreement. A new data-sharing arrangement is asserted without a cause, and it sits oddly beside the claim that the rule cut parcels only by a third."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 7.5,
+        "cohesion": 6.5,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, the world carries 35% of adults on drugs and 23% of users on imported or counterfeit product (the sepsis cluster and ~71k adverse-event reports). Medicare hip fractures rose ~6% (~4–5k excess deaths a year), and anhedonia runs at 7–11% with an unmeasured low-dose rate. Employer adherence tracks persist, bone and pancreas harms are unresolved, and thin people-of-means versus gray-market users stratify by class and age. Free AUD pills, the boxed warning and the unmedicated movement soften it slightly, but the harms are normalised and partly invisible, so it is a society many readers would refuse.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable: the 7.4pp adoption rise, managed price cuts, status-quo coverage, AUD guidelines plus the state subsidy, the boxed warning, Zepbound Preserve, the Atlanta counterfeit cluster, the unmedicated movement, and the 'Quiet' campaign. The approval rules are respected (tirzepatide AUD filed but not approved). mechanism: most chains are shown, such as the India rerouting to fill houses, the SAMHSA guidance and the fracture arithmetic. Several are asserted: the sudden fracture signal, the speed of the unmedicated culture (claims 2 and 1), and the CBP data-sharing (claim 3). magnitude: all headline figures sit inside the envelope (35.4% current, 45.5% ever, income and age bands reconcile, payer mix sums to 97.7M, Part D $40.0B and the AUD $1.07B check out). The only soft spot is 15.5M Medicare users against ~18M users aged 65+, which is explainable by cash users.",
+        "generativity": "The Ray and Carol scene is concrete: porch, app check-in, breathalyser tube, DXA T-score, a sister's broken hip, a daughter's UNMEDICATED sweatshirt. The world fields give many implied characters (supper-club organisers, fill-house operators, county clinic staff, a promotion-suit plaintiff). Daily life has texture, though the prose partly explains before it shows."
+      },
+      "plausibility": 7.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "'Unmedicated' is now a dating-app filter, and among under-30s it is selected more often than 'biomarker verified'.",
+        "field": "world/body_and_culture/dating_and_intimacy",
+        "why": "Mechanism: a precise comparative app-usage claim with no source or chain. A natural-movement niche that the economy section puts at under 1% of sales is asserted to outrank an established status filter within two years."
+      },
+      {
+        "quote": "The 65+ band grew more slowly (25→29) than 50–64 (39→50) after the Jan 2036 boxed warning and DXA requirements slowed new starts in older adults.",
+        "field": "world/population/note",
+        "why": "Mechanism: the boxed warning took effect in Jan 2036, so it had under a year to bend a 2034–2036 age-band trend. The fracture data had been public since Sep 2035, and the slowdown is asserted rather than shown."
+      },
+      {
+        "quote": "about a billion dollars a year for some nine hundred thousand people",
+        "field": "prose/body",
+        "why": "Magnitude and mechanism: the programme only began in mid-2035, and nine states reaching ~0.9M enrollees in about a year implies very fast clinic and enrolment build-out. No ramp mechanism is given, and the number sits conveniently at 15% of adults with AUD."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.17,
+      "autonomy": 6.17,
+      "inequality": 6.67,
+      "public_health": 7.17,
+      "cohesion": 6.17,
+      "epistemic": 6.17,
+      "overall": 6.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 7.0,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.88,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Measured against the 2026 world, this world carries a 35% adult on-drug rate and ~22M gray-market users, with a documented fracture and frailty wave (~20k excess hip fractures, 4–5k deaths a year). Sepsis clusters from fill houses and anhedonia in the 7–11% range appear, with the low-dose rate unmeasured. Class and payment-route stratification persists, as do adherence premiums, an employer promotion lawsuit and a politically split culture. Harm is largely nameable and measured (CMS data, boxed warning, DXA), which keeps it below structural-invisible, so it sits at a society many would refuse but not at 9.",
+      "plausibility": "driver_fidelity: All ten drivers are realised and traceable. The AUD guideline and state-subsidy events, the bimagrumab combo (as an existing product in a new subcutaneous form), the fracture wave with its boxed warning, the Atlanta counterfeit cluster, and the unmedicated movement all appear in fields and events, and approval-timing rules are respected. mechanism: Most chains are shown, such as India's registration rerouting supply through fill houses and the fracture arithmetic from exposure. Claim 1 (dating-app filter) and claim 2 (boxed warning slowing 65+ starts within a year) are asserted rather than shown, and the political reach of the unmedicated movement is quick. magnitude: Current 35.4% and ever-used 45.5% sit inside the envelope, and the age, income, payer-mix, AUD and Medicare ($40.0B) and state ($1.07B) arithmetic all reconcile. The only gaps are a mild tension between 15.5M Medicare-paid users and ~18M users 65+, and the fast 0.9M ramp (claim 3).",
+      "generativity": "The Ray and Carol scene is concrete: a breath-tube app, a DXA T-score, a bima vial for $60, a loaf and a UNMEDICATED sweatshirt, and a husband who \"just doesn't laugh\". The world fields add regional texture, such as Wilkes-Barre, Milwaukee supper clubs, the Columbus corridor and Memphis, plus several implied lawsuits and campaigns. Many characters and scenes are available beyond the one shown."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.286,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 7
   }
 }

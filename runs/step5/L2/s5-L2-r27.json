@@ -51,6 +51,41 @@
         "input_tokens": 19570,
         "output_tokens": 21856
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r27-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35267,
+        "output_tokens": 8680
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r27-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35267,
+        "output_tokens": 8029
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r27-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35267,
+        "output_tokens": 7855
+      }
     ]
   },
   "world": {
@@ -340,6 +375,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r27-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "announce negotiated portal and PBM cuts of $30–50, bringing injectable maintenance to $199–279 and the 50 mg pill to $249",
+          "field": "world/events/1/event",
+          "why": "The stated cuts are $30–50, but the access note shows retatrutide portal $449→$329, amycretin $499→$399, MariTide $549→$449 and the retatrutide list $1,649→$1,349. Those drops are $100–300 and no event explains them, so the mechanism is asserted and the magnitude is unreconciled."
+        },
+        {
+          "quote": "7.9% on tirzepatide 15 mg / semaglutide 7.2 mg vs 4.6%, and 5.3% on low-dose orals vs 4.5% (CI includes null)",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "The only newly surfaced randomised data are Lilly's SHAPS module from two retatrutide trials. The 2034 world said there was no randomised low-dose measurement, and Novo's semaglutide 7.2 mg trials have no shown SHAPS source. A class-wide randomised prevalence table is therefore unexplained."
+        },
+        {
+          "quote": "filed Dec 2034 on SCALE Kids and extension data (≈−6% BMI vs placebo) and approved Oct 2035",
+          "field": "world/drugs/pipeline_note",
+          "why": "The envelope requires approval no earlier than 12 months after a filing made in this window. This approval comes about 10 months after filing, a magnitude/approval-timing breach that the pediatric_under_12 driver does not excuse."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference, this world keeps and deepens the 2034 harms. Roughly 98M users and 8.4M on imports; employers conditioning premiums on adherence to a drug they no longer pay for, enforced by connected caps (conditioning_or_surveillance); about 20,000 excess hip fractures and 2,750 excess NAION cases a year; ≈900k anhedonia cases; and 120k children aged 6–11 on drug. Bodies read as income, and cash-pay women 50–64 are visibly sorted. Epistemic harm is lower than in 2034 because anhedonia is now labelled and measured, though the Lilly data-suppression scandal damages trust. The society is a recognisably harder one, near but below the 'refuse to live in it' line.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: adoption +7.2pp, managed_decline, employer retreat 64→49%, liraglutide 6–11, the anhedonia label, the retatrutide pen at 30.1%, the Lilly scandal, the Unmedicated movement, the tri-agency wellness rule, and the mainstream_complaint personality layer. The pediatric approval is a little fast (claim 3). mechanism: The scandal-to-label chain and the wellness-rule-to-premium chain are well shown. Weaker points are the unexplained deeper price cuts (claim 1), the class-wide randomised SHAPS table with no shown data source (claim 2), and Medicaid growing 11.5→15.0M with no state change and no stated cause. magnitude: Population is inside the envelope (35.7% current, 48.5% ever), and age, income, payer-mix and Medicare/Medicaid spending arithmetic all reconcile. The flaws are the liraglutide approval about 10 months after filing against the 12-month rule (claim 3) and the retatrutide, amycretin and MariTide price drops exceeding the stated $30–50 cuts (claim 1).",
+        "generativity": "The Denise Okafor scene is dense with usable detail: the chirping connected cap, the adherence-percentage app, the envelope arithmetic on skipping Thursday to Sunday, Marisol's blue U pin and fried bologna sandwich, Kiara's liraglutide injector, and the radio that has stopped meaning anything. The world fields add many implied scenes: Full Table suppers, the Colorado ballot measure, kiosk tiers, grey weekends and the Lilly whistleblower documentary."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s5-L2-r27-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Retatrutide (12 mg autoinjector) was added to Part D formularies at the statutory rate in Sep 2035 under a CMS–Lilly volume agreement.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: Lilly accepts $199 for a 30% drug whose own portal price is $329 and whose list price is $1,349, and the candidate gives no reason it would. This listing is also what drives the 65+ band from 21% to 27% and Medicare from 14.4M to 18.9M users, so a large shift rests on one asserted deal."
+        },
+        {
+          "quote": "FDA pooled randomised data, including Lilly's previously unanalysed SHAPS module from two retatrutide phase 3 trials, give clinically meaningful reduced pleasure in 11.4% on retatrutide 12 mg vs 4.7% placebo",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: the only exposed data source is Lilly's retatrutide trials, yet the same pooled table reports randomised rates for tirzepatide, semaglutide 7.2 mg and low-dose orals, whose trials were not designed to measure this. The chain for how FDA obtained those arms is missing."
+        },
+        {
+          "quote": "Pharmacy trend has slowed to ~+5% as price declines offset volume.",
+          "field": "world/economy/insurance/state",
+          "why": "Magnitude: the candidate's own figures (volume up about 26% over two years, net price down about 8%, US market $170B to $200B) imply spend growth near 8% a year. A +5% trend does not reconcile with them, and the employer-retreat explanation is not stated."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 (about 3), this world keeps every harm of the 2034 start and adds more. About 98.5M adults (35.7%) are on the drug and about 35M are off it after coverage stop waves. Employers condition premiums on verified adherence through connected caps and kiosks, which prices people into or out of the drug (autonomy 7.5). Bodies are sorted by class, imports are 8.4M, there are about 20,000 excess hip fractures a year, and 120k children aged 6–11 are on liraglutide. Anhedonia is now labelled and measured, which makes the harm nameable (epistemic 4.5), but the wellness rule works against the label's own advice on dose holidays.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to a field and an event. These include the +7.2pp adoption, the managed price cuts in Jun 2035, employer retreat to 49% and the Dec 2035 wellness rule, liraglutide for ages 6–11, the March 2036 anhedonia label, the retatrutide pen at 30.1% and the Lilly qui tam suit. The Unmedicated movement and the 'grey' as a mainstream complaint are also shown. mechanism: most changes have chains, but the $199 retatrutide Part D deal (claim 1) and the pooled anhedonia data for non-retatrutide arms (claim 2) are asserted rather than shown. Medicaid growth of 11.5M to 15.0M with no state changes is also thinly explained. magnitude: the population figures are inside the envelope (35.7%, ever 48.5%, income thirds bracket the national figure). The age bands, payer shares, user counts, Medicare and Medicaid dollar arithmetic, $200B market, NAION and hip-fracture counts all reconcile. Minor flaws are the +5% pharmacy trend (claim 3) and the liraglutide approval only 10 months after its Dec 2034 filing.",
+        "generativity": "The day-in-the-life gives concrete texture: Denise's chirping bottle cap, the adherence app, Marisol's blue pin and bologna sandwich, Kiara's pen, and the back-of-envelope PDC math before a grey weekend. Together these imply characters, workplaces and a family conflict. The world fields add scenes such as the Nashville Full Table rally, the Colorado ballot measure and the whistleblower documentary. The prose has a short explainer-heavy opening, but the closing scene shows rather than explains."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s5-L2-r27-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Average US net across paying users ≈$185.",
+          "field": "world/access/note",
+          "why": "Fails magnitude (reconciliation). The listed payer prices are PBM net $170–195, public $199 for about 34M users, and cash $199–329 or $149 starters. Weighted, these imply an average near $200, so $185 looks reverse-fitted to reach the $200B market figure."
+        },
+        {
+          "quote": "With ≈13M on top-dose triple or dual regimens, ≈900k excess cases.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Fails magnitude (reconciliation). The excess rate is 6.7 points only for retatrutide 12 mg and 3.3 points for the dual or semaglutide 7.2 mg group, so the same note's rates give a figure well under 900k. The estimate applies the triple-agonist rate to everyone."
+        },
+        {
+          "quote": "of whom ≈120k are aged 6–11 since the Oct 2035 liraglutide approval, mostly on generic liraglutide through Medicaid EPSDT.",
+          "field": "world/population/note",
+          "why": "Fails mechanism. About 120k children are on an obesity drug within roughly 14 months of approval, mostly through Medicaid and on a daily injectable. No chain is shown for how a baseline of off-label specialist use becomes that scale."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is well beyond the 2026 reference world. Over a third of adults are on the drug, and weight-priced premiums are tied to verified adherence through connected caps and kiosks (state/conditioning_or_surveillance). The harm ledger is large: about 20k excess hip fractures a year, about 2.75k NAION cases, about 900k excess anhedonia cases, and about 120k children aged 6–11 on liraglutide. Employer retreat has pushed the middle third into cash, and 8.4M people use imports. Epistemic harm is lower than in 2034 because anhedonia is now labelled and measured, which keeps the score from reaching 8.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +7.2 pp exactly, managed decline is Jun 2035, retatrutide is an existing product in a new autoinjector at 30.1%, the liraglutide 6–11 indication, the anhedonia label, the Lilly scandal, the Unmedicated movement and the wellness rule all appear in events. mechanism: Most chains are shown, such as the injunction freezing the generic, the Dec 2035 rule driving premium tiers, and the SHAPS data leading to the label. The 65+ jump from 21% to 27% and the pediatric uptake are thinly argued (claim 3), and the Lilly 'disclosed in 2032' dispute sits oddly with the already-public 2032 postmarketing figures. magnitude: Every headline figure is inside the envelope: current use 35.7%, ever-use 48.5%, income thirds, age bands, payer mix, and the Medicare and Medicaid arithmetic all reconcile. The average net of $185 (claim 1) and the 900k anhedonia estimate (claim 2) are minor reconciliation gaps.",
+        "generativity": "Denise Okafor's day carries a lot of film. The chirping bottle cap, the plan app showing 91% adherence, the supervisor and Marisol with the blue U pin, Kiara's pen and her birthday cake, and the envelope arithmetic for a grey weekend all show the policy rather than explain it. The Nashville Full Table supper, the church-hall potlucks and the hearings imply further scenes. Some of the world-building is exposition-heavy."
+      },
+      "plausibility": 7.55
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "announce negotiated portal and PBM cuts of $30–50, bringing injectable maintenance to $199–279 and the 50 mg pill to $249",
+        "field": "world/events/1/event",
+        "why": "The stated cuts are $30–50, but the access note shows retatrutide portal $449→$329, amycretin $499→$399, MariTide $549→$449 and the retatrutide list $1,649→$1,349. Those drops are $100–300 and no event explains them, so the mechanism is asserted and the magnitude is unreconciled."
+      },
+      {
+        "quote": "7.9% on tirzepatide 15 mg / semaglutide 7.2 mg vs 4.6%, and 5.3% on low-dose orals vs 4.5% (CI includes null)",
+        "field": "world/safety_ledger/7/prevalence_note",
+        "why": "The only newly surfaced randomised data are Lilly's SHAPS module from two retatrutide trials. The 2034 world said there was no randomised low-dose measurement, and Novo's semaglutide 7.2 mg trials have no shown SHAPS source. A class-wide randomised prevalence table is therefore unexplained."
+      },
+      {
+        "quote": "filed Dec 2034 on SCALE Kids and extension data (≈−6% BMI vs placebo) and approved Oct 2035",
+        "field": "world/drugs/pipeline_note",
+        "why": "The envelope requires approval no earlier than 12 months after a filing made in this window. This approval comes about 10 months after filing, a magnitude/approval-timing breach that the pediatric_under_12 driver does not excuse."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.17,
+      "autonomy": 7.33,
+      "inequality": 7.0,
+      "public_health": 6.5,
+      "cohesion": 6.0,
+      "epistemic": 4.5,
+      "overall": 6.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 7.0,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.28,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against the 2026 reference, this world keeps and deepens the 2034 harms. Roughly 98M users and 8.4M on imports; employers conditioning premiums on adherence to a drug they no longer pay for, enforced by connected caps (conditioning_or_surveillance); about 20,000 excess hip fractures and 2,750 excess NAION cases a year; ≈900k anhedonia cases; and 120k children aged 6–11 on drug. Bodies read as income, and cash-pay women 50–64 are visibly sorted. Epistemic harm is lower than in 2034 because anhedonia is now labelled and measured, though the Lilly data-suppression scandal damages trust. The society is a recognisably harder one, near but below the 'refuse to live in it' line.",
+      "plausibility": "driver_fidelity: Every driver is traceable to events and fields: adoption +7.2pp, managed_decline, employer retreat 64→49%, liraglutide 6–11, the anhedonia label, the retatrutide pen at 30.1%, the Lilly scandal, the Unmedicated movement, the tri-agency wellness rule, and the mainstream_complaint personality layer. The pediatric approval is a little fast (claim 3). mechanism: The scandal-to-label chain and the wellness-rule-to-premium chain are well shown. Weaker points are the unexplained deeper price cuts (claim 1), the class-wide randomised SHAPS table with no shown data source (claim 2), and Medicaid growing 11.5→15.0M with no state change and no stated cause. magnitude: Population is inside the envelope (35.7% current, 48.5% ever), and age, income, payer-mix and Medicare/Medicaid spending arithmetic all reconcile. The flaws are the liraglutide approval about 10 months after filing against the 12-month rule (claim 3) and the retatrutide, amycretin and MariTide price drops exceeding the stated $30–50 cuts (claim 1).",
+      "generativity": "The Denise Okafor scene is dense with usable detail: the chirping connected cap, the adherence-percentage app, the envelope arithmetic on skipping Thursday to Sunday, Marisol's blue U pin and fried bologna sandwich, Kiara's liraglutide injector, and the radio that has stopped meaning anything. The world fields add many implied scenes: Full Table suppers, the Colorado ballot measure, kiosk tiers, grey weekends and the Lilly whistleblower documentary."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.017,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 16
   }
 }

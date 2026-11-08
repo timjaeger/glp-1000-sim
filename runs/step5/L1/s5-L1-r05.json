@@ -49,6 +49,52 @@
         "input_tokens": 19493,
         "output_tokens": 19561
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r05-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35548,
+        "output_tokens": 9855
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r05-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35548,
+        "output_tokens": 6520
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r05-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35548,
+        "output_tokens": 4888
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01EgjQyanB7uwD1GeHgWZaWo",
+        "custom_id": "s5-L1-r05-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37180,
+        "output_tokens": 1859
+      }
     ]
   },
   "world": {
@@ -317,6 +363,194 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": true,
+      "first_errors": [
+        "s5-L1-r05-j1: least_plausible_claims/1/quote: not found verbatim in the candidate ('About 12.5 million Medicare beneficiaries obtain incretins through the new obesity route in its first year; Part D plans'); copy it character for character"
+      ],
+      "repaired": true
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r05-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Upper-tier users talk about 'dosing for the week, living on the weekend'.",
+          "field": "world/body_and_culture/meaning_of_appetite",
+          "why": "Mechanism: the weekend-holiday culture depends on reward returning within a day or two off a drug with roughly week-long half-life (semaglutide). The candidate's own label data says anhedonia resolves in 4–8 weeks of reduction or interruption, and the prose has Dr. Patel saying 'a day or two won't matter with the pill'."
+        },
+        {
+          "quote": "the company files to extend the label to obese adults without heart disease, with no FDA decision expected before 2037",
+          "field": "world/events/1/event",
+          "why": "Mechanism: this event dates the filing to June 2035, but pipeline_note says Lilly filed the sNDA in Feb 2036. The two disagree, and a filing in the same month as the readout is also implausibly fast."
+        },
+        {
+          "quote": "Adult obesity is ~30.3%.",
+          "field": "world/population/note",
+          "why": "Magnitude: about 19M of 98M users have BMI under 30, so roughly 79M users have BMI of 30 or more. Add the 14% of adults who are obese and have never used (~39M) and the total is over 100M obese adults, against about 84M implied by 30.3%. The 2034 parent has the same inconsistency, and the candidate repeats it."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 5.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 98M users, an estimated 3.5–4M with drug-attributable anhedonia, projected excess hip fractures among 12.5M unscanned Medicare oral users, 19M lean users with unmeasured low-dose risk, and 14.5M gray users make this a harder society than 2026. Adherence-linked premiums (30% guidance) and the Part D/Medicaid BMI documentation stream keep autonomy under pressure. Offsets: Medicaid and Medicare coverage broaden access, obesity falls to 30.3%, the Sep 2035 label makes the harm named and measured, and there is no new shock, so it sits near the 2034 level or slightly below on epistemic and access. Inequality moves into muscle and bone and leaves out uninsured working-age adults in non-expansion states.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is 28→35.5, managed decline appears in the $169/$279/$199 prices, the CMS rule is the public expansion, and the Sep 2035 label is the anhedonia driver. No new indication or class, no market shock and no state action, and class stratification and the mainstream complaint (41% 'feel less') are both shown. mechanism: the CMS rule → Medicaid/Part D → payer-mix chain is well shown, but the weekend-holiday culture conflicts with the stated 4–8 week anhedonia resolution and the drug's half-life (claim 1). The sNDA filing date is stated two ways (claim 2). The employer 'moved obese employees toward Medicaid' and 'lapsed users pulled back as fast as new users stopped' are convenient assertions. magnitude: on-drug 35.5, ever-used 45, income thirds, age check (35.49), payer mix (98.0M), cash breakdown (31.0M), Part D $62.8B and Medicaid $16.8B all reconcile and sit inside the envelope. The obesity-versus-BMI-under-30 arithmetic fails (claim 3), the pharma 'net price down ~8%' sits oddly against Medicare net falling $225→$187, and the pediatric figure is loose.",
+        "generativity": "The Rosalind day gives concrete scenes and characters: the 5:40 pill with a thirty-minute coffee wait, Mr. Delacroix as a 'coat hanger', Tasha's English/Chinese reta vial, Marcus's second sandwich under the Ohio ban, the car-commercial cry, and the unfinished beer on the porch. The world fields add texture: holiday codes, 'off-weekend' tasting nights, 'coming up' music, church potlucks, and app 'holiday schedule' fields. It shows more than it explains."
+      },
+      "plausibility": 6.7
+    },
+    {
+      "custom_id": "s5-L1-r05-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The country is medicated on weekdays and comes off the drug on weekends.",
+          "field": "prose/closing_paragraph",
+          "why": "Mechanism: semaglutide and the oral products have long half-lives, so skipping a weekend has no pharmacological effect. The world's own holidays are defined as 2–6 weeks, and the prose has Dr. Patel saying 'a day or two won't matter with the pill'. The weekend-spike economy (bars, NFL handle, QSR, 'off-weekend' tasting nights) therefore rests on a mechanism the world contradicts."
+        },
+        {
+          "quote": "About 12.5 million Medicare beneficiaries obtain incretins through the new obesity route in its first year",
+          "field": "world/events/3/event",
+          "why": "Magnitude and mechanism: 12.5M new users in the first 12 months, behind prior authorisation and step therapy, is a very fast ramp. It is tied to a rule that overrides a statutory exclusion, and the candidate shows no uptake chain such as prescriber capacity, PA throughput or plan behaviour."
+        },
+        {
+          "quote": "the company files to extend the label to obese adults without heart disease, with no FDA decision expected before 2037",
+          "field": "world/events/1/event",
+          "why": "Mechanism: this event dates the filing to 2035-06, but pipeline_note says Lilly filed the sNDA in Feb 2036. The two disagree by eight months, and a standard review from the earlier date would produce a decision well before 2037."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.0,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 6.0,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 5.5,
+        "magnitude": 8.0
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Starting from the 2026 baseline, the world inherits employer adherence premiums, a 15% gray market, counterfeit-product harms, childhood growth deficits and about 98M users. It adds an anhedonia label (6.8% vs 3.1%), a projected ~9,000 excess hip fractures a year by 2038, and a muscle-and-bone class gap among unscanned Medicare and Medicaid oral users. Broader access (Medicaid, Part D, obesity down to 30.3%) and a nameable, labelled harm soften it, so epistemic scores lowest, but hidden low-dose exposure in ~19M lean users and the ADA/adherence tension keep it a recognisably harder society, about a 6.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. The CMS rule and Medicaid/Part D mandates give public_expansion, the 2035 label gives anhedonia_labelled, prices fall $299→$279 and $219→$199, no approvals occur, and the personality layer is a mainstream complaint. Class stratification is shown through DXA and muscle markers. mechanism: the weekend-holiday economy contradicts the world's own 2–6 week holiday definition and the long-half-life pharmacology (claim 1), and the Lilly filing date differs between events and pipeline_note (claim 3). Several shifts are also asserted rather than shown, such as 'Thinness no longer signals class' despite 30% obesity and the first-year Medicare ramp (claim 2). magnitude: 35.5% on-drug and 45% ever-used sit inside the envelope, and the payer mix sums to 98.0M. The age and income checks, Part D ($62.8B) and Medicaid ($16.8B) arithmetic, and the cash breakdown all reconcile. Minor flaws: the pediatric count is slightly under 1.3%, and 12.5M first-year new users is an aggressive ramp.",
+        "generativity": "The prose follows Rosalind through a day: the 5:40 pill, Medicaid copay, her patient Mr. Delacroix with the thinning arms, a Memphis cousin's vial photo, her ten-year-old son and the legal wait until twelve, and the weekend-off question. The porch beer and the street cheering without her close it. The world fields add many scenes (off-weekend nights, holiday codes, Columbus arms and gait, Bread Alone potlucks), though some are explained rather than shown."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s5-L1-r05-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Weekend 'holiday' baskets show measurable Friday–Saturday indulgence spikes in high-density zips.",
+          "field": "world/economy/food_and_beverage/state",
+          "why": "Mechanism: semaglutide has a roughly one-week half-life, and the world's own ledger defines holidays as 2–6 weeks. A weekend-scale appetite and reward swing in grocery baskets has no pharmacological or behavioural chain, and it contradicts the candidate's own data."
+        },
+        {
+          "quote": "the company files to extend the label to obese adults without heart disease, with no FDA decision expected before 2037",
+          "field": "world/events/1/event",
+          "why": "Mechanism: this event dates the filing to 2035-06, but pipeline_note says Lilly filed the sNDA in Feb 2036. Two sections of the same world disagree on when a key regulatory event happened."
+        },
+        {
+          "quote": "unchanged from 2034, because public coverage pulled lapsed users back as fast as new users stopped",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: the off-drug share stays at exactly 9.5% through two years of rising use. The note asserts this as a convenient offset, with no persistence or restart figures to back it, and it is used to make the arithmetic close."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Measured against 2026, this world keeps the 2034 harms: about 14.5M gray-market users, labelled anhedonia at 3.5–4M people, EPI, 0.7 cm/yr growth deficits in children, and adherence-linked premiums. It adds a Medicare hip-fracture burden (~9,000 a year projected by 2038) from unscanned oral users. Mandatory Medicaid and Part D coverage and the label itself cut against that. Access inequality narrows while a muscle-and-bone gap opens, and the harms are named, measured and argued over, so epistemic badness is lower. Overall it is a harder 2026, not a refusable society.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is 28 → 35.5, the CMS rule gives public expansion, the label is added in Sep 2035, and there is no next-gen launch, new indication, shock or state action. The CMS rule is federal, so it does not breach state_action none.\nmechanism: The CMS rule to coverage to payer-mix to class-marker chain is well shown. But the weekend 'holiday' culture contradicts the ledger's 2–6 week holidays and the drugs' pharmacokinetics (claim 1), the Lilly filing date conflicts between event and pipeline_note (claim 2), and the unchanged off-drug share is asserted (claim 3).\nmagnitude: Current use 35.5 and ever-used 45 are inside the envelope. The income and age checks, payer mix (98.0M), cash breakdown (31.0M), $62.8B Part D spend and $16.8B Medicaid spend all multiply out. Only the 9.5% off-drug coincidence is a soft spot.",
+        "generativity": "The Rosalind Akers day is concrete and implies many scenes: the 5:40 pill, Mr. Delacroix on the stairs, cousin Tasha's vial photo, Marcus under the ban, and the beer she doesn't finish. The world JSON adds Columbus, Charlotte, the Delta and 'off-weekend' nights. The prose leans a little on explanation in its opening sections, but the ending shows rather than explains."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Upper-tier users talk about 'dosing for the week, living on the weekend'.",
+        "field": "world/body_and_culture/meaning_of_appetite",
+        "why": "Mechanism: the weekend-holiday culture depends on reward returning within a day or two off a drug with roughly week-long half-life (semaglutide). The candidate's own label data says anhedonia resolves in 4–8 weeks of reduction or interruption, and the prose has Dr. Patel saying 'a day or two won't matter with the pill'."
+      },
+      {
+        "quote": "the company files to extend the label to obese adults without heart disease, with no FDA decision expected before 2037",
+        "field": "world/events/1/event",
+        "why": "Mechanism: this event dates the filing to June 2035, but pipeline_note says Lilly filed the sNDA in Feb 2036. The two disagree, and a filing in the same month as the readout is also implausibly fast."
+      },
+      {
+        "quote": "Adult obesity is ~30.3%.",
+        "field": "world/population/note",
+        "why": "Magnitude: about 19M of 98M users have BMI under 30, so roughly 79M users have BMI of 30 or more. Add the 14% of adults who are obese and have never used (~39M) and the total is over 100M obese adults, against about 84M implied by 30.3%. The 2034 parent has the same inconsistency, and the candidate repeats it."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.5,
+      "inequality": 5.5,
+      "public_health": 5.5,
+      "cohesion": 5.5,
+      "epistemic": 4.33,
+      "overall": 5.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 5.67,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.27,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "About 98M users, an estimated 3.5–4M with drug-attributable anhedonia, projected excess hip fractures among 12.5M unscanned Medicare oral users, 19M lean users with unmeasured low-dose risk, and 14.5M gray users make this a harder society than 2026. Adherence-linked premiums (30% guidance) and the Part D/Medicaid BMI documentation stream keep autonomy under pressure. Offsets: Medicaid and Medicare coverage broaden access, obesity falls to 30.3%, the Sep 2035 label makes the harm named and measured, and there is no new shock, so it sits near the 2034 level or slightly below on epistemic and access. Inequality moves into muscle and bone and leaves out uninsured working-age adults in non-expansion states.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is 28→35.5, managed decline appears in the $169/$279/$199 prices, the CMS rule is the public expansion, and the Sep 2035 label is the anhedonia driver. No new indication or class, no market shock and no state action, and class stratification and the mainstream complaint (41% 'feel less') are both shown. mechanism: the CMS rule → Medicaid/Part D → payer-mix chain is well shown, but the weekend-holiday culture conflicts with the stated 4–8 week anhedonia resolution and the drug's half-life (claim 1). The sNDA filing date is stated two ways (claim 2). The employer 'moved obese employees toward Medicaid' and 'lapsed users pulled back as fast as new users stopped' are convenient assertions. magnitude: on-drug 35.5, ever-used 45, income thirds, age check (35.49), payer mix (98.0M), cash breakdown (31.0M), Part D $62.8B and Medicaid $16.8B all reconcile and sit inside the envelope. The obesity-versus-BMI-under-30 arithmetic fails (claim 3), the pharma 'net price down ~8%' sits oddly against Medicare net falling $225→$187, and the pediatric figure is loose.",
+      "generativity": "The Rosalind day gives concrete scenes and characters: the 5:40 pill with a thirty-minute coffee wait, Mr. Delacroix as a 'coat hanger', Tasha's English/Chinese reta vial, Marcus's second sandwich under the Ohio ban, the car-commercial cry, and the unfinished beer on the porch. The world fields add texture: holiday codes, 'off-weekend' tasting nights, 'coming up' music, church potlucks, and app 'holiday schedule' fields. It shows more than it explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.3,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 44
   }
 }

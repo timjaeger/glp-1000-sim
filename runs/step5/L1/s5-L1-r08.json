@@ -51,6 +51,41 @@
         "input_tokens": 19576,
         "output_tokens": 27023
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r08-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36435,
+        "output_tokens": 5694
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r08-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36435,
+        "output_tokens": 6528
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r08-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36435,
+        "output_tokens": 6688
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r08-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Within a year eleven million Medicare beneficiaries were on the dementia label, and Medicare became the largest single payer for these drugs.",
+          "field": "prose/lede",
+          "why": "Mechanism and magnitude: about 9 million new Part D users in roughly 12 months, behind prior authorisation and slow titration, is asserted with no uptake mechanism. The 11.3M reconciles arithmetically but is a very steep ramp."
+        },
+        {
+          "quote": "Employer adherence vendors and the nine Medicaid waivers count clinician-documented holidays of up to 8 weeks a year as adherent, which created a market for holiday codes from telehealth clinicians.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: a CMS waiver rule (Mar 2036) is shown spawning a priced telehealth 'holiday code' market, and employer vendors adopting the same rule, within months. No intermediate steps are given for the vendor or clinician response."
+        },
+        {
+          "quote": "Sportsbooks report handle spikes on Super Bowl and March Madness weeks as Reset users time holidays, and operators court them.",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism and magnitude: about 2.4M Reset subscribers timing drug holidays to big events is a convenient, unquantified claim. Those weeks always spike, and a small user pool would not visibly move national handle."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 7,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, this world keeps every 2034 harm and adds more. Those include about 20M gray-market users with counterfeit-pen history, anhedonia at 7–11%, children on drug with growth deficits, and 8 years of cycling harms still unmeasured. New harms add Medicare-scale exposure of older adults (hip-fracture HR ~1.3, 20–30k excess fractures a year, apathy confounded with prodromal dementia), nine adherence-conditioned Medicaid waivers, and a market in holiday codes. Inequality (bimagrumab excluded from Part D, cash-only muscle protection) and epistemic opacity (low-dose effects unmeasured, geriatricians cannot tell the drug from the disease) are structural and normalised, which puts this near 7.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events. These are the dementia label, Medicare/Medicaid coverage via label, the Novo scandal and EPI/GI litigation, q8w MariTide as an existing product in a new form, nine waivers, 'the flat' as a mainstream complaint, and continued managed price decline. Nothing contradicts a driver. mechanism: The dementia label to Medicare/Medicaid coverage to Part D spend chain is well shown, and the Novo documents to switching to litigation chain is plausible. Several downstream effects are asserted without steps: the holiday-code market, the sportsbook spikes, and the Part D 6% premium ceiling persisting to 2036, as in the listed claims. magnitude: Current use of 37.9% and ever-use of 48% sit inside the envelope, and the payer mix sums to 104.6M. Medicare 23.0M×$200×12 ≈ $55.2B, the dementia route 11.3M×$190×12 ≈ $25.8B, Medicaid 8.0M×$140×12 ≈ $13.4B, the cash breakdown sums to 36.0M, and the age check reconciles. Only the steep 11.3M Medicare uptake in a year strains it, and the world does not tabulate Medicare's non-dementia 11.7M as separate flows.",
+        "generativity": "The prose is carried by a three-person household in Mesa (Ray, Graciela and Marisol, with Rosie's quinceañera) and the Phoenix distribution centre. It has concrete scenes: the Sunday pen, half an egg, the grip-strength ball, the B12 gummies, the $65 holiday code, and a man checking his face to see if he means it. The world fields supply further hooks, such as The Villages, Ohio waiver counties, holiday tasting menus, and Thanksgiving dose scheduling. The closing line about 'a holiday from not forgetting' is strong, though the early prose is expository."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s5-L1-r08-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "~58% of children live in a household with a current user, and ~9M live with a grandparent on a dementia-label prescription.",
+          "field": "world/population/note",
+          "why": "magnitude: Only about 4–5M US children live with a grandparent at all, and the ~11.3M dementia-label users are mostly retirees. A figure of ~9M children living with one does not reconcile with the user counts."
+        },
+        {
+          "quote": "Medicare 23.0M (22%, now the largest single payer)",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: The same note puts legitimate cash at 36.0M users (34%), well above Medicare's 22%. At ~$200 a month, cash spending would also exceed Medicare's ~$55B. The headline claim that Medicare is the largest single payer contradicts the candidate's own payer mix."
+        },
+        {
+          "quote": "Adult obesity is ~30.5%. Obese never-users fell from ~19% to ~15% of adults",
+          "field": "world/population/note",
+          "why": "magnitude: With ~19M of the 104.6M users under BMI 30, about 31% of adults are on drug with BMI ≥30. Adding 15% obese never-users gives roughly 46% obesity, against a stated 30.5%. The parent world already had this gap, and the candidate widens it."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 6.5,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 38% of adults are on drug. Adherence conditioning sits in nine Medicaid waivers, in employer tracks with premium gaps and in promotion data. A ~20M-user gray market carries counterfeit and 'reta' harms, and the unmeasured reward blunting ('flatness' in ~30% of users) now reaches the elderly, where apathy is hard to tell from dementia. Elderly hip-fracture HR ~1.3 with no Part D access to bimagrumab, a Part D cost crisis, and class-stratified bodies and age-stratified status (Villages grip strength) add to it. Obesity falling to 30.5% and a real dementia benefit offset some of this, so the world is a society many would refuse to live in, but not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events. These are the tirzepatide dementia label with Medicare/Medicaid coverage, the MariTide q8w sBLA as an existing product in a new form, the Novo pancreatic scandal and litigation, nine adherence waivers, the 'flat' as a mainstream complaint, and managed price decline. Nothing contradicts them. mechanism: The label-to-coverage chain is well shown, but ~9M new Medicare dementia-label users within one year and the holiday-driven pie and sportsbook spikes are asserted rather than shown. The 'largest single payer' claim contradicts the payer mix (claim 2). magnitude: The adoption, ever-used, income and age figures sit inside the envelope, and the Medicare, Medicaid and spending arithmetic multiplies out. The ~9M grandchildren figure (claim 1) and the obesity-versus-user-BMI inconsistency (claim 3) are reconciliation failures.",
+        "generativity": "The prose has a continuous domestic scene: Ray's Sunday pen, Graciela's BMI 26 'too lean for Medicare', the $65 holiday code, the quinceañera cake and a face-checking mirror. Texture such as the grip-strength ball, B12 gummies and the shrinking bakery case implies many further scenes. The final lines about taking a holiday from not forgetting give it emotional charge. The world fields carry strong material, including holiday codes, grandparent-dinner dynamics, Villages status and the Ohio trial."
+      },
+      "plausibility": 6.5
+    },
+    {
+      "custom_id": "s5-L1-r08-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "~9M live with a grandparent on a dementia-label prescription",
+          "field": "world/population/note",
+          "why": "Magnitude: about 9M children in a grandparent's household would need roughly 12% of all US children, and every one of those grandparents would be on the dementia label. That is well above plausible multigenerational-household rates and does not fit 11.3M label users, most of whom have no co-resident grandchildren."
+        },
+        {
+          "quote": "(~11.3M, including the ~2.3M on the old CVD-only route)",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: about 9M new Medicare users within roughly 13 months of the Nov 2035 label means priority sNDA approval, then prior-authorisation uptake, then tirzepatide supply at that scale. The world asserts the number and shows no uptake curve or supply chain."
+        },
+        {
+          "quote": "after polling shows 44% of users have taken a 'drug holiday', the waivers count clinician-documented breaks of up to eight weeks a year as adherent",
+          "field": "world/events/4/event",
+          "why": "Mechanism: CMS-approved 1115 waivers rewriting adherence definitions in the same month a poll appears is a convenient coincidence. It skips the usual waiver-amendment process and the question of why q8w clinic-verified MariTide needs holiday carve-outs."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6.5,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm and adds more. Medicare spends ~$55B on a benefit worth about 1.4 points of dementia risk, with ~20–30k excess hip fractures a year and bimagrumab excluded from Part D. Nine Medicaid waivers and employer tracks condition coverage on adherence, so a market in 'holiday codes' follows. About 19.6M people use gray product, 104,000 mass-tort claims are pending, and apathy cannot be told from prodromal dementia in 11M older users. That leaves low-dose harm unmeasured, a structural, normalised and partly invisible ledger, though no collapse.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. The adoption delta (37.9), managed-decline prices, dementia label, Medicare/Medicaid public expansion, the Novo scandal and pancreatic litigation, q8w MariTide as an existing product in a new form, Medicaid waivers and the 'mainstream complaint' framing are all traceable, and nothing contradicts them. mechanism: The label-to-Medicare-to-Medicaid chain, the Novo documents leading to switching, and the holiday-code market are mostly shown. The weaker links are the instant 11.3M uptake (claim 2) and the same-month waiver redefinition of adherence (claim 3). magnitude: Current use of 37.9% and ever-use of 48% are inside the envelope. The payer mix sums to 104.6M, the Medicare, dementia and Medicaid spend lines multiply out, and the MariTide and tracks counts nest correctly. Only the ~9M grandparent-household count (claim 1) and a slightly inconsistent pediatric aggregate are off.",
+        "generativity": "The prose gives named characters (Ray, Graciela, Marisol, Don) in concrete scenes: the Sunday pen, the grip-strength ball, the holiday-code call, the quinceañera cake and 'checks his face to see if it looks like he means it'. The world fields add texture such as Thanksgiving dose timing, The Villages status markers and calendared intimacy. The ending leans slightly on explanation, but daily life is largely shown."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Within a year eleven million Medicare beneficiaries were on the dementia label, and Medicare became the largest single payer for these drugs.",
+        "field": "prose/lede",
+        "why": "Mechanism and magnitude: about 9 million new Part D users in roughly 12 months, behind prior authorisation and slow titration, is asserted with no uptake mechanism. The 11.3M reconciles arithmetically but is a very steep ramp."
+      },
+      {
+        "quote": "Employer adherence vendors and the nine Medicaid waivers count clinician-documented holidays of up to 8 weeks a year as adherent, which created a market for holiday codes from telehealth clinicians.",
+        "field": "world/interior_life/effect_on_work",
+        "why": "Mechanism: a CMS waiver rule (Mar 2036) is shown spawning a priced telehealth 'holiday code' market, and employer vendors adopting the same rule, within months. No intermediate steps are given for the vendor or clinician response."
+      },
+      {
+        "quote": "Sportsbooks report handle spikes on Super Bowl and March Madness weeks as Reset users time holidays, and operators court them.",
+        "field": "world/interior_life/effect_on_art_and_play",
+        "why": "Mechanism and magnitude: about 2.4M Reset subscribers timing drug holidays to big events is a convenient, unquantified claim. Those weeks always spike, and a small user pool would not visibly move national handle."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 6.67,
+      "public_health": 6.83,
+      "cohesion": 6.67,
+      "epistemic": 6.83,
+      "overall": 7.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 7.0
+    },
+    "plausibility": 7.35,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against 2026, this world keeps every 2034 harm and adds more. Those include about 20M gray-market users with counterfeit-pen history, anhedonia at 7–11%, children on drug with growth deficits, and 8 years of cycling harms still unmeasured. New harms add Medicare-scale exposure of older adults (hip-fracture HR ~1.3, 20–30k excess fractures a year, apathy confounded with prodromal dementia), nine adherence-conditioned Medicaid waivers, and a market in holiday codes. Inequality (bimagrumab excluded from Part D, cash-only muscle protection) and epistemic opacity (low-dose effects unmeasured, geriatricians cannot tell the drug from the disease) are structural and normalised, which puts this near 7.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events. These are the dementia label, Medicare/Medicaid coverage via label, the Novo scandal and EPI/GI litigation, q8w MariTide as an existing product in a new form, nine waivers, 'the flat' as a mainstream complaint, and continued managed price decline. Nothing contradicts a driver. mechanism: The dementia label to Medicare/Medicaid coverage to Part D spend chain is well shown, and the Novo documents to switching to litigation chain is plausible. Several downstream effects are asserted without steps: the holiday-code market, the sportsbook spikes, and the Part D 6% premium ceiling persisting to 2036, as in the listed claims. magnitude: Current use of 37.9% and ever-use of 48% sit inside the envelope, and the payer mix sums to 104.6M. Medicare 23.0M×$200×12 ≈ $55.2B, the dementia route 11.3M×$190×12 ≈ $25.8B, Medicaid 8.0M×$140×12 ≈ $13.4B, the cash breakdown sums to 36.0M, and the age check reconciles. Only the steep 11.3M Medicare uptake in a year strains it, and the world does not tabulate Medicare's non-dementia 11.7M as separate flows.",
+      "generativity": "The prose is carried by a three-person household in Mesa (Ray, Graciela and Marisol, with Rosie's quinceañera) and the Phoenix distribution centre. It has concrete scenes: the Sunday pen, half an egg, the grip-strength ball, the B12 gummies, the $65 holiday code, and a man checking his face to see if he means it. The world fields supply further hooks, such as The Villages, Ohio waiver counties, holiday tasting menus, and Thanksgiving dose scheduling. The closing line about 'a holiday from not forgetting' is strong, though the early prose is expository."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.483,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 4
   }
 }

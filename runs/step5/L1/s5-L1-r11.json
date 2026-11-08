@@ -52,6 +52,41 @@
         "input_tokens": 19646,
         "output_tokens": 26019
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r11-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37145,
+        "output_tokens": 1282
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r11-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37145,
+        "output_tokens": 1477
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r11-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37145,
+        "output_tokens": 7969
+      }
     ]
   },
   "world": {
@@ -321,6 +356,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r11-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "\"us_adults_ever_used_pct\": 41.5",
+          "field": "world/population/us_adults_ever_used_pct",
+          "why": "The envelope caps ever-used at 42.3, so 41.5 is inside it, but it implies 4.0 points of new initiators in two years, near the top of the allowed rise (4.8) against a 1.8-point rise in current use. Together with the 47.5% cycled share, it strains the persistence arithmetic."
+        },
+        {
+          "quote": "Deliberate drug holidays by people who keep an active prescription count as 'on drug', and that raises measured persistence.",
+          "field": "world/population/note",
+          "why": "The note invents a measurement convention to make the flow arithmetic close. It also sits badly with the 1-3 week holidays and the roughly 40% holiday-taking figure, since users who restart after holidays would otherwise be counted as cyclers."
+        },
+        {
+          "quote": "Pilots under the FAA stable-dose rule, DoD enrollees and some police departments whose union funds pay for the drug cannot holiday without medical sign-off",
+          "field": "world/interior_life/effect_on_work",
+          "why": "The FAA 'stable dose' rule and a major DoD programme appearing and spreading within about two years is a fast regulatory move. The cash flow behind ~150k DoD enrollees at $190 net per month is plausible, but the rule's own justification (stable dose for 3 months) is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world carries forward the 2034 harms (gray market of 18.5M, counterfeit deaths, ~19M users with BMI under 30, hip-fracture HR 1.3–1.45, children's growth deficits), and adds a NAION class warning at roughly 2,500–4,000 excess cases a year. A holiday-restart ED burden (~30k visits) and pressure on soldiers and pilots add to it. It is a recognisably harder society, but there is no collapse, flatness is openly discussable, and employer pressure has partly receded after the Ohio ruling, so the score sits just below the 'refuse to live in' anchor.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is +1.8, the vision label is a July 2035 NAION class warning, the Keep co-package respects the approval rules, pediatric approval follows a Jan 2035 filing, the military programme comes from the NDAA, and the flatness complaint is mainstream. No driver is contradicted. mechanism: Most changes have chains (India registration to rerouting to a repackager outbreak; the Ohio ruling to LSA decline). Others are asserted: the 2035 NAION pooled analysis and label arrive abruptly, the FAA and DoD rules appear quickly, and the holiday phenomenon sits oddly beside the claimed rise in measured persistence (claim 2). magnitude: Current use is 29.8 and ever-used 41.5, both inside the envelope, and the payer mix sums to 82.2M. Users are up ~5.5M, though, and the ever-used rise is near the cap. The cycled-off-and-on figure and the holiday counting convention are strained (claims 1 and 2).",
+        "generativity": "The prose shows a pilot's morning, an eye exam, a captain eating almonds, a daughter's worksheet and an anniversary holiday dilemma. These give concrete scenes and strong implied characters. Holiday dosing, the readiness programme and the Keep bundle supply plenty of story hooks."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s5-L1-r11-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"us_adults_ever_used_pct\": 41.5",
+          "field": "world/population/us_adults_ever_used_pct",
+          "why": "This is 4.0 points above 2034's 37.5, inside the 4.8 cap, but the note's own flow arithmetic (4.0 new initiators while on-drug current is only up 1.8) implies a large churn that stretches the stated one-third persistence; 'drug holidays count as on drug' is an ad hoc fix. Magnitude is near the edge."
+        },
+        {
+          "quote": "Short holidays of 1–3 weeks produce little measurable regain, which is part of why holidays spread.",
+          "field": "world/safety_ledger/weight_regain/prevalence_note",
+          "why": "A semaglutide or tirzepatide half-life of about a week means a 2–4 week gap leaves substantial drug on board, so 'little regain' is plausible. But 40% of users taking deliberate holidays to feel more emotion, with platform planners and cultural rituals, is asserted as a mass behaviour change inside two years with no clear mechanism."
+        },
+        {
+          "quote": "Lilly's 'Keep' bundle (Zepbound plus bimagrumab, launched Sep 2035) is $449 a month cash on LillyDirect, against bimagrumab's $1,150 list, and ~1.4M people use bimagrumab combinations",
+          "field": "world/access/note",
+          "why": "Bimagrumab was approved Jun 2034 and co-packaged only 15 months before 2036, yet it reaches ~1.4M users, including normal-weight off-label users, with counterfeit vials already circulating and a $1,150 list drug. This is a very fast ramp with a thin mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Compared with the 2026 reference, this world has a very large drug-using population (29.8%) with ~18.5M on gray or counterfeit product, contaminated 'reta' vials (~260 infections, 11 deaths), a NAION class warning, and unmeasured effects of cycling and microdosing in ~19M people without obesity. Layered on top are employer retreat, military and police readiness conditioning, adherence-based promotions, flatness as a mainstream complaint, and pediatric use despite growth deficits. It is a recognisably harder society with persistent stratification by payment route, but most harms are managed and nameable and there is no mass death, so it sits a bit above the 2034 start.",
+        "plausibility": "driver_fidelity: All ten drivers are traceable. Adoption is +1.8, the pediatric under-12 approval follows the filing-to-approval rule, the NAION class warning fits vision_class_label, Keep fits muscle_preserving_combo, the DoD program fits workforce_military, and employer coverage falls from 29 to 23. Normalisation and the mainstream complaint appear in culture and interior-life sections. mechanism: Employer retreat leads to cash links, India's registration to rerouting, and NAION to FAA exams, all clearly chained. Mass 'holiday' culture (the second claim) and the fast bimagrumab ramp (the third) are asserted rather than shown. magnitude: Current 29.8 and ever 41.5 are inside the envelope, but ever-used rises 4.0 against a 1.8 current rise and rests on an ad hoc 'holidays count as on' reconciliation (the first claim). The payer sums reconcile to 82.2M, the Part D arithmetic works, and the DoD figure is roughly correct, but the 11% of active duty and the commercial 12.8M against a falling 23% coverage are loosely consistent.",
+        "generativity": "The prose follows Marcus, a pilot, through the eye exam, the stable-dose conflict over his anniversary holiday, the captain with almonds, and his daughter's pamphlet, which shows rather than explains. Wider texture includes wedding RSVP cards with off-weeks, creatine shops next to dentists, and holiday-weekend sportsbook spikes. The prose reads a little like a news feature up front, but the scenes imply many characters."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s5-L1-r11-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "~150k active-duty members are enrolled (~11% of active duty), concentrated in Army and Marine Corps.",
+          "field": "world/state/workforce_or_military",
+          "why": "Magnitude and mechanism: a voluntary programme created by the Dec 2035 NDAA is said to enrol roughly one in nine active-duty troops through military treatment facilities within about a year. The candidate shows no capacity, procurement or enrolment ramp that would produce that."
+        },
+        {
+          "quote": "retailers report 'off-week' spikes in dessert and snack purchases in high-density zips, timed to holiday weekends and Thanksgiving",
+          "field": "world/economy/food_and_beverage/state",
+          "why": "Mechanism: individual holidays are staggered, and a sales spike at Thanksgiving is confounded by ordinary seasonality. A measurable aggregate retail signal attributed to holidays from drugs is asserted, not derived."
+        },
+        {
+          "quote": "~1.4M people use bimagrumab combinations (~0.9M cash bundle, ~0.5M commercial)",
+          "field": "world/access/note",
+          "why": "Magnitude: about 0.9M people are on a $449/month cash bundle in the ~14 months since its Sep 2035 launch. The 0.5M commercial users also sit awkwardly beside the stated retreat of employer tracks and a $1,150 list price."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against 2026, the world is far harder. It has about 30% of adults on drug, an 18.5M gray market with deaths from contaminated vials, an established NAION signal, and ~19M people without obesity on drug with unmeasured long-run effects. Autonomy is eroded by employer adherence premiums, DoD and FAA stable-dose rules that bar holidays, and state-level pediatric fights. Inequality is held in place by payment route. It is not at the structural-and-invisible level, because harms are named and discussed, so epistemic is only moderate. Overall is a society many would find hard to accept.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. The pediatric driver comes via a Jan 2035 filing and Feb 2036 approval, within the envelope. The muscle-preserving combo comes via the co-packaged Keep bundle, with the co-formulation filed but undecided. The vision label, military programme, employer retreat, counterfeits, normalisation and mainstream complaint are all present. mechanism: the chains are mostly shown, such as the India registration rerouting flows, the NAION pooled analysis leading to the label and then the FAA rule, and the Ohio ruling leading to operators dropping adherence data. Several steps are asserted, though: 40% holiday-taking against ~8% clinical anhedonia, the aggregate off-week retail effects (claim 2), the FAA rulemaking within two months, and the fast military scale-up (claim 1). magnitude: on-drug 29.8% and ever-used 41.5% sit inside the envelope, and the income thirds bracket the national figure. The payer mix sums to 82.2M and the cash breakdown to 31.9M. The cohort flows, age check, Medicare ($38.3B), dementia ($6.9B) and DoD ($0.34B) arithmetic all reconcile. The only soft spots are the large military and bimagrumab user counts (claims 1 and 3).",
+        "generativity": "The prose follows a pilot through an eye exam and a gate, with a spouse's holiday text, a cookie sleeve in 14C and a child's growth-chart pamphlet. It shows rather than explains, and it ties the stable-dose rule, the NAION warning and the holiday culture into one morning. The world fields add concrete scenes such as holiday menus, holiday planners on RSVP cards and Fayetteville spouses. The article front half is more expository than filmic."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "\"us_adults_ever_used_pct\": 41.5",
+        "field": "world/population/us_adults_ever_used_pct",
+        "why": "The envelope caps ever-used at 42.3, so 41.5 is inside it, but it implies 4.0 points of new initiators in two years, near the top of the allowed rise (4.8) against a 1.8-point rise in current use. Together with the 47.5% cycled share, it strains the persistence arithmetic."
+      },
+      {
+        "quote": "Deliberate drug holidays by people who keep an active prescription count as 'on drug', and that raises measured persistence.",
+        "field": "world/population/note",
+        "why": "The note invents a measurement convention to make the flow arithmetic close. It also sits badly with the 1-3 week holidays and the roughly 40% holiday-taking figure, since users who restart after holidays would otherwise be counted as cyclers."
+      },
+      {
+        "quote": "Pilots under the FAA stable-dose rule, DoD enrollees and some police departments whose union funds pay for the drug cannot holiday without medical sign-off",
+        "field": "world/interior_life/effect_on_work",
+        "why": "The FAA 'stable dose' rule and a major DoD programme appearing and spreading within about two years is a fast regulatory move. The cash flow behind ~150k DoD enrollees at $190 net per month is plausible, but the rule's own justification (stable dose for 3 months) is asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.33,
+      "inequality": 6.33,
+      "public_health": 6.5,
+      "cohesion": 5.5,
+      "epistemic": 5.33,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.5,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.27,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "The world carries forward the 2034 harms (gray market of 18.5M, counterfeit deaths, ~19M users with BMI under 30, hip-fracture HR 1.3–1.45, children's growth deficits), and adds a NAION class warning at roughly 2,500–4,000 excess cases a year. A holiday-restart ED burden (~30k visits) and pressure on soldiers and pilots add to it. It is a recognisably harder society, but there is no collapse, flatness is openly discussable, and employer pressure has partly receded after the Ohio ruling, so the score sits just below the 'refuse to live in' anchor.",
+      "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is +1.8, the vision label is a July 2035 NAION class warning, the Keep co-package respects the approval rules, pediatric approval follows a Jan 2035 filing, the military programme comes from the NDAA, and the flatness complaint is mainstream. No driver is contradicted. mechanism: Most changes have chains (India registration to rerouting to a repackager outbreak; the Ohio ruling to LSA decline). Others are asserted: the 2035 NAION pooled analysis and label arrive abruptly, the FAA and DoD rules appear quickly, and the holiday phenomenon sits oddly beside the claimed rise in measured persistence (claim 2). magnitude: Current use is 29.8 and ever-used 41.5, both inside the envelope, and the payer mix sums to 82.2M. Users are up ~5.5M, though, and the ever-used rise is near the cap. The cycled-off-and-on figure and the holiday counting convention are strained (claims 1 and 2).",
+      "generativity": "The prose shows a pilot's morning, an eye exam, a captain eating almonds, a daughter's worksheet and an anniversary holiday dilemma. These give concrete scenes and strong implied characters. Holiday dosing, the readiness programme and the Keep bundle supply plenty of story hooks."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.698,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 34
   }
 }

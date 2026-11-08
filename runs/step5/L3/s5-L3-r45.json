@@ -51,6 +51,41 @@
         "input_tokens": 19562,
         "output_tokens": 20949
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r45-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36017,
+        "output_tokens": 5809
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r45-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36017,
+        "output_tokens": 8253
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r45-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36017,
+        "output_tokens": 7975
+      }
     ]
   },
   "world": {
@@ -332,6 +367,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r45-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Roughly 4 of those 9 points came through the regrown gray market, 3 through cheaper TrumpRx tiers and 2 through Medicaid AUD coverage.",
+          "field": "world/population/note",
+          "why": "Magnitude: the bottom third is about 92M adults, so 2 points is about 1.8M people. That exceeds the world's own total of ~1.6M Medicaid AUD users, and Medicaid AUD only grew by about 0.7M since 2034. Putting the whole ~3.7M gray-market growth in the bottom third is also asserted rather than shown."
+        },
+        {
+          "quote": "within a year about 9 million people buy the tablet that matches tirzepatide's weight loss for cash",
+          "field": "world/events/0/event",
+          "why": "Mechanism and magnitude: oral amycretin had ~2.2M users in Dec 2034 at $449 cash. A $299 price is assumed to produce a fourfold jump in cash users within 12 months with no uptake chain shown."
+        },
+        {
+          "quote": "and about 40% of MA-PD plans now require ≥80% proportion-of-days-covered to renew a PA.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: guidance issued in Dec 2035 for CY2036 is said to have moved 40% of MA-PD plans to a strict adherence rule within one plan year. No plan-level or CMS incentive is given, and Part D prior-authorisation rules would normally resist such a rule."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 8,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026 (severity 3), this world keeps every 2034 harm and adds more. Adherence conditioning now reaches 15.5M track members and Medicare continuation rules. About 9.5M people use unmonitored 'research' retatrutide, with tachyarrhythmia and 10× dosing errors. Adolescent puberty is delayed 8–10 months and under-12 access is restricted for Medicaid children, which is sharp inequality by class and age. It stops short of 8–9 because adults on-drug are mostly functional, harms are named and measured, and states are starting to push back.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and dated events. Adoption is +8.8, price decline is managed, conditioning reaches Medicare, Foundayo AUD is approved, the FDA pediatric safety communication is issued, and oral parity is realised with an existing product. The gray-market regrowth, the 11 state restrictions and the marketed-feature framing are all shown.\nmechanism: The domestic gray market follows credibly from the tariff and transshipment. Some chains are only asserted: the jump to 9M cash amycretin buyers, 40% of MA-PD plans adopting adherence rules in one year (claim 3), and 12–17 use rising to 4.3% right after the puberty-delay safety communication.\nmagnitude: Population totals, age bands, income thirds, payer mix, Medicare dollar figures and pediatric counts all reconcile and sit inside the envelope. The bottom-third decomposition fails, because the 2 points from Medicaid AUD exceed the ~1.6M Medicaid AUD users in the world (claim 1). The 9M cash amycretin figure is also stretched.",
+        "generativity": "The Tanya Bell scene carries a lot: a Sharpie-marked syringe, a RESEARCH USE ONLY label in Pfizer's font, a client on Part D Zepbound, a Medicaid child's lapsed prescription, and a sister on the $149 pill. The world fields add local texture: 'peptide thin' in Houston, pill nights in Dayton, Bread Alone congregations, and Sacramento's 'craving care' rebranding. Many scenes and characters are implied, in places or situations that differ by payer class."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s5-L3-r45-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "About 31k children in restricting states had their prescriptions lapse at continuation because they could not reach a pediatric endocrinologist.",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: the whole 6–11 pool is only ~84–100k, and eleven state laws are only months old (Mississippi's came in May 2036). 31k lapses implies a third of all young users lost access almost at once, with no chain shown for how the requirement bit that fast."
+        },
+        {
+          "quote": "within a year about 9 million people buy the tablet that matches tirzepatide's weight loss for cash",
+          "field": "world/events/0/event",
+          "why": "mechanism: oral amycretin had ~2.2M users in Dec 2034, so ~9M cash buyers within a year implies a ~4x jump from a one-third price cut ($449 to $299). The world asserts this rather than showing supply, uptake or demand mechanics."
+        },
+        {
+          "quote": "A PEDSnet/Medicaid claims analysis of ~88,000 adolescents who started at 12–13 found menarche and Tanner progression delayed ~8–10 months versus matched controls.",
+          "field": "world/safety_ledger/13/prevalence_note",
+          "why": "mechanism: Tanner staging and menarche timing are clinical measures that claims data do not contain, and 88k starters aged 12–13 with matched follow-up in two years is a large, fast result. Sample size and the measurement itself are asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.5,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Measured against the 2026 reference (about 3), the world is a heavily stratified, surveilled one. About 15.5M people are in adherence-logged tracks and conditioning has reached Medicare. Gray-market users take unmonitored retatrutide (9.5M gray-market users; tachyarrhythmia ED visits, 10x dosing errors). Medicaid children carry measurable growth and puberty harm, and 31k lapsed in restricting states. Adult harms are real but diffuse, and the harm is named and measured rather than hidden, which holds epistemic and cohesion near 6.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +8.8pp exactly, and conditioning shows in tracks and MA-PD criteria. Oral parity is realised with the existing amycretin product, gray-market resurgence runs 5.8M to 9.5M, and state restrictions appear as 11 under-12 laws plus mood-marketing bans. mechanism: most changes have chains (tariff leading to domestic synthesis, the Medicaid pediatric signal, and the CMS guidance). The 31k lapse, the 9M amycretin cash buyers and the claims-based Tanner finding are asserted rather than shown (claims 1–3). There is also a minor inconsistency: New Jersey appears in the mood-ban prose but not in the world fields. magnitude: on-drug 33.5 and ever-used 44 are inside the envelope, and the income thirds, age bands, cycling arithmetic, payer mix (92.5M), Medicare spend and AUD users all reconcile. Remaining gaps are small, such as 15.5M track 'enrollees' described as 'workers' and an approval pace that is permitted but quick.",
+        "generativity": "The Tanya Bell vignette is strong and concrete: the RESEARCH USE ONLY vial, the Sharpie syringe line, Mr. Odom's bone-scan card, Dre's specialist wait, and her sister's $149 pill. Fields such as 'peptide thin' in Houston, pill nights, and the Amazon sync-outage EEOC charge imply many further scenes. The prose also carries several class and region contrasts (Charlotte and Austin versus the Delta)."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s5-L3-r45-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Roughly 4 of those 9 points came through the regrown gray market, 3 through cheaper TrumpRx tiers and 2 through Medicaid AUD coverage.",
+          "field": "world/population/note",
+          "why": "Fails magnitude: 2 points of the bottom third is about 1.8M people, more than the entire 1.6M Medicaid AUD population and far above its ~0.7M growth since 2034. The 4 gray-market points (~3.7M) also equal all of the gray market's growth (5.8M to 9.5M), leaving none for middle and upper income users."
+        },
+        {
+          "quote": "A PEDSnet/Medicaid claims analysis of ~88,000 adolescents who started at 12–13 found menarche and Tanner progression delayed ~8–10 months versus matched controls.",
+          "field": "world/safety_ledger/growth_deceleration",
+          "why": "Fails mechanism: claims data do not record Tanner stage or menarche timing, and PEDSnet is an EHR network. A cohort of this size reaching a precise puberty-delay estimate by mid-2035 is asserted, not shown."
+        },
+        {
+          "quote": "within a year about 9 million people buy the tablet that matches tirzepatide's weight loss for cash",
+          "field": "world/events/0/event",
+          "why": "Fails magnitude and mechanism: oral amycretin had ~2.2M users at the end of 2034, and the jump to ~9M cash buyers at $299 within a year is asserted from a single price cut. That is about $32B a year, and no uptake chain or cannibalisation is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 7,
+        "cohesion": 6.5,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Against the 2026 reference, this world carries about 33% of adults on drug, 15.5M people in adherence-logged tracks, Medicare continuation criteria, and a poor population on unmonitored 'research' retatrutide with tachyarrhythmia and dosing-error harms. It also shows a Medicaid-concentrated pediatric growth and puberty signal, 31k children lapsed under restriction laws, EPI and gastroparesis mass torts, and a merged blunting market (3.6M calm subscribers plus 4.9M on-label AUD users) with no low-dose data until 2038. Obesity falling to 30.8% and cheaper pills offset some of this, but the stratification, conditioning and child harms are structural and normalised. I score it 7.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. Gray-market resurgence (5.8M to 9.5M), 11 state under-12 laws and mood-marketing bans, Foundayo AUD, managed price decline, Medicare and employer conditioning, and oral parity realised through existing oral amycretin all appear. The only slip is New Jersey's ban appearing in the politics prose but not in the events. mechanism: Most changes have chains (tariff leading to domestic synthesis, the DSC leading to state laws, CMS guidance leading to PDC criteria). The puberty-from-claims-data finding and the jump to 9M cash amycretin users are asserted (claims 2 and 3). magnitude: The headline figures sit inside the envelope (33.5% on drug, 44% ever used), and the age, payer, cycling, Medicare spend and pediatric arithmetic all reconcile. The bottom-third decomposition fails to reconcile with the Medicaid AUD and gray-market totals (claim 1), and the 9M amycretin jump strains the envelope's spirit.",
+        "generativity": "The Tanya Bell vignette is concrete: the Sharpie-marked syringe, the 'peptide thin' look, Dre's question about the law, and the sister on the $149 pill. The world fields add specific texture: pill nights, Nashville 'unmedicated' sessions, the Amazon worker's sync outage, and the Jackson drive. Many scenes and characters are implied across Houston, the Delta and the Sacramento and Albany legislatures."
+      },
+      "plausibility": 6.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Roughly 4 of those 9 points came through the regrown gray market, 3 through cheaper TrumpRx tiers and 2 through Medicaid AUD coverage.",
+        "field": "world/population/note",
+        "why": "Magnitude: the bottom third is about 92M adults, so 2 points is about 1.8M people. That exceeds the world's own total of ~1.6M Medicaid AUD users, and Medicaid AUD only grew by about 0.7M since 2034. Putting the whole ~3.7M gray-market growth in the bottom third is also asserted rather than shown."
+      },
+      {
+        "quote": "within a year about 9 million people buy the tablet that matches tirzepatide's weight loss for cash",
+        "field": "world/events/0/event",
+        "why": "Mechanism and magnitude: oral amycretin had ~2.2M users in Dec 2034 at $449 cash. A $299 price is assumed to produce a fourfold jump in cash users within 12 months with no uptake chain shown."
+      },
+      {
+        "quote": "and about 40% of MA-PD plans now require ≥80% proportion-of-days-covered to renew a PA.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: guidance issued in Dec 2035 for CY2036 is said to have moved 40% of MA-PD plans to a strict adherence rule within one plan year. No plan-level or CMS incentive is given, and Part D prior-authorisation rules would normally resist such a rule."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.17,
+      "autonomy": 7.0,
+      "inequality": 7.67,
+      "public_health": 7.0,
+      "cohesion": 6.17,
+      "epistemic": 6.17,
+      "overall": 7.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.0,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "Measured against 2026 (severity 3), this world keeps every 2034 harm and adds more. Adherence conditioning now reaches 15.5M track members and Medicare continuation rules. About 9.5M people use unmonitored 'research' retatrutide, with tachyarrhythmia and 10× dosing errors. Adolescent puberty is delayed 8–10 months and under-12 access is restricted for Medicaid children, which is sharp inequality by class and age. It stops short of 8–9 because adults on-drug are mostly functional, harms are named and measured, and states are starting to push back.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and dated events. Adoption is +8.8, price decline is managed, conditioning reaches Medicare, Foundayo AUD is approved, the FDA pediatric safety communication is issued, and oral parity is realised with an existing product. The gray-market regrowth, the 11 state restrictions and the marketed-feature framing are all shown.\nmechanism: The domestic gray market follows credibly from the tariff and transshipment. Some chains are only asserted: the jump to 9M cash amycretin buyers, 40% of MA-PD plans adopting adherence rules in one year (claim 3), and 12–17 use rising to 4.3% right after the puberty-delay safety communication.\nmagnitude: Population totals, age bands, income thirds, payer mix, Medicare dollar figures and pediatric counts all reconcile and sit inside the envelope. The bottom-third decomposition fails, because the 2 points from Medicaid AUD exceed the ~1.6M Medicaid AUD users in the world (claim 1). The 9M cash amycretin figure is also stretched.",
+      "generativity": "The Tanya Bell scene carries a lot: a Sharpie-marked syringe, a RESEARCH USE ONLY label in Pfizer's font, a client on Part D Zepbound, a Medicaid child's lapsed prescription, and a sister on the $149 pill. The world fields add local texture: 'peptide thin' in Houston, pill nights in Dayton, Bread Alone congregations, and Sacramento's 'craving care' rebranding. Many scenes and characters are implied, in places or situations that differ by payer class."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.252,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 9
   }
 }

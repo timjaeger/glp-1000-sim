@@ -49,6 +49,41 @@
         "input_tokens": 19506,
         "output_tokens": 22869
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r19-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36119,
+        "output_tokens": 6556
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r19-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36119,
+        "output_tokens": 7288
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r19-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36119,
+        "output_tokens": 5844
+      }
     ]
   },
   "world": {
@@ -343,6 +378,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r19-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer exits for the 2036 plan year pushed ≈3M people off coverage at once. Most moved to cash pills or imports, but ≈3.1M stopped.",
+          "field": "world/safety_ledger/8/prevalence_note",
+          "why": "This fails reconciliation. If only about 3M lost coverage and most of them moved to cash or imports, 3.1M cannot have stopped. The 3.1M stopped figure is larger than the whole group said to be displaced."
+        },
+        {
+          "quote": "Lilly's pill, Foundayo, clears the body fast enough that skipping it Friday brings appetite and something like pleasure back by Saturday night.",
+          "field": "prose/paragraph_on_the_grey",
+          "why": "This fails mechanism. A small-molecule oral with a half-life of well over a day would not be cleared, and appetite and reward would not recover, after one skipped dose. The whole 'Foundayo Fridays' holiday culture rests on an unshown pharmacokinetic claim."
+        },
+        {
+          "quote": "Paying even falling prices for a third of the workforce indefinitely turned out to be more than many could stomach.",
+          "field": "prose/paragraph_on_employers",
+          "why": "This fails mechanism. Employer coverage drops from 64% to 49% in one plan year while net prices fall about 9% and pharmacy trend falls to +4%. The only cause offered is asserted sentiment, and the stated trend and price figures point the other way."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Starting from the 2026 reference, this world keeps and deepens the 2034 harms. About 21,000 excess hip fractures a year and 2.5M sarcopenic older users appear in the bone and lean-mass entries. 37% of users report feeling 'flattened', and about 9.2M use counterfeit tablets. An ungated cash tier of about 30M has no counselling or DEXA, and the vertebral tail falls on women 50–64 who cycled off. Falling prices, $149 starters, an unchanged Medicare $50 copay and a named, discussed, studied harm ledger keep it near 6 rather than higher. Coercion through tenure gates is also shrinking.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Current use is 34.9% (28.5+6.4), prices fall about $50 under managed decline, employer coverage drops 64%→49%, and the Feb 2036 lean-mass and bone warning delivers the muscle_bone_wave driver. Oral parity is met by the existing 50 mg pill, there are no new indications and no 2036 contamination cluster, and the Pew survey and 'grey' vocabulary show the mainstream complaint. mechanism: Bone-wave, backlash and oral-switch chains are shown, but the employer retreat (claim 3), the near-doubling of cash users (16.0M→29.9M) and the oral jump from 36% to 55% are largely asserted. The Foundayo holiday premise (claim 2) is weak, and the prose says Ray's A1c of 6.1 is 'a tenth short' of a code that sits at 6.5. magnitude: Population, ever-use, income thirds, age bands, payer shares, Medicare, Medicaid and market arithmetic, NAION and fracture figures all reconcile and sit inside the envelope. The bimagrumab filing in Mar 2036 with no decision before 2037 obeys the approval rules. The one clear failure is the 3M-displaced versus 3.1M-stopped contradiction (claim 1).",
+        "generativity": "The Lorraine Pruitt prose gives a full day: the 5:40 pill, the bus depot, Tamika's Telegram-checked Indian tablets, the DEXA van outside the Kroger, the church-basement group and a scale nobody reads. Named places and institutions (Memphis Whole Table dinners, Dayton and Kettering, the Southern Baptist resolution, 'Foundayo Fridays', Saturday-only bars) imply many more scenes. It shows rather than explains, and secondary characters (Ray, Tamika, Keisha) are sketched."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s5-L2-r19-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer exits for the 2036 plan year pushed ≈3M people off coverage at once. Most moved to cash pills or imports, but ≈3.1M stopped.",
+          "field": "world/safety_ledger/weight regain on discontinuation/prevalence_note",
+          "why": "The numbers contradict each other: if about 3M lost coverage and most moved to cash or imports, the stoppers cannot number 3.1M. This is a narrative inconsistency on the key employer_retreat chain, and it also leaves the 3.1M and the 1.6M net commercial decline unreconciled."
+        },
+        {
+          "quote": "His A1c was 6.1, a tenth short of the code.",
+          "field": "prose/a_day_in_the_life",
+          "why": "The diabetes threshold is 6.5, not 6.2, so 6.1 is not 'a tenth short'. This is a factual and internal error in the scene that dramatises the coded-tier mechanism, and it undermines the account of how coverage actually fell away."
+        },
+        {
+          "quote": "The 65+ band grew more slowly (21→26%) because the bone wave pushed about one in four older ever-users onto a medically advised pause or a permanent stop.",
+          "field": "world/population/note",
+          "why": "The same note lists only ≈2.6M older users on bone pauses or post-fracture stops, while 18.2M are current 65+ users. One in four older ever-users would be at least 5M, so the explanation does not reconcile with the world's own figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against the 2026 reference this is a clearly harder society. 35% of adults are on the drug, with ≈21,000 excess hip fractures a year, 2.5M sarcopenic older users and ≈2,700 NAION cases. It also has mainstream anhedonia ('the grey', 37% report feeling flattened), ≈9.2M users of counterfeit tablets, and an unmonitored ≈30M cash tier. Employer retreat adds coverage loss and forced cycling, and the backlash polarises families and congregations. Prices are falling and use rates converge across income, which keeps it below 7, but nearly all the 2034 harms are inherited in full and several grew.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly +6.4, managed decline appears in the 2035-01 prices, employer retreat in the 64→49% fall, muscle_bone_wave in the Feb 2036 warning, and oral parity via the existing 50 mg pill. Backlash appears in the SBC and NAAFA items, and mainstream_complaint in the Pew survey. There is no market shock and no new indication. mechanism: Most chains are shown (price cuts, cheap pills, employer exits, fracture analysis, bimagrumab filing). Others are asserted: orals jumping from 36% to 55%, NAAFA doubling, and the contradictory 3M-off-coverage versus 3.1M-stopped line (claim 1). The A1c error in the prose (claim 2) is a further narrative slip. magnitude: Current use (34.9) and ever use (47.5) are inside the envelope. Age bands, income thirds, payer mix (sums to 96.3M and 100%), Medicare and Medicaid spend, the $190B market, the fracture and NAION arithmetic, and the approval timing (bimagrumab filed Mar 2036, decision not before 2037) all reconcile. The only gaps are the 3M/3.1M inconsistency and the one-in-four versus 2.6M bone-pause figure (claim 3).",
+        "generativity": "Lorraine's morning is vivid: the pill at 5:40, Ray's lost coverage, Tamika's Indian tablets checked against a Telegram lot list, the DEXA van at the Kroger, and the Kettering church-basement group. The world fields also carry rich texture ('Foundayo Fridays', Whole Table dinners, 'Saturday people'). The scene is short and explains a little, but characters and scenes are clearly implied."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s5-L2-r19-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer exits for the 2036 plan year pushed ≈3M people off coverage at once. Most moved to cash pills or imports, but ≈3.1M stopped.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Fails mechanism and reconciliation. If about 3M lost coverage and 3.1M stopped, almost none can have moved to cash or imports. The population note says the 3.1M 'did not move to cash', and the prose repeats 'most moved to cash'."
+        },
+        {
+          "quote": "Lilly's pill, Foundayo, clears the body fast enough that skipping it Friday brings appetite and something like pleasure back by Saturday night.",
+          "field": "prose/the_grey_and_dose_holidays",
+          "why": "Fails mechanism. A daily oral small-molecule agonist with a half-life of roughly a day or more would not lose its effect within one or two skipped doses. The 'Foundayo Fridays' phenomenon, and the roughly 30M people taking planned holidays, rests on this pharmacology."
+        },
+        {
+          "quote": "cash/direct 31.0% (29.9M, including ≈4.9M 'calm' and 'focus' subscribers)",
+          "field": "world/access/note",
+          "why": "Fails magnitude and mechanism. The cash cohort grows from 16.0M to 29.9M (+87%) in two years, a gain of about 14M. Only about 3M lost coverage and commercial users fell just 1.6M. Falling $149–249 prices are asserted to fill the gap, with no chain shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 35% of adults are on the drug, with ~21,000 excess hip fractures a year, ~2.5M sarcopenic older users, ~2,700 NAION cases a year, 9.2M gray-market users and a ~30M unmonitored cash tier. 'The grey' is a mainstream complaint (37% report feeling flattened), employer retreat is stratifying access, and the vertebral tail falls on cycling women 50–64. This is well beyond 2026's harms and inherits the 2034 baseline, but it lacks mass death or collapse. Harms are named, measured and openly discussed (FDA class warning, joint guideline, Pew survey), which limits the epistemic score. Coercive private gating is shrinking, which lowers autonomy somewhat. Overall 6.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. Adoption is +6.4 pp (34.9%), managed-decline prices appear in the 2035-01 event, employer coverage falls 64→49%, the bone and muscle warning comes in 2036-02, and the oral route reaches 55%. The Foundayo oral-parity driver is met by an existing product, the backlash appears as the Memphis march and the SBC resolution, and the personality layer is mainstream_complaint. No state action beyond FDA labelling. mechanism: Employer retreat is asserted with thin cost logic, since prices are falling while employers exit, and pharmacy trend falls from ~11% to ~4% with little explanation. The ≈3M who lost coverage 'mostly moved to cash' but ≈3.1M stopped (claim 1), the Foundayo weekend-holiday pharmacology is dubious (claim 2), and the cash cohort's near-doubling lacks a chain (claim 3). The prose A1c '6.1, a tenth short of the code' does not match any diabetes threshold. magnitude: Current use of 34.9% and ever-use of 47.5% sit inside the envelope. Payer shares sum to 100%, the Medicare, Medicaid and market spending products check out, the age bands sum correctly, and the cycling arithmetic works. Approvals and the generic rule are respected, with the bimagrumab filing in 2036 and a decision no earlier than 2037. Losses of ~3M are internally inconsistent, and the +87% cash growth sits awkwardly against the small commercial decline.",
+        "generativity": ""
+      },
+      "plausibility": 7.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Employer exits for the 2036 plan year pushed ≈3M people off coverage at once. Most moved to cash pills or imports, but ≈3.1M stopped.",
+        "field": "world/safety_ledger/8/prevalence_note",
+        "why": "This fails reconciliation. If only about 3M lost coverage and most of them moved to cash or imports, 3.1M cannot have stopped. The 3.1M stopped figure is larger than the whole group said to be displaced."
+      },
+      {
+        "quote": "Lilly's pill, Foundayo, clears the body fast enough that skipping it Friday brings appetite and something like pleasure back by Saturday night.",
+        "field": "prose/paragraph_on_the_grey",
+        "why": "This fails mechanism. A small-molecule oral with a half-life of well over a day would not be cleared, and appetite and reward would not recover, after one skipped dose. The whole 'Foundayo Fridays' holiday culture rests on an unshown pharmacokinetic claim."
+      },
+      {
+        "quote": "Paying even falling prices for a third of the workforce indefinitely turned out to be more than many could stomach.",
+        "field": "prose/paragraph_on_employers",
+        "why": "This fails mechanism. Employer coverage drops from 64% to 49% in one plan year while net prices fall about 9% and pharmacy trend falls to +4%. The only cause offered is asserted sentiment, and the stated trend and price figures point the other way."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 5.17,
+      "inequality": 6.17,
+      "public_health": 6.67,
+      "cohesion": 5.83,
+      "epistemic": 5.17,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.17,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.14,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Starting from the 2026 reference, this world keeps and deepens the 2034 harms. About 21,000 excess hip fractures a year and 2.5M sarcopenic older users appear in the bone and lean-mass entries. 37% of users report feeling 'flattened', and about 9.2M use counterfeit tablets. An ungated cash tier of about 30M has no counselling or DEXA, and the vertebral tail falls on women 50–64 who cycled off. Falling prices, $149 starters, an unchanged Medicare $50 copay and a named, discussed, studied harm ledger keep it near 6 rather than higher. Coercion through tenure gates is also shrinking.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Current use is 34.9% (28.5+6.4), prices fall about $50 under managed decline, employer coverage drops 64%→49%, and the Feb 2036 lean-mass and bone warning delivers the muscle_bone_wave driver. Oral parity is met by the existing 50 mg pill, there are no new indications and no 2036 contamination cluster, and the Pew survey and 'grey' vocabulary show the mainstream complaint. mechanism: Bone-wave, backlash and oral-switch chains are shown, but the employer retreat (claim 3), the near-doubling of cash users (16.0M→29.9M) and the oral jump from 36% to 55% are largely asserted. The Foundayo holiday premise (claim 2) is weak, and the prose says Ray's A1c of 6.1 is 'a tenth short' of a code that sits at 6.5. magnitude: Population, ever-use, income thirds, age bands, payer shares, Medicare, Medicaid and market arithmetic, NAION and fracture figures all reconcile and sit inside the envelope. The bimagrumab filing in Mar 2036 with no decision before 2037 obeys the approval rules. The one clear failure is the 3M-displaced versus 3.1M-stopped contradiction (claim 1).",
+      "generativity": "The Lorraine Pruitt prose gives a full day: the 5:40 pill, the bus depot, Tamika's Telegram-checked Indian tablets, the DEXA van outside the Kroger, the church-basement group and a scale nobody reads. Named places and institutions (Memphis Whole Table dinners, Dayton and Kettering, the Southern Baptist resolution, 'Foundayo Fridays', Saturday-only bars) imply many more scenes. It shows rather than explains, and secondary characters (Ray, Tamika, Keisha) are sketched."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.618,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 37
   }
 }

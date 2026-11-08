@@ -52,6 +52,41 @@
         "input_tokens": 19564,
         "output_tokens": 23007
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r12-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36494,
+        "output_tokens": 5111
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r12-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36494,
+        "output_tokens": 4805
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r12-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36494,
+        "output_tokens": 4333
+      }
     ]
   },
   "world": {
@@ -320,6 +355,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r12-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "At ~83M users that implies roughly 3,000–5,000 excess cases a year nationally.",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "Magnitude: an excess of 0.5–1 per 10,000 person-years across ~83M users gives about 4,000–8,000 cases, not 3,000–5,000. The stated total does not follow from the stated rate and population."
+        },
+        {
+          "quote": "First-time users added ~3.0 points (~8.3M), mostly through nicotine-cessation fills after the March 2036 approval, the monthly home pen, and the DoD programme.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the note's own channel counts show about 1.2M cash nicotine users, 0.3M Medicaid cessation fills and 0.25M DoD. That is roughly 1.8M, not most of 8.3M new users, and no other source of new users is shown."
+        },
+        {
+          "quote": "Enrollment is ~190k plus ~60k recruits.",
+          "field": "world/state/workforce_or_military",
+          "why": "Mechanism: a directly observed monthly clinic-injection programme reaches 190k active-duty members within about 15 months of its September 2035 launch. The logistics and the uptake among those failing the tape are asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is far worse than 2026 and keeps every 2034 harm. About 30% of adults are on drug, and ~16.5M use gray-market product with endotoxin-positive vials. Anhedonia is unmeasured at calm and longevity doses. Employers can still price adherence, and a connected pen logs doses to employer vendors. A NAION class warning is added, with partial permanent blindness. Soldiers describe 'monthly or the tape', and Medicaid is pulled into the nicotine indication by existing law. Employers retreat somewhat after the Ohio settlement and the Unmedicated movement offers a counter-current, which keeps this short of 7.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +2.1 pp; the MariTide home pen is the monthly driver, with the implant honestly left at phase 3; nicotine is approved, and compulsion is filed with no decision before 2037. The NAION class label, the DoD programme, the Unmedicated movement, on-label 'craving' marketing and managed price cuts are all present, and no market shock appears. mechanism: most chains are shown, such as the Medicaid cessation mandate, the FAA response and DoD funding, but the new-user attribution in claim 2 and the scale of DoD uptake in claim 3 are asserted. magnitude: population figures sit inside the envelope, and the payer mix, cash breakdown, Medicare, DoD and MariTide sums all reconcile. The exceptions are the NAION case count (claim 1) and the unsupported 'mostly nicotine' share of first-time users (claim 2).",
+        "generativity": "The Marisol and Theo scene is cinematic and shows rather than explains: the eye chart at the readiness clinic, the vape in her cargo pocket, the FULL PLATE barbecue, the 'You don't yell at the dog anymore' line. The world fields add many implied characters and scenes, including Pittsburgh supper clubs, the $39 assay badge, mixed medicated and unmedicated couples, and 'monthly or the tape'. Daily life has texture throughout."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s5-L1-r12-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "First-time users added ~3.0 points (~8.3M), mostly through nicotine-cessation fills after the March 2036 approval, the monthly home pen, and the DoD programme.",
+          "field": "world/population/note",
+          "why": "Fails magnitude and mechanism. The note's own channel counts give only about 1.5M nicotine fills (1.2M cash plus 0.3M Medicaid) in nine months and 0.25M in DoD, so these cannot be 'mostly' of 8.3M new users, and no source is shown for the rest."
+        },
+        {
+          "quote": "At ~83M users that implies roughly 3,000–5,000 excess cases a year nationally.",
+          "field": "world/safety_ledger/NAION",
+          "why": "Fails magnitude because the arithmetic does not reconcile. 0.5–1 excess cases per 10,000 person-years across 83M users gives about 4,000–8,300 cases, not 3,000–5,000."
+        },
+        {
+          "quote": "12-month continuous abstinence ~31% vs ~19% placebo, with lower relapse than varenicline in a head-to-head arm",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism. A 19% placebo rate for 12-month continuous abstinence is several times what real cessation trials show, and 31% on drug would beat every existing agent. It is asserted to justify a fast approval and a nationwide TV campaign."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference world, the candidate keeps every 2034 harm and adds more. About 30% of adults are on the drug, with a 20% gray market. Anhedonia is unmeasured at the doses most people take. There is a class NAION warning, 3,000+ partial blindings a year, and long-acting MariTide complications. Autonomy is hit by the 30% adherence premiums, the connected pen feeding employer vendors, and the DoD line 'monthly or the tape'. Craving is now marketed on television, and the child, bone and EPI ledgers persist. It is harsher than 2026 but not catastrophic, since the Ohio settlement and the Unmedicated movement act as partial brakes.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is +2.1, MariTide has a home pen with the implant still in phase 3, nicotine is approved after a 13-month review, the gambling filing is correctly left undecided, the NAION class warning is dated, the DoD programme exists, the Unmedicated movement appears, and a marketed 'craving' claim is on-label. mechanism: Most chains are shown, including Medicaid's legal duty to cover cessation drugs, the platforms pivoting to on-label claims, and the Ohio settlement cooling employer use. The implausible 31% vs 19% nicotine trial result and the unexplained rapid rise of the Unmedicated movement are asserted. magnitude: Headline figures sit inside the envelope (30.1%, 40.5%, income bracketing, age check), and the payer mix, MariTide counts, Medicare and DoD dollar figures all multiply out. The gaps are the NAION case count (3,000–5,000 against a computable 4,000–8,300) and the claim that nicotine fills mostly drove first-time use (see claims 1 and 2).",
+        "generativity": "The prose has a vivid scene: Specialist Reyes, the eye chart, the dose logged on a tablet, the barbecue joint with the FULL PLATE sticker, and the 'You don't yell at the dog anymore' exchange. The world fields supply many more characters and sites, including Pittsburgh supper clubs, Army post strips, a blood-spot badge and Appalachian congregations, so a film is easy to imagine. The dialogue is a little compressed, but the texture is high."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s5-L1-r12-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "At ~83M users that implies roughly 3,000–5,000 excess cases a year nationally.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: the stated excess of 0.5–1 per 10,000 person-years across ~83M users gives about 4,000–8,000 cases a year, so the national figure is understated by roughly a factor of two and the arithmetic does not reconcile."
+        },
+        {
+          "quote": "First-time users added ~3.0 points (~8.3M), mostly through nicotine-cessation fills after the March 2036 approval, the monthly home pen, and the DoD programme.",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: the payer breakdown shows only ~1.5M nicotine fills (1.2M cash plus 0.3M Medicaid) and ~0.25M DoD, so these cannot be most of 8.3M new users in under a year. The remainder is asserted without a channel."
+        },
+        {
+          "quote": "Altria and PMI guided US cigarette volume declines to ~10–11% a year from ~8%",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism/magnitude: ~1.5M cessation fills in nine months, with ~31% abstinence, cannot plausibly move industry volume guidance by 2–3 points within months of approval. The causal chain to tobacco-company guidance is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm: a 16.5M gray market, unmeasured low-dose anhedonia in ~15.7M people, and adherence-premium differentials. It adds a confirmed NAION class warning with thousands of permanent partial-vision cases a year. It also adds a DoD programme where enrollment is 'voluntary on paper' but tied to promotion, and connected-pen dose logging shared with employers. Against the 2026 reference this is a clearly harder, more surveilled society with new losers, though not structurally hidden, because the harms are named, measured and contested.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. The monthly driver is an existing-product form (the MariTide pen), nicotine is approved 13 months after filing, compulsion is filed with no decision before Sep 2037, NAION is a class label, DoD and the Unmedicated movement are both present, and there is no market shock. mechanism: Most changes have chains, such as the pen to verification, the label to on-label craving marketing, and the Ohio settlement to employer retreat. The tobacco-volume guidance and the claim that new users came 'mostly through nicotine' are asserted (claims 2 and 3). magnitude: Headline figures sit inside the envelope (30.1%, 40.5%) and payer mix, Medicare, DoD and MariTide counts reconcile. The NAION case count is about half what the stated rates imply (claim 1), and the first-time-user attribution does not match the payer breakdown.",
+        "generativity": "Specialist Reyes, the barbecue pit, the vape in the cargo pocket and the 'monthly or the tape' line imply many scenes, and the covering of one eye at a red light is a strong image. The world fields supply Full Plate supper clubs, the $39 assay badge, the Pittsburgh scene and mixed medicated/unmedicated couples. Some prose still explains rather than shows."
+      },
+      "plausibility": 6.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "At ~83M users that implies roughly 3,000–5,000 excess cases a year nationally.",
+        "field": "world/safety_ledger/5/prevalence_note",
+        "why": "Magnitude: an excess of 0.5–1 per 10,000 person-years across ~83M users gives about 4,000–8,000 cases, not 3,000–5,000. The stated total does not follow from the stated rate and population."
+      },
+      {
+        "quote": "First-time users added ~3.0 points (~8.3M), mostly through nicotine-cessation fills after the March 2036 approval, the monthly home pen, and the DoD programme.",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: the note's own channel counts show about 1.2M cash nicotine users, 0.3M Medicaid cessation fills and 0.25M DoD. That is roughly 1.8M, not most of 8.3M new users, and no other source of new users is shown."
+      },
+      {
+        "quote": "Enrollment is ~190k plus ~60k recruits.",
+        "field": "world/state/workforce_or_military",
+        "why": "Mechanism: a directly observed monthly clinic-injection programme reaches 190k active-duty members within about 15 months of its September 2035 launch. The logistics and the uptake among those failing the tape are asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 7.0,
+      "inequality": 6.5,
+      "public_health": 6.17,
+      "cohesion": 6.0,
+      "epistemic": 6.5,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.83,
+      "magnitude": 6.0
+    },
+    "plausibility": 6.81,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The world is far worse than 2026 and keeps every 2034 harm. About 30% of adults are on drug, and ~16.5M use gray-market product with endotoxin-positive vials. Anhedonia is unmeasured at calm and longevity doses. Employers can still price adherence, and a connected pen logs doses to employer vendors. A NAION class warning is added, with partial permanent blindness. Soldiers describe 'monthly or the tape', and Medicaid is pulled into the nicotine indication by existing law. Employers retreat somewhat after the Ohio settlement and the Unmedicated movement offers a counter-current, which keeps this short of 7.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +2.1 pp; the MariTide home pen is the monthly driver, with the implant honestly left at phase 3; nicotine is approved, and compulsion is filed with no decision before 2037. The NAION class label, the DoD programme, the Unmedicated movement, on-label 'craving' marketing and managed price cuts are all present, and no market shock appears. mechanism: most chains are shown, such as the Medicaid cessation mandate, the FAA response and DoD funding, but the new-user attribution in claim 2 and the scale of DoD uptake in claim 3 are asserted. magnitude: population figures sit inside the envelope, and the payer mix, cash breakdown, Medicare, DoD and MariTide sums all reconcile. The exceptions are the NAION case count (claim 1) and the unsupported 'mostly nicotine' share of first-time users (claim 2).",
+      "generativity": "The Marisol and Theo scene is cinematic and shows rather than explains: the eye chart at the readiness clinic, the vape in her cargo pocket, the FULL PLATE barbecue, the 'You don't yell at the dog anymore' line. The world fields add many implied characters and scenes, including Pittsburgh supper clubs, the $39 assay badge, mixed medicated and unmedicated couples, and 'monthly or the tape'. Daily life has texture throughout."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.233,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 11
   }
 }

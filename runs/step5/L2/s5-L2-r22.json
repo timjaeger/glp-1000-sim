@@ -49,6 +49,41 @@
         "input_tokens": 19464,
         "output_tokens": 20826
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r22-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36149,
+        "output_tokens": 8496
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r22-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36149,
+        "output_tokens": 6080
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r22-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36149,
+        "output_tokens": 5441
+      }
     ]
   },
   "world": {
@@ -332,6 +367,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r22-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Surveys suggest ≈40% of users now take planned holidays or dose-downs at least monthly.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism/magnitude: about 35M users would adopt scheduled holidays within nine months of a label that flags roughly 8% affected. Most dosing guidance and ~86% of gated plans push toward adherence, and no chain explains the jump."
+        },
+        {
+          "quote": "The first filer wins a preliminary injunction in federal district court in Washington pending appeal, which keeps every generic off US shelves.",
+          "field": "world/events/0/event",
+          "why": "Mechanism: a company that FDA just ruled had forfeited exclusivity, and whose plant is under import alert, wins an injunction that blocks all rival generics. The legal route is not shown and is strained."
+        },
+        {
+          "quote": "Pharmacy trend ~+8%, from volume, with price flat.",
+          "field": "world/economy/insurance/state",
+          "why": "Magnitude: users rose about 11% over two years and US net spend about 9% over two years. That implies roughly 4–5% a year, not +8% from volume, and it ignores the 40% holiday dosing the candidate itself asserts."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.0,
+        "autonomy": 7.0,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6.0,
+        "epistemic": 5.0,
+        "overall": 6.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.0,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Against the 2026 baseline (3), the candidate keeps every 2034 harm and adds more. About 31% of adults are on the drug, ~9.7M use gray product with a poison-centre rise, and ~18,000 excess hip fractures and ~2,400 NAION cases a year land on Medicare. Tenure gates and kiosk-weight premiums create job lock and a stratified bodies-as-income signal. Coverage rules punish following the anhedonia label (80% PDC, no grey-pause code), and the label's 3.5M-case upper estimate adds to the ledger. Epistemics are somewhat better than 2034 because the harm is now measured and labelled, though gray users get no Medication Guide and no measurement. Inequality and autonomy score highest.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adult use is up 2.9 pp, prices are flat, coverage is unchanged, no new indication appears, the March 2036 anhedonia label is in place, the Sep 2036 high-dose Foundayo delivers oral parity as an existing product in a new form, gray product grows with compounded next-gen molecules, the DEXA-badge stratification appears, the HRSA grant is the subsidy, and 'the grey' is mainstream vocabulary. mechanism: most chains are shown, but the still_true line says the first filer's exclusivity is 'still parked' while an event says FDA ruled it forfeited. The injunction that blocks all rival generics is legally thin, and the ~40% planned-holiday adoption (claim 1) is asserted rather than caused. magnitude: everything sits inside the envelope (31.4 and 43.5; the income thirds average to 31.4; the age bands sum to 86.7M). The payer mix sums to 100%, the Medicare, Medicaid and HRSA dollars multiply out, and the $185B market reconciles. The only gap is the trend-versus-volume mismatch in claim 3.",
+        "generativity": "The prose gives a concrete cast (Marisol, Mr. Hadley with trainer Kofi and a framed bone scan, sister Lety with a counterfeit pill, daughter Ana asking about 'holiday this weekend') and shows daily life through the bus, the scale, the white bag and the 300-name waitlist. The world fields add texture: Friday tasting menus, a chart country song, DEXA dating badges, 'grey leave' bargaining and HR told not to ask. The two Houston neighbourhoods set side by side give class contrast without exposition."
+      },
+      "plausibility": 7.85
+    },
+    {
+      "custom_id": "s5-L2-r22-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Surveys suggest ≈40% of users now take planned holidays or dose-downs at least monthly.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: this is about 35M people adopting scheduled dose holidays within months of the March 2036 label. That sits badly with ~86% gated plans, the ≥80% PDC rule, and the note's own figure of only 1.5–2M stopping for grey reasons. It is asserted, not shown."
+        },
+        {
+          "quote": "19.1% mean loss versus 20.3% for tirzepatide 15 mg, within the prespecified 3-point non-inferiority margin.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: a small-molecule oral reaching ~19% loss is a large jump from the ~12% orforglipron data in the 2026 reference world. The candidate gives no dose-escalation or formulation chain for it. The approval-timing rules allow the approval, but the efficacy is a stretch."
+        },
+        {
+          "quote": "The first filer wins a preliminary injunction in federal district court in Washington pending appeal, which keeps every generic off US shelves.",
+          "field": "world/events/0/event",
+          "why": "Mechanism: FDA rules the first filer forfeited its exclusivity, yet the same filer gets an injunction that blocks all rivals. The filer's plant is under an import alert, and the legal route to restoring a forfeited exclusivity is not explained. It also sits awkwardly with still_true calling the exclusivity 'still parked'."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.0,
+        "autonomy": 7.0,
+        "inequality": 7.0,
+        "public_health": 6.5,
+        "cohesion": 6.0,
+        "epistemic": 5.0,
+        "overall": 6.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Measured against the 2026 reference, the world keeps and deepens the 2034 harms. Nearly 9.7M people use gray product. Tenure-gated and kiosk-weight coverage creates job lock (autonomy 7). Bodies sort by income, with the vertebral-fracture tail falling on women 50–64 who cycle (inequality 7). There are ~18,000 excess hip fractures and ~2,400 NAION cases a year, and the label tells patients to pause while the ≥80% PDC rule punishes pausing. Epistemic stays at 5 because anhedonia is now measured and labelled, but gray users and the 4.1M calm subscribers remain unmeasured. The Safe Supply grant and the label soften the picture slightly, but this is still a society most readers would find hard to accept.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +2.9pp, prices are flat, there is no new indication, and the March 2036 anhedonia label and the Sep 2036 high-dose Foundayo (oral parity in an allowed form) are both dated events. Gray-market resurgence, class stratification, the HRSA subsidy and the mainstream-complaint framing all appear. Nothing contradicts a driver. mechanism: most chains are shown, but the ≈40% monthly holiday behaviour, the 19% oral efficacy and the odd injunction-after-forfeiture path (claims 1–3) are asserted rather than derived. The bottom-third rise to 28.0% is also stretched, since gray growth of 2.6M plus 0.39M HRSA enrollees must cover nearly all of a ~3.2M bottom-third increase while young gym men are also counted under gray. magnitude: current use 31.4 and ever-use 43.5 are inside the envelope, and income thirds bracket the national figure. The age bands sum to 86.7M, payer shares sum to 100%, and the Medicare, Medicaid, HRSA and market arithmetic all multiply out. Only minor strain remains in the bottom-third attribution.",
+        "generativity": "The prose gives strong, filmable scenes: Marisol's bus ride, the clinic scale and white bag, the counterfeit-pill text from her sister, and Mr. Hadley's gated home with the framed bone scan. Ana's 'are you on holiday this weekend?' and the Saturday tablet in the bottle lid are vivid. The world fields add textured detail such as DEXA dating badges, 'Holiday Weekend', Friday tasting menus and 'grey leave' bargaining. It is slightly over-explained in the opening news-style section."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s5-L2-r22-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA rules that the Telangana first filer has forfeited its 180-day exclusivity.",
+          "field": "world/events/0/event",
+          "why": "mechanism: forfeiture should release the exclusivity block on rival filers, yet the same event says the first filer's injunction keeps every generic off shelves. The still_true list then says the exclusivity 'is still parked', so the world contradicts itself and the injunction chain is thin."
+        },
+        {
+          "quote": "Surveys suggest ≈40% of users now take planned holidays or dose-downs at least monthly.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "magnitude/mechanism: about 35M users adopting a scheduled regimen within months of one label change is asserted from unnamed surveys. The 1.5–2M label-driven stops are described as mostly short, and the body-composition entry says holidays are 'too short to show the pattern'."
+        },
+        {
+          "quote": "In Sep 2036 FDA approved a high-dose Foundayo (orforglipron) maintenance strength on a 72-week head-to-head trial: 19.1% mean loss versus 20.3% for tirzepatide 15 mg",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: the 2026 reference has orforglipron at roughly 12% in phase 3, so a new strength of the same small molecule reaching tirzepatide parity is an efficacy jump with no stated mechanism. A 72-week head-to-head trial that read out and was approved by Sep 2036 also needs an early 2034 start."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.0,
+        "autonomy": 7.0,
+        "inequality": 7.0,
+        "public_health": 6.5,
+        "cohesion": 6.0,
+        "epistemic": 5.0,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.0,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm and adds more. About 9.7M gray-market users and 18,000 excess hip fractures a year are in the note figures. The CMS ≥80% PDC rule and ~86% gated, 38% tenure-gated employer plans now penalise the clinically advised 'grey' holidays, a clear autonomy and job-lock harm. Body shape works as an income marker (DEXA badges, parcel versus coached users), and 3.5M possible excess anhedonia cases are counted. Epistemic harm is somewhat lower than in 2034 because the grey is now randomised-measured and labelled, though gray users get nothing. This is well beyond the 2026 reference and short of the extreme anchor, so about 6.5.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +2.9, prices are stalled, coverage is status quo, anhedonia is labelled in Mar 2036, an existing oral gets a new strength, gray resurgence appears as compounded next-gen molecules, class stratification appears as DEXA badges, the HRSA subsidy is funded, and 'mainstream_complaint' is stated. mechanism: the generic-exclusivity chain is internally contradictory ('forfeited' versus 'still parked'; claim 1), and the 40% holiday figure is asserted from unnamed surveys (claim 2). Most other changes have a shown chain, such as the EVEN trial leading to the label, the FTC order and the PDC collision. magnitude: population figures sit inside the envelope (31.4, 43.5 ever), and the income thirds, age bands, cycling arithmetic, payer mix (sums to 100%), Medicare and Medicaid spend, HRSA slots and the market arithmetic all reconcile. The only magnitude concern is the large efficacy jump claimed for high-dose Foundayo (claim 3).",
+        "generativity": "The prose carries a full scene with texture: Marisol on the 82 bus, the clinic scale, the Wegovy 50 bag, the counterfeit pill 'with the wrong font', Mr. Hadley's framed bone scan, and Ana asking 'Are you on holiday this weekend?'. The world fields add much to film: 'grey leave' bargaining, DEXA dating badges, Friday tasting menus, a chart country song, and managers told not to ask about holidays. Class contrast is built into the Bellaire/Gulfton geography."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Surveys suggest ≈40% of users now take planned holidays or dose-downs at least monthly.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "Mechanism/magnitude: about 35M users would adopt scheduled holidays within nine months of a label that flags roughly 8% affected. Most dosing guidance and ~86% of gated plans push toward adherence, and no chain explains the jump."
+      },
+      {
+        "quote": "The first filer wins a preliminary injunction in federal district court in Washington pending appeal, which keeps every generic off US shelves.",
+        "field": "world/events/0/event",
+        "why": "Mechanism: a company that FDA just ruled had forfeited exclusivity, and whose plant is under import alert, wins an injunction that blocks all rival generics. The legal route is not shown and is strained."
+      },
+      {
+        "quote": "Pharmacy trend ~+8%, from volume, with price flat.",
+        "field": "world/economy/insurance/state",
+        "why": "Magnitude: users rose about 11% over two years and US net spend about 9% over two years. That implies roughly 4–5% a year, not +8% from volume, and it ignores the 40% holiday dosing the candidate itself asserts."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 7.17,
+      "public_health": 6.5,
+      "cohesion": 6.0,
+      "epistemic": 5.0,
+      "overall": 6.6
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.17,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.87,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against the 2026 baseline (3), the candidate keeps every 2034 harm and adds more. About 31% of adults are on the drug, ~9.7M use gray product with a poison-centre rise, and ~18,000 excess hip fractures and ~2,400 NAION cases a year land on Medicare. Tenure gates and kiosk-weight premiums create job lock and a stratified bodies-as-income signal. Coverage rules punish following the anhedonia label (80% PDC, no grey-pause code), and the label's 3.5M-case upper estimate adds to the ledger. Epistemics are somewhat better than 2034 because the harm is now measured and labelled, though gray users get no Medication Guide and no measurement. Inequality and autonomy score highest.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adult use is up 2.9 pp, prices are flat, coverage is unchanged, no new indication appears, the March 2036 anhedonia label is in place, the Sep 2036 high-dose Foundayo delivers oral parity as an existing product in a new form, gray product grows with compounded next-gen molecules, the DEXA-badge stratification appears, the HRSA grant is the subsidy, and 'the grey' is mainstream vocabulary. mechanism: most chains are shown, but the still_true line says the first filer's exclusivity is 'still parked' while an event says FDA ruled it forfeited. The injunction that blocks all rival generics is legally thin, and the ~40% planned-holiday adoption (claim 1) is asserted rather than caused. magnitude: everything sits inside the envelope (31.4 and 43.5; the income thirds average to 31.4; the age bands sum to 86.7M). The payer mix sums to 100%, the Medicare, Medicaid and HRSA dollars multiply out, and the $185B market reconciles. The only gap is the trend-versus-volume mismatch in claim 3.",
+      "generativity": "The prose gives a concrete cast (Marisol, Mr. Hadley with trainer Kofi and a framed bone scan, sister Lety with a counterfeit pill, daughter Ana asking about 'holiday this weekend') and shows daily life through the bus, the scale, the white bag and the 300-name waitlist. The world fields add texture: Friday tasting menus, a chart country song, DEXA dating badges, 'grey leave' bargaining and HR told not to ask. The two Houston neighbourhoods set side by side give class contrast without exposition."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.067,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 14
   }
 }

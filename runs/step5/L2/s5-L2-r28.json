@@ -51,6 +51,41 @@
         "input_tokens": 19530,
         "output_tokens": 26711
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r28-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36784,
+        "output_tokens": 6745
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r28-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36784,
+        "output_tokens": 6496
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r28-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36784,
+        "output_tokens": 5731
+      }
     ]
   },
   "world": {
@@ -346,6 +381,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r28-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Covering plans are mostly generic-first, and tenure gates are now found in about a fifth of them, since $40 is not worth gating.",
+          "field": "world/access/note",
+          "why": "magnitude: if most covering plans are generic-first, far more than ~2M of the 25.5M commercial users would be on generic. That would push the generic total well past the stated ~30M and break the $137B market arithmetic."
+        },
+        {
+          "quote": "Generic semaglutide is exempted from the Section 232 tariffs in the 2036 law.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "mechanism: a new federal tariff-exemption law appears with no event, sponsor or chain. The same world says Congress still cannot pass an importation or authentication law."
+        },
+        {
+          "quote": "Pharmacy trend fell to ~+3% as generics replaced branded semaglutide.",
+          "field": "world/economy/insurance/state",
+          "why": "magnitude: a positive +3% trend sits badly beside US incretin revenue falling from ≈$170B to ≈$137B, with branded prices cut to $199 and generics at $39–69. The figure is asserted and not reconciled to the market arithmetic."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5,
+        "inequality": 4.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Measured against the 2026 reference world, this is a recognisably harder society. About 30% of adults are on the drug. It carries ~17,200 excess hip fractures a year, ~2,300 NAION cases, ~1.9M sarcopenic older users, and 88,000 MDL claims. Anhedonia is now randomised-confirmed but unlabelled, and the Novo document scandal erodes trust. Offsetting this, price collapse narrowed the access gap (bottom third 28.2% vs top 31%), imports and counterfeits fell, and forced cycling eased. Inequality and autonomy therefore score below the inherited baseline. Cohesion takes a hit from the backlash and 'holiday' culture, and public_health stays high because the bone, vision and GI harms are still present.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: the generic collapse via the exclusivity forfeiture, Medicaid public expansion, a gambling sNDA filing rather than approval, MDL and scandal, existing-product oral parity, state restrictions, and 'the grey' as a mainstream complaint. The only wrinkle is that the Lilly oral filing is not truly parity. mechanism: most chains are shown (exclusivity forfeiture to $49 pens to fewer imports and a cheaper public bill; trial data and the bone readout to the state laws). Others are only asserted: the Section 232 exemption (claim 2), the Army policy, the top third falling 1 pt for status reasons, and the brisk +3% pharmacy trend against falling revenue (claim 3). magnitude: population figures sit inside the envelope (29.9% current; 44.0% ever, near the 44.4 cap), and the age, income, payer-mix, Medicare ($25.8B) and Medicaid ($14.9B) arithmetic all multiplies out. But 'mostly generic-first' commercial plans (claim 1) cannot be squared with ~30M generic users, and the +3% trend does not fit the $170B→$137B market fall.",
+        "generativity": "The Dana Pruitt scene is concrete and well observed: the generic pen on the butter shelf, the skipped Thursday injection for her mother's coconut cake, Whole Appetite T-shirts in the cafeteria, Kayleigh's eleven-week endocrinology wait, Ray's gambling prescription and his flatness, and the lawyer's ad written on the grocery list. The world fields add many hooks: 'holiday' as a verb, Friday menus, church potlucks, sitcoms, recovery groups split over semaglutide, and plaintiff-firm canvassing. Some of the world-state prose is ledger-heavy, which holds this just short of a higher score."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s5-L2-r28-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Nine states joined, so 40 states plus DC now cover. Medicaid covers ≈16.8M users, or 20.4% of fills, about 75% of them on generic.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: Medicaid users rise from 11.5M to 16.8M (about +46%) and 75% are already on generic within months of a January 2036 law. Enrolment, state plan amendments and prescriber uptake would normally take longer, and the jump is asserted rather than shown."
+        },
+        {
+          "quote": "Pharmacy trend fell to ~+3% as generics replaced branded semaglutide.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: the same world has US incretin revenue falling about 19% ($170B to $137B) and generics at roughly $40 against $200+ net. A positive +3% trend is hard to square with that, since net pharmacy spend per user would fall sharply."
+        },
+        {
+          "quote": "The top third fell 1 pt as 'unmedicated' and long holidays gained status among professionals.",
+          "field": "world/population/by_income_third_pct",
+          "why": "Mechanism: a status shift among professionals is asserted as the cause of a 1-point drop in top-third use, with no data or chain. It sits against a world where coached, DEXA-verified regimens are the top-tier income signal."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Against 2026 this is a recognisably harder society. About 30% of adults are on the drugs, with about 17,200 excess hip fractures and about 2,300 NAION cases a year. About 88,000 mass-tort claims, anhedonia now measured in a randomised trial, and 'holiday' dosing are widespread. Kiosk-weight premiums, state prescribing restrictions and a 38.9M off-now pool with fat-dominant regain add to it. Generics narrow access gaps and imports and contamination shrink, so it is not worse than 5, and the harms are named and measured (epistemic about 4.5).",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Generic collapse has a settlement and forfeiture event, public expansion is the Medicaid option, the compulsion indication is realised as an sNDA filing, and oral parity is the existing 50 mg pill plus a Lilly filing. Scandal, litigation, backlash, restriction and mainstream complaint are all present, so only a minor ordering quirk (the 2035-06 event listed before the 2035-04 one) costs anything. mechanism: most chains are shown, but the exclusivity forfeiture landing exactly on the settlement date is convenient. The Medicaid user jump (claim 1), the +3% pharmacy trend (claim 2) and the top-third dip (claim 3) are asserted or inconsistent. magnitude: current use 29.9 and ever-use 44.0 are inside the envelope, ever-use near its edge. Age bands, payer shares (they sum to 100% and 82.5M), Medicare $25.8B, Medicaid $14.9B and the $137B market all multiply out. Only the trend-versus-market tension is loose.",
+        "generativity": "The Dana Pruitt scene is concrete: the pen on the butter shelf, the skipped Thursday injection before the coconut cake, Whole Appetite eighth-graders eating rolls, Kayleigh's eleven-week endocrinology wait, Ray's silent truck ride and the lawyer's ad. The world fields add texture, including holiday menus, potlucks, sitcoms and recovery groups splitting over who is 'really sober'. Some of the prose is explanatory, but many implied scenes remain."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s5-L2-r28-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Two randomised trials of 14 mg oral semaglutide in gambling disorder (Copenhagen-led and US academic, Novo co-funded) read out in mid-2035: 38% vs 19% achieved remission of DSM gambling disorder at 26 weeks.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the 2034 parent world lists gambling use as 'still anecdotal' with no trial named. Two 26-week RCTs would have to be designed, enrolled and read out by mid-2035, so the indication evidence appears nearly from nowhere."
+        },
+        {
+          "quote": "is the first sustained drop in uptake in any group.",
+          "field": "world/open_tensions/3",
+          "why": "mechanism: this contradicts the candidate's own population note, which has the top third falling 1 pt, pediatric use falling from 730k to 584k, and stopping rising generally. Narrative and state disagree."
+        },
+        {
+          "quote": "Medicaid covers ≈16.8M users, or 20.4% of fills, about 75% of them on generic.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: Medicaid users rise from ≈11.5M to ≈16.8M (+46%) within roughly a year of a January 2036 option that only nine more states joined. Nothing shows an enrolment or uptake chain for that speed."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, ~30% of adults are on an incretin. The ledger carries ≈17,200 excess hip fractures a year, ≈2,300 NAION cases, ≈1.9M sarcopenia cases, and anhedonia now measured at 9% vs 4%. Added to this are an 88,000-claim MDL, restriction laws that cut adolescent access, and 'holiday' dosing. Offsetting these, $39–69 generics narrow the use gap (28.2% bottom vs 31% top), imports and counterfeits fall to ≈2.7M, and the tenure gates fade. Net it is a recognisably harder society with new losers, not a structural trap, so about 5.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. These are the generic collapse via forfeiture, Medicaid generic option, gambling sNDA as a filing, existing 50 mg pill plus Lilly's NDA, Novo document scandal, GI MDL, Tennessee-led restriction, backlash, and the 'grey' as a mainstream complaint. Nothing contradicts them. mechanism: Chains are mostly shown (generics undercut imports, preemption concentrates claims on brand-era use). Several are convenient: forfeiture lands exactly on the settlement date, and the gambling trials appear from nothing (claim 1). The 'first drop in uptake in any group' line contradicts the candidate's own population note (claim 2). magnitude: Current use 29.9, ever-use 44.0, income thirds, age bands, payer mix (sums to 100%), Medicare and Medicaid dollar arithmetic, and the $137B market all reconcile and sit inside the envelope. The main stretch is rapid Medicaid growth (claim 3), and the events are listed slightly out of date order.",
+        "generativity": "The prose has a concrete protagonist, Dana, plus Ray, Kayleigh and the Whole Appetite eighth-graders. It also has specific texture: the butter-shelf pen, the Kroger pharmacy, a 'holiday' injection skip, the lawyer's ad on the grocery list. The JSON adds many implied scenes, including Nashville Friday menus, Baptist potlucks, split recovery groups and sitcom couples scheduling holidays. Some of the world is exposition rather than shown."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Covering plans are mostly generic-first, and tenure gates are now found in about a fifth of them, since $40 is not worth gating.",
+        "field": "world/access/note",
+        "why": "magnitude: if most covering plans are generic-first, far more than ~2M of the 25.5M commercial users would be on generic. That would push the generic total well past the stated ~30M and break the $137B market arithmetic."
+      },
+      {
+        "quote": "Generic semaglutide is exempted from the Section 232 tariffs in the 2036 law.",
+        "field": "world/state/geopolitics_of_supply",
+        "why": "mechanism: a new federal tariff-exemption law appears with no event, sponsor or chain. The same world says Congress still cannot pass an importation or authentication law."
+      },
+      {
+        "quote": "Pharmacy trend fell to ~+3% as generics replaced branded semaglutide.",
+        "field": "world/economy/insurance/state",
+        "why": "magnitude: a positive +3% trend sits badly beside US incretin revenue falling from ≈$170B to ≈$137B, with branded prices cut to $199 and generics at $39–69. The figure is asserted and not reconciled to the market arithmetic."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 4.83,
+      "inequality": 4.67,
+      "public_health": 5.67,
+      "cohesion": 5.17,
+      "epistemic": 4.5,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.67,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.48,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Measured against the 2026 reference world, this is a recognisably harder society. About 30% of adults are on the drug. It carries ~17,200 excess hip fractures a year, ~2,300 NAION cases, ~1.9M sarcopenic older users, and 88,000 MDL claims. Anhedonia is now randomised-confirmed but unlabelled, and the Novo document scandal erodes trust. Offsetting this, price collapse narrowed the access gap (bottom third 28.2% vs top 31%), imports and counterfeits fell, and forced cycling eased. Inequality and autonomy therefore score below the inherited baseline. Cohesion takes a hit from the backlash and 'holiday' culture, and public_health stays high because the bone, vision and GI harms are still present.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events: the generic collapse via the exclusivity forfeiture, Medicaid public expansion, a gambling sNDA filing rather than approval, MDL and scandal, existing-product oral parity, state restrictions, and 'the grey' as a mainstream complaint. The only wrinkle is that the Lilly oral filing is not truly parity. mechanism: most chains are shown (exclusivity forfeiture to $49 pens to fewer imports and a cheaper public bill; trial data and the bone readout to the state laws). Others are only asserted: the Section 232 exemption (claim 2), the Army policy, the top third falling 1 pt for status reasons, and the brisk +3% pharmacy trend against falling revenue (claim 3). magnitude: population figures sit inside the envelope (29.9% current; 44.0% ever, near the 44.4 cap), and the age, income, payer-mix, Medicare ($25.8B) and Medicaid ($14.9B) arithmetic all multiplies out. But 'mostly generic-first' commercial plans (claim 1) cannot be squared with ~30M generic users, and the +3% trend does not fit the $170B→$137B market fall.",
+      "generativity": "The Dana Pruitt scene is concrete and well observed: the generic pen on the butter shelf, the skipped Thursday injection for her mother's coconut cake, Whole Appetite T-shirts in the cafeteria, Kayleigh's eleven-week endocrinology wait, Ray's gambling prescription and his flatness, and the lawyer's ad written on the grocery list. The world fields add many hooks: 'holiday' as a verb, Friday menus, church potlucks, sitcoms, recovery groups split over semaglutide, and plaintiff-firm canvassing. Some of the world-state prose is ledger-heavy, which holds this just short of a higher score."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 4.968,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 50
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 19444,
         "output_tokens": 19142
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r47-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35045,
+        "output_tokens": 7401
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r47-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35045,
+        "output_tokens": 7648
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r47-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 35045,
+        "output_tokens": 6055
+      }
     ]
   },
   "world": {
@@ -327,6 +362,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r47-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "legitimate longevity subscribers pass 10 million by late 2036, mostly aged 45–70 in the top income third",
+          "field": "world/events/1/event",
+          "why": "Mechanism/magnitude: it implies about 10.5M cash subscribers for an off-label, never-filed use reaching ~$200/month within roughly 18 months of the first tier launching. That is a large share of all new users, set against an API supply constraint the candidate itself calls binding."
+        },
+        {
+          "quote": "on allocation since Feb 2035 (~4.5M users, waitlists at most telehealth platforms)",
+          "field": "world/access/note",
+          "why": "Mechanism: oral amycretin is supply-capped and waitlisted, yet its user base doubled from ~2.2M in 2034 to ~4.5M. The candidate never explains how a rationed product grew that fast, and the Clayton API line is not due until 2037."
+        },
+        {
+          "quote": "The gray market regrew from 5.8M to ~14.6M users",
+          "field": "world/access/note",
+          "why": "Magnitude: non-approved use rises about 2.5× in two years, from a 2035 court ruling in September and research-powder sites. That is about 40% of all new users. The pieces (4.0M 503A, 6.0M re-filled, 3.5M powders) are asserted rather than traced to a fast enough ramp."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps all the 2034 harms and adds more. About 16% of users are on non-approved product, with contamination clusters and 10× reconstitution overdoses. Roughly 10M people sit in tracks where an unlogged pause costs a premium tier. Pediatric growth deceleration, EPI and hip-fracture signals persist, and ~14M normal-weight adults take the drug with no lean-mass or mortality data. Use is stratified 42/33/22 by income, and surveillance deepens through pause codes and life-insurer questions. Offsetting this, there is no new safety signal, the backlash has faded, and the harms are discussed openly, so it is a recognisably harder society, not a collapse.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is +7.6pp, prices are flat, coverage is unchanged at 33% and conditioned, longevity is off-label, there is no new signal or class, the gray market resurges via the 503A ruling and powders, normalisation shows in the Pew item and dropped app tags, no state acts, and blunting is a mainstream complaint. Longevity is realised only off-label, which the rules allow. mechanism: The chains from flat prices to compounding to powders, and from blunting to holidays to pause codes, are shown. Several shifts are asserted, including 10M+ longevity subscribers (claim 1), the doubling of oral amycretin users under allocation (claim 2) and the 2.5× gray-market jump (claim 3). magnitude: Current use 32.3%, ever-use 42.4% and the income and age checks all fall inside the envelope and reconcile, as do the payer mix (sums to 89.5M) and the Medicare spending arithmetic. The remaining gap is that the pediatric subgroup rates (3.7% of 12–17, 0.7% of 6–11) imply roughly 1.5% of under-18s, not the stated 2.0%.",
+        "generativity": "The prose is a full scene set. Tomás's paused pill with the grey suitcase icon, Lorena reconstituting a Laredo vial, Mrs. Pruitt's 'You off?' and Mateo's friend on the pink one are concrete and varied. The world fields supply many more hooks, such as holiday menus, off-week festival passes, pause codes, life-insurer questions and sportsbook holiday spikes. It shows the cultural shift through behaviour, not exposition."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s5-L3-r47-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Two dating apps dropped their 'calm plan' tag because everyone had it.",
+          "field": "prose/body_text",
+          "why": "Mechanism: the world gives only ~2.6M calm/focus subscribers, about 3% of 89.5M users, so 'everyone had it' contradicts the candidate's own numbers. The 'so common' rationale is asserted rather than shown."
+        },
+        {
+          "quote": "because an oral peptide needs dozens of times the API per patient-month of a weekly injection",
+          "field": "world/access/note",
+          "why": "Mechanism: the API-bottleneck chain is applied only to oral amycretin. The Wegovy pill, an oral peptide, is the main route for ~10.5M longevity and ~6.5M starting-dose users with no such shortage. Users also doubled to ~4.5M under 'allocation', so the explanation is selectively applied."
+        },
+        {
+          "quote": "Being on the drug is unremarkable, and being off it is what needs explaining.",
+          "field": "prose/body_text",
+          "why": "Mechanism: this is stated as general fact, but ~68% of adults are not on the drug. The world's own support is a Pew finding about upper-income adults under 65, so a niche norm is generalised without a chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 4.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against the 2026 reference, the world carries forward and extends large harms: 32% of adults on drug, ~14M non-obese users with no lean-mass or mortality data, and 14.6M (about 1 in 6) on non-approved product with contamination clusters and 10× overdoses. Employer tracks still punish unlogged pauses with premium loss, and life insurers now ask about incretin status. The 2034 pediatric growth deficit, EPI and hip-fracture signals persist unchanged, and the low-dose anhedonia rate is still unmeasured. Cohesion is only mildly worse (backlash thinned), and no mass-death spectacle is claimed. It is a recognisably harder, more stratified society, short of 'refuse to live in'.",
+        "plausibility": "driver_fidelity: every driver is visible: 24.7+7.6 = 32.3% on drug, flat prices, 33% employer coverage unchanged, off-label longevity plans, no new safety signal, no new class, the 2035 503A ruling and gray regrowth, normalisation events, no state bill, and a mainstream-complaint anhedonia/holiday layer. The only blur is federal FDA enforcement, which is not state action. mechanism: the main chains are shown (503A ruling, transshipment, stalled price, pause codes). Weak links are the claim that calm tags became 'too common' at ~3% prevalence, the API bottleneck applied only to oral amycretin, and the overgeneralised 'off needs explaining' norm. magnitude: on-drug (32.3) and ever-used (42.4) are inside the envelope, and the income thirds average 32.3. The age-band check, payer mix (17.5+15.5+4.9+37.0+14.6 = 89.5), Medicare spend ($42.8B, $6.9B, $2.5B) and cycling arithmetic all reconcile. The only slack is that 65+ users (~19M at 30%) sit loosely against ~15.5M Medicare users.",
+        "generativity": "The Tomás/Lorena/Mateo day is rich with show-don't-tell texture: the grey suitcase pause icon, the burrito and 'Holiday.' exchange, the RESEARCH USE ONLY vial with bacteriostatic water, and the louder laugh. The world fields supply many more scenes: holiday menus, off-week festival passes, track pause paperwork, Southern wellness pharmacies and the 15-year-old gray-powder thread. The prose partly explains up front before the scene."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s5-L3-r47-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 2",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the stated bands (~3.7% of 12–17s, ~0.7% of 6–11s, and nothing in under-6s) weight to roughly 1.5% of under-18s, not 2.0%. The inherited 2034 figure had the same gap, and the candidate widens it."
+        },
+        {
+          "quote": "because an oral peptide needs dozens of times the API per patient-month of a weekly injection",
+          "field": "world/access/note",
+          "why": "Mechanism: this is offered as the reason both firms froze net prices across all products, but it only explains rationing of oral amycretin. It does not explain flat prices on Lilly's small-molecule Foundayo or on injectables, so the price stall is asserted rather than shown."
+        },
+        {
+          "quote": "The gray market regrew from 5.8M to ~14.6M users",
+          "field": "world/access/note",
+          "why": "Mechanism and magnitude: the user base more than doubles in two years, including ~3.5M research-powder users and ~6.0M re-filled-vial users. The only shown causes are a 503A ruling and transshipment, and the ruling does not cover powders or smuggled-API re-filling, so the scale outruns the chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world keeps every inherited harm: about 33% of employers with conditioned tracks (~10.1M enrolled), ~16% of users on non-approved product with contamination clusters and 10x powder overdoses, hip-fracture and EPI signals, and children growing ~0.5 cm/yr slower. It adds ~14M normal-weight adults on indefinite low doses with no lean-mass or mortality data and an unmeasured anhedonia rate. Pause codes, life-insurer incretin questions and pause data flowing to wellness vendors deepen surveillance and conditioning. Offsetting this, normalisation has drained the backlash, no new safety signal has appeared, and obesity and AUD treatment are real gains, so this is a recognisably harder society with new losers rather than a refusal-level one.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +7.6pp exactly, prices stall (±2%), coverage is unchanged, longevity use is off-label, there is no new class or safety signal, gray-market resurgence is in the events, normalisation is shown (dating apps, Pew), and the mainstream-complaint personality layer is shown through holidays. No state acts. mechanism: Most chains are shown (503A ruling, transshipment, pause codes), but the flat-price rationale (claim 2) is thin and the gray market growth (claim 3) is larger than its stated causes. magnitude: On-drug 32.3% and ever-used 42.4% are inside the envelope. Payer mix (17.5+15.5+4.9+37.0+14.6=89.5M), Part D arithmetic ($42.8B), the cycling arithmetic, the age check and the income thirds all reconcile. The one failure is the pediatric 2.0% against the stated age bands (claim 1).",
+        "generativity": "The prose scene is specific: the grey suitcase pause icon, the RESEARCH USE ONLY vial from Laredo, Mrs. Pruitt's 'You off?', a teenager's friend on 'the pink one', and a laugh that Lorena doesn't share. The world supplies many hooks: holiday menus, off-week festival passes, pause paperwork for premium tiers, storefront wellness pharmacies, and couples syncing holidays. Daily life has real texture and implied characters throughout."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "legitimate longevity subscribers pass 10 million by late 2036, mostly aged 45–70 in the top income third",
+        "field": "world/events/1/event",
+        "why": "Mechanism/magnitude: it implies about 10.5M cash subscribers for an off-label, never-filed use reaching ~$200/month within roughly 18 months of the first tier launching. That is a large share of all new users, set against an API supply constraint the candidate itself calls binding."
+      },
+      {
+        "quote": "on allocation since Feb 2035 (~4.5M users, waitlists at most telehealth platforms)",
+        "field": "world/access/note",
+        "why": "Mechanism: oral amycretin is supply-capped and waitlisted, yet its user base doubled from ~2.2M in 2034 to ~4.5M. The candidate never explains how a rationed product grew that fast, and the Clayton API line is not due until 2037."
+      },
+      {
+        "quote": "The gray market regrew from 5.8M to ~14.6M users",
+        "field": "world/access/note",
+        "why": "Magnitude: non-approved use rises about 2.5× in two years, from a 2035 court ruling in September and research-powder sites. That is about 40% of all new users. The pieces (4.0M 503A, 6.0M re-filled, 3.5M powders) are asserted rather than traced to a fast enough ramp."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 6.17,
+      "inequality": 6.17,
+      "public_health": 6.5,
+      "cohesion": 5.0,
+      "epistemic": 6.0,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.5,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.55,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Measured against 2026, the world keeps all the 2034 harms and adds more. About 16% of users are on non-approved product, with contamination clusters and 10× reconstitution overdoses. Roughly 10M people sit in tracks where an unlogged pause costs a premium tier. Pediatric growth deceleration, EPI and hip-fracture signals persist, and ~14M normal-weight adults take the drug with no lean-mass or mortality data. Use is stratified 42/33/22 by income, and surveillance deepens through pause codes and life-insurer questions. Offsetting this, there is no new safety signal, the backlash has faded, and the harms are discussed openly, so it is a recognisably harder society, not a collapse.",
+      "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is +7.6pp, prices are flat, coverage is unchanged at 33% and conditioned, longevity is off-label, there is no new signal or class, the gray market resurges via the 503A ruling and powders, normalisation shows in the Pew item and dropped app tags, no state acts, and blunting is a mainstream complaint. Longevity is realised only off-label, which the rules allow. mechanism: The chains from flat prices to compounding to powders, and from blunting to holidays to pause codes, are shown. Several shifts are asserted, including 10M+ longevity subscribers (claim 1), the doubling of oral amycretin users under allocation (claim 2) and the 2.5× gray-market jump (claim 3). magnitude: Current use 32.3%, ever-use 42.4% and the income and age checks all fall inside the envelope and reconcile, as do the payer mix (sums to 89.5M) and the Medicare spending arithmetic. The remaining gap is that the pediatric subgroup rates (3.7% of 12–17, 0.7% of 6–11) imply roughly 1.5% of under-18s, not the stated 2.0%.",
+      "generativity": "The prose is a full scene set. Tomás's paused pill with the grey suitcase icon, Lorena reconstituting a Laredo vial, Mrs. Pruitt's 'You off?' and Mateo's friend on the pink one are concrete and varied. The world fields supply many more hooks, such as holiday menus, off-week festival passes, pause codes, life-insurer questions and sportsbook holiday spikes. It shows the cultural shift through behaviour, not exposition."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.718,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 31
   }
 }

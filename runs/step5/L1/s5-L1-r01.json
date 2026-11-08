@@ -52,6 +52,41 @@
         "input_tokens": 19551,
         "output_tokens": 21564
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r01-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36467,
+        "output_tokens": 4672
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r01-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36467,
+        "output_tokens": 5244
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r01-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36467,
+        "output_tokens": 5741
+      }
     ]
   },
   "world": {
@@ -328,6 +363,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r01-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "It has ~2.4M users: ~1.2M commercial, ~1.0M cash, ~0.2M Medicare.",
+          "field": "world/access/note",
+          "why": "magnitude/mechanism: 2.4M users within about nine months of an Oct 2035 approval at a $1,890 list price is an extreme ramp, and the world itself says antibody capacity is the binding supply constraint. The 1.2M commercial users also sit awkwardly with tight employer coverage and adherence-track gating."
+        },
+        {
+          "quote": "Novo and Lilly cited GI/pancreatic litigation reserves and bimagrumab antibody capacity, and Part D net prices stopped drifting down.",
+          "field": "world/access/note",
+          "why": "mechanism: litigation reserves of ~$5.5B are small against these firms' revenues and do not explain a freeze across every cash channel. Part D net prices come from negotiation and rebates, not litigation, so the 'stalled' driver is asserted rather than shown."
+        },
+        {
+          "quote": "majorities say not taking one at all is what now needs explaining",
+          "field": "world/events/5/event",
+          "why": "mechanism: planned holidays going from an unmentioned practice in 2034 to a majority norm in two years has no shown chain. It also sits against employer adherence conditioning and a rebound-prone drug whose persistence is one-third at one year."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against 2026 this world is much harder. About 30% of adults are on the drug, and 15M buy from a gray market with ~61,000 adverse-event reports. Conditionality is the main way coverage works: monthly cotinine tests, Medicaid work requirements, employer adherence tracks and 'holiday logging' data flows. Children carry growth and ARFID signals. Self-reported flatness is ~31%, and the muscle-preserving co-pack is marketed as solving frailty with no fracture data. Mitigating factors: obesity is down to ~31%, bottom-third access is up, and there is no new acute catastrophe. The harm is structural and mostly normalised, which fits a 6, not higher.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: +1.8pp adoption (29.8), frozen prices, conditioning via Medicaid waivers, employer tracks and Quit Track, nicotine (Apr 2036) plus AUD guideline, MDL bellwethers, the co-pack, normalisation, state subsidy and mainstream flatness. AUD was already approved in 2033, so that driver rests on the guideline endorsement, which is thinner. Approval timing (14 and 13 months from filing) follows the rules. mechanism: The conditioning, litigation and gray-market chains are shown, but the price freeze is blamed on litigation reserves and capacity (claim 2). The holiday norm appears with little cause (claim 3). magnitude: Figures sit inside the envelope (29.8, ever-used 40.5), and the payer mix, cash breakdown, age and income checks, Medicare $39.4B and Quit Track $1.07B all reconcile. The weak spot is the Zepbound Lean ramp of 2.4M users (claim 1).",
+        "generativity": "The Darlene Pruitt scene shows rather than explains: the measuring-cup pill, the cotinine cup, Ronnie's reta vials and the daughter's rudeness question. The prose and world add many cultural fragments, such as 'holiday sex', Thanksgiving skips, Lisbon weeks and 'off record'. A few threads, like Mr. Begley and the Lambert boy, are barely used, but the film potential is high."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s5-L1-r01-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "cigarette volumes down ~9% year on year in 2036 against ~5% elsewhere",
+          "field": "world/economy/food_and_beverage/state",
+          "why": "mechanism: smoking-cessation free provision began only in May 2036 and covers about 0.6M enrollees across AUD and smoking combined. That cannot plausibly produce a visible extra 4-point cut in state-wide cigarette volumes within seven months, and no chain linking the two is shown."
+        },
+        {
+          "quote": "The bottom third rose most, from 21 to 24, through Medicaid waivers and the state Quit Track programmes.",
+          "field": "world/population/note",
+          "why": "magnitude: a 3-point rise in a third of about 92M adults is roughly 2.8M users. The stated channels add only about +0.9M Medicaid and 0.6M Quit Track, and the work-requirement waivers began in late 2035. The rise outpaces the 1.5-point rises in the other thirds without a reconciling mechanism."
+        },
+        {
+          "quote": "It has ~2.4M users: ~1.2M commercial, ~1.0M cash, ~0.2M Medicare.",
+          "field": "world/access/note",
+          "why": "magnitude: 2.4M users in 14 months on a $649-cash, $1,890-list product whose antibody capacity is called the binding supply constraint is very fast uptake. The 0.2M Medicare users also sit awkwardly with the flat $225 average net Part D spend."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 baseline this is a much harder society. Conditionality is now the main way anyone pays: monthly cotinine/PEth urine tests, Medicaid work requirements with a 5% weight-loss threshold, and employer premium penalties for holidays. About 15M people are on the gray market. Anhedonia is measured at 7–11%, flatness is self-reported by 31%, and EPI, hip-fracture and pediatric growth harms persist. About 80k claimants are in litigation, and the co-pack is marketed as 'solving' frailty without fracture data. Autonomy and inequality score highest, with the bottom third admitted only on testing and work terms. Obesity falling to 31% and a few free-access gains keep it below 7.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +1.8 pp, prices are frozen, and conditioning appears in the Medicaid waivers, employer tracks and Quit Track. Nicotine and AUD are covered through the April 2036 label and the ASAM guideline, with litigation, the co-pack, state subsidy, normalisation and the mainstream-complaint framing all present, and no shock. mechanism: the litigation-to-price-freeze, India-registration-to-Chinese-supply and holiday-culture chains are shown. Several effects are asserted, though: the cigarette volume effect, the bottom-third rise, and the speed of state programme launch and Co-pack uptake (claims 1–3). magnitude: adoption (29.8), ever-used (40.5) and the income thirds sit inside the envelope. Approval timings (14 and 13 months from filing) comply. The payer mix, cash breakdown, age check, cycled arithmetic, Medicare $39.4B and Quit Track $1.07B all reconcile. Deductions are for the bottom-third rise and the co-pack Medicare cost versus the flat $225 average.",
+        "generativity": "The prose ends on a concrete scene: Darlene in Hazard, the cup at the county health department, a green app releasing the bottle, Ronnie's reta vials and the cigarette on the porch. Texture comes from details like 'the test is the price', Thanksgiving skips, 'holiday sex' and the Columbus premium dispute. The world fields add many implied scenes: intake forms asking 'current incretin?', Lisbon holidays, the Ohio trial and Quit Track cotinine lines."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s5-L1-r01-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom third rose most, from 21 to 24, through Medicaid waivers and the state Quit Track programmes.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: a 3-point rise in the bottom third is roughly 2.8M extra users. The named public channels add only about +0.9M Medicaid and 0.6M Quit Track, and the waivers were approved only in Aug 2035, so the attribution is overstated."
+        },
+        {
+          "quote": "It has ~2.4M users: ~1.2M commercial, ~1.0M cash, ~0.2M Medicare.",
+          "field": "world/access/note",
+          "why": "Magnitude and mechanism: 2.4M users of a monthly antibody co-pack within about 8 months of approval is implausibly fast. The same world calls antibody capacity the binding supply constraint, and the product lists at $1,890 while employer coverage is conditioned and tightening."
+        },
+        {
+          "quote": "Novo and Lilly cited GI/pancreatic litigation reserves and bimagrumab antibody capacity, and Part D net prices stopped drifting down.",
+          "field": "world/access/note",
+          "why": "Mechanism: about $5.5B in reserves is small against two firms' incretin revenue and would hardly freeze prices. Capacity limits a co-pack, not the $149–299 oral and injectable prices, and the Part D net-price freeze is asserted without a chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 this is a much harder society. About 30% of adults are on drugs, and 15M use a gray market with a poorly policed supply of unapproved vials. Conditionality is now the main way anyone pays: cotinine/PEth testing for free supply, work requirements and ≥5% loss for Medicaid, and verified-adherence tracks that dock premiums. Flatness is normalised (about 31% of users report it), the pediatric growth deficit and EPI signals persist, and the 88,000-claimant litigation is unresolved. The harm is structural and mostly visible, with some opacity around low-dose anhedonia and the unmeasured effects of holidays and cycling, so I score it between 'recognisably harder' and 'would refuse to live in'.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +1.8pp, prices are stalled, conditioning appears in Medicaid waivers, employer tracks and Quit Track, and nicotine and AUD are both present. The litigation, the Zepbound Lean co-pack, no counterfeit shock, normalisation and the mainstream complaint (31% flat) all show up in fields and events.\nmechanism: most chains are shown, such as the holiday-as-non-adherence benefits dispute, the India parcel registration shifting supply to China, and the sNDA timelines. Weak links are the price freeze blamed on litigation reserves (claim 3) and the bottom-third rise credited to Medicaid and Quit Track (claim 1). The prose also conflates the Ohio suit, which alleges promotion bias, with premium loss.\nmagnitude: all headline figures sit inside the envelope (29.8% on drug, 40.5% ever used), and the payer mix, cash split, Medicare $39.4B, Quit Track $1.07B, age check and cycled share all reconcile. The deductions are the co-pack uptake of 2.4M in eight months (claim 2) and the bottom-third attribution, which does not quite sum.",
+        "generativity": "The prose vignette of Darlene in Hazard shows rather than explains: the cup at the county health department, the green app, a husband on 'reta' vials and a husband smoking beside her. The world fields add scenes such as the Thanksgiving skip, the holiday in Lisbon, the Columbus track worker versus the Charlotte lawyer, and 'off record' albums. There are plenty of implied characters and institutions, though the sections are somewhat list-like."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "It has ~2.4M users: ~1.2M commercial, ~1.0M cash, ~0.2M Medicare.",
+        "field": "world/access/note",
+        "why": "magnitude/mechanism: 2.4M users within about nine months of an Oct 2035 approval at a $1,890 list price is an extreme ramp, and the world itself says antibody capacity is the binding supply constraint. The 1.2M commercial users also sit awkwardly with tight employer coverage and adherence-track gating."
+      },
+      {
+        "quote": "Novo and Lilly cited GI/pancreatic litigation reserves and bimagrumab antibody capacity, and Part D net prices stopped drifting down.",
+        "field": "world/access/note",
+        "why": "mechanism: litigation reserves of ~$5.5B are small against these firms' revenues and do not explain a freeze across every cash channel. Part D net prices come from negotiation and rebates, not litigation, so the 'stalled' driver is asserted rather than shown."
+      },
+      {
+        "quote": "majorities say not taking one at all is what now needs explaining",
+        "field": "world/events/5/event",
+        "why": "mechanism: planned holidays going from an unmentioned practice in 2034 to a majority norm in two years has no shown chain. It also sits against employer adherence conditioning and a rebound-prone drug whose persistence is one-third at one year."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 7.0,
+      "inequality": 6.5,
+      "public_health": 5.67,
+      "cohesion": 5.67,
+      "epistemic": 5.5,
+      "overall": 6.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.33,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Against 2026 this world is much harder. About 30% of adults are on the drug, and 15M buy from a gray market with ~61,000 adverse-event reports. Conditionality is the main way coverage works: monthly cotinine tests, Medicaid work requirements, employer adherence tracks and 'holiday logging' data flows. Children carry growth and ARFID signals. Self-reported flatness is ~31%, and the muscle-preserving co-pack is marketed as solving frailty with no fracture data. Mitigating factors: obesity is down to ~31%, bottom-third access is up, and there is no new acute catastrophe. The harm is structural and mostly normalised, which fits a 6, not higher.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: +1.8pp adoption (29.8), frozen prices, conditioning via Medicaid waivers, employer tracks and Quit Track, nicotine (Apr 2036) plus AUD guideline, MDL bellwethers, the co-pack, normalisation, state subsidy and mainstream flatness. AUD was already approved in 2033, so that driver rests on the guideline endorsement, which is thinner. Approval timing (14 and 13 months from filing) follows the rules. mechanism: The conditioning, litigation and gray-market chains are shown, but the price freeze is blamed on litigation reserves and capacity (claim 2). The holiday norm appears with little cause (claim 3). magnitude: Figures sit inside the envelope (29.8, ever-used 40.5), and the payer mix, cash breakdown, age and income checks, Medicare $39.4B and Quit Track $1.07B all reconcile. The weak spot is the Zepbound Lean ramp of 2.4M users (claim 1).",
+      "generativity": "The Darlene Pruitt scene shows rather than explains: the measuring-cup pill, the cotinine cup, Ronnie's reta vials and the daughter's rudeness question. The prose and world add many cultural fragments, such as 'holiday sex', Thanksgiving skips, Lisbon weeks and 'off record'. A few threads, like Mr. Begley and the Lambert boy, are barely used, but the film potential is high."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.65,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 36
   }
 }

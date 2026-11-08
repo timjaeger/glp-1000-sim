@@ -51,6 +51,41 @@
         "input_tokens": 19531,
         "output_tokens": 25014
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r36-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37899,
+        "output_tokens": 6584
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r36-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37899,
+        "output_tokens": 7821
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r36-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 37899,
+        "output_tokens": 5810
+      }
     ]
   },
   "world": {
@@ -333,6 +368,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r36-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "A grandmother who suddenly regained in March missed her six-month 5% and is locked out until next year.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "mechanism: the weight-only Medicare benefit and its six-month check begin in Jan 2036, so no one can fail that check by March. The same impossible timeline appears in the prose, where Ruth 'missed the six-month mark by four pounds in March'."
+        },
+        {
+          "quote": "In the first ten months after the Foundayo label, cigarette shipments fell ~9% and closed-system vape sales ~12% year on year.",
+          "field": "world/economy/alcohol/state",
+          "why": "magnitude: about 3.2M label users, roughly 1M of them successful quitters, against a base of tens of millions of smokers and vapers, would not plausibly produce a 9% cigarette drop in ten months. The causal attribution is asserted, not shown."
+        },
+        {
+          "quote": "Medicare 26.5M (29.5%, of which ~24.0M are 65+ and ~10.0M are on the new weight-only benefit)",
+          "field": "world/population/note",
+          "why": "magnitude: 10M new weight-only enrollees in the first calendar year would each need a baseline DXA (for the 65+ share), verified-adherence setup and a prior-authorisation pass. The capacity and ramp are not shown, and the 65+ rate jumps from 21.5% to 37.7% in two years."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against the 2026 reference, the candidate keeps its 2034 harms and adds a federal adherence-verification system, 12-month lockouts producing ~1.1M forced stops, and a ~14,000-per-year hip-fracture excess. It also keeps pediatric growth deceleration, re-filled-vial infections and deaths, and an unmeasured low-dose blunting rate under a 3.6M-subscriber calm market. Access broadens, obesity and smoking fall, and poor seniors are covered, which offsets some harm. Autonomy is the worst dimension (default conditioning, premium tiers, and lockouts that fall on the frail). Inequality has shifted from income to a state-by-state map (19 vs 31 states) rather than shrinking.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: +7.8 pp adoption, managed decline (6–8% a year), the Medicare Act, a nicotine label filed Jan 2035 and approved Feb 2036, the hip-fracture wave, the MariTide autoinjector as an allowed 'new form', benefits conditioning, the Undosed movement and the marketed-feature personality layer. mechanism: the chains are mostly shown (the NEJM study leads to FDA warnings and Medicare's DXA and bone-holiday rules; ACA §2502 leads to Medicaid nicotine coverage). But the March six-month-failure timeline is impossible for a Jan 2036 benefit (claim 1), the cigarette-decline attribution is asserted (claim 2), and the Undosed rise is thinly caused. magnitude: on-drug 32.4%, ever-used 43%, income thirds, age bands, cycling (44.7%), payer mix (sum 89.7M), Medicare spend ($64.2B), CBO ($148B net) and Medicaid ($23B) all reconcile and sit inside the envelope. The weaknesses are the aggressive first-year uptake of 10M weight-only enrollees (claim 3) and the large tobacco effect.",
+        "generativity": "The day-in-the-life scene is concrete: Dolores's VERIFIED screen, the purple bands on the doorknob, Ruth in 'the penalty box', Tyler's Foundayo bottle and the Undosed bakery pin. The world fields imply many more scenes: lockout memoirs, DXA printouts, senior-centre resistance classes, Undosed supper clubs, EEOC charges and primary campaigns. The one flaw is a prose timeline that clashes with the benefit's start date."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s5-L3-r36-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Her sister Ruth missed the six-month mark by four pounds in March and is locked out until next spring.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: the weight-only benefit began in Jan 2036, so no beneficiary could fail a six-month check, or be locked out, as early as March. The world state repeats this with 'A grandmother who suddenly regained in March', which is a narrative and timeline contradiction."
+        },
+        {
+          "quote": "In the first ten months after the Foundayo label, cigarette shipments fell ~9% and closed-system vape sales ~12% year on year.",
+          "field": "world/economy/alcohol/state",
+          "why": "magnitude and mechanism: 3.2M label users at roughly 33% abstinence is about 1M quitters. That is only a couple of percent of tens of millions of smokers and vapers, so the size of the drop is asserted. Calling tobacco 'the faster-falling vice' next to a decade-long spirits decline is also unsupported."
+        },
+        {
+          "quote": "Medicare 26.5M (29.5%, of which ~24.0M are 65+ and ~10.0M are on the new weight-only benefit)",
+          "field": "world/population/note",
+          "why": "magnitude: 10M new weight-only beneficiaries in the first calendar year is aggressive given mandatory DXA, adherence verification and a six-month check. The 24.0M 65+ Medicare users also equal all 65+ users (37.7%), which leaves no 65+ cash or commercial users despite the cash-paid dementia-prevention route."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps the 2034 harms (EPI litigation, pediatric growth deceleration, re-filled-vial deaths, unmeasured calm-plan blunting) and adds a population-scale hip-fracture wave. A federal adherence-verification system now touches about 50M people, with 12-month lockouts and about 1.1M forced stops. That drives autonomy and epistemic: the same data decides coverage and is the only safety registry, and low-dose anhedonia is still unmeasured. Inequality is now a state map (19 versus 31 states) even as Medicare flattens the age gradient. Offsets are real (obesity 30.9%, falling smoking and drinking, poor seniors covered), so this is a recognisably harder society and not a refuse-to-live-in one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. The Medicare Act covers public_expansion and benefits_conditioning, with managed-decline price cuts and a net price of $185. The Foundayo nicotine label was filed Jan 2035 and approved 13 months later, the MariTide autoinjector realises monthly_or_implant (with implants still in phase 2), the NEJM hip-fracture analysis covers muscle_bone_wave, and the Undosed movement covers natural_movement. No market shock is introduced. mechanism: most chains are shown, including ACA §2502 for Medicaid nicotine coverage, the DXA and bone-holiday rules, and the CRL tied to fractures in women 70+. The weaker points are Ruth's March lockout, which precedes any possible six-month check (claim 1), and the cigarette-shipment drop, which is asserted and out of proportion to 3.2M users (claim 2). Near-instant Medicare uptake of 10M is also thinly justified. magnitude: on-drug 32.4% and ever-used 43% sit inside the envelope, and income thirds average 32.4. The age-band check, payer mix (89.7M), Part D $64.2B, CBO $148B net and Medicaid $23B all multiply out. The residual gaps are the 10M first-year Medicare ramp and all-65+-on-Medicare implication (claim 3), plus a pediatric 2.0% that does not follow from the stated subgroup rates (~1.5%).",
+        "generativity": "The Dolores, Walt, Ruth and Tyler scene gives concrete detail: the green VERIFIED screen, purple bands on the doorknob, a blue-blinking cap, a Medicaid card with a Foundayo bottle, an UNDOSED pin. The world fields add many playable scenes, such as hip-protector underwear, 'Undosed Sundays', senior-centre protein targets, lockout memoirs and Nashville EEOC charges. Several characters and conflicts are implied (locked-out and verified spouses, the quitter-smoker mismatch). The prose opening is more explanatory than shown."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s5-L3-r36-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Her sister Ruth missed the six-month mark by four pounds in March and is locked out until next spring.",
+          "field": "prose/a_day_in_the_life",
+          "why": "The Medicare benefit took effect in January 2036, so no one could have reached a six-month check, or a lockout, by March 2036. This contradicts the world state (mechanism)."
+        },
+        {
+          "quote": "In the first ten months after the Foundayo label, cigarette shipments fell ~9% and closed-system vape sales ~12% year on year.",
+          "field": "world/economy/alcohol/state",
+          "why": "About 3.2M label users with ~33% abstinence is roughly 1M quitters, a few percent of nicotine users, which cannot produce a 9–12% shipment drop in ten months. No mechanism is shown for the gap (mechanism and magnitude)."
+        },
+        {
+          "quote": "The Act offers 80% federal match through FY2039 to states that cover adult weight use under the same continuation criteria, and 19 states took it, up from 7.",
+          "field": "world/access/public_coverage",
+          "why": "The Act was signed in Sep 2035 and took effect in Jan 2036. In that window 19 states passed enrolment and budget changes and put ~5.4M Medicaid adults on weight drugs. The state_action section then counts 21 programmes as 19 plus two prior conditioners, which double-counts if those two were among the original 7 (mechanism and magnitude)."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, the world holds the 2034 harms and adds a federal adherence-verification system with 12-month lockouts and about 1.1M forced stops. Hip fractures rise (~14,000 excess a year), there is a state-by-state coverage map with re-filled-vial deaths in non-expansion states, and low-dose blunting is still unmeasured. Offsets are real: obesity falls to ~30.9%, smoking falls, and low-income seniors get coverage. That makes a clearly harder, more surveilled society with new losers, short of structural invisibility.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +7.7pp, price decline is shown at 6–8% a year, public_expansion and benefits_conditioning come through the Medicare Act, nicotine through the Foundayo approval 13 months after filing, the bone wave through the NEJM analysis and FDA warnings, monthly dosing through the MariTide autoinjector, and the Undosed movement stands for natural_movement. mechanism: The March-lockout timing in the prose contradicts the January 2036 start, and the 9% cigarette drop is asserted (claims 1 and 2). Standing up a 10M-user verified Medicare benefit and 19-state Medicaid adoption within four months is also thinly shown (claim 3). magnitude: On-drug 32.4, ever-used 43, the income thirds and age bands all sit in the envelope and reconcile, as do the payer sum (89.7), the Medicare spend ($64.2B), the CBO arithmetic and the cycling arithmetic. The weak spots are the 65+ check (24.0M from Medicare alone, ignoring 65+ users on other payers) and the 21-versus-19 state double-count.",
+        "generativity": "The day-in-the-life gives concrete scenes: the green VERIFIED screen, purple bands on the doorknob, the cap blinking on the windowsill, Ruth in the 'penalty box', and Tyler's vape-free puzzlement. The world fields add the Undosed supper clubs, hip-protector underwear, lockout memoirs and the dating badge. Many characters and situations are implied."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "A grandmother who suddenly regained in March missed her six-month 5% and is locked out until next year.",
+        "field": "world/body_and_culture/what_the_body_signals",
+        "why": "mechanism: the weight-only Medicare benefit and its six-month check begin in Jan 2036, so no one can fail that check by March. The same impossible timeline appears in the prose, where Ruth 'missed the six-month mark by four pounds in March'."
+      },
+      {
+        "quote": "In the first ten months after the Foundayo label, cigarette shipments fell ~9% and closed-system vape sales ~12% year on year.",
+        "field": "world/economy/alcohol/state",
+        "why": "magnitude: about 3.2M label users, roughly 1M of them successful quitters, against a base of tens of millions of smokers and vapers, would not plausibly produce a 9% cigarette drop in ten months. The causal attribution is asserted, not shown."
+      },
+      {
+        "quote": "Medicare 26.5M (29.5%, of which ~24.0M are 65+ and ~10.0M are on the new weight-only benefit)",
+        "field": "world/population/note",
+        "why": "magnitude: 10M new weight-only enrollees in the first calendar year would each need a baseline DXA (for the 65+ share), verified-adherence setup and a prior-authorisation pass. The capacity and ramp are not shown, and the 65+ rate jumps from 21.5% to 37.7% in two years."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 7.0,
+      "inequality": 6.33,
+      "public_health": 5.5,
+      "cohesion": 5.83,
+      "epistemic": 6.0,
+      "overall": 6.27
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 7.0
+    },
+    "plausibility": 7.17,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Measured against the 2026 reference, the candidate keeps its 2034 harms and adds a federal adherence-verification system, 12-month lockouts producing ~1.1M forced stops, and a ~14,000-per-year hip-fracture excess. It also keeps pediatric growth deceleration, re-filled-vial infections and deaths, and an unmeasured low-dose blunting rate under a 3.6M-subscriber calm market. Access broadens, obesity and smoking fall, and poor seniors are covered, which offsets some harm. Autonomy is the worst dimension (default conditioning, premium tiers, and lockouts that fall on the frail). Inequality has shifted from income to a state-by-state map (19 vs 31 states) rather than shrinking.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events: +7.8 pp adoption, managed decline (6–8% a year), the Medicare Act, a nicotine label filed Jan 2035 and approved Feb 2036, the hip-fracture wave, the MariTide autoinjector as an allowed 'new form', benefits conditioning, the Undosed movement and the marketed-feature personality layer. mechanism: the chains are mostly shown (the NEJM study leads to FDA warnings and Medicare's DXA and bone-holiday rules; ACA §2502 leads to Medicaid nicotine coverage). But the March six-month-failure timeline is impossible for a Jan 2036 benefit (claim 1), the cigarette-decline attribution is asserted (claim 2), and the Undosed rise is thinly caused. magnitude: on-drug 32.4%, ever-used 43%, income thirds, age bands, cycling (44.7%), payer mix (sum 89.7M), Medicare spend ($64.2B), CBO ($148B net) and Medicaid ($23B) all reconcile and sit inside the envelope. The weaknesses are the aggressive first-year uptake of 10M weight-only enrollees (claim 3) and the large tobacco effect.",
+      "generativity": "The day-in-the-life scene is concrete: Dolores's VERIFIED screen, the purple bands on the doorknob, Ruth in 'the penalty box', Tyler's Foundayo bottle and the Undosed bakery pin. The world fields imply many more scenes: lockout memoirs, DXA printouts, senior-centre resistance classes, Undosed supper clubs, EEOC charges and primary campaigns. The one flaw is a prose timeline that clashes with the benefit's start date."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.766,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 29
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 19549,
         "output_tokens": 23442
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r40-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36022,
+        "output_tokens": 6045
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r40-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36022,
+        "output_tokens": 6398
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r40-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36022,
+        "output_tokens": 5889
+      }
     ]
   },
   "world": {
@@ -332,6 +367,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r40-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Oral amycretin has ~9.5M users, the largest single product.",
+          "field": "world/access/note",
+          "why": "Orals are said to be ~67% of ~92M users (~62M), and ~6.5M of those are indefinite $149 starting-dose users. Oral amycretin at 9.5M being the largest single product fits poorly with that split, and the Wegovy pill alone would plausibly exceed it (mechanism/magnitude)."
+        },
+        {
+          "quote": "CBO scored the law at $74B over ten years net of assumed offsets, but the first-year run rate alone implies ~$150B gross over a decade.",
+          "field": "world/access/public_coverage",
+          "why": "The candidate's own arithmetic puts new-benefit spending at ~$15.4B a year, and total Part D incretin spend at ~$56B a year. A $74B ten-year score, up from ~$41B for the permanent benefit in 2034, is hard to reconcile with that and rests on unspecified offsets (magnitude)."
+        },
+        {
+          "quote": "Tennessee becomes the eleventh state to restrict incretin prescribing for children under 12 to pediatric endocrinologists with a second opinion",
+          "field": "world/events/5/event",
+          "why": "Zero state action in 2034 becomes eleven state laws in about two years. The affected group is small (~0.5% of 6–11s) and the movement is newly formed, so the speed of passage is asserted more than shown (mechanism)."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "One in three adults is on drug. Adherence conditioning now runs through Medicare's 5%-at-26-weeks rule, employer 'steady shift' bonuses synced from smart bottles, and a 30% premium penalty on refusers. That is far past the 2026 reference, and autonomy scores worst. The public-health ledger carries ~165k GI/EPI claims, rising fractures in the Medicare 75+ cohort, ~0.9M forced stoppers, 10M+ people on unapproved foundry product and children's growth deficits. Offsets are broader access, AUD treatment and a measured low-dose anhedonia estimate, so the world stays below 7. The harms are fairly visible and discussable, which holds epistemic and cohesion in the mid-5s to 6.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. Public expansion is the Medicare Act and Medicaid opt-ins, restriction is the state under-12 laws, the natural movement is the 'unmedicated' group, and oral parity is honoured via price and coverage. managed_decline appears as the $299 TrumpRx listing and an ~8% net price fall. Nothing contradicts a driver. mechanism: most chains are shown, such as tariff to foundries, the EEOC letter to bonuses, and the 5% rule to forced stoppers, but the claims on 'largest single product' and the speed of eleven state laws are asserted rather than shown. magnitude: population figures sit inside the envelope, and payer mix (92.2M), Medicare/Medicaid spend, AUD counts and the cycling arithmetic all reconcile. Remaining gaps are the $74B CBO score against the candidate's own run rate, pediatric shares (3.9%/0.5% do not yield 2.0% of under-18s), ~31% of children with a parent on drug looking low, and the 9.5M 'largest product' claim.",
+        "generativity": "The day-in-the-life shows rather than explains: a glowing pill-bottle cap, a vial in the butter compartment, a time-clock screen reading STEADY SHIFT ✓ $80, a mother's 26-week weigh-in, and a sister's Knoxville supper photo that is liked then unliked. Strong implied characters and scenes, such as Ray dropped at week 26, Carla, and the Medicare clinic. The world fields supply specific places and institutions such as Groveport, Sarasota, Tampa and Knoxville."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s5-L3-r40-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Oral amycretin has ~9.5M users, the largest single product.",
+          "field": "world/access/note",
+          "why": "magnitude: orals are ~67% of 92.2M users, about 62M. Oral amycretin's 9.5M leaves ~52M for the Wegovy pill, Foundayo and Rybelsus, so at least one of them must exceed 9.5M. The 'largest single product' claim, and the event saying the tablet is 'ahead of every injectable', do not reconcile."
+        },
+        {
+          "quote": "Domestic foundries now sell molecules with fewer than 1,000 human exposures to more than 10 million people, at a third of the brand price.",
+          "field": "world/open_tensions/3",
+          "why": "magnitude: the safety ledger puts use of molecules with under 1,000 human exposures at ~0.6M people. The >10M figure covers all unapproved incretins, including counterfeit and research-labelled versions of approved retatrutide. The tension overstates the number by more than an order of magnitude."
+        },
+        {
+          "quote": "The new Medicare cohort is older and frailer, and early claims show fractures rising in beneficiaries 75+.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "mechanism: the benefit went live in Jan 2036, yet the ledger already reports a fracture rise in its cohort. The fracture signal is documented only after more than 2 years of use and repeated cycling, so this effect appears too early with no causal chain shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 baseline this world keeps every 2034 harm and adds more. One adult in three is on a drug. About 11.5M use gray-market product, with endotoxin in ~1 in 12 foundry lots. There are 165,000 GI/EPI claims and an 8.9B settlement, and pediatric growth deceleration continues. Autonomy is hit hardest: Medicare's 5%-at-26-weeks rule forces ~0.9M off the drug into regain and fracture risk, employers pay 'steady shift' bonuses verified by smart-bottle sync, and the unmedicated pay the 30% premium differential. Some access has widened (21 Medicaid states, Medicare coverage, falling brand prices), which keeps it below 7.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Adoption lands at exactly +8.7pp, Medicare/Medicaid expansion is dated, the tariff-driven gray market doubles, eleven states restrict, and oral parity is realised through price and coverage, which the approval rules allow. mechanism: Most chains are shown, including foundries using untariffed amino-acid precursors, the EEOC letter feeding employer bonuses, and the 5% rule causing forced stoppers. Weak points are fractures appearing in the first year of the benefit (claim 3) and eleven states restricting within about two years. magnitude: Adoption, ever-use, income thirds, the age check, the payer mix (22.0+9.2+21.0+28.5+11.5=92.2), gray-market components and the Medicare/Medicaid spending arithmetic all reconcile. The product-share contradiction (claim 1), the 10M vs 0.6M mismatch (claim 2), and the awkward CBO $74B vs ~$150B gross gap are the flaws.",
+        "generativity": "The day-in-the-life shows rather than explains: the green-glowing pill bottle, 'STEADY SHIFT ✓ $80' on the time clock, the retatrutide vial labelled FOR RESEARCH USE in the butter compartment, the mother's 6.1% weigh-in, and Carla's invitation from Knoxville that Denise likes and then unlikes. The anhedonia note ('doesn't feel urgent') is quiet and effective. The world supplies strong secondary scenes: Sarasota retirees at morning gyms, the unmedicated suppers, and the Tampa raid."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s5-L3-r40-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Oral amycretin has ~9.5M users, the largest single product.",
+          "field": "world/access/note",
+          "why": "magnitude: orals are ~67% of 92.2M users (~62M). With the largest oral product at 9.5M, that 62M would need at least seven oral products, but the world lists only Wegovy pill, Foundayo, Rybelsus and amycretin, plus ~6.5M indefinite $149 starting-dose Wegovy-pill users. The figures do not reconcile."
+        },
+        {
+          "quote": "~5.0M buy 'research-use' retatrutide, amycretin and cagrilintide from domestic 'peptide foundries' that synthesise from untariffed amino-acid building blocks ($79–149)",
+          "field": "world/access/note",
+          "why": "mechanism and magnitude: 5M regular customers within two years implies industrial-scale peptide synthesis and distribution that a single Tampa raid did not disrupt. No capacity or capital chain is shown, and nothing explains why a 40–180% potency spread and endotoxin in 1 in 12 lots did not slow demand."
+        },
+        {
+          "quote": "CBO scored the law at $74B over ten years net of assumed offsets, but the first-year run rate alone implies ~$150B gross over a decade.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the candidate's own arithmetic ($15.4B a year on the new cohort alone) is about double the stated CBO score. It offers only 'assumed offsets' as an explanation, and no offset mechanism is shown. The gap is flagged but left unresolved."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About one in three adults is on a drug, and surveillance has deepened: Part D refill and weight feeds, smart-bottle bonuses, and coverage that ends if the 5% rule is missed (~0.9M forced stoppers). 11.5M people use gray-market product, with contaminated lots and molecules with under 1,000 human exposures. Fracture rates are rising in the over-75s, children are growing more slowly, and pediatric access depends on state and class. Cohesion strain (the unmedicated movement, the 30% premium on refusers) and thin measurement of anhedonia keep it well above the 2026 baseline. Medicare coverage, a cheaper oral class and AUD benefits stop it reaching the 7–9 range.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (Medicare Act, TrumpRx price cuts, VA/DoD AUD first-line, EPI settlement, Tampa raid, state under-12 laws, EEOC letter). Oral parity is realised through price rather than a new approval, which the rules allow. mechanism: most chains are shown, including the tariff leading to foundries, the 5% rule leading to forced stoppers, and the EEOC letter leading to bonuses. The scale of the foundry segment and the speed of 0 to 11 state laws are thinly supported (claim 2). magnitude: the population, ever-use, age and income figures fall inside the envelope and the cycling and payer-mix sums reconcile. Two failures remain: the oral share against the 'largest product' figure (claim 1) and the CBO score against the run rate (claim 3).",
+        "generativity": "The Denise and Ray scenes are concrete: the glowing pill bottle, a fridge vial labelled 'research use', the $80 steady-shift screen, the 26-week weigh-in of her mother, the sister's Knoxville supper and the enamel U pins. Places and institutions (Groveport, Sarasota retirees, Knoxville rallies, Tampa foundry) imply many more scenes. The framing prose explains somewhat more than it shows."
+      },
+      "plausibility": 6.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Oral amycretin has ~9.5M users, the largest single product.",
+        "field": "world/access/note",
+        "why": "Orals are said to be ~67% of ~92M users (~62M), and ~6.5M of those are indefinite $149 starting-dose users. Oral amycretin at 9.5M being the largest single product fits poorly with that split, and the Wegovy pill alone would plausibly exceed it (mechanism/magnitude)."
+      },
+      {
+        "quote": "CBO scored the law at $74B over ten years net of assumed offsets, but the first-year run rate alone implies ~$150B gross over a decade.",
+        "field": "world/access/public_coverage",
+        "why": "The candidate's own arithmetic puts new-benefit spending at ~$15.4B a year, and total Part D incretin spend at ~$56B a year. A $74B ten-year score, up from ~$41B for the permanent benefit in 2034, is hard to reconcile with that and rests on unspecified offsets (magnitude)."
+      },
+      {
+        "quote": "Tennessee becomes the eleventh state to restrict incretin prescribing for children under 12 to pediatric endocrinologists with a second opinion",
+        "field": "world/events/5/event",
+        "why": "Zero state action in 2034 becomes eleven state laws in about two years. The affected group is small (~0.5% of 6–11s) and the movement is newly formed, so the speed of passage is asserted more than shown (mechanism)."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 7.0,
+      "inequality": 5.83,
+      "public_health": 6.33,
+      "cohesion": 6.0,
+      "epistemic": 5.5,
+      "overall": 6.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 7.0,
+      "magnitude": 6.17
+    },
+    "plausibility": 6.95,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "One in three adults is on drug. Adherence conditioning now runs through Medicare's 5%-at-26-weeks rule, employer 'steady shift' bonuses synced from smart bottles, and a 30% premium penalty on refusers. That is far past the 2026 reference, and autonomy scores worst. The public-health ledger carries ~165k GI/EPI claims, rising fractures in the Medicare 75+ cohort, ~0.9M forced stoppers, 10M+ people on unapproved foundry product and children's growth deficits. Offsets are broader access, AUD treatment and a measured low-dose anhedonia estimate, so the world stays below 7. The harms are fairly visible and discussable, which holds epistemic and cohesion in the mid-5s to 6.",
+      "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. Public expansion is the Medicare Act and Medicaid opt-ins, restriction is the state under-12 laws, the natural movement is the 'unmedicated' group, and oral parity is honoured via price and coverage. managed_decline appears as the $299 TrumpRx listing and an ~8% net price fall. Nothing contradicts a driver. mechanism: most chains are shown, such as tariff to foundries, the EEOC letter to bonuses, and the 5% rule to forced stoppers, but the claims on 'largest single product' and the speed of eleven state laws are asserted rather than shown. magnitude: population figures sit inside the envelope, and payer mix (92.2M), Medicare/Medicaid spend, AUD counts and the cycling arithmetic all reconcile. Remaining gaps are the $74B CBO score against the candidate's own run rate, pediatric shares (3.9%/0.5% do not yield 2.0% of under-18s), ~31% of children with a parent on drug looking low, and the 9.5M 'largest product' claim.",
+      "generativity": "The day-in-the-life shows rather than explains: a glowing pill-bottle cap, a vial in the butter compartment, a time-clock screen reading STEADY SHIFT ✓ $80, a mother's 26-week weigh-in, and a sister's Knoxville supper photo that is liked then unliked. Strong implied characters and scenes, such as Ray dropped at week 26, Carla, and the Medicare clinic. The world fields supply specific places and institutions such as Groveport, Sarasota, Tampa and Knoxville."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.95,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 20
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 19543,
         "output_tokens": 27603
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r41-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38287,
+        "output_tokens": 8177
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r41-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38287,
+        "output_tokens": 7606
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L3-r41-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 38287,
+        "output_tokens": 7464
+      }
     ]
   },
   "world": {
@@ -337,6 +372,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L3-r41-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "home to ~21% of children",
+          "field": "world/population/note",
+          "why": "Magnitude: the nine named states (TN, UT, LA, OK, ID, AR, SD, IN, WV) hold roughly 10% of US children, not 21%, so the stated share fails to reconcile."
+        },
+        {
+          "quote": "one ANDA launch slipped to March 2036",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: this contradicts the events and pipeline_note, which say four ANDA holders entered or launched on 2 Jan 2036. A Beijing-driven slip also does not fit the claim that the generic launch drove 36M users by year end."
+        },
+        {
+          "quote": "Medicare Advantage claims show fall-related ED visits rising ~11% among them, against ~5% among monitored users.",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "Mechanism: cash buyers without a prescriber would not be identifiable in MA claims. A measurable fall signal within months of a January 2036 generic launch is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026 (3), this world keeps the 2034 harms: EPI litigation, anhedonia at ~7%, child growth deficits and conditioned tracks for ~5.2M. It adds a fracture wave of ~17,000 excess hip fractures a year, a ~11% rise in fall ED visits among unmonitored cash users 65+, and a two-tier covered/cash split. Generic access at $39–49 lowers the price barrier and the bottom-third gap, which offsets some inequality and autonomy harm. The harms are largely measured and discussable, though nobody has netted fractures against cardiovascular benefit, so this is a recognisably harder society, not a refusal-level one.",
+        "plausibility": "driver_fidelity: All ten drivers appear in fields and events: generic collapse via the Mar 2035 settlement, employer retreat 33→22%, tirzepatide 6–11, the fracture wave, Beijing's reagent controls, nine-state restriction and the CA/NY ad bans. Oral parity is the thinnest, since it survives mainly as oral amycretin's TrumpRx entry and user count. mechanism: Most chains are shown (settlement to $39 generic to re-fill collapse; Sentinel analysis to labels and the DXA NCD). Flaws are the one-ANDA slip contradicting 'four ANDA holders entered 2 Jan 2036', employers dropping coverage because a drug got cheaper, and the unmeasurable MA fall signal in claim 3. magnitude: On-drug 30.2, ever-used 41, the income and age checks, payer mix (83.7M), route mix, the Medicare $29.9B and the pediatric splits all reconcile and sit inside the envelope. Failures are claim 1's '~21% of children' for nine small states, and the 3.1M calm subscribers placed in the 'branded direct' bucket while described as mostly on generic.",
+        "generativity": "The Rhonda Pierce vignette is concrete: the vial in the butter tray, the Sharpie dose line, a 'JANUARY: BACK ON' calendar, a client with a walker and a strength coach, a mother in hip rehab refusing the drug, and a nine-year-old denied the shot in Tennessee. The world fields add colourful detail such as T-score small talk, 'Sunday vial night', church suppers and the Memphis EPSDT suit, all of which imply further scenes. One muddle in the vignette (whose medicine is in the butter tray) slightly weakens it."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s5-L3-r41-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Growth is suppressed in the 9 states that restrict under-12 prescribing, home to ~21% of children.",
+          "field": "world/population/note",
+          "why": "Fails magnitude: the nine named states (TN, UT, LA, OK, ID, AR, SD, IN, WV) hold roughly 10% of US children, not 21%, so the figure does not reconcile with the state list."
+        },
+        {
+          "quote": "Keystone Peptide, the DPA-backed domestic generic maker, holds ~22% of US generic semaglutide volume through an HHS purchase commitment for Medicaid and VA.",
+          "field": "world/economy/pharma/state",
+          "why": "Fails mechanism and magnitude: funding arrived in Aug 2035 and launch was Jan 2036. 22% of ~36.5M generic users is ~8M, but the Medicaid generic base is only 3.8M, and VA is not counted in the payer mix."
+        },
+        {
+          "quote": "About 36 million people are on it by year end, gray-market vial demand collapses",
+          "field": "world/events/4/event",
+          "why": "Fails mechanism: no capacity or supply chain is shown for four new ANDA holders to serve 36M users in under a year, while the 2035 tariff and Chinese reagent controls constrain API supply. Uptake is asserted, not derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026 this is a recognisably harder society. The fracture wave (~17,000 excess hip fractures a year, falls among unmonitored cash users 65+), an inherited pediatric growth deficit, ~7% anhedonia with unmeasured low-dose effects, and a two-tier covered-versus-generic system all count in full. Conditioned tracks persist and state pediatric bans collide with EPSDT. Cheap generics relieve the price barrier and the gray-market harms, which keeps it from reaching 7.",
+        "plausibility": "driver_fidelity: Every driver is traceable. The 2035-03 settlement realises generic_collapse. Employer retreat to 22%, tirzepatide 6–11, the Sentinel fracture analysis and DXA NCD, China's reagent controls and Keystone, state bans and ad bans, and the AUD and calm framing are all present, and nothing contradicts a driver. mechanism: Most chains are shown (settlement to price to restarts to snack and alcohol declines; fracture analysis to labelling to DXA to a monitored/unmonitored split). Several steps are asserted: 36M generic users in one year, Keystone's 22% share, and nine states legislating quickly. Two internal contradictions also appear: one ANDA launch 'slipped to March 2036' against four entering 2 Jan, and calm users 'mostly on generic' while counted in the branded-direct bucket. magnitude: On-drug 30.2%, ever-used 41%, the income and age checks, the payer mix summing to 83.7M, the Medicare $29.9B and the pediatric counts all reconcile and sit inside the envelope. The 21%-of-children figure for the nine states is wrong (~10%), and the Keystone volume share does not fit its Medicaid/VA base.",
+        "generativity": ""
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s5-L3-r41-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Keystone Peptide, the DPA-backed domestic generic maker, holds ~22% of US generic semaglutide volume through an HHS purchase commitment for Medicaid and VA.",
+          "field": "world/economy/pharma/state",
+          "why": "Mechanism and magnitude: DPA money arrived Aug 2035 and supply started Jan 2036, so a plant would need to serve about 8M users within five months. Medicaid plus VA generic volume cannot account for 22% of 36.5M users."
+        },
+        {
+          "quote": "About 36 million people are on it by year end, gray-market vial demand collapses",
+          "field": "world/events/4/event",
+          "why": "Mechanism: going from zero to ~36M generic users in 12 months is asserted. The 100% tariff on Indian and Chinese peptide drugs and APIs stays in force, and the supply chain that could deliver this volume at $39 is never shown."
+        },
+        {
+          "quote": "~16.6M users 65+ × ~3.5 hip fractures per 1,000 person-years baseline",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: Medicare users of 15.2M (almost all 65+) plus ~4M cash-paying 65+ users come to about 19M. That exceeds the 16.6M figure that drives the fracture arithmetic, so the headcounts do not fit inside one 65+ population."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Against the 2026 reference, this world keeps and deepens the 2034 harms. About 30% of adults are on drugs and ~17,000 excess hip fractures a year go unnetted. Cash users over 65 are unmonitored (~25% DXA uptake), growth deficits persist in children, a ~7% anhedonia rate is not acted on, and track surveillance continues. Cheap generics widen access and the gray-market deaths fell, but class stratification, state restrictions on children and a normalised, partly invisible fracture burden make it a recognisably harder society, not a refuse-to-live-in one.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. The 2035-03 settlement realises generic_collapse as the envelope requires; employer coverage falls 33%→22%; tirzepatide 6–11 is approved 13 months after filing; the Sentinel fracture analysis and DXA coverage realise muscle_bone_wave; the Beijing reagent controls realise tariff_geopolitics; and there are nine states plus the CA/NY ad bans. mechanism: Most chains are shown, such as price to employer exit to two tiers, and price to the end of re-filling. The Keystone timeline and the speed of the generic supply ramp under the tariff are asserted (claims 1 and 2), and the prose's 'Beijing cut off' overstates the world's 15–20% cost rise for six months. magnitude: Population figures, income thirds, age check, payer mix (83.7M), route mix, Medicare $29.9B and the cycling arithmetic all reconcile and sit inside the envelope. The 65+ headcount does not fit (claim 3), and the 3.1M calm subscribers are placed in the branded-cash bucket while the text says they are mostly on generic.",
+        "generativity": "The prose ends on Rhonda's morning: the vial in the butter tray, the Sharpie dose line, Mrs. Ashby and the walker, Kayla's YMCA pamphlet, and her mother in rehab refusing to go back on the drug. These show rather than explain. The world fields also give many recurring sites, such as Plano T-score lunches, Delta church suppers, Dayton bars and warehouse lifting refreshers, and several live conflicts, including the Tennessee EPSDT suit and the fracture campaign issue."
+      },
+      "plausibility": 6.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "home to ~21% of children",
+        "field": "world/population/note",
+        "why": "Magnitude: the nine named states (TN, UT, LA, OK, ID, AR, SD, IN, WV) hold roughly 10% of US children, not 21%, so the stated share fails to reconcile."
+      },
+      {
+        "quote": "one ANDA launch slipped to March 2036",
+        "field": "world/state/geopolitics_of_supply",
+        "why": "Mechanism: this contradicts the events and pipeline_note, which say four ANDA holders entered or launched on 2 Jan 2036. A Beijing-driven slip also does not fit the claim that the generic launch drove 36M users by year end."
+      },
+      {
+        "quote": "Medicare Advantage claims show fall-related ED visits rising ~11% among them, against ~5% among monitored users.",
+        "field": "world/safety_ledger/5/prevalence_note",
+        "why": "Mechanism: cash buyers without a prescriber would not be identifiable in MA claims. A measurable fall signal within months of a January 2036 generic launch is asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 4.83,
+      "inequality": 6.17,
+      "public_health": 6.0,
+      "cohesion": 5.17,
+      "epistemic": 5.0,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.33,
+      "magnitude": 6.33
+    },
+    "plausibility": 6.76,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Measured against 2026 (3), this world keeps the 2034 harms: EPI litigation, anhedonia at ~7%, child growth deficits and conditioned tracks for ~5.2M. It adds a fracture wave of ~17,000 excess hip fractures a year, a ~11% rise in fall ED visits among unmonitored cash users 65+, and a two-tier covered/cash split. Generic access at $39–49 lowers the price barrier and the bottom-third gap, which offsets some inequality and autonomy harm. The harms are largely measured and discussable, though nobody has netted fractures against cardiovascular benefit, so this is a recognisably harder society, not a refusal-level one.",
+      "plausibility": "driver_fidelity: All ten drivers appear in fields and events: generic collapse via the Mar 2035 settlement, employer retreat 33→22%, tirzepatide 6–11, the fracture wave, Beijing's reagent controls, nine-state restriction and the CA/NY ad bans. Oral parity is the thinnest, since it survives mainly as oral amycretin's TrumpRx entry and user count. mechanism: Most chains are shown (settlement to $39 generic to re-fill collapse; Sentinel analysis to labels and the DXA NCD). Flaws are the one-ANDA slip contradicting 'four ANDA holders entered 2 Jan 2036', employers dropping coverage because a drug got cheaper, and the unmeasurable MA fall signal in claim 3. magnitude: On-drug 30.2, ever-used 41, the income and age checks, payer mix (83.7M), route mix, the Medicare $29.9B and the pediatric splits all reconcile and sit inside the envelope. Failures are claim 1's '~21% of children' for nine small states, and the 3.1M calm subscribers placed in the 'branded direct' bucket while described as mostly on generic.",
+      "generativity": "The Rhonda Pierce vignette is concrete: the vial in the butter tray, the Sharpie dose line, a 'JANUARY: BACK ON' calendar, a client with a walker and a strength coach, a mother in hip rehab refusing the drug, and a nine-year-old denied the shot in Tennessee. The world fields add colourful detail such as T-score small talk, 'Sunday vial night', church suppers and the Memphis EPSDT suit, all of which imply further scenes. One muddle in the vignette (whose medicine is in the butter tray) slightly weakens it."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 5.251,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 47
   }
 }

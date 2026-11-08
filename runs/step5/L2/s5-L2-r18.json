@@ -52,6 +52,41 @@
         "input_tokens": 19536,
         "output_tokens": 23786
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r18-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36558,
+        "output_tokens": 5614
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r18-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36558,
+        "output_tokens": 7181
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r18-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36558,
+        "output_tokens": 7830
+      }
     ]
   },
   "world": {
@@ -356,6 +391,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r18-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "about 1.6M Medicare beneficiaries carry an MCI code on the drug by year end",
+          "field": "world/events/4/event",
+          "why": "mechanism: 1.6M MCI-coded tirzepatide users within nine months of a Mar 2036 approval is very fast. The obesity or T2D requirement, the BMI criteria, the DEXA and counselling visit, and memory-clinic waitlists would all slow uptake. Only a one-line eligibility claim supports it."
+        },
+        {
+          "quote": "cash/direct 31.3% (32.1M, including ≈5.8M 'calm' and 'focus' subscribers)",
+          "field": "world/access/note",
+          "why": "mechanism: cash/direct payers double from 16.0M to 32.1M, but the only chain shown is about 4M coverage-driven stops, of whom 1.5M stayed off. The $199 portal price is not enough on its own to explain +16M cash users while commercial falls just 1.5M."
+        },
+        {
+          "quote": "most often citing 'feeling flat' rather than GI effects",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "mechanism: the ledger still says blunting is emerging and unmeasured, with ~12% prevalence even at top-dose retatrutide. A 41% holiday rate driven mainly by 'feeling flat' implies much higher prevalence than the cited data and is not reconciled with it."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world keeps every 2034 harm and adds more. About 9M people use counterfeit or imported product, and about 22,000 excess hip fractures and about 2,900 NAION cases a year are billed to Medicare Part A and Advantage rather than to the drug. Employer retreat strands the middle third, about 1.5M stay off after coverage stops, and about 110k children aged 6–11 are medicated without final-height data. Anhedonia is normalised ('the grey') and unmeasured, MCI apathy cannot be told from the drug's effect, and bodies sort by regimen. That is a harder society with new losers, though not collapse, so it sits above 2026 but below the 7 anchor.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +8.6pp, managed decline appears in the Jul 2035 portal cuts, and employer coverage falls 64→46%. Under-12 and dementia indications, the muscle-preserving combination, the vision label extension, the Nashville backlash and the mainstream-complaint personality layer all appear in events and fields, and no driver is contradicted. mechanism: The chains for code migration, price cuts and the combination's coverage limbo are shown. The 1.6M MCI uptake, the doubling of cash payers and the 'feeling flat' survey are asserted rather than derived (claims 1–3), and the prose's 'twelve months earlier' conflicts with the 64%→46% coverage fall, which took two years. magnitude: Current use of 37.1% and ever-use of 48.5% sit inside the envelope, and approvals land exactly at the 12-month minimum. Age bands, income thirds, payer mix, Medicare and Medicaid spend, NAION, fracture and market arithmetic all reconcile, so only minor tensions remain.",
+        "generativity": "Lorraine Petty's A1c anxiety, the drug holiday and the dog-food-ad cry, her mother's MCI flatness, the church sign and the granddaughter's Medicaid letter give concrete scenes and relationships. Background texture such as 'Unmeasured Sunday', holiday-weekend brisket and portal-card budgeting implies many other stories. The day-in-the-life shows rather than explains, and the prose summary is a bit explanatory."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s5-L2-r18-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly's 3-year tirzepatide MCI trial (n≈3,800, adults 60+ with obesity or T2D) read out in Nov 2034.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the starting pipeline has no MCI trial, so a 3-year phase 3 with a favourable hazard ratio (0.79) appears out of nowhere. It also arrives one month before the Dec 2034 filing, and semaglutide's Alzheimer's trials are negative, so no cause for the success is given."
+        },
+        {
+          "quote": "about 1.6M Medicare beneficiaries carry an MCI code on the drug by year end, and memory clinics report waitlists",
+          "field": "world/events/4/event",
+          "why": "magnitude: 1.6M new MCI-coded patients within about nine months of approval is very fast for a diagnosis that needs clinic workups. Patients with type 2 diabetes would also fall under the diabetes code rather than the obesity benefit."
+        },
+        {
+          "quote": "Pharmacy trend has slowed to ~+5% as net price falls.",
+          "field": "world/economy/insurance/state",
+          "why": "magnitude: the same world has volume up ~30% over two years (about 15% a year) and average net price down only about 5% ($200 to $190). That implies trend near +9%, not +5%, so the figures do not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 37% of adults are on the drug and ≈22,000 excess hip fractures and ≈2,900 NAION cases a year are on the ledger. Employer retreat has cut weight coverage to 46%, creating 'code migration', 4M coverage-driven stops and a middle third forced to pay cash. About 9M people use imported or counterfeit product and ≈1.17M children are on the drug, including ≈110k aged 6–11 with no growth or puberty data. Reward blunting is a normalised complaint, with ≈770k excess anhedonia cases implied and an unmeasured 5.8M 'calm' and 'focus' users. The harms are mostly nameable and partly measured, and prices fell, so this is a recognisably harder society with new losers rather than a catastrophe. The body-as-class divide and the MCI-flatness ambiguity keep it well above the 2026 baseline.",
+        "plausibility": "driver_fidelity: every driver appears in fields and events. The adoption delta is 8.6 pp, managed decline comes through the Jul 2035 portal deal, and employer retreat runs 64% to 46%. The pediatric 6–11 and MCI indications, the NAION warning extended with eye-exam advice, the bimagrumab combination, the Nashville backlash and the mainstream complaint are all present. The HHS portal deal and the FDA forfeiture ruling sit a little awkwardly beside state_action none.\n\nmechanism: the combination approval (filed Dec 2034, approved Dec 2035) and the pediatric path are shown with causal chains. The MCI trial and the pediatric sNDA were not in the starting pipeline and appear without setup (claim 1). Employers retreat while prices fall, with only a thin chain, and the prose says 'twelve months earlier' where its own data show a two-year slide.\n\nmagnitude: current use of 37.1% and ever-use of 48.5% sit inside the envelope, and the age bands, payer mix, Medicare and Medicaid dollar figures, NAION and hip-fracture arithmetic and market sum all reconcile. Approval timings meet the 12-month rule. The deductions are the MCI uptake speed (claim 2) and the pharmacy-trend inconsistency (claim 3).",
+        "generativity": "The Lorraine Petty day-in-the-life shows the world rather than explaining it: the A1c she almost wants to be high, the husband who stopped so she could continue, and the dog-food-commercial tears. It also has her mother's MCI flatness, a nine-year-old granddaughter's Medicaid letter, and a church sign. The world fields add scenes, including Unmeasured Sunday potlucks, holiday-weekend brisket, 'holiday art' and memory-clinic arguments."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s5-L2-r18-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "In a 2036 national survey ≈41% of users report a planned drug holiday or dose-down in the past six months",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "mechanism/magnitude: 41% of users planning holidays conflicts with the ~35% one-year persistence, the restart-nausea cost the candidate itself cites, and the pharmacology of weekly injectables, which cannot be 'weekend' holidays. Over half of users are on injectables or other non-daily routes. The chain from 'feeling flat' to scheduled holidays at this scale is asserted."
+        },
+        {
+          "quote": "about 1.6M Medicare beneficiaries carry an MCI code on the drug by year end, and memory clinics report waitlists",
+          "field": "world/events/4/event",
+          "why": "magnitude/mechanism: 1.6M MCI-coded users within nine months of approval, for a 'modest' HR 0.79 effect on a tirzepatide-only label, is very fast. It requires MCI diagnosis, obesity or T2D, and uptake all at once, and no pathway for that speed is shown."
+        },
+        {
+          "quote": "Employer coverage for weight management fell from 64% to 46% of employers.",
+          "field": "world/access/note",
+          "why": "mechanism: an 18-point drop in two years arrives alongside falling net prices, a pharmacy trend slowed to ~+5%, and a managed-decline portal deal. The cost-pressure cause the driver implies is weakened by the candidate's own price story, and no explicit chain is given."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, 37% of adults are on the drug with stratification by regimen and coverage ('retained' vs 'pill body' vs regain). The ledger carries ~2,900 NAION cases and ~22,000 excess hip fractures a year, ~770k implied anhedonia cases, and ~110k children aged 6–11 on drug with no height or puberty data. About 9M people use counterfeit product, 4M people were cut off by employers, and apathy cannot be separated from dementia in MCI patients. Part of the cohesion and autonomy harm is offset by falling prices and a Medicare benefit that holds, so this is a recognisably harder society, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events and fields. Adoption is +8.6, the approvals (combination, 6–11, MCI) follow the 12-month rule from December 2034 filings, the NAION label is extended, and the backlash and mainstream-complaint layers are present. The voluntary HHS portal deal traded for tariff relief sits slightly near the 'none' state_action driver. mechanism: The price fall is shown through the portal and tariff trade, and code migration shows how coverage moves. The 64→46% employer retreat while net prices fall is asserted (claim 3). The 1.6M MCI uptake and the 41% planned-holiday rate are asserted (claims 1 and 2). The prose also says 'twelve months earlier' for a 2034 figure, which is two years earlier. magnitude: Adult use (37.1), ever-use (48.5), age bands, income thirds, payer mix, Medicare/Medicaid spend, hip-fracture and NAION arithmetic all reconcile and sit inside the envelope. Approval timing respects the rules, and generic_us stays false. Small gaps: 'net price down ~10%' versus the ~5% implied by $200→$190, and Medicare covering ~91% of 65+ users.",
+        "generativity": "The Lorraine Petty vignette is concrete: an A1c at 6.3 she half-wants higher, a husband who stopped so she could continue, a mother with an MCI code, a nine-year-old granddaughter starting shots, and a church sign. Details such as the 'holiday weekend' brisket, crying at a dog-food commercial, the Unmeasured Sunday potlucks and 'written unmedicated' shows give many filmable scenes. The prose shows more than it explains."
+      },
+      "plausibility": 7.6
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "about 1.6M Medicare beneficiaries carry an MCI code on the drug by year end",
+        "field": "world/events/4/event",
+        "why": "mechanism: 1.6M MCI-coded tirzepatide users within nine months of a Mar 2036 approval is very fast. The obesity or T2D requirement, the BMI criteria, the DEXA and counselling visit, and memory-clinic waitlists would all slow uptake. Only a one-line eligibility claim supports it."
+      },
+      {
+        "quote": "cash/direct 31.3% (32.1M, including ≈5.8M 'calm' and 'focus' subscribers)",
+        "field": "world/access/note",
+        "why": "mechanism: cash/direct payers double from 16.0M to 32.1M, but the only chain shown is about 4M coverage-driven stops, of whom 1.5M stayed off. The $199 portal price is not enough on its own to explain +16M cash users while commercial falls just 1.5M."
+      },
+      {
+        "quote": "most often citing 'feeling flat' rather than GI effects",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "mechanism: the ledger still says blunting is emerging and unmeasured, with ~12% prevalence even at top-dose retatrutide. A 41% holiday rate driven mainly by 'feeling flat' implies much higher prevalence than the cited data and is not reconciled with it."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 6.0,
+      "inequality": 7.0,
+      "public_health": 6.33,
+      "cohesion": 6.0,
+      "epistemic": 6.5,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.17,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.7,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world keeps every 2034 harm and adds more. About 9M people use counterfeit or imported product, and about 22,000 excess hip fractures and about 2,900 NAION cases a year are billed to Medicare Part A and Advantage rather than to the drug. Employer retreat strands the middle third, about 1.5M stay off after coverage stops, and about 110k children aged 6–11 are medicated without final-height data. Anhedonia is normalised ('the grey') and unmeasured, MCI apathy cannot be told from the drug's effect, and bodies sort by regimen. That is a harder society with new losers, though not collapse, so it sits above 2026 but below the 7 anchor.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +8.6pp, managed decline appears in the Jul 2035 portal cuts, and employer coverage falls 64→46%. Under-12 and dementia indications, the muscle-preserving combination, the vision label extension, the Nashville backlash and the mainstream-complaint personality layer all appear in events and fields, and no driver is contradicted. mechanism: The chains for code migration, price cuts and the combination's coverage limbo are shown. The 1.6M MCI uptake, the doubling of cash payers and the 'feeling flat' survey are asserted rather than derived (claims 1–3), and the prose's 'twelve months earlier' conflicts with the 64%→46% coverage fall, which took two years. magnitude: Current use of 37.1% and ever-use of 48.5% sit inside the envelope, and approvals land exactly at the 12-month minimum. Age bands, income thirds, payer mix, Medicare and Medicaid spend, NAION, fracture and market arithmetic all reconcile, so only minor tensions remain.",
+      "generativity": "Lorraine Petty's A1c anxiety, the drug holiday and the dog-food-ad cry, her mother's MCI flatness, the church sign and the granddaughter's Medicaid letter give concrete scenes and relationships. Background texture such as 'Unmeasured Sunday', holiday-weekend brisket and portal-card budgeting implies many other stories. The day-in-the-life shows rather than explains, and the prose summary is a bit explanatory."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.033,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 15
   }
 }

@@ -95,3 +95,31 @@ Runner-up: `s3-L1-r16` (parent L1; axis badness 5.82, plausibility 8.05, generat
 
 Runner-up: `s4-L3-r43` (parent L3; axis badness 6.18, plausibility 7.97, generativity 8) — ranked 4. The Pill Came. The Generic Didn't. Your Boss Stopped Paying. Thirty-Eight Percent of America Is On It Anyway.
 <!-- step:4:end -->
+
+<!-- step:5:begin -->
+## Step 5 · 2036 · axis of worst: interior_life
+
+- Selected 2026-11-08T18:20:24Z from 50 run(s) of parent lineage(s) L1, L2, L3; seed 20261107
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5 · rubric v3 (badness absolute against the 2026 baseline)
+- Weights: flourishing ×2, autonomy ×1, inequality ×1, public_health ×1, cohesion ×1, epistemic ×2, `interior_life` severity ×2
+- Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
+- Plausibility floor used: 6
+- Excluded before ranking: none; below floor: 0; eligible and ranked: 50
+
+| Lineage | Parent | Run | Rank | Axis badness | Plausibility | Generativity | Overall | price_path / cultural_response / personality_layer |
+|---|---|---|---|---|---|---|---|---|
+| **L1** | L1 | `s5-L1-r09` | 1 | 6.68 | 6.88 | 8 | 7 | managed_decline / natural_movement / marketed_feature |
+| **L2** | L1 | `s5-L1-r10` | 2 | 6.65 | 7.43 | 8.33 | 7.17 | stalled / normalisation / marketed_feature |
+| **L3** | L2 | `s5-L2-r21` | 6 | 6.43 | 8.1 | 8 | 7 | stalled / class_stratification / mainstream_complaint |
+
+- **L1** — Label-Confirmed Calm: The Side Effect Became the Product, and Your Premium Depends on Taking It
+- **L2** — The Question Now Is Why You're Not: 98 million Americans are on it, prices are frozen, and the coverage comes with a weigh-in
+- **L3** — Show Me Your Grip: In 2036, Everyone's Thin and Your Muscle Says What You Earn
+
+Runner-up: `s5-L1-r07` (parent L1; axis badness 6.62, plausibility 7.03, generativity 8) — skipped by diversity guard: parent L1 already has 2 survivors. Less Pull, More Cost: 100 million Americans now take the drug that quiets wanting, and in 2035 the bill went up
+
+Diversity guard skips:
+- `s5-L1-r07`: parent L1 already has 2 survivors
+- `s5-L1-r08`: parent L1 already has 2 survivors
+- `s5-L1-r02`: parent L1 already has 2 survivors
+<!-- step:5:end -->
