@@ -142,6 +142,13 @@ scenes implied, a visible texture of daily life. Used only as a tie-break.
   setting) averages three judge calls per run for stability: each badness
   dimension, each plausibility sub-axis and generativity are averaged, and the
   composite is recomputed from the averaged sub-axes.
+- A judge sample cut off at `max_tokens` (16000) is discarded, never parsed,
+  and re-requested once as the same request. A run is scored from its
+  completed samples only if it has at least `min_completed_samples` (2) of
+  them; samples that were dropped (cut off twice, failed repair, API error)
+  are recorded with the reason. A run with fewer completed samples stays
+  unscored and is excluded from selection: scores are never averaged over
+  partial output.
 - The judge must return a short `rationale` per dimension. These are kept; they
   are part of the dossier and catch judge drift.
 

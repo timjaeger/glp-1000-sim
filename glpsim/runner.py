@@ -603,7 +603,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                             {**run["scores"], "superseded_at": now()})
                     for k in ("scores", "judge_samples"):
                         run.pop(k, None)
-                    run.setdefault("provenance", {})["judge"] = []
+                    run.setdefault("provenance", {}).setdefault("judge", [])   # earlier passes' calls are kept
                     run.setdefault("validation", {})["judge"] = {"errors": [], "repair_attempted": False}
                     touched.add(rid)
                 run["provenance"]["judge"].append(call_record("main", entry["batch_id"], judge_model, res))
@@ -614,11 +614,14 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                     rec = run["validation"]["judge"]
                     rec["errors"] += [f"{cid}: {e}" for e in errs]
                     rec["raw_output"] = text
-                    if res["type"] == "succeeded" and not res["refusal"] and not truncated(res):
-                        repair_ids.append(cid)      # only bad output is repaired, not API errors or cut-offs
+                    if res["type"] == "succeeded" and not res["refusal"]:
+                        repair_ids.append(cid)      # bad output is repaired, a cut-off re-requested; API errors are not
+            pending = {cid_to_run[c] for c in repair_ids}
             for rid in touched:
                 p, run = by_id[rid]
-                finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"])
+                if rid not in pending:
+                    finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"],
+                                     judge_min_completed(cfg))
                 dump_json(p, run)
             state["repair_ids"] = sorted(repair_ids)
             state["phase"] = "awaiting_repair" if repair_ids else "done"
@@ -628,11 +631,16 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
             main = [b for b in state["batches"] if b["role"] == "main"][-1]
             originals = read_batch_file(paths.root / main["batch_file"])
             first = collect(client, main["batch_id"])     # failing texts, re-read from the API
-            reqs = []
+            reqs, n_retry = [], 0
             for cid in state["repair_ids"]:
+                if truncated(first[cid]):           # discarded: the same request again, nothing of the cut-off kept
+                    reqs.append(repair_request(paths, originals[cid], None, []))
+                    n_retry += 1
+                    continue
                 _, errs, text = judge_result(paths, first[cid], by_id[cid_to_run[cid]][1])
                 reqs.append(repair_request(paths, originals[cid], text, errs))
-            print(f"{len(reqs)} judge response(s) failed validation; one repair attempt each")
+            print(f"{len(reqs) - n_retry} judge response(s) failed validation (one repair each); "
+                  f"{n_retry} cut off at max_tokens (discarded, re-requested once)")
             if guarded_submit(paths, cfg, args, client, state, "repair", reqs, rfile,
                               cfg["judging"], "judge repair batch") is None:
                 print("resume the repair with --resume --yes")
@@ -663,7 +671,8 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                         rec["raw_output"] = text
                 if not rec["errors"]:
                     rec["repaired"] = True
-                finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"])
+                finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"],
+                                 judge_min_completed(cfg))
                 dump_json(p, run)
             state["phase"] = "done"
             save_state(paths, state)
@@ -732,7 +741,8 @@ def judge_result(paths, res: dict, run: dict) -> tuple[dict | None, list[str], s
     if res["type"] != "succeeded":
         return None, [f"API {res['error']}"], None
     if truncated(res):
-        return None, [truncation_error()], res["text"]
+        return None, ["(root): cut off at max_tokens; this sample is discarded (its partial output is "
+                      "never used) and re-requested once"], None
     obj, errs = parse_json(res["text"])
     errs = errs or check_judge(paths, obj)
     errs = errs or quote_errors(obj["least_plausible_claims"], run)
@@ -743,27 +753,45 @@ def judge_result(paths, res: dict, run: dict) -> tuple[dict | None, list[str], s
     return obj, [], None
 
 
-def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str, weights: dict) -> None:
-    """Fold parsed samples (parked in run['judge_samples'], tagged by custom_id) into `scores`
-    once every sample for the run is in. A run missing a sample stays unscored and so is
-    excluded by `select`, with the reason in validation.judge.errors."""
-    from .judge import judge_custom_ids
+def judge_min_completed(cfg: dict) -> int:
+    """Completed samples a run needs to be scored (never more than the samples requested)."""
+    n = cfg["judging"].get("judge_samples", 1)
+    return min(n, cfg["judging"].get("min_completed_samples", n))
+
+
+def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str, weights: dict,
+                     min_completed: int | None = None) -> None:
+    """Fold the completed samples (parked in run['judge_samples'], tagged by custom_id) into
+    `scores`, called once the run has no sample waiting for a repair or retry. A run needs at
+    least `min_completed` completed samples; the mean is over those only, never over partial
+    output, and every dropped sample is recorded with its reason. A run short of
+    `min_completed` stays unscored (so `select` excludes it), with the reasons in
+    validation.judge.errors."""
+    from .judge import JUDGE_RUBRIC, judge_custom_ids
+    if min_completed is None:
+        min_completed = samples_n
     got = {s["custom_id"]: s for s in run.get("judge_samples", [])}
     cids = judge_custom_ids(rid, samples_n)
-    if not all(c in got for c in cids):
+    done = [c for c in cids if c in got]
+    rec = run["validation"]["judge"]
+    if len(done) < min_completed:
+        rec["errors"].append(f"{rid}: only {len(done)} of {samples_n} judge sample(s) completed "
+                             f"(need {min_completed}); unscored")
         return
-    samples = [{k: v for k, v in got[c].items() if k != "custom_id"} for c in cids]
-    from .judge import JUDGE_RUBRIC
+    samples = [{k: v for k, v in got[c].items() if k != "custom_id"} for c in done]
     run["scores"] = {"judge_model": judge_model, "rubric": JUDGE_RUBRIC,
                      **mean_scores(samples, weights), "plausibility_weights": dict(weights)}
     if samples_n == 1:
         run.pop("judge_samples", None)
     else:
-        run["judge_samples"] = [got[c] for c in cids]
-    rec = run["validation"]["judge"]
+        run["judge_samples"] = [got[c] for c in done]
+    dropped = [{"custom_id": c, "reason": next((e.split(": ", 1)[1] for e in reversed(rec["errors"])
+                                                 if e.startswith(c + ": ")), "no result")}
+               for c in cids if c not in got]
+    if dropped:
+        rec["dropped_samples"] = dropped
     rec["errors"] = []
     rec.pop("raw_output", None)
-
 
 # ---------------------------------------------------------------- summary
 

@@ -178,6 +178,9 @@
         "raw_output": {"type": ["string", "null"], "description": "the failing response text (null once a run is valid)"},
         "repair_attempted": {"type": "boolean"},
         "repaired": {"type": "boolean"},
+        "dropped_samples": {"type": "array", "description": "judge samples not counted in the mean (cut off, failed repair, API error), with why",
+                            "items": {"type": "object", "additionalProperties": false, "required": ["custom_id", "reason"],
+                                      "properties": {"custom_id": {"type": "string"}, "reason": {"type": "string"}}}},
         "decoded_string_fields": {"type": "array", "items": {"type": "string", "enum": ["world", "prose"]},
                                   "description": "top-level fields that arrived as JSON-encoded strings and were decoded (no content change)"}
       }

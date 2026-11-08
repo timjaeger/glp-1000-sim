@@ -572,3 +572,77 @@ def test_world_sent_as_a_json_string_is_decoded_not_repaired(repo, monkeypatch):
 def test_decode_leaves_non_json_strings_for_validation_to_reject():
     obj, decoded = runner.decode_string_fields({"world": "not json", "prose": "[1, 2]"})
     assert decoded == [] and obj == {"world": "not json", "prose": "[1, 2]"}
+
+
+# ---------------------------------------------------------------- judge cut-offs
+
+def cut_off_result(cid):
+    return text_result(cid, '{"least_plausible_claims": [{"quote": "FDA op', stop="max_tokens")
+
+
+def judge_with(repo, monkeypatch, responder):
+    jc = FakeClient(responder)
+    monkeypatch.setattr(runner, "get_client", lambda: jc)
+    assert J.main(repo, jargs()) == 0
+    return jc
+
+
+def test_cut_off_sample_is_discarded_and_re_requested_clean(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    def responder(bid, req):
+        cid = req["custom_id"]
+        if cid == "s1-L0-r00-j1" and bid == "msgbatch_01":
+            return cut_off_result(cid)
+        return text_result(cid, json.dumps(scores(axes={"driver_fidelity": 8, "mechanism": 6, "magnitude": 7})))
+    jc = judge_with(repo, monkeypatch, responder)
+    (retry,) = jc.messages.batches.created["msgbatch_02"]
+    original = next(r for r in jc.messages.batches.created["msgbatch_01"] if r["custom_id"] == "s1-L0-r00-j1")
+    assert retry == original                                   # the same request again: nothing of the cut-off kept
+    r0 = run(repo, "s1-L0-r00")
+    assert [s["custom_id"] for s in r0["judge_samples"]] == ["s1-L0-r00-j0", "s1-L0-r00-j1", "s1-L0-r00-j2"]
+    assert r0["scores"]["plausibility_axes"]["magnitude"] == 7 and "dropped_samples" not in r0["validation"]["judge"]
+    assert [c["role"] for c in r0["provenance"]["judge"]] == ["main", "main", "main", "repair"]
+    assert validate_tree(repo)[1] == []
+
+
+def test_sample_cut_off_twice_is_dropped_and_the_run_scored_from_two(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    def responder(bid, req):
+        cid = req["custom_id"]
+        if cid == "s1-L0-r00-j2":
+            return cut_off_result(cid)                       # main and retry both cut off
+        mag = 6 if cid.endswith("j0") else 8
+        return text_result(cid, json.dumps(scores(axes={"driver_fidelity": 8, "mechanism": 6, "magnitude": mag})))
+    judge_with(repo, monkeypatch, responder)
+    r0 = run(repo, "s1-L0-r00")
+    assert [s["custom_id"] for s in r0["judge_samples"]] == ["s1-L0-r00-j0", "s1-L0-r00-j1"]
+    assert r0["scores"]["plausibility_axes"]["magnitude"] == 7          # mean of the two completed, not three
+    (d,) = r0["validation"]["judge"]["dropped_samples"]
+    assert d["custom_id"] == "s1-L0-r00-j2" and "cut off" in d["reason"]
+    assert r0["validation"]["judge"]["errors"] == []
+    assert validate_tree(repo)[1] == []
+
+
+def test_fewer_than_two_completed_samples_leaves_the_run_unscored_and_excluded(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    def responder(bid, req):
+        cid = req["custom_id"]
+        if cid in ("s1-L0-r00-j1", "s1-L0-r00-j2"):
+            return cut_off_result(cid)
+        return text_result(cid, json.dumps(scores()))
+    judge_with(repo, monkeypatch, responder)
+    r0 = run(repo, "s1-L0-r00")
+    assert "scores" not in r0
+    assert any("only 1 of 3 judge sample(s) completed (need 2)" in e for e in r0["validation"]["judge"]["errors"])
+    sel = S.select_step([run(repo, f"s1-L0-r{i:02d}") for i in range(6)], load_sim_config(repo), 1)
+    assert sel.excluded["s1-L0-r00"] == "unscored"
+    assert validate_tree(repo)[1] == []
+
+
+def test_rejudge_appends_to_the_call_history(repo, client, monkeypatch):
+    assert G.main(repo, gargs()) == 0
+    judge_with(repo, monkeypatch, lambda bid, req: text_result(req["custom_id"], json.dumps(scores())))
+    jc = FakeClient(lambda bid, req: text_result(req["custom_id"], json.dumps(scores())))
+    monkeypatch.setattr(runner, "get_client", lambda: jc)
+    assert J.main(repo, jargs(rejudge=True)) == 0
+    assert len(run(repo, "s1-L0-r00")["provenance"]["judge"]) == 6       # 3 from each pass
