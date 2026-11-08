@@ -37,6 +37,41 @@
         "input_tokens": 13582,
         "output_tokens": 18970
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r34-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21948,
+        "output_tokens": 9354
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r34-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21948,
+        "output_tokens": 7337
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r34-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21948,
+        "output_tokens": 10574
+      }
     ]
   },
   "world": {
@@ -291,6 +326,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r34-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "smoking/vaping cessation adjunct (Wegovy pill / oral semaglutide, approved Sep 2028 under a National Priority Voucher after two phase 3 trials showed ~1.8× continuous abstinence at 24 weeks vs placebo)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "Mechanism: the 2026 baseline had only anecdotal and observational nicotine evidence. Going to two completed phase 3 trials, a filing and an approval inside about 26 months is asserted, with no trial-start event in the candidate."
+        },
+        {
+          "quote": "Pediatric: ~0.4% of all under-18s (about a quarter of those with obesity are aged 12+ with a prescription event).",
+          "field": "world/population/note",
+          "why": "Magnitude: the parenthetical does not reconcile. 0.4% of all under-18s is roughly 290k children, about 2% of children with obesity, against the ~0.6% baseline for children with obesity, and the 'quarter' clause does not produce that figure."
+        },
+        {
+          "quote": "compounded 'monthly depot' semaglutide in microsphere suspensions regrew through offshore-hosted telehealth",
+          "field": "world/access/note",
+          "why": "Mechanism: sustained-release microsphere depots are difficult formulation work. The candidate does not show how illicit compounders manufactured them within about a year of the 503B exclusion, so the leap is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms are real but measured and labelled. These include a hip-fracture hazard ratio of ~1.35 in the 70+ group, 0.5–1% clinical apathy, ~3.5M gray-market users with a rising adverse-event count, and a stratified access ladder where the uncovered middle third falls through. A state paying for the 'quiet' in gambling patients and the 'sedating the poor' critique add autonomy and inequality costs. The harm is named, labelled and discussable (June 2028 label, DEXA screens), so epistemic badness is low and the overall world is a harder 2026, not a dystopia.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and dated events: 17.1% adoption, price decline to $199/$219/$449, employer coverage 60→49→44%, nicotine and gambling indications, the muscle/bone class warning, a monthly product via MariTide filing and the China approval, gray-market resurgence, 'natty' inversion, $0-copay subsidy and niche anhedonia. mechanism: Most chains are shown, such as employer retreat leading to code-shifting and the 503B exclusion leading to offshore telehealth. The nicotine approval, the illicit microsphere depots and the DEXA requirement landing 'just in time' before the June study are asserted or convenient, per the quoted claims. magnitude: Adoption (17.1), ever-use (23.5), income thirds and the age-band average all sit inside the envelope and reconcile, as do the payer mix (44.8M), Medicare/Medicaid/LIS/NJ dollar arithmetic and the cycling arithmetic. Approvals respect the rules. Deductions: the garbled pediatric figure, public spending of roughly $13B/yr federal against CBO's ≥$35B for 2026–2034, and a bottom third below the middle third despite $0 copays.",
+        "generativity": "The Ray Castillo day shows rather than explains: the sticker over the pharmacy label, the five-question anhedonia check, the forgotten half sandwich, Ana's 'natty' flex and Marisol's ambiguous 'You're here'. The world state implies many other scenes, including 'appetite dining', DEXA studios, impulse clinics, couples therapy, Indian pen deliveries and the NJ gambling pilot."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s1-L0-r34-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~0.4% of all under-18s (about a quarter of those with obesity are aged 12+ with a prescription event).",
+          "field": "world/population/note",
+          "why": "Magnitude: 2026 was ~0.6% of children with obesity (roughly 0.1% of all children). 0.4% of all under-18s would be a ~3-4x jump in two years. The parenthetical also implies about 25% of obese 12+ children are prescribed, which does not reconcile with 0.4% of all minors."
+        },
+        {
+          "quote": "smoking/vaping cessation adjunct (Wegovy pill / oral semaglutide, approved Sep 2028 under a National Priority Voucher after two phase 3 trials showed ~1.8× continuous abstinence at 24 weeks vs placebo)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "Mechanism and magnitude: nicotine evidence in 2026 was only anecdotal and observational, with no phase 2 or phase 3 program. Two completed 24-week phase 3 trials plus an approval inside about two years, with no chain shown, is asserted rather than derived."
+        },
+        {
+          "quote": "Medicare-claims cohort (2028, ~1.9M users): hip-fracture hazard ratio ~1.35 among users 70+ on continuous therapy >2 years with >15% loss, vs matched non-users.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Mechanism: the Medicare obesity pilot began in Jul 2026, so few new obesity users could have more than 2 years of continuous therapy by mid-2028. With ~35% one-year persistence and >15% loss required, a cohort of ~1.9M users with a clean signal is hard to square with the starting world."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is harder than 2026 but not dire. About 45M users, a measured hip-fracture excess of 2–3 per 1,000 person-years in older users, ~3.5M gray-market users, an uncovered middle third and 4–6% self-reported muted enjoyment are real but bounded. The state subsidises a compulsion indication, which the open tensions and 'sedating the poor' politics frame as an autonomy problem. Harms are labelled, screened and discussed (the Jun 2028 label, the anhedonia scale), so the epistemic score is low and the overall stays mid-range.",
+        "plausibility": "driver_fidelity: every driver is traceable to fields and events. Adoption is 17.1%, employer coverage falls 60→49→44, and the muscle/bone warning, gray-market regrowth and $0-copay subsidy are all dated. The monthly driver is realised through a MariTide filing, a China approval and illicit depots, and the personality layer stays a labelled uncommon side effect. magnitude: population figures sit inside the envelope, with ever-use near the top edge at 23.5. Payer mix sums to 44.8M, the Medicare, Medicaid, LIS and NJ dollar figures multiply out, and the cycling arithmetic closes. The retatrutide approval is 13 months after filing, which the rules allow. The main failure is the garbled pediatric figure (claim 1). mechanism: the gray-market shift after the 503B exclusion and the employer retreat into diabetes/CV coding are well chained. Weaker points are the nicotine phase 3 and approval with no shown pipeline (claim 2), the fracture cohort size and duration given the Jul 2026 start of Medicare coverage (claim 3), and the DEXA requirement written into the Nov 2027 model before the Jun 2028 fracture study. The prose also says FDA 'closed the big compounding pharmacies', which overstates a 503B list exclusion.",
+        "generativity": "The prose supplies a concrete protagonist (Ray, the NJ pilot sticker, the five-question anhedonia check-in, the half-eaten sandwich). It adds Ana's 'natty' flexing, a household scene with pernil and the Knicks, and the ambiguous 'You're here' exchange. The world fields add 'appetite dining', 'second helpings' dinner parties, dating-app 'natty' labels and 'impulse clinics', so film-ready scenes are plentiful."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s1-L0-r34-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "smoking/vaping cessation adjunct (Wegovy pill / oral semaglutide, approved Sep 2028 under a National Priority Voucher after two phase 3 trials showed ~1.8× continuous abstinence at 24 weeks vs placebo)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "Magnitude and mechanism: in 2026 the nicotine use was only 'anecdotal and observational', with no phase 2 or filing. Two completed phase 3 trials, a filing and approval by Sep 2028 is too fast, and by analogy with the envelope's approval rules a pre-phase-2 use should reach a filing or a trial start, not approval."
+        },
+        {
+          "quote": "Pediatric: ~0.4% of all under-18s (about a quarter of those with obesity are aged 12+ with a prescription event).",
+          "field": "world/population/note",
+          "why": "Magnitude: the 2026 base implies roughly 0.1% of all children (about 0.6% of children with obesity), so 0.4% is a ~3.5x jump in two years against 1.55x for adults. The parenthetical, 'a quarter of those with obesity', cannot be reconciled with 0.4% of all under-18s."
+        },
+        {
+          "quote": "Medicare-claims cohort (2028, ~1.9M users): hip-fracture hazard ratio ~1.35 among users 70+ on continuous therapy >2 years with >15% loss, vs matched non-users.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Mechanism: Medicare obesity coverage began only in Jul 2026, so a 1.9M-user cohort with over two years of continuous therapy and over 15% loss would be mostly diabetes patients, who lose less. Selecting on post-baseline loss and duration invites bias, yet FDA turns the study into a class warning within the same month."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 4.5,
+        "inequality": 5.0,
+        "public_health": 4.5,
+        "cohesion": 4.0,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Roughly 45M users, a labelled hip-fracture excess in over-70s, a ~3.5M-person gray market and an uncovered middle third make this a harder society than 2026 with new losers. Flattening is a state-paid effect for gambling (NJ pilot) and 4–6% of users self-report muted enjoyment. Harms are measured, labelled and discussed (June 2028 class warning, anhedonia screens), which keeps epistemic and cohesion scores moderate. Subsidy-driven stratification and adherence attestations lift inequality and autonomy, but there is no structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver appears in fields and dated events. Next-gen is realised by a MariTide filing, retatrutide approval and a China depot, which the approval rules allow. Aesthetic inversion and the niche personality layer are visible in the culture, interior_life and safety_ledger fields.\nmechanism: Most chains are shown (coverage retreat to code-shifting, 503B exclusion to offshore telehealth, fracture study to label to DEXA requirement). Weak links are the nicotine approval, the fracture cohort and the label citing retatrutide post-marketing data three months after approval (claims 1 and 3), and the pediatric jump is asserted.\nmagnitude: Headline figures sit inside the envelope (17.1% on-drug, 23.5% ever-used, income and age bands), and the payer mix and dollar arithmetic reconcile. Penalties are for the nicotine approval, which breaks the approval logic for a pre-phase-2 use (claim 1), the garbled pediatric figure (claim 2), and Medicare users (8.4M) equalling all 65+ users (~8.4M), which leaves no room for disabled under-65 Medicare enrollees or seniors on cash or employer plans.",
+        "generativity": "The Ray Castillo day shows rather than explains: the sticker over the pharmacy label, the five-question anhedonia screen, the forgotten sandwich and 'the game doesn't matter to him'. It adds a daughter saying 'natty', Marisol's 'You're here' and Indian pens. The world fields add implied scenes such as 'appetite dining', couples-therapy referrals, DEXA studios and 'impulse clinics', so the film material is rich."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "smoking/vaping cessation adjunct (Wegovy pill / oral semaglutide, approved Sep 2028 under a National Priority Voucher after two phase 3 trials showed ~1.8× continuous abstinence at 24 weeks vs placebo)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+        "why": "Mechanism: the 2026 baseline had only anecdotal and observational nicotine evidence. Going to two completed phase 3 trials, a filing and an approval inside about 26 months is asserted, with no trial-start event in the candidate."
+      },
+      {
+        "quote": "Pediatric: ~0.4% of all under-18s (about a quarter of those with obesity are aged 12+ with a prescription event).",
+        "field": "world/population/note",
+        "why": "Magnitude: the parenthetical does not reconcile. 0.4% of all under-18s is roughly 290k children, about 2% of children with obesity, against the ~0.6% baseline for children with obesity, and the 'quarter' clause does not produce that figure."
+      },
+      {
+        "quote": "compounded 'monthly depot' semaglutide in microsphere suspensions regrew through offshore-hosted telehealth",
+        "field": "world/access/note",
+        "why": "Mechanism: sustained-release microsphere depots are difficult formulation work. The candidate does not show how illicit compounders manufactured them within about a year of the 503B exclusion, so the leap is asserted."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.33,
+      "autonomy": 4.5,
+      "inequality": 5.33,
+      "public_health": 4.67,
+      "cohesion": 4.17,
+      "epistemic": 3.33,
+      "overall": 4.6
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.5,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.13,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Harms are real but measured and labelled. These include a hip-fracture hazard ratio of ~1.35 in the 70+ group, 0.5–1% clinical apathy, ~3.5M gray-market users with a rising adverse-event count, and a stratified access ladder where the uncovered middle third falls through. A state paying for the 'quiet' in gambling patients and the 'sedating the poor' critique add autonomy and inequality costs. The harm is named, labelled and discussable (June 2028 label, DEXA screens), so epistemic badness is low and the overall world is a harder 2026, not a dystopia.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and dated events: 17.1% adoption, price decline to $199/$219/$449, employer coverage 60→49→44%, nicotine and gambling indications, the muscle/bone class warning, a monthly product via MariTide filing and the China approval, gray-market resurgence, 'natty' inversion, $0-copay subsidy and niche anhedonia. mechanism: Most chains are shown, such as employer retreat leading to code-shifting and the 503B exclusion leading to offshore telehealth. The nicotine approval, the illicit microsphere depots and the DEXA requirement landing 'just in time' before the June study are asserted or convenient, per the quoted claims. magnitude: Adoption (17.1), ever-use (23.5), income thirds and the age-band average all sit inside the envelope and reconcile, as do the payer mix (44.8M), Medicare/Medicaid/LIS/NJ dollar arithmetic and the cycling arithmetic. Approvals respect the rules. Deductions: the garbled pediatric figure, public spending of roughly $13B/yr federal against CBO's ≥$35B for 2026–2034, and a bottom third below the middle third despite $0 copays.",
+      "generativity": "The Ray Castillo day shows rather than explains: the sticker over the pharmacy label, the five-question anhedonia check, the forgotten half sandwich, Ana's 'natty' flex and Marisol's ambiguous 'You're here'. The world state implies many other scenes, including 'appetite dining', DEXA studios, impulse clinics, couples therapy, Indian pen deliveries and the NJ gambling pilot."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.4162,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 45
   }
 }

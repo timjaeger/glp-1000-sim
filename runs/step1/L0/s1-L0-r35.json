@@ -36,6 +36,41 @@
         "input_tokens": 13472,
         "output_tokens": 16057
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r35-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20901,
+        "output_tokens": 7107
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r35-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20901,
+        "output_tokens": 6531
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r35-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20901,
+        "output_tokens": 7870
+      }
     ]
   },
   "world": {
@@ -278,6 +313,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r35-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The AUD guideline endorsement turns the heaviest-drinking decile, ~60% of volume, into a treated population.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: the guideline covers only second-line use in people with obesity or T2D, issued Oct 2027. Real AUD pharmacotherapy uptake is in the low single digits, so the top decile could not become a treated population in about 14 months, and this inflates the stated ~4%/yr spirits decline."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.6",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the 2026 figure of ~0.6% was of children with obesity, roughly 0.1% of all children. Reusing it as a share of all under-18s implies a ~5x jump in two years, with no mechanism given and no mention of the change."
+        },
+        {
+          "quote": "ASAM and APA guidelines endorse semaglutide as a second-line pharmacotherapy for alcohol use disorder in patients with obesity or type 2 diabetes; addiction clinics begin routine prescribing",
+          "field": "world/events/2/event",
+          "why": "Mechanism: two professional bodies endorse a drug within ~17 months of a single n=108 RCT and a phase 2 oral readout, before any phase 3 or label. The same timeline has a phase 3 readout and an sNDA by Aug 2028. This is a convenient acceleration, not a shown chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder society with new losers, not a catastrophe. Inequality is worst: the 'county thin' versus 'trainer' bodies, a squeezed middle third that cycles with its budget, and bottom-third users on free provision with nutrient gaps and no dietitians. Autonomy is eroded by HRSA weigh-ins tied to free supply, the Army waiver requiring recruits to stay on the drug, and clinic-administered monthly dosing being designed in advance. Epistemic harm is moderate: reward blunting is common (~20%) with no validated measure, and PBM coding audits show payers gaming diagnosis codes. Weight loss and falling obesity partly offset the harm to flourishing and public health.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +5.6 to 16.6, price follows managed decline, employer coverage falls 60→49→44, AUD arrives as a guideline plus an sNDA, MariTide is a filing only, and stratification, subsidy (HRSA) and mainstream-complaint reward blunting are all present with no contradictions. mechanism: the stratification chain (employer exit, Medicaid and HRSA, flat bottom-versus-middle gap) is well shown. The AUD guideline speed and the claim that the heaviest drinkers become a treated population (claims 1 and 3) are asserted. The Army waiver and the CBO re-score are also asserted. magnitude: population figures sit inside the envelope, with ever-used 23.0 near the 23.6 cap. The payer split sums to 43.5M, the HRSA, Medicare and Medicaid dollar arithmetic checks, and the approvals follow the 12-month rule. Small gaps remain. The stated '~$15B/yr federal' is below the ~$17.5B its own figures sum to, and Medicare growth is 'about 60%' in the ledger but 'by half' in the prose. The pediatric 0.6% (claim 2) looks like a misread of a 2026 baseline defined on children with obesity.",
+        "generativity": "The Ray, Lorna and Hector bottling-line story shows a drug holiday for a retirement tasting, free-pill weigh-ins, men in fitted quarter-zips ordering half pours, and a pen left in the butter compartment. The world fields add dating-profile statuses, synchronised holidays, venue and bar effects, and the 'county thin' versus DEXA split. Characters, scenes and daily-life texture are strongly implied and shown more than explained."
+      },
+      "plausibility": 6.85
+    },
+    {
+      "custom_id": "s1-L0-r35-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo sNDA for semaglutide in AUD filed Aug 2028 after phase 3 readout",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "Mechanism: the starting world has only an n=108 RCT and a phase 2 oral trial for AUD, yet a phase 3 readout, an ASAM/APA guideline (Oct 2027) and an sNDA are all compressed into about two years. No phase 3 event appears in the event list."
+        },
+        {
+          "quote": "The Army quietly allows waivered enlistment of recruits who reached weight standards on-drug, provided they stay on it through basic training.",
+          "field": "world/state/workforce_or_military",
+          "why": "Mechanism: a DoD policy that conditions enlistment on staying on a drug appears with no driver, event or causal chain behind it. It also sits oddly with 'No mandate' and the starting world's 'workforce_or_military: None'."
+        },
+        {
+          "quote": "1.2M enrolled, so 1.2M × $149 × 12 ≈ $2.15B/yr inside a $2.4B appropriation that includes clinic staffing.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: a new federal programme appropriated at $2.4B and enrolling 1.2M uninsured adults at FQHCs within about 20 months of an Apr 2027 launch is asserted with no appropriation route or clinic-capacity ramp shown. The arithmetic itself is fine."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers. Squeezed middle-income workers cycle on and off with their budgets, a visible body-class marker ('county thin' versus 'DEXA lean') hardens, and about 20% of users report muted enjoyment. HRSA weigh-ins and the Army rule add mild conditioning, and cycling remains unstudied. The harms are real but moderate: weight and cardiometabolic benefits are broad, no safety signal appears, and the flatness is openly discussed, so the epistemic score is not high.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 16.6%, the price path is managed decline ($199 and $149), employer coverage falls 60→44, and AUD arrives as guidelines plus an sNDA. No safety signal is added, MariTide is realised as a BLA filing, HRSA is the subsidy, and mainstream_complaint and class_stratification are both vivid. mechanism: Employer retreat producing cash-paying cyclers in the middle and subsidy supporting the bottom is well shown. The AUD guideline and sNDA after a phase 3 readout, the Army enlistment rule and the fast HRSA ramp are asserted (claims 1–3), and the prose says Medicare users 'grew by half' while the JSON says ~60%. magnitude: Current use (16.6) and ever-use (23, near the 23.6 ceiling) are inside the envelope. The payer split sums to 43.5M, public share is 18.2/43.5≈42%, the cycling arithmetic closes, and Medicare, Medicaid and HRSA dollars multiply out. Minor gap: the '~$15B/yr federal' figure in open_tensions does not match the sum of the stated components (about $17.5B), so I take a small deduction.",
+        "generativity": "The Ray and Lorna Castillo scene is concrete and filmable: a pen in the butter compartment, the Waffle House biscuit, the tasting with the half pours, the weigh-in in March, and the bank app against the fridge. The world fields add texture in dating-profile status labels, synchronised drug holidays, and the Louisville bottling and rickhouse detail. Class-coded bodies and the HRSA clinic scenes also imply many more scenes."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s1-L0-r35-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "ASAM and APA guidelines endorse semaglutide as a second-line pharmacotherapy for alcohol use disorder in patients with obesity or type 2 diabetes; addiction clinics begin routine prescribing",
+          "field": "world/events/2/event",
+          "why": "mechanism: The only evidence in the starting world is a Lancet RCT with n=108 and a phase 2 oral trial. Major society guidelines normally need phase 3 data, and a phase 3 readout plus sNDA by Aug 2028 is also very fast. The candidate shows no chain from phase 2 to an Oct 2027 guideline."
+        },
+        {
+          "quote": "The Army quietly allows waivered enlistment of recruits who reached weight standards on-drug, provided they stay on it through basic training.",
+          "field": "world/state/workforce_or_military",
+          "why": "mechanism: Nothing in the parent or the drivers leads to a military policy that conditions enlistment on staying on a drug. It is an invented institutional change with no cause shown, and it sits oddly beside 'No mandate'."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.6",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: The parent's 0.6% was the share of children with obesity, not of all under-18s. Reusing it as a share of all children implies roughly 440k children, about a fivefold rise in two years. No pediatric driver or mechanism is shown for that jump."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers, not a catastrophe. Inequality is the heaviest dimension: the 'county thin' versus DEXA-and-trainer split, a middle third paying $199 and cycling with its budget, and HRSA's weigh-in condition on free supply. Autonomy and cohesion take moderate hits from synchronised drug holidays, ~20% muted enjoyment, and the Army and HRSA conditioning. Flourishing and public health are partly offset by real obesity benefits, and the harms are openly nameable (epistemic 4), though no validated measure exists.",
+        "plausibility": "driver_fidelity: All ten drivers are traceable. Adoption is +5.6pp, employer coverage falls 60→49→44, managed-decline pricing is shown, HRSA is the subsidy, MariTide is filed rather than launched, and the stratification and mainstream-complaint drivers are strongly present. The AUD indication appears only as a guideline endorsement plus an sNDA, not an approval, so it is somewhat thin. mechanism: Employer retreat to cash-paying middle and the subsidy to HRSA/Medicaid are well chained. The ASAM/APA guideline timing, the Army rule and the pediatric jump are asserted without chains (claims 1–3), and the prose says Medicare users 'grew by half' where the JSON says ~60%. magnitude: Every figure sits inside the envelope (16.6 current, 23 ever, no US generic, and CagriSema and retatrutide approvals timed within the allowed rules). The reconciliations hold: payer split sums to 43.5M, public share is 18.2M ≈ 42%, the cycling arithmetic gives 32%, the Medicare, Medicaid and HRSA dollar figures multiply out, and the age and income checks average ~16.7. Small gaps are the $2.4B HRSA appropriation leaving only ~$0.25B for staffing, the unshown ~$15B federal total, and the pediatric figure (claim 3).",
+        "generativity": "The Ray, Lorna and Hector vignette is filmable: the pen in the butter compartment, the tasting at the rickhouse, men in fitted quarter-zips ordering half pours, and the March weigh-in. The world fields add concrete texture, including dating-profile status tags, synchronised holidays, DEXA-scan boutiques versus printed exercise sheets, and Louisville bottling plants cutting a shift. The institutional details (quarterly weigh-ins, PBM audits) imply many further scenes."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The AUD guideline endorsement turns the heaviest-drinking decile, ~60% of volume, into a treated population.",
+        "field": "world/economy/alcohol/state",
+        "why": "Mechanism and magnitude: the guideline covers only second-line use in people with obesity or T2D, issued Oct 2027. Real AUD pharmacotherapy uptake is in the low single digits, so the top decile could not become a treated population in about 14 months, and this inflates the stated ~4%/yr spirits decline."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.6",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude: the 2026 figure of ~0.6% was of children with obesity, roughly 0.1% of all children. Reusing it as a share of all under-18s implies a ~5x jump in two years, with no mechanism given and no mention of the change."
+      },
+      {
+        "quote": "ASAM and APA guidelines endorse semaglutide as a second-line pharmacotherapy for alcohol use disorder in patients with obesity or type 2 diabetes; addiction clinics begin routine prescribing",
+        "field": "world/events/2/event",
+        "why": "Mechanism: two professional bodies endorse a drug within ~17 months of a single n=108 RCT and a phase 2 oral readout, before any phase 3 or label. The same timeline has a phase 3 readout and an sNDA by Aug 2028. This is a convenient acceleration, not a shown chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.17,
+      "autonomy": 5.0,
+      "inequality": 6.0,
+      "public_health": 4.0,
+      "cohesion": 5.0,
+      "epistemic": 4.5,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.0,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.13,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is a harder society with new losers, not a catastrophe. Inequality is worst: the 'county thin' versus 'trainer' bodies, a squeezed middle third that cycles with its budget, and bottom-third users on free provision with nutrient gaps and no dietitians. Autonomy is eroded by HRSA weigh-ins tied to free supply, the Army waiver requiring recruits to stay on the drug, and clinic-administered monthly dosing being designed in advance. Epistemic harm is moderate: reward blunting is common (~20%) with no validated measure, and PBM coding audits show payers gaming diagnosis codes. Weight loss and falling obesity partly offset the harm to flourishing and public health.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +5.6 to 16.6, price follows managed decline, employer coverage falls 60→49→44, AUD arrives as a guideline plus an sNDA, MariTide is a filing only, and stratification, subsidy (HRSA) and mainstream-complaint reward blunting are all present with no contradictions. mechanism: the stratification chain (employer exit, Medicaid and HRSA, flat bottom-versus-middle gap) is well shown. The AUD guideline speed and the claim that the heaviest drinkers become a treated population (claims 1 and 3) are asserted. The Army waiver and the CBO re-score are also asserted. magnitude: population figures sit inside the envelope, with ever-used 23.0 near the 23.6 cap. The payer split sums to 43.5M, the HRSA, Medicare and Medicaid dollar arithmetic checks, and the approvals follow the 12-month rule. Small gaps remain. The stated '~$15B/yr federal' is below the ~$17.5B its own figures sum to, and Medicare growth is 'about 60%' in the ledger but 'by half' in the prose. The pediatric 0.6% (claim 2) looks like a misread of a 2026 baseline defined on children with obesity.",
+      "generativity": "The Ray, Lorna and Hector bottling-line story shows a drug holiday for a retirement tasting, free-pill weigh-ins, men in fitted quarter-zips ordering half pours, and a pen left in the butter compartment. The world fields add dating-profile statuses, synchronised holidays, venue and bar effects, and the 'county thin' versus DEXA split. Characters, scenes and daily-life texture are strongly implied and shown more than explained."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.605,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 39
   }
 }

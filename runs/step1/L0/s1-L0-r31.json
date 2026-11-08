@@ -34,6 +34,41 @@
         "input_tokens": 13457,
         "output_tokens": 17935
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r31-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20405,
+        "output_tokens": 7014
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r31-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20405,
+        "output_tokens": 6551
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r31-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20405,
+        "output_tokens": 6059
+      }
     ]
   },
   "world": {
@@ -273,6 +308,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r31-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Six million adults are off the drug at any given time.",
+          "field": "prose/paragraph_3",
+          "why": "This fails magnitude. The world note puts 6.1 pp of adults off the drug now, which is about 16M of ~265M adults, so the prose understates it by roughly 2.7×."
+        },
+        {
+          "quote": "employers re-added coverage mostly as generic-first step therapy, 53%→55%",
+          "field": "world/access/note",
+          "why": "This fails mechanism through a narrative contradiction. The parent world's employer coverage is 60% and the candidate's own field `employer_coverage_pct` is 55, a fall, yet the note and prose say employers brought coverage back. The 53% base is a different (WTW) series silently swapped in."
+        },
+        {
+          "quote": "65+ jumped 9→19% as the Medicare pilot became permanent coverage.",
+          "field": "world/population/note",
+          "why": "This fails mechanism. Uptake doubles among over-65s and is credited to a policy that became permanent only in Jan 2028. The coverage is BMI-gated with prior authorisation, and the parent world had only ~10% of enrollees newly eligible."
+        }
+      ],
+      "badness": {
+        "flourishing": 3.5,
+        "autonomy": 3.5,
+        "inequality": 4,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Semaglutide is cheap, coverage is broad, and the anhedonia harm is measured and labelled (0.9% vs 0.3%, ~300k cases), so the harms are nameable. Losers are real but bounded: Medicaid work-requirement churn pushes the poor into unstudied cycling, lean-mass and micronutrient signals appear in the 19% of seniors on drug, adolescents face decades of exposure with no data, and a muscle-based class marker forms around brand tirzepatide. This is a harder but not structurally hidden society, a modest step beyond the 2026 baseline.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events. Generic collapse runs through the authorised generic plus Viatris/Teva settlements, public expansion through the permanent Medicare coverage and Medicaid match, and the subsidy through FQHC free generics. The anhedonia label comes in Nov 2027, and the muscle combo is realised as the Zepbound Preserve kit with bimagrumab still in phase 3. Nothing contradicts a driver. mechanism: Most chains are shown, but three claims are weak. Employer coverage is described as re-added while the field falls from 60 to 55 (claim 2). The 65+ uptake doubling is attributed to a policy only recently permanent (claim 3). The jump in pediatric use is asserted. magnitude: Current use (19.9), ever use (26), the income thirds, the age band weights and the approval timings all sit inside the envelope. The payer mix, the user counts and the ~$29.9B spend reconcile arithmetically. The prose's 'six million' off-drug adults contradicts the 6.1 pp (~16M) in the world note (claim 1), which is a minor gap.",
+        "generativity": "The Luis Ortega vignette shows rather than explains: the truck injection, the $41 Teva pen at Fry's, the yellow-highlighted Medication Guide line, the late laugh. Household details also imply scenes: his mother on Medicare, Devon at the taco truck, Mateo with the chips. The world fields add Columbus offices, church potlucks, musicians timing doses around gigs and Thanksgiving dose-skipping, so there is plenty of film."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s1-L0-r31-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "settled Paragraph IV litigation let Viatris and Teva launch generic semaglutide pens in Jan 2028 at $39–49 cash",
+          "field": "world/access/note",
+          "why": "mechanism: The settlement is a bare assertion, and entry about 3.5 years before the 2031–32 exclusivity end is a convenient jump. Novo also launches its own authorised generic at $59 ten months before any generic competitor exists, which would cannibalise its brand with no competitive pressure."
+        },
+        {
+          "quote": "employers re-added coverage mostly as generic-first step therapy, 53%→55%",
+          "field": "world/access/note",
+          "why": "mechanism: The series switches to WTW's 53% while the field `employer_coverage_pct` goes from 60 to 55, a decline. The prose says employers 'quietly brought it back', which contradicts the JSON and the stated mechanism."
+        },
+        {
+          "quote": "Pediatric: ~0.8% of under-18s (~0.58M), overwhelmingly 12–17 with obesity",
+          "field": "world/population/note",
+          "why": "magnitude: The 2026 baseline was about 0.6% of children with obesity (roughly 90k kids). 0.58M is a roughly sixfold rise in two years, and about 4% of children with obesity, with only a CHIP generic-coverage sentence to explain it."
+        }
+      ],
+      "badness": {
+        "flourishing": 3.5,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 4,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder 2026 rather than a dystopia. Cheap generics widen access, and anhedonia is labelled and measured (0.9% vs 0.3%, about 300k affected), which keeps the epistemic score low. The new losers are Medicaid-disenrolled cyclers, the uninsured working poor, adolescents on decades-long therapy, and older users with lean-mass and micronutrient risks. The Preserve kit's marketing of 'skinny-frail' as solved adds a mild class split, and the cohesion cost shows in the Ortega household. Overall 4.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to an event. These include the $39 generics, permanent Medicare coverage, the FQHC subsidy, the Nov 2027 anhedonia label, and Preserve as an existing product in a new form, which the approval rules allow. No new indication appears, and no shock appears. mechanism: Most chains are shown, but the authorised-generic-before-generic sequence (claim 1), the employer coverage contradiction (claim 2), and the sudden pediatric surge (claim 3) are asserted or inconsistent. The doubling of 65+ uptake is also thinly justified. magnitude: On-drug 19.9 and ever 26 sit inside the envelope, and the income thirds and age bands reconcile to about 19.8–19.9. The payer mix (12.0+7.5+1.2+0.4=21.1M, $29.9B) multiplies out, and the cycling arithmetic closes. Minor gaps remain: the pediatric jump and the '$30B ≈ CBO's ≥$35B window' comparison. CagriSema, retatrutide and survodutide timings obey the approval rules.",
+        "generativity": "The Luis Ortega scenes are strong: the pen in the truck, the taco order, the late laugh, and the highlighted Medication Guide line. They show the anhedonia label as lived experience rather than explaining it. The JSON adds texture too, such as Thanksgiving dose-skipping, musicians dosing around gigs, Columbus office culture, and dating-profile 'on GLP' lines."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s1-L0-r31-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Six million adults are off the drug at any given time.",
+          "field": "prose/paragraph_3",
+          "why": "Magnitude: the world's own note puts 6.1 pp of ~265M adults off the drug now, which is about 16M people, so the prose figure is off by roughly 2.6×."
+        },
+        {
+          "quote": "Employers, who were dropping coverage in 2026, quietly brought it back with the cheap generic required first.",
+          "field": "prose/paragraph_2",
+          "why": "Mechanism: the world state has employer_coverage_pct falling from 60 to 55, and the note's '53%→55%' comes from a different survey series. A rebound narrative contradicts the structured field, and the re-adding is asserted rather than shown."
+        },
+        {
+          "quote": "Medicare 12.0M users × blended $145/month (≈50% generic at ~$45, 50% brand at $245) × 12 = $20.9B",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: 12.0M Medicare users is above the ~11.6M adults 65+ on drug (19% of ~61M), leaving almost none of them to the 32% cash share. A 50% brand mix is also odd when $0–10 generics are the cheapest route."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 3,
+        "inequality": 4,
+        "public_health": 4,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 20% of adults are on drug with 38% of ever-users cycling, and the anhedonia label implies ~300k affected. Lean-mass and micronutrient signals sit in a 19%-on-drug Medicare population, Medicaid work requirements push the poorest into cycling, and adolescents are on long-term generics with no data (note, safety_ledger, open_tensions). Offsetting this, the harm is named, labelled and measured (epistemic is low), access has widened, and price has collapsed. The result is a harder but recognisable society with new losers, a modest step beyond 2026.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to an event. The generic collapse runs through the authorised-generic and settlement events, the muscle-preserving combo is realised as the Preserve kit with bimagrumab left in phase 3, and the anhedonia label, FQHC subsidy and no-new-indication all hold. mechanism: price, coverage and labelling each have a chain, but the employer 'brought it back' narrative contradicts 60→55 (claim 2), and the 38-state Medicaid adoption and 65+ doubling are asserted. The 'year-end package' dated 2027-09 is a small slip. magnitude: on-drug 19.9% and ever-used 26% are inside the envelope (ever near the top edge). Cycling arithmetic, payer mix and the $29.9B total reconcile, but 'Six million' off-drug contradicts the 6.1 pp (≈16M) figure (claim 1), and Medicare at 12.0M strains the 65+ count (claim 3).",
+        "generativity": "The Luis Ortega vignette is concrete: the truck injection at 5:40, the $41 Teva pen at Fry's, Devon's full-volume talk heard like a radio two rooms away, the highlighted Medication Guide line, and the half-second-late laugh. It has strong implied characters and scenes, and the world fields add Columbus offices, Sun Belt potlucks and musicians timing doses around gigs."
+      },
+      "plausibility": 6.6
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Six million adults are off the drug at any given time.",
+        "field": "prose/paragraph_3",
+        "why": "This fails magnitude. The world note puts 6.1 pp of adults off the drug now, which is about 16M of ~265M adults, so the prose understates it by roughly 2.7×."
+      },
+      {
+        "quote": "employers re-added coverage mostly as generic-first step therapy, 53%→55%",
+        "field": "world/access/note",
+        "why": "This fails mechanism through a narrative contradiction. The parent world's employer coverage is 60% and the candidate's own field `employer_coverage_pct` is 55, a fall, yet the note and prose say employers brought coverage back. The 53% base is a different (WTW) series silently swapped in."
+      },
+      {
+        "quote": "65+ jumped 9→19% as the Medicare pilot became permanent coverage.",
+        "field": "world/population/note",
+        "why": "This fails mechanism. Uptake doubles among over-65s and is credited to a policy that became permanent only in Jan 2028. The coverage is BMI-gated with prior authorisation, and the parent world had only ~10% of enrollees newly eligible."
+      }
+    ],
+    "badness": {
+      "flourishing": 3.67,
+      "autonomy": 3.5,
+      "inequality": 4.0,
+      "public_health": 4.17,
+      "cohesion": 4.0,
+      "epistemic": 3.0,
+      "overall": 4.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.28,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Semaglutide is cheap, coverage is broad, and the anhedonia harm is measured and labelled (0.9% vs 0.3%, ~300k cases), so the harms are nameable. Losers are real but bounded: Medicaid work-requirement churn pushes the poor into unstudied cycling, lean-mass and micronutrient signals appear in the 19% of seniors on drug, adolescents face decades of exposure with no data, and a muscle-based class marker forms around brand tirzepatide. This is a harder but not structurally hidden society, a modest step beyond the 2026 baseline.",
+      "plausibility": "driver_fidelity: Every driver is traceable to fields and events. Generic collapse runs through the authorised generic plus Viatris/Teva settlements, public expansion through the permanent Medicare coverage and Medicaid match, and the subsidy through FQHC free generics. The anhedonia label comes in Nov 2027, and the muscle combo is realised as the Zepbound Preserve kit with bimagrumab still in phase 3. Nothing contradicts a driver. mechanism: Most chains are shown, but three claims are weak. Employer coverage is described as re-added while the field falls from 60 to 55 (claim 2). The 65+ uptake doubling is attributed to a policy only recently permanent (claim 3). The jump in pediatric use is asserted. magnitude: Current use (19.9), ever use (26), the income thirds, the age band weights and the approval timings all sit inside the envelope. The payer mix, the user counts and the ~$29.9B spend reconcile arithmetically. The prose's 'six million' off-drug adults contradicts the 6.1 pp (~16M) in the world note (claim 1), which is a minor gap.",
+      "generativity": "The Luis Ortega vignette shows rather than explains: the truck injection, the $41 Teva pen at Fry's, the yellow-highlighted Medication Guide line, the late laugh. Household details also imply scenes: his mother on Medicare, Devon at the taco truck, Mateo with the chips. The world fields add Columbus offices, church potlucks, musicians timing doses around gigs and Thanksgiving dose-skipping, so there is plenty of film."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 3.7725,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 50
   }
 }

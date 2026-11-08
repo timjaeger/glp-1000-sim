@@ -37,6 +37,52 @@
         "input_tokens": 13548,
         "output_tokens": 19702
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r10-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22169,
+        "output_tokens": 6979
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r10-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22169,
+        "output_tokens": 5593
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r10-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22169,
+        "output_tokens": 6833
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_013TuvDPiYQhznK1GvvEvEQm",
+        "custom_id": "s1-L0-r10-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23732,
+        "output_tokens": 1677
+      }
     ]
   },
   "world": {
@@ -286,6 +332,194 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": true,
+      "first_errors": [
+        "s1-L0-r10-j1: least_plausible_claims/2/quote: not found verbatim in the candidate ('Employer weight-management coverage fell 60% → 42% (2028 survey).'); copy it character for character"
+      ],
+      "repaired": true
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r10-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA approves semaglutide for dementia risk reduction in type 2 diabetes with cardiovascular disease after a 7–6 advisory vote",
+          "field": "world/events/5/event",
+          "why": "Mechanism: the event is dated 2028-06, but the indications list says May 2028. No pivotal evidence or sNDA filing is shown, and the 2026 baseline has no dementia program, so a fast approval on a split vote is asserted rather than derived."
+        },
+        {
+          "quote": "four use connected-pen dose logs",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "Mechanism: no connected semaglutide pen exists in the baseline, and the authorised generic is a standard retail pen. Four state Medicaid programs wiring pen telemetry into claims within about 14 months has no shown chain. The prose pen that turns green and reports to a wellness vendor reads as a convenient narrative device."
+        },
+        {
+          "quote": "The bottom third and older adults who lost Bridge coverage make up most of the off-drug population.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Magnitude: only ~0.8M lost Bridge coverage against ~17.7M off-drug adults, and the income split does not show the bottom third as a majority of that group. The note itself says the off-drug group skews to the middle and bottom thirds, so this claim does not reconcile with the figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The main harms are benefit conditioning on pharmacy-claims adherence and BMI-linked wellness surcharges, which push people toward unrecorded gray-market vials. A large cycling off-drug population is asked to explain regain, and an unmeasured body-composition ratchet adds to the health ledger. Anhedonia is nameable and labelled at ~1 in 100, and gray-market harms exceed 4,000 reports, so this is a harder society with new losers rather than a catastrophe. Epistemic harm is moderate because the effects are measured. Autonomy and inequality score highest because privacy becomes the access barrier.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. Adoption is exactly −0.8 pp, the authorised generic is an event, the muscle-preserving combo is realised as a Jun 2028 filing, and anhedonia labelling, gray-market resurgence, normalisation, benefits conditioning and niche_side_effect are all present. The dementia and nicotine approval dates conflict between the indications list and the events, which costs a little. mechanism: Most chains are shown, including price to adherence conditioning to gray market, and the Bridge expiry and employer retreat. Asserted pieces are the dementia approval (claim 1), connected-pen telemetry (claim 2), the 'most of the off-drug population' line (claim 3), and indications approved only two years after 'anecdotal' evidence. magnitude: 10.2% on drug and 17% ever are inside the envelope, though ever-used is near its 17.2 ceiling. The user count, payer split (8.5+4.0+2.5+8.0+3.5=26.5M), age bands (≈10.2) and Bridge spend (1.4M×$245×12≈$4.1B) all reconcile, and the retatrutide 13-month and CagriSema approvals are allowed. Deductions: the off-drug majority claim (claim 3) and equating the one-year persistence figure with lifetime never-stopped share.",
+        "generativity": "The Denise Kowalczyk day-in-the-life shows rather than explains: the green-light pen, the wellness vendor, half a turkey wrap, Ray's 'knee', the Telegram vial, Gary's pennies-tasting cigarettes and the guitar in the corner. The world fields add specific subgroups (Plano and Frisco women, musicians, recruits stopping to enlist, couples counsellors). Many scenes and characters are implied."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s1-L0-r10-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "adjunct to smoking/vaping cessation in adults with overweight or obesity (Wegovy pill, Jul 2028)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "mechanism: the 2026 evidence for nicotine was anecdotal and observational, yet a phase 3 programme and a labelled approval are asserted within two years with no trial shown. The indication is dated Jul 2028 here but sits in the 2028-06 event, so the world contradicts itself."
+        },
+        {
+          "quote": "Lilly reported phase 3 of bimagrumab + tirzepatide (Q1 2028): lean mass fell from ~33% of weight lost to ~9%, with similar total loss.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: bimagrumab was only in trials in 2026, and a completed phase 3 plus a June 2028 BLA is very fast. A cut in lean-mass loss to about a quarter of baseline, with no loss of total weight, is also an optimistic effect size."
+        },
+        {
+          "quote": "Employer coverage for weight management fell 60% → 42% (2028 survey).",
+          "field": "world/access/note",
+          "why": "mechanism: an 18-point drop in two years is far steeper than the 2026 baseline, where 14% had dropped or planned to drop by 2027. The only causal link offered is that some carriers cite the $69 generic, which is thin for a drop this large."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The drug is cheap and widely available, but coverage is now tied to surveillance: connected-pen logs, BMI surcharges and a 'reasonable alternative standard' defined as verified adherence. That drives autonomy to 6.5, and some users go to the unregulated gray market just to avoid records. A growing off-drug population skews to the bottom third and older adults who lost Bridge coverage, and 'are you off it?' becomes a class marker. Anhedonia is measured and labelled, which keeps epistemic and flourishing scores moderate. Overall it is a harder society with new losers rather than a refusable one.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable: adoption falls exactly 0.8 pp to 10.2; the authorised generic is an event that justifies generic_us; employer retreat, anhedonia labelling, gray-market resurgence, benefits conditioning and normalisation all appear in fields and events; the muscle combo is realised as a filing, as the rules allow. \nmechanism: Most chains are shown, such as the $69 price pushing employers to drop cover and the conditioning leading to gray-market use. Weaknesses are the nicotine and dementia approvals asserted with little trial basis, the fast bimagrumab phase 3, and date inconsistencies (dementia 'May 2028' versus a 2028-06 event; smoking 'Jul 2028' versus the same June event). \nmagnitude: Current use (10.2) and ever-use (17, near the 17.2 cap) are in bounds, and income and age bands bracket the national figure. The payer split sums to 26.5M, the Bridge spend arithmetic is $4.1B/yr, the CagriSema and retatrutide timing rules are respected, and the off-drug counts reconcile. The only looseness is equating the never-stopped share with the one-year persistence figure.",
+        "generativity": "The Denise Kowalczyk scene is concrete: the pen light, the wellness vendor, the Kroger card, her sister's Telegram vial, Ray's 'knee', Gary's cigarettes tasting like pennies, and the guitar screening question. It implies many more scenes: couples counsellors, tour musicians, recruits stopping to enlist, Plano book clubs. The world JSON adds texture through the dating-profile 'on it / off it / never' and the skip-weeks around holidays."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s1-L0-r10-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "they still undercut its $1,299 list price by a factor of ten",
+          "field": "prose/paragraph_3",
+          "why": "Fails magnitude and mechanism. A $120 vial labelled 'RETA 10MG' is roughly one week at a 10 mg dose, so a month costs about $480 at high doses. That is nowhere near a tenfold undercut."
+        },
+        {
+          "quote": "Under-18: ~0.3% of all children (~220k), up from ~0.1% in 2026.",
+          "field": "world/population/note",
+          "why": "Fails mechanism. Paediatric use triples in two years while adult use falls, the Bridge pilot expires and coverage is being conditioned. The note offers no chain for the rise, and the 2026 baseline was only about 0.6% of children with obesity."
+        },
+        {
+          "quote": "Lilly reported phase 3 of bimagrumab + tirzepatide (Q1 2028): lean mass fell from ~33% of weight lost to ~9%, with similar total loss.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails magnitude and mechanism. Bimagrumab was only 'in trials' in 2026, and the candidate moves it to a completed phase 3 and a BLA filing within about two years. The lean-mass cut is dramatic and the speed is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Coverage is conditioned on refill adherence, connected-pen dose logs and BMI-linked wellness surcharges, and some users go to the unmonitored gray market to avoid records ('conditioning_or_surveillance'). Inequality is high: the off-drug population (about 17.7M) skews to the bottom third and to older adults who lost Bridge coverage, and the gray market carries unidentified 'myostatin' injectables. The world is a recognisably harder one with new losers, but nothing collapses, anhedonia is measured and labelled at about 1 in 100, and some prices fall, so it stops short of structural horror.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is exactly -0.8 pp (11→10.2). The $69 authorised generic is an event and the only US generic. Employer coverage falls to 42%. The anhedonia label is dated Jun 2027. Dementia and nicotine indications appear. The muscle-sparing combination is realised as a filing, as the envelope allows. Gray-market resurgence and Medicaid conditioning are present, and the personality layer stays a niche side effect. mechanism: Adoption falls for stated reasons (Bridge expiry, employer retreat, conditioning, partly offset by cheap cash access), and the authorised-generic motive is shown. Several other changes are asserted: the paediatric tripling, a dementia approval on a contested vote, a smoking-cessation label with no trial path, the bimagrumab phase 3 timeline and the military recruiting rule (see claims 2 and 3). magnitude: Every population figure sits inside the envelope. Ever-used is 17 (limit 17.2), and the income and age bands average to 10.2. Payer counts sum to 26.5M. The Medicare arithmetic (1.4M × $245 × 12 ≈ $4.1B; 0.6M + 0.8M = 1.4M) and the paediatric count (0.3% ≈ 220k) reconcile. Approval timing is legal: retatrutide was filed in Feb 2027 and approved Mar 2028, and the generic has an event mechanism. Minor gaps remain: current users compute to about 10.3, not 10.2, and the cash high of $1,299 sits against an unchanged $1,349 list. The gray-market price claim (claim 1) also misstates the price gap.",
+        "generativity": "The Denise Kowalczyk scenes are concrete and show rather than explain: the pen light, the foil-wrapped half-wrap, Ray's 'knee', the Telegram vial text, Gary's pennies line and the two-question app. The world fields add dating-app 'on it / off it / never' profiles, 'skip weeks' around weddings, musicians dose-cutting before tours and Plano/Frisco social norms. Many implied characters and scenes are available. The prose leans slightly on summary exposition between scenes."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "FDA approves semaglutide for dementia risk reduction in type 2 diabetes with cardiovascular disease after a 7–6 advisory vote",
+        "field": "world/events/5/event",
+        "why": "Mechanism: the event is dated 2028-06, but the indications list says May 2028. No pivotal evidence or sNDA filing is shown, and the 2026 baseline has no dementia program, so a fast approval on a split vote is asserted rather than derived."
+      },
+      {
+        "quote": "four use connected-pen dose logs",
+        "field": "world/state/conditioning_or_surveillance",
+        "why": "Mechanism: no connected semaglutide pen exists in the baseline, and the authorised generic is a standard retail pen. Four state Medicaid programs wiring pen telemetry into claims within about 14 months has no shown chain. The prose pen that turns green and reports to a wellness vendor reads as a convenient narrative device."
+      },
+      {
+        "quote": "The bottom third and older adults who lost Bridge coverage make up most of the off-drug population.",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "Magnitude: only ~0.8M lost Bridge coverage against ~17.7M off-drug adults, and the income split does not show the bottom third as a majority of that group. The note itself says the off-drug group skews to the middle and bottom thirds, so this claim does not reconcile with the figures."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 6.67,
+      "inequality": 6.0,
+      "public_health": 5.17,
+      "cohesion": 5.0,
+      "epistemic": 5.0,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.33,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.47,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "The main harms are benefit conditioning on pharmacy-claims adherence and BMI-linked wellness surcharges, which push people toward unrecorded gray-market vials. A large cycling off-drug population is asked to explain regain, and an unmeasured body-composition ratchet adds to the health ledger. Anhedonia is nameable and labelled at ~1 in 100, and gray-market harms exceed 4,000 reports, so this is a harder society with new losers rather than a catastrophe. Epistemic harm is moderate because the effects are measured. Autonomy and inequality score highest because privacy becomes the access barrier.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events. Adoption is exactly −0.8 pp, the authorised generic is an event, the muscle-preserving combo is realised as a Jun 2028 filing, and anhedonia labelling, gray-market resurgence, normalisation, benefits conditioning and niche_side_effect are all present. The dementia and nicotine approval dates conflict between the indications list and the events, which costs a little. mechanism: Most chains are shown, including price to adherence conditioning to gray market, and the Bridge expiry and employer retreat. Asserted pieces are the dementia approval (claim 1), connected-pen telemetry (claim 2), the 'most of the off-drug population' line (claim 3), and indications approved only two years after 'anecdotal' evidence. magnitude: 10.2% on drug and 17% ever are inside the envelope, though ever-used is near its 17.2 ceiling. The user count, payer split (8.5+4.0+2.5+8.0+3.5=26.5M), age bands (≈10.2) and Bridge spend (1.4M×$245×12≈$4.1B) all reconcile, and the retatrutide 13-month and CagriSema approvals are allowed. Deductions: the off-drug majority claim (claim 3) and equating the one-year persistence figure with lifetime never-stopped share.",
+      "generativity": "The Denise Kowalczyk day-in-the-life shows rather than explains: the green-light pen, the wellness vendor, half a turkey wrap, Ray's 'knee', the Telegram vial, Gary's pennies-tasting cigarettes and the guitar in the corner. The world fields add specific subgroups (Plano and Frisco women, musicians, recruits stopping to enlist, couples counsellors). Many scenes and characters are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.2512,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 17
   }
 }

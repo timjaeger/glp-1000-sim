@@ -36,6 +36,41 @@
         "input_tokens": 13540,
         "output_tokens": 14988
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r38-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21024,
+        "output_tokens": 5344
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r38-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21024,
+        "output_tokens": 4006
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r38-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21024,
+        "output_tokens": 5244
+      }
     ]
   },
   "world": {
@@ -290,6 +325,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r38-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "plus a prospective 9,000-patient postmarketing cohort found clinically meaningful reduced pleasure or interest in 5.8% on drug vs 2.9% on placebo/control",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism: a prospective postmarketing cohort has no placebo arm, so the placebo comparison is incoherent. The parent world had no anhedonia data in 2026, so a post hoc five-trial re-analysis plus a completed 9,000-patient cohort leading to a class label by June 2027 is an implausibly fast chain."
+        },
+        {
+          "quote": "which fits inside CBO's ≥$35B over 2026–2034 only because about 30% of enrollees drop out or fail the 6-month gate",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the budget reconciliation is muddled. ≥$35B is a floor, not a cap, so \"fits inside\" is wrong, and ~$7.6B a year over 2028–2034 would already exceed $35B. The 30% dropout is asserted and does not change that arithmetic."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: the parent had ~0.6% of children with obesity prescribed, roughly 0.1% of all children. 0.7% of all under-18s (~500k) is about a sixfold jump in two years, with no mechanism given beyond the existing 12+ approvals."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Coverage conditioned on quarterly verified weigh-ins, premium surcharges of up to 30%, and DoD, police and trucking fitness conditioning put real pressure on autonomy. Weight-data privacy suits and a bottom third that cycles on and off with coverage loss deepen the stratification and the regain problem. Marketed anhedonia sold to ~5M lean users, teenagers on the drugs for decades, and strained couples and families add cohesion costs. The harms are labelled, measured and openly debated, which keeps the epistemic score moderate, and nothing is catastrophic, so the world sits at a harder society with new losers.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +3.8 (14.8%), conditioned coverage appears in Medicare and Medicaid, retatrutide is approved at ~28%, the anhedonia label is dated Jun 2027, the DoD programme is dated Oct 2027, Quiet is the marketed feature, and the natural movement is the Full Table clubs and the Nashville rally. mechanism: most chains are shown, but the anhedonia evidence chain (a placebo comparison in a cohort, label within about a year), the quick MAHA-right/fat-liberation coalition, and the 'only because 30% drop out' claim are asserted rather than shown. magnitude: population figures are inside the envelope and the age bands and cycling arithmetic mostly reconcile, and the approval timings obey the rules. The CBO comparison is muddled, the implied restart rate (~63% of those who stopped) exceeds the parent's 36–47%, the pediatric jump is large, and ever-use of 21% sits near the cap.",
+        "generativity": "The Ray Delgado trucker vignette shows the kiosk weigh-in, the green screen, Danny's premium surcharge, the pie he eats so the waitress won't worry, and the daughter's goat supper club and her line about crying at movies. Full Table clubs, the 'Quiet' and 'Still' brands, dating-app medication fields, police grievances and 'on-drug guest' Thanksgivings are all filmable scenes with specific texture."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s1-L0-r38-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: 0.7% of under-18s (≈500k), almost all 12–17 on semaglutide or liraglutide",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism. In 2026 pediatric use was about 0.6% of children with obesity, which is roughly 0.1% of all children. Reaching 0.7% of all under-18s means about 3–4% of children with obesity, a several-fold rise in two years, with no chain shown (no new pediatric approval, no coverage change)."
+        },
+        {
+          "quote": "which fits inside CBO's ≥$35B over 2026–2034 only because about 30% of enrollees drop out or fail the 6-month gate",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude (reconciliation). The $7.6B/yr figure is correct arithmetic, but ≥$35B is a floor, so it does not need attrition to \"fit\". Annualising $7.6B over the pilot and model years would exceed $35B anyway, so the reconciliation logic is muddled."
+        },
+        {
+          "quote": "Amycretin's NDA was filed in Nov 2028, so it cannot be approved before late 2029.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism. Amycretin only entered phase 3 in May 2026, and an obesity phase 3 normally needs 68+ weeks plus enrolment and analysis. An NDA about 30 months later is implausibly fast, and no accelerating event is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Outcomes-gated coverage uses weigh-ins, adherence surveillance, premium surcharges of up to 30%, and weight data held by vendors outside HIPAA. Together with military and police conditioning, with Under-25s on parental plans covered by the same rules, this pushes autonomy to 7. A three-tier class split with the bottom third cycling off after coverage losses, plus 5M lean wellness users with no outcome evidence, drives inequality and public health. Epistemic harm is moderate because the anhedonia effect is measured, labelled and publicly argued over, not hidden. Family and cohesion strains (the 'unmedicated' split, couples' 'absence') are real but not catastrophic.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events. These include the 14.8% adoption figure, managed decline, conditioned coverage, longevity use, the anhedonia label, retatrutide at ~28%, the natural movement, the DoD programme and marketed-feature 'calm' brands. Nothing contradicts them. mechanism: Most changes have chains, such as retatrutide's 13-month timeline and coverage conditions producing cycling. Several are asserted or too fast. These are the pediatric jump, a 9,000-patient prospective cohort plus pooled re-analysis producing a class label by Jun 2027, the amycretin NDA timing, and the MAHA/fat-liberation coalition forming quickly. magnitude: Adult on-drug (14.8), ever-used (21), the income thirds and the age bands all sit inside the envelope and reconcile (age weighting ≈14.8). Approvals respect the 12-month rule. The deductions are the pediatric 0.7% jump and the muddled CBO 'fits only because' reasoning, which is the second listed claim.",
+        "generativity": "The Ray Delgado scene (kiosk weigh-in, Danny's surcharge, pecan pie, Marisol and the goat supper) shows rather than explains. It implies the trucking fleet, a daughter's choice and a flat-affect father. The world supplies many hooks: Quiet and Still subscribers, Full Table clubs, dating-app fields, couples therapists, police union grievances and DoD recruits near the body-fat line."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s1-L0-r38-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "which fits inside CBO's ≥$35B over 2026–2034 only because about 30% of enrollees drop out or fail the 6-month gate",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: ≥$35B is a floor, and $7.6B a year for 2028 alone, repeated over several years, would exceed it. The 30% attrition explanation does not make the budget arithmetic work, and it also ignores the $50 copay when it totals spend."
+        },
+        {
+          "quote": "About 1.9 pts of current users (~5M adults) have BMI under 27",
+          "field": "world/population/note",
+          "why": "Magnitude and reconciliation: 1.9 pts of adults, not of current users, is what equals ~5M. The jump from a niche microdosing practice to 5M lean cash-pay users in two years sits oddly beside the only named vendor, Quiet, which has 600,000 subscribers."
+        },
+        {
+          "quote": "plus a prospective 9,000-patient postmarketing cohort found clinically meaningful reduced pleasure or interest in 5.8% on drug vs 2.9% on placebo/control",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: a prospective cohort cannot have a placebo arm. The 2026 baseline had no instruments or data on anhedonia, yet a cohort enrolled, followed and analysed in time for a Jun 2027 label change is implausibly fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 7.0,
+        "inequality": 6.5,
+        "public_health": 5.0,
+        "cohesion": 6.0,
+        "epistemic": 4.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 7.0,
+        "magnitude": 5.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Autonomy takes the heaviest score: coverage is conditioned on verified weigh-ins (Medicare Metabolic Outcomes Model, 14 Medicaid programmes), employer premium surcharges of up to 30% apply, and military and police programmes tie drug use to job standards. Inequality is also high, since the bottom third cycles off with coverage loss while the top third takes it as a cash-paid wellness product. Health harms are moderate, because the anhedonia label is nameable and measured and most cases reverse, which limits the epistemic score. Cohesion costs show up in the dating-app medication field, the couples-therapy 'absence' script and the unmedicated identity politics.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events: the 14.8% figure matches the +3.8pp delta, the anhedonia label in Jun 2027, the DoD programme, retatrutide at ~28–30%, the 'unmedicated' movement, and the Quiet 'calm protocols'. Retatrutide's approval 13 months after its Feb 2027 filing respects the envelope. mechanism: most chains are shown (coverage conditioning leading to dropout and cycling, label leading to marketing, Medicare coverage leading to the 65+ rise), but the 9,000-patient cohort with a placebo comparator and its speed (claim 3) is asserted, and the 5M lean users appear with thin causation. magnitude: population, ever-used and income-third figures sit inside the envelope and the age-band and cycling arithmetic reconcile. The Medicare spend-versus-CBO reasoning fails (claim 1), the 1.9-pts-of-current-users wording is wrong (claim 2), and the amycretin filing is not in the events, so the score loses points here.",
+        "generativity": "The prose closes on a trucker, Ray Delgado, with a kiosk weigh-in, a coworker's premium surcharge, pecan pie and his daughter's goat supper club; each of these implies a further scene. The world supplies many texture details: Quiet and Still, Full Table clubs, dating-app fields, police union grievances and indie 'flat affect' music. A few elements, such as the 20,000-person Nashville rally, are more press-release than lived detail."
+      },
+      "plausibility": 6.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "plus a prospective 9,000-patient postmarketing cohort found clinically meaningful reduced pleasure or interest in 5.8% on drug vs 2.9% on placebo/control",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "mechanism: a prospective postmarketing cohort has no placebo arm, so the placebo comparison is incoherent. The parent world had no anhedonia data in 2026, so a post hoc five-trial re-analysis plus a completed 9,000-patient cohort leading to a class label by June 2027 is an implausibly fast chain."
+      },
+      {
+        "quote": "which fits inside CBO's ≥$35B over 2026–2034 only because about 30% of enrollees drop out or fail the 6-month gate",
+        "field": "world/access/public_coverage",
+        "why": "magnitude: the budget reconciliation is muddled. ≥$35B is a floor, not a cap, so \"fits inside\" is wrong, and ~$7.6B a year over 2028–2034 would already exceed $35B. The 30% dropout is asserted and does not change that arithmetic."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "magnitude: the parent had ~0.6% of children with obesity prescribed, roughly 0.1% of all children. 0.7% of all under-18s (~500k) is about a sixfold jump in two years, with no mechanism given beyond the existing 12+ approvals."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 7.0,
+      "inequality": 6.33,
+      "public_health": 5.0,
+      "cohesion": 6.0,
+      "epistemic": 4.33,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 5.83
+    },
+    "plausibility": 6.67,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "Coverage conditioned on quarterly verified weigh-ins, premium surcharges of up to 30%, and DoD, police and trucking fitness conditioning put real pressure on autonomy. Weight-data privacy suits and a bottom third that cycles on and off with coverage loss deepen the stratification and the regain problem. Marketed anhedonia sold to ~5M lean users, teenagers on the drugs for decades, and strained couples and families add cohesion costs. The harms are labelled, measured and openly debated, which keeps the epistemic score moderate, and nothing is catastrophic, so the world sits at a harder society with new losers.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +3.8 (14.8%), conditioned coverage appears in Medicare and Medicaid, retatrutide is approved at ~28%, the anhedonia label is dated Jun 2027, the DoD programme is dated Oct 2027, Quiet is the marketed feature, and the natural movement is the Full Table clubs and the Nashville rally. mechanism: most chains are shown, but the anhedonia evidence chain (a placebo comparison in a cohort, label within about a year), the quick MAHA-right/fat-liberation coalition, and the 'only because 30% drop out' claim are asserted rather than shown. magnitude: population figures are inside the envelope and the age bands and cycling arithmetic mostly reconcile, and the approval timings obey the rules. The CBO comparison is muddled, the implied restart rate (~63% of those who stopped) exceeds the parent's 36–47%, the pediatric jump is large, and ever-use of 21% sits near the cap.",
+      "generativity": "The Ray Delgado trucker vignette shows the kiosk weigh-in, the green screen, Danny's premium surcharge, the pie he eats so the waitress won't worry, and the daughter's goat supper club and her line about crying at movies. Full Table clubs, the 'Quiet' and 'Still' brands, dating-app medication fields, police grievances and 'on-drug guest' Thanksgivings are all filmable scenes with specific texture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.5,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 11
   }
 }

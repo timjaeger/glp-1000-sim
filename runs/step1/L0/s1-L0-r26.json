@@ -37,6 +37,41 @@
         "input_tokens": 13509,
         "output_tokens": 18833
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r26-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21228,
+        "output_tokens": 6336
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r26-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21228,
+        "output_tokens": 5844
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r26-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21228,
+        "output_tokens": 5040
+      }
     ]
   },
   "world": {
@@ -290,6 +325,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r26-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "now relevant to ~7M restarters",
+          "field": "world/safety_ledger/9/prevalence_note",
+          "why": "The population note puts current restarters at 7.0 percentage points of adults, about 47% of 38.8M users, which is roughly 18M people, not 7M. The '~7M' and 'seven million adults have cycled off and back on' figures come from misreading pp as millions, so this fails magnitude reconciliation."
+        },
+        {
+          "quote": "Pediatric ~1% of under-18s, overwhelmingly adolescents 12–17 with obesity",
+          "field": "world/population/note",
+          "why": "The 2026 baseline was about 0.6% of children with obesity. This implies roughly 730k minors, about 14% of adolescents with obesity, in two years. The jump is large and unexplained by a shown mechanism (prices, access and adolescent pathways are not traced), so it fails magnitude and mechanism."
+        },
+        {
+          "quote": "≈ $3.4B/yr, inside CBO's ≥$35B/9-yr envelope",
+          "field": "world/access/note",
+          "why": "$3.4B/yr over 9 years is about $30.6B, which is below the stated ≥$35B floor, so 'inside' is loosely asserted. Annual spend is not shown ramping to reconcile with the budget score, which is a minor reconciliation gap."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Mostly a harder-but-functional society: price no longer rations, but income, insurance and time do (bottom third 11% vs top 18%, uninsured working poor, rural pharmacy deserts). The harms are modest and measured: about 780k excess anhedonia cases, 4.8M non-obese microdosers with no trial data, and an unknown effect of cycling. Cohesion shows mismatched couples, the 'conversation with garnish' dinners and the apologetic 'I'm off right now'. The anhedonia harm is labelled and discussable, which keeps epistemic and flourishing scores low.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events: anhedonia labelling in Mar 2027, oral parity, the generic collapse via a settlement-based authorised generic, employer retreat to 43%, wellness and gambling indications, normalisation, and no market shock. CagriSema, retatrutide and survodutide approvals sit inside the envelope rules. mechanism: Employer retreat follows from cheap cash and the anhedonia label follows the data chain. Novo's motive for a self-undercutting $49 authorised generic, the speed of the 72-week head-to-head trial and label switch, and the jump in pediatric use are asserted rather than shown. The Foundayo cut is dated Oct 2027 in the events but Mar 2028 in the note. magnitude: Adoption, ever-use, income thirds, age bands, payer-share fills and the Medicare user and spend counts reconcile and sit inside the envelope. The restarter count is wrong by about 2.6x (7M against about 18M), the 'inside CBO ≥$35B' claim doesn't hold (about $30.6B over 9 years), and the pediatric 1% is a steep, unexplained jump.",
+        "generativity": "The Marisol Ortega vignette is concrete and specific: the pill at 5:40 a.m., the $69 bottle, Ray quitting because the Raiders got boring, the blackjack player who leaves after eleven minutes, and the song that doesn't land. The fridge-list ending implies several more scenes. The world fields add casting-ready types such as the Chandler and Gilbert dinner-party women, the commission-driven sales reps, and the touring musicians who go off the drug. The one flaw is the dose number 14, which fits poorly with the 25 mg bottle."
+      },
+      "plausibility": 6.5
+    },
+    {
+      "custom_id": "s1-L0-r26-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude and mechanism: 1% of all under-18s is roughly 700k children, about one in seven adolescents with obesity. The 2026 baseline was ~0.6% of children with obesity, so this implies a many-fold jump in two years, and the candidate shows no pediatric-specific chain beyond cheap cash."
+        },
+        {
+          "quote": "APA issues practice advisory naming GLP-1s an off-label adjunct for gambling and compulsive buying",
+          "field": "world/events/4/event",
+          "why": "Mechanism: a professional-society advisory is issued the same month as a single RCT, which covers gambling only. Compulsive buying has no cited trial evidence at all, and the world's own notes say the compulsive-screen-use and sexual-behaviour evidence is thin."
+        },
+        {
+          "quote": "two-thirds of adults 50–64 who are not on one say they 'get asked why'",
+          "field": "world/events/5/event",
+          "why": "Mechanism and magnitude: this is a very specific, implausibly large Gallup finding. It supports the normalisation story, but nothing explains why most non-users in an age band would be questioned about not taking a drug."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers, not a catastrophe. Inequality is the worst dimension: the bottom third sits at 11% vs 18% for the top, and heaviness is concentrating among the uninsured working poor and rural residents. Unlabelled low-dose use by ~4.8M non-obese people, ~7M cyclers with no data, and social pressure ('I'm off right now' said apologetically) add moderate harm. Anhedonia is labelled, measured (~2 pp excess) and discussable, which keeps epistemic harm low.",
+        "plausibility": "driver_fidelity: Every driver is traceable to a field and an event. Generic collapse is realised as an authorised generic via a 2027 settlement, which the envelope's generic rule allows. Oral parity, the anhedonia label, employer retreat to 43%, both new indications and normalisation are all visible. Nothing contradicts the stipulated state_action of none. mechanism: Most chains are shown, such as the cheap-cash-to-employer-exit link and the pill-to-parity link. The weak points are the APA advisory issued within weeks of one RCT, the anhedonia label arriving ~10 months after the baseline with a registry and pooled reanalysis, and the dubious Gallup 'get asked why' statistic (claims 2 and 3). magnitude: On-drug 14.8, ever 21 and the income thirds all fall inside the envelope, and the age bands reproduce the national rate. The payer fill shares (34/22/10/34%), the 38.8M users, the Medicare 1.6M obesity-code users and the $3.4B/yr spend all multiply out. The cycled 33% reconciles with the stated 7.0 pp. The main flaw is the pediatric 1% jump (claim 1), and the survodutide filing appears only in the pipeline note, not in events.",
+        "generativity": "The prose has a concrete protagonist (Marisol), a husband who quit because the pill made the Raiders boring, a casino shift meeting, a birthday cake where three of eight won't eat, and a wedding song that leaves her flat. The JSON adds texture: Chandler and Gilbert dinner parties, 'on/off' dating-app fields, dose timing negotiated around anniversaries, and a stock comedy persona. Many scenes are implied, and the closing 'ask Dr. P about 14' shows rather than explains."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r26-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "About seven million adults have cycled off and back on, and no one knows what a decade of that does.",
+          "field": "prose/body",
+          "why": "Fails magnitude. The population note's own arithmetic gives cycled_off_and_on = 7.0 pp of adults (33% of ever-users), about 18M people of ~262M adults, not 7M. The same wrong figure recurs in open_tensions and the safety ledger."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Fails magnitude and mechanism. In 2026 only ~0.6% of children with obesity were on drug, a tiny share of all under-18s. A jump to 1% of all minors (~700k) in two years is roughly an order of magnitude, and the world shows no chain for it."
+        },
+        {
+          "quote": "JAMA Psychiatry RCT: semaglutide reduces gambling days and losses in gambling disorder; APA issues practice advisory naming GLP-1s an off-label adjunct for gambling and compulsive buying",
+          "field": "world/events/4/event",
+          "why": "Fails mechanism. A single RCT and a professional-body advisory in the same month, with no trial support for compulsive buying, followed within weeks by sportsbook referral programmes and measurable operator-data effects, is implausibly fast institutional uptake."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap $49/$69 access and falling obesity are net gains, offset by labelled anhedonia (~780k excess cases) and ~4.8M non-obese users with no safety data. The main harm is stratification: the bottom income third at 11% versus the top at 18%, with the uninsured working poor and rural areas left behind (thinness_and_class, open_tensions). Cohesion costs are real but soft, such as mismatched couples, 'I'm off right now' said apologetically, and shrunken shared meals. Harms are named and measured, which keeps epistemic low.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: the 14.8% adoption figure, an authorised generic under a settlement, employer coverage at 43%, longevity and gambling indications, the March 2027 anhedonia label, oral non-inferiority, and no shock. State action stays minimal, apart from small FTC and import-alert items. mechanism: The chains are mostly shown, including settlement to $49, cheap cash to employer exit, and trial to label. Several are asserted or too fast, such as the one-month RCT-to-APA-advisory step, the jump in pediatric use, and the one-year move of anhedonia from 'no data' to a labelled ~3% incidence (claims 2 and 3). magnitude: Adoption, ever-use, income thirds, age bands, approvals, and the payer-share and Medicare spend arithmetic all fit the envelope and reconcile. The stated '~7M' cyclers contradicts the note's own 7.0 pp (~18M) and is repeated in three places, and pediatric use at 1% is a large unsupported jump (claims 1 and 2).",
+        "generativity": "The Marisol and Ray vignette is concrete: the 5:40 a.m. pill, the casino pit with soda waters, the man who leaves after eleven minutes, Dani's sister off the slots, the cake that three people won't eat, and the wedding song that doesn't land. The world fields add texture, including Chandler dinner parties, 'on/off' on dating profiles, sour-candy retail, and the musician cohort going off for tours. Many scenes are implied. The 'ask Dr. P about 14' ending is slightly ambiguous."
+      },
+      "plausibility": 6.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "now relevant to ~7M restarters",
+        "field": "world/safety_ledger/9/prevalence_note",
+        "why": "The population note puts current restarters at 7.0 percentage points of adults, about 47% of 38.8M users, which is roughly 18M people, not 7M. The '~7M' and 'seven million adults have cycled off and back on' figures come from misreading pp as millions, so this fails magnitude reconciliation."
+      },
+      {
+        "quote": "Pediatric ~1% of under-18s, overwhelmingly adolescents 12–17 with obesity",
+        "field": "world/population/note",
+        "why": "The 2026 baseline was about 0.6% of children with obesity. This implies roughly 730k minors, about 14% of adolescents with obesity, in two years. The jump is large and unexplained by a shown mechanism (prices, access and adolescent pathways are not traced), so it fails magnitude and mechanism."
+      },
+      {
+        "quote": "≈ $3.4B/yr, inside CBO's ≥$35B/9-yr envelope",
+        "field": "world/access/note",
+        "why": "$3.4B/yr over 9 years is about $30.6B, which is below the stated ≥$35B floor, so 'inside' is loosely asserted. Annual spend is not shown ramping to reconcile with the budget score, which is a minor reconciliation gap."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.17,
+      "autonomy": 4.0,
+      "inequality": 6.0,
+      "public_health": 4.17,
+      "cohesion": 5.0,
+      "epistemic": 3.5,
+      "overall": 4.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.67,
+      "magnitude": 6.0
+    },
+    "plausibility": 6.73,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Mostly a harder-but-functional society: price no longer rations, but income, insurance and time do (bottom third 11% vs top 18%, uninsured working poor, rural pharmacy deserts). The harms are modest and measured: about 780k excess anhedonia cases, 4.8M non-obese microdosers with no trial data, and an unknown effect of cycling. Cohesion shows mismatched couples, the 'conversation with garnish' dinners and the apologetic 'I'm off right now'. The anhedonia harm is labelled and discussable, which keeps epistemic and flourishing scores low.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events: anhedonia labelling in Mar 2027, oral parity, the generic collapse via a settlement-based authorised generic, employer retreat to 43%, wellness and gambling indications, normalisation, and no market shock. CagriSema, retatrutide and survodutide approvals sit inside the envelope rules. mechanism: Employer retreat follows from cheap cash and the anhedonia label follows the data chain. Novo's motive for a self-undercutting $49 authorised generic, the speed of the 72-week head-to-head trial and label switch, and the jump in pediatric use are asserted rather than shown. The Foundayo cut is dated Oct 2027 in the events but Mar 2028 in the note. magnitude: Adoption, ever-use, income thirds, age bands, payer-share fills and the Medicare user and spend counts reconcile and sit inside the envelope. The restarter count is wrong by about 2.6x (7M against about 18M), the 'inside CBO ≥$35B' claim doesn't hold (about $30.6B over 9 years), and the pediatric 1% is a steep, unexplained jump.",
+      "generativity": "The Marisol Ortega vignette is concrete and specific: the pill at 5:40 a.m., the $69 bottle, Ray quitting because the Raiders got boring, the blackjack player who leaves after eleven minutes, and the song that doesn't land. The fridge-list ending implies several more scenes. The world fields add casting-ready types such as the Chandler and Gilbert dinner-party women, the commission-driven sales reps, and the touring musicians who go off the drug. The one flaw is the dose number 14, which fits poorly with the 25 mg bottle."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.3975,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 46
   }
 }

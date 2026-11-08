@@ -34,6 +34,41 @@
         "input_tokens": 13492,
         "output_tokens": 19034
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r42-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21284,
+        "output_tokens": 5962
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r42-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21284,
+        "output_tokens": 7102
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r42-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21284,
+        "output_tokens": 5866
+      }
     ]
   },
   "world": {
@@ -281,6 +316,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r42-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "under-12 use fell after 11 state laws restricted it",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the parent world had no such state laws and under-12 prescribing was a tiny share of children with obesity (~0.6%), so reaching 11 laws in two years and a measurable fall in under-12 use is asserted rather than shown."
+        },
+        {
+          "quote": "In a 2028 KFF-style poll, ~22% of current users report muted enjoyment and ~31% have deliberately skipped or reduced doses for emotional or social reasons.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: reward blunting went from unquantified and 'uncommon' to 22% and 31% in two years with no measurement chain. The source is also labelled 'KFF-style' here but 'Gallup companion survey' in the events."
+        },
+        {
+          "quote": "A Medicare claims cohort (~1.2M users) found hip fracture HR ~1.3 after >2 years of continuous use at 65+",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Mechanism: Medicare obesity coverage only began Jul 2026, so a 1.2M-user cohort with over two years of continuous use, analysed and turned into an FDA Drug Safety Communication by Oct 2027, is very fast. It would have to rely on earlier diabetes-indication users, which the candidate never says."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Older users have fracture and frailty risk (safety_ledger bone entry, 'thin and frail' poorer long-term users). About 15M adults are off the drug for cost or lost coverage. Weekly on/off cycling is unmeasured, and 22% of users report flat affect with no validated measure. Cohesion strains through medication-mismatch couples and the Unmedicated split, but the harms are discussed openly and nothing collapses, so the overall score stays mid-range.",
+        "plausibility": "driver_fidelity: Every driver is visible in the fields and events: adoption of +4.8pp, managed-decline pricing, Medicare/Medicaid expansion, the bone wave, oral parity through the Wegovy pill label, tariffs, the Unmedicated movement, state restrictions and mainstream flatness. The oral-parity realisation (an existing product with a new label) and the empty new_indications are allowed by the envelope. mechanism: Most chains are shown (the head-to-head trial leading to step therapy and oral share, the bone cohort leading to DEXA and strength-training demand, tariffs leading to Lilly's advantage). Some are asserted, namely the three claims above: 11 state laws with a drop in under-12 use, the 22%/31% survey figures, and the speed of the bone cohort. Attributing weekend restaurant and brewer patterns to pill holidays is also thinly supported. magnitude: On-drug 15.8 and ever 21.5 are inside the envelope, the age weights recompute to ~15.8, and the income bracketing holds. The approval timing is legal (retatrutide filed Feb 2027, approved May 2028; amycretin and survodutide not on market). The 41.4M/38%/Medicare/Medicaid arithmetic, the $10.6B and $7.1B spend and the 69% FMAP split all reconcile. The only soft spots are the loose cycling derivation and a somewhat high Medicaid user count.",
+        "generativity": "The world is rich in implied scenes: Sunday-off parties, 'On/off/never' dating profiles, the Strong Bones class, DEXA clinics in strip malls, potlucks of the Unmedicated, and recruiters rejecting applicants. The day-in-the-life with Denise (the 30-minute pill wait, the DEXA printout, Ray's Saturday beer, her half-eaten sandwich) shows rather than explains, and implies several characters and a family tension."
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s1-L0-r42-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The holidays are easiest on Foundayo, whose short half-life restores appetite and enjoyment within a day or two",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: orforglipron is a daily oral with a half-life of roughly 1–2 days, so calling it 'short' and claiming appetite and enjoyment return within a day or two of a skipped dose is pharmacologically doubtful. The whole weekend-holiday economy (restaurants, brewers, couples) rests on this."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the parent had ~0.6% of children with obesity on drug, which is far below 0.5% of all under-18s. The candidate implies a roughly fourfold or larger rise to ~365k, while also claiming state restrictions cut under-12 use. The growth is asserted, not shown."
+        },
+        {
+          "quote": "Obesity-only spend: Medicare 3.6M × $245 × 12 ≈ $10.6B/yr",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: the parent had ~10% of enrollees newly eligible and CBO scored about $35B over 2026–2034, roughly $4B a year. 3.6M obesity-only Medicare users in the first full year implies very high uptake of the eligible pool, which the candidate does not justify."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. Documented harms are hip fractures in older users (HR ~1.3), sarcopenic frailty, ~22% reporting muted enjoyment, and weekly on/off cycling that nobody has studied. The bottom third (12% vs 19% at the top) and the ~15M adults who stopped because of cost or lost coverage are the main inequality loss. Offsets are cheap orals, Medicare/Medicaid access at $245/$50 and a flattened thinness gradient, which keep it near 5. Epistemic harm is moderate: the flatness is named and surveyed, but there is no validated measure and no RCT.",
+        "plausibility": "driver_fidelity: Every driver is visible in the fields and dated events. Adoption is +4.8pp, oral parity comes through the Wegovy pill label, tariffs appear as the Section 232 events, and bone-density loss is in the safety ledger. Restriction appears as state laws, the broadcast-ad rule and Medicare conditions; public expansion as the permanent Medicare model plus 34 Medicaid states. new_indications stays empty. mechanism: Most chains are shown, such as oral-first step therapy driving oral share, the Medicare cohort leading to the label change and DEXA, and the tariff leading to Lilly's advantage. Weaker links are the Foundayo 'short half-life' holiday claim (claim 1), the sudden spread of pediatric restrictions, and an unmotivated military disqualification rule. magnitude: Current use (15.8%) and ever use (21.5%) sit inside the envelope. Income and age bands bracket and average correctly, and 0.38 × 41.4M ≈ 15.7M splits into Medicare and Medicaid. The Medicaid federal share, the 32% commercial and 30% cash shares, and the retatrutide and CagriSema timings all fit the approval rules. Deductions: the pediatric figure (claim 2) and Medicare spend against the CBO baseline (claim 3), plus Medicare's 9.9M against ~8.4M users aged 65+, which needs disabled enrollees to close.",
+        "generativity": "The world is rich in scenes: Sunday-off parties, 'On/off/never' dating shorthand, strip-mall DEXA clinics, Strong Bones classes and Unmedicated potlucks. The day-in-the-life shows rather than explains, with Denise's DEXA printout, the Kroger pharmacist's 'the Medicare one', and Ray's Saturday beer. The ending, where Denise 'isn't anything, exactly' and feeds Ray anyway, is quietly affecting. A few beats lean explanatory, but characters and conflicts are clearly implied."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s1-L0-r42-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "A Medicare claims cohort (~1.2M users) found hip fracture HR ~1.3 after >2 years of continuous use at 65+",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Mechanism: the Medicare obesity pilot only began in Jul 2026, so a 1.2M-user obesity cohort with over two years of continuous use could not exist by Oct 2027. It would have to be diabetes Part D users, which the candidate never says, and the FDA safety communication and class label follow within weeks."
+        },
+        {
+          "quote": "Operators in affluent suburbs report a Saturday–Sunday demand skew they attribute to pill holidays",
+          "field": "world/economy/restaurants/state",
+          "why": "Magnitude: the candidate says only about 1 in 8 users take scheduled holidays (about 5M adults). That cannot plausibly produce a visible weekend skew in restaurant traffic or brewer sales, and the cause is attributed by anecdote."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the parent world has under-12 prescribing at about 0.6% of children with obesity (tens of thousands of children). About 365k under-18s on drug is a several-fold jump, set against 11 state restrictions and a fall in under-12 use, with no chain shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder, with new losers but no collapse. Frailty and fracture risk in older long-term users (safety_ledger bone entry), a 12% vs 19% income gradient and about 15M adults pushed off-drug by cost all add harm. Cohesion and epistemic damage comes from the 'medication mismatch' in couples, the Unmedicated movement and unmeasured cycling (reward_blunting note, open_tensions). Autonomy is partly preserved by dose-tuning, but coverage conditioning (DEXA, the 5% rule) and state restrictions constrain choice.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. These include oral parity via the Wegovy pill label, Section 232 tariffs, the October 2027 bone warning, the permanent Medicare model, 11 state restriction laws, the Unmedicated movement and the mainstream 'flat' complaint. new_indications stays empty. mechanism: most chains are shown, such as oral-first step therapy driving oral share and tariffs driving Lilly's position. The bone cohort timeline (claim 1) and the weekend-skew attribution (claim 2) are asserted more than shown, and Ray's Saturday-only skip slightly mismatches the 'stop Friday' account. magnitude: on-drug 15.8, ever 21.5, the income thirds and the age weights (≈15.8) all fit the envelope. Payer mix sums to 100%, 0.38×41.4M ≈15.7M matches Medicare 9.9M + Medicaid 5.8M, and the $10.6B and $7.1B spend figures multiply out. Retatrutide approval 15 months after filing is allowed. The pediatric 0.5% (claim 3) is the weak spot.",
+        "generativity": "The world gives vivid, specific texture: weekend-only dinners, 'Sunday-off' parties, 'On/off/never' dating shorthand, YMCA Strong Bones classes, strip-mall DEXA clinics and the Unmedicated potlucks. The day-in-the-life with Denise, Maddie and Ray shows rather than explains, and implies scenes (a Sunday supper, a porch with a beer). A few beats stay slightly schematic."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "under-12 use fell after 11 state laws restricted it",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: the parent world had no such state laws and under-12 prescribing was a tiny share of children with obesity (~0.6%), so reaching 11 laws in two years and a measurable fall in under-12 use is asserted rather than shown."
+      },
+      {
+        "quote": "In a 2028 KFF-style poll, ~22% of current users report muted enjoyment and ~31% have deliberately skipped or reduced doses for emotional or social reasons.",
+        "field": "world/safety_ledger/7/prevalence_note",
+        "why": "Mechanism: reward blunting went from unquantified and 'uncommon' to 22% and 31% in two years with no measurement chain. The source is also labelled 'KFF-style' here but 'Gallup companion survey' in the events."
+      },
+      {
+        "quote": "A Medicare claims cohort (~1.2M users) found hip fracture HR ~1.3 after >2 years of continuous use at 65+",
+        "field": "world/safety_ledger/4/prevalence_note",
+        "why": "Mechanism: Medicare obesity coverage only began Jul 2026, so a 1.2M-user cohort with over two years of continuous use, analysed and turned into an FDA Drug Safety Communication by Oct 2027, is very fast. It would have to rely on earlier diabetes-indication users, which the candidate never says."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.17,
+      "inequality": 5.0,
+      "public_health": 5.0,
+      "cohesion": 5.0,
+      "epistemic": 4.67,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.72,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world is a recognisably harder society with new losers. Older users have fracture and frailty risk (safety_ledger bone entry, 'thin and frail' poorer long-term users). About 15M adults are off the drug for cost or lost coverage. Weekly on/off cycling is unmeasured, and 22% of users report flat affect with no validated measure. Cohesion strains through medication-mismatch couples and the Unmedicated split, but the harms are discussed openly and nothing collapses, so the overall score stays mid-range.",
+      "plausibility": "driver_fidelity: Every driver is visible in the fields and events: adoption of +4.8pp, managed-decline pricing, Medicare/Medicaid expansion, the bone wave, oral parity through the Wegovy pill label, tariffs, the Unmedicated movement, state restrictions and mainstream flatness. The oral-parity realisation (an existing product with a new label) and the empty new_indications are allowed by the envelope. mechanism: Most chains are shown (the head-to-head trial leading to step therapy and oral share, the bone cohort leading to DEXA and strength-training demand, tariffs leading to Lilly's advantage). Some are asserted, namely the three claims above: 11 state laws with a drop in under-12 use, the 22%/31% survey figures, and the speed of the bone cohort. Attributing weekend restaurant and brewer patterns to pill holidays is also thinly supported. magnitude: On-drug 15.8 and ever 21.5 are inside the envelope, the age weights recompute to ~15.8, and the income bracketing holds. The approval timing is legal (retatrutide filed Feb 2027, approved May 2028; amycretin and survodutide not on market). The 41.4M/38%/Medicare/Medicaid arithmetic, the $10.6B and $7.1B spend and the 69% FMAP split all reconcile. The only soft spots are the loose cycling derivation and a somewhat high Medicaid user count.",
+      "generativity": "The world is rich in implied scenes: Sunday-off parties, 'On/off/never' dating profiles, the Strong Bones class, DEXA clinics in strip malls, potlucks of the Unmedicated, and recruiters rejecting applicants. The day-in-the-life with Denise (the 30-minute pill wait, the DEXA printout, Ray's Saturday beer, her half-eaten sandwich) shows rather than explains, and implies several characters and a family tension."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.8125,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 32
   }
 }

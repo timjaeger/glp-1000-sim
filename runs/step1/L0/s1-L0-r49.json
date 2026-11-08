@@ -37,6 +37,41 @@
         "input_tokens": 13505,
         "output_tokens": 20446
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r49-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20989,
+        "output_tokens": 6193
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r49-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20989,
+        "output_tokens": 4657
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r49-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20989,
+        "output_tokens": 6772
+      }
     ]
   },
   "world": {
@@ -284,6 +319,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r49-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Texas enacts a 30-day waiting period and mandatory nutrition counselling before GLP-1 prescriptions to children under 12, eleven months after FDA cleared Wegovy for ages 6–11",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the Texas legislature does not meet in regular session in 2028, so no special session or other route to enactment is shown. The church, fat-liberation and MAHA coalition passing a pediatric-prescribing law in 11 months is asserted, not caused."
+        },
+        {
+          "quote": "Retatrutide's BLA was filed in Q1 2027 and approved in May 2028 under a National Priority Voucher",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: a priority voucher implies a review of weeks to a few months (Foundayo took 50 days), yet approval comes about 14 months after filing. The voucher mechanism and the timeline do not fit each other."
+        },
+        {
+          "quote": "Pediatric: 1.2% of ~73M under-18s ≈ 880k, about 6% of the ~14.6M children with obesity.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the start state was about 0.6% of children with obesity, so this is a roughly tenfold rise in two years, mostly among ages 12–17. Only the under-12 label is stipulated, and no chain explains the surge in the 12–17 band."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Price barriers fall and obesity treatment broadens, which keeps flourishing and inequality at moderate levels. The harms are structural and quiet: employer wellness incentives tied to adherence (34% of large employers), military accession waivers conditioned on therapy, a 9% unlabelled anhedonia signal, ~17M regaining former users, and children 6–11 on label with no growth data. Epistemic is highest because causality is disputed, the blunting is reframed as 'character', and the muscle-preserving combo is marketed as 'solved' before approval. Autonomy is next, via incentives and readiness-system monitoring. The world is a harder society with new losers, not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. They are the generic settlement and $49 price, status-quo coverage, the pediatric and longevity indications, the NAION class warning, the combo as a filing and readout, backlash coalitions, DoD readiness, and employer incentives. Nothing contradicts one, and the combo is handled as the approval rules allow. mechanism: Most chains are shown, including the settlement to generics to persistence, and NAION to the FAA and DoD exams. Claims 1 and 2 break down: the Texas enactment has no feasible legislative route, and the 'priority voucher' approval comes 14 months after filing. The Medicare $50 copay on a ~$40-net generic (the mother in the prose) is also incoherent. magnitude: Current use of 18.5% and ever-use of 25% are inside the envelope, though ever-use sits near its 25.7 ceiling. The income thirds bracket the national figure. The age bands, Medicare arithmetic (~$4.1B/yr vs CBO ~$3.9B/yr), cycling arithmetic and pediatric counts reconcile. The only gaps are the copay-over-cost mismatch and the tenfold pediatric jump (claim 3), which the envelope does not forbid.",
+        "generativity": "The world has vivid scenes and characters: Dana's Sunday shot, her mother's dilating drops, Renée's regain and the 'Whole Appetite' potluck, and the quarterly review that says 'even-keeled'. Flat details like the song that no longer hits show the blunting instead of explaining it. The fields also imply many more: the Memphis EEOC charge, DoD recruits on waivers, dating-app 'on/off/never' fields, and couples therapists."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s1-L0-r49-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "but ~48M users means hundreds to low thousands of excess cases a year in the US.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: 1–3 excess cases per 10,000 person-years across ~48M users gives roughly 5,000–14,000 cases a year, not hundreds to low thousands. The note's own figures do not reconcile."
+        },
+        {
+          "quote": "Pediatric: 1.2% of ~73M under-18s ≈ 880k, about 6% of the ~14.6M children with obesity.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: this is about a tenfold jump from the 2026 figure of ~0.6% of children with obesity. The only stated cause is the 6–11 label, which accounts for just ~120k, so ~760k teen users appear with no chain shown."
+        },
+        {
+          "quote": "generic weekly semaglutide reaches pharmacies at $49–69 cash",
+          "field": "world/events/2/event",
+          "why": "Mechanism: the event is dated 2027-10 and says generics reach pharmacies, but the access note says licensed entry was March 2028. The timeline contradicts itself and the $49 price is asserted without a path."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Price is no longer the barrier, but a recognisably harder society emerges with new losers. Employer wellness incentives reward 'even temperament' while a 9% vs 5% anhedonia signal sits unlabelled and the EEOC has not ruled. Military enlistment waivers are conditioned on therapy, ~17M former users regain weight, the bottom third trails, and ~880k children are on the drug. Harm is partly hidden by users calling the blunting 'character' and by disputed causality, so epistemic and autonomy score highest. It stops short of structural collapse.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events: the settlement and authorised generic, the NAION class warning, the DoD and police programmes, the Texas backlash coalition, employer incentives, the pediatric label, the longevity users, and the bimagrumab combination as a filing only. The only weakness is the event dated 2027-10 that already has generics in pharmacies. mechanism: The generic, vision and military chains are shown. The tenfold pediatric jump (claim 2), the rise in persistence from ~35% to ~50%, the 22-state Medicaid opt-in and the 2027-10 versus 2028-03 generic timing (claim 3) are asserted or inconsistent. magnitude: Adult use (18.5%), ever-use (25%), income thirds, age weighting, the cycled share and the Medicare arithmetic (2.6M × $132 × 12 ≈ $4.1B) all sit inside the envelope and reconcile. The NAION case count does not match its own rate (claim 1), and the pediatric surge is very large.",
+        "generativity": "The Dana Ortiz vignette shows rather than explains: the Sunday pen, the wellness card, the mother's dilating drops, cousin Renée at the potluck, the 'even-keeled' review, and the song that no longer lands. The world fields add concrete scenes such as the Memphis EEOC charge, the dating-app 'on/off/never' field, and Tyler potlucks. The film potential is high, with a few details that are slightly overpacked."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s1-L0-r49-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Texas enacts a 30-day waiting period and mandatory nutrition counselling before GLP-1 prescriptions to children under 12, eleven months after FDA cleared Wegovy for ages 6–11",
+          "field": "world/events/3/event",
+          "why": "mechanism: the Texas legislature does not hold a regular session in 2028, and no special session is shown. A same-year law backed by evangelicals, fat-liberation groups and MAHA activists is asserted, not derived from any chain in the world."
+        },
+        {
+          "quote": "Absolute excess is small, roughly 1–3 cases per 10,000 person-years, but ~48M users means hundreds to low thousands of excess cases a year in the US.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "magnitude: 48M users at 1–3 per 10,000 person-years gives about 4,800–14,400 excess cases a year, not hundreds to low thousands. The arithmetic fails and understates the harm, and the prose repeats the understatement."
+        },
+        {
+          "quote": "generic weekly semaglutide reaches pharmacies at $49–69 cash",
+          "field": "world/events/2/event",
+          "why": "mechanism: the October 2027 event says entry is licensed for March 2028, yet generics are already in pharmacies in October 2027. This contradicts the world's own note and the prose ('since March'), and the generic-collapse chain is internally inconsistent."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is recognisably harder, with new losers. Adherence-linked employer incentives ($30–50/month via wellness vendors, 34% of large employers), DoD recruits admitted conditional on therapy, and performance reviews rewarding 'even temperament' pressure people toward a drug with a 9% vs 5% anhedonia signal that carries no label. Cheap access and a narrowing income gap temper this, but ~17M regaining former users, children 6–11 with no growth data, and a bottom third still at 14% remain. The harm is partly normalised ('I'm just calmer now') and poorly measured.",
+        "plausibility": "driver_fidelity: every driver is traceable to events and fields: generic collapse, NAION class label, the combo realised as a Nov 2028 filing under the approval rules, pediatric and longevity indications, military and employer layers, and backlash. Status_quo coverage is slightly strained by the 22-state Medicaid opt-in and generic-first step therapy, while the text says 'nothing structural changed'. mechanism: several chains are asserted. The Oct 2027 event puts generics in pharmacies five months before the licensed entry (claim 3), the Texas law lacks a legislative path and rests on an improbable coalition (claim 1), and the jump to 34% of employers and 10× pediatric uptake are thinly derived. magnitude: on-drug 18.5, ever-used 25, income thirds, cycled 40% and Medicare $4.1B all reconcile and sit inside the envelope. Approval timings comply with the approval rules. The NAION case count is off by roughly an order of magnitude (claim 2), and survodutide's filing appears only in the pipeline_note, not in events.",
+        "generativity": "The day-in-the-life shows rather than explains: the Sunday shot, the wellness card clawing back $40, the dilating-drops complaint, the cousin's potluck flyer, 'passionate' vs 'even-keeled' screenshots and the song that no longer lands. It implies recurring characters (Dana, her mother, Mateo, Renée) and many scenes in the church, workplace, clinic and barracks. The texture of daily life is strong."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Texas enacts a 30-day waiting period and mandatory nutrition counselling before GLP-1 prescriptions to children under 12, eleven months after FDA cleared Wegovy for ages 6–11",
+        "field": "world/events/3/event",
+        "why": "Mechanism: the Texas legislature does not meet in regular session in 2028, so no special session or other route to enactment is shown. The church, fat-liberation and MAHA coalition passing a pediatric-prescribing law in 11 months is asserted, not caused."
+      },
+      {
+        "quote": "Retatrutide's BLA was filed in Q1 2027 and approved in May 2028 under a National Priority Voucher",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: a priority voucher implies a review of weeks to a few months (Foundayo took 50 days), yet approval comes about 14 months after filing. The voucher mechanism and the timeline do not fit each other."
+      },
+      {
+        "quote": "Pediatric: 1.2% of ~73M under-18s ≈ 880k, about 6% of the ~14.6M children with obesity.",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: the start state was about 0.6% of children with obesity, so this is a roughly tenfold rise in two years, mostly among ages 12–17. Only the under-12 label is stipulated, and no chain explains the surge in the 12–17 band."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.5,
+      "inequality": 5.0,
+      "public_health": 4.83,
+      "cohesion": 5.83,
+      "epistemic": 6.5,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.17,
+      "magnitude": 6.83
+    },
+    "plausibility": 6.97,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Price barriers fall and obesity treatment broadens, which keeps flourishing and inequality at moderate levels. The harms are structural and quiet: employer wellness incentives tied to adherence (34% of large employers), military accession waivers conditioned on therapy, a 9% unlabelled anhedonia signal, ~17M regaining former users, and children 6–11 on label with no growth data. Epistemic is highest because causality is disputed, the blunting is reframed as 'character', and the muscle-preserving combo is marketed as 'solved' before approval. Autonomy is next, via incentives and readiness-system monitoring. The world is a harder society with new losers, not a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. They are the generic settlement and $49 price, status-quo coverage, the pediatric and longevity indications, the NAION class warning, the combo as a filing and readout, backlash coalitions, DoD readiness, and employer incentives. Nothing contradicts one, and the combo is handled as the approval rules allow. mechanism: Most chains are shown, including the settlement to generics to persistence, and NAION to the FAA and DoD exams. Claims 1 and 2 break down: the Texas enactment has no feasible legislative route, and the 'priority voucher' approval comes 14 months after filing. The Medicare $50 copay on a ~$40-net generic (the mother in the prose) is also incoherent. magnitude: Current use of 18.5% and ever-use of 25% are inside the envelope, though ever-use sits near its 25.7 ceiling. The income thirds bracket the national figure. The age bands, Medicare arithmetic (~$4.1B/yr vs CBO ~$3.9B/yr), cycling arithmetic and pediatric counts reconcile. The only gaps are the copay-over-cost mismatch and the tenfold pediatric jump (claim 3), which the envelope does not forbid.",
+      "generativity": "The world has vivid scenes and characters: Dana's Sunday shot, her mother's dilating drops, Renée's regain and the 'Whole Appetite' potluck, and the quarterly review that says 'even-keeled'. Flat details like the song that no longer hits show the blunting instead of explaining it. The fields also imply many more: the Memphis EEOC charge, DoD recruits on waivers, dating-app 'on/off/never' fields, and couples therapists."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.3937,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 12
   }
 }

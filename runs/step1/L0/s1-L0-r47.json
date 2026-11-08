@@ -36,6 +36,41 @@
         "input_tokens": 13543,
         "output_tokens": 16623
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r47-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21245,
+        "output_tokens": 5201
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r47-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21245,
+        "output_tokens": 5257
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r47-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21245,
+        "output_tokens": 5465
+      }
     ]
   },
   "world": {
@@ -285,6 +320,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r47-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Gallup finds 31% of adults view GLP-1 drugs unfavourably, up from 19%",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a 12-point swing in unfavourable opinion is asserted with no chain linking it to the rally or the NAION label. The 19% baseline appears nowhere in the 2026 world."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.4",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude and mechanism: about 290k adolescents is a large jump from a 2026 base of roughly 0.6% of children with obesity. The only stated cause is a 2027 tirzepatide adolescent label. Starting from near-zero, the figure implies a sharp rise in teen use with no uptake chain shown."
+        },
+        {
+          "quote": "1.5M on imported Indian or Canadian generics",
+          "field": "world/access/note",
+          "why": "Mechanism: a gray market described as 'contained' in 2026 reaches 6M users in two years. 1.5M of them are on mailed or border-crossed generic semaglutide, even though customs seizures and import alerts are active. No logistics or supply chain supports that volume."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Obesity falls and access broadens, but 25–30% of users report flatness, NAION adds an estimated 2,000–4,000 excess cases a year, and cycling and regain are unresolved. Inequality is the clearest worsening: the two tiers (coded and insured versus cash or gray), the 21/17/11 income split and the gray market's 6M users. Cohesion suffers from the backlash coalition and the couples 'appetite asymmetry'. Overall this is a harder society with new losers, not a structurally hidden harm.",
+        "plausibility": "driver_fidelity: Nearly every driver is traceable to a dated event or field, including the NAION class label, the retatrutide approval at 29% and the 44% employer coverage. Weaknesses: mood_and_motivation is realised only as a craving/food-noise label plus off-label marketing, and state_action 'none' sits awkwardly beside the import alerts, seizures and CBP actions. mechanism: Most chains are shown, such as employer retreat leading to two tiers, the 503B exclusion leading to 503A and research peptides, and NAION leading to the backlash grievance. The claims listed above are asserted rather than derived: the Gallup 12-point swing, the pediatric jump and the 1.5M imported-generic users. magnitude: Current use (16.4) and ever-used (23, at the edge) are inside the envelope. The payment mix sums to 43M, the age bands roughly reproduce 43M, and the restart arithmetic closes. The Medicare and Medicaid cost figures multiply out, and the retatrutide approval (14 months after filing), CagriSema and the other approval timings are all inside the rules. Only minor gaps remain, such as the CBO score not being re-scored.",
+        "generativity": "Strong implied characters and scenes: the 'shot day', the Friday-shot timing, couples scheduling holidays, Renée's fridge calendar, Marcus's research vials, and the Whole Appetite rally. The day-in-the-life shows rather than explains (the wedding, the half sandwich, the silent Buckeyes game), and the world's 'off-season records' and dating-profile 'on/off/never' details add further texture."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s1-L0-r47-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The 65+ rise (9→14) comes from the Medicare Bridge pilot and its plan-opt-in successor.",
+          "field": "world/population/note",
+          "why": "Magnitude: a 5-point rise among roughly 58M seniors is about 2.9M extra users, but the payment mix puts only ~1.6M on Medicare obesity coverage in total. The attribution does not reconcile, and the 'pre-announced' successor program is invented."
+        },
+        {
+          "quote": "labelled patient-reported reduction in food cravings and 'food noise' (Control of Eating Questionnaire endpoint, Wegovy pill and Foundayo label updates, 2028), the first reward-related claim on an incretin label",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Mechanism: this stands in for the mood_and_motivation driver, but food-craving relief is an appetite claim, not a mood or motivation claim. FDA approval of a first-ever reward-related label claim in this window is asserted without any regulatory chain."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.4",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the 2026 baseline was ~0.6% of children with obesity (roughly 0.1% of all minors). Reaching 0.4% of all under-18s, about 290k, is a 3x or larger jump in two years with no stated driver, and it implies ~6% of teens with obesity are on drug."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension: a two-tier system of coded insured copays versus $149–499 cash or gray market, with lower-income teens buying online and 6M users on unregulated product. Cohesion and epistemic costs come from the 25–30% flatness complaint, couples coordinating drug holidays, and a politicised backlash. Offsetting these, obesity falls and the NAION excess (~2,000–4,000 cases a year) is small, so this is a harder society with new losers rather than a catastrophe.",
+        "plausibility": "driver_fidelity: every driver is traceable to fields and events (adoption 16.4, NAION class label, retatrutide, gray market, backlash, 44% employer coverage). The mood_and_motivation driver is realised thinly through a food-craving label plus off-label marketing, the triple agonist sits at 28–29% rather than 30%, and the invented Medicare successor program strains state_action 'none'. mechanism: most chains are shown (the 503B exclusion feeding 503A and research peptides, the label feeding the backlash, holidays after retail-priced cash costs), but the craving-label approval and the speed of 'quiet mind' marketing are asserted (claim 2). magnitude: the figures sit inside the envelope (16.4, 23, retatrutide approved 14 months after filing, no US generic), and the payment mix sums to 43M while the Medicare and Medicaid spending arithmetic is correct; the 65+ attribution (claim 1), the pediatric tripling (claim 3) and age bands that weight to a little above 16.4% are minor gaps.",
+        "generativity": "The prose vignette with Renée, Marcus, the vials in the butter compartment, the wedding and the Whole Appetite church group gives real scenes and characters. World details such as 'Friday shot', 'off-season' records, dating profiles listing on/off/never, and the 'holiday weekend' effect in restaurants add daily texture. It leans slightly on explanation in the newspaper section but shows more than it tells."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s1-L0-r47-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The 65+ rise (9→14) comes from the Medicare Bridge pilot and its plan-opt-in successor.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: a 5-point rise among ~62M adults 65+ is about 3M extra users. The stated Medicare obesity cohort is only ~1.6M, and only about half of Part D plans joined. The pilot cannot account for the whole rise."
+        },
+        {
+          "quote": "Around 290,000 teenagers are on the drugs, most of them in households that can pay.",
+          "field": "prose/paragraph_5",
+          "why": "Magnitude: 2026 pediatric use was ~0.6% of children with obesity, about 0.1% of all children. The candidate puts 0.4% of all under-18s on the drugs, roughly 1.2% of teens, with no shown chain from the starting rate."
+        },
+        {
+          "quote": "Gallup finds 31% of adults view GLP-1 drugs unfavourably, up from 19%",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a 12-point swing in public opinion within two years is asserted. The NAION label and a single rally are offered as the only causes. The same tail-end 'Whole Appetite' coalition is invented in one step, with no mechanism shown for its rapid mass reach."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a recognisably harder two-tier society: coded or insured users pay copays, cash payers pay $149–499, and poorer users go gray or go without (income thirds 21/17/11, ~6M gray-market users with under- and over-strength vials). Added costs include a NAION class label (~2,000–4,300 excess cases a year), 25–30% of users reporting flatness, and cycling-driven GI visits. Obesity is falling (~34%) and the harms are mostly nameable and measured, so it stays near 5 rather than structural. Inequality scores highest because of the teen and income splits and the retatrutide cash barrier.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Retatrutide is filed Jan 2027 and approved Mar 2028, and the label figure is ~29%, just under 30%. mood_and_motivation arrives through a craving label and off-label marketing, which is a thin but allowed realisation. The 'No new state action' line sits slightly awkwardly beside new import alerts and CBP seizures. mechanism: Most changes have chains (NAION pooled cohorts → class label → backlash grievance; 503B exclusion → 503A shift). The Gallup swing from 19% to 31% and the 65+ jump attributed to a 1.6M-user pilot are asserted rather than shown. The 290k teen figure has no stated chain. magnitude: Current use (16.4) and ever-used (23) are inside the envelope, though ever-used sits near the 23.4 cap. The payment mix sums to 43M, the $4.7B and $4.1B arithmetic is correct, gray-market shares match, and the restart arithmetic closes. Age bands weight to ~17.1%, slightly above 16.4%. The retatrutide timing (14 months) honours the 12-month rule.",
+        "generativity": "The Renée Okafor day is concrete: vials in the butter compartment, a drug holiday timed to her daughter's wedding, a husband on research-peptide vials, and the father-daughter song. The world fields add many scene hooks ('shot day', 'Friday shot', 'on/off/never' dating profiles, off-season records, Saturday eye clinics, the Nashville rally). The prose leans slightly on explanation in the first half, but the closing scene shows rather than tells."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Gallup finds 31% of adults view GLP-1 drugs unfavourably, up from 19%",
+        "field": "world/events/5/event",
+        "why": "Mechanism: a 12-point swing in unfavourable opinion is asserted with no chain linking it to the rally or the NAION label. The 19% baseline appears nowhere in the 2026 world."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.4",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude and mechanism: about 290k adolescents is a large jump from a 2026 base of roughly 0.6% of children with obesity. The only stated cause is a 2027 tirzepatide adolescent label. Starting from near-zero, the figure implies a sharp rise in teen use with no uptake chain shown."
+      },
+      {
+        "quote": "1.5M on imported Indian or Canadian generics",
+        "field": "world/access/note",
+        "why": "Mechanism: a gray market described as 'contained' in 2026 reaches 6M users in two years. 1.5M of them are on mailed or border-crossed generic semaglutide, even though customs seizures and import alerts are active. No logistics or supply chain supports that volume."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.17,
+      "inequality": 6.5,
+      "public_health": 5.0,
+      "cohesion": 5.83,
+      "epistemic": 5.33,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.5,
+      "mechanism": 6.83,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.3,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Obesity falls and access broadens, but 25–30% of users report flatness, NAION adds an estimated 2,000–4,000 excess cases a year, and cycling and regain are unresolved. Inequality is the clearest worsening: the two tiers (coded and insured versus cash or gray), the 21/17/11 income split and the gray market's 6M users. Cohesion suffers from the backlash coalition and the couples 'appetite asymmetry'. Overall this is a harder society with new losers, not a structurally hidden harm.",
+      "plausibility": "driver_fidelity: Nearly every driver is traceable to a dated event or field, including the NAION class label, the retatrutide approval at 29% and the 44% employer coverage. Weaknesses: mood_and_motivation is realised only as a craving/food-noise label plus off-label marketing, and state_action 'none' sits awkwardly beside the import alerts, seizures and CBP actions. mechanism: Most chains are shown, such as employer retreat leading to two tiers, the 503B exclusion leading to 503A and research peptides, and NAION leading to the backlash grievance. The claims listed above are asserted rather than derived: the Gallup 12-point swing, the pediatric jump and the 1.5M imported-generic users. magnitude: Current use (16.4) and ever-used (23, at the edge) are inside the envelope. The payment mix sums to 43M, the age bands roughly reproduce 43M, and the restart arithmetic closes. The Medicare and Medicaid cost figures multiply out, and the retatrutide approval (14 months after filing), CagriSema and the other approval timings are all inside the rules. Only minor gaps remain, such as the CBO score not being re-scored.",
+      "generativity": "Strong implied characters and scenes: the 'shot day', the Friday-shot timing, couples scheduling holidays, Renée's fridge calendar, Marcus's research vials, and the Whole Appetite rally. The day-in-the-life shows rather than explains (the wedding, the half sandwich, the silent Buckeyes game), and the world's 'off-season records' and dating-profile 'on/off/never' details add further texture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.3537,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 15
   }
 }

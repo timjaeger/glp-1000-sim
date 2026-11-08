@@ -36,6 +36,41 @@
         "input_tokens": 13471,
         "output_tokens": 17009
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r15-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20876,
+        "output_tokens": 1471
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r15-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20876,
+        "output_tokens": 7628
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r15-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20876,
+        "output_tokens": 8343
+      }
     ]
   },
   "world": {
@@ -278,6 +313,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r15-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Retatrutide's BLA was filed Feb 2027 and approved Aug 2028 (more than 12 months after filing).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Starting world says the BLA is planned ~Q1 2027, so the filing is technically allowed. But Feb 2027 to Aug 2028 is 18 months with a priority voucher, and the candidate itself calls this a priority review, which is strained. This is also the main driver of a 28% best-efficacy figure and retatrutide's market role."
+        },
+        {
+          "quote": "About 2.5M beneficiaries fill under an obesity indication: 2.5M × $245 × 12 ≈ $7.4B a year in gross federal spend.",
+          "field": "world/access/public_coverage",
+          "why": "Arithmetic is correct, but the payer-mix claim of Medicare 17% (10.4M) is built on 2.5M obesity users plus 7.9M diabetes/CV users, and the $245 rate is applied to all obesity fills with no net-of-copay or rebate treatment. The Bridge pilot covered roughly 10% newly eligible enrollees, so a jump to 2.5M with only 70% of plans participating is asserted, not shown."
+        },
+        {
+          "quote": "One-year persistence on continuous fills has risen to about 42%, helped by cheaper pills and no injection.",
+          "field": "world/population/note",
+          "why": "Persistence rose from ~35% to 42% in two years, but the mechanism is asserted. It also sits awkwardly with the stipulated high adoption, the cycling arithmetic, and the claim that most of the 2026 cohort stopped."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 7,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers: a class-sorted body (30% top vs 15.5% bottom use, 1 in 5 vs 1 in 2 among those with obesity), coverage that follows diagnosis codes rather than need, and 440k minors on the drugs with no long-term data. The 'flatness' complaint (27% weekly muted enjoyment) is managed with weekend dose holidays, which is mild but widespread, and the epistemic picture is only partly bad since the harm is named and surveyed. Cohesion costs include 'mismatched appetite' in couples, but there is no collapse, so inequality dominates at 7 and the overall sits near 5.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. The oral-parity driver is realised through a 50 mg pill, the dementia label through the diabetes indication, and managed decline, employer retreat (60→44), tariffs and class stratification all trace to fields and events. mechanism: Most chains are shown (tariff → exemption → Novo price cuts; employer retreat → step-to-oral). Others are asserted: the 42% persistence rise, the 2.5M Medicare obesity users, the quick jump to ~half of pediatric obesity prescribing, and the retatrutide approval timing, which the candidate's own priority voucher narrative strains. magnitude: Population is inside the envelope (23.2 on-drug, 29 ever, income split brackets 23.2). Pediatric is stated as ≈0.6% of under-18s yet 'up from 0.6% in 2026' for children with obesity, which is confusing, and the ever-use of 29 is near the 30.2 cap. Payer mix sums to 100% of 61M, and the ~$7.4B vs ≈$3.9B CBO overrun is shown. Residual gaps: the on-drug age-band check treats weights loosely, and 10.4M Medicare users versus 2.5M + 7.9M is only just consistent.",
+        "generativity": "The Denise Ocampo day-in-the-life is strong: concrete place names (Mesquite, Balch Springs, Frisco, Terrell), the Saturday skipped dose, the billboard, and the dental-office patients who show class stratification without explaining it. Supporting detail such as Netflix comedians, 'Saturday self', and bars' Friday spike gives many implied scenes and characters."
+      },
+      "plausibility": 6.8
+    },
+    {
+      "custom_id": "s1-L0-r15-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Still pro-access and pro-speed on approvals, with priority vouchers used for retatrutide's review.",
+          "field": "world/state/regulatory_posture",
+          "why": "A priority voucher implies a review of a few months, but retatrutide was filed Feb 2027 and approved Aug 2028, about 18 months later. The world uses the voucher as colour and never explains why it did not shorten the review (mechanism)."
+        },
+        {
+          "quote": "About 33% of US households now include a user.",
+          "field": "world/economy/food_and_beverage/state",
+          "why": "In 2026, 11% of adults on the drug corresponded to 21–23% of households, roughly 2×. At 23.2% of adults the household share should be well above 33%, so the figure does not reconcile with the population figure and understates the food-demand base (magnitude)."
+        },
+        {
+          "quote": "The 2028 label rests on a narrower population, adults with diabetes and no dementia, using a prespecified cognitive-outcome endpoint plus pooled CVOT data.",
+          "field": "world/drugs/pipeline_note",
+          "why": "The FDA is asked to grant a dementia-risk-reduction indication on pooled cardiovascular-outcome data, after the EVOKE trials failed and with neurologists disputing the effect. No chain shows how such a thin package clears the agency in under two years (mechanism)."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The main harm is stratification. Use is 30% in the top income third against 15.5% in the bottom, a muscled body works as a class credential, and coverage follows diagnosis codes while use follows income. Reward blunting is now a mainstream complaint (27% weekly muted enjoyment), a third of ever-users have cycled, and 440k minors are on the drug with no long-horizon data. Offsetting this, cash pills at $149 and falling obesity keep aggregate health and flourishing from being very bad, and the harm is named and surveyed, so epistemic is middling.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised in fields and events. The 50 mg Wegovy pill meets oral parity as an existing product in a new form. Employer coverage falls to 44%, the dementia label appears in May 2028, tariffs are in the events, and the class split runs through the whole world. Safety_signal 'none' is held, since no new signals appear apart from the survey-level reward-blunting complaint. mechanism: Many chains are shown, including tariff exemptions, the step-to-oral rule, pill holidays and the Medicare spending overrun. Several changes are asserted or inconsistent: priority vouchers alongside an 18-month retatrutide review, a dementia label on a thin evidentiary package, Health Canada restricting bulk exports, persistence rising to 42% with little support, and 'as already planned' for a Part D model absent from the parent world. magnitude: On-drug 23.2%, ever-used 29%, the income thirds (average ≈23.2) and the approval timings (CagriSema, retatrutide filed Feb 2027 and approved after 12 months) all sit inside the envelope, and there is no US generic. Payer mix sums to 61M, Medicare 10.4M equals 2.5M + 7.9M, and $7.35B against CBO's ≈$3.9B/yr is shown. The pediatric 440k reconciles. Minor gaps remain: household incidence of 33% is too low, and the '10 pp of ever-users' wording is sloppy.",
+        "generativity": "Denise Ocampo's day in Mesquite contains the skipped Saturday dose, the $149 bottle, the Frisco patient and Mr. Lyle from Terrell, the 'memory one' Rybelsus and the MADE HERE billboard. The world also carries texture such as the Plano/Kaufman contrast, the 'Saturday self', the Friday spike and dating profiles listing the drug. Many scenes are implied and the prose shows rather than explains."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s1-L0-r15-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The 2028 label rests on a narrower population, adults with diabetes and no dementia, using a prespecified cognitive-outcome endpoint plus pooled CVOT data.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: The driver only stipulates a dementia indication. The candidate invents an evidentiary basis (pooled CVOT data plus an unnamed trial endpoint) that FDA would be unlikely to accept for a dementia-risk claim, especially after EVOKE failed. No trial that supplies the endpoint is shown."
+        },
+        {
+          "quote": "Orforglipron's short half-life makes 1–3 day holidays effective.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "mechanism: Orforglipron's half-life is roughly 1–2 days, not clearly short enough for reward-blunting to lift within 1–3 days. The whole 'Friday spike' and 'Saturday self' culture rests on this asserted pharmacology, with no supporting data."
+        },
+        {
+          "quote": "Medicaid: about 30 states cover obesity at the $245 reference rate, ≈6.1M users.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: The 2026 world only says Medicaid was 'expected to follow', and states were cutting GLP-1 obesity coverage under budget pressure. Reaching 30 states and 6.1M users (about $17.9B a year at $245) is aggressive and given without a state-budget mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The main harm is stratification. Use is 30% in the top income third against 15.5% in the bottom, coverage follows diagnosis codes while use follows income, and lean muscled bodies work as a class credential. Weekly muted enjoyment in 27% of users, 440k minors on the drugs with no long-horizon data, and cycling by a third of ever-users add real but diffuse harm. Obesity falls, pills are cheap, and the safety ledger shows no new signal, so this is a harder society with new losers rather than a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable: adoption 23.2%, managed price decline to $149–349, employer coverage down to 44%, a dementia label in May 2028, no new safety signal, a 50 mg pill for oral parity, Section 232 tariffs, class stratification, no new federal programme, and flatness as a mainstream complaint. mechanism: Most chains are shown, notably coverage retreating to diagnosis codes, tariff exemptions bought with US capacity, and holidays driving the Friday spike. Several links are asserted, namely the dementia evidence basis, the orforglipron half-life claim (claim 2), the speed of the head-to-head trial, and Medicaid expansion (claim 3). magnitude: Current use of 23.2% and ever-use of 29% sit inside the envelope. The income thirds average to the national figure, the age bands compute to 23.2, the payer mix sums to 61M, and Medicare ($7.4B) and the pediatric 440k reconcile. The CagriSema and retatrutide approval timings are allowed. Minor gaps: the 8.5 pp of current users who restarted implies a restart rate above the 2026 figures, and the Medicaid count is aggressive.",
+        "generativity": "The prose has a fully drawn day. Denise in Mesquite skips Saturday's pill for the quinceañera, the front-desk contrast between the Frisco woman and Mr. Lyle, the billboard 'MADE HERE. PRICED FOR YOU.', and her mother calling Rybelsus 'the memory one'. The world fields add Plano versus Kaufman County, dating profiles listing medication, and the 'Saturday self'. Many scenes and characters are implied."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Retatrutide's BLA was filed Feb 2027 and approved Aug 2028 (more than 12 months after filing).",
+        "field": "world/drugs/pipeline_note",
+        "why": "Starting world says the BLA is planned ~Q1 2027, so the filing is technically allowed. But Feb 2027 to Aug 2028 is 18 months with a priority voucher, and the candidate itself calls this a priority review, which is strained. This is also the main driver of a 28% best-efficacy figure and retatrutide's market role."
+      },
+      {
+        "quote": "About 2.5M beneficiaries fill under an obesity indication: 2.5M × $245 × 12 ≈ $7.4B a year in gross federal spend.",
+        "field": "world/access/public_coverage",
+        "why": "Arithmetic is correct, but the payer-mix claim of Medicare 17% (10.4M) is built on 2.5M obesity users plus 7.9M diabetes/CV users, and the $245 rate is applied to all obesity fills with no net-of-copay or rebate treatment. The Bridge pilot covered roughly 10% newly eligible enrollees, so a jump to 2.5M with only 70% of plans participating is asserted, not shown."
+      },
+      {
+        "quote": "One-year persistence on continuous fills has risen to about 42%, helped by cheaper pills and no injection.",
+        "field": "world/population/note",
+        "why": "Persistence rose from ~35% to 42% in two years, but the mechanism is asserted. It also sits awkwardly with the stipulated high adoption, the cycling arithmetic, and the claim that most of the 2026 cohort stopped."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 4.83,
+      "inequality": 7.0,
+      "public_health": 4.5,
+      "cohesion": 5.33,
+      "epistemic": 5.0,
+      "overall": 5.4
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.33,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.23,
+    "generativity": 8.5,
+    "rationale": {
+      "badness": "The world is a recognisably harder society with new losers: a class-sorted body (30% top vs 15.5% bottom use, 1 in 5 vs 1 in 2 among those with obesity), coverage that follows diagnosis codes rather than need, and 440k minors on the drugs with no long-term data. The 'flatness' complaint (27% weekly muted enjoyment) is managed with weekend dose holidays, which is mild but widespread, and the epistemic picture is only partly bad since the harm is named and surveyed. Cohesion costs include 'mismatched appetite' in couples, but there is no collapse, so inequality dominates at 7 and the overall sits near 5.",
+      "plausibility": "driver_fidelity: All ten drivers are visible. The oral-parity driver is realised through a 50 mg pill, the dementia label through the diabetes indication, and managed decline, employer retreat (60→44), tariffs and class stratification all trace to fields and events. mechanism: Most chains are shown (tariff → exemption → Novo price cuts; employer retreat → step-to-oral). Others are asserted: the 42% persistence rise, the 2.5M Medicare obesity users, the quick jump to ~half of pediatric obesity prescribing, and the retatrutide approval timing, which the candidate's own priority voucher narrative strains. magnitude: Population is inside the envelope (23.2 on-drug, 29 ever, income split brackets 23.2). Pediatric is stated as ≈0.6% of under-18s yet 'up from 0.6% in 2026' for children with obesity, which is confusing, and the ever-use of 29 is near the 30.2 cap. Payer mix sums to 100% of 61M, and the ~$7.4B vs ≈$3.9B CBO overrun is shown. Residual gaps: the on-drug age-band check treats weights loosely, and 10.4M Medicare users versus 2.5M + 7.9M is only just consistent.",
+      "generativity": "The Denise Ocampo day-in-the-life is strong: concrete place names (Mesquite, Balch Springs, Frisco, Terrell), the Saturday skipped dose, the billboard, and the dental-office patients who show class stratification without explaining it. Supporting detail such as Netflix comedians, 'Saturday self', and bars' Friday spike gives many implied scenes and characters."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.02,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 25
   }
 }

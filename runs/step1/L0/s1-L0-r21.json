@@ -48,6 +48,41 @@
         "input_tokens": 23317,
         "output_tokens": 9814
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r21-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20860,
+        "output_tokens": 10439
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r21-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20860,
+        "output_tokens": 6622
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r21-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20860,
+        "output_tokens": 8297
+      }
     ]
   },
   "validation": {
@@ -59,6 +94,10 @@
         "world/still_true: has 6 items; at most 5 allowed"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -301,5 +340,185 @@
     "headline": "Off It? Explain Yourself. One in Six Americans Is On, the Price Won't Budge, and Your Boss Stopped Paying",
     "world_in_600_words": "By the end of 2028 roughly one American adult in six takes an incretin drug: about 44 million people. Thirteen million of them take it for diabetes and the rest for weight. Among people in their fifties and early sixties the share is above a quarter. In the office parks of suburban Dallas and the cul-de-sacs east of Phoenix, nobody asks whether a colleague is on it. People ask why someone stopped. An answer is expected: the price, the nausea, the regain, a doctor, a belief. Nearly a third of everyone who has ever started has stopped and come back at least once, and about seventeen million are off right now. They are a population with its own weather. They are mostly regaining, and mostly waiting for something cheaper.\n\nNothing got cheaper. Medicare's $245 deal was supposed to pull the cash price down, and instead it became the floor. Manufacturer-direct and TrumpRx prices for maintenance doses have sat at $299 to $349 a month for two years. Only the oral starting doses still sell at $149. Lilly launched retatrutide in March at $1,499 list and $749 cash. It is a weekly pen that takes off about 28 percent of body weight, the kind of result that used to need surgery, and Lilly has more buyers than supply. Novo Nordisk is in no position to start a price war. In June 2027 a whistleblower complaint alleged that its executives sat on evidence of falsified data at CagriSema trial sites until the FDA rejected the drug. The chief executive left, the shares fell by about a third, and two federal probes are still open. The Wegovy injection and pill still sell in enormous volume, at the same prices.\n\nEmployers kept leaving. Fewer than half now cover the drugs for weight. Those that do mostly cover diabetes, heart disease, sleep apnea or fatty liver: a diagnosis code, not a body. The result is two tiers anyone can see. If your code qualifies or your income allows, you get the brand and maybe the new pen. If not, you pay rent-sized money each month, or you order Indian generic semaglutide by mail at a tenth of the price and hope the pen is what it says. Medicare now covers about 2.6 million people for obesity, and about half the states' Medicaid programmes cover another 2.4 million. Together that is around $15 billion a year, far beyond anything the budget office scored. The bottom income third has gained ground, but it still trails the top by eight points.\n\nThe drugs have also become official medicine for wanting less. In September the FDA approved oral semaglutide to help people with overweight quit smoking. Lilly has filed for orforglipron in gambling disorder after a trial in which twice as many people as on placebo halved their gambling days. Telehealth clinics already prescribe off-label for drinking, betting and late-night shopping. The retatrutide label lists 'affect blunting' as an uncommon reaction, one or two in a hundred. That is the same quieting the smoking label sells, called a side effect when weight patients feel it. Clinicians lower the dose. Patients distinguish 'quiet' from 'flat', and most say they are quiet.\n\nFood companies have stopped calling this a threat and started calling it a segment. Snack and soda volumes keep slipping. Shelves are built around protein and small packs, and test-market data from Columbus is now split by whether a household is on the drug or off it. Buffets close. Las Vegas resorts report shorter nights. Distillers keep shrinking. Gyms sell muscle to fifty-five-year-olds. Dating profiles carry an on/off field. At Thanksgiving, hosts cook half as much and nobody remarks on it, except to the cousin who goes back for seconds.",
     "a_day_in_the_life": "Dana Ruiz sets her alarm for 5:40 so she can take the pill with four ounces of water and wait the thirty minutes before coffee. The bottle came yesterday. $299, charged to the card she keeps for things she doesn't discuss with Marco. The dental group dropped weight coverage last January. Marco's Mounjaro is still covered, because his A1c is a code and her BMI isn't anymore.\n\nAt the front desk in Mesa she checks in a woman whose chart notes 'Zepbound — CV indication' and a man who asks if they can do the cleaning before his injection kicks in Thursday. Lunch is the office's monthly order from the Mediterranean place. Six half-bowls, one full. The full one is Kayla, twenty-six. She says she's not on anything, and then explains for a while that she just isn't hungry in the mornings, as if someone had asked.\n\nDana's sister texts a photo of a blister pack from a site in Gujarat. Forty dollars, three months. Is this real?? Dana doesn't answer yet.\n\nAfter work she walks the canal path with her neighbour Lorraine, who stopped in March. You look great, Dana says, and they both hear how it sounds.\n\nAt dinner their son Mateo, fifteen, asks whether he'd have to take it forever if he started. Marco says ask the doctor. Dana says eat your rice.\n\nLater Marco puts on the record they danced to at their wedding and holds out his hand. She takes it. It's nice. She notices she is noticing that it's nice, and she goes to bed early."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r21-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Foundayo's phase 3 in gambling disorder was positive (May 2028; ~40% vs 22% achieving ≥50% reduction in gambling days)",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the parent world has only anecdotal and observational evidence for compulsion, and no gambling trial of any phase. A positive pivotal phase 3 within two years, plus a surge in off-label prescribing and effects on casino sessions within months, is asserted rather than shown."
+        },
+        {
+          "quote": "smoking cessation adjunct in adults with BMI ≥27 (oral semaglutide, Sep 2028)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "mechanism: nicotine evidence in the parent is anecdotal. The candidate shows no phase 3 trial or filing event, only an approval, so a full indication from an unshown pivotal program is too fast. The BMI ≥27 restriction on a smoking label also goes unexplained."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1.1",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: 1.1% of all under-18s is roughly 0.8M children. The baseline had only ~0.6% of children with obesity prescribed in the 8–11 band, so this implies a jump of an order of magnitude with no stated mechanism or payer path."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 5.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder but recognisable society. Access is split into insurance, cash and gray-market tiers (top 21% vs bottom 12.5%, $299–349 cash), and ~17.5M people are off the drug and regaining with no long-horizon cycling data. Reward-quieting is labelled a side effect for weight users but sold as therapy for smokers and gamblers, and teens now ask whether they would be on it forever. The cost is largely hidden, and many gain real health benefit and obesity falls, so it is not worse than a 5.",
+        "plausibility": "driver_fidelity: All ten drivers are visible: +5.8pp adoption, stalled price, employer retreat at 44%, nicotine and compulsion, the triple agonist at ~28%, the Novo scandal, normalisation and niche side effect. Small strains are the quantified 'affect blunting' label entry and the smoking approval, set against safety_signal 'none', and treating the 16.8% as all-reasons use so that weight users are only ~11.8% against the 11% baseline. mechanism: The price stall (Lilly supply allocation, Novo defending margin) and the employer retreat are causally shown. The smoking approval and the positive gambling phase 3 (claims 1–2) have no trials in the parent or in the events. Retatrutide re-sizing waves and shorter gaming sessions within months of launch are asserted, and the 44% figure is dated 2027-01 in events but attributed to a 2028 survey in the note. magnitude: On-drug 16.8%, ever 23.5% (near the 23.8 edge), the income thirds, the age bands (44.0M) and the payer mix (31M) all reconcile. So do Medicare $7.6B, Medicaid $7.1B, cash $45B and the cycling arithmetic. Penalties are the 1.1% pediatric figure (claim 3), applying a 35% persistence rate to all ever-users including diabetics, and the edge-hugging ever-used figure.",
+        "generativity": "The prose has strong human texture: Dana's 30-minute pill routine, the card she keeps hidden from Marco, Kayla's unprompted explanation, the Gujarat blister-pack text, Lorraine's 'you look great', and Mateo's question. The world fields add scenes: discordant couples, the dating-app field, half-plate Thanksgiving and Las Vegas shorter nights. The closing wedding-song beat shows reward flattening rather than explaining it."
+      },
+      "plausibility": 6.3
+    },
+    {
+      "custom_id": "s1-L0-r21-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1.1",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the 2026 baseline had only ~0.6% of children with obesity prescribed, which is about 0.1% of all under-18s. A 1.1% rate across all minors is roughly a ten-fold rise in two years. The note offers no arithmetic and no mechanism, such as a new pediatric label or coverage change."
+        },
+        {
+          "quote": "Foundayo's phase 3 in gambling disorder was positive (May 2028; ~40% vs 22% achieving ≥50% reduction in gambling days).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the baseline has only anecdotal and observational evidence for compulsion, and no gambling trial. A phase 3 that starts, enrolls and reads out by May 2028, followed by a priority-review filing and surging off-label use, appears from nowhere. No trial-start event is shown."
+        },
+        {
+          "quote": "About 13M take it for type 2 diabetes and 31M for weight.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the 2026 baseline of 11% on drug counted weight use only, about 28–29M adults. The candidate quietly redefines the figure as all incretin reasons. That leaves weight users at 31M, only about 2–3M above baseline, which undercuts the stipulated +5.8 pp adoption jump."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder, two-tier society. Employer coverage is 44%, cash prices are stalled at $299–349, and the bottom third (12.5%) trails the top (21%). About 5M users rely on unlawful gray-market imports, and 17.5M adults are off-drug and mostly regaining. Reward blunting is labelled a side effect for weight users while it is sold as a therapy for smokers and gamblers, so people cannot easily name or measure what is happening to them. Mass harm is absent and the safety ledger is mostly unchanged, which keeps overall badness mid-range.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 16.8% (+5.8 pp), prices are stalled, employer coverage retreats to 44%, and retatrutide is approved at 28–30%. The Novo scandal appears as events, the nicotine indication is approved, and the compulsion driver is realised as a filing plus off-label use. Adding 'affect blunting' to the retatrutide label sits slightly awkwardly beside safety_signal 'none'. mechanism: The scandal, price stall and employer retreat chains are shown. Two things are asserted rather than shown: the nicotine approval and gambling phase 3 results appear with no trial or readout events (claim 2), and the pediatric prevalence jump has no cause (claim 1). The redefinition of 'on drug' to include diabetes is also unexplained (claim 3). The prose chart note 'Zepbound — CV indication' conflicts with the world, which gives the CV label to Wegovy. magnitude: On drug (16.8%) and ever-used (23.5%, near the 23.8 edge) are inside the envelope. The income thirds average to the national figure, and the age bands sum to 44M. Payer mix sums to 31M. Medicare ($7.6B), Medicaid ($7.1B) and cash ($45B) all multiply out, and the cycling arithmetic reconciles. Retatrutide timing (filed Feb 2027, approved 13 months later) respects the approval rules. Deductions are for the pediatric 1.1% and for the weight-versus-all-reasons definition shift.",
+        "generativity": "The day in the life is rich: Dana's 5:40 pill routine, the hidden card, the Gujarat blister-pack text, Kayla's unprompted explanation, Lorraine's 'you look great', and Mateo asking whether he'd take it forever. The final dance scene shows reward blunting rather than explaining it. The world fields add texture: the dating-app on/off field, discordant couples, half-plate Thanksgiving and Las Vegas shorter nights. Many scenes are implied."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s1-L0-r21-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1.1",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: the baseline was ~0.6% of children with obesity, roughly 0.1% of all under-18s, so 1.1% (~0.8M children) is about a nine-fold jump in two years, while adult use rises only about 1.5x. The note says only that it \"still skews\" to the affluent and does not explain the jump."
+        },
+        {
+          "quote": "FDA approves oral semaglutide as a smoking-cessation adjunct for adults with BMI ≥27",
+          "field": "world/events/5/event",
+          "why": "mechanism: nicotine evidence in 2026 was anecdotal and observational, and no trial, filing or review chain is shown for a phase 3 plus approval by Sep 2028. The BMI ≥27 restriction on a smoking label is also unexplained."
+        },
+        {
+          "quote": "About 13M take it for type 2 diabetes and 31M for weight.",
+          "field": "world/population/note",
+          "why": "magnitude: the 2026 baseline of 11% counted weight-loss use only (~28M adults), so 31M weight users is only ~11.8%. That means almost all the +5.8pp comes from a redefined all-reasons metric, and it sits badly with 5M newly covered Medicare and Medicaid obesity users plus a 5M gray market."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder two-tier society: stalled $299–349 cash prices, employer coverage at 44%, and a bottom third at 12.5% against a top at 21%. About 17.5M people are off the drug and mostly regaining, with no cycling data. Reward-quieting is labelled a side effect for weight users and a therapy for smokers and gamblers, and kids are on it at 1.1%. Benefits are real and nothing is melodramatic, so it sits mid-scale rather than at the structural-and-hidden end.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is 16.8, the price stall holds, employer coverage retreats to 44%, nicotine is approved and gambling is filed, retatrutide is approved at ~28% (up to ~30%), the Novo scandal is shown, and normalisation is shown in culture. Strain comes only from the quantified retatrutide 'affect blunting' label line sitting against safety_signal 'none'. mechanism: employer coverage dropping to 44% by Jan 2027, a gambling phase 3 that appears from nowhere, the smoking approval (claim 2) and the gray market growing from 'contained' to 5M are asserted rather than shown. The BGH 'fictional 2028 survey' also conflicts with the 2027-01 event date, and '44% cover' conflicts with 'most remaining plans restrict to diabetes/CV codes'. magnitude: on_drug 16.8 and ever 23.5 sit inside the envelope, income thirds bracket the national figure, the age bands sum to 44.0M, and the payer mix sums to 31M. Medicare (~$7.6B), Medicaid (~$7.1B) and cash (~$45B) outlays multiply out, and retatrutide approval at 13 months respects the rule. Deductions are for the redefined weight-user base (claim 3) and the 1.1% pediatric figure (claim 1).",
+        "generativity": "The Dana Ruiz day is concrete and shows rather than explains: the 5:40 alarm, the $299 charge on a hidden card, Marco's A1c code against her BMI, Kayla explaining she isn't hungry, the Gujarat blister-pack text, and Mateo asking if he'd take it forever. The world fields add dating-app 'on/off' fields, discordant couples, Thanksgiving half-plate hosting, Vegas shorter nights and Columbus on/off test data. Many scenes and characters are implied."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Foundayo's phase 3 in gambling disorder was positive (May 2028; ~40% vs 22% achieving ≥50% reduction in gambling days)",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: the parent world has only anecdotal and observational evidence for compulsion, and no gambling trial of any phase. A positive pivotal phase 3 within two years, plus a surge in off-label prescribing and effects on casino sessions within months, is asserted rather than shown."
+      },
+      {
+        "quote": "smoking cessation adjunct in adults with BMI ≥27 (oral semaglutide, Sep 2028)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+        "why": "mechanism: nicotine evidence in the parent is anecdotal. The candidate shows no phase 3 trial or filing event, only an approval, so a full indication from an unshown pivotal program is too fast. The BMI ≥27 restriction on a smoking label also goes unexplained."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 1.1",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "magnitude: 1.1% of all under-18s is roughly 0.8M children. The baseline had only ~0.6% of children with obesity prescribed in the 8–11 band, so this implies a jump of an order of magnitude with no stated mechanism or payer path."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.33,
+      "autonomy": 5.17,
+      "inequality": 6.17,
+      "public_health": 4.83,
+      "cohesion": 4.83,
+      "epistemic": 5.0,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.67,
+      "mechanism": 5.83,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.62,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world is a harder but recognisable society. Access is split into insurance, cash and gray-market tiers (top 21% vs bottom 12.5%, $299–349 cash), and ~17.5M people are off the drug and regaining with no long-horizon cycling data. Reward-quieting is labelled a side effect for weight users but sold as therapy for smokers and gamblers, and teens now ask whether they would be on it forever. The cost is largely hidden, and many gain real health benefit and obesity falls, so it is not worse than a 5.",
+      "plausibility": "driver_fidelity: All ten drivers are visible: +5.8pp adoption, stalled price, employer retreat at 44%, nicotine and compulsion, the triple agonist at ~28%, the Novo scandal, normalisation and niche side effect. Small strains are the quantified 'affect blunting' label entry and the smoking approval, set against safety_signal 'none', and treating the 16.8% as all-reasons use so that weight users are only ~11.8% against the 11% baseline. mechanism: The price stall (Lilly supply allocation, Novo defending margin) and the employer retreat are causally shown. The smoking approval and the positive gambling phase 3 (claims 1–2) have no trials in the parent or in the events. Retatrutide re-sizing waves and shorter gaming sessions within months of launch are asserted, and the 44% figure is dated 2027-01 in events but attributed to a 2028 survey in the note. magnitude: On-drug 16.8%, ever 23.5% (near the 23.8 edge), the income thirds, the age bands (44.0M) and the payer mix (31M) all reconcile. So do Medicare $7.6B, Medicaid $7.1B, cash $45B and the cycling arithmetic. Penalties are the 1.1% pediatric figure (claim 3), applying a 35% persistence rate to all ever-users including diabetics, and the edge-hugging ever-used figure.",
+      "generativity": "The prose has strong human texture: Dana's 30-minute pill routine, the card she keeps hidden from Marco, Kayla's unprompted explanation, the Gujarat blister-pack text, Lorraine's 'you look great', and Mateo's question. The world fields add scenes: discordant couples, the dating-app field, half-plate Thanksgiving and Las Vegas shorter nights. The closing wedding-song beat shows reward flattening rather than explaining it."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.9363,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 30
   }
 }

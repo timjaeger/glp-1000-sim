@@ -36,6 +36,41 @@
         "input_tokens": 13532,
         "output_tokens": 17566
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r48-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21672,
+        "output_tokens": 8042
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r48-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21672,
+        "output_tokens": 6675
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r48-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21672,
+        "output_tokens": 7029
+      }
     ]
   },
   "world": {
@@ -290,6 +325,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r48-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Semaglutide's smoking-cessation sNDA was approved Sep 2028 on two phase 3 trials (continuous abstinence weeks 9–24 roughly doubled vs placebo; effect similar to varenicline, better tolerated in people with obesity).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2026 evidence for nicotine was anecdotal and observational, with no phase 3 programme. Two phase 3 trials, an sNDA and approval inside 24 months are asserted with no trials, filing or priority-review events."
+        },
+        {
+          "quote": "About 1 in 5 large self-funded employers use health-contingent wellness programmes: a BMI ≥30 surcharge (typically $50–100/month) is waived on biometric proof of BMI <30 or on adherence to an approved programme.",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "Mechanism: the 2026 baseline had no benefit conditioning beyond prior auth. A jump to 20% of large self-funded employers using BMI surcharges and connected-pen verification is asserted without a shown chain, and sits oddly beside those same employers dropping drug coverage."
+        },
+        {
+          "quote": "Hazard ratio ~1.5 for smell-test-confirmed hyposmia after ≥5 years of continuous use vs SGLT2 users, and no excess before year 4.",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism: national health registries do not hold smell-test results for 140k long-term users, and that many ≥5-year continuous users in Denmark and Sweden is high. The registry design is a convenient fit for the driver, not a shown mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 7,
+        "overall": 6.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 5.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a formal two-tier system. Payer rather than physiology decides continuous versus cycled treatment (on-drug 23% top third vs 12% bottom). Refill-adherence lockouts and BMI surcharges fed by connected pens (state/conditioning_or_surveillance) press on autonomy. Epistemic harm is the largest: reward blunting is unmeasured and dismissed as ideology, and cycling effects are unstudied. Population-level health is arguably improved, and nothing is melodramatic, so this is a harder society with new losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: adoption 17.8%, employer coverage 60→44%, nicotine indication, hyposmia signal, retatrutide at ~29%, gray market at 6M users, backlash marches, Medicare and Medicaid conditioning, and the unrecognised personality layer. Nothing contradicts them. mechanism: several changes are asserted rather than shown (the first two listed claims and the third, the smell-test registry). Pediatric use goes from a small base to 0.7% of under-18s (~0.5M, a roughly five-fold rise) while the prose says prescriptions are 'inching up'. The 13-month retatrutide timeline is labelled 'priority review'. The cycling arithmetic lands on 6.2 pp with suspicious neatness. magnitude: 17.8% on drug, 24% ever, the income and age splits, the 47M payer mix, Medicare and Medicaid at $4.4B each, and the CBO ~$4B/yr all fit the envelope and reconcile. Approval timings (CagriSema Dec 2026, retatrutide 13 months after filing) are allowed, and US generics stay false. Minor deductions for ever-used near the cap and the unexplained pediatric jump.",
+        "generativity": "The Ray and Denise day carries texture: the timer-made coffee he can't smell, the adherence chime with surcharge waived, the Gujarat envelope in the butter drawer, Kyle's unlit cigarette, the bowling ball left in the trunk. It shows the unrecognised personality layer and hyposmia without naming them. The world JSON adds many implied scenes (church potlucks, dating profiles, accession waivers), though the framing prose is more explanatory than dramatised."
+      },
+      "plausibility": 7.45
+    },
+    {
+      "custom_id": "s1-L0-r48-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Semaglutide's smoking-cessation sNDA was approved Sep 2028 on two phase 3 trials",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: In 2026 nicotine use was only anecdotal and observational, with no phase 2 or phase 3 programme. Two phase 3 trials with 24-week abstinence endpoints, a filing and an approval by Sep 2028 is asserted with no chain showing the trials started, enrolled and read out in time."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: The 2026 figure was ~0.6% of children with obesity, roughly 0.1% of all children. 0.7% of all under-18s is about a fivefold rise in two years, which the world never explains. The prose says child prescriptions 'keep inching up', which contradicts it."
+        },
+        {
+          "quote": "about 140k long-term users, mostly with type 2 diabetes since the liraglutide and early semaglutide years",
+          "field": "world/safety_ledger/hyposmia",
+          "why": "magnitude: A Danish–Swedish cohort of 140k continuous users with at least five years of exposure is implausibly large for two countries of about 16M people. Persistence on these drugs is low and the older diabetic user base is much smaller, so the figure does not reconcile with realistic exposure."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 7.5,
+        "overall": 6.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access is stratified by payer: 23% on-drug in the top income third against 12% in the bottom, with about 5M stopping because coverage ended. Benefits are conditioned through 80% refill adherence, 12-month lockouts, BMI surcharges and connected-pen data feeding employers. Reward blunting is dismissed as 'advocacy' and unmeasured, and a first hyposmia signal has appeared. This is a harder, more surveilled society with new losers, and the harm is partly hidden from the people inside it, but there is no collapse or melodrama.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Employer coverage falls 60→52→44%, the gray market is 'significant' with three named channels, and the 503B exclusion is finalised. Retatrutide is approved at ~29%, nicotine is approved, the hyposmia signal is the long-horizon safety finding, Medicare and Medicaid adherence lockouts carry the benefits conditioning, protests and the Made Whole movement carry the backlash, and the personality layer stays 'unrecognised'.\nmechanism: Most chains are shown: employer retreat feeds forced cycling, which feeds the lockout conditions, and the 503B exclusion feeds the move to importation and research peptides. Some links are asserted. These are the Sep 2028 smoking-cessation approval on two phase 3 trials with no development path (claim 1), the sudden pediatric jump against 'inching up' (claim 2), and the church food-tradition 'pride in eating' movements.\nmagnitude: Adults on drug (17.8) and ever used (24) sit inside the envelope. Retatrutide (13 months after filing) and CagriSema (reviewed at start) follow the approval rules, and there is no US generic. The payer mix sums to 47M, 1.5M × $245 × 12 ≈ $4.4B reconciles with CBO's ~$4B/yr, the cycling arithmetic closes, and the income and age bands bracket the national figure. The deductions are the roughly fivefold pediatric rise (claim 2) and the implausibly large 140k five-year-exposure registry cohort (claim 3).",
+        "generativity": "The Ray and Denise day shows rather than explains. The surcharge-waived app, the Gujarat envelope in the butter drawer, Kyle's unlit cigarette, the half sub, the bowling ball left in the trunk and the church supper flyer all carry the world's themes. Ray's hyposmia is implied rather than stated, and the ending sniffing scene is strong. Several characters and scenes are implied, and the texture is vivid."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s1-L0-r48-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Semaglutide's smoking-cessation sNDA was approved Sep 2028 on two phase 3 trials",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2026 evidence for nicotine was only anecdotal and observational. Two phase 3 trials, an sNDA and FDA approval inside about 2.5 years is implausibly fast, and no trial starts, sponsor or interim readouts are shown."
+        },
+        {
+          "quote": "about 35% of current users are restarters (0.35×17.8 ≈ 6.2 pp)",
+          "field": "world/population/note",
+          "why": "Magnitude: the restarter share looks back-solved to equal the ever-minus-current gap. An off-drug pool of only 6.2% of adults does not fit the parent persistence (about one-third on at one year), because ever-use rose 9 pp while current use rose 6.8 pp."
+        },
+        {
+          "quote": "About 1 in 5 large self-funded employers attach a BMI or adherence premium differential to wellness programmes (ACA allows up to 30%).",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: the parent world has no BMI-surcharge practice. Reaching one-fifth of large self-funded employers, with connected-pen sync to vendors, in two years while those employers are dropping GLP-1 coverage is asserted. The adoption chain is not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world has a formal two-tier access system (`thinness_and_class`: 23% on-drug in the top income third vs 12% in the bottom). Benefits are conditioned on refill and weight data, with 12-month lockouts and BMI surcharges falling on hourly workers. Coverage-driven forced cycling is largely unstudied, and reward blunting is explicitly unmeasured and dismissed as ideology (epistemic). It is a harder, more monitored society with new losers, but not collapse, and the hyposmia signal is small in absolute terms.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events: adoption is +6.8 pp, employer coverage falls 60→52→44%, the nicotine indication lands, the hyposmia registry appears, retatrutide approves at about 29%, the gray market is significant, the backlash movements march, adherence conditioning is in Medicare and Medicaid, and the personality layer is unrecognised. Nothing contradicts a driver. mechanism: Most chains are shown (503B exclusion leading to three gray channels, coverage loss leading to cycling), but the smoking-cessation approval on two phase 3 trials and the 1-in-5 employer surcharge spread are asserted (claims 1 and 3). The Texas law is dated Oct 2027, outside a regular session. magnitude: The population figures sit inside the envelope (17.8, 24), retatrutide approval comes 13 months after filing, and the payer mix sums to 47M. The Medicare and Medicaid $4.4B figures and the 65% FMAP share multiply out, and the age and income averages check. The cycling arithmetic is back-solved and implies an off-drug pool too small for the stated persistence (claim 2).",
+        "generativity": "placeholder"
+      },
+      "plausibility": 6.6
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Semaglutide's smoking-cessation sNDA was approved Sep 2028 on two phase 3 trials (continuous abstinence weeks 9–24 roughly doubled vs placebo; effect similar to varenicline, better tolerated in people with obesity).",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: the 2026 evidence for nicotine was anecdotal and observational, with no phase 3 programme. Two phase 3 trials, an sNDA and approval inside 24 months are asserted with no trials, filing or priority-review events."
+      },
+      {
+        "quote": "About 1 in 5 large self-funded employers use health-contingent wellness programmes: a BMI ≥30 surcharge (typically $50–100/month) is waived on biometric proof of BMI <30 or on adherence to an approved programme.",
+        "field": "world/state/conditioning_or_surveillance",
+        "why": "Mechanism: the 2026 baseline had no benefit conditioning beyond prior auth. A jump to 20% of large self-funded employers using BMI surcharges and connected-pen verification is asserted without a shown chain, and sits oddly beside those same employers dropping drug coverage."
+      },
+      {
+        "quote": "Hazard ratio ~1.5 for smell-test-confirmed hyposmia after ≥5 years of continuous use vs SGLT2 users, and no excess before year 4.",
+        "field": "world/safety_ledger/11/prevalence_note",
+        "why": "Mechanism: national health registries do not hold smell-test results for 140k long-term users, and that many ≥5-year continuous users in Denmark and Sweden is high. The registry design is a convenient fit for the driver, not a shown mechanism."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.83,
+      "inequality": 7.0,
+      "public_health": 5.17,
+      "cohesion": 5.83,
+      "epistemic": 7.17,
+      "overall": 6.47
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 5.83,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.13,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is a formal two-tier system. Payer rather than physiology decides continuous versus cycled treatment (on-drug 23% top third vs 12% bottom). Refill-adherence lockouts and BMI surcharges fed by connected pens (state/conditioning_or_surveillance) press on autonomy. Epistemic harm is the largest: reward blunting is unmeasured and dismissed as ideology, and cycling effects are unstudied. Population-level health is arguably improved, and nothing is melodramatic, so this is a harder society with new losers, not a structural catastrophe.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events: adoption 17.8%, employer coverage 60→44%, nicotine indication, hyposmia signal, retatrutide at ~29%, gray market at 6M users, backlash marches, Medicare and Medicaid conditioning, and the unrecognised personality layer. Nothing contradicts them. mechanism: several changes are asserted rather than shown (the first two listed claims and the third, the smell-test registry). Pediatric use goes from a small base to 0.7% of under-18s (~0.5M, a roughly five-fold rise) while the prose says prescriptions are 'inching up'. The 13-month retatrutide timeline is labelled 'priority review'. The cycling arithmetic lands on 6.2 pp with suspicious neatness. magnitude: 17.8% on drug, 24% ever, the income and age splits, the 47M payer mix, Medicare and Medicaid at $4.4B each, and the CBO ~$4B/yr all fit the envelope and reconcile. Approval timings (CagriSema Dec 2026, retatrutide 13 months after filing) are allowed, and US generics stay false. Minor deductions for ever-used near the cap and the unexplained pediatric jump.",
+      "generativity": "The Ray and Denise day carries texture: the timer-made coffee he can't smell, the adherence chime with surcharge waived, the Gujarat envelope in the butter drawer, Kyle's unlit cigarette, the bowling ball left in the trunk. It shows the unrecognised personality layer and hyposmia without naming them. The world JSON adds many implied scenes (church potlucks, dating profiles, accession waivers), though the framing prose is more explanatory than dramatised."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.8963,
+    "survived": true,
+    "new_lineage": "L3",
+    "floor_used": 6,
+    "rank": 3
   }
 }

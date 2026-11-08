@@ -36,6 +36,41 @@
         "input_tokens": 13519,
         "output_tokens": 15098
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r13-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 19967,
+        "output_tokens": 7228
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r13-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 19967,
+        "output_tokens": 5950
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r13-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 19967,
+        "output_tokens": 7293
+      }
     ]
   },
   "world": {
@@ -273,6 +308,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r13-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "US net prices are down about 40% since 2025, volume is flat, and ex-US revenue is lost to generics.",
+          "field": "world/economy/pharma/state",
+          "why": "Net price down 40% with flat volume cannot produce growing revenue, and the candidate's own user count fell from about 28.8M (11%) to 24.1M. The 'still growing on new launches' claim is asserted with no arithmetic, so this fails mechanism and reconciliation."
+        },
+        {
+          "quote": "Lilly's bimagrumab + tirzepatide phase 3 read out in Apr 2028 (roughly 90% of weight lost as fat vs ~70% on tirzepatide alone) and was filed under priority review in Aug 2028, with a decision expected 2029.",
+          "field": "world/drugs/pipeline_note",
+          "why": "The 2026 world lists bimagrumab only as an adjunct 'in trials', so a full obesity phase 3 that starts, reads out and gets filed with priority review in under two years is very aggressive. The candidate shows no mechanism for that speed, and priority review for a weight-loss combination is a stretch."
+        },
+        {
+          "quote": "Survey self-report puts it at roughly 1 in 5 long-term users describing muted enjoyment at some point, but there is still no prospective trial measuring it.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "The baseline called reward blunting unquantified and 'uncommon' per clinicians, and the safety_signal driver is 'none'. A precise 20% survey figure appears with no named source or chain, which is an asserted magnitude."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access splits into two tiers: coded patients and the cash-comfortable get brand drugs, while uncoded working-class users stay on $149 starter doses or buy imports. About 2.1M people use unapproved product, and the 2027 counterfeit cluster killed four. Cycling and drug holidays are normalised with no controlled data, the 'Ozempic personality' is a mainstream complaint, and Medicaid prescribes the same reward-dampening mechanism for AUD (alcohol use disorder), which the world flags as unmeasured. It is a harder society with new losers, but prices are lower, public payers cover the obesity-only patients they qualify, and nothing has collapsed, so it sits near the middle of the scale.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly 11 to 9.2, employer coverage falls 60% to 44%, and price steps down to $149–299. AUD arrives as a guideline plus a phase 3, the counterfeit and import flood is dated, and Medicaid and Medicare subsidies are in the events. Retatrutide is filed Mar 2027 and approved 14 months later, and the muscle combo is honoured by a priority-review filing, with generic_us staying false. Nothing contradicts a driver. mechanism: Most chains are shown, such as coverage loss to cash price to imports to counterfeits, and holidays to point prevalence. Weaker links are the pharma revenue claim, the bimagrumab phase 3 speed, and the 1-in-5 blunting figure (claims 1–3). magnitude: On-drug 9.2 and ever-used 16.0 are inside the envelope, income thirds bracket the national figure, and the age bands weight back to 9.2. The cycling arithmetic reconciles, with 4.8+4.4=9.2 and 31% cycled. The payer mix sums to 24.1M, and both public cost lines multiply out ($4.0B plus $3.8B). The only blemish is the net-price/volume/revenue claim in the pharma economy field.",
+        "generativity": "The Marisol vignette shows the world rather than explaining it: the 'coupon dose', skipping the Saturday pill, Beto's Nogales insulin pens, the Medicaid patient at the front desk, and her mother on the Medicare line. The sixteen-year-old son and the open fridge add feeling. The world fields add texture, including the on/off/cycling dating field, Thanksgiving planned around who is 'off that week', 'two-size closet' resale, and Nogales pharmacy errands. A few details are slightly off, such as the Foundayo 'before coffee' instruction."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s1-L0-r13-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.3",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 0.3% of all under-18s is roughly 220k children. The 2026 baseline is about 0.6% of children with obesity, which is on the order of 0.1% of all children. The candidate implies a multi-fold jump in two years, while its prose says children are only 'a little more likely to be prescribed'."
+        },
+        {
+          "quote": "ASAM and VA/DoD guidelines endorse semaglutide as a second-line pharmacotherapy for alcohol use disorder in adults with obesity; Novo begins AUD phase 3",
+          "field": "world/events/0/event",
+          "why": "Mechanism: a major addiction-medicine guideline plus VA/DoD endorsement arrives about 13 months after a single n=108 Lancet RCT and a phase 2 oral trial, with no unapproved-indication evidence base shown. That is a very fast jump to guideline status, and no chain is given."
+        },
+        {
+          "quote": "planned 'drug holidays' and weekend skipping to restore enjoyment or save money",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "Mechanism: weekly injectables (semaglutide, tirzepatide, retatrutide) have week-long half-lives, so skipping a weekend would not plausibly restore reward by Monday. The world also says appetite returns only in 7–10 days after stopping, which contradicts weekend-scale relief."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers rather than a catastrophe. A two-tier system is visible: coded patients and the cash-comfortable on brand drugs, working-class users stuck at $149 starter doses or on imports ('Nogales pharmacy trips', 2.1M on unapproved product, 4 counterfeit deaths). About 17.8M former users are cycling, with no data on what cycling does, and reward blunting is now a mainstream complaint. Inequality scores highest because bottom-third prevalence is 7.0 vs 11.0 at the top. Flourishing and cohesion are only mildly worse, since holidays and normalisation soften the picture.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 9.2 (−1.8), employer coverage falls 60→44, AUD arrives via guideline, and counterfeit and generic imports are tied to the Sep 2027 CDC event. The Medicaid subsidy and mainstream_complaint are present, and the muscle combo is realised as a filing under priority review per the approval rules. mechanism: Most chains are shown (employer retreat → 50–64 decline → cash tier → imports). Weaker links are the guideline speed after one small RCT, the pharmacologically odd weekend-skipping story for weekly drugs, and retatrutide launching at $299 cash. These are the claims listed above. magnitude: Everything reconciles. 24.1M users equals 262M × 9.2%, payer mix sums to 24.1M, 1.7M × $195 × 12 ≈ $4.0B and 1.3M × $245 × 12 ≈ $3.8B, the cycled share and income and age weights all check out, and the approval timing respects the 12-month rule. The one soft spot is the pediatric 0.3% jump, which is not envelope-governed.",
+        "generativity": "The prose vignette carries real texture: Marisol's 'coupon dose', skipping the Saturday pill, the Nogales pens, the Costco tray bought 'because Saturday', and the sixteen-year-old asking if he'll have to take it. The world fields add implied scenes, including on/off/cycling dating fields, Thanksgiving planned around who is 'off that week', and 'between doses' comedians. It leans slightly on explaining in places, but the film density is high."
+      },
+      "plausibility": 7.55
+    },
+    {
+      "custom_id": "s1-L0-r13-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "US net prices are down about 40% since 2025, volume is flat, and ex-US revenue is lost to generics. Revenue is still growing on new launches, but more slowly than 2026 forecasts.",
+          "field": "world/economy/pharma/state",
+          "why": "Net prices down 40% with flat volume implies US revenue falls sharply, and current users falling from 11% to 9.2% contradicts 'volume is flat'. Retatrutide's slow, tightly prior-authorised launch and CagriSema's small share cannot fill the gap, so the revenue claim is asserted, not shown (mechanism and magnitude)."
+        },
+        {
+          "quote": "because US current-user share fell slightly while ever-user households keep their habits.",
+          "field": "world/economy/food_and_beverage/state",
+          "why": "The stated cause of flattening snack losses is incoherent. It sits against the same world's claim that smaller portions and high-protein formats are 'standard' and 'the norm', and no mechanism links ever-user households to retained demand (mechanism)."
+        },
+        {
+          "quote": "The decline is concentrated in 50–64-year-olds with commercial insurance (22%→16%) after employers dropped coverage.",
+          "field": "world/population/note",
+          "why": "A 27% relative fall in one age band is attributed wholesale to a coverage drop, although $149 cash starter doses, brand cash and the gray market are said to absorb uncovered users. The employer-retreat-to-use chain is asserted, not shown, and the figure was backed into the age-weighted arithmetic (mechanism)."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder version of 2026 with new losers. Uncoded working-class users are stuck on non-escalating $149 'coupon doses' or on imports (about 2.1M on unapproved product, a 2027 CDC cluster with 4 deaths). There is also a large cycling population with no controlled data, and a reward-blunting complaint reported by ~1 in 5 long-term users. Medicaid prescribing the same mechanism for AUD adds a mild autonomy concern, but the harms are bounded and discussable, so overall is mid-scale.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption is 11→9.2, employer coverage 60→44%, and AUD guidelines, the counterfeit cluster, the Medicaid and Medicare subsidy, the personality layer and normalisation all appear in events. The muscle-preserving combo is realised as a priority-review filing, as the approval rules allow, and safety_signal 'none' is respected by framing the harms as product harms. mechanism: Most chains are shown, but the pharma revenue claim (price −40%, volume flat, revenue growing) and the F&B 'ever-user households keep their habits' explanation are asserted or incoherent, and the 50–64 drop is loosely attributed (claims 1–3). magnitude: Population figures sit inside the envelope: on-drug 9.2, ever-used 16.0, income thirds averaging 9.2, and the age-weighted sum 9.2. The cycling arithmetic closes, the payer mix sums to 24.1M, and the $4.0B + $3.8B ≈ $7.8B budget math checks. Approval timing is legal (retatrutide 14 months after filing, CagriSema from the Dec 2025 NDA). The only gaps are 'volume is flat' against a falling user share and the pharma revenue statement.",
+        "generativity": "The prose vignette is concrete and well populated: Marisol's 'coupon dose', skipping the Saturday pill, the Medicaid patient who sleeps, Beto's Nogales insulin pens, and the son's question. The world fields add scenes of their own, such as Nogales pharmacy errands, Thanksgiving planned around who is 'off that week', 'on / off / cycling' dating profiles, and bars with sober trivia regulars. Daily-life texture is strong and mostly shown rather than explained."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "US net prices are down about 40% since 2025, volume is flat, and ex-US revenue is lost to generics.",
+        "field": "world/economy/pharma/state",
+        "why": "Net price down 40% with flat volume cannot produce growing revenue, and the candidate's own user count fell from about 28.8M (11%) to 24.1M. The 'still growing on new launches' claim is asserted with no arithmetic, so this fails mechanism and reconciliation."
+      },
+      {
+        "quote": "Lilly's bimagrumab + tirzepatide phase 3 read out in Apr 2028 (roughly 90% of weight lost as fat vs ~70% on tirzepatide alone) and was filed under priority review in Aug 2028, with a decision expected 2029.",
+        "field": "world/drugs/pipeline_note",
+        "why": "The 2026 world lists bimagrumab only as an adjunct 'in trials', so a full obesity phase 3 that starts, reads out and gets filed with priority review in under two years is very aggressive. The candidate shows no mechanism for that speed, and priority review for a weight-loss combination is a stretch."
+      },
+      {
+        "quote": "Survey self-report puts it at roughly 1 in 5 long-term users describing muted enjoyment at some point, but there is still no prospective trial measuring it.",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "The baseline called reward blunting unquantified and 'uncommon' per clinicians, and the safety_signal driver is 'none'. A precise 20% survey figure appears with no named source or chain, which is an asserted magnitude."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.67,
+      "autonomy": 5.0,
+      "inequality": 6.0,
+      "public_health": 5.17,
+      "cohesion": 4.17,
+      "epistemic": 4.83,
+      "overall": 5.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.67,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.82,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Access splits into two tiers: coded patients and the cash-comfortable get brand drugs, while uncoded working-class users stay on $149 starter doses or buy imports. About 2.1M people use unapproved product, and the 2027 counterfeit cluster killed four. Cycling and drug holidays are normalised with no controlled data, the 'Ozempic personality' is a mainstream complaint, and Medicaid prescribes the same reward-dampening mechanism for AUD (alcohol use disorder), which the world flags as unmeasured. It is a harder society with new losers, but prices are lower, public payers cover the obesity-only patients they qualify, and nothing has collapsed, so it sits near the middle of the scale.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly 11 to 9.2, employer coverage falls 60% to 44%, and price steps down to $149–299. AUD arrives as a guideline plus a phase 3, the counterfeit and import flood is dated, and Medicaid and Medicare subsidies are in the events. Retatrutide is filed Mar 2027 and approved 14 months later, and the muscle combo is honoured by a priority-review filing, with generic_us staying false. Nothing contradicts a driver. mechanism: Most chains are shown, such as coverage loss to cash price to imports to counterfeits, and holidays to point prevalence. Weaker links are the pharma revenue claim, the bimagrumab phase 3 speed, and the 1-in-5 blunting figure (claims 1–3). magnitude: On-drug 9.2 and ever-used 16.0 are inside the envelope, income thirds bracket the national figure, and the age bands weight back to 9.2. The cycling arithmetic reconciles, with 4.8+4.4=9.2 and 31% cycled. The payer mix sums to 24.1M, and both public cost lines multiply out ($4.0B plus $3.8B). The only blemish is the net-price/volume/revenue claim in the pharma economy field.",
+      "generativity": "The Marisol vignette shows the world rather than explaining it: the 'coupon dose', skipping the Saturday pill, Beto's Nogales insulin pens, the Medicaid patient at the front desk, and her mother on the Medicare line. The sixteen-year-old son and the open fridge add feeling. The world fields add texture, including the on/off/cycling dating field, Thanksgiving planned around who is 'off that week', 'two-size closet' resale, and Nogales pharmacy errands. A few details are slightly off, such as the Foundayo 'before coffee' instruction."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.96,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 28
   }
 }

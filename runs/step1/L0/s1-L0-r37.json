@@ -34,6 +34,41 @@
         "input_tokens": 13507,
         "output_tokens": 15910
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r37-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20774,
+        "output_tokens": 6327
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r37-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20774,
+        "output_tokens": 5387
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r37-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20774,
+        "output_tokens": 5611
+      }
     ]
   },
   "world": {
@@ -273,6 +308,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r37-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~0.9% of under-18s, almost all adolescents 12+ (~2.5% of adolescents with obesity).",
+          "field": "world/population/note",
+          "why": "Fails magnitude. 0.9% of ~73M minors is ~650k users, but 2.5% of the ~5M adolescents with obesity is ~130k. The two figures differ about fivefold, and 0.9% would also be a large jump from the 2026 starting level."
+        },
+        {
+          "quote": "Employer coverage for weight management fell to 52% in 2027, then recovered to 56% in 2028 as conditioned carve-out programmes made the cost bounded.",
+          "field": "world/access/note",
+          "why": "Fails mechanism. A reversal of the 2025–27 retreat within about a year is asserted. The starting world had 14% of employers dropping coverage and pharmacy trend at +11.5%, and the candidate shows no chain for the rebound beyond the vendor-bounded-cost claim."
+        },
+        {
+          "quote": "Medicaid ~5M (≈3.1M diabetes plus 1.9M obesity in opt-in states)",
+          "field": "world/population/note",
+          "why": "Fails magnitude. About 5M of roughly 20–25M adult Medicaid enrollees implies ~20–25% use, above the 16.1% national rate. That sits uneasily with the bottom-third rate of 11% and with 22 opt-in states."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7.5,
+        "magnitude": 6
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The main harms are autonomy and inequality. Medicare and Medicaid continuation rules, employer premium differentials of $40–110, connected scales and Medicaid weigh-ins tie access to monitoring. The conditioning pushes non-responders and the unmonitored into a ~4M-person gray market, with an insulin-pen cluster hospitalising 38, 11 deaths and >6,000 adverse-event reports. Access is also stratified: top-third use is nearly twice bottom-third use, and the 'never-afforded' note puts bottom-third ever-use below one in six. Epistemic and flourishing harms are moderate, because anhedonia is labelled at 0.1–1%, screened for and measured, and nothing has collapsed. The result is a recognisably harder society with new losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. Adoption is 16.1 (+5.1). Price follows managed decline ($245→$215, $350→$199). Medicare and employer conditioning is in place. Oral 50 mg is the oral_parity launch. Counterfeits and the import alert are present, the natural_movement 'Appetite Intact' movement is shown, and the personality layer stays a niche side effect. A 2027 PRO study showing 'modest excess' anhedonia sits slightly against safety_signal 'none', but the effect is minor. mechanism: Most chains are shown, notably conditioning feeding the gray market, adherence metrics colliding with dose reduction, and the oral launch driving the route mix. Two things are asserted rather than shown: the employer rebound to 56% in a year, and a steep income gradient despite $149 pills and Medicaid coverage. magnitude: On-drug 16.1, ever-used 22, the age and income figures, approval timing (CagriSema, retatrutide, survodutide) and the no-US-generic rule are all inside the envelope. The payer mix sums to 42M and the $8.3B and $4.9B spending figures multiply out. The pediatric 0.9% against ~2.5% of adolescents with obesity does not reconcile, and Medicaid at ~5M is a bit high against the bottom-third rate.",
+        "generativity": "The world is full of textured detail: appetite dinners in Boise, dating-app 'medicated/unmedicated' fields, the 'turning the volume back up' songs, and a clinic form to lower the dose. The day-in-the-life shows rather than explains. Renée's streak of 214, Tasha's $85 surcharge, Lynn's vials with a differently coloured cap and Dev's fork-and-wheat T-shirt imply many scenes, and the final image of waiting for the song to matter carries the interior-life layer."
+      },
+      "plausibility": 6.95
+    },
+    {
+      "custom_id": "s1-L0-r37-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~0.9% of under-18s, almost all adolescents 12+ (~2.5% of adolescents with obesity).",
+          "field": "world/population/note",
+          "why": "magnitude: 0.9% of ~73M under-18s is about 650k children, but 2.5% of adolescents with obesity is only ~150k. The two figures disagree by roughly 4x, and 0.9% is also a big jump from the 2026 base of ~0.6% of children with obesity."
+        },
+        {
+          "quote": "Employer coverage for weight management fell to 52% in 2027, then recovered to 56% in 2028 as conditioned carve-out programmes made the cost bounded.",
+          "field": "world/access/note",
+          "why": "mechanism: a four-point rebound within one year reverses the 72%→60% retreat and 14% planning to drop coverage. The carve-out cause is asserted and no uptake or cost evidence is shown."
+        },
+        {
+          "quote": "Montana (2028) and two other states bar employers from receiving individual adherence or weight data.",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "mechanism: Montana's legislature meets only in odd years, so a May 2028 enactment would need a special session. Two more states copying it within months is also asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Coverage is gated by weight and adherence surveillance (connected scales, fill-data sharing, premium differentials). About 4M people end up in a gray market with counterfeit-related deaths and poison-centre spikes, and the bottom third is on at roughly half the top third's rate. Dose reduction for anhedonia now requires attestation, and the family and appetite-culture split adds friction. Nothing is catastrophic, so this is a recognisably harder society with new losers (non-responders, the unmonitored, the poor), not a structurally hidden harm.",
+        "plausibility": "driver_fidelity: Every driver is traceable: oral_parity via the sNDA approved Mar 2027, generic_flood_counterfeits via the Jul 2027 event, benefits_conditioning via the Outcomes Model, the Appetite Intact movement, and no new indications. The \"none\" safety signal is slightly strained by the 6,000+ adverse-event reports and the new labelled reward-blunting reaction. mechanism: Most chains are shown (price gate to paperwork gate to gray market). The employer-coverage rebound and the Montana law with two copycat states are asserted, which are the second and third claims listed. magnitude: Adoption, ever-use, income thirds, age bands (~42M), payer mix and the Medicare/Medicaid spending arithmetic all reconcile, and approval timing obeys the rules. The pediatric figures (0.9% of under-18s vs 2.5% of adolescents with obesity) do not reconcile, which is the first claim listed.",
+        "generativity": "The scene-rich prose and world fields imply many characters and scenes: Renée's Monday scale, Tasha's surcharge, Lynn's vials, Dev's logo T-shirt, appetite dinners and dating-app fields. Details such as the 'streak' app nudge, the clinician attestation form and the cellular scale give daily life real texture. The day-in-the-life shows rather than explains, and the closing line is strong."
+      },
+      "plausibility": 6.7
+    },
+    {
+      "custom_id": "s1-L0-r37-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~0.9% of under-18s, almost all adolescents 12+ (~2.5% of adolescents with obesity).",
+          "field": "world/population/note",
+          "why": "Fails magnitude. 0.9% of ~73M under-18s is roughly 650k children, but 2.5% of adolescents with obesity (about 5M) is roughly 130k. The two pediatric figures differ about fivefold and cannot both hold. The jump from the ~0.6% of children with obesity in 2026 is also unexplained."
+        },
+        {
+          "quote": "microdosing / 'metabolic health' use by people without obesity, now mostly via gray-market imports because covered and TrumpRx channels require BMI documentation",
+          "field": "world/drugs/mainstream_offlabel_uses/1",
+          "why": "Fails mechanism. TrumpRx is a cash-pay channel, and nothing in the world shows it gating on BMI documentation. The stated cause of the shift of microdosers into the gray market is asserted rather than derived from the conditioning rules."
+        },
+        {
+          "quote": "Listed as an uncommon postmarketing adverse reaction in the 2027 oral semaglutide 50 mg and CagriSema labels; not boxed; no class-wide label change.",
+          "field": "world/safety_ledger/6/regulatory_response",
+          "why": "Fails driver_fidelity and mechanism. The driver is safety_signal \"none\", yet anhedonia is upgraded to \"suspected\", a 2027 PRO study finds excess, and two labels are changed. CagriSema was approved Dec 2026, so a '2027 label' for it is an unexplained timing mismatch."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 6.5,
+        "inequality": 6.0,
+        "public_health": 5.0,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 7.0,
+        "magnitude": 6.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Autonomy is the main loss. Adherence monitoring through connected scales and fill data, premium differentials of up to $110/month, Medicaid weigh-ins and the attestation form needed to lower a dose for anhedonia make access conditional on being watched. Inequality is real (top third at 20% vs bottom third at 11%, with the poor pushed to imports), as are public-health costs (>6,000 adverse-event reports, 11 deaths, 38 hospitalised). Nothing collapses and nobody is forced onto the drug, so this is a recognisably harder society with new losers rather than a catastrophe. The harms are measured and discussed openly, which keeps epistemic badness moderate.",
+        "plausibility": "driver_fidelity: Nearly every driver is visible in fields and events: oral parity via the sNDA, a counterfeit flood with the 2027 insulin pens, Medicare/Medicaid/employer conditioning, the Appetite Intact movement, and no new indications. The exception is safety_signal \"none\", which is bent by the anhedonia upgrade and label changes (claim 3). mechanism: The chains are mostly shown: conditioning leads non-responders to the gray market, and carve-out vendors bound costs and so employer coverage recovers. Weaker points are the TrumpRx BMI-gating claim (claim 2), the gray market growing from 'contained' to ~4M in two years, and the 2027-label vs Dec 2026 CagriSema timing. magnitude: The headline figures sit inside the envelope (16.1% on-drug, 22% ever) and reconcile well: the payer mix sums to 42M, $215 × 3.2M × 12 ≈ $8.3B, and the income thirds average ~16. The pediatric figures conflict (claim 1). The 22% ever vs 16.1% current ratio, ~73% still on, sits uneasily with the ~35% one-year persistence, though rapid growth explains some of it.",
+        "generativity": "The Renée Kowalczyk vignette is concrete: the pill at 5:40, the scale blinking green, a 214-day streak, Tasha's $85 surcharge, Lynn's vials with the different cap, and Dev's fork-and-wheat T-shirt. It implies many scenes and characters, and the line 'waiting for the song to start mattering' carries the anhedonia theme without explaining it. World fields such as appetite dinners, dating-app fields and the Montana law add further texture."
+      },
+      "plausibility": 6.85
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Pediatric: ~0.9% of under-18s, almost all adolescents 12+ (~2.5% of adolescents with obesity).",
+        "field": "world/population/note",
+        "why": "Fails magnitude. 0.9% of ~73M minors is ~650k users, but 2.5% of the ~5M adolescents with obesity is ~130k. The two figures differ about fivefold, and 0.9% would also be a large jump from the 2026 starting level."
+      },
+      {
+        "quote": "Employer coverage for weight management fell to 52% in 2027, then recovered to 56% in 2028 as conditioned carve-out programmes made the cost bounded.",
+        "field": "world/access/note",
+        "why": "Fails mechanism. A reversal of the 2025–27 retreat within about a year is asserted. The starting world had 14% of employers dropping coverage and pharmacy trend at +11.5%, and the candidate shows no chain for the rebound beyond the vendor-bounded-cost claim."
+      },
+      {
+        "quote": "Medicaid ~5M (≈3.1M diabetes plus 1.9M obesity in opt-in states)",
+        "field": "world/population/note",
+        "why": "Fails magnitude. About 5M of roughly 20–25M adult Medicaid enrollees implies ~20–25% use, above the 16.1% national rate. That sits uneasily with the bottom-third rate of 11% and with 22 opt-in states."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.17,
+      "autonomy": 6.33,
+      "inequality": 6.0,
+      "public_health": 5.17,
+      "cohesion": 5.17,
+      "epistemic": 4.33,
+      "overall": 5.37
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 7.17,
+      "magnitude": 6.17
+    },
+    "plausibility": 6.84,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "The main harms are autonomy and inequality. Medicare and Medicaid continuation rules, employer premium differentials of $40–110, connected scales and Medicaid weigh-ins tie access to monitoring. The conditioning pushes non-responders and the unmonitored into a ~4M-person gray market, with an insulin-pen cluster hospitalising 38, 11 deaths and >6,000 adverse-event reports. Access is also stratified: top-third use is nearly twice bottom-third use, and the 'never-afforded' note puts bottom-third ever-use below one in six. Epistemic and flourishing harms are moderate, because anhedonia is labelled at 0.1–1%, screened for and measured, and nothing has collapsed. The result is a recognisably harder society with new losers, not a structural catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events. Adoption is 16.1 (+5.1). Price follows managed decline ($245→$215, $350→$199). Medicare and employer conditioning is in place. Oral 50 mg is the oral_parity launch. Counterfeits and the import alert are present, the natural_movement 'Appetite Intact' movement is shown, and the personality layer stays a niche side effect. A 2027 PRO study showing 'modest excess' anhedonia sits slightly against safety_signal 'none', but the effect is minor. mechanism: Most chains are shown, notably conditioning feeding the gray market, adherence metrics colliding with dose reduction, and the oral launch driving the route mix. Two things are asserted rather than shown: the employer rebound to 56% in a year, and a steep income gradient despite $149 pills and Medicaid coverage. magnitude: On-drug 16.1, ever-used 22, the age and income figures, approval timing (CagriSema, retatrutide, survodutide) and the no-US-generic rule are all inside the envelope. The payer mix sums to 42M and the $8.3B and $4.9B spending figures multiply out. The pediatric 0.9% against ~2.5% of adolescents with obesity does not reconcile, and Medicaid at ~5M is a bit high against the bottom-third rate.",
+      "generativity": "The world is full of textured detail: appetite dinners in Boise, dating-app 'medicated/unmedicated' fields, the 'turning the volume back up' songs, and a clinic form to lower the dose. The day-in-the-life shows rather than explains. Renée's streak of 214, Tasha's $85 surcharge, Lynn's vials with a differently coloured cap and Dev's fork-and-wheat T-shirt imply many scenes, and the final image of waiting for the song to matter carries the interior-life layer."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.0637,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 23
   }
 }

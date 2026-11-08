@@ -36,6 +36,41 @@
         "input_tokens": 13443,
         "output_tokens": 21032
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r44-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20762,
+        "output_tokens": 6709
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r44-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20762,
+        "output_tokens": 9729
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r44-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20762,
+        "output_tokens": 7909
+      }
     ]
   },
   "world": {
@@ -283,6 +318,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r44-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~0.7% of under-18s (~510k), mostly 12–17.",
+          "field": "world/population/note",
+          "why": "magnitude: the 2026 base was ~0.6% of children with obesity (roughly 90k children). A rise to ~510k implies about a sixfold jump in two years, and 0.7% of all under-18s implies roughly 3–4% of children with obesity, with no mechanism for the adolescent surge beyond the under-12 label."
+        },
+        {
+          "quote": "Business Group on Health survey: 44% of large employers now cover GLP-1s for weight management, down from 60%.",
+          "field": "world/events/2/event",
+          "why": "magnitude: a 16-point fall in one survey year is steeper than the 12-point fall in 2025–26. The text asserts it with no cost trigger beyond 'employer retreat', and the ~$499 cash-price rise points the other way for employer cost pressure."
+        },
+        {
+          "quote": "It requires growth monitoring every six months, and new paediatric starts fall ~30%.",
+          "field": "world/events/5/event",
+          "why": "mechanism: a ~30% fall in new starts is dated to the same month as the Drug Safety Communication, so the effect appears at once with no chain through prescribers, Medicaid or parents. The underlying growth signal is also described as confounded."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "A recognisably harder society with new losers. Hourly workers sit in a hardening middle tier, paying $199–499 cash or using a gray market of 8–10% of users with ~3,400 adverse-event reports and contaminated imports. Children on Wegovy face an unresolved growth and restrictive-eating signal while their parents go uncovered. It is not worse than that, because the state backstops the poor and Medicare enrollees, anhedonia is measured and labelled (1–3%, reversible), and the harms are nameable, which lowers the epistemic score.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: the shortage price shock, 44% employer coverage, the 6–11 label, the growth signal, the oral 50 mg, the unmedicated movement, the HRSA subsidy and niche anhedonia. The Novo plant failure sits slightly uneasily with market_shock 'none', though it is the price_path mechanism. mechanism: Most chains are shown, including the shortage leading to compounding, the regain natural experiment, oral API demand and bottleneck, and Bridge enrollment leading to 65+ uptake. Weaker links are the same-month 30% drop in paediatric starts and the 16-point employer drop (claims 2 and 3), plus the label change appearing only on the 50 mg pill. magnitude: Adult on-drug (14.9), ever-used (21), income thirds (~14.8 weighted) and age bands (~15.0 weighted) are inside the envelope and reconcile, as do the cycling arithmetic, Medicare ($6.2B), HRSA ($0.93B) and approval timing. The main gap is the sixfold paediatric rise (claim 1).",
+        "generativity": ""
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s1-L0-r44-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Compounded product plus personal importation of Indian and Canadian generic semaglutide make the gray market an estimated 8–10% of US users.",
+          "field": "world/access/note",
+          "why": "magnitude: 8–10% of roughly 38M users is 3–4M people. That is a jump from a 'contained' gray market, driven by a legal compounding window that lasted ten months and closed in Feb 2028, plus importation that is formally unauthorised. The estimate is asserted with no derivation."
+        },
+        {
+          "quote": "Lilly raised Zepbound vial cash pricing from $349–499 to $399–549, citing demand and onshoring costs.",
+          "field": "world/access/note",
+          "why": "mechanism: the semaglutide shortage hit Novo, not tirzepatide. A price rise by Lilly runs against the administration's negotiated price-cap deals and the 2026 trend toward ~$245, and no chain explains why the deal's terms did not bind."
+        },
+        {
+          "quote": "Clinically meaningful in an estimated 1–3% of users, dose-related and usually reversible on dose reduction, according to 2027 pharmacovigilance analyses and one prospective cohort.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism: reward blunting goes from 'unquantified, trials not designed to detect it' to 'established', quantified, and on a label within two years. The only evidence given is unspecified pharmacovigilance and one cohort, and the manufacturer had 'no data to share'. This is faster and firmer than the niche_side_effect driver supports."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Hourly workers are priced out by employer exits and cash prices of $199–499, and they turn to a gray market with contaminated imports (~3,400 adverse-event reports). Children on the drug have a growth signal and ~1.6× restrictive-eating diagnoses, and parents cannot tell whether stopping or continuing is riskier. Offsetting this, the signals are named, measured and labelled, and the state subsidises the poorest and the elderly, so epistemic harm is moderate and the world is not structurally hidden.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in the fields and events (adoption 14.9, shortage-driven price shock, employer 44%, the 6–11 label, the growth signal, the 50 mg oral, HRSA subsidy, 'unmedicated' movement, apathy on one label). Two are slightly stretched: a plant-failure supply shock sits awkwardly beside market_shock 'none', and anhedonia gains real political salience despite niche_side_effect. mechanism: Most chains are shown, such as the plant recall leading to the shortage, compounding and a regain natural experiment, and the oral approval following a head-to-head trial. Several links are asserted, including Lilly's price rise (claim 2), the near-instant quantification and labelling of apathy (claim 3), the unexplained HRSA funding source, and the 17-state Medicaid count. magnitude: Population figures sit inside the envelope (14.9 on drug, ever-used 21, income thirds weighting to ~14.8, age bands to ~15.0). The cycling arithmetic, Medicare $6.2B and HRSA $0.93B all multiply out, and the approval timing for CagriSema, retatrutide and survodutide follows the rules. Minor gaps: the $3B HRSA appropriation against ~$1.5–1.9B implied spend, the unsourced 8–10% gray-market share (claim 1), and survodutide's filing being absent from events.",
+        "generativity": "The Marisol Treviño day is dense with concrete texture: the 5:40 pill and 30-minute wait, the sticker with the check-in date, the free-phone comparison, Ana's wall measurement, the foil-wrapped tortillas, and the 'unmedicated sunday' photo. The world fields add implied scenes such as dating-app fields, mismatched couples, EAP flatness guidance and Austin menu cards. Characters and conflicts (aide vs insured colleague, parent deciding about the dose) are clearly implied."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s1-L0-r44-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "It requires growth monitoring every six months, and new paediatric starts fall ~30%.",
+          "field": "world/events/5/event",
+          "why": "mechanism: a confounded EHR cohort in May 2028 turns into an FDA Drug Safety Communication with a monitoring mandate by August. A measured 30% drop in new starts is reported within the same month, which is implausibly fast."
+        },
+        {
+          "quote": "The medical assistant measures Ana against the wall twice and writes 134.6. Last March it was 132.1.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism/magnitude: about 2.5 cm over roughly 18 months is far below normal growth for a 10-year-old. The world's own signal is only ~0.8 cm/yr slower, and the doctor still calls it 'within range', so prose and world state disagree."
+        },
+        {
+          "quote": "Pediatric: ~0.7% of under-18s (~510k), mostly 12–17.",
+          "field": "world/population/note",
+          "why": "magnitude: this is roughly 3–4% of all children with obesity, against ~0.6% in 2026. That is a sixfold or greater jump in two years with no stated chain. The 6–11 cohort reaching ~70k within a year of the label is similarly abrupt."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Employers retreat (44%), and hourly workers are priced out or pushed into a gray market with contaminated imports. Children carry an unresolved growth and restrictive-eating signal. Anhedonia has a label but is handled as a dose question, and the harms are named and measured, which holds epistemic badness down. Inequality is the main driver: the state covers the poorest, Medicare enrollees and Medicaid kids, and the hourly middle is left out. Cohesion takes a hit from mismatched couples, the 'unmedicated' politics and parents unable to decide for their kids.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption lands exactly at +3.9pp, the shortage supplies the price shock, employer coverage falls to 44%, Wegovy gets a 6–11 label, the pediatric growth signal is in the ledger and events, oral 50 mg gives parity, HRSA is the subsidy, the unmedicated movement is the cultural response, and anhedonia stays a niche label item. mechanism: most chains are shown, including the plant failure, shortage, 503A reopening, gray market and regain natural experiment. The weak points are the three-month jump from a confounded cohort to a DSC with a measured 30% drop (claim 1) and Ana's growth numbers contradicting the stated effect size (claim 2). magnitude: all population figures sit inside the envelope (14.9 current, 21 ever), and the income and age bands weight back to ~15. The 520k × $149 × 12 ≈ $0.93B, 2.1M × $245 × 12 ≈ $6.2B and 510k pediatric figures all reconcile. The deductions are the unexplained pediatric jump (claim 3) and a $3B HRSA appropriation against only ~$1.5B of implied outlay over two years.",
+        "generativity": "The prose follows Marisol through the 5:40 pill, the sticker with her check-in date, Mrs. Garza's son on Zepbound through the refinery, Ana's wall measurement and the tortillas wrapped back in foil. It ends on the unmedicated Sunday table and the sour gummies. The world fields add dating-app 'on/off/unmedicated' tags, 'unmedicated portions' menus, Medicare Advantage strength classes and PHQ-style apathy screens. That gives many implied scenes and characters."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Pediatric: ~0.7% of under-18s (~510k), mostly 12–17.",
+        "field": "world/population/note",
+        "why": "magnitude: the 2026 base was ~0.6% of children with obesity (roughly 90k children). A rise to ~510k implies about a sixfold jump in two years, and 0.7% of all under-18s implies roughly 3–4% of children with obesity, with no mechanism for the adolescent surge beyond the under-12 label."
+      },
+      {
+        "quote": "Business Group on Health survey: 44% of large employers now cover GLP-1s for weight management, down from 60%.",
+        "field": "world/events/2/event",
+        "why": "magnitude: a 16-point fall in one survey year is steeper than the 12-point fall in 2025–26. The text asserts it with no cost trigger beyond 'employer retreat', and the ~$499 cash-price rise points the other way for employer cost pressure."
+      },
+      {
+        "quote": "It requires growth monitoring every six months, and new paediatric starts fall ~30%.",
+        "field": "world/events/5/event",
+        "why": "mechanism: a ~30% fall in new starts is dated to the same month as the Drug Safety Communication, so the effect appears at once with no chain through prescribers, Medicaid or parents. The underlying growth signal is also described as confounded."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 5.0,
+      "inequality": 6.0,
+      "public_health": 5.5,
+      "cohesion": 5.0,
+      "epistemic": 4.0,
+      "overall": 5.23
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 7.17,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.73,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "A recognisably harder society with new losers. Hourly workers sit in a hardening middle tier, paying $199–499 cash or using a gray market of 8–10% of users with ~3,400 adverse-event reports and contaminated imports. Children on Wegovy face an unresolved growth and restrictive-eating signal while their parents go uncovered. It is not worse than that, because the state backstops the poor and Medicare enrollees, anhedonia is measured and labelled (1–3%, reversible), and the harms are nameable, which lowers the epistemic score.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: the shortage price shock, 44% employer coverage, the 6–11 label, the growth signal, the oral 50 mg, the unmedicated movement, the HRSA subsidy and niche anhedonia. The Novo plant failure sits slightly uneasily with market_shock 'none', though it is the price_path mechanism. mechanism: Most chains are shown, including the shortage leading to compounding, the regain natural experiment, oral API demand and bottleneck, and Bridge enrollment leading to 65+ uptake. Weaker links are the same-month 30% drop in paediatric starts and the 16-point employer drop (claims 2 and 3), plus the label change appearing only on the 50 mg pill. magnitude: Adult on-drug (14.9), ever-used (21), income thirds (~14.8 weighted) and age bands (~15.0 weighted) are inside the envelope and reconcile, as do the cycling arithmetic, Medicare ($6.2B), HRSA ($0.93B) and approval timing. The main gap is the sixfold paediatric rise (claim 1).",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.0,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 26
   }
 }

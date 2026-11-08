@@ -36,6 +36,41 @@
         "input_tokens": 13525,
         "output_tokens": 16745
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r12-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20739,
+        "output_tokens": 5546
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r12-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20739,
+        "output_tokens": 6475
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r12-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20739,
+        "output_tokens": 7052
+      }
     ]
   },
   "world": {
@@ -284,6 +319,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r12-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Under-18: ~0.7% overall and ~2.5% of 12–17s; the affluent skew persists.",
+          "field": "world/population/note",
+          "why": "Magnitude: 12–17s are roughly a third of under-18s, so 2.5% of them alone is about 0.85% of all minors, which exceeds the stated 0.7% overall. The jump from the parent's ~0.6% of children with obesity in 2026 is also steep for two years."
+        },
+        {
+          "quote": "The 65+ rate rose from 9% to 15% through the Medicare Bridge and its successor model.",
+          "field": "world/population/note",
+          "why": "Mechanism: a 6-point rise across roughly 60M seniors is about 3.6M extra users. The world gives only ~1.5M Medicare obesity beneficiaries, and adherence conditioning should restrain uptake, so the chain does not carry the claimed change."
+        },
+        {
+          "quote": "FDA Drug Safety Communication (Sep 2028) advising clinicians to consider endoscopy for ≥5-year users with chronic reflux; EMA PRAC review opened; no label change yet.",
+          "field": "world/safety_ledger/Barrett's oesophagus and erosive oesophagitis after ≥5 years of continuous GLP-1 use (novel long-horizon signal)",
+          "why": "Mechanism: a formal FDA Drug Safety Communication and an EMA review arrive within about a month of a disputed observational finding with possible detection bias and a small absolute excess. Regulators are normally much slower."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy takes the hardest hit: coverage is conditioned on ≥80% verified adherence (CMMI model, 19 Medicaid programmes, employer premium credits), and lapsers must requalify, which pushes the poorest toward counterfeit vials (140 infections, 3 deaths). Inequality has hardened into tiers, with the top income third at 22% against 11.5% in the bottom third. Epistemic harm is high because reward blunting is explicitly unrecognised and reframed as 'calm' while nobody measures it in 44M people. Flourishing and public health worsen only modestly (a small Barrett's excess, a contamination cluster), so this is a harder society with new losers rather than a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 16.8, price decline runs through the $199–299 step, employer coverage falls to 44%, AUD guidelines are in place, Barrett's is the long-horizon signal, the monthly driver is realised via the MariTide filing plus connected pens, the counterfeit flood has the CDC cluster, normalisation shows in the culture fields, conditioning is in the CMMI model, and personality is 'unrecognised'. Nothing contradicts a driver. mechanism: Most chains are shown, such as adherence rules pushing lapsers to the gray market and AUD guidance hitting spirits. The 65+ jump, the speed of the FDA Drug Safety Communication, and the quick rollout of connected pens for both drugs are thinly supported (claims 2 and 3). magnitude: On-drug 16.8, ever 23, the income thirds and the age band all reconcile, as do the payer mix summing to 44M and the Medicare and Medicaid dollar arithmetic. The pediatric figures conflict with each other (claim 1), the 48% restart rate sits just above the parent's range, and some dates disagree (MariTide phase 3 in 2027 vs 2028-03, TrumpRx step in Jan vs Mar 2027, the 44% figure dated both 2027 and 2028).",
+        "generativity": "Denise's day gives concrete texture: the pen's green light worth $86, the sister's photo of a box with Hindi on it, Mr. Harlan's 'my stomach can't', the half wrap, and a husband who now says 'Well' and goes to bed at nine. The world fields add Plano dating-app profiles, 'the Canadian stuff' in Detroit, half-size Thanksgiving plates, and stand-up bits about the friend who wants nothing anymore. Many scenes are implied, and the prose mostly shows rather than explains."
+      },
+      "plausibility": 6.85
+    },
+    {
+      "custom_id": "s1-L0-r12-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Under-18: ~0.7% overall and ~2.5% of 12–17s; the affluent skew persists.",
+          "field": "world/population/note",
+          "why": "magnitude: the 2026 baseline was ~0.6% of children with obesity, so 2.5% of all 12–17s is a roughly 20-fold jump in two years with no stated mechanism. It also does not reconcile: 2.5% of 12–17s alone is about 0.8% of under-18s, above the stated 0.7% overall."
+        },
+        {
+          "quote": "The 65+ rate rose from 9% to 15% through the Medicare Bridge and its successor model.",
+          "field": "world/population/note",
+          "why": "magnitude and mechanism: 15% of ~60M adults 65+ is about 9M users, a rise of ~3.6M. The candidate's own payer mix puts only ~1.5M on Medicare obesity coverage, so the Medicare programme cannot account for the change. The largest age-band jump is asserted, not shown."
+        },
+        {
+          "quote": "The 2027 AUD guidelines put the drug in the hands of exactly the heaviest-drinking decile, which carries most category revenue.",
+          "field": "world/economy/alcohol/state",
+          "why": "mechanism: the guidelines cover only AUD with comorbid obesity or diabetes, and the parent says ~3% of adults have obesity plus heavy drinking. That cannot reach \"exactly\" the heaviest-drinking decile, so the claimed spirits-revenue effect has no causal chain. Guideline endorsement within a year of a single n=108 RCT is also very fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy and inequality score highest. Coverage depends on verified ≥80% adherence via pen logs and pharmacy fills, employer premium credits tie to adherence or BMI, and lapsed users are pushed to imported and counterfeit product. The harm lands on the bottom income third (the CDC cluster of 140 infections, 3 deaths). Epistemic is high because reward blunting is unrecognised, unmeasured and reframed as calm in ~44M users, and the Barrett's signal collides with the \"never stop\" rules. Flourishing and public health are only moderately worse than 2026: a small non-dysplastic Barrett's excess and a contamination cluster, offset by wider access.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: +5.8pp adoption, managed price decline, employer coverage 60%→44%, AUD guidelines, the Barrett's signal, MariTide filed Sep 2028 with a decision in 2029 (within the approval rules) plus connected autoinjectors, counterfeit flood, normalisation, conditioned benefits, and unrecognised personality layer. mechanism: most chains are shown (503B exclusion to imports, adherence rules to lapse to gray market). Others are asserted: guideline endorsement a year after one small RCT (claim 3), the 65+ jump (claim 2), \"CBO has rescored upward\", 19 states adopting within months, and the 44% employer figure dated 2027-03 in the events but \"2028\" in the note. magnitude: the headline figures are inside the envelope (16.8% current, 23% ever) and the age, income, payer-mix (44M) and Medicare/Medicaid spending arithmetic all reconcile. Gaps are the pediatric figures (claim 1), the 65+ rise against 1.5M Medicare users, and ~44M US users at $199–299 or more implying US spend close to or above the ~$110B global market figure.",
+        "generativity": "The Denise Alvarado day is concrete: the pen that logs green and is worth $86 off her premium, Mr. Harlan insisting \"I'm not on anything\", half-wraps at lunch, the sister's Hindi-labelled box, and a husband who now says \"Well\" and goes to bed at nine. The world fields add Plano hosts planning around \"who's on\", dating-profile medication status, and the Detroit and Rio Grande Valley \"Canadian stuff\" economy. Characters and scenes are implied throughout and the prose shows rather than explains."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s1-L0-r12-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Global incretin market ~$110B (2028), with US volume up and US unit price down ~20–30%.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: the candidate's own payer mix (~14.9M cash-pay at $199–299, ~14M on diabetes/cardiac codes, ~2.7M public obesity at $245) implies US spend alone of roughly $100B+ a year. A global market of $110B therefore does not multiply out against 44M users."
+        },
+        {
+          "quote": "The 65+ rate rose from 9% to 15% through the Medicare Bridge and its successor model.",
+          "field": "world/population/note",
+          "why": "mechanism and magnitude: the same note puts Medicare obesity coverage at only ~1.5M beneficiaries, about 2.5 pp of ~60M adults 65+, against a stated 6 pp rise (~3.5M extra users). The attributed cause is too small and the rest of the rise is unexplained."
+        },
+        {
+          "quote": "Under-18: ~0.7% overall and ~2.5% of 12–17s; the affluent skew persists.",
+          "field": "world/population/note",
+          "why": "magnitude: 2.5% of ~25M 12–17s is ~620k, which exceeds 0.7% of ~73M under-18s (~510k), so the two figures conflict. Both are also a roughly 6× jump from the parent's ~0.6%-of-obese-children base, with no mechanism shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Coverage is now conditioned on verified adherence (≥80% PDC, ≥5% loss, connected pens) in the CMMI model, 19 Medicaid programmes and employer premium credits. That pressures autonomy and pushes lapsed, mostly poorer users to the gray market, where the counterfeit cluster (140 infections, 3 deaths) lands. The unmeasured 'reward blunting' across 44M users, now framed as 'calm', is a real epistemic harm, and the Barrett's signal scales with the continuous use payers enforce. It is a harder society with identifiable new losers, but no collapse.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. The adoption delta is exactly 5.8, employer coverage is 44%, AUD has guidelines plus an sNDA, MariTide is realised as a filing within the approval rules, the counterfeit shock is dated, and the personality layer is unrecognised. The AUD indication is thin, since it rests on guidelines and a filing rather than an approval. mechanism: Most chains are shown, including coverage conditioning pushing users to imports and the 5-year exposure window for Barrett's. Several changes are asserted: the 65+ rise, the '1 in 5 large-employer plans' figure, and a guideline endorsement off one n=108 RCT. The records also disagree: the DSC is dated Aug in the events and Sep in the ledger, MariTide phase 3 is 2027 in the note and 2028-03 in the events, and the BGH survey is 2027 in the events and 2028 in the note. magnitude: Adoption (16.8), ever-used (23), income thirds, the age-weighted check, the payer mix summing to 44M and the Medicare/Medicaid dollar math all sit inside the envelope and reconcile. The $110B global market is too low for the stated US users and prices, and the pediatric 12–17 figure exceeds the under-18 total (claims 1 and 3). The 65+ attribution is also under-explained (claim 2).",
+        "generativity": "The prose has a concrete, repeatable vignette: Denise's pen logging green, Mr. Harlan's unprompted 'I'm not on anything', the Hindi-labelled box, the husband's half beer and 'Well'. The world supplies clear stakes in adherence surveillance, import-or-lapse choices and the Barrett's reflux appointment. The cultural texture of Plano dinners and dating-profile drug status, and the unnamed flatness, give plenty of scenes. Some secondary characters like Rudy stay undeveloped."
+      },
+      "plausibility": 6.55
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Under-18: ~0.7% overall and ~2.5% of 12–17s; the affluent skew persists.",
+        "field": "world/population/note",
+        "why": "Magnitude: 12–17s are roughly a third of under-18s, so 2.5% of them alone is about 0.85% of all minors, which exceeds the stated 0.7% overall. The jump from the parent's ~0.6% of children with obesity in 2026 is also steep for two years."
+      },
+      {
+        "quote": "The 65+ rate rose from 9% to 15% through the Medicare Bridge and its successor model.",
+        "field": "world/population/note",
+        "why": "Mechanism: a 6-point rise across roughly 60M seniors is about 3.6M extra users. The world gives only ~1.5M Medicare obesity beneficiaries, and adherence conditioning should restrain uptake, so the chain does not carry the claimed change."
+      },
+      {
+        "quote": "FDA Drug Safety Communication (Sep 2028) advising clinicians to consider endoscopy for ≥5-year users with chronic reflux; EMA PRAC review opened; no label change yet.",
+        "field": "world/safety_ledger/Barrett's oesophagus and erosive oesophagitis after ≥5 years of continuous GLP-1 use (novel long-horizon signal)",
+        "why": "Mechanism: a formal FDA Drug Safety Communication and an EMA review arrive within about a month of a disputed observational finding with possible detection bias and a small absolute excess. Regulators are normally much slower."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.67,
+      "inequality": 6.67,
+      "public_health": 5.33,
+      "cohesion": 4.83,
+      "epistemic": 6.83,
+      "overall": 6.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.17,
+      "magnitude": 6.17
+    },
+    "plausibility": 6.67,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Autonomy takes the hardest hit: coverage is conditioned on ≥80% verified adherence (CMMI model, 19 Medicaid programmes, employer premium credits), and lapsers must requalify, which pushes the poorest toward counterfeit vials (140 infections, 3 deaths). Inequality has hardened into tiers, with the top income third at 22% against 11.5% in the bottom third. Epistemic harm is high because reward blunting is explicitly unrecognised and reframed as 'calm' while nobody measures it in 44M people. Flourishing and public health worsen only modestly (a small Barrett's excess, a contamination cluster), so this is a harder society with new losers rather than a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 16.8, price decline runs through the $199–299 step, employer coverage falls to 44%, AUD guidelines are in place, Barrett's is the long-horizon signal, the monthly driver is realised via the MariTide filing plus connected pens, the counterfeit flood has the CDC cluster, normalisation shows in the culture fields, conditioning is in the CMMI model, and personality is 'unrecognised'. Nothing contradicts a driver. mechanism: Most chains are shown, such as adherence rules pushing lapsers to the gray market and AUD guidance hitting spirits. The 65+ jump, the speed of the FDA Drug Safety Communication, and the quick rollout of connected pens for both drugs are thinly supported (claims 2 and 3). magnitude: On-drug 16.8, ever 23, the income thirds and the age band all reconcile, as do the payer mix summing to 44M and the Medicare and Medicaid dollar arithmetic. The pediatric figures conflict with each other (claim 1), the 48% restart rate sits just above the parent's range, and some dates disagree (MariTide phase 3 in 2027 vs 2028-03, TrumpRx step in Jan vs Mar 2027, the 44% figure dated both 2027 and 2028).",
+      "generativity": "Denise's day gives concrete texture: the pen's green light worth $86, the sister's photo of a box with Hindi on it, Mr. Harlan's 'my stomach can't', the half wrap, and a husband who now says 'Well' and goes to bed at nine. The world fields add Plano dating-app profiles, 'the Canadian stuff' in Detroit, half-size Thanksgiving plates, and stand-up bits about the friend who wants nothing anymore. Many scenes are implied, and the prose mostly shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.665,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 6
   }
 }

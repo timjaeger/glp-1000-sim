@@ -37,6 +37,41 @@
         "input_tokens": 13502,
         "output_tokens": 15472
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r41-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21276,
+        "output_tokens": 6738
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r41-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21276,
+        "output_tokens": 7598
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r41-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21276,
+        "output_tokens": 6629
+      }
     ]
   },
   "world": {
@@ -290,6 +325,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r41-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Phase 3 trial shows semaglutide added to standard therapy raises six-month smoking abstinence; Novo files for the indication",
+          "field": "world/events/5/event",
+          "why": "mechanism: nicotine use was only anecdotal and observational in 2026, yet a phase 3 with a six-month endpoint reads out and the sNDA is filed in the same month, which is implausibly fast with no phase 2 or trial-start chain shown."
+        },
+        {
+          "quote": "Trucking fleets steer drivers onto tirzepatide to clear DOT sleep-apnea requirements, and drivers who stop fail recertification.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "mechanism: DOT has no hard sleep-apnea standard and CPAP is the usual route to clearance, so a de facto tirzepatide requirement with recertification failures within two years is asserted without a chain."
+        },
+        {
+          "quote": "Medicare Bridge renewal requires a documented counselling visit.",
+          "field": "world/safety_ledger/3/regulatory_response",
+          "why": "mechanism: the Bridge was extended in Jan 2027 'on unchanged terms', before the Jul 2027 safety communication, so a counselling condition on renewal contradicts the world's own timeline and 'same criteria' claims."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The state and employers condition coverage on adherence and weigh-ins (Indiana/Arkansas waivers, ~40% PBM gating, BMI-linked surcharges), so people are pressured to stay on a drug whose label now warns about bone loss; autonomy is the worst dimension. Inequality widens (13.5% vs 6.5%), the fracture and sarcopenia findings add a real health ledger, and blunting is unmeasured while being rewarded at work. Falling use and normalisation keep this a harder society with new losers rather than a catastrophe, so it sits in the 6–7 band.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events: -1.1pp (9.9%), stalled prices, status-quo coverage, nicotine and longevity use, the muscle/bone wave, retatrutide, the Novo scandal, normalisation, Medicaid conditioning and employer-encouraged personality layer. Employer gating stretches 'status_quo' only slightly. mechanism: Several changes are asserted rather than shown. The nicotine phase 3 plus filing is too fast, the trucking/DOT claim has no chain, the counselling requirement contradicts the 'unchanged terms' extension, and 'Price explains most of the decline' is odd when prices merely stalled. The prose also has Darnell dropped for one missed refill, against a 'two misses' rule. magnitude: On-drug 9.9% and ever-used 16.5% are inside the envelope, the retatrutide, CagriSema, amycretin and survodutide timings obey the approval rules, and the payer mix, Medicare 5.2M users and $4.4B arithmetic reconcile. Small gaps remain: '~200M never used' versus about 221M implied, and age bands that weight to ~10.4% rather than 9.9%.",
+        "generativity": "The Rochelle scene is full of concrete texture: the adherence bar, the kiosk scale and photo, the Hyderabad pens, Mr. Okafor's remark about lifting, and Darnell's lapse. Implied scenes abound, including the HR dashboards, union bargaining, the DFW lunch spots, the strip-mall DEXA gyms and dating filters. It shows more than it explains, though the prose preamble does some explaining."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s1-L0-r41-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Among insured professionals over 40, being on the drug is the default.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Fails magnitude. 'Default' implies a majority, but the world's own figures put the top income third at 13.5% and ages 30–49 at 10% and 50–64 at 19%. A majority of insured professionals over 40 on the drug cannot sit alongside those figures."
+        },
+        {
+          "quote": "Price explains most of the decline.",
+          "field": "prose/article",
+          "why": "Fails mechanism. The stalled-price driver means prices stopped falling, which does not remove users. The world note lists four causes (price, fractures, adherence gating, imports) and does not rank price first, and employer coverage fell only 2 points."
+        },
+        {
+          "quote": "Trucking fleets steer drivers onto tirzepatide to clear DOT sleep-apnea requirements, and drivers who stop fail recertification.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Fails mechanism. It asserts a federal sleep-apnea screening regime and a recertification failure chain that the parent world does not support. The step from stopping the drug to failing recertification is not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 6.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Benefits conditioning in Indiana and Arkansas (80% proportion-of-days-covered, kiosk weigh-ins, 12-month loss of coverage) and adherence data reaching HR dashboards push people toward the exposure the bone label warns about. That is structural, normalised and hard to see from inside, which is why autonomy scores highest. Inequality widens (13.5% vs 6.5%, unmonitored imported pens for lower-income users) and the harm of reward blunting stays unmeasured. Nothing is melodramatic beyond the stipulated scandal, so overall stays at a recognisably harder society rather than a refuse-to-live-in one.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events and fields: adoption -1.1, stalled prices, status-quo coverage, nicotine and longevity use, the bone and muscle wave, retatrutide, the Novo scandal, conditioning, and employer encouragement. The Medicare counselling requirement is a minor tweak to status quo. mechanism: Several links are asserted or contradictory. 'Price explains most of the decline' conflicts with the four-cause note and with a price stall; the DOT recertification chain is unsupported; the 'default' claim has no basis. The 50–64 decline is blamed on fractures that are measured in 65+ users. magnitude: The figures sit inside the envelope and reconcile closely: 9.9% and 16.5%, 26.2M users, a payer mix summing to 100%, Medicare 5.2M against 8% of 61M, and $4.4B for 1.5M × $245 × 12. The retatrutide approval comes 13 months after filing, which the approval rules allow. Minor gaps remain: '~200M never used' against about 221M, and the 'default' overstatement.",
+        "generativity": "The Rochelle Banks day is concrete: the adherence app, the kiosk weigh-in with shoes off, the Hyderabad pens, Mr. Okafor's hip, and Darnell's lapsed coverage. The world also implies other characters, such as truckers, HR analysts, union reps, sex therapists, and longevity-clinic patients, and it carries local texture like the Dallas–Fort Worth lunch spots and the strip-mall bone-scan gyms. Little of it is left merely explained."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s1-L0-r41-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Trucking fleets steer drivers onto tirzepatide to clear DOT sleep-apnea requirements, and drivers who stop fail recertification.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "mechanism: DOT has no formal OSA treatment mandate that tirzepatide satisfies, and CPAP remains the standard route. The claim that stopping the drug makes a driver fail recertification is asserted, with no regulatory chain shown."
+        },
+        {
+          "quote": "Amycretin's NDA was filed Jun 2028, so no approval before mid-2029.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: amycretin entered phase 3 in May 2026, and an NDA 25 months later leaves no room for enrollment, a 70-80 week obesity trial and analysis. The filing is also not listed in `events`, which the envelope requires when no filing was stated at the start."
+        },
+        {
+          "quote": "He stopped last spring when the plan dropped him for missing a refill during his brother's funeral",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: the world and article say the waiver ends coverage only after two missed checks or refills, or adherence below 80%. A single missed refill triggering a 12-month cutoff contradicts that rule."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Benefits conditioning couples Medicaid and employer coverage to refill adherence and weigh-ins, and adherence tracks employment (interior_life/effect_on_work, state/conditioning_or_surveillance). Abrupt involuntary stops raise regain and cycling, which the bone data tie to harm. The top third (13.5%) versus bottom third (6.5%) widens the access gap, with bottom-third users buying unmonitored imported pens. Reward blunting in 10-15% of long-term users is rewarded as 'steadiness' and not measured as a harm, which weakens people's ability to name what is happening to them. This is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: 9.9% on-drug, stalled prices, the bone and muscle wave, retatrutide at 28-30%, the Novo scandal, Indiana/Arkansas conditioning, employer-encouraged steadiness, and nicotine and longevity use. Status-quo coverage is only lightly strained by the Bridge extension and the employer gating. mechanism: most chains are shown (price stall to decline, bone study to older users stopping, scandal to Senate action). Weak points are the DOT claim, the prose that contradicts the two-miss waiver rule (see claims 1 and 3), and the Medicare 'renewal requires a counselling visit' line, which clashes with 'unchanged terms' and with a Bridge extension dated before the July 2027 communication. magnitude: population figures sit inside the envelope (9.9 vs 7.9-11.9, ever-use 16.5 vs 15-16.9). Retatrutide is approved 13 months after filing, CagriSema's approval is allowed, and the payer mix sums to 100% and ties to 26.2M users. The Bridge arithmetic ($4.4B) and the pediatric figure (about 220k) also reconcile. Deductions: the age bands imply roughly 10.6%, not 9.9%; '~200M never used' is loose against about 221M; and the amycretin filing is too fast and missing from events (claim 2).",
+        "generativity": ""
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Phase 3 trial shows semaglutide added to standard therapy raises six-month smoking abstinence; Novo files for the indication",
+        "field": "world/events/5/event",
+        "why": "mechanism: nicotine use was only anecdotal and observational in 2026, yet a phase 3 with a six-month endpoint reads out and the sNDA is filed in the same month, which is implausibly fast with no phase 2 or trial-start chain shown."
+      },
+      {
+        "quote": "Trucking fleets steer drivers onto tirzepatide to clear DOT sleep-apnea requirements, and drivers who stop fail recertification.",
+        "field": "world/interior_life/effect_on_work",
+        "why": "mechanism: DOT has no hard sleep-apnea standard and CPAP is the usual route to clearance, so a de facto tirzepatide requirement with recertification failures within two years is asserted without a chain."
+      },
+      {
+        "quote": "Medicare Bridge renewal requires a documented counselling visit.",
+        "field": "world/safety_ledger/3/regulatory_response",
+        "why": "mechanism: the Bridge was extended in Jan 2027 'on unchanged terms', before the Jul 2027 safety communication, so a counselling condition on renewal contradicts the world's own timeline and 'same criteria' claims."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.67,
+      "inequality": 6.67,
+      "public_health": 6.33,
+      "cohesion": 5.67,
+      "epistemic": 6.5,
+      "overall": 6.77
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.17,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.37,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The state and employers condition coverage on adherence and weigh-ins (Indiana/Arkansas waivers, ~40% PBM gating, BMI-linked surcharges), so people are pressured to stay on a drug whose label now warns about bone loss; autonomy is the worst dimension. Inequality widens (13.5% vs 6.5%), the fracture and sarcopenia findings add a real health ledger, and blunting is unmeasured while being rewarded at work. Falling use and normalisation keep this a harder society with new losers rather than a catastrophe, so it sits in the 6–7 band.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events: -1.1pp (9.9%), stalled prices, status-quo coverage, nicotine and longevity use, the muscle/bone wave, retatrutide, the Novo scandal, normalisation, Medicaid conditioning and employer-encouraged personality layer. Employer gating stretches 'status_quo' only slightly. mechanism: Several changes are asserted rather than shown. The nicotine phase 3 plus filing is too fast, the trucking/DOT claim has no chain, the counselling requirement contradicts the 'unchanged terms' extension, and 'Price explains most of the decline' is odd when prices merely stalled. The prose also has Darnell dropped for one missed refill, against a 'two misses' rule. magnitude: On-drug 9.9% and ever-used 16.5% are inside the envelope, the retatrutide, CagriSema, amycretin and survodutide timings obey the approval rules, and the payer mix, Medicare 5.2M users and $4.4B arithmetic reconcile. Small gaps remain: '~200M never used' versus about 221M implied, and age bands that weight to ~10.4% rather than 9.9%.",
+      "generativity": "The Rochelle scene is full of concrete texture: the adherence bar, the kiosk scale and photo, the Hyderabad pens, Mr. Okafor's remark about lifting, and Darnell's lapse. Implied scenes abound, including the HR dashboards, union bargaining, the DFW lunch spots, the strip-mall DEXA gyms and dating filters. It shows more than it explains, though the prose preamble does some explaining."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 6.3963,
+    "survived": true,
+    "new_lineage": "L1",
+    "floor_used": 6,
+    "rank": 1
   }
 }

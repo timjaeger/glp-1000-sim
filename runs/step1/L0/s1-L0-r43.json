@@ -36,6 +36,41 @@
         "input_tokens": 13504,
         "output_tokens": 17224
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r43-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21598,
+        "output_tokens": 5539
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r43-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21598,
+        "output_tokens": 7154
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r43-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21598,
+        "output_tokens": 6608
+      }
     ]
   },
   "world": {
@@ -283,6 +318,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r43-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "CMS makes the Medicare GLP-1 Bridge a permanent Part D obesity benefit from January 2028 at $229/month with a $50 copay",
+          "field": "world/events/2/event",
+          "why": "mechanism: the Bridge was a time-limited pilot, and a permanent Part D obesity benefit would normally need legislation to lift the statutory exclusion. The candidate shows no such step, so a permanent benefit created by CMS alone is asserted rather than caused."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: the 2026 figure was ~0.6% of children with obesity, which is roughly 0.1% of all minors. 0.7% of all under-18s is about 500k children, a several-fold jump, while the candidate also says 8–11 prescribing is still specialist-only and two states have restricted prescribing to minors."
+        },
+        {
+          "quote": "The 'apathy/decreased interest' line was added to the postmarketing section of retatrutide's and Foundayo's labels (2028).",
+          "field": "world/safety_ledger/6/regulatory_response",
+          "why": "driver_fidelity: the safety_signal driver is 'none'. Moving reward blunting from 'emerging' to 'established', with a prevalence figure and label changes within two years, reads as a new regulatory safety signal. The candidate also gives no source for the registry data behind it."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder but recognisable society. Coverage is widened by Medicare and Medicaid but split along the 20 non-opt-in states, and the gray market feeds wrong-concentration 'research peptide' retatrutide (~3,400 adverse-event reports). Military and police 'readiness' programmes attach a pharmacotherapy option to body-fat failures, which creates soft coercion. The backlash coalition and state laws on minors add cohesion strain, while reward blunting is named and measured at 1–3%, which limits epistemic harm. Nothing is catastrophic, so the overall score is moderate.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and dated events (adoption +5, managed decline, public expansion, longevity users, oral parity via an existing product, gray-market regrowth, Nashville backlash, DoD Metabolic Readiness). The one soft spot is the 'none' safety_signal, which sits uneasily with the new apathy label lines (claim 3). mechanism: Most chains are shown, including the 503B exclusion leading to personal importation, the head-to-head trial leading to step-through-oral rules, and employer retreat toward cash prices. A CMS-only permanent Part D benefit is asserted without a legal path (claim 1), and a 0.7% pediatric rate has no shown driver (claim 2). magnitude: Current use 16%, ever use 22%, income thirds, age bands (weighted ≈16.1), the cycled share (7/22 ≈ 32%), and the payer mix (42M, 38/32/23/7%) are all inside the envelope and reconcile. The Medicare $12.6B gross, $2.8B copay, Medicaid $8.8B/$6.0B federal figures and a CBO score near $96B are also consistent. Approval timing is legal (CagriSema in Dec 2026, retatrutide 14 months after its filing, survodutide only filed). The pediatric figure (claim 2) is the one outlier.",
+        "generativity": "The prose follows one woman through a day in Chattanooga and implies many scenes: Carol's ENOUGH cards at church, the sheriff's son on the shot, a granddaughter stalled by the counselling law, and a kettlebell next door. Details such as sour straws, the $50 written in blue pen, and the dose lowered before anniversaries give daily life texture. The world JSON supplies many more hooks, including the Nashville rally, military dashboards, telehealth importers, and the non-opt-in state map."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r43-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "CMS makes the Medicare GLP-1 Bridge a permanent Part D obesity benefit from January 2028 at $229/month with a $50 copay; 30 states and DC join a Medicaid opt-in at the same price; CBO scores ~$96B over ten years",
+          "field": "world/events/2/event",
+          "why": "mechanism: Part D is statutorily barred from covering weight-loss drugs, and the candidate shows no legislative step. Converting a temporary pilot to a permanent benefit by CMS action, and a 30-state Medicaid opt-in at one price, is asserted rather than caused."
+        },
+        {
+          "quote": "The 'apathy/decreased interest' line was added to the postmarketing section of retatrutide's and Foundayo's labels (2028).",
+          "field": "world/safety_ledger/6/regulatory_response",
+          "why": "driver_fidelity and mechanism: the driver is safety_signal 'none', yet reward blunting moves from 'emerging' to 'established' with a quantified 1–3% rate and new label language within two years. No study or surveillance chain is shown that would produce this, and it reads as a safety signal."
+        },
+        {
+          "quote": "Tennessee and Oklahoma passed laws in 2028 requiring six months of documented lifestyle counselling before prescribing to minors.",
+          "field": "world/body_and_culture/meaning_of_appetite",
+          "why": "mechanism: the laws are enacted within weeks of a single May rally, after Tennessee's regular session has normally adjourned. The backlash-to-statute path is asserted, and the pediatric rate (0.7%) is still said to be driven mostly by Medicaid and commercial adolescent prescribing."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Net health effects are mixed: wider access and an aging-muscle concern, but no new harms beyond a quantified 1–3% apathy rate. The worse features are structural: the 20 non-opt-in Southern states, the gray-market retatrutide with dosing errors (~3,400 adverse-event reports), and military and police programs where body-fat failure comes with a drug option attached (`conditioning_or_surveillance`). The backlash coalition and the 'on/off/never' cultural sorting add some cohesion cost. The overall is a recognisably harder society with new losers (geography, military conditioning), not a dystopia.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (+5pp adoption, managed price decline, public expansion, longevity use at ~4M, gray market via the 503B exclusion, backlash, DoD initiative, oral parity via a head-to-head label update). The one tension is safety_signal 'none' against the new apathy label and the 'established' status upgrade (claim 2). mechanism: most chains are shown, such as the 503B exclusion to telehealth importation, the oral label to step-through-oral rules, and the Medicaid map to uptake. The permanent Medicare benefit (claim 1) and the fast state laws (claim 3) are asserted rather than caused. magnitude: current 16 and ever 22 sit inside the envelope, income thirds bracket the national rate, the age bands weight to ~16.1, and the CagriSema and retatrutide approval timing obeys the rules. The payer mix sums to 42M, Medicare 4.6M × $229 × 12 ≈ $12.6B gross and $9.9B net, Medicaid ≈ $8.8B, and the 7/22 cycled share reconciles. The only soft spot is the ~$96B CBO figure, which implies near-flat enrolment.",
+        "generativity": "The prose follows Linda through a day in Chattanooga, with concrete props: the $50.00 pharmacy bag, the ENOUGH cards, Carol's pound cake, the sour straws, and the kettlebell count. It implies several other characters (Derek, Kaylee, Carol) and distinct scenes of church, a cruiser, and a porch, and the world fields add Nashville rallies, readiness dashboards, and dating-profile 'on/off/never'. It mostly shows rather than explains, with a quiet final beat on nicotine."
+      },
+      "plausibility": 7.95
+    },
+    {
+      "custom_id": "s1-L0-r43-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude/mechanism: 0.7% of all under-18s is roughly 500k children. The 2026 baseline was ~0.6% of children with obesity, so this implies a jump of about two orders of magnitude in two years, while the same world has Tennessee and Oklahoma restricting minors and pediatric use described as 'mostly adolescents 12–17'."
+        },
+        {
+          "quote": "CMS makes the Medicare GLP-1 Bridge a permanent Part D obesity benefit from January 2028 at $229/month with a $50 copay;",
+          "field": "world/events/2/event",
+          "why": "mechanism: Part D has a statutory exclusion on weight-loss drugs, so an administrative conversion of a demonstration into a permanent benefit, scored by CBO within weeks, is asserted without a legislative or legal path. The pilot was meant to run to Dec 2027."
+        },
+        {
+          "quote": "The 'apathy/decreased interest' line was added to the postmarketing section of retatrutide's and Foundayo's labels (2028).",
+          "field": "world/safety_ledger/6/regulatory_response",
+          "why": "driver_fidelity/mechanism: the driver is safety_signal 'none' and the 2026 manufacturer said it had no data. Here post-marketing surveys produce a clean 1–3% figure, the status is upgraded from emerging to established, and regulators add label language, all with no study shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 4.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. Inequality moves to geography (20 non-opt-in Southern states) and to gray-market users buying wrong-concentration retatrutide. Autonomy is strained by military body-fat conditioning, step-through-oral rules and unit dashboards, though enrolment is nominally voluntary. Cohesion is hit by the backlash coalition, mismatched couples and tense potlucks. Flourishing and epistemic scores stay moderate because the apathy rate is quantified and labelled and there is no new serious safety signal.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events: 16% adoption, managed-decline pricing, the public Medicare/Medicaid expansion, 4M longevity users, oral parity via a label update, a gray-market resurgence after the 503B exclusion, the Nashville backlash, and the DoD programme. The apathy labelling and quantification (claim 3) sit uneasily with 'safety_signal: none'. mechanism: most chains are shown, such as the 503B exclusion leading to personal-importation telehealth and the oral trial leading to plan step-through rules. The weak points are the statutory leap to a permanent Part D obesity benefit (claim 2), the 14-month retatrutide review attributed to a priority voucher, and the pediatric jump (claim 1). magnitude: population figures are inside the envelope (16/22; income and age bands bracket and weight to 16.1). The payer mix sums to 42M, Medicare and Medicaid spend multiply out, the 41k enrolled is 3% of 1.3M, and the cycling arithmetic closes at 32%. Approval timings obey the rules. Deductions: the pediatric 0.7% is far out of line with the baseline, and the CBO $96B figure is only loosely reconciled with a 'rising' $9.9B/yr less offsets.",
+        "generativity": "The world implies many characters and scenes: the Chattanooga widow on a Medicare pill, the church friend handing out ENOUGH cards, the deputy son on the county plan, the 14-year-old waiting out the counselling rule, and the Fort Cavazos soldier lifting in the garage. The day-in-the-life shows rather than explains, with concrete details such as the $50 on the pharmacy bag, the sour straws and the cake slab. Some cultural moves (dating-profile 'on/off/never', lowering the dose before anniversaries) add texture, and the sections interlock, though a few prose beats lean on the world JSON's themes."
+      },
+      "plausibility": 7.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "CMS makes the Medicare GLP-1 Bridge a permanent Part D obesity benefit from January 2028 at $229/month with a $50 copay",
+        "field": "world/events/2/event",
+        "why": "mechanism: the Bridge was a time-limited pilot, and a permanent Part D obesity benefit would normally need legislation to lift the statutory exclusion. The candidate shows no such step, so a permanent benefit created by CMS alone is asserted rather than caused."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "magnitude: the 2026 figure was ~0.6% of children with obesity, which is roughly 0.1% of all minors. 0.7% of all under-18s is about 500k children, a several-fold jump, while the candidate also says 8–11 prescribing is still specialist-only and two states have restricted prescribing to minors."
+      },
+      {
+        "quote": "The 'apathy/decreased interest' line was added to the postmarketing section of retatrutide's and Foundayo's labels (2028).",
+        "field": "world/safety_ledger/6/regulatory_response",
+        "why": "driver_fidelity: the safety_signal driver is 'none'. Moving reward blunting from 'emerging' to 'established', with a prevalence figure and label changes within two years, reads as a new regulatory safety signal. The candidate also gives no source for the registry data behind it."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 5.0,
+      "inequality": 5.5,
+      "public_health": 4.0,
+      "cohesion": 5.0,
+      "epistemic": 4.0,
+      "overall": 4.87
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.33,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.5,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "This is a harder but recognisable society. Coverage is widened by Medicare and Medicaid but split along the 20 non-opt-in states, and the gray market feeds wrong-concentration 'research peptide' retatrutide (~3,400 adverse-event reports). Military and police 'readiness' programmes attach a pharmacotherapy option to body-fat failures, which creates soft coercion. The backlash coalition and state laws on minors add cohesion strain, while reward blunting is named and measured at 1–3%, which limits epistemic harm. Nothing is catastrophic, so the overall score is moderate.",
+      "plausibility": "driver_fidelity: All ten drivers are visible in fields and dated events (adoption +5, managed decline, public expansion, longevity users, oral parity via an existing product, gray-market regrowth, Nashville backlash, DoD Metabolic Readiness). The one soft spot is the 'none' safety_signal, which sits uneasily with the new apathy label lines (claim 3). mechanism: Most chains are shown, including the 503B exclusion leading to personal importation, the head-to-head trial leading to step-through-oral rules, and employer retreat toward cash prices. A CMS-only permanent Part D benefit is asserted without a legal path (claim 1), and a 0.7% pediatric rate has no shown driver (claim 2). magnitude: Current use 16%, ever use 22%, income thirds, age bands (weighted ≈16.1), the cycled share (7/22 ≈ 32%), and the payer mix (42M, 38/32/23/7%) are all inside the envelope and reconcile. The Medicare $12.6B gross, $2.8B copay, Medicaid $8.8B/$6.0B federal figures and a CBO score near $96B are also consistent. Approval timing is legal (CagriSema in Dec 2026, retatrutide 14 months after its filing, survodutide only filed). The pediatric figure (claim 2) is the one outlier.",
+      "generativity": "The prose follows one woman through a day in Chattanooga and implies many scenes: Carol's ENOUGH cards at church, the sheriff's son on the shot, a granddaughter stalled by the counselling law, and a kettlebell next door. Details such as sour straws, the $50 written in blue pen, and the dose lowered before anniversaries give daily life texture. The world JSON supplies many more hooks, including the Nashville rally, military dashboards, telehealth importers, and the non-opt-in state map."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.4375,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 44
   }
 }

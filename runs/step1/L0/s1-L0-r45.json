@@ -34,6 +34,41 @@
         "input_tokens": 13439,
         "output_tokens": 19247
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r45-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21056,
+        "output_tokens": 5377
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r45-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21056,
+        "output_tokens": 5657
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r45-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21056,
+        "output_tokens": 5658
+      }
     ]
   },
   "world": {
@@ -285,6 +320,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r45-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "nearly everyone over 50 is on it",
+          "field": "prose/headline",
+          "why": "Mechanism: the headline contradicts the world state, where 50–64 is 23% and 65+ is 13%. Most people over 50 are not on the drug, so this is a narrative contradiction."
+        },
+        {
+          "quote": "Observational Medicare data (May 2028) associate ≥15% weight loss in users 65+ with ~1.3× hip-fracture hazard.",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "Mechanism: a fracture-hazard cohort built from Medicare data within about 22 months of the Jul 2026 pilot, then turned into FDA class labelling by Aug 2028, is a very compressed evidence-to-regulation chain. The candidate asserts the speed rather than showing it."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude and mechanism: 0.5% of all minors (~365k) is roughly a 4× jump from the 2026 figure of ~0.6% of children with obesity. The candidate attributes it to generic semaglutide, which launched only in Mar 2028, so the chain is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap, widely covered access is a real gain, but the world adds new losers. Older users face bone and lean-mass loss with a ~1.3× hip-fracture hazard. Medicaid work-requirement churn and annual reauthorisation cycle the bottom third on and off, which may cause recomposition harm. Adolescents are starting on the drug with no bone-accrual data. The harms are named, measured and labelled, so epistemic badness is low, and it is a harder 2026 rather than a society to refuse.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events: a settlement-led generic collapse, the permanent Medicare/Medicaid act with a subsidy, the bone and muscle wave, the 50 mg oral realised as an existing product in a new form, and a niche reward-blunting layer. The ~2.5 pp adoption rise matches. mechanism: The settlement chain for generics and the oral-versus-needle price inversion are well shown. The bone-fracture evidence-to-label timeline is compressed and asserted (claim 2). The headline 'nearly everyone over 50' contradicts the world state (claim 1). The pediatric rise is thinly explained (claim 3). magnitude: Current 13.5% and ever 19.5% sit inside the envelope. The age-band weighting gives 13.47, the income thirds bracket the national figure, and the payer mix sums to 35.8M. The Medicare, Medicaid and HRSA spending sums to the stated ~$22.9B, and the cycling arithmetic closes. CagriSema approval, the retatrutide filing without approval, and the generic with its settlement event all fit the approval rules. The only slack is the pediatric jump.",
+        "generativity": "The Dolores Ruiz day is vivid and specific: the pen in the butter compartment, the DXA scan on Speedway, the osteopenia call, the Udall Center strength class, and Marco's lapsed Medicaid paperwork. The Villages waiting lists, the dating profiles reading 'on maintenance' and the bourbon barrels give plenty of further scenes. It shows more than it explains."
+      },
+      "plausibility": 8.15
+    },
+    {
+      "custom_id": "s1-L0-r45-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "nearly everyone over 50 is on it",
+          "field": "prose/headline",
+          "why": "Fails mechanism. The world's own figures put 23% of ages 50–64 and 13% of 65+ on the drug, so the headline contradicts the state it describes."
+        },
+        {
+          "quote": "After Medicare-linked cohorts tie heavy weight loss in users 65+ to bone loss and higher hip-fracture risk, FDA adds class bone-density and lean-mass labelling and recommends DXA scans for older users",
+          "field": "world/events/4/event",
+          "why": "Fails mechanism. The ledger dates the cohort data to May 2028 and says fracture causality is confounded by frailty, yet class labelling, DXA recommendations and a CMS counselling mandate all land by August 2028."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Fails magnitude and mechanism. About 365k users, nearly all 12–17, is roughly 1.5% of all adolescents, and the 2026 base was only ~0.6% of children with obesity. The chain from that base to this level is asserted and the jump is very large."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 3.5,
+        "epistemic": 3,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder version of 2026 with new losers. Older users (65+) face an established bone and lean-mass signal, and Medicaid work-requirement churn cycles the bottom third on and off the drug. Adolescents start on cheap generics with no peak-bone-mass data, and a two-tier efficacy gap opens (generic semaglutide versus tirzepatide). Harms are measured, labelled and discussable, and access is broad, so it stays mid-range; the epistemic and cohesion scores are low for that reason.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +2.5pp; generic_collapse runs through the June 2027 settlement event and the March 2028 launch. Public expansion and subsidy come via the December 2027 Act. The muscle-bone wave, oral parity via the 50 mg pill, normalisation and the niche personality layer are all present, new_indications stays empty, and AUD stays off-label. mechanism: Most changes have chains (settlement to generic price, then payer mix; Medicare coverage to cohort data; churn to cycling). The headline claim that nearly everyone over 50 is on the drug contradicts the 23% and 13% age figures, and the May-to-August 2028 jump from confounded observational data to class labelling and a CMS mandate is too fast. The adolescent surge is asserted rather than shown. magnitude: Current use (13.5), ever use (19.5), the income gradient and the age-band check all sit inside the envelope and reconcile. The ever/current/off arithmetic works, the payer mix sums to 35.8M, and the $22.9B public run-rate multiplies out. Approvals (CagriSema, the 50 mg pill, retatrutide not approved) and generic timing follow the envelope rules. The pediatric figure is the one stretched number.",
+        "generativity": ""
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s1-L0-r45-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The government pays, nearly everyone over 50 is on it",
+          "field": "prose/headline",
+          "why": "mechanism: the headline contradicts the world state, where the 50–64 band is 23% on-drug and 65+ is 13%. Most people over 50 are not on the drug, so the prose and the data disagree."
+        },
+        {
+          "quote": "FDA label update (Sep 2028) lists 'apathy / reduced interest or pleasure' as an uncommon adverse reaction",
+          "field": "world/events/5/event",
+          "why": "mechanism: in 2026 reward blunting was unquantified and the manufacturer had 'no data to share'. The candidate reclassifies it as 'established' and gets a label change within about 30 months, with no trial or surveillance step that would produce the 3–5% and 1% figures."
+        },
+        {
+          "quote": "Observational Medicare data (May 2028) associate ≥15% weight loss in users 65+ with ~1.3× hip-fracture hazard.",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "mechanism: a fracture-outcome analysis of Medicare claims is available by May 2028, only about 22 months after the Jul 2026 Bridge pilot began. The FDA then issues class labelling by Aug 2028, which is a very compressed chain for an outcome the candidate itself says is confounded."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 4.0,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 3.5,
+        "epistemic": 3.0,
+        "overall": 4.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 9.0
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Access is wide and cheap, with a $0 or $59 generic and 40% public payer share. The harms are real but measured and labelled: bone and muscle loss in older users (25–40% of weight lost as lean mass, ~1.3× hip-fracture hazard), and Medicaid work-requirement churn that cycles the bottom third on and off the drug. Epistemic harm is low because the FDA labels, DXA is covered and an NIH cycling cohort exists. The result is a harder version of 2026 with new losers (older women, cyclers, adolescents with unknown bone accrual), not a structural catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. The generic collapse comes through the Jun 2027 settlement, public expansion and subsidy through the Dec 2027 Act, muscle_bone_wave through the Aug 2028 labelling, and oral_parity through the 50 mg Wegovy pill (an existing product in a new form). Retatrutide stays unapproved, AUD stays off-label, and personality stays a niche side effect. mechanism: the settlement-to-generic chain is shown and the oral 50 mg path is credible. The headline 'nearly everyone over 50 is on it' contradicts the 23% and 13% band figures, and the reward-blunting and hip-fracture-to-label timelines (see the claims above) are fast. magnitude: on-drug 13.5% and ever-used 19.5% are inside the envelope, and the CagriSema, retatrutide and generic-timing rules are respected. The cycled arithmetic (5.8/19.5 ≈ 30%) and age weights (≈13.47) reconcile. The payer mix sums to 35.8M with public at 40%, and the ≈$22.9B public run-rate multiplies out.",
+        "generativity": "Dolores Ruiz's day is concrete and filmable: the pen in the butter compartment, the DXA scan on Speedway, the osteopenia call, the strength class at the Udall Center and Marco's lapsed coverage at dinner. The world fields add texture: The Villages waiting lists, 'on maintenance' dating profiles and bourbon houses holding barrels. A few elements read as explained rather than shown."
+      },
+      "plausibility": 8.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "nearly everyone over 50 is on it",
+        "field": "prose/headline",
+        "why": "Mechanism: the headline contradicts the world state, where 50–64 is 23% and 65+ is 13%. Most people over 50 are not on the drug, so this is a narrative contradiction."
+      },
+      {
+        "quote": "Observational Medicare data (May 2028) associate ≥15% weight loss in users 65+ with ~1.3× hip-fracture hazard.",
+        "field": "world/safety_ledger/3/prevalence_note",
+        "why": "Mechanism: a fracture-hazard cohort built from Medicare data within about 22 months of the Jul 2026 pilot, then turned into FDA class labelling by Aug 2028, is a very compressed evidence-to-regulation chain. The candidate asserts the speed rather than showing it."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude and mechanism: 0.5% of all minors (~365k) is roughly a 4× jump from the 2026 figure of ~0.6% of children with obesity. The candidate attributes it to generic semaglutide, which launched only in Mar 2028, so the chain is thin."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.0,
+      "inequality": 4.67,
+      "public_health": 4.67,
+      "cohesion": 3.67,
+      "epistemic": 3.0,
+      "overall": 4.23
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 8.5
+    },
+    "plausibility": 8.05,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Cheap, widely covered access is a real gain, but the world adds new losers. Older users face bone and lean-mass loss with a ~1.3× hip-fracture hazard. Medicaid work-requirement churn and annual reauthorisation cycle the bottom third on and off, which may cause recomposition harm. Adolescents are starting on the drug with no bone-accrual data. The harms are named, measured and labelled, so epistemic badness is low, and it is a harder 2026 rather than a society to refuse.",
+      "plausibility": "driver_fidelity: Every driver is traceable to fields and events: a settlement-led generic collapse, the permanent Medicare/Medicaid act with a subsidy, the bone and muscle wave, the 50 mg oral realised as an existing product in a new form, and a niche reward-blunting layer. The ~2.5 pp adoption rise matches. mechanism: The settlement chain for generics and the oral-versus-needle price inversion are well shown. The bone-fracture evidence-to-label timeline is compressed and asserted (claim 2). The headline 'nearly everyone over 50' contradicts the world state (claim 1). The pediatric rise is thinly explained (claim 3). magnitude: Current 13.5% and ever 19.5% sit inside the envelope. The age-band weighting gives 13.47, the income thirds bracket the national figure, and the payer mix sums to 35.8M. The Medicare, Medicaid and HRSA spending sums to the stated ~$22.9B, and the cycling arithmetic closes. CagriSema approval, the retatrutide filing without approval, and the generic with its settlement event all fit the approval rules. The only slack is the pediatric jump.",
+      "generativity": "The Dolores Ruiz day is vivid and specific: the pen in the butter compartment, the DXA scan on Speedway, the osteopenia call, the Udall Center strength class, and Marco's lapsed Medicaid paperwork. The Villages waiting lists, the dating profiles reading 'on maintenance' and the bourbon barrels give plenty of further scenes. It shows more than it explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.085,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 48
   }
 }

@@ -36,6 +36,41 @@
         "input_tokens": 13475,
         "output_tokens": 17154
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r01-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21318,
+        "output_tokens": 6766
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r01-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21318,
+        "output_tokens": 7806
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r01-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21318,
+        "output_tokens": 6904
+      }
     ]
   },
   "world": {
@@ -290,6 +325,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r01-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Retatrutide's BLA was filed in Mar 2027 and approved in Apr 2028 under a priority voucher.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a priority voucher implies a review of weeks to a couple of months (Foundayo took 50 days), yet this approval took 13 months. The voucher looks bolted on to justify the approval, and the timeline contradicts its own stated mechanism."
+        },
+        {
+          "quote": "The FDA-required Foundayo postmarketing study used the validated SHAPS anhedonia scale.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism: Foundayo was approved Apr 2026, and a postmarketing study pooled with Sentinel data is said to have reported and driven a class-wide label change by Sep 2027. That is about 17 months for a new endpoint, and the start-to-label chain is asserted rather than shown."
+        },
+        {
+          "quote": "FDA sNDA for semaglutide filed Jun 2028, under review",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "mechanism: the parent has only one n=108 RCT and a phase 2 oral study for AUD, and the candidate shows no phase 3 trial or readout. A filing within two years, preceded by an ASAM guideline and VA formulary listing, skips the evidence chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 4,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 5.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a modestly harder society with new losers. About 0.75M excess adults have drug-attributable reward blunting. A third of ever-users cycle with no outcome data, and the bottom income third uses the drug least (7.5%) while the thin body becomes a class marker. Public health is mixed: the 503B exclusion cut compounded harms, and the AUD indication is a real benefit. Epistemic badness is low because the blunting is labelled, measured and discussable, though the regulatory gap over selling it as 'calm' is noted. Cohesion costs ('dose conflicts' in couples, 'unmedicated' as an insult) are real but contained.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +0.5pp, prices decline in managed steps, coverage is unchanged, AUD and the anhedonia label are in the events, oral parity comes as the allowed 50 mg new form, Halcyon sells the marketed feature, and the culture inverts. The one wrinkle is the Bridge extension and 503B finalisation, which sit loosely against state_action none; both are status quo or already in motion. mechanism: the world loses points for the three claims listed above (voucher versus 13-month review, a fast anhedonia study and class label, an AUD filing without phase 3 evidence), and for the ASAM guideline resting on thin evidence. Some causal chains are well shown, such as flat adoption from churn, orals and the employer retreat, but many attributions are asserted. magnitude: on-drug 11.5 and ever-used 18 sit inside the envelope, and the income and age splits bracket and average correctly. The approvals obey the timing rules: CagriSema was under review, retatrutide came 13 months after filing, survodutide is still pending, and amycretin is unfiled. The payer mix sums to 30M, Medicare $4.7B matches the CBO pace, Halcyon is about 5% of cash payers, and the cycling arithmetic closes. The only blemishes are the ambiguous 6.8M Medicare figure used both as newly eligible and as total users, and ever-used sitting near the top of its band.",
+        "generativity": ""
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s1-L0-r01-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The VA adds it to formulary for AUD, and Novo files a supplemental FDA application in June 2028.",
+          "field": "world/events/0/event",
+          "why": "mechanism: the event is dated 2027-06 but contains a June 2028 filing. Novo also files an AUD sNDA with no phase 3 programme shown, only the n=108 Lancet RCT and a phase 2 oral study from the parent world."
+        },
+        {
+          "quote": "The FDA-required Foundayo postmarketing study used the validated SHAPS anhedonia scale. Pooled with Sentinel claims data, it found clinically meaningful reward blunting in about 4% of patients on maintenance doses vs about 1.5% on placebo.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism: Foundayo was approved Apr 2026, and a placebo-controlled postmarketing study is reported and turned into a class label by Sep 2027, which is very fast. Claims data cannot measure SHAPS scores, so 'pooling' them is incoherent."
+        },
+        {
+          "quote": "Novo's oral semaglutide 50 mg was filed as an sNDA in Jan 2027 and approved in Oct 2027 after a 68-week head-to-head trial.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a 68-week head-to-head trial finished before a Jan 2027 filing must have started by about Aug 2025. That is before oral Wegovy was approved, and the parent world mentions no such trial. The parity timeline is asserted rather than derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 4,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a modestly harder version of 2026. About 4% clinically meaningful blunting is now labelled, and 'dose conflicts' show up in couples therapy. Thinness is cheap while the bottom income third sits at 7.5% use, children's use skews affluent, and employer coverage keeps eroding. Harm is named and measured (label, SHAPS), which keeps epistemic and public-health scores low. The marketing of subclinical blunting as 'calm' (Halcyon, 400k subscribers) and the rebound-drinking case series add real but bounded harm. Nothing is melodramatic.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +0.5pp, prices follow managed decline, and the anhedonia label, oral parity (existing product in a new form), AUD indication (guideline plus filing), aesthetic inversion and marketed-feature layer all appear in fields and events. The Bridge extension and the 503B finalisation sit slightly awkwardly against state_action none and coverage status_quo, but they are continuations. mechanism: Most chains are shown (price steps, employer retreat, ASAM to AUD prescribing, label to telehealth framing). The weak links are the three listed claims: the AUD sNDA with no pivotal trial and a mis-dated event, the implausibly fast SHAPS postmarketing study pooled with claims data, and the 68-week trial timeline. The 2 billion TikTok views and the 'exposed influencers' line are also merely asserted. magnitude: On-drug 11.5, ever-used 18 (near the 18.5 edge) and the income and age bands are inside the envelope and average correctly. The payer mix sums to 30M. Medicare and Medicaid spend ($4.7B, $2.6B) multiplies out, retatrutide approval comes 13 months after filing, and no US generic appears. Small gaps remain: the pediatric 0.4% of under-18s against 4% of adolescents with obesity, the 65+ rise of 1.5pp against 1.6M Bridge users, and Medicare 'users' coincidentally equal to the newly eligible 6.8M.",
+        "generativity": "The world has strong implied scenes: 'feast' supper clubs, the Equinox 'Unmedicated Strength' class, Halcyon's 'Quiet' plan, dose negotiations around anniversaries, and the label folded in a wallet. The Marcus Bell bar scene shows rather than explains. The unnoticed radio, the 'pizza Sunday?' text and the 'drug or being fifty-four' line carry the theme through texture, and the minor characters (Gary, Keisha) feel real."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r01-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Pooled with Sentinel claims data, it found clinically meaningful reward blunting in about 4% of patients on maintenance doses vs about 1.5% on placebo.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: a postmarketing study of a drug approved in Apr 2026 is said to have enrolled, measured with SHAPS, pooled with claims data and driven a class-wide label by Sep 2027. That is very fast, and a single-drug study is asserted to generalise to every incretin. The 1.5% placebo arm and the doubling of risk with prior depression are stated with no shown chain."
+        },
+        {
+          "quote": "Novo's oral semaglutide 50 mg was filed as an sNDA in Jan 2027 and approved in Oct 2027 after a 68-week head-to-head trial.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: a 68-week head-to-head trial must have started by about mid-2025 and read out by late 2026, yet the parent world mentions no such trial. The approval timing is allowed by the envelope, but the trial history is asserted, not derived from the parent."
+        },
+        {
+          "quote": "This is concentrated at ages 12–17, where roughly 4% of adolescents with obesity are on a drug.",
+          "field": "world/population/note",
+          "why": "Magnitude: the parent had only about 0.6% of children with obesity on a drug, and overall adult adoption is flat here. A roughly sixfold jump in adolescent use in two years has no mechanism, and the 0.4% of all under-18s figure is barely reconciled with it."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 4,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder but adapted society. About 4% of users have labelled blunting, and 'dose conflicts' show up in couples therapy. The bottom income third uses the drug least (7.5%) while the affluent young perform 'unmedicated' as status, and adolescent use skews to households that can pay. The anhedonia harm is measured, labelled and discussable, which keeps the epistemic score low, and nothing here is catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and tied to a dated event or field: AUD indication, anhedonia label, oral parity via the 50 mg sNDA, managed price decline, aesthetic inversion, marketed-feature personality layer and the +0.5pp adoption move. The VA formulary addition and the CMS Bridge extension sit slightly awkwardly against `state_action: none`, and the Foundayo-based class label is thinly tied to its driver. mechanism: most chains are shown, such as employer retreat lowering 50–64 use and the Medicare Bridge raising 65+ use. Several are asserted, namely the fast SHAPS postmarketing study behind a class-wide label (claim 1), the 68-week oral trial with no parent basis (claim 2) and the unexplained adolescent uptake (claim 3). Spirits volume down 3–4% and orals at 60% of new starts are also asserted. magnitude: every population figure is inside the envelope (11.5, 18, income thirds averaging 11.5, age weights summing to 11.5), and the approvals respect the rules (retatrutide filed Mar 2027, approved Apr 2028; no US generic). The reconciliations hold: 1.6M × $245 × 12 ≈ $4.7B, Medicare's 6.8M eligible is about 10% of enrollees, payer mix sums to 30M, Halcyon is about 5% of cash payers, and the 30% cycling arithmetic works. Minor gaps remain: 6.8M is reused for both Medicare users and the newly eligible, the adolescent share (claim 3) is aggressive, and the cash-price high of $299 ignores the surviving list price.",
+        "generativity": "The world is rich in implied scenes: Brooklyn feast supper clubs, the Equinox 'Unmedicated Strength' class, Halcyon's 'Quiet' subscribers, dose negotiations around anniversaries, and exposed 'unmedicated' influencers on low doses. The Marcus Bell vignette shows rather than explains: the folded insert, the radio he doesn't notice is off, and the 'drug or being fifty-four' ambiguity. Keisha's text adds a second character who anchors the cultural inversion. The prose is good, though the opening is mostly summary."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Retatrutide's BLA was filed in Mar 2027 and approved in Apr 2028 under a priority voucher.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: a priority voucher implies a review of weeks to a couple of months (Foundayo took 50 days), yet this approval took 13 months. The voucher looks bolted on to justify the approval, and the timeline contradicts its own stated mechanism."
+      },
+      {
+        "quote": "The FDA-required Foundayo postmarketing study used the validated SHAPS anhedonia scale.",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "mechanism: Foundayo was approved Apr 2026, and a postmarketing study pooled with Sentinel data is said to have reported and driven a class-wide label change by Sep 2027. That is about 17 months for a new endpoint, and the start-to-label chain is asserted rather than shown."
+      },
+      {
+        "quote": "FDA sNDA for semaglutide filed Jun 2028, under review",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "mechanism: the parent has only one n=108 RCT and a phase 2 oral study for AUD, and the candidate shows no phase 3 trial or readout. A filing within two years, preceded by an ASAM guideline and VA formulary listing, skips the evidence chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.0,
+      "inequality": 4.83,
+      "public_health": 4.0,
+      "cohesion": 4.5,
+      "epistemic": 3.5,
+      "overall": 4.4
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 5.83,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.38,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a modestly harder society with new losers. About 0.75M excess adults have drug-attributable reward blunting. A third of ever-users cycle with no outcome data, and the bottom income third uses the drug least (7.5%) while the thin body becomes a class marker. Public health is mixed: the 503B exclusion cut compounded harms, and the AUD indication is a real benefit. Epistemic badness is low because the blunting is labelled, measured and discussable, though the regulatory gap over selling it as 'calm' is noted. Cohesion costs ('dose conflicts' in couples, 'unmedicated' as an insult) are real but contained.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +0.5pp, prices decline in managed steps, coverage is unchanged, AUD and the anhedonia label are in the events, oral parity comes as the allowed 50 mg new form, Halcyon sells the marketed feature, and the culture inverts. The one wrinkle is the Bridge extension and 503B finalisation, which sit loosely against state_action none; both are status quo or already in motion. mechanism: the world loses points for the three claims listed above (voucher versus 13-month review, a fast anhedonia study and class label, an AUD filing without phase 3 evidence), and for the ASAM guideline resting on thin evidence. Some causal chains are well shown, such as flat adoption from churn, orals and the employer retreat, but many attributions are asserted. magnitude: on-drug 11.5 and ever-used 18 sit inside the envelope, and the income and age splits bracket and average correctly. The approvals obey the timing rules: CagriSema was under review, retatrutide came 13 months after filing, survodutide is still pending, and amycretin is unfiled. The payer mix sums to 30M, Medicare $4.7B matches the CBO pace, Halcyon is about 5% of cash payers, and the cycling arithmetic closes. The only blemishes are the ambiguous 6.8M Medicare figure used both as newly eligible and as total users, and ever-used sitting near the top of its band.",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.1037,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 47
   }
 }

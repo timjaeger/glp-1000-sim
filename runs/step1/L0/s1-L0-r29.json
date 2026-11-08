@@ -37,6 +37,41 @@
         "input_tokens": 13453,
         "output_tokens": 17872
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r29-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21592,
+        "output_tokens": 3970
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r29-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21592,
+        "output_tokens": 4844
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r29-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21592,
+        "output_tokens": 5877
+      }
     ]
   },
   "world": {
@@ -286,6 +321,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r29-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The off-drug population is about 16M adults who have used and stopped, plus ~228M who never started.",
+          "field": "world/population/note",
+          "why": "magnitude: 228M is all adults not currently on a drug (265M − 37M). Never-started adults are about 80% of 265M, roughly 212M, since 16M have used and stopped. The note's own reconciliation arithmetic is off by about 16M."
+        },
+        {
+          "quote": "Under-18 use is about 0.6% of minors (~0.45M), mostly ages 12–17 on semaglutide.",
+          "field": "world/population/note",
+          "why": "magnitude: the 2026 baseline says ~0.6% of children with obesity, not of all minors. Reading 0.6% as a share of all minors implies roughly a 5x rise in two years, which is unexplained, and the note gives no mechanism or derivation for it."
+        },
+        {
+          "quote": "Millions were forced to stop",
+          "field": "prose/article",
+          "why": "mechanism: the recall covered only high-dose Wegovy/Ozempic pens, while Zepbound, oral Wegovy and Foundayo stayed available, with switchers 'pouring in'. Millions of forced full discontinuations is asserted rather than shown, and it sits uneasily with the world's own claim that many restarts moved to other molecules."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harm is inequality. The body reads as an income marker (thin body = money, large body = uninsured), only ~0.8M HRSA slots reach ~40M uninsured adults with obesity, and bottom-third use is 10% against 18% at the top. Cohesion and autonomy take smaller hits: the 'on/off' dating question, the anhedonia cohort (8% vs 4% of controls), and a 'calm' market sold to people who don't need the drug. The health ledger is mixed, with the NAION warning and forced cycling offset by wider access and falling obesity, so this is a harder society with new losers, not a refusable one.",
+        "plausibility": "driver_fidelity: All drivers are visible. Adoption is +3pp, the shock_up price path comes from the recall, the vision class label is on file, retatrutide is approved in the allowed window, and the HRSA subsidy and marketed-feature layer are present. The one thin spot is that employer coverage drifts 60→56% under a 'status_quo' coverage driver, though the candidate flags this as no structural change. mechanism: Most chains are shown (recall → price rises and gray-market imports; ASAM endorsement → craving-care subscriptions; Sentinel analysis → label). Weak points are the 'millions forced to stop' claim, a guideline and a 14-month approval arriving very fast, and a conveniently timed recall. magnitude: Population figures sit inside the envelope (14, 20, age-weighted sum ≈14.0, income thirds bracket the national figure), and the Medicare ($4.4B) and HRSA (~1.0M slots) arithmetic reconciles. Deductions are the 228M never-started error and the unexplained jump in pediatric use to 0.6% of minors.",
+        "generativity": "The Tanya Mercer scene is concrete and well observed: the diner flat-top, the 90-day form that asks about drinks, Luis's 'you can always tell' beside the cut-armed retatrutide customer, the Indian-pen text from her sister, and the propped-open bar door. The world fields add texture (Plano/Frisco, 'lifting, not pinning', Hush and Steady, Off-Cycle cohort, Torrid closures). Many further scenes are implied: a couples therapist, a sales manager, a clinic visit, a Brooklyn venue."
+      },
+      "plausibility": 6.7
+    },
+    {
+      "custom_id": "s1-L0-r29-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The off-drug population is about 16M adults who have used and stopped, plus ~228M who never started.",
+          "field": "world/population/note",
+          "why": "Magnitude: 265M adults minus 37M on drug minus 16M stopped leaves about 212M never-users. The 228M figure is just 265M minus 37M and ignores the 16M who stopped, so the population arithmetic does not close."
+        },
+        {
+          "quote": "Under-18 use is about 0.6% of minors (~0.45M), mostly ages 12–17 on semaglutide.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: in 2026, 0.6% was the share of children with obesity, so about 0.1% of all minors. The candidate has about 0.6% of all minors in two years, a five- to six-fold rise, with no stated driver or chain."
+        },
+        {
+          "quote": "Zepbound absorbed most Wegovy pen switchers during the recall",
+          "field": "world/economy/pharma/state",
+          "why": "Mechanism: if most Wegovy users switched to Zepbound, there would be few forced stoppers. The prose and ledger instead describe 'millions forced to stop' and a 'large forced-cycling cohort' regaining 40–60% of lost weight."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Inequality is the main harm. Thinness and muscle become a visible class marker (body_and_culture, 'reads as uninsured'), use is 18% in the top third against 10% in the bottom, and the HRSA programme reaches under 1M of about 40M uninsured adults with obesity. The ledger adds an NAION warning, anhedonia in about 8% of users, and a forced-cycling cohort. These are real but still within a harder version of 2026 and are measured and discussable, so epistemic harm stays moderate. Overall about 5.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +3 (14%), the 2027 recall drives price_path shock_up, employer coverage stays near status quo, AUD and dementia are guideline-endorsed, the NAION class label is in place, and retatrutide is approved at 28.3%. The 2027 recall sits slightly awkwardly beside market_shock 'none'. mechanism: The recall to switching to oral and import chain is shown. The ASAM endorsement within a year of one n=108 RCT, and a prospective n≈9,000 anhedonia cohort by 2028, are fast. The Zepbound-absorbed-switchers versus millions-of-forced-stoppers tension (claim 3) and the jump in pediatric use (claim 2) are asserted rather than explained. magnitude: On drug 14%, ever 20%, the income thirds and the age bands (weighted sum 14.0) are inside the envelope. Retatrutide's 14 months from filing to approval respects the 12-month minimum, and generic_us stays false. The Medicare $4.4B and HRSA $1.2B ÷ $1,188 ≈ 1.0M slots figures reconcile. The 228M never-started error (claim 1) and the pediatric jump are the gaps.",
+        "generativity": "The Tanya Mercer scene is concrete: the diner flat-top, the 90-day form asking about drinks, the retatrutide customer, the sister's Indian pens, and the propped-open bar door. The world fields add texture, including Plano strength studios, 'lifting, not pinning' dating shorthand, and Hush and Steady subscriptions. Many more characters and scenes are implied."
+      },
+      "plausibility": 6.8
+    },
+    {
+      "custom_id": "s1-L0-r29-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Under-18 use is about 0.6% of minors (~0.45M), mostly ages 12–17 on semaglutide.",
+          "field": "world/population/note",
+          "why": "magnitude: the 2026 baseline was ~0.6% of children with obesity, not of all minors. Restated as 0.6% of all minors, it implies roughly 450k users, several times the baseline count, and about 1.8% of 12–17s, with no mechanism for that jump in two years."
+        },
+        {
+          "quote": "The 2027 recall created millions of forced cyclers, and nobody knows what repeated on/off courses do over a decade.",
+          "field": "world/open_tensions/2",
+          "why": "mechanism: the recall hit only high-dose Wegovy/Ozempic pens, while Zepbound, orals and Indian imports stayed available. The candidate itself says many users switched molecule, so 'millions forced to stop' is asserted, not derived."
+        },
+        {
+          "quote": "The off-drug population is about 16M adults who have used and stopped, plus ~228M who never started.",
+          "field": "world/population/note",
+          "why": "magnitude: 265M minus 37M current users minus 16M ex-users is about 212M never-starters. 228M is just everyone not currently on drug, so the note double-counts the ex-users and fails to reconcile with its own 20% ever-used figure."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harm is stratification: lean muscled bodies read as money (body_and_culture), bottom-third use is 10% against 18% in the top, and the affluent skew in adolescent prescribing persists. Anhedonia in about 8% of users, the NAION class warning, forced cycling, a marketed 'calm' product and lean-mass risk in older dementia-prevention users add real but mostly measured harms. Mitigating this, obesity is falling, the HRSA free pills reach about 0.8M people, and the harms are now named and quantified, so this is a recognisably harder society rather than a structural nightmare.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +3 (14%), the price shock comes from the recall, the NAION class label is in the ledger, retatrutide is approved at 28.3%, HRSA is the subsidy, and 'marketed_feature' and class stratification are both developed. The AUD and dementia indications appear only as guideline endorsements, not approvals, which the approval rules allow but is somewhat thin. mechanism: most chains are shown (recall to price rises and imports, ASAM to 'craving care' subscriptions, Sentinel analysis to label), but some are asserted, including 'millions of forced cyclers' (claim 2), spirits volume down ~4% a year from an endorsement covering a narrow population, and the dementia guideline from pooled CV data. magnitude: headline figures sit inside the envelope (14% current, 20% ever, income and age splits reconcile, 1.5M × $245 × 12 ≈ $4.4B, $1.2B / $1,188 ≈ 1.0M slots, retatrutide 14 months after filing). The pediatric 0.6%-of-minors jump (claim 1) and the 228M never-starter slip (claim 3) are real reconciliation flaws.",
+        "generativity": "The Tanya Mercer scene is built from specific, filmable details: the 4:30 pill with water, the 90-day form asking how many drinks, Luis and the bacon, the retatrutide lady, the sister's Indian-pen link, and the propped bar door. The world fields add more texture: Plano strength studios, 'lifting, not pinning' dating shorthand, couples scheduling dose holidays, musicians 'competent but cold', and shop-window size ranges as an income read. Many characters and scenes are implied, and the prose shows more than it explains."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The off-drug population is about 16M adults who have used and stopped, plus ~228M who never started.",
+        "field": "world/population/note",
+        "why": "magnitude: 228M is all adults not currently on a drug (265M − 37M). Never-started adults are about 80% of 265M, roughly 212M, since 16M have used and stopped. The note's own reconciliation arithmetic is off by about 16M."
+      },
+      {
+        "quote": "Under-18 use is about 0.6% of minors (~0.45M), mostly ages 12–17 on semaglutide.",
+        "field": "world/population/note",
+        "why": "magnitude: the 2026 baseline says ~0.6% of children with obesity, not of all minors. Reading 0.6% as a share of all minors implies roughly a 5x rise in two years, which is unexplained, and the note gives no mechanism or derivation for it."
+      },
+      {
+        "quote": "Millions were forced to stop",
+        "field": "prose/article",
+        "why": "mechanism: the recall covered only high-dose Wegovy/Ozempic pens, while Zepbound, oral Wegovy and Foundayo stayed available, with switchers 'pouring in'. Millions of forced full discontinuations is asserted rather than shown, and it sits uneasily with the world's own claim that many restarts moved to other molecules."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.67,
+      "inequality": 6.5,
+      "public_health": 4.0,
+      "cohesion": 5.0,
+      "epistemic": 4.67,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.5,
+      "magnitude": 6.17
+    },
+    "plausibility": 6.63,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The main harm is inequality. The body reads as an income marker (thin body = money, large body = uninsured), only ~0.8M HRSA slots reach ~40M uninsured adults with obesity, and bottom-third use is 10% against 18% at the top. Cohesion and autonomy take smaller hits: the 'on/off' dating question, the anhedonia cohort (8% vs 4% of controls), and a 'calm' market sold to people who don't need the drug. The health ledger is mixed, with the NAION warning and forced cycling offset by wider access and falling obesity, so this is a harder society with new losers, not a refusable one.",
+      "plausibility": "driver_fidelity: All drivers are visible. Adoption is +3pp, the shock_up price path comes from the recall, the vision class label is on file, retatrutide is approved in the allowed window, and the HRSA subsidy and marketed-feature layer are present. The one thin spot is that employer coverage drifts 60→56% under a 'status_quo' coverage driver, though the candidate flags this as no structural change. mechanism: Most chains are shown (recall → price rises and gray-market imports; ASAM endorsement → craving-care subscriptions; Sentinel analysis → label). Weak points are the 'millions forced to stop' claim, a guideline and a 14-month approval arriving very fast, and a conveniently timed recall. magnitude: Population figures sit inside the envelope (14, 20, age-weighted sum ≈14.0, income thirds bracket the national figure), and the Medicare ($4.4B) and HRSA (~1.0M slots) arithmetic reconciles. Deductions are the 228M never-started error and the unexplained jump in pediatric use to 0.6% of minors.",
+      "generativity": "The Tanya Mercer scene is concrete and well observed: the diner flat-top, the 90-day form that asks about drinks, Luis's 'you can always tell' beside the cut-armed retatrutide customer, the Indian-pen text from her sister, and the propped-open bar door. The world fields add texture (Plano/Frisco, 'lifting, not pinning', Hush and Steady, Off-Cycle cohort, Torrid closures). Many further scenes are implied: a couples therapist, a sales manager, a clinic visit, a Brooklyn venue."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.605,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 40
   }
 }

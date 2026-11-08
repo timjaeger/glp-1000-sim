@@ -48,6 +48,41 @@
         "input_tokens": 25126,
         "output_tokens": 10875
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r06-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22037,
+        "output_tokens": 6940
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r06-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22037,
+        "output_tokens": 6928
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r06-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22037,
+        "output_tokens": 7536
+      }
     ]
   },
   "validation": {
@@ -59,6 +94,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -309,5 +348,185 @@
     "headline": "Thin Is Cheap Now: The $149 Body, the $40 Fake, and the New Rich Who Want You to Watch Them Eat",
     "world_in_600_words": "By the end of 2028 one American adult in seven is on an incretin drug, and the striking thing is how little the country looks different from the street. The difference is in how things are paid for and who receives them. The drugs are cheaper than they were and still not cheap. A starting dose of Foundayo or the Wegovy pill costs $149 a month through the government's cash channel. Injectables step down to $199 and top out near $299, and retatrutide has entered at the top of that band, promising more than a quarter of body weight. Insurance, meanwhile, has largely walked away from obesity as obesity. Fewer than half of large employers still cover the drugs for weight. What survives is coverage for diabetes, heart disease, sleep apnea and failing kidneys, so doctors and patients have learned which codes open doors. Medicare's pilot ended on schedule and folded into the demonstration that was already planned, at the same $245 and the same $50 copay. Washington did nothing new and nobody expected it to.\n\nBetween the covered and the comfortable sits the gray market, now about five million people. Some order from Canadian pharmacies, though Ottawa has tightened that tap. Some buy Indian generics for the price of a lunch. Some buy pens from strangers on social commerce that turn out to contain something else. A batch of contaminated vials put sixty-one people in hospital in 2027 and killed two. Poison-control lines field calls from people who confused milligrams with units. The harm is real, local and spread thin, which is why it has not yet become anybody's job.\n\nThe lawyers have found the injury they can prove. More than thirty thousand cases sit in a Philadelphia courtroom, built on gastric-emptying studies, bowel obstructions and pancreatitis admissions, and the companies now book reserves against them. Nothing in that litigation concerns what users describe in quieter terms: wanting less, of everything. That complaint had a moment in 2026 and then dissolved into ordinary life. People who feel flatter call it calm, or age, or finally being free of food. Addiction doctors prescribe the same effect off-label for heavy drinkers and call it treatment.\n\nThe drug has also moved beyond the sick. About one user in six has neither obesity nor diabetes. They are longevity clients, metabolic optimisers, people who saw what a low-dose pill did for a colleague. And since 2027 pediatricians can prescribe semaglutide to six-year-olds, which they do mostly in the zip codes where families can find a pediatric endocrinologist.\n\nThe culture has answered cheap thinness the way it answers anything cheap: by moving the prize. In Austin and Brooklyn and the expensive parts of Los Angeles, the coveted body is muscled and visibly fed. Status belongs to the person who lifts with a coach four mornings a week and orders the whole fish, and the word for it is natty. Tasting menus are sold 'for appetites'. Plus-size retailers keep closing stores while lifting gyms open them. Snack companies sell smaller bags at higher unit prices and survive. Distillers do not have an equivalent move and are laying people off.\n\nThe pharmaceutical industry has meanwhile sold the country a solution it does not yet have. A muscle-sparing combination posted good phase 2 data and began phase 3. Within weeks the phrase 'skinny-frail is solved' was everywhere, and telehealth companies were shipping testosterone and gray-market SARMs alongside semaglutide. The combination itself cannot reach pharmacies before about 2030. Medicare-age patients are losing retatrutide-scale weight now.",
     "a_day_in_the_life": "Dana Ruiz, forty-one, takes her Foundayo at 6:10 with water, standing at the counter so she doesn't forget. Ninety-nine days in. The TrumpRx charge, $149, posts while she makes her son's lunch. The dental group dropped weight coverage last January. Her sister Marisol says the Canadian stuff is the same molecule. Dana has read about the vials in Houston and keeps paying.\n\nMateo is nine and asks why her breakfast is just yogurt. She says she isn't hungry, which is true and also the whole point.\n\nAt work, between cleanings, the front-desk girl shows everyone a video of her boyfriend deadlifting. \"He's natty,\" she says, as if that settles something. Dana's patient at eleven is a retired welder on Medicare who pays fifty dollars for his shots and has lost so much his dentures slip. She makes a note for the dentist.\n\nAt lunch the hygienists split one order of tacos four ways. Nobody finishes.\n\nThe pediatrician's office calls back about Mateo's BMI. They can get him in with the specialist in San Antonio in March, and insurance may cover it under the new label if his A1c qualifies. Dana says she'll think about it.\n\nAt six she meets an old friend at a place on South Congress where the menu says FEED ME. The friend has new shoulders and orders the whole fish and eats it slowly, and Dana watches.\n\nOn the drive home Dana realises she hasn't wanted the radio on in weeks. She turns it on, listens to a song she used to love, and turns it off again. Nothing feels wrong to her."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r06-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "About 6.5M users (2.5% of adults) have neither obesity nor diabetes and take it for 'metabolic health' or longevity.",
+          "field": "world/population/note",
+          "why": "Mechanism/magnitude: this is a large cohort, over 6 million people, that grows from an unquantified niche in two years. The only stated chain is cash telehealth plus cheaper orals, while the 503B crackdown is squeezing the telehealth channel. The count is asserted so that the buckets sum to 38.3M."
+        },
+        {
+          "quote": "Lilly's bimagrumab-plus-tirzepatide phase 2b shows ~90% of weight lost as fat; phase 3 begins.",
+          "field": "world/events/0/event",
+          "why": "Mechanism: the event says phase 3 begins in Feb 2027, but pipeline_note says phase 3 began mid-2027. A phase 3 launch at the same moment as a phase 2b readout is also implausibly fast, and the driver's chain is internally inconsistent."
+        },
+        {
+          "quote": "Muscle has replaced slimness as the most-mentioned physical attraction in app survey data.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Mechanism/magnitude: a complete reversal in the most-cited attractive trait within two years, with no data source shown. The aesthetic_inversion driver stipulates a direction, not this degree of cultural shift, and the claim is backed only by an unnamed 'app survey'."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 4.5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder society with new losers. Employer coverage falls to 44% and diagnosis-code gaming spreads. The uncovered middle and the bottom third fall to imports, and counterfeit harms (61 hospitalisations, 2 deaths, insulin-containing pens) land on them. Children from age 6 start drugs with no growth or cycling data, and 30,000 litigation cases are pending. The worst feature is epistemic: the personality layer is unmeasured and unattributed ('we just don't want much'), so the harm is hard to see from inside. Cohesion damage is milder and mostly implicit.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. The muscle-preserving combo is realised as phase 2b/3 data plus marketing, as the approval rules allow, and generic-flood counterfeits show up as a 5M gray market and the CDC cluster. state_action stays at 'none', since the pediatric approval and the 503B exclusion are routine. mechanism: most changes have chains (503B squeeze to gray market, employer retreat to code-shopping, litigation to reserves). The bimagrumab phase 3 timing contradicts itself (claim 2), the non-obese cohort is asserted (claim 1), and the culture flip rests on thin evidence (claim 3). magnitude: current use 14.6 and ever-use 21 are inside the envelope, though ever-use is near the top. CagriSema and retatrutide approvals follow the approval rules (retatrutide 14 months after filing). The user buckets sum to 38.3M. Medicare and Medicaid arithmetic checks out ($4.7B and $3.5B), as do the age and income weighting and the cycling arithmetic (about 29%, 41% restart). The only strain is the large 6.5M non-obese count and the 0.9% pediatric rate.",
+        "generativity": "The prose follows Dana through a dental office day with concrete detail: the 6:10 pill, the $149 posting, the welder whose dentures slip, tacos split four ways, FEED ME on South Congress, and the radio she turns off. Characters (Marisol, Mateo, the front-desk girl, the friend with new shoulders) imply further scenes. The ending shows the unrecognised personality layer rather than explaining it, and the world JSON adds many other threads."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s1-L0-r06-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~73M under-18s × 0.9% ≈ 650k, mostly ages 12–17.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the parent had under 1% of children with obesity (roughly 90k) on the drug. This implies about a 7× jump in two years, roughly 10% of teens with obesity, and the note shows no chain for it beyond a 6–11 label that accounts for only ~90k."
+        },
+        {
+          "quote": "The same survey finds 'natural' or 'unmedicated' bodies rated most desirable by adults under 40",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a national survey showing a full reversal of the thinness ideal within two years of a parent world where thin read as 'on it' is asserted. The only support is anecdote from Austin, Brooklyn and LA, so it overstates the speed of cultural inversion."
+        },
+        {
+          "quote": "The gray market grew from ~2M to ~5M users (~13% of users) as the 503B exclusion took effect and compounders were squeezed.",
+          "field": "world/access/note",
+          "why": "Mechanism: the parent described the gray market as 'contained' and gave no user count, so the ~2M baseline is invented. A 2.5× rise driven by squeezed compounders is asserted rather than shown, and it is a thin realisation of a 'generic flood'."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is a hardened two-tier system: coded and Medicare patients get brand product, while the uncovered bottom third (10% vs 19% top) absorbs counterfeit harms (61 hospitalisations, 2 deaths, insulin-laced pens). It also adds ~650k medicated children, a muscle-loss problem entering Medicare-age bodies, and a belief that 'skinny-frail is solved'. The largest harm is epistemic: the reward-blunting effect is unmeasured, unattributed and ignored by litigation (interior_life, prose ending), so it cannot be named. Overall it is a harder society with new losers, but not catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (3.6pp delta to 14.6%, the $245→$199/$299 path, employer coverage 60→44%, 6–11 label, MDL, bimagrumab realised as phase 2b/3, counterfeits, natty inversion, unrecognised personality). The generic-flood driver is somewhat thin, since it appears mainly as the gray market rather than a flood. mechanism: most changes have chains, but the abrupt pediatric surge, the instant Gallup 'unmedicated' preference and the invented 2M gray baseline (claims 1–3) are asserted. The 'already scheduled' Part D demonstration is also convenient. magnitude: on-drug 14.6 and ever-used 21 are inside the envelope, retatrutide approval comes 14 months after filing, and CagriSema was under review at the start. The 38.3M payer buckets sum, Medicare 1.6M×$245×12≈$4.7B and Medicaid ≈$3.5B check out, and the cycling arithmetic works. The deductions are that the retatrutide filing is not in `events` and the age-band weighting gives 14.54 rather than 14.6.",
+        "generativity": "The prose gives a worked day with Dana: the 6:10 Foundayo, the dental group that dropped coverage, her son Mateo's BMI call, the welder with slipping dentures, tacos split four ways and the FEED ME menu. Her flat song-and-radio ending shows the unrecognised personality layer without naming it. The world JSON also supplies many implied characters (pediatric endocrinology waitlists, code-shopping doctors, telehealth stack sellers)."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r06-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The same survey finds 'natural' or 'unmedicated' bodies rated most desirable by adults under 40",
+          "field": "world/events/5/event",
+          "why": "Magnitude and mechanism: the aesthetic inversion is stipulated, but a national Gallup finding that unmedicated bodies are 'most desirable' among all under-40s within two years is asserted with no chain, while the same world has 14% of 30-49s and 19% of the top income third on-drug."
+        },
+        {
+          "quote": "Total who ever stopped ≈ 6.4+4.4 = 10.8 pts, of whom 4.4 restarted (41%), inside the parent's 36–47% restart range.",
+          "field": "world/population/note",
+          "why": "Magnitude: the note's own figures include 1.6 pts of prior cyclers who restarted and are off again. Restarters are therefore 4.4+1.6 = 6.0 of 10.8, about 56%, not 41%, so the claimed fit to the parent's restart range fails."
+        },
+        {
+          "quote": "and phase 3 began mid-2027",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: this contradicts events[0], dated 2027-02, which says 'phase 3 begins' on the same phase 2b readout. The candidate disagrees with itself on the timeline for the muscle-preserving combination."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 7,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The two-tier system is concrete: diagnosis-coded and Medicare patients get brand product, the uncovered middle pays cash, and the bottom third faces counterfeits (2 deaths and 61 hospitalisations in the CDC cluster, ~5M gray-market users). Six-year-olds are on the drugs, lean-mass loss reaches Medicare-age bodies, and the public wrongly believes 'skinny-frail is solved'. Epistemic harm is highest because reward blunting is unmeasured and unnamed, and the litigation bar ignores it. It is a harder society with new losers rather than a catastrophe, so it scores in the mid range.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events. These include the 3.6 pp adoption delta, employer coverage falling 60→44%, pediatric 6–11, gastroparesis/pancreatitis MDL, counterfeits, and the 'unrecognised' personality layer. The muscle-preserving combination is realised under the phase rules as a phase 2b readout and phase 3 start, which honours the driver. mechanism: Most changes have chains, such as the 65+ rise from Medicare, the bottom third lagging because of employer retreat, and the gray-market growth from the 503B exclusion. The weak points are the asserted under-40 'natural' preference survey (claim 1) and the phase 3 timing contradiction (claim 3), plus a few asserted items like persistence rising to 40%. magnitude: Current use of 14.6% and ever-use of 21% sit inside the envelope, though ever-use is near the top edge. The income thirds bracket the national figure, the age bands weight to about 14.5, the 38.3M payer buckets sum, and the Medicare ($4.7B) and Medicaid ($3.5B) arithmetic is correct. Retatrutide is approved 14 months after filing, which is allowed. The cycling arithmetic miscounts restarters, as in claim 2, which is a minor reconciliation failure.",
+        "generativity": "The Dana Ruiz sequence implies a full cast: a dental hygienist on Foundayo, her son Mateo and the San Antonio specialist waitlist, the welder with slipping dentures, the 'natty' front-desk coworker, and the FEED ME restaurant. Details like split tacos, the radio she turns off, and the code-shopping A1c hint show rather than explain, and the quiet anhedonia ending is strong. The scenes lean slightly on exposition in places, but the world reads as ready-made film material."
+      },
+      "plausibility": 7.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "About 6.5M users (2.5% of adults) have neither obesity nor diabetes and take it for 'metabolic health' or longevity.",
+        "field": "world/population/note",
+        "why": "Mechanism/magnitude: this is a large cohort, over 6 million people, that grows from an unquantified niche in two years. The only stated chain is cash telehealth plus cheaper orals, while the 503B crackdown is squeezing the telehealth channel. The count is asserted so that the buckets sum to 38.3M."
+      },
+      {
+        "quote": "Lilly's bimagrumab-plus-tirzepatide phase 2b shows ~90% of weight lost as fat; phase 3 begins.",
+        "field": "world/events/0/event",
+        "why": "Mechanism: the event says phase 3 begins in Feb 2027, but pipeline_note says phase 3 began mid-2027. A phase 3 launch at the same moment as a phase 2b readout is also implausibly fast, and the driver's chain is internally inconsistent."
+      },
+      {
+        "quote": "Muscle has replaced slimness as the most-mentioned physical attraction in app survey data.",
+        "field": "world/body_and_culture/dating_and_intimacy",
+        "why": "Mechanism/magnitude: a complete reversal in the most-cited attractive trait within two years, with no data source shown. The aesthetic_inversion driver stipulates a direction, not this degree of cultural shift, and the claim is backed only by an unnamed 'app survey'."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.0,
+      "inequality": 6.5,
+      "public_health": 5.67,
+      "cohesion": 4.67,
+      "epistemic": 7.0,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.67,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.48,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "The world is a harder society with new losers. Employer coverage falls to 44% and diagnosis-code gaming spreads. The uncovered middle and the bottom third fall to imports, and counterfeit harms (61 hospitalisations, 2 deaths, insulin-containing pens) land on them. Children from age 6 start drugs with no growth or cycling data, and 30,000 litigation cases are pending. The worst feature is epistemic: the personality layer is unmeasured and unattributed ('we just don't want much'), so the harm is hard to see from inside. Cohesion damage is milder and mostly implicit.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. The muscle-preserving combo is realised as phase 2b/3 data plus marketing, as the approval rules allow, and generic-flood counterfeits show up as a 5M gray market and the CDC cluster. state_action stays at 'none', since the pediatric approval and the 503B exclusion are routine. mechanism: most changes have chains (503B squeeze to gray market, employer retreat to code-shopping, litigation to reserves). The bimagrumab phase 3 timing contradicts itself (claim 2), the non-obese cohort is asserted (claim 1), and the culture flip rests on thin evidence (claim 3). magnitude: current use 14.6 and ever-use 21 are inside the envelope, though ever-use is near the top. CagriSema and retatrutide approvals follow the approval rules (retatrutide 14 months after filing). The user buckets sum to 38.3M. Medicare and Medicaid arithmetic checks out ($4.7B and $3.5B), as do the age and income weighting and the cycling arithmetic (about 29%, 41% restart). The only strain is the large 6.5M non-obese count and the 0.9% pediatric rate.",
+      "generativity": "The prose follows Dana through a dental office day with concrete detail: the 6:10 pill, the $149 posting, the welder whose dentures slip, tacos split four ways, FEED ME on South Congress, and the radio she turns off. Characters (Marisol, Mateo, the front-desk girl, the friend with new shoulders) imply further scenes. The ending shows the unrecognised personality layer rather than explaining it, and the world JSON adds many other threads."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.5637,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 9
   }
 }

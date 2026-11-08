@@ -37,6 +37,41 @@
         "input_tokens": 13516,
         "output_tokens": 16602
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r02-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20942,
+        "output_tokens": 7277
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r02-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20942,
+        "output_tokens": 5978
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r02-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20942,
+        "output_tokens": 7952
+      }
     ]
   },
   "world": {
@@ -280,6 +315,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r02-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Public programmes pay about 45% of all incretin fills, ~22.5M users: Medicare ~12.6M, Medicaid ~9.9M.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: 9.9M Medicaid users is roughly 35-40% of adult Medicaid enrollees, far above the 19.2% national rate. It also sits badly with a bottom income third at 14% (~12M users in total, which must also include low-income Medicare users) and with work requirements that cut off 1.5M."
+        },
+        {
+          "quote": "once Medicare and Medicaid covered obesity, employers argued it was 'a public benefit now'",
+          "field": "world/access/note",
+          "why": "mechanism: Medicare covers retirees, not the workers employers insure, so the stated chain for the drop from 60% to 49% is weak. The 50-64 band rose from 22% to 30% in the same period, despite this retreat."
+        },
+        {
+          "quote": "FDA approves oral semaglutide as an adjunct for smoking and vaping cessation in adults with overweight or obesity, after two phase 3 trials showed ~1.6× quit rates versus placebo",
+          "field": "world/events/5/event",
+          "why": "mechanism: the 2026 evidence for nicotine was anecdotal and observational. Two phase 3 programmes would have to start, read out and clear an sNDA review in under two years, and no trial start or filing is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 4,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Most users get cheap, effective drugs. The harms are a coverage gap for working-age commercially insured adults, a 3M-person gray market with 9,000+ adverse-event reports, and unmeasured cycling and frailty risks in over-75s. Under 'cohesion', 'Plate politics', the 'Unmedicated' rally and a state patchwork on paediatric prescribing add friction. This is a recognisably harder society with new losers, not a structurally hidden harm, so it scores about 5.",
+        "plausibility": "driver_fidelity: Adoption (19.2%), oral parity (Wegovy pill 50 mg as an existing product in a new form), counterfeits, public expansion, restriction, backlash, nicotine and the niche personality layer all appear in fields and events. The mood driver is only a thin 'food noise' label claim. 'No new safety signal' sits uneasily with the new apathy/anhedonia label. mechanism: The retatrutide, CagriSema and survodutide timings follow the approval rules, and the oral-parity chain is clear. The employer-retreat logic and the compressed nicotine phase 3 to approval path (claims 2 and 3) are asserted. magnitude: On-drug (19.2%), ever-used (26%, at the 26.2 cap), the age weighting, payer split sums and the $38B and $31B arithmetic all reconcile. Against that, Medicaid at 9.9M conflicts with the 14% bottom-third figure (claim 1), and 6% of 50.3M is about 3.0M, not the stated 3.2M.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 6.2
+    },
+    {
+      "custom_id": "s1-L0-r02-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "CBO's 2028 rescore puts the incremental obesity cost near $38B/yr, combined federal and state, against the parent's pilot-era ≥$35B over 2026–2034.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: it sets an annual figure ($38B/yr, about $340B over nine years) against the parent's 9-year ≥$35B and treats the two as comparable. A budget-score reconciliation failure; the rescore is asserted, not derived."
+        },
+        {
+          "quote": "FDA approves oral semaglutide as an adjunct for smoking and vaping cessation in adults with overweight or obesity, after two phase 3 trials showed ~1.6× quit rates versus placebo",
+          "field": "world/events/5/event",
+          "why": "mechanism: the parent evidence for nicotine was anecdotal and observational. Two phase 3 trials plus a review all completing in under two years, with a precise effect size, is an asserted chain with no trial start or filing shown."
+        },
+        {
+          "quote": "Pediatric: about 0.6% of all under-18s, nearly all adolescents 12+; under-12 prescribing fell after 2028 state bans.",
+          "field": "world/population/note",
+          "why": "magnitude: the parent's 0.6% was of children with obesity aged 8–11 who had a prescription event. Restating it as 0.6% of all ~73M minors implies roughly 440k children on the drug, a many-fold jump, with no mechanism and while restriction laws are taking effect."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 4.5,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 6,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is recognisably harder rather than catastrophic. Benefits are real (smoking cessation, public coverage for the old), but the stratification now runs through employment: commercially insured 30–64s pay $199–299 or buy from a gray market of about 3.2M users with over 9,000 adverse-event reports. Cohesion takes the worst hit from 'plate politics' and the 'Unmedicated' coalition, along with frailty concern in the over-75s and the anhedonia labelling. Epistemic harm is moderate because harms are labelled and measured, though cycling and adolescent effects remain unknown.",
+        "plausibility": "driver_fidelity: Most drivers are clearly realised and traceable: coverage, counterfeits, backlash, restriction, oral parity as the Wegovy pill 50 mg, and the nicotine indication. 'mood_and_motivation' is realised only as a 'food noise' label claim that is then banned from marketing. 'safety_signal: none' sits awkwardly beside a 2027 anhedonia label addition and pooled prevalence figures. mechanism: Many chains are shown, such as employers dropping coverage after Medicare took over, the import alert, and the Medicaid work requirements. Others are asserted: the nicotine approval path (claim 2), 39 states opting in at once, and the pediatric jump (claim 3). magnitude: Population figures sit inside the envelope, with 'ever' at 26 against a cap of 26.2. The age-weighted, income, payer-split and public-spend arithmetic reconciles (22.5M × $245 or $274 × 12 ≈ $69B). The CBO annual-versus-nine-year comparison (claim 1) and the pediatric restatement are the reconciliation gaps. The approval timings (CagriSema, retatrutide filed Feb 2027 and approved Apr 2028) are within the rules.",
+        "generativity": "The Teresa Kowalczyk vignette is concrete: the bus depot, the pill at four, Darnell's padded envelope, the daughter's church call, sour gummies, the polka record. The world supplies many scene hooks, including potluck friction, dating-app fields, the rally, Medicaid cliffs and mismatched appetite in couples. It still leans on telling in the opening sections, and the vignette is somewhat schematic."
+      },
+      "plausibility": 6.25
+    },
+    {
+      "custom_id": "s1-L0-r02-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA approves oral semaglutide as an adjunct for smoking and vaping cessation in adults with overweight or obesity, after two phase 3 trials showed ~1.6× quit rates versus placebo",
+          "field": "world/events/5/event",
+          "why": "Mechanism: the 2026 evidence on nicotine was anecdotal and observational. Two phase 3 trials designed, run, read out and reviewed by June 2028 is implausibly fast, and the chain is not shown."
+        },
+        {
+          "quote": "Medicaid covers obesity at the same $245 rate in 39 states plus DC.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: 39 states opt in at once while the same world has state budget offices alarmed, work requirements cutting enrolment, and employers calling obesity a public benefit. No state-level financing or political chain is given for such near-universal uptake."
+        },
+        {
+          "quote": "CBO's 2028 rescore puts the incremental obesity cost near $38B/yr, combined federal and state, against the parent's pilot-era ≥$35B over 2026–2034.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: it sets an annual figure against a nine-year total, roughly a tenfold escalation, without reconciling them. It also treats the full $245 as outlay although $50 of it is the beneficiary copay."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 6.5,
+        "mechanism": 5.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. The losers are commercially insured 30–64s pushed to $199–299 cash or about 3.2M gray-market users, Medicaid adults hit by work requirements, and frail over-75s. Cohesion is strained by plate politics, the 'Unmedicated' rally, and cross-border paediatric prescribing in the 16-state patchwork. Health gains (smoking down, access for the old) and a measured, labelled anhedonia signal (0.5–2%) keep flourishing and epistemic scores moderate.",
+        "plausibility": "driver_fidelity: Adoption (19.2 against a stipulated 8.2 delta), public_expansion, oral_parity, counterfeits, backlash and restriction are all visible in fields and events. mood_and_motivation is realised only as a 'food noise' label claim. 'No new safety signal emerged' sits awkwardly beside the new 2027 apathy/anhedonia label language and the retatrutide dysesthesia warning. mechanism: The employer retreat ('a public benefit now') and the 39-state Medicaid opt-in are asserted rather than shown. Two phase 3 nicotine trials by June 2028 is very fast, and making Medicare obesity coverage permanent through an administrative pathway is legally thin. The oral-parity, counterfeit-to-import-alert and state-ban chains are well drawn. magnitude: Adult use of 19.2% and ever-use of 26% are inside the envelope, but ever-use sits at the edge (26.2). Approval timing is permitted. Payer shares, the $38B/$31B outlay arithmetic and the age and income checks mostly reconcile. The CBO annual-versus-nine-year comparison is a gap, and implied total US incretin spending well above the parent's global market forecasts is not addressed.",
+        "generativity": "The prose gives strong scenes: Teresa's 4 a.m. pill, Darnell's envelope of 'real fake' pens, the daughter's church call, sour gummies, and the polka record that doesn't feel good. The world fields add concrete texture: dating-app 'on it / off it' fields, Golden Corral closures, Thanksgiving friction, and the rally on the Mall. Several threads could carry their own films."
+      },
+      "plausibility": 5.95
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Public programmes pay about 45% of all incretin fills, ~22.5M users: Medicare ~12.6M, Medicaid ~9.9M.",
+        "field": "world/access/public_coverage",
+        "why": "magnitude: 9.9M Medicaid users is roughly 35-40% of adult Medicaid enrollees, far above the 19.2% national rate. It also sits badly with a bottom income third at 14% (~12M users in total, which must also include low-income Medicare users) and with work requirements that cut off 1.5M."
+      },
+      {
+        "quote": "once Medicare and Medicaid covered obesity, employers argued it was 'a public benefit now'",
+        "field": "world/access/note",
+        "why": "mechanism: Medicare covers retirees, not the workers employers insure, so the stated chain for the drop from 60% to 49% is weak. The 50-64 band rose from 22% to 30% in the same period, despite this retreat."
+      },
+      {
+        "quote": "FDA approves oral semaglutide as an adjunct for smoking and vaping cessation in adults with overweight or obesity, after two phase 3 trials showed ~1.6× quit rates versus placebo",
+        "field": "world/events/5/event",
+        "why": "mechanism: the 2026 evidence for nicotine was anecdotal and observational. Two phase 3 programmes would have to start, read out and clear an sNDA review in under two years, and no trial start or filing is shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 5.0,
+      "inequality": 5.5,
+      "public_health": 4.17,
+      "cohesion": 6.0,
+      "epistemic": 4.0,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 6.5,
+      "mechanism": 5.83,
+      "magnitude": 6.17
+    },
+    "plausibility": 6.13,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Most users get cheap, effective drugs. The harms are a coverage gap for working-age commercially insured adults, a 3M-person gray market with 9,000+ adverse-event reports, and unmeasured cycling and frailty risks in over-75s. Under 'cohesion', 'Plate politics', the 'Unmedicated' rally and a state patchwork on paediatric prescribing add friction. This is a recognisably harder society with new losers, not a structurally hidden harm, so it scores about 5.",
+      "plausibility": "driver_fidelity: Adoption (19.2%), oral parity (Wegovy pill 50 mg as an existing product in a new form), counterfeits, public expansion, restriction, backlash, nicotine and the niche personality layer all appear in fields and events. The mood driver is only a thin 'food noise' label claim. 'No new safety signal' sits uneasily with the new apathy/anhedonia label. mechanism: The retatrutide, CagriSema and survodutide timings follow the approval rules, and the oral-parity chain is clear. The employer-retreat logic and the compressed nicotine phase 3 to approval path (claims 2 and 3) are asserted. magnitude: On-drug (19.2%), ever-used (26%, at the 26.2 cap), the age weighting, payer split sums and the $38B and $31B arithmetic all reconcile. Against that, Medicaid at 9.9M conflicts with the 14% bottom-third figure (claim 1), and 6% of 50.3M is about 3.0M, not the stated 3.2M.",
+      "generativity": "placeholder"
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.605,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 41
   }
 }

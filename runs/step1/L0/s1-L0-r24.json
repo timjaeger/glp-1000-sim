@@ -36,6 +36,41 @@
         "input_tokens": 13447,
         "output_tokens": 18957
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r24-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20980,
+        "output_tokens": 5473
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r24-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20980,
+        "output_tokens": 5871
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r24-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20980,
+        "output_tokens": 5427
+      }
     ]
   },
   "world": {
@@ -275,6 +310,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r24-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The Mar 2028 class label lists 'apathy / decreased interest' as uncommon (≥1/1,000 to <1/100) from postmarketing reports.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism/driver_fidelity: the 2026 baseline had no regulatory response and the manufacturer said it had no data. A class-wide FDA label change within two years, with no stated trigger, is asserted rather than shown. It also sits awkwardly with the stipulated safety_signal of 'none'."
+        },
+        {
+          "quote": "About 17% of large employers now apply a BMI-linked wellness premium differential.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: the 2026 baseline had no benefit conditioning beyond standard prior authorisation, and the candidate shows no chain from that to 17% of large employers adopting BMI-linked premiums. The uptake is asserted from a single North Carolina event and a survey line, while ADA/EEOC challenges are still pending."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: the 2026 baseline was about 0.6% of children with obesity, which is roughly 0.1% of all minors. 0.7% of all under-18s is about 500k children, or roughly 10% of teens with obesity. That is a several-fold jump in two years, and the note neither derives it nor reconciles it with the baseline."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Medicare and Medicaid lockouts, pharmacy-verified adherence, 17% of large employers charging BMI premiums, and pen caps that report injections to the vendor all push people onto the drug under pressure. Inequality is also high: thinness is cheap, muscle is expensive, the poor are on imports or cycling for cost, and the contamination cluster (~140 hospitalisations, 4 deaths) falls on them. Flourishing and public health are only moderately worse than 2026, since there is no new mass harm and the apathy label is uncommon. Epistemic clarity is mixed: the 'quiet mind' versus apathy framing is contested and no incidence data exist, but the harms are nameable and labelled.",
+        "plausibility": "driver_fidelity: every driver is traceable to an event or field: the $59 authorised generic, the contamination cluster, the Bridge extension with adherence conditions, the 'Quiet' off-label programmes, class stratification, and retatrutide and CagriSema held to 2029. Two things are strained: the March 2028 apathy label sits uneasily with safety_signal 'none', and generic_us is true only through the authorised-generic route the envelope permits. mechanism: most chains are shown (import competition, then the Novo authorised generic, then PBM rebate steering; Medicaid work requirements, then churn). The apathy label, the 17% employer BMI-premium adoption, and the sharp pediatric rise are asserted, as flagged in the claims. magnitude: on-drug 13.8% and ever-used 20% are inside the envelope. The payer split sums to 36.2M, Medicare is 1.6M×$245×12≈$4.7B, Medicaid is 1.4M×$2,940≈$4.1B, and the age and income checks average to 13.8, so the figures reconcile well. The pediatric 0.7% is underived, and the prose price of $22 for two months undercuts the stated $20–45/month gray-market range.",
+        "generativity": "Denise Okafor's day is concrete and implies a whole cast: the blinking pen cap at 4:50 a.m., the $42 paycheck surcharge, Marcus with the DEXA printout, Renée's Hindi-labelled box and the lot-number text, and Keisha asking about Mia's mom's arms. The karaoke scene shows blunted reward without explaining it. The world fields add texture: musicians trimming doses before tours, couples therapists seeing 'flat partner', and the Dallas–Plano DEXA culture."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s1-L0-r24-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Retatrutide BLA filed Jun 2027. FDA extended the review by three months to examine dysesthesia data, and the goal date is Q1 2029.",
+          "field": "world/drugs/pipeline_note",
+          "why": "A June 2027 BLA with a three-month extension would give a goal date around Q3–Q4 2028, not Q1 2029. The timeline does not follow from standard review clocks, which is a mechanism and magnitude flaw."
+        },
+        {
+          "quote": "The Mar 2028 class label lists 'apathy / decreased interest' as uncommon (≥1/1,000 to <1/100) from postmarketing reports.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "A formal class-wide label change on a psychiatric-type effect, with a banded frequency category drawn from spontaneous reports, sits awkwardly with the stipulated safety_signal 'none'. It also conflicts with the starting manufacturer stance of 'no data to share', and no mechanism is shown for the regulatory jump."
+        },
+        {
+          "quote": "Medicare GLP-1 Bridge extended through Dec 2029 on unchanged terms: Medicare pays $245/month, beneficiary copay ~$50.",
+          "field": "world/access/public_coverage",
+          "why": "Medicare keeps paying about four times the $59 authorised-generic cash price for the same molecule, with no explanation of why CMS would not renegotiate. This is only partly excused by the 'tension' framing and the status_quo driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 6.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Adherence-conditioned benefits (Medicare ≥80% PDC, Medicaid 12-month lockouts, BMI premiums at 17% of large employers, pen-cap logging) penalise the cycling that 38% of users already do, which drives autonomy and inequality up. A contamination cluster (140 hospitalised, 4 dead), a class gradient in muscle loss and a body-composition class marker add harm. Cheap access, falling prices and a mild labelled side effect keep it a harder society, not a refusable one.",
+        "plausibility": "driver_fidelity: The generic_collapse driver is realised through an authorised-generic event, the allowed mechanism. Conditioning, class stratification, the market shock and off-label mood use are all visible. Adding a Mar 2028 apathy class label is in tension with safety_signal 'none', and mood_and_motivation appears only off-label. mechanism: Most chains are shown, such as imports → $99 → $59 and PBM rebates → steering of the insured. The Medicare $245 rate persisting beside a $59 cash product and the abrupt apathy relabelling are thinly motivated, and the retatrutide review timeline is incoherent (claims 1–3). magnitude: Population figures are inside the envelope, and 13.8%, 20% ever, age mix and income thirds all reconcile. The payer split sums to 36.2M. Medicare 1.6M × $245 × 12 ≈ $4.7B and Medicaid 1.4M × $2,940 ≈ $4.1B check out, and the cycling arithmetic closes at 38%. Minor gaps remain: the retatrutide goal date, and pediatric 0.7% of all under-18s looks high against the starting ~0.6% of children with obesity.",
+        "generativity": "The Denise Okafor scene is rich, with a pen-cap app, a surcharge, a DEXA-printout manager, a sister's imported vial and a daughter watching wrists. The world also implies karaoke blunting, therapy couples and musicians' dose schedules. The 4:50 a.m. daily blink for a weekly injectable is a small texture slip."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s1-L0-r24-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~0.7% of under-18s, mostly 12–17 with obesity.",
+          "field": "world/population/note",
+          "why": "Magnitude: the 2026 baseline was about 0.6% of children with obesity, roughly 0.1% of all minors. A 0.7% share of all under-18s (~500k) is about a sixfold rise in two years, and no pediatric driver, approval or coverage change is shown."
+        },
+        {
+          "quote": "About 17% of large employers now apply a BMI-linked wellness premium differential.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism and magnitude: this practice was essentially absent in 2026 and is now 17% of large employers. The only chain is one North Carolina plan event and a survey. It also sits oddly with employer coverage drifting down to 57% under a status_quo coverage driver."
+        },
+        {
+          "quote": "The Mar 2028 class label lists 'apathy / decreased interest' as uncommon (≥1/1,000 to <1/100) from postmarketing reports.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Driver fidelity and mechanism: safety_signal is 'none', yet a new class-wide adverse-reaction label appears. EU-style frequency bands are used for a US FDA label, and the manufacturer had 'no data to share' two years earlier with no incidence study since."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy takes the heaviest hit: Medicare and Medicaid continuation is conditioned on ≥80% proportion-of-days-covered and lockouts, 17% of large employers use BMI surcharges, and connected pen caps log injections to vendors. Inequality is high because thinness is cheap but muscle is not, low-income users are on imports and cycling, and the contamination cluster (~140 hospitalised, 4 dead) lands mostly on the poor. Cohesion and epistemic harms are moderate: the label and the 'quiet mind' marketing describe the same effect in different vocabularies, and nobody measures it. Overall this is a recognisably harder society with new losers, not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events: the authorised generic, the counterfeit flood and contamination, the Medicare extension with adherence conditions, 'Quiet' programmes, and the Dallas class stratification. The generic_us=true flag is permitted because the authorised generic is an event. The Mar 2028 apathy label sits uneasily with safety_signal 'none' (claim 3). mechanism: Most chains are shown, notably imports driving the $59 price and PBM rebates explaining why the insured are steered to brand product. The 17% employer BMI-surcharge jump and the pediatric rise are asserted rather than caused (claims 1 and 2), and the fast apathy labelling is thin. magnitude: Population figures sit inside the envelope, with ever-used at 20 near the edge. The payer split (13.6+7.0+3.6+8.0+4.0=36.2M), Medicare ($4.7B + $0.96B copays), Medicaid ($4.1B), the age mix and the income thirds all reconcile. The cycling arithmetic is muddled but internally consistent, and the pediatric 0.7% is a large unexplained jump (claim 1).",
+        "generativity": "The Denise Okafor scene is rich with implied characters and texture: pen cap logging, the surcharge, Renée's imported box, Keisha's question, karaoke and fridge cartons. The world fields add Dallas–Plano DEXA culture, musicians cutting doses before tours, mismatched-desire couples, and the ADA litigation. Many scenes are implied. Renée's $22 for two months is slightly off the stated $20–45 per month."
+      },
+      "plausibility": 6.85
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The Mar 2028 class label lists 'apathy / decreased interest' as uncommon (≥1/1,000 to <1/100) from postmarketing reports.",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "mechanism/driver_fidelity: the 2026 baseline had no regulatory response and the manufacturer said it had no data. A class-wide FDA label change within two years, with no stated trigger, is asserted rather than shown. It also sits awkwardly with the stipulated safety_signal of 'none'."
+      },
+      {
+        "quote": "About 17% of large employers now apply a BMI-linked wellness premium differential.",
+        "field": "world/economy/insurance/state",
+        "why": "mechanism: the 2026 baseline had no benefit conditioning beyond standard prior authorisation, and the candidate shows no chain from that to 17% of large employers adopting BMI-linked premiums. The uptake is asserted from a single North Carolina event and a survey line, while ADA/EEOC challenges are still pending."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "magnitude: the 2026 baseline was about 0.6% of children with obesity, which is roughly 0.1% of all minors. 0.7% of all under-18s is about 500k children, or roughly 10% of teens with obesity. That is a several-fold jump in two years, and the note neither derives it nor reconciles it with the baseline."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.83,
+      "inequality": 6.5,
+      "public_health": 5.5,
+      "cohesion": 5.17,
+      "epistemic": 5.5,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 6.83,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.03,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Autonomy is the worst dimension. Medicare and Medicaid lockouts, pharmacy-verified adherence, 17% of large employers charging BMI premiums, and pen caps that report injections to the vendor all push people onto the drug under pressure. Inequality is also high: thinness is cheap, muscle is expensive, the poor are on imports or cycling for cost, and the contamination cluster (~140 hospitalisations, 4 deaths) falls on them. Flourishing and public health are only moderately worse than 2026, since there is no new mass harm and the apathy label is uncommon. Epistemic clarity is mixed: the 'quiet mind' versus apathy framing is contested and no incidence data exist, but the harms are nameable and labelled.",
+      "plausibility": "driver_fidelity: every driver is traceable to an event or field: the $59 authorised generic, the contamination cluster, the Bridge extension with adherence conditions, the 'Quiet' off-label programmes, class stratification, and retatrutide and CagriSema held to 2029. Two things are strained: the March 2028 apathy label sits uneasily with safety_signal 'none', and generic_us is true only through the authorised-generic route the envelope permits. mechanism: most chains are shown (import competition, then the Novo authorised generic, then PBM rebate steering; Medicaid work requirements, then churn). The apathy label, the 17% employer BMI-premium adoption, and the sharp pediatric rise are asserted, as flagged in the claims. magnitude: on-drug 13.8% and ever-used 20% are inside the envelope. The payer split sums to 36.2M, Medicare is 1.6M×$245×12≈$4.7B, Medicaid is 1.4M×$2,940≈$4.1B, and the age and income checks average to 13.8, so the figures reconcile well. The pediatric 0.7% is underived, and the prose price of $22 for two months undercuts the stated $20–45/month gray-market range.",
+      "generativity": "Denise Okafor's day is concrete and implies a whole cast: the blinking pen cap at 4:50 a.m., the $42 paycheck surcharge, Marcus with the DEXA printout, Renée's Hindi-labelled box and the lot-number text, and Keisha asking about Mia's mom's arms. The karaoke scene shows blunted reward without explaining it. The world fields add texture: musicians trimming doses before tours, couples therapists seeing 'flat partner', and the Dallas–Plano DEXA culture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.6675,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 4
   }
 }

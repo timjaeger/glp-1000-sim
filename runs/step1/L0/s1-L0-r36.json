@@ -34,6 +34,41 @@
         "input_tokens": 13529,
         "output_tokens": 20893
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r36-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21511,
+        "output_tokens": 4995
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r36-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21511,
+        "output_tokens": 4931
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r36-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21511,
+        "output_tokens": 6475
+      }
     ]
   },
   "world": {
@@ -281,6 +316,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r36-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare GLP-1 Bridge pilot ends and CMS launches a CMMI model giving $0 generic semaglutide to eligible Medicare and Medicaid enrollees in 24 states",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the model starts in Jan 2028 and hands out $0 generic semaglutide, but generics only reach US pharmacies in Apr 2028. The 18% six-month-check failures and 4.5M generic enrollees by Dec 2028 are squeezed into the months after launch."
+        },
+        {
+          "quote": "~6.5M on branded at $245 × 12 = ~$19.1B",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: the world says generic substitution and step therapy dominate, yet 6.5M public users (59%) stay on branded drugs at Dec 2028, only nine months after generics arrive. The prose then says the programme 'costs about two billion dollars a year', ignoring the $19B branded line."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 0.9% of all under-18s is about 650k children. The parent had only ~0.6% of children with obesity on the drug, which is roughly 0.1% of all children, so this is a many-fold jump in two years with no pediatric driver or mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.0,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 5.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder. Free coverage is conditioned on cellular-scale weigh-ins and ≥80% refill adherence, and about 18% of enrollees lose $0 status at the first check. 65+ users face fracture and sarcopenia risk, 20–25% report flattening, and the offshore gray market has 2.5M exclusive users. Offsets are cheap access, falling obesity, and a flattened thinness gradient, so inequality is mixed. Harms are mostly named and measured, so the epistemic score stays moderate. Overall is a middle-to-hard 5.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: 15% adoption, a settlement-driven generic collapse, adherence conditioning, the bone/muscle warning, orforglipron parity, gray-market regrowth, the 'natty' inversion, the $0 subsidy, and mainstream flattening. Approvals follow the envelope (CagriSema Jan 2027, retatrutide 13 months after filing). mechanism: causal chains are mostly shown, but the $0 generic model starts in Jan 2028 before generics exist (claim 1), and branded drugs dominate public volume despite generic-first step therapy (claim 2). The flip of the culture toward muscle is partly asserted. magnitude: 15% current and 21% ever are inside the envelope, and the cycling, age-band, payer-split and $2.3B/$19.1B arithmetic all reconcile. Deductions are for the pediatric 0.9% jump (claim 3) and the prose '$2B a year' that contradicts the $21.4B total.",
+        "generativity": "The Ray Delgado scene is concrete: the 6:10 scale chime, the butter-drawer pen, the DEXA tech in a BUILT NOT BOUGHT shirt, the unmoved song, and the CAKE pencil mark against the 80% refill threshold. The world also implies many more scenes: skip-week parties, 'natty' dating profiles, PBM weigh-in disputes, and gray-market Discord vendors."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s1-L0-r36-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare GLP-1 Bridge pilot ends and CMS launches a CMMI model giving $0 generic semaglutide to eligible Medicare and Medicaid enrollees in 24 states, conditioned on refill adherence, monthly cellular-scale weigh-ins and 5% loss at six months",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the $0 generic model starts in Jan 2028, but the world says licensed generics only reached US pharmacies from Apr 2028. The 6-month check on which 18% lost status would then have fallen at or before generic launch, so the timeline contradicts itself."
+        },
+        {
+          "quote": "~6.5M on branded at $245 × 12 = ~$19.1B",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude/mechanism: the same field says branded drugs sit under step therapy and generic is $0, yet 59% of public users (6.5M of 11M) are on $245 branded product. That is hard to square with generic substitution, and it makes the public bill about 9× the generic line."
+        },
+        {
+          "quote": "roughly 25–35% higher fragility-fracture rates in users 65+ on therapy beyond two years, compared with matched non-users",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "Magnitude/mechanism: a firm, large fracture signal in a 2028 Medicare/VA cohort with more than two years of therapy is fast, since Medicare obesity coverage began only in mid-2026. It is also observational and confounded, yet it is treated as 'established' within the window."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is harder but not collapsed. A $0 public route is conditioned on cellular-scale weigh-ins and 80% adherence, which pushes people toward cash or gray-market cycling. Flattening is reported by 20–25% of users, there is a bone and fracture signal in the 65+ group, and a gray market of unregulated peptides. Thinness is cheap but a new muscle-based class marker has emerged, and adolescents on long-term therapy have unmeasured bone accrual. The harms are named and measured, so epistemic badness is moderate, and there is no melodrama.",
+        "plausibility": "driver_fidelity: every driver is traceable to fields and events. The adoption delta lands at 15%, generic collapse comes via the Nov 2027 settlement, and conditioning and subsidy appear in the CMMI model. The bone/muscle wave, oral parity (high-dose Foundayo), gray-market resurgence, aesthetic inversion and the mainstream complaint are all shown. new_indications is empty and the retatrutide and CagriSema approvals respect the approval rules. mechanism: most chains are shown (settlement → $49 pens → down-market F&B; 503B exclusion → gray market; adherence rule → holiday conflict). The Jan 2028 $0 generic precedes the Apr 2028 generic launch (claim 1), and the branded-heavy public mix conflicts with step therapy (claim 2). The 2028 fracture finding is fast (claim 3). magnitude: population figures sit inside the envelope, with 15% on drug and 21% ever. The age-band weighting gives about 15.0, the income gradient brackets the national figure, the payer split sums to 39.8M, and the cycling arithmetic gives 36%. Spending of $2.3B + $19.1B = $21.4B multiplies out. The only strain is the 6.5M branded users against generic step therapy.",
+        "generativity": "The prose and world fields imply many scenes and characters: skip-week parties, 'natty' dating profiles, DEXA technicians in BUILT NOT BOUGHT shirts, steakhouse abundance displays, PBM scale programmes, and Discord peptide vendors. The day-in-the-life with Ray shows rather than explains, through the 6:10 scale chime, the butter-drawer pen, the song that does nothing, and the pencilled CAKE against the 80% adherence math."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s1-L0-r36-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "CMS launches a CMMI model giving $0 generic semaglutide to eligible Medicare and Medicaid enrollees in 24 states",
+          "field": "world/events/3/event",
+          "why": "mechanism: the model starts in Jan 2028, but the candidate says licensed generics only reached US pharmacies from Apr 2028, so there was no generic to give away for the first quarter. The 65+ rise from 9% to 12% and the 18% six-month failure cohort are also pinned on a programme that had under a year of generic supply."
+        },
+        {
+          "quote": "Branded drugs (tirzepatide, oral Wegovy, Foundayo) stay at the Nov 2025 deal rate of ~$245/month with a $50 copay, under step therapy.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the same note says oral Wegovy and Foundayo cash prices fell to $99–149, so Medicare would pay 65–145% more than the cash price. That makes the ~$19.1B branded spending figure inconsistent with the price collapse."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: 0.9% of all under-18s is roughly 650k children, about 2.5% of adolescents. That is roughly an eightfold jump from the parent's ~0.6% of children with obesity, in two years, with generics available for only part of 2028. No pediatric-specific mechanism is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generic access is a real gain, but it is paid for with conditioning. The free tier requires ≥80% refill adherence, monthly cellular-scale weigh-ins and ≥5% loss, and about 18% of enrollees lost $0 status. The conditioning also collides with drug holidays, the standard remedy for the 20–25% reporting flattening. Fracture rates 25–35% higher in users 65+ and a gray market with no oversight add physical harm, and weight data is shared with plan sponsors. Harm is real but nameable and measured, and obesity is still falling, so this is a harder society rather than a refusable one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events or fields. The generic settlement, $0 subsidy with conditioning, bone/muscle warning, oral parity via the high-dose label, 503B-driven gray market, natty/muscle inversion, mainstream flattening, and no new indication all appear. Retatrutide (filed Mar 2027, approved Apr 2028) and CagriSema are allowed by the approval rules. mechanism: the chains are mostly shown (settlement → $49 pens → down-market F&B; conditioning → failed checks → gray market). The $0 generic programme starting Jan 2028 before generics shipped in Apr 2028 is a timing contradiction (claim 1), and attributing the 65+ rise to the programme is thin. The pediatric jump is asserted (claim 3). magnitude: headline figures sit inside the envelope (15%, 21%, age bands ≈15.0%, cycling 7.5/21, payer split sums to ~39.8M, $2.3B + $19.1B ≈ $21.4B). The Medicare $245 branded price versus $99–149 cash (claim 2) and the ~5x jump in annual public spend over the parent's CBO scale are unreconciled.",
+        "generativity": "The Ray Delgado scene is concrete and specific: the 6:10 scale chime, the thigh injection, the DEXA technician in a BUILT NOT BOUGHT shirt, the song that doesn't land, and the adherence-versus-quinceañera dilemma written as CAKE in pencil. The world fields also imply many more characters and scenes: skip-week parties, natty dating profiles, strip-mall muscle clinics, Discord peptide vendors, couples therapists, and attorneys general contesting weight-data sharing."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicare GLP-1 Bridge pilot ends and CMS launches a CMMI model giving $0 generic semaglutide to eligible Medicare and Medicaid enrollees in 24 states",
+        "field": "world/events/3/event",
+        "why": "Mechanism: the model starts in Jan 2028 and hands out $0 generic semaglutide, but generics only reach US pharmacies in Apr 2028. The 18% six-month-check failures and 4.5M generic enrollees by Dec 2028 are squeezed into the months after launch."
+      },
+      {
+        "quote": "~6.5M on branded at $245 × 12 = ~$19.1B",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism and magnitude: the world says generic substitution and step therapy dominate, yet 6.5M public users (59%) stay on branded drugs at Dec 2028, only nine months after generics arrive. The prose then says the programme 'costs about two billion dollars a year', ignoring the $19B branded line."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude: 0.9% of all under-18s is about 650k children. The parent had only ~0.6% of children with obesity on the drug, which is roughly 0.1% of all children, so this is a many-fold jump in two years with no pediatric driver or mechanism."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.33,
+      "inequality": 5.0,
+      "public_health": 5.0,
+      "cohesion": 5.17,
+      "epistemic": 4.67,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.17,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.24,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is recognisably harder. Free coverage is conditioned on cellular-scale weigh-ins and ≥80% refill adherence, and about 18% of enrollees lose $0 status at the first check. 65+ users face fracture and sarcopenia risk, 20–25% report flattening, and the offshore gray market has 2.5M exclusive users. Offsets are cheap access, falling obesity, and a flattened thinness gradient, so inequality is mixed. Harms are mostly named and measured, so the epistemic score stays moderate. Overall is a middle-to-hard 5.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events: 15% adoption, a settlement-driven generic collapse, adherence conditioning, the bone/muscle warning, orforglipron parity, gray-market regrowth, the 'natty' inversion, the $0 subsidy, and mainstream flattening. Approvals follow the envelope (CagriSema Jan 2027, retatrutide 13 months after filing). mechanism: causal chains are mostly shown, but the $0 generic model starts in Jan 2028 before generics exist (claim 1), and branded drugs dominate public volume despite generic-first step therapy (claim 2). The flip of the culture toward muscle is partly asserted. magnitude: 15% current and 21% ever are inside the envelope, and the cycling, age-band, payer-split and $2.3B/$19.1B arithmetic all reconcile. Deductions are for the pediatric 0.9% jump (claim 3) and the prose '$2B a year' that contradicts the $21.4B total.",
+      "generativity": "The Ray Delgado scene is concrete: the 6:10 scale chime, the butter-drawer pen, the DEXA tech in a BUILT NOT BOUGHT shirt, the unmoved song, and the CAKE pencil mark against the 80% refill threshold. The world also implies many more scenes: skip-week parties, 'natty' dating profiles, PBM weigh-in disputes, and gray-market Discord vendors."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.1463,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 20
   }
 }

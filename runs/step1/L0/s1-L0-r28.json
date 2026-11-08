@@ -36,6 +36,41 @@
         "input_tokens": 13530,
         "output_tokens": 20343
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r28-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21609,
+        "output_tokens": 8340
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r28-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21609,
+        "output_tokens": 5488
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r28-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21609,
+        "output_tokens": 5091
+      }
     ]
   },
   "world": {
@@ -284,6 +319,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r28-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Illinois and Montana passed medication-privacy-in-employment laws in 2028 barring premium conditioning on refill data.",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "Mechanism: Montana's legislature does not meet in regular session in even years, and no chain explains how two states legislate within months of employers first adding adherence credits (the June 2028 event). The law-passing is asserted for narrative symmetry."
+        },
+        {
+          "quote": "Direct subsidy: HRSA CMAP provides free Foundayo to up to 1.0M low-income adults (~0.9M enrolled).",
+          "field": "world/state/subsidy_or_mandate",
+          "why": "Magnitude and mechanism: a programme launched in Jan 2028 at community health centres is shown 90% enrolled within the window. Most of these adults would be first-time starters, which sits uneasily with the claim that first-time starts were only ~0.4 pp (~1.06M) across 2027–28, a total that must also cover retatrutide, children and others."
+        },
+        {
+          "quote": "commercial ~5.5M (mostly under diabetes or CVD codes)",
+          "field": "world/access/note",
+          "why": "Magnitude: the population note says the series is the Gallup weight-loss measure and that incretin use coded purely to type 2 diabetes sits mostly outside it. Yet over a third of the 15.6M counted users are described as covered under diabetes or CVD codes, so the payer mix and the series definition do not cleanly reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "A middle class priced off the drug (about 24M off and regaining) sits beside employer adherence credits tied to PBM refill data (the `interior_life` and `state.conditioning` fields). Anhedonia in ~7% of users is measured but unlabelled, and 6–11-year-olds start lifelong therapy. Offsets are real: free CMAP orals for the poorest, a measured and named NAION warning, and state pushback. This is a recognisably harder society with new losers (the middle, children, workers with conditioned benefits), not a refuse-to-live-in one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events and fields, including adoption at 5.9, the Sep 2027 NAION class label, pediatric 6–11 approval, retatrutide approved 13 months after its Feb 2027 filing (inside the ≥12-month rule), Section 232 tariffs, CMAP and the employer credits. mechanism: the main chains are shown (coverage loss, NAION label, regain and backlash), but the Montana 2028 law, the rapid CMAP enrolment and employee assistance programmes 'prescribing' are asserted without a chain (claims 1–2). magnitude: on-drug 5.9, ever-used 15, income thirds (average 5.9) and age bands (about 5.9) are all inside the envelope, and the payer mix sums to 15.6M. The Medicare, Medicaid and CMAP spend arithmetic checks out, and no US generic appears. Minor flaws remain: diabetes-coded users counted in a weight-loss series, and the tight fit between 0.4 pp first-time starts and the CMAP and retatrutide uptake (claims 2–3).",
+        "generativity": "The world has strong implied scenes: potluck at Calvary, the green checkmark and premium credit, dose holidays before pitches, on/off dating tags, and the Sacramento rally. The Ray and Lori vignette shows rather than explains (the cake under plastic wrap, the flat Browns Sunday), and the open tensions give many threads. Characters and institutions are specific and varied across class, region and age."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s1-L0-r28-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "First-time starts fell to roughly 0.4 pp of adults over 2027–28, inside the survey margin, so ever-used still reads 15%.",
+          "field": "world/population/note",
+          "why": "The same world has ~0.9M adults enrolled in the new CMAP, a Medicare model with ~2.1M users, and ~220k children. Many of these must be first-time starts, and they alone exceed 0.4 pp (~1.06M adults). This fails magnitude and reconciliation, and it makes the prose line 'almost nobody started for the first time' contradict the access fields."
+        },
+        {
+          "quote": "Illinois and Montana passed medication-privacy-in-employment laws in 2028 barring premium conditioning on refill data.",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "The employer credits are described as a new practice by a handful of firms, and the bans are dated the same month (2028-06) as their adoption. Montana's legislature meets only in odd-numbered years, so a 2028 law is implausible without a special session. This fails mechanism on timing."
+        },
+        {
+          "quote": "Some employee assistance programmes and addiction clinics prescribe off-label",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "EAPs are counselling and referral services and do not prescribe drugs. Treating them as a prescribing channel that moves heavy-drinker volumes, as the alcohol section does, is an asserted mechanism. No AUD approval or phase 3 result exists to support it, so it fails mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5.5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. About 24M adults are off-drug and regaining, and middle-income workers have lost employer coverage. PBM-verified adherence credits tie benefits to staying on a drug with suspected reward blunting (interior_life, state/conditioning). Children aged 6–11 start lifelong therapy with a stratified access pattern. Mitigants: the poorest gain free orals via CMAP, the harms are measured (the anhedonia cohort, the NAION label), and states are already pushing back, so epistemic and flourishing scores stay moderate.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events or fields. Adoption is 5.9%, employer coverage is 41%, the NAION label is dated Sep 2027, retatrutide is filed Feb 2027 and approved Mar 2028 under the 12-month rule, and the tariffs, CMAP subsidy, backlash, pediatric 6–11 approval and employer adherence credits all appear. mechanism: Most chains are shown (coverage loss and the NAION warning driving exits, tariffs funding CMAP). Claims 1–3 weaken it: the 'almost nobody started' claim contradicts CMAP and the Medicare model, the Montana ban lacks a plausible legislative path, and EAP prescribing is a convenient assertion. magnitude: Population figures sit inside the envelope (5.9% on drug, 15% ever). The age-band and income-third averages, the payer mix (sums to 15.6M) and the spend arithmetic ($6.2B, $3.8B, $1.1B) all check out. The first-time-starts figure of ~1M conflicts with the new public programmes, which is a minor reconciliation gap (claim 1).",
+        "generativity": "The world is rich in implied characters and scenes: a warehouse worker on refill credits, the Calvary potluck with 'reclaiming hunger', dose holidays before pitches, couples negotiating dosing, on/off dating tags, and the Sacramento rally. The day-in-the-life shows rather than explains, for example the cake under plastic wrap and the 'volume knob' line. Ray's lived texture is strong, with the credit app, the half wrap and the 'it's for sugar' answer."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s1-L0-r28-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Illinois and Montana passed medication-privacy-in-employment laws in 2028 barring premium conditioning on refill data.",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "Mechanism: Montana's legislature meets only in odd years, so a 2028 enactment has no shown route. Neither does a bill drafted and passed in states within months of the first employer credits, and no special session is shown."
+        },
+        {
+          "quote": "First-time starts fell to roughly 0.4 pp of adults over 2027–28, inside the survey margin, so ever-used still reads 15%.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: CMAP's 0.9M free slots alone are about 0.34 pp of adults and are likely mostly new starters. Add the new Medicare model, the pediatric approval and retatrutide, and near-zero first-time use is hard to believe. Holding ever-used at exactly 15 looks reverse-engineered to fit the envelope ceiling."
+        },
+        {
+          "quote": "commercial ~5.5M (mostly under diabetes or CVD codes)",
+          "field": "world/access/note",
+          "why": "Mechanism and reconciliation: the population note says the series follows the Gallup weight-loss measure and that T2D-coded use sits mostly outside it. Yet most commercial 'weight-loss users' are diabetes- or CVD-coded, and Ray, on Mounjaro for his A1C, is counted. The counting rule is inconsistent."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is recognisably harder, with new losers. About 24M adults are off-drug and regaining, and middle-income people lost coverage. Employers pay premium credits for PBM-verified adherence (interior_life, state/conditioning), and children 6–11 start lifelong therapy. Offsetting this, the poor get free orals, the NAION risk is measured, and the anhedonia effect is quantified and largely reversible, so the harms are visible and contested rather than hidden.",
+        "plausibility": "driver_fidelity: All ten drivers appear and are traceable. Adoption is 11→5.9, the NAION class label is Sep 2027, retatrutide is approved 13 months after filing, the pediatric 6–11 approval is Oct 2027, and the Section 232 tariffs, the CMAP subsidy, employer-encouraged adherence credits, employer retreat and the backlash are all present. mechanism: Most changes have chains (coverage loss, the label and cost driving stoppage, tariffs funding CMAP), but near-zero first-time starts despite CMAP, Medicare and pediatric access is asserted (claim 2). The diabetes-coded users counted in a weight-loss series is inconsistent (claim 3), and the Montana law in 2028 is unexplained (claim 1). magnitude: Current use 5.9, ever-used 15 (at the envelope ceiling), the income thirds (average 5.9) and the age bands (≈5.9) all fit the envelope. The ever/current/cycling arithmetic and the payer-mix and spend figures reconcile (15.6M, $6.2B, $3.8B, $1.1B). The ever-used ceiling and the 0.4 pp starts are strained.",
+        "generativity": "The prose has strong scenes: Ray's premium-credit app, the potluck at Calvary, the untouched cake. The world supplies many implied characters (the warehouse worker, Lori, the supervisors, the clinic and CMAP enrollees) and concrete settings (Dallas, Oakland, Sacramento). It shows more than it explains, though some of the prose is summary."
+      },
+      "plausibility": 7.35
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Illinois and Montana passed medication-privacy-in-employment laws in 2028 barring premium conditioning on refill data.",
+        "field": "world/interior_life/effect_on_politics",
+        "why": "Mechanism: Montana's legislature does not meet in regular session in even years, and no chain explains how two states legislate within months of employers first adding adherence credits (the June 2028 event). The law-passing is asserted for narrative symmetry."
+      },
+      {
+        "quote": "Direct subsidy: HRSA CMAP provides free Foundayo to up to 1.0M low-income adults (~0.9M enrolled).",
+        "field": "world/state/subsidy_or_mandate",
+        "why": "Magnitude and mechanism: a programme launched in Jan 2028 at community health centres is shown 90% enrolled within the window. Most of these adults would be first-time starters, which sits uneasily with the claim that first-time starts were only ~0.4 pp (~1.06M) across 2027–28, a total that must also cover retatrutide, children and others."
+      },
+      {
+        "quote": "commercial ~5.5M (mostly under diabetes or CVD codes)",
+        "field": "world/access/note",
+        "why": "Magnitude: the population note says the series is the Gallup weight-loss measure and that incretin use coded purely to type 2 diabetes sits mostly outside it. Yet over a third of the 15.6M counted users are described as covered under diabetes or CVD codes, so the payer mix and the series definition do not cleanly reconcile."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.67,
+      "autonomy": 5.83,
+      "inequality": 5.83,
+      "public_health": 5.0,
+      "cohesion": 5.0,
+      "epistemic": 4.0,
+      "overall": 5.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.0,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.18,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "A middle class priced off the drug (about 24M off and regaining) sits beside employer adherence credits tied to PBM refill data (the `interior_life` and `state.conditioning` fields). Anhedonia in ~7% of users is measured but unlabelled, and 6–11-year-olds start lifelong therapy. Offsets are real: free CMAP orals for the poorest, a measured and named NAION warning, and state pushback. This is a recognisably harder society with new losers (the middle, children, workers with conditioned benefits), not a refuse-to-live-in one.",
+      "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events and fields, including adoption at 5.9, the Sep 2027 NAION class label, pediatric 6–11 approval, retatrutide approved 13 months after its Feb 2027 filing (inside the ≥12-month rule), Section 232 tariffs, CMAP and the employer credits. mechanism: the main chains are shown (coverage loss, NAION label, regain and backlash), but the Montana 2028 law, the rapid CMAP enrolment and employee assistance programmes 'prescribing' are asserted without a chain (claims 1–2). magnitude: on-drug 5.9, ever-used 15, income thirds (average 5.9) and age bands (about 5.9) are all inside the envelope, and the payer mix sums to 15.6M. The Medicare, Medicaid and CMAP spend arithmetic checks out, and no US generic appears. Minor flaws remain: diabetes-coded users counted in a weight-loss series, and the tight fit between 0.4 pp first-time starts and the CMAP and retatrutide uptake (claims 2–3).",
+      "generativity": "The world has strong implied scenes: potluck at Calvary, the green checkmark and premium credit, dose holidays before pitches, on/off dating tags, and the Sacramento rally. The Ray and Lori vignette shows rather than explains (the cake under plastic wrap, the flat Browns Sunday), and the open tensions give many threads. Characters and institutions are specific and varied across class, region and age."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.0,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 27
   }
 }

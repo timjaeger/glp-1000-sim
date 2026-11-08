@@ -36,6 +36,41 @@
         "input_tokens": 13499,
         "output_tokens": 16806
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r08-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20356,
+        "output_tokens": 5867
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r08-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20356,
+        "output_tokens": 7581
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r08-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20356,
+        "output_tokens": 7309
+      }
     ]
   },
   "world": {
@@ -289,6 +324,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r08-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Priority vouchers went to retatrutide and the bimagrumab combo filing.",
+          "field": "world/state/regulatory_posture",
+          "why": "Mechanism: the starting world shows a National Priority Voucher cutting Foundayo's review to 50 days, yet retatrutide takes 17 months from filing to approval. The voucher claim and the pipeline_note timeline contradict each other."
+        },
+        {
+          "quote": "Across nine million older users it was enough to make falls clinics a growth business",
+          "field": "prose/paragraph_4",
+          "why": "Magnitude: the payer mix puts total Medicare users at ~7.2M, and most of them are diabetes Part D. Nine million older users sits awkwardly against that, and the study cohort is only ~1.1M."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: this is roughly 0.7M children, up from about 0.1% of under-18s in 2026, a large jump in two years when the only new approval covers ages 6–11. The prose says 'one child in a thousand' for that band while the note says 0.15%."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Adherence-conditioned Medicare and Medicaid access, BMI-linked employer surcharges and pen-cap data flowing to PBMs mean people feeling flat or with bone loss are priced into staying on the drug. The ledger adds a ~1.4 hip-fracture hazard ratio in 65+ and 6–11-year-olds starting a likely chronic drug. The bottom third is still least served while the muscle ideal raises the cost of an acceptable body. Harm is mostly labelled and discussable rather than hidden, which keeps it short of the structural-and-invisible tier, so overall is about 6.",
+        "plausibility": "driver_fidelity: every driver traces to a field and event: pediatric 6–11 approval (2027-03), bone/muscle warning (2027-11), conditioning (2027-12), the bimagrumab filing within the approval rules, the dating-app inversion, the niche side effect, and status-quo coverage at 57%. mechanism: most chains are shown, such as cheap thinness leading to the muscle ideal and the cohort leading to the label and DEXA requirement. The 'priority voucher' claim against a 17-month retatrutide review (claim 1) is contradictory, and the observational cohort jumping to 'established' with a class warning in months is thin. magnitude: on-drug 16.7, ever 23 (near the 23.7 edge), the income and age checks, the payer-mix sum and the Medicare/Medicaid dollar arithmetic all reconcile, and approvals respect the 12-month rule. The 'nine million older users' versus 7.2M Medicare mismatch (claim 2) and the pediatric figures (claim 3) are minor reconciliation gaps.",
+        "generativity": "Denise's Thursday pen cap, surcharge and 'Strong Bones' class, Marcus skipping the pill until October, Kaylee's pen and the stepmother's ribeye form an implied ensemble. The dating-app status field, 'natty' as a badge, and HR/ADA collisions over flatness each suggest further scenes. Daily life has concrete texture, and the flat-affect ending shows the side effect rather than explaining it."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r08-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~1% of under-18s, roughly 5% of children with obesity",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the starting world has about 0.6% of children with obesity prescribed, so this is roughly an 8x jump in two years. The only stated cause is the 6–11 approval, which the note itself puts at ~0.15% of 6–11s, and the prose's 'one child in a thousand' does not match that either."
+        },
+        {
+          "quote": "Lilly's tirzepatide + bimagrumab phase 3 (started late 2026, 48-week primary endpoint) read out in May 2028: ~20% weight loss with lean mass roughly preserved.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the parent lists bimagrumab only as 'in trials', and the candidate asserts a phase 3 start, enrollment, a 48-week endpoint and a readout within about 18 months, then a filing four months later. That is an extremely compressed timeline with no chain shown."
+        },
+        {
+          "quote": "Across nine million older users it was enough to make falls clinics a growth business and DEXA studios a strip-mall fixture.",
+          "field": "prose/paragraph_4",
+          "why": "Magnitude: the payer mix gives Medicare only ~7.2M users, and that figure includes under-65 disabled beneficiaries. Nine million 65+ users therefore needs roughly 2.5M or more older users on commercial or cash coverage, which is never reconciled."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Benefits conditioning (80% PDC, pen-cap data flowing to PBMs, BMI surcharges, Medicare re-qualification) pressures people to stay on a drug with a labelled hip-fracture and flatness burden. This drives the high autonomy score. Children aged 6–11 are on chronic therapy with an unanswered bone-growth question, the bottom income third still lags in access, and the 'natty' muscle ideal re-prices an acceptable body. Harm is mostly nameable and labelled rather than hidden, which holds epistemic and cohesion at mid-range.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Pediatric under-12 approval, the bone/muscle label wave, the bimagrumab combo realised as a filing only, aesthetic inversion, benefits conditioning, managed price decline and the niche side effect are all present. Retatrutide and CagriSema timing follow the approval rules. mechanism: the causal chains are mostly shown (fracture cohort to label to DEXA requirement; Bridge extension to surcharges; thinness cost to the muscle ideal). Weaker points are the compressed bimagrumab phase 3 timeline (claim 2), the asserted '~14 states' Medicaid uptake, and small prose/JSON mismatches ('quarter of all users' versus 27% of ever-users). magnitude: on-drug 16.7% and ever-used 23% sit inside the envelope, though ever-used is near its edge. The age, income, payer-mix and Medicare/Medicaid spend arithmetic all reconcile. Remaining gaps are the unreconciled nine million older users against 7.2M on Medicare (claim 3), the 'one in a thousand' versus 0.15% inconsistency, and the large pediatric jump (claim 1).",
+        "generativity": "The prose has strong scenes: Denise's blinking pen cap and waived surcharge, the Strong Bones kettlebell class, Marcus skipping the $149 pill, Kaylee on a pen, and the ribeye-eating stepmother performing 'never been on anything'. The world adds texture through dating-app status fields, 'natty' slang, ADA accommodation requests and DEXA strip-mall studios. The ending, a flat 'fine', ties back to the niche side effect without melodrama."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r08-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~1% of under-18s, roughly 5% of children with obesity",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: the 2026 baseline was ~0.6% of children with obesity. Reaching 5% implies roughly an 8–9× jump, and the under-12 approval (about 0.15% of ages 6–11, roughly 37k children) explains almost none of it. Most of the ~730k implied pediatric users would have to be teens, and no chain is shown."
+        },
+        {
+          "quote": "Across nine million older users it was enough to make falls clinics a growth business and DEXA studios a strip-mall fixture.",
+          "field": "prose/paragraph_3",
+          "why": "magnitude: 15% of ~60M adults 65+ gives ~9M older users, but the payer mix puts total Medicare users at only 7.2M, including under-65 disabled beneficiaries and diabetes Part D. Nearly all 65+ adults are on Medicare, so the figures do not reconcile. It also sits oddly against the 1.1M-user cohort."
+        },
+        {
+          "quote": "large employers adopt matching BMI/adherence wellness surcharges via PBM data",
+          "field": "world/events/2/event",
+          "why": "mechanism: large employers adopt BMI- and adherence-linked surcharges in the same month as the Medicare rule change. That assumes employers receive pen-cap or PBM adherence flags despite HIPAA limits and a falling employer-coverage share. Nothing in the parent world explains this rapid diffusion."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Adherence conditioning in Medicare, Medicaid and employer plans, with surcharges and re-qualification, constrains people who want to stop despite bone loss or flatness (autonomy). The hip-fracture and sarcopenia wave in 65+ users and open-ended pediatric exposure under a 10-year registry are real harms (public_health). The bottom third still has the lowest access while the muscle ideal raises the price of an acceptable body (inequality). Harms are labelled, measured and argued over in HR offices, so epistemic badness stays moderate, and there is no structural invisibility or melodrama.",
+        "plausibility": "driver_fidelity: every driver is visibly realised with a matching event. Adoption is +5.7 pp, prices decline modestly, the pediatric 6–11 approval is dated, bone and muscle signals carry a label and a cohort, the bimagrumab combo is filed but not approved (allowed by the rules), conditioning is built into the Medicare extension, and the apathy label stays niche. Nothing contradicts a driver.\nmechanism: the main chains are shown (cohort to label to DEXA requirement to falls clinics, and price gap to cheap thinness to muscle ideal). Several shifts are asserted: the pediatric jump from 0.6% to 5% of children with obesity, employers receiving PBM adherence flags, dating apps adding a GLP-1 field, and an anhedonia label that is quick and 'established' from a standing start.\nmagnitude: current (16.7) and ever-used (23, near the 23.7 cap) are inside the envelope, and the Medicare and Medicaid arithmetic multiplies out ($4.7B net, $4.4B). Payer mix sums to 43.8M and the age and income checks work. The ~9M users 65+ against 7.2M total Medicare users does not reconcile, and the prose rounds 0.15% to 'one in a thousand' and says 'a quarter of all users' for 27% of ever-users.",
+        "generativity": "The Denise, Marcus and Kaylee vignette shows rather than explains: the blinking pen cap, the surcharge waiver, the Strong Bones class, osteopenia described 'like it's weather', a pill bought only when there's a spare $149, and a stepmother who performs being 'never on anything'. Several scenes are implied: HR/ADA complaints, steakhouse 'natty' signalling, dating-app status fields, and clinic counselling. Daily life has texture across class and age."
+      },
+      "plausibility": 6.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Priority vouchers went to retatrutide and the bimagrumab combo filing.",
+        "field": "world/state/regulatory_posture",
+        "why": "Mechanism: the starting world shows a National Priority Voucher cutting Foundayo's review to 50 days, yet retatrutide takes 17 months from filing to approval. The voucher claim and the pipeline_note timeline contradict each other."
+      },
+      {
+        "quote": "Across nine million older users it was enough to make falls clinics a growth business",
+        "field": "prose/paragraph_4",
+        "why": "Magnitude: the payer mix puts total Medicare users at ~7.2M, and most of them are diabetes Part D. Nine million older users sits awkwardly against that, and the study cohort is only ~1.1M."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 1",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude: this is roughly 0.7M children, up from about 0.1% of under-18s in 2026, a large jump in two years when the only new approval covers ages 6–11. The prose says 'one child in a thousand' for that band while the note says 0.15%."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.67,
+      "inequality": 6.0,
+      "public_health": 5.83,
+      "cohesion": 4.83,
+      "epistemic": 4.67,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.1,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Adherence-conditioned Medicare and Medicaid access, BMI-linked employer surcharges and pen-cap data flowing to PBMs mean people feeling flat or with bone loss are priced into staying on the drug. The ledger adds a ~1.4 hip-fracture hazard ratio in 65+ and 6–11-year-olds starting a likely chronic drug. The bottom third is still least served while the muscle ideal raises the cost of an acceptable body. Harm is mostly labelled and discussable rather than hidden, which keeps it short of the structural-and-invisible tier, so overall is about 6.",
+      "plausibility": "driver_fidelity: every driver traces to a field and event: pediatric 6–11 approval (2027-03), bone/muscle warning (2027-11), conditioning (2027-12), the bimagrumab filing within the approval rules, the dating-app inversion, the niche side effect, and status-quo coverage at 57%. mechanism: most chains are shown, such as cheap thinness leading to the muscle ideal and the cohort leading to the label and DEXA requirement. The 'priority voucher' claim against a 17-month retatrutide review (claim 1) is contradictory, and the observational cohort jumping to 'established' with a class warning in months is thin. magnitude: on-drug 16.7, ever 23 (near the 23.7 edge), the income and age checks, the payer-mix sum and the Medicare/Medicaid dollar arithmetic all reconcile, and approvals respect the 12-month rule. The 'nine million older users' versus 7.2M Medicare mismatch (claim 2) and the pediatric figures (claim 3) are minor reconciliation gaps.",
+      "generativity": "Denise's Thursday pen cap, surcharge and 'Strong Bones' class, Marcus skipping the pill until October, Kaylee's pen and the stepmother's ribeye form an implied ensemble. The dating-app status field, 'natty' as a badge, and HR/ADA collisions over flatness each suggest further scenes. Daily life has concrete texture, and the flat-affect ending shows the side effect rather than explaining it."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.5213,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 10
   }
 }

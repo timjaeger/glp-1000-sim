@@ -37,6 +37,41 @@
         "input_tokens": 13474,
         "output_tokens": 16324
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r19-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20756,
+        "output_tokens": 5476
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r19-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20756,
+        "output_tokens": 5133
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r19-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20756,
+        "output_tokens": 7140
+      }
     ]
   },
   "world": {
@@ -290,6 +325,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r19-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA's broadcast-ad rule ends TV and influencer advertising of incretins for weight",
+          "field": "world/events/1/event",
+          "why": "mechanism: an FDA rule that ends TV and influencer drug advertising, inside about a year and despite First Amendment limits, is asserted with no rulemaking chain. It fits the restriction driver only loosely."
+        },
+        {
+          "quote": "FDA Drug Safety Communication (Sep 2028) advising hydration counselling and periodic renal/electrolyte checks for long-term users",
+          "field": "world/safety_ledger/13/regulatory_response",
+          "why": "mechanism: the FDA issues a Drug Safety Communication in the same month the VA and Danish registry analyses appear. Observational registry findings with a sharp year-5 onset would normally need replication and review first, so this is a convenient coincidence."
+        },
+        {
+          "quote": "alcohol use disorder — guideline-endorsed (ASAM/APA, Dec 2027) for AUD with obesity or after first-line failure",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "mechanism: a joint ASAM/APA guideline appears about 18 months after a single n=108 RCT and a phase 2 trial, with no chain shown. The label update lands in the same month, which is another convenient coincidence."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society. Stalled prices freeze a top-third vs bottom-third gap (21% vs 11.5%) and leave about 17M adults off-drug through lost coverage. A new long-horizon renal signal in over-65s, unmonitored wellness use by about 6.8M people, and an apathy label that touches hundreds of thousands add to it. Harms are small in absolute terms and are named, measured and labelled, so epistemic badness is low. The 'unmedicated' backlash and the adolescent restrictions add some cohesion strain but no catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. These are the 30% triple agonist (retatrutide), stalled prices at $299–349, status-quo Medicare extension, AUD and longevity indications, the year-5 thirst signal, the Texas backlash rally, restriction via the ad rule and state laws, and the niche apathy label. None is contradicted. mechanism: the stalled price is explained by retatrutide capacity and tariffs, and the thirst mechanism is proposed. The ad rule, the same-month DSC and the fast AUD guideline (claims 1–3) are asserted more than shown. magnitude: on-drug 16.5% and ever-used 23% sit inside the envelope. Retatrutide approval comes 13 months after filing and survodutide is unapproved, both allowed. Medicare and Medicaid dollars multiply out ($7.1B, $7.6B) and the payer mix sums to about 43M. Income thirds average to 16.5% and the cycling arithmetic fits, with only minor looseness on the 65+ and wellness-user splits.",
+        "generativity": "The Ray and Linda scene is rich: the Sharpie-marked jug, the buzzing DRINK reminder, the UNMEDICATED T-shirt, the half-eaten sub and the untouched beer. It shows rather than explains, and it ties to the thirst signal, the backlash and the Medicare pill. The world also implies many other scenes: dating-profile fields, staggered cycling in couples, church fasting groups, concierge wellness clinics and bar owners."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s1-L0-r19-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA's broadcast-ad rule ends TV and influencer advertising of incretins for weight",
+          "field": "world/events/1/event",
+          "why": "Mechanism: a final FDA rule banning broadcast and influencer advertising of a drug class within about a year of the longevity campaigns skips notice-and-comment rulemaking and First Amendment litigation. It is asserted, not shown."
+        },
+        {
+          "quote": "~3M Americans have now been on a GLP-1 continuously for 5+ years, nearly all for type 2 diabetes",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: real-world persistence is far below this. The 3M figure for unbroken five-year use is aggressive and is not derived from any diabetes-user base, yet it carries the whole long-horizon signal."
+        },
+        {
+          "quote": "no excess in years 1–4; after year 5, hazard ratio ~1.35 for nephrolithiasis and ~1.3 for AKI hospitalisation vs matched SGLT2/DPP-4 users",
+          "field": "world/safety_ledger/13/prevalence_note",
+          "why": "Mechanism: an abrupt onset exactly at year five is convenient. SGLT2 inhibitors themselves cause volume depletion, which makes them a poor comparator. The FDA Drug Safety Communication also lands the same month as the registry studies."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 5.5,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 4.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society with new losers but no catastrophe. Stalled prices freeze the class gap (top third 21% vs bottom 11.5%, with Southern non-expansion states left behind). About 17M people cycle off for coverage or cash reasons, and wellness users take a drug with no disease indication. The thirst signal is small in absolute terms (3–4 events per 1,000 person-years in over-65s). Apathy is labelled and measured, and the 'unmedicated' backlash adds friction without collapse. The harms are largely nameable and measured, so epistemic badness is low.",
+        "plausibility": "driver_fidelity: Every driver appears in fields and dated events: stalled prices, status-quo coverage, AUD and wellness indications, the five-year signal, a 30% triple agonist, no market shock, backlash, restriction, and a niche side effect. Adoption of +5.5 pp against a stipulated 5.7 is within tolerance. mechanism: Most chains are shown, such as the retatrutide capacity and tariff story behind the price stall and the thirst mechanism. The FDA ad rule, the 3M five-year users, and the sharp year-five cliff with a same-month FDA communication are asserted or convenient, as flagged in the claims above. magnitude: On-drug 16.5% and ever-used 23% sit inside the envelope. Retatrutide is approved 13 months after its Feb 2027 filing, and survodutide is correctly left unapproved. The payer mix sums to about 43M. Medicare ($7.1B) and Medicaid ($7.6B) arithmetic checks out. The income and age bands average to 16.5%, and the cycling arithmetic gives 30%. Only minor gaps remain, such as 27 Medicaid states and the 'uncommon' label range versus a 1–2% rate.",
+        "generativity": "The Ray and Linda scene is strong: the Sharpie hydration jug, the DRINK phone alert, the UNMEDICATED T-shirt at the senior center, and the beer left on the table. It also shows rather than explains. World fields add texture (tasting plates, staggered cycling, pen-day reminders, rallies in Oakland and Nashville). Many characters and scenes are implied."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s1-L0-r19-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA's broadcast-ad rule ends TV and influencer advertising of incretins for weight",
+          "field": "world/events/1/event",
+          "why": "mechanism: a final FDA rule banning TV and influencer advertising within about a year runs into First Amendment limits and FDA's weak reach over influencers. The chain from telehealth longevity campaigns to a finished rule is asserted, not shown."
+        },
+        {
+          "quote": "FDA Drug Safety Communication (Sep 2028) advising hydration counselling and periodic renal/electrolyte checks for long-term users",
+          "field": "world/safety_ledger/12/regulatory_response",
+          "why": "mechanism: the registry analyses and the FDA Drug Safety Communication land in the same month (Sep 2028), and a Danish registry result is acted on at once. That is a convenient coincidence with no review or confirmation step."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: 0.5% of all minors is roughly 370k children. That is a multiple of the starting ~0.6% of children with obesity, and it sits alongside nine state bans and an under-12 freeze. The growth is not reconciled with the restrictions."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. Stalled prices freeze a top/bottom use gap of 21% vs 11.5%. About 17M people are off-drug, many after losing employer coverage. A dehydration and kidney-stone signal appears in over-65s with long use, and apathy sits on the label while about 6.8M wellness users go largely unmonitored. Cohesion takes a modest hit from the 'unmedicated' backlash and staggered-cycling couples. Epistemic harm is limited because harms are labelled and measured.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These are the stalled $299–349 price, the Bridge extension at status quo, AUD and longevity use, the thirst signal, retatrutide at ~30%, the unmedicated backlash, the ad and pediatric restrictions, and apathy kept as a niche label. Adoption is 5.5 pp against the 5.7 stipulated, inside the ±2 band. mechanism: The thirst signal has a stated mechanism and the price stall has a stated cause (tariffs and retatrutide capacity). The ad-rule claim, the same-month Drug Safety Communication and the Dec 2027 guideline plus label update are asserted or coincidental (claims 1 and 2). magnitude: Current use of 16.5% is in range, and ever-used of 23% is near the 23.7 ceiling but inside it. Retatrutide's 13-month review fits the approval rule, and survodutide is correctly not approved. Payer mix, Medicare/Medicaid spend ($7.1B, $7.6B), age and income bands, and the cycling arithmetic all reconcile. The only soft spot is the pediatric 0.5% (claim 3).",
+        "generativity": "The prose has strong concrete texture: the Sharpie-marked water jug, the DRINK phone alert, the UNMEDICATED T-shirt, the half-eaten sub and the untouched beer. It implies several characters (Ray, Linda, his daughter, the desk clerk) and scenes such as the fish fry, the senior center and the Texas rally. The world JSON adds more scene seeds, including staggered cycling in couples, 'tasting plate' Thanksgivings and pen-day reminders. The day in the life mostly shows rather than explains."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "FDA's broadcast-ad rule ends TV and influencer advertising of incretins for weight",
+        "field": "world/events/1/event",
+        "why": "mechanism: an FDA rule that ends TV and influencer drug advertising, inside about a year and despite First Amendment limits, is asserted with no rulemaking chain. It fits the restriction driver only loosely."
+      },
+      {
+        "quote": "FDA Drug Safety Communication (Sep 2028) advising hydration counselling and periodic renal/electrolyte checks for long-term users",
+        "field": "world/safety_ledger/13/regulatory_response",
+        "why": "mechanism: the FDA issues a Drug Safety Communication in the same month the VA and Danish registry analyses appear. Observational registry findings with a sharp year-5 onset would normally need replication and review first, so this is a convenient coincidence."
+      },
+      {
+        "quote": "alcohol use disorder — guideline-endorsed (ASAM/APA, Dec 2027) for AUD with obesity or after first-line failure",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "mechanism: a joint ASAM/APA guideline appears about 18 months after a single n=108 RCT and a phase 2 trial, with no chain shown. The label update lands in the same month, which is another convenient coincidence."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 4.5,
+      "inequality": 5.83,
+      "public_health": 4.83,
+      "cohesion": 5.0,
+      "epistemic": 3.67,
+      "overall": 4.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.5,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.88,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a recognisably harder society. Stalled prices freeze a top-third vs bottom-third gap (21% vs 11.5%) and leave about 17M adults off-drug through lost coverage. A new long-horizon renal signal in over-65s, unmonitored wellness use by about 6.8M people, and an apathy label that touches hundreds of thousands add to it. Harms are small in absolute terms and are named, measured and labelled, so epistemic badness is low. The 'unmedicated' backlash and the adolescent restrictions add some cohesion strain but no catastrophe.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. These are the 30% triple agonist (retatrutide), stalled prices at $299–349, status-quo Medicare extension, AUD and longevity indications, the year-5 thirst signal, the Texas backlash rally, restriction via the ad rule and state laws, and the niche apathy label. None is contradicted. mechanism: the stalled price is explained by retatrutide capacity and tariffs, and the thirst mechanism is proposed. The ad rule, the same-month DSC and the fast AUD guideline (claims 1–3) are asserted more than shown. magnitude: on-drug 16.5% and ever-used 23% sit inside the envelope. Retatrutide approval comes 13 months after filing and survodutide is unapproved, both allowed. Medicare and Medicaid dollars multiply out ($7.1B, $7.6B) and the payer mix sums to about 43M. Income thirds average to 16.5% and the cycling arithmetic fits, with only minor looseness on the 65+ and wellness-user splits.",
+      "generativity": "The Ray and Linda scene is rich: the Sharpie-marked jug, the buzzing DRINK reminder, the UNMEDICATED T-shirt, the half-eaten sub and the untouched beer. It shows rather than explains, and it ties to the thirst signal, the backlash and the Medicare pill. The world also implies many other scenes: dating-profile fields, staggered cycling in couples, church fasting groups, concierge wellness clinics and bar owners."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.7075,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 37
   }
 }

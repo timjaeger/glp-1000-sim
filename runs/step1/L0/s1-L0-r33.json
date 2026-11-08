@@ -37,6 +37,41 @@
         "input_tokens": 13570,
         "output_tokens": 17212
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r33-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22435,
+        "output_tokens": 7138
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r33-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22435,
+        "output_tokens": 5805
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r33-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 22435,
+        "output_tokens": 5072
+      }
     ]
   },
   "world": {
@@ -292,6 +327,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r33-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "36 states plus DC adopt matching Medicaid coverage",
+          "field": "world/events/3/event",
+          "why": "Mechanism: it asserts that 36 states adopted Medicaid obesity coverage in the same month as the federal conversion, with no chain for state budget decisions or timing. The same world says opt-out states 'cite budget cost'."
+        },
+        {
+          "quote": "On-base alcohol sales at Army installations are down ~15%.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: about 110k active-duty users (~8%) with a directive only from Jun 2027 cannot plausibly produce a 15% Army-wide on-base sales drop within roughly 18 months without a stated chain. The figure appears with no source or arithmetic."
+        },
+        {
+          "quote": "Global incretin market ~$115B in 2028 (fictional estimate); volume is up sharply and price per patient is down.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the candidate's own US payer figures sum to more than this. Medicare is ~$28.7B, Medicaid ~$11.9B, and ~12M TrumpRx cash users at $199–299 come to roughly $30B+. Add 14M employer users and the US total plausibly exceeds the stated global market."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. Pressure runs through the DoD directive, police fitness-for-duty clearance tied to programme compliance, and enlistment waivers conditional on treatment, which pushes autonomy up. The 14 Medicaid opt-out states, the pediatric growth and eating-disorder signal, and 'dose holidays' feeding cycling add harm. Epistemic harm is moderate because the harms are labelled, measured and discussed, and the counterfeit cluster (9 deaths) is contained by an import alert.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields. Adoption is 19.1, Medicare is permanent at $199, AUD has guideline endorsement plus an sNDA, and the pediatric DSC, retatrutide approval, counterfeit cluster, 'natty' inversion and DoD directive are all present. Nicotine is guideline-only and the 'generic flood' is mostly gray-market imports, which is slightly thin but acceptable. personality_layer stays a niche side effect.\nmechanism: Several chains are shown, such as Medicare conversion, the counterfeit cluster to the import alert, and the pediatric registry to the DSC to state laws. Others are asserted, namely the simultaneous 36-state Medicaid adoption, reward blunting jumping from 'emerging' to 'established' with class labels updated by 2028, and the 15% Army alcohol-sales drop (claims 1–2).\nmagnitude: Adult use, ever-use, income thirds, age bands, the cycling arithmetic, the payer split (18.5/14/17.5M = 50M) and the Medicare/Medicaid dollars all reconcile inside the envelope. Approvals (CagriSema Jan 2027, retatrutide 14 months after filing) and the no-US-generic rule are respected. The one gap is that US payer spending appears to exceed the stated $115B global market (claim 3), plus the unclear gross-versus-net treatment of the $50 copay.",
+        "generativity": "The prose vignette shows rather than explains. Renee's pill, Kiana's height chart and the parking-lot question, Darnell's quiet porch, and the pie-eating broadcast imply several characters and scenes. The world also has texture in dating profiles, supper clubs, 'dose holidays' and union grievances. Some of the world fields are more lists than scenes."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r33-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Three states (Texas, Utah, Florida) passed laws requiring pediatric endocrinologist sign-off under 12.",
+          "field": "world/safety_ledger/12/regulatory_response",
+          "why": "mechanism: The FDA communication is dated Feb 2028 and the world ends in 2028. Texas's legislature does not hold a regular session in 2028, so passing a law within months is hard to credit. No special session or other chain is shown."
+        },
+        {
+          "quote": "36 states plus DC adopt matching Medicaid coverage",
+          "field": "world/events/3/event",
+          "why": "mechanism: Thirty-six state Medicaid programmes are said to adopt a costly obesity benefit in the same month Congress acts. State budgets, waivers and rulemaking would take longer. The pairing is asserted and not shown to follow from the federal law or any match incentive."
+        },
+        {
+          "quote": "On-base alcohol sales at Army installations are down ~15%.",
+          "field": "world/economy/alcohol/state",
+          "why": "magnitude: The directive dates from Jun 2027 and only about 8% of active-duty members are on the drug. A 15% fall in on-base sales within roughly a year is steeper than the civilian spirits decline of about 7% over two years. The claim is also Army-specific, though the directive covers all of DoD."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Mixed ledger: broad access via Medicare and Medicaid and a labelled, measured reward-blunting effect, against a pediatric growth and eating signal, 14 opt-out states hardening an obesity class line, counterfeit deaths, and police and military programmes with coercive overtones (conditioning, readiness records, union grievances). The harms are visible and discussed, which holds epistemic and flourishing scores down. Autonomy and inequality carry the most weight, especially children on the drug and workers whose 'voluntary' programmes are in question.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is 19.1 (+8.1), the price decline is managed, Medicare and Medicaid expand, AUD and nicotine guidelines appear with an sNDA filing, the pediatric signal is dated, retatrutide is approved at ~28%, the counterfeit cluster is dated, the aesthetic inversion is present, the military directive is dated, and the personality layer stays niche. mechanism: Most chains are shown, such as the Medicare conversion, the counterfeit cluster to import alert, and the pediatric signal to a state-law response. A few are asserted: 36 states joining Medicaid at once, Texas passing a law in 2028, and a 15% on-base alcohol drop (claims 1–3). magnitude: Adult use, ever-use, income thirds and age bands are inside the envelope and reconcile. The retatrutide filing-to-approval gap is 14 months. The cycling arithmetic and Medicare/Medicaid spend multiply out. Small gaps remain: 12M + 5M cash-channel users is not the stated 17.5M, and the CagriSema, retatrutide and survodutide filings are missing from the events list.",
+        "generativity": "The prose vignette is concrete and implies several characters: Renee, Kiana on the height wall, and Darnell on Zepbound who 'just doesn't need anything'. Scenes are implied throughout: dose holidays before weddings, 'natty' dating profiles, appetite restaurants, and union lawyers over 'voluntary'. It shows rather than explains and leaves open questions, such as Kiana asking to stop."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s1-L0-r33-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "On-base alcohol sales at Army installations are down ~15%.",
+          "field": "world/economy/alcohol/state",
+          "why": "magnitude/mechanism: the directive dates from Jun 2027 and the world estimates only ~8% of active-duty members on the drug, below the ~19% adult rate. A 15% drop in sales is out of proportion to that uptake, and no chain is shown."
+        },
+        {
+          "quote": "36 states plus DC adopt matching Medicaid coverage",
+          "field": "world/events/3/event",
+          "why": "mechanism: dozens of state Medicaid programs adopt a costly benefit in the same month Congress acts, with no budget or waiver process shown. The 2026 baseline only said Medicaid was 'expected to follow'."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.5",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: in 2026 prescribing reached only ~0.6% of children with obesity, roughly 0.1% of all children. A rise to 0.5% of all minors (~365k) is about a 4–5x jump, well above the 1.7x adult growth, while the pediatric signal and state restrictions arrive late in the window."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder, but not dire. Obesity treatment is cheaper and wider (Medicare at $199, $50 copay), and harms are named and measured: labelled apathy, a pediatric growth signal, and a counterfeit cluster with 9 deaths. The costs are real: a 14-state Medicaid opt-out line, police and military programmes tied to fitness-for-duty (autonomy), cycling as a mass experience, and children on the drug for years with unresolved signals. Because the harms are visible and discussed, epistemic and flourishing stay moderate.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: public expansion, AUD and nicotine guidelines, the pediatric DSC, retatrutide approval, counterfeits, aesthetic inversion, the military directive, and personality_layer staying niche. Approval timing also complies with the envelope rules. mechanism: Most chains are shown, but the Medicaid claim (36 states adopt in the same month Congress acts), the 15% Army alcohol sales drop against ~8% uptake, and the quick class-wide apathy label change are asserted rather than shown. magnitude: On-drug 19.1% and ever-used 25.5% are inside the envelope, the latter near the cap. Income, age-band, cycling, payer-split, and Medicare/Medicaid spending arithmetic all reconcile. The pediatric 0.5% (~4–5x the 2026 level) and the survodutide filing living only in the pipeline note are minor strains.",
+        "generativity": "Many characters and scenes are implied: Medicare retirees, Medicaid-opt-out working poor, soldiers and police under programme compliance, 'natty' dating profiles, and 'appetite' restaurants. The day-in-the-life mostly shows rather than explains, with the 148.2 height measurement, Darnell's flatness, and the pie-eating TV. Some prose leans toward summary of the world state, but the texture is strong."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "36 states plus DC adopt matching Medicaid coverage",
+        "field": "world/events/3/event",
+        "why": "Mechanism: it asserts that 36 states adopted Medicaid obesity coverage in the same month as the federal conversion, with no chain for state budget decisions or timing. The same world says opt-out states 'cite budget cost'."
+      },
+      {
+        "quote": "On-base alcohol sales at Army installations are down ~15%.",
+        "field": "world/economy/alcohol/state",
+        "why": "Mechanism and magnitude: about 110k active-duty users (~8%) with a directive only from Jun 2027 cannot plausibly produce a 15% Army-wide on-base sales drop within roughly 18 months without a stated chain. The figure appears with no source or arithmetic."
+      },
+      {
+        "quote": "Global incretin market ~$115B in 2028 (fictional estimate); volume is up sharply and price per patient is down.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: the candidate's own US payer figures sum to more than this. Medicare is ~$28.7B, Medicaid ~$11.9B, and ~12M TrumpRx cash users at $199–299 come to roughly $30B+. Add 14M employer users and the US total plausibly exceeds the stated global market."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 6.0,
+      "inequality": 5.17,
+      "public_health": 5.0,
+      "cohesion": 5.0,
+      "epistemic": 4.17,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.5,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.47,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "This is a recognisably harder society with new losers, not a collapse. Pressure runs through the DoD directive, police fitness-for-duty clearance tied to programme compliance, and enlistment waivers conditional on treatment, which pushes autonomy up. The 14 Medicaid opt-out states, the pediatric growth and eating-disorder signal, and 'dose holidays' feeding cycling add harm. Epistemic harm is moderate because the harms are labelled, measured and discussed, and the counterfeit cluster (9 deaths) is contained by an import alert.",
+      "plausibility": "driver_fidelity: Every driver is traceable to events and fields. Adoption is 19.1, Medicare is permanent at $199, AUD has guideline endorsement plus an sNDA, and the pediatric DSC, retatrutide approval, counterfeit cluster, 'natty' inversion and DoD directive are all present. Nicotine is guideline-only and the 'generic flood' is mostly gray-market imports, which is slightly thin but acceptable. personality_layer stays a niche side effect.\nmechanism: Several chains are shown, such as Medicare conversion, the counterfeit cluster to the import alert, and the pediatric registry to the DSC to state laws. Others are asserted, namely the simultaneous 36-state Medicaid adoption, reward blunting jumping from 'emerging' to 'established' with class labels updated by 2028, and the 15% Army alcohol-sales drop (claims 1–2).\nmagnitude: Adult use, ever-use, income thirds, age bands, the cycling arithmetic, the payer split (18.5/14/17.5M = 50M) and the Medicare/Medicaid dollars all reconcile inside the envelope. Approvals (CagriSema Jan 2027, retatrutide 14 months after filing) and the no-US-generic rule are respected. The one gap is that US payer spending appears to exceed the stated $115B global market (claim 3), plus the unclear gross-versus-net treatment of the $50 copay.",
+      "generativity": "The prose vignette shows rather than explains. Renee's pill, Kiana's height chart and the parking-lot question, Darnell's quiet porch, and the pie-eating broadcast imply several characters and scenes. The world also has texture in dating profiles, supper clubs, 'dose holidays' and union grievances. Some of the world fields are more lists than scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 4.7925,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 33
   }
 }

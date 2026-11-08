@@ -36,6 +36,41 @@
         "input_tokens": 13529,
         "output_tokens": 17839
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r09-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21524,
+        "output_tokens": 6875
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r09-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21524,
+        "output_tokens": 6372
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r09-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21524,
+        "output_tokens": 6332
+      }
     ]
   },
   "world": {
@@ -277,6 +312,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r09-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Retatrutide's BLA was filed Feb 2027 and the decision was extended to Q1 2029 over dysesthesia and discontinuation data, so it is not on the US market.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: an FDA review extension normally adds about three months, so a Feb 2027 filing would not slip to Q1 2029 without a complete response letter and resubmission, which the candidate does not show. The date appears to be fitted to the approval-timing rule."
+        },
+        {
+          "quote": "about 1 in 5 adolescents with severe obesity in upper-income households is on a drug",
+          "field": "world/population/note",
+          "why": "Magnitude: the 2026 baseline put under-12 prescribing at ~0.6% of children with obesity. The candidate's 0.8% of all under-18s is roughly 580k minors, and the 1-in-5 figure is a several-fold jump in two years that is not reconciled with that base."
+        },
+        {
+          "quote": "Mostly that now means a pill.",
+          "field": "prose/opening",
+          "why": "Mechanism: the prose says orals are the usual form, but the world note says orals are still under 40% of total users because injectable users stay put. The narrative contradicts the world state."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Premium differentials of up to 30% tied to fill-verified adherence, Medicaid coverage conditioned on BMI progress, and 'steadiness' framed as a workplace virtue price people into continuous use. Inequality is high: a two-tier system of insured orals with DXA scans versus ~3M people on mail-order vials, plus a visible cohort of older regainers after the Bridge lapse. Flourishing and public health are hit by the ~1.3 hip-fracture hazard ratio, doubled sarcopenia, the contaminated-vial deaths, and ~7% anhedonia against ~3% in controls. Backlash coalitions, Illinois's ban on adherence-conditioned premiums and the EEOC charges provide some counterweight, so this is a harder society and not a collapse.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events. The dementia indication, bone warning, oral parity, counterfeit episode, conditioning guidance and employer 'steadiness' are all present. shock_up is the thinnest, shown only as cash injectables at $299–449 and a 'slight' net price rise, with the low/high cash fields unchanged. mechanism: most chains are shown (employer retreat, the Medicare lapse, the conditioning guidance, the CDC vial episode). Flaws are the prose line 'Mostly that now means a pill' against orals under 40% of users, the retatrutide delay to Q1 2029 with no CRL or resubmission, a hip-fracture cohort and FDA class label in the same year, and a very fast dementia sNDA built on a substudy. magnitude: current use 16.3%, ever-used 22%, age bands and income thirds all reconcile and sit inside the envelope. The payer mix sums to 100% and ~43M users; the pilot arithmetic ($3.8B annualised, $41B ten-year) is coherent; the approval timings are allowed by the rules. Gaps: the 65+ drop from 14% to 12% implies more people leaving than the 0.45M who stopped, the '44% plus another 9%' employer figure is ambiguous, and the pediatric jump is unreconciled.",
+        "generativity": "The Denise Okafor scene is vivid and shows the world rather than explaining it: the badge reader, the day-311 app ping, sour gummies, her mother's fall, Marcus checking vial units, 'means it the way you mean weather'. Many secondary characters and scenes are implied, including the Unmuted off-nights, the Tulsa fast network, couples dosing in sync, and the EEOC charges. Some world-note detail is list-like, but the film potential is high."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s1-L0-r09-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Mostly that now means a pill.",
+          "field": "prose/opening",
+          "why": "Mechanism: the world state says orals are \"still under 40% of total users\" because established injectable users stay put. The prose contradicts it by saying the typical user is now on a pill."
+        },
+        {
+          "quote": "dementia-prevention use by people without cardiovascular disease, especially 55–70-year-olds with a family history, cash-paid on orals",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "Mechanism: the only dementia label is for injectable tirzepatide, and the oral products are semaglutide and orforglipron, whose EVOKE trial failed in Alzheimer's. No chain explains why cash buyers would use orals for dementia prevention."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.8",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 0.8% of all minors is roughly 600k children. The 2026 baseline was ~0.6% of children with obesity, so this is several-fold growth in two years with no shown mechanism or reconciliation to the 1-in-5 adolescent figure."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Premiums of up to 30% are tied to fill-verified adherence (state/conditioning_or_surveillance, economy/insurance), and the effect_on_work field shows managers preferring 'steady' hires. That makes autonomy the worst dimension. Inequality is also severe: a two-tier system of branded orals with DXA scans against mail-order vials, with the Medicare cohort left regaining. Added harms are a hip-fracture signal of HR ~1.3, a 41-hospitalisation contaminated-vial lot with 2 deaths, and adolescents' bone mass. The harms are real but mostly measurable and contested publicly (EEOC charges, Illinois ban), so this is a harder society rather than a hidden structural one.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (adoption 16.3, employer coverage 44%, dementia label, bone warning, oral non-inferiority trial, counterfeit advisory, backlash coalition, 30% premium guidance, 'steadiness'). price_path shock_up is thin: cash injectables are $299–449 and net prices are only 'rising slightly'. mechanism: most changes have chains (pilot lapse leading to cash and stopping, the guidance leading to metabolic tracks), but several are asserted. The prose says 'Mostly that now means a pill' against orals at under 40% of users, the oral dementia use has no basis, and the dementia approval on a substudy is asserted as quick, as is the pediatric jump. magnitude: figures sit inside the envelope (16.3, ever 22), and the payer mix (~43M users summing to 100%), the cycled arithmetic (7.5+1.3=8.8), the pilot cost (1.3M×$245×12≈$3.8B), and the income and age bands all reconcile. Approvals follow the rules (CagriSema under review at the start, retatrutide filed with its decision extended, survodutide filed Jun 2028). Small gaps remain: the 9% 'monitored tracks' employers versus the 44% figure, and the unreconciled 0.8% pediatric figure.",
+        "generativity": "Denise's day is a concrete scene: the badge reader and pill, the green app ping on day 311, the muted phone calls, sour gummies at lunch, her mother's driveway fall, and Marcus checking vial units on YouTube. Many other characters and scenes are implied (Unmuted off-nights, Tulsa fasting church, geriatrician weighing DXA against dementia, EEOC charge, HR deck authors). The last lines ('the way you mean weather') show the flattening rather than explain it, though the arc is somewhat familiar."
+      },
+      "plausibility": 7.3
+    },
+    {
+      "custom_id": "s1-L0-r09-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.8",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 0.8% of all under-18s is roughly 580k children, against a 2026 base of about 0.6% of children with obesity. That cannot reconcile with the note's \"about 1 in 5 adolescents with severe obesity in upper-income households\", which would be a tiny fraction of that count, so the pediatric figure is too high or the note is wrong."
+        },
+        {
+          "quote": "The 65+ figure rose to ~14% under the Bridge pilot (mid-2027), then fell back to ~12% after it lapsed.",
+          "field": "world/population/note",
+          "why": "Magnitude: a 9% to 14% rise is about 2.9M extra 65+ users, but the pilot peaked at ~1.3M. A 14% to 12% fall is about 1.2M fewer users, but the same note says only ~0.45M stopped and ~0.35M moved to cash. The age-band figures do not reconcile with the pilot arithmetic."
+        },
+        {
+          "quote": "FDA class safety labelling change (Jul 2028): bone and lean-mass warning, protein and resistance-training counselling, and DXA consideration for patients 65+",
+          "field": "world/safety_ledger/3/regulatory_response",
+          "why": "Mechanism: a 2028 claims cohort showing a hip-fracture signal after more than 2 years of continuous use becomes a class labelling change, joint society guidance and a CMS coverage code within the same year. That is far faster than the sluggish regulatory response shown elsewhere in the ledger (e.g., no action on anhedonia, only a NAION adverse-reaction note)."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Premiums of up to 30% are tied to verified adherence (events 2027-09, state/conditioning), and about 3M employees sit in monitored tracks. Medicaid coverage is tied to adherence. A Medicare cohort has lost coverage and is regaining weight with a hip-fracture signal, and 3M people use gray-market vials (41 hospitalisations, 2 deaths). Anhedonia in ~7% of users is reframed as 'steadiness'. This is a recognisably harder, two-tier society with real autonomy and inequality costs. It is stopped short of the top anchors because the harms are visible, contested and measured, with EEOC charges and an Illinois ban already pushing back.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to events. Oral parity is realised as a head-to-head result, which the approval rules allow. The price shock_up is mild (cash $299–449, net prices 'rising slightly') but visible. mechanism: most chains are shown, including the pilot lapse leading to cash and stoppage, the import channel leading to contamination, and the guidance leading to monitored tracks. Claim 3 (a signal-to-label timeline in a single year), the substudy-based dementia approval, and the Illinois ban passing quickly are thinly argued. magnitude: population, ever-used, cycling and payer-mix arithmetic mostly reconcile and sit inside the envelope, and the approvals (CagriSema 2027, retatrutide filed) obey the rules. The 65+ age-band swing (claim 2) and the 0.8% pediatric figure versus '1 in 5' of severely obese adolescents (claim 1) fail to reconcile.",
+        "generativity": "The Denise Okafor day is concrete: the badge reader and pill, the green app ping on day 311, sour gummies at lunch, her mother's $309 pharmacy bill and driveway fall, and Marcus drawing up a Hyderabad vial while she checks the units. The world fields add many film-ready threads: the Unmuted collective's 'off nights', Tulsa fasting churches, desire mismatch in couples therapy, dating-app 'on/off' flags, and the EEOC charges. The prose shows flattening instead of explaining it."
+      },
+      "plausibility": 6.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Retatrutide's BLA was filed Feb 2027 and the decision was extended to Q1 2029 over dysesthesia and discontinuation data, so it is not on the US market.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: an FDA review extension normally adds about three months, so a Feb 2027 filing would not slip to Q1 2029 without a complete response letter and resubmission, which the candidate does not show. The date appears to be fitted to the approval-timing rule."
+      },
+      {
+        "quote": "about 1 in 5 adolescents with severe obesity in upper-income households is on a drug",
+        "field": "world/population/note",
+        "why": "Magnitude: the 2026 baseline put under-12 prescribing at ~0.6% of children with obesity. The candidate's 0.8% of all under-18s is roughly 580k minors, and the 1-in-5 figure is a several-fold jump in two years that is not reconciled with that base."
+      },
+      {
+        "quote": "Mostly that now means a pill.",
+        "field": "prose/opening",
+        "why": "Mechanism: the prose says orals are the usual form, but the world note says orals are still under 40% of total users because injectable users stay put. The narrative contradicts the world state."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 7.33,
+      "inequality": 7.17,
+      "public_health": 6.0,
+      "cohesion": 5.5,
+      "epistemic": 5.5,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.67,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.05,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Autonomy is the worst dimension. Premium differentials of up to 30% tied to fill-verified adherence, Medicaid coverage conditioned on BMI progress, and 'steadiness' framed as a workplace virtue price people into continuous use. Inequality is high: a two-tier system of insured orals with DXA scans versus ~3M people on mail-order vials, plus a visible cohort of older regainers after the Bridge lapse. Flourishing and public health are hit by the ~1.3 hip-fracture hazard ratio, doubled sarcopenia, the contaminated-vial deaths, and ~7% anhedonia against ~3% in controls. Backlash coalitions, Illinois's ban on adherence-conditioned premiums and the EEOC charges provide some counterweight, so this is a harder society and not a collapse.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events. The dementia indication, bone warning, oral parity, counterfeit episode, conditioning guidance and employer 'steadiness' are all present. shock_up is the thinnest, shown only as cash injectables at $299–449 and a 'slight' net price rise, with the low/high cash fields unchanged. mechanism: most chains are shown (employer retreat, the Medicare lapse, the conditioning guidance, the CDC vial episode). Flaws are the prose line 'Mostly that now means a pill' against orals under 40% of users, the retatrutide delay to Q1 2029 with no CRL or resubmission, a hip-fracture cohort and FDA class label in the same year, and a very fast dementia sNDA built on a substudy. magnitude: current use 16.3%, ever-used 22%, age bands and income thirds all reconcile and sit inside the envelope. The payer mix sums to 100% and ~43M users; the pilot arithmetic ($3.8B annualised, $41B ten-year) is coherent; the approval timings are allowed by the rules. Gaps: the 65+ drop from 14% to 12% implies more people leaving than the 0.45M who stopped, the '44% plus another 9%' employer figure is ambiguous, and the pediatric jump is unreconciled.",
+      "generativity": "The Denise Okafor scene is vivid and shows the world rather than explaining it: the badge reader, the day-311 app ping, sour gummies, her mother's fall, Marcus checking vial units, 'means it the way you mean weather'. Many secondary characters and scenes are implied, including the Unmuted off-nights, the Tulsa fast network, couples dosing in sync, and the EEOC charges. Some world-note detail is list-like, but the film potential is high."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 6.0625,
+    "survived": true,
+    "new_lineage": "L2",
+    "floor_used": 6,
+    "rank": 2
   }
 }
