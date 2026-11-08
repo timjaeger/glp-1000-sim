@@ -51,6 +51,41 @@
         "input_tokens": 16790,
         "output_tokens": 14729
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r22-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23611,
+        "output_tokens": 5882
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r22-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23611,
+        "output_tokens": 5497
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r22-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23611,
+        "output_tokens": 6199
+      }
     ]
   },
   "world": {
@@ -299,6 +334,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r22-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo filed an sNDA for oral semaglutide in alcohol use disorder and gambling disorder in Feb 2029, using its AUD phase 3 and a 26-week gambling-disorder phase 3",
+          "field": "world/drugs/pipeline_note",
+          "why": "The 2028 world lists gambling reduction as observational support only, with no gambling phase 3. A 26-week phase 3 would have to start and read out within months to support a Feb 2029 filing, so the timeline and the large effect size are asserted, not derived (mechanism)."
+        },
+        {
+          "quote": "Coverage structure did not change. Growth came from cash orals at lower maintenance prices (+7.5M), the gray-market flood (+6M), the dementia route (+~1.5M Medicare) and the new addiction label.",
+          "field": "world/population/note",
+          "why": "The named sources add up to about 15M, but current users rise from ~43M to ~65M. Commercial users go from ~14M to ~20M with employer coverage flat at 43%, and nothing explains that +6M (mechanism and reconciliation)."
+        },
+        {
+          "quote": "Medicaid ~7% (~4.5M)",
+          "field": "world/population/note",
+          "why": "Medicaid users rise from ~3.4M to ~4.5M while the world says opted-in states fell from 14 to 9, coverage did not change, and some programmes are adherence-conditioned. The increase is unexplained and cuts against the stated Medicaid dynamics (magnitude)."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.9
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "A quarter of adults are on the drugs, and about 9M use gray-market product, with the insulin-counterfeit cluster of 212 hospitalisations and 9 deaths. The anhedonia label, restart injuries, the adolescent bone data and military/police dose conditioning add to the harm, and inequality in quality of care widens (population/note, safety_ledger). Mitigations (the California and Illinois premium bans, the dose-reduction alternative, the open labelling of anhedonia) keep epistemic harm moderate and the world short of structural, hidden harm.",
+        "plausibility": "driver_fidelity: Every driver is visible in events and fields. These include the 2029-10 anhedonia label, the Apr 2030 compulsive-behaviour label, the DoD readiness programme, the generic flood to 9M, the Jan 2029 price cuts, the California ban, the flat coverage and no next-gen launch. mechanism: Most chains are shown, but the gambling-disorder phase 3 appears from nowhere (claim 1) and the commercial user growth under flat coverage is unexplained (claim 2). Pharmacy trend falling to ~+6% while users rise ~50% is also thin. magnitude: Current use of 24.4%, ever-used 31%, the income and age bands, the payer arithmetic (65M), the dementia $5B and the pipeline timing all sit inside the envelope and mostly reconcile. Residual gaps are the growth components summing to ~15M against ~22M, and the Medicaid count (claim 3).",
+        "generativity": "The Tess Lindqvist scene is concrete and varied: the blackjack shift, the pharmacist's circled leaflet, her brother's Hyderabad vial, the pickleball hall in the old buffet, the Saturday of feeling things, the half-dose restart. The world fields add 'off weekends', 'holiday partner' apps, 'Feel It' rallies and Friday sportsbook promotions. A small slip is the half-dose restart after a single skipped day, which the label's re-titration rule does not call for."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s2-L2-r22-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "using its AUD phase 3 and a 26-week gambling-disorder phase 3 (~11 fewer gambling days a month vs ~6 on placebo)",
+          "field": "world/drugs/pipeline_note",
+          "why": "The 2028 world had only observational support for gambling and no approvals, and the only phase 3 it names is for alcohol use disorder. A completed 26-week gambling phase 3, filed in Feb 2029, appears with no origin, so this fails mechanism."
+        },
+        {
+          "quote": "Prevalence has converged: the bottom third is up to 19% because of cheap vials.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "The income thirds are 29/25/19, so every third rose by the same 8 points and the 10-point top-to-bottom gap is unchanged from 2028 (21/17/11). 'Converged' contradicts the candidate's own population figures, and the claim that the bottom third 'rose most' holds only in relative terms."
+        },
+        {
+          "quote": "commercial ~31% (~20M, of whom ~4M are in adherence-verified tracks)",
+          "field": "world/population/note",
+          "why": "Commercial users rise from ~14M to ~20M while employer coverage slips from 44% to 43% and the note says 'Coverage structure did not change'. The listed growth drivers (+7.5M, +6M, +1.5M) sum to ~15M against ~22M of total growth. The ~6M commercial jump has no stated cause, so this fails magnitude reconciliation."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 65M adults are on a drug and 9M of them use unverified mail-order or counterfeit product, with a 212-hospitalisation and 9-death insulin counterfeit cluster and poison-centre calls up 6x. Anhedonia is now labelled, ~35% of users skip doses and cause restart injuries, adherence-verified tracks cover ~4M workers, and a 140k-person military programme is running. Older users face the bone warning alongside a ~$5B Medicare dementia benefit, and adolescents face inconclusive BMD data. The harm is real but largely named and measured (label, AAP guidance, California ban, EEOC settlement), which keeps epistemic badness moderate and the overall score at 'recognisably harder' rather than structural-hidden.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to a field or event: managed price cuts in Jan 2029, the compulsive-behaviour label, the Oct 2029 anhedonia label, no new launch, counterfeits, the 'Feel It' backlash, the DoD programme and the complaint-style personality layer. mechanism: Most chains are shown, but the gambling phase 3 appears from nowhere and 'Prevalence has converged' contradicts the 29/25/19 income figures. magnitude: Adults on drug (24.4), ever used (31), the payer mix totalling 65M, the dementia arithmetic ($5.0B) and the cycling arithmetic all fit the envelope. The ~6M commercial growth is unexplained, and Medicaid grows from 3.4M to 4.5M with no increase in opt-in states.",
+        "generativity": "The Tess Lindqvist vignette is concrete: the pill on her nightstand, the 'sleep apnoea' form, the Raiders-cap gambler, her brother's Hyderabad vial, the old buffet now a pickleball hall, and the cardamom buns. The world fields add 'off weekends', 'holiday partner' slang, 'Feel It' rallies, and holiday-restart ER spikes, so many scenes are implied. The prose summary leans a little on explanation before the human scene."
+      },
+      "plausibility": 6.85
+    },
+    {
+      "custom_id": "s2-L2-r22-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo filed an sNDA for oral semaglutide in alcohol use disorder and gambling disorder in Feb 2029, using its AUD phase 3 and a 26-week gambling-disorder phase 3 (~11 fewer gambling days a month vs ~6 on placebo).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2028 world lists gambling reduction only as observational support with no trial. A completed, positive phase 3 filed within about a year, with approval 14 months later, appears with no precursor, and the effect size is asserted."
+        },
+        {
+          "quote": "commercial ~31% (~20M, of whom ~4M are in adherence-verified tracks)",
+          "field": "world/population/note",
+          "why": "Magnitude: commercial users rise from ~14M to ~20M while employer coverage slips from 44% to 43% and the note insists \"Coverage structure did not change.\" The listed growth sources (+7.5M cash, +6M gray, +1.5M Medicare) sum to about 15M of the ~22M rise, so the commercial jump is unexplained."
+        },
+        {
+          "quote": "Sunday night she takes the pill again, half-dose, the way the label says",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world's label language requires re-titration only after more than 5 days missed on orals. Tess skips one Saturday dose, so the prose contradicts the world's own label rule."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 65M adults are on a drug, 9M of them on unregulated mail-order or counterfeit product. The insulin-pen cluster killed 9 and hospitalised 212, and the quality gap by income has widened (bottom-third use at 19%, with DXA and dose review for the insured only). Autonomy is squeezed by 4M adherence-verified employees, the 140k-strong DoD readiness programme, and police and shift-work conditioning. Offsetting this, anhedonia is now labelled and measured, California and Illinois ban conditioned premiums, and a dose-reduction alternative is required, so the epistemic score is lower than in 2028. The result is a harder society with new losers, but the harm is nameable and contested.",
+        "plausibility": "driver_fidelity: every driver is traceable. The adoption delta is +8.1pp, managed decline appears as the Jan 2029 price round, anhedonia was labelled in Oct 2029, the gambling/AUD approval is an existing product in a new indication, no new class launched, counterfeit pens and 9M gray users appear, 'Feel It' rallies and the California ban show the backlash, and the DoD programme and mainstream complaint are both present. mechanism: most chains are shown (price cut, gray-market growth, label, re-titration injuries, backlash), but the gambling phase 3 materialises without precedent (claim 1) and the prose misstates the re-titration rule (claim 3). magnitude: on-drug 24.4, ever-used 31, income thirds, age bands (weighted average ≈24.7), the 65M payer mix and the $5.0B dementia arithmetic all reconcile and sit inside the envelope. The commercial-user jump is the one gap (claim 2).",
+        "generativity": "Tess, Dale, the Raiders-cap gambler, the pickleball hall in the old buffet, and 'off weekends' and holiday-restart ER visits give a dense, filmable texture. The world fields supply many more scenes: 'Feel It' rallies, the Unmuted off-nights, military readiness enrolment, and Nevada regulators studying holiday-surge betting. The day-in-the-life shows rather than explains, though the opening summary is expository."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo filed an sNDA for oral semaglutide in alcohol use disorder and gambling disorder in Feb 2029, using its AUD phase 3 and a 26-week gambling-disorder phase 3",
+        "field": "world/drugs/pipeline_note",
+        "why": "The 2028 world lists gambling reduction as observational support only, with no gambling phase 3. A 26-week phase 3 would have to start and read out within months to support a Feb 2029 filing, so the timeline and the large effect size are asserted, not derived (mechanism)."
+      },
+      {
+        "quote": "Coverage structure did not change. Growth came from cash orals at lower maintenance prices (+7.5M), the gray-market flood (+6M), the dementia route (+~1.5M Medicare) and the new addiction label.",
+        "field": "world/population/note",
+        "why": "The named sources add up to about 15M, but current users rise from ~43M to ~65M. Commercial users go from ~14M to ~20M with employer coverage flat at 43%, and nothing explains that +6M (mechanism and reconciliation)."
+      },
+      {
+        "quote": "Medicaid ~7% (~4.5M)",
+        "field": "world/population/note",
+        "why": "Medicaid users rise from ~3.4M to ~4.5M while the world says opted-in states fell from 14 to 9, coverage did not change, and some programmes are adherence-conditioned. The increase is unexplained and cuts against the stated Medicaid dynamics (magnitude)."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.0,
+      "inequality": 6.0,
+      "public_health": 6.33,
+      "cohesion": 5.5,
+      "epistemic": 4.5,
+      "overall": 5.9
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.03,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "A quarter of adults are on the drugs, and about 9M use gray-market product, with the insulin-counterfeit cluster of 212 hospitalisations and 9 deaths. The anhedonia label, restart injuries, the adolescent bone data and military/police dose conditioning add to the harm, and inequality in quality of care widens (population/note, safety_ledger). Mitigations (the California and Illinois premium bans, the dose-reduction alternative, the open labelling of anhedonia) keep epistemic harm moderate and the world short of structural, hidden harm.",
+      "plausibility": "driver_fidelity: Every driver is visible in events and fields. These include the 2029-10 anhedonia label, the Apr 2030 compulsive-behaviour label, the DoD readiness programme, the generic flood to 9M, the Jan 2029 price cuts, the California ban, the flat coverage and no next-gen launch. mechanism: Most chains are shown, but the gambling-disorder phase 3 appears from nowhere (claim 1) and the commercial user growth under flat coverage is unexplained (claim 2). Pharmacy trend falling to ~+6% while users rise ~50% is also thin. magnitude: Current use of 24.4%, ever-used 31%, the income and age bands, the payer arithmetic (65M), the dementia $5B and the pipeline timing all sit inside the envelope and mostly reconcile. Residual gaps are the growth components summing to ~15M against ~22M, and the Medicaid count (claim 3).",
+      "generativity": "The Tess Lindqvist scene is concrete and varied: the blackjack shift, the pharmacist's circled leaflet, her brother's Hyderabad vial, the pickleball hall in the old buffet, the Saturday of feeling things, the half-dose restart. The world fields add 'off weekends', 'holiday partner' apps, 'Feel It' rallies and Friday sportsbook promotions. A small slip is the half-dose restart after a single skipped day, which the label's re-titration rule does not call for."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.3511,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 13
   }
 }

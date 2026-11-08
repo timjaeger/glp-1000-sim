@@ -51,6 +51,41 @@
         "input_tokens": 16518,
         "output_tokens": 19398
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r11-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25419,
+        "output_tokens": 4735
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r11-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25419,
+        "output_tokens": 8243
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r11-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25419,
+        "output_tokens": 4187
+      }
     ]
   },
   "world": {
@@ -314,6 +349,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r11-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Ever-use rose 8.5 pts, inside the 8.8 cap, so the increase comes mostly from persistence and restarts rather than new starters.",
+          "field": "world/population/note",
+          "why": "Ever-use can rise only through new starters, since restarters are already ever-users. The explanation contradicts the arithmetic it sits beside and fails mechanism and reconciliation."
+        },
+        {
+          "quote": "About 66% of the 8.5 pts who started in 2029–30 are still on, against the 2028 figure of ~35% one-year persistence.",
+          "field": "world/population/note",
+          "why": "Persistence nearly doubles in two years on an asserted mix of pills, gating and cessation messaging. It is also hard to square with 1.1M gate terminations and heavy cycling, so it is a convenient fit to reach 15.7%."
+        },
+        {
+          "quote": "Tobacco: US cigarette volumes fell ~9% in 2029 and ~11% in 2030, against a pre-2028 trend of ~5–6%.",
+          "field": "world/economy/alcohol/state",
+          "why": "Roughly doubling the rate of decline from a drug course run by a minority of smokers, with relapse risk noted elsewhere, is a large magnitude attributed without a worked chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Benefits conditioning is now national in design: kiosks, cotinine checks, 12-month lockouts, 55% employer gating and surcharges up to 50% of premium. Added to this are about 1.1M involuntary stops, bone and sarcopenia harm in older users, 4.2M unmonitored gray-market users with poison-centre calls doubled, and a marketed 'calm' product. Inequality narrows in access but widens in meaning, and autonomy is the worst dimension. The epistemic score is held down because anhedonia is labelled with rates and the harms are nameable and discussed.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and events: 15.7% adoption, stalled prices, Medicare and Medicaid expansion, the cessation label, the anhedonia label, oral amycretin, gray-market resurgence, normalisation, conditioning and marketed calm. Nothing contradicts one. mechanism: The cessation to Medicaid to bottom-third chain and the match-bonus gating are well shown. The doubled persistence and the 'persistence not new starters' explanation (claims 1 and 2) are asserted, and the 11% cigarette decline (claim 3) has no worked chain. magnitude: Current use of 15.7%, ever-use of 25.0% (near the 25.3 cap), income and age bands, approval timing and the payer mix, Medicare, Medicaid ($15.6B, $19.7B, about $14B federal) and gray-market figures all reconcile. The cycling and persistence arithmetic does not close: about 6.5 of the 6.6 points off in 2028 would have restarted while 9.3 points are now off.",
+        "generativity": "The Tammy Reece day is concrete and filmable: the 5:40 pill, the Kroger kiosk with the jammed straw, Mr. Abernathy's lighter, Caleb vaping, and Darrell cut off his plan and laughing. The world adds Worldport smoke breaks, 'off-dose Fridays', dose fields on dating apps and 'flat-music' scenes. Characters and conflicts are implied throughout, and the prose shows rather than explains."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s2-L1-r11-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "so the increase comes mostly from persistence and restarts rather than new starters",
+          "field": "world/population/note",
+          "why": "Ever-use can only rise through people who start for the first time, so attributing a rise in ever-use to persistence and restarts is a logical error. The note then credits the same 8.5 points to new starters with 66% retention, which contradicts it, and the retention jump from ~35% is only asserted."
+        },
+        {
+          "quote": "Tobacco: US cigarette volumes fell ~9% in 2029 and ~11% in 2030, against a pre-2028 trend of ~5–6%.",
+          "field": "world/economy/alcohol/state",
+          "why": "Cessation use affects only a few million smokers, and the added abstinence from an adjunct drug is modest. Doubling the decline rate in cigarette volume overstates the effect and no chain of mechanism is shown."
+        },
+        {
+          "quote": "You put your Medicaid card in, stand on the plate, look at the camera, and blow into a straw for the cotinine.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Cotinine is measured in saliva, urine or blood; a breath straw measures carbon monoxide. The kiosk verification that the whole conditioning regime depends on is described with a detail that does not work."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Benefits conditioning becomes national in design: nine states run kiosks and cotinine checks, ~55% of employers gate, and ~1.1M people lost coverage at a gate. Autonomy is hit hardest, since poor smokers are surveilled through coverage they depend on. Offsetting this, cessation gains are real and the anhedonia effect is now labelled and measured, which improves the epistemic picture. Costs remain: 4.2M gray-market users facing 1-in-5 mislabelled product, fractures in older users, and 'calm' marketed as a product. It is a recognisably harder society, not a collapsed one.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events and fields: adoption at 15.7 = 9.9 + 5.8, stalled prices, public expansion, the cessation label, oral amycretin, the gray-market resurgence, the April 2030 anhedonia label, adherence gating and the 'calm' marketing. mechanism: The coverage chain is well shown (the tobacco-cessation Medicaid rule, the ACA preventive mandate, and the match bump), but the ever-use logic is wrong (claim 1), the 66% retention is asserted, the cigarette-volume effect is oversized (claim 2), and the cotinine kiosk detail is wrong (claim 3). magnitude: All population figures are inside the envelope, though ever-use at 25.0 sits at the 25.3 edge. Payer shares sum to 100%, the Medicare and Medicaid spending arithmetic and the gray-market layers reconcile, and approval timings (amycretin 14 months, survodutide 15 months) respect the rules.",
+        "generativity": "The Louisville UPS hub, Tammy Reece's kiosk day, her vaping son, Darrell cut off his plan and the 'good quiet' versus 'the flat' give clear scenes and characters. Texture such as 'off-dose Fridays', the dose field on dating apps and the Medicaid protein boxes implies many more stories. The day-in-the-life shows rather than explains, though the opening prose section is expository."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L1-r11-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Ever-use rose 8.5 pts, inside the 8.8 cap, so the increase comes mostly from persistence and restarts rather than new starters.",
+          "field": "world/population/note",
+          "why": "Ever-use rises only through people who start for the first time, so the rise cannot come from persistence or restarts. The explanation contradicts the candidate's own cycling arithmetic (mechanism)."
+        },
+        {
+          "quote": "About 66% of the 8.5 pts who started in 2029–30 are still on, against the 2028 figure of ~35% one-year persistence.",
+          "field": "world/population/note",
+          "why": "Persistence nearly doubles in two years. The stated reasons (gating, pills, cessation warnings) are asserted rather than quantified, and they sit awkwardly beside ~1.1M gate terminations and a 36% cycling share (mechanism and magnitude)."
+        },
+        {
+          "quote": "\"65_plus\": 13",
+          "field": "world/population/by_age_band_pct",
+          "why": "Use among 65+ rises from 8% to 13% even though the world keeps the 1.3–1.4× fracture signal, sarcopenia warnings, DEXA conditions and 'retirees warned off'. The only stated cause is permanent Part D coverage on unchanged terms, so the rise is thinly justified (mechanism)."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Benefits conditioning becomes near-national: nine states run kiosk and cotinine gates, and about 55% of covering employers gate through their PBM. Roughly 1.1M people are cut off involuntarily, and the rebound and regain this causes is acknowledged. Anhedonia is labelled but simultaneously sold as 'calm', unmonitored gray-market product reaches 4.2M users, and poison-centre calls have doubled. The harm is widespread but mostly named and measured, which keeps epistemic badness moderate and the overall score at 6.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised, with dated events and matching fields: nicotine indication, public expansion, the anhedonia label, oral amycretin, gray-market growth from 1.3M to 4.2M, conditioning and marketed-feature framing. mechanism: The chain from the cessation label to the Medicaid and ACA mandates to bottom-third uptake is well shown, but the cycling note is incoherent and the persistence jump and the 65+ rise are asserted (claims 1–3). magnitude: Current use of 15.7% and ever-use of 25.0% are inside the envelope, and approval timings comply. Payer shares, user counts, the Medicare spend ($15.6B) and the Medicaid spend ($19.7B) all reconcile; the main blemish is the muddled cycling arithmetic.",
+        "generativity": "Tammy Reece's day carries concrete detail: the Kroger kiosk with a jammed cotinine straw, her son vaping with the fan on, Darrell's cutoff and regain, and the Louisville Worldport smoke breaks. The world supplies plenty of scene-ready texture, including 'off-dose Fridays', dose fields on dating apps and 'flat-music' scenes, and it shows rather than explains."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Ever-use rose 8.5 pts, inside the 8.8 cap, so the increase comes mostly from persistence and restarts rather than new starters.",
+        "field": "world/population/note",
+        "why": "Ever-use can rise only through new starters, since restarters are already ever-users. The explanation contradicts the arithmetic it sits beside and fails mechanism and reconciliation."
+      },
+      {
+        "quote": "About 66% of the 8.5 pts who started in 2029–30 are still on, against the 2028 figure of ~35% one-year persistence.",
+        "field": "world/population/note",
+        "why": "Persistence nearly doubles in two years on an asserted mix of pills, gating and cessation messaging. It is also hard to square with 1.1M gate terminations and heavy cycling, so it is a convenient fit to reach 15.7%."
+      },
+      {
+        "quote": "Tobacco: US cigarette volumes fell ~9% in 2029 and ~11% in 2030, against a pre-2028 trend of ~5–6%.",
+        "field": "world/economy/alcohol/state",
+        "why": "Roughly doubling the rate of decline from a drug course run by a minority of smokers, with relapse risk noted elsewhere, is a large magnitude attributed without a worked chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 7.17,
+      "inequality": 5.5,
+      "public_health": 5.83,
+      "cohesion": 5.17,
+      "epistemic": 4.67,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.11,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Benefits conditioning is now national in design: kiosks, cotinine checks, 12-month lockouts, 55% employer gating and surcharges up to 50% of premium. Added to this are about 1.1M involuntary stops, bone and sarcopenia harm in older users, 4.2M unmonitored gray-market users with poison-centre calls doubled, and a marketed 'calm' product. Inequality narrows in access but widens in meaning, and autonomy is the worst dimension. The epistemic score is held down because anhedonia is labelled with rates and the harms are nameable and discussed.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised in fields and events: 15.7% adoption, stalled prices, Medicare and Medicaid expansion, the cessation label, the anhedonia label, oral amycretin, gray-market resurgence, normalisation, conditioning and marketed calm. Nothing contradicts one. mechanism: The cessation to Medicaid to bottom-third chain and the match-bonus gating are well shown. The doubled persistence and the 'persistence not new starters' explanation (claims 1 and 2) are asserted, and the 11% cigarette decline (claim 3) has no worked chain. magnitude: Current use of 15.7%, ever-use of 25.0% (near the 25.3 cap), income and age bands, approval timing and the payer mix, Medicare, Medicaid ($15.6B, $19.7B, about $14B federal) and gray-market figures all reconcile. The cycling and persistence arithmetic does not close: about 6.5 of the 6.6 points off in 2028 would have restarted while 9.3 points are now off.",
+      "generativity": "The Tammy Reece day is concrete and filmable: the 5:40 pill, the Kroger kiosk with the jammed straw, Mr. Abernathy's lighter, Caleb vaping, and Darrell cut off his plan and laughing. The world adds Worldport smoke breaks, 'off-dose Fridays', dose fields on dating apps and 'flat-music' scenes. Characters and conflicts are implied throughout, and the prose shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.0011,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 28
   }
 }

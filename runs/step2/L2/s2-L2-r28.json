@@ -51,6 +51,41 @@
         "input_tokens": 16792,
         "output_tokens": 15719
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r28-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23656,
+        "output_tokens": 5976
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r28-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23656,
+        "output_tokens": 5402
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r28-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23656,
+        "output_tokens": 5846
+      }
     ]
   },
   "world": {
@@ -302,6 +337,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r28-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "commercial ~29% (~19.7M, mostly diabetes, cardiac, OSA and alcohol-use codes)",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: commercial users grow from ~14M to ~19.7M (+40%) while large-employer weight coverage falls from 44% to 31%. The cited codes (diabetes, cardiac, OSA) were already covered in 2028, and AUD only arrived in Feb 2030, so the growth is asserted rather than derived."
+        },
+        {
+          "quote": "mental-health parity in commercial plans and mandatory Medicaid/Part D coverage for non-excluded indications pull in after the Feb 2030 approval",
+          "field": "world/population/note",
+          "why": "Mechanism: alcohol-use prescribing is named a driver of the 9.4pp rise, but the approval is only months old at the 2030 snapshot. A new indication, PA and audit friction cannot plausibly add millions of insured users that fast, and the world shows no uptake chain."
+        },
+        {
+          "quote": "Medicaid ~8% (~5.4M)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: Medicaid users rise from ~3.4M to ~5.4M (+60%) although only 9 states still cover weight management, down from 14 in 2027 and 9 after the 5 dropouts, and AUD coverage began just months earlier. Nothing shown explains the growth."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Class stratification is the main harm. Roughly 8.2M people use gray-market product without DXA or titration, and NAION adds ~1,400–2,700 excess cases a year. Bone and muscle loss, 'the flat' as a mainstream complaint, and body shape read as insurance tier add to it (body_and_culture severity 5). Offsets are real: obesity is down to 32.9%, alcohol volumes are falling and AUD is now insured. The harms are measured and discussable, so epistemic harm is moderate. Overall this is a recognisably harder society with clear losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption +9.4pp, managed price decline, employer coverage 44%→31%, AUD, NAION class label, retatrutide at 28.7% (close to the ~30% target), gray market 3M→8.2M, class stratification, mainstream 'flat' complaint and no new state action. Only the 28.7%-vs-30% gap and the existing FDA actions are minor wrinkles. mechanism: Retatrutide, the price cuts, the NAION warning and the EEOC-to-holiday-flags shift are well chained. The weak points are claims 1–3: commercial and Medicaid user growth despite coverage retreat, and AUD driving growth within months of approval. The prose also says 'a few percent each year' for net prices while the JSON says 12–15% over two years. magnitude: The population figures sit inside the envelope (25.7 vs 23.7–27.7; ever-used 32 vs ≤34.4). Income thirds, age bands, payer shares, the cycling arithmetic and Medicare spend (11.6M×$250×12≈$35B) all reconcile. Approval timings follow the rules (survodutide 13 months, AUD 13 months, amycretin not on market). Small slips remain: retatrutide 'since Apr 2029' vs Mar 2029 in the events, and the payer-mix growth figures.",
+        "generativity": "Marisol, Héctor's vials in the butter compartment, Dr. Kessler's rope forearms, the yellow vision-loss sheet and the pre-quinceañera drug holiday are concrete and specific. 'Scottsdale lean', Maryvale, the 'off nights' in Austin, 'holiday flags' and the tamales give strong texture and implied scenes. The world shows rather than explains, though the opening is reportorial."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s2-L2-r28-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "In Phoenix, 'Scottsdale lean', the muscular retatrutide-and-lifting look, is a professional expectation in real-estate, sales and finance offices.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Mechanism: the drug was approved only in Mar 2029 and costs up to $449 a month. The candidate's own interior_life says sales and creative firms 'quietly discourage top-dose regimens', so this contradicts the world state and overstates diffusion."
+        },
+        {
+          "quote": "commercial ~29% (~19.7M, mostly diabetes, cardiac, OSA and alcohol-use codes)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: commercial users rise about 40% (~14M to ~19.7M) while employer weight coverage falls from 44% to 31% and coverage narrows to BMI ≥35 and diabetes/cardiac codes. The offset from AUD and similar codes is asserted but never sized."
+        },
+        {
+          "quote": "That fits one-year persistence of about one-third and ~40% restarting within a year, compounded, with new starts outpacing stops.",
+          "field": "world/population/note",
+          "why": "Magnitude: with only one-third one-year persistence, the off-drug pool should grow much faster than 5.7% to 6.3%. Ever-used rises 10 points and current use 9.4, so almost every new user is still on the drug, which strains the stated churn."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Inequality is the main harm: body shape reads as insurance tier, and gray-market users (~8.2M) get retatrutide without DXA, titration or eye exams (population/note; body_and_culture). The NAION class warning (~1,400–2,700 excess cases a year), the 7–9% anhedonia rate, adolescent bone risk and continuing adherence-conditioned premiums add real but not catastrophic harm. Epistemic badness is lower because the harms are measured, labelled and openly discussed ('the flat' is a public joke), so people can name what is happening to them.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption lands at 25.7%, employer coverage falls 44%→31%, AUD is approved Feb 2030, the NAION class label comes Oct 2029, retatrutide launches at 28.7%, gray market ~8.2M, class stratification, no new state action, and 'the flat' goes mainstream. The 28.7% is a close but not exact reading of '30pct'. mechanism: Most chains are shown (price cuts after Boehringer's entry, ASAM then parity and Medicaid rebate rules, an EEOC conciliation that produces holiday flags). Claims 1 and 2 (the Scottsdale expectation contradicting the discouragement of top-dose use, and the commercial growth against employer retreat) are asserted, and prose 'a few percent each year' loosely mismatches 12–15% over two years. magnitude: All headline figures sit inside the envelope (25.7 current, 32 ever-used) and reconcile well (payer shares sum to 100%, Medicare 11.6M × $250 × 12 ≈ $35B, age bands weight to 25.7%). Approval timings obey the 12-month rule. The remaining gap is the thin churn arithmetic in claim 3, plus the commercial-user growth in claim 2.",
+        "generativity": "Marisol and Héctor give a concrete household (pill vs. 'research peptide' vials, a yellow vision-warning sheet, a planned holiday before a quinceañera). The world adds Scottsdale versus Maryvale, 'off nights' in Austin bars and the 'approved holiday' flag. The prose leans on a long explanatory lead-in, but the closing scenes show rather than explain."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s2-L2-r28-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "commercial ~29% (~19.7M, mostly diabetes, cardiac, OSA and alcohol-use codes)",
+          "field": "world/population/note",
+          "why": "Mechanism: commercial users rise from ~14M to ~19.7M (about +40%) while employer coverage falls from 44% to 31% and is tightened to BMI ≥35 and diabetes/cardiac codes. The candidate never shows how that many extra users enter commercial plans."
+        },
+        {
+          "quote": "\"65_plus\": 21",
+          "field": "world/population/by_age_band_pct",
+          "why": "Mechanism: 65+ use rises from 12% to 21% with no Bridge-type benefit and a bone/lean-mass warning aimed at this group. Medicare coding routes (dementia with prior authorisation, AUD) are asserted as the cause with no uptake chain."
+        },
+        {
+          "quote": "The gray market regrew from ~3M to ~8.2M users through 503A 'personalised' telehealth compounding, offshore pharmacies and 'research-use' retatrutide vials ($90–180/month) that circulated before and after its approval.",
+          "field": "world/access/note",
+          "why": "Mechanism: a 2.7× jump in two years is credited to routes that are already under import alerts, warning letters and the compounding exclusion. The only enforcement-failure story is 'weak', and the 2029-09 event already puts the count near 8M within months."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is worst: a body-as-pay-stub stratification (`body_and_culture`), gray-market users with no DXA, titration or eye exam, and a 1-in-4 versus 1-in-14 adolescent gap by income. Public health is mixed: obesity falls and AUD treatment is insured, but there is a doubled NAION risk (~1,400–2,700 cases a year), a replicated hip-fracture signal, ~8M people on unapproved product, and cycling driven by drug holidays. Autonomy is eased somewhat (holiday flags, EEOC conciliation), but premium conditioning persists. The epistemic picture is relatively open: harms are measured, labelled and discussed ('the flat').",
+        "plausibility": "driver_fidelity: Every driver is traceable to a field or event: adoption 25.7%, managed price decline, employer retreat to 31%, AUD approval, NAION class label, retatrutide at 28.7% (slightly under the '30pct' target), gray-market resurgence, class stratification, no new state action, and 'the flat' as a mainstream complaint. mechanism: Many chains are shown (price cuts → oral uptake, AUD approval → parity and Medicaid coverage, holidays → vendor flags), but the commercial user growth despite employer retreat, the 65+ jump from 12% to 21%, and the gray-market tripling are asserted rather than shown (claims 1–3). magnitude: Population figures sit inside the envelope, with age bands and income thirds reconciling to 25.7%, payer shares summing to 100%, and Part D arithmetic at ~$35B matching 11.6M × $250 × 12. Approval timings obey the rules; retatrutide 'since Apr 2029' versus a Mar 2029 approval and 'half a year' versus ~8 months after ASAM are small slips.",
+        "generativity": "The Marisol and Héctor vignette gives concrete scenes: butter-compartment vials, the yellow vision-loss sheet, a planned holiday before the quinceañera, and the office body-cataloguing. Places and subcultures such as Scottsdale lean, Maryvale, 'off nights' in Austin, and the Bread Alone churches are specific enough to build on. The world fields add texture (holiday flags, upcoding audits, DXA studios), and several implied characters (Dr. Kessler, the new front-desk girl) are ready for scenes."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "commercial ~29% (~19.7M, mostly diabetes, cardiac, OSA and alcohol-use codes)",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: commercial users grow from ~14M to ~19.7M (+40%) while large-employer weight coverage falls from 44% to 31%. The cited codes (diabetes, cardiac, OSA) were already covered in 2028, and AUD only arrived in Feb 2030, so the growth is asserted rather than derived."
+      },
+      {
+        "quote": "mental-health parity in commercial plans and mandatory Medicaid/Part D coverage for non-excluded indications pull in after the Feb 2030 approval",
+        "field": "world/population/note",
+        "why": "Mechanism: alcohol-use prescribing is named a driver of the 9.4pp rise, but the approval is only months old at the 2030 snapshot. A new indication, PA and audit friction cannot plausibly add millions of insured users that fast, and the world shows no uptake chain."
+      },
+      {
+        "quote": "Medicaid ~8% (~5.4M)",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: Medicaid users rise from ~3.4M to ~5.4M (+60%) although only 9 states still cover weight management, down from 14 in 2027 and 9 after the 5 dropouts, and AUD coverage began just months earlier. Nothing shown explains the growth."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.33,
+      "inequality": 7.33,
+      "public_health": 5.33,
+      "cohesion": 5.5,
+      "epistemic": 4.17,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.33,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.26,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Class stratification is the main harm. Roughly 8.2M people use gray-market product without DXA or titration, and NAION adds ~1,400–2,700 excess cases a year. Bone and muscle loss, 'the flat' as a mainstream complaint, and body shape read as insurance tier add to it (body_and_culture severity 5). Offsets are real: obesity is down to 32.9%, alcohol volumes are falling and AUD is now insured. The harms are measured and discussable, so epistemic harm is moderate. Overall this is a recognisably harder society with clear losers, not a structural catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption +9.4pp, managed price decline, employer coverage 44%→31%, AUD, NAION class label, retatrutide at 28.7% (close to the ~30% target), gray market 3M→8.2M, class stratification, mainstream 'flat' complaint and no new state action. Only the 28.7%-vs-30% gap and the existing FDA actions are minor wrinkles. mechanism: Retatrutide, the price cuts, the NAION warning and the EEOC-to-holiday-flags shift are well chained. The weak points are claims 1–3: commercial and Medicaid user growth despite coverage retreat, and AUD driving growth within months of approval. The prose also says 'a few percent each year' for net prices while the JSON says 12–15% over two years. magnitude: The population figures sit inside the envelope (25.7 vs 23.7–27.7; ever-used 32 vs ≤34.4). Income thirds, age bands, payer shares, the cycling arithmetic and Medicare spend (11.6M×$250×12≈$35B) all reconcile. Approval timings follow the rules (survodutide 13 months, AUD 13 months, amycretin not on market). Small slips remain: retatrutide 'since Apr 2029' vs Mar 2029 in the events, and the payer-mix growth figures.",
+      "generativity": "Marisol, Héctor's vials in the butter compartment, Dr. Kessler's rope forearms, the yellow vision-loss sheet and the pre-quinceañera drug holiday are concrete and specific. 'Scottsdale lean', Maryvale, the 'off nights' in Austin, 'holiday flags' and the tamales give strong texture and implied scenes. The world shows rather than explains, though the opening is reportorial."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.3511,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 12
   }
 }

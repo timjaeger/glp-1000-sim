@@ -37,6 +37,41 @@
         "input_tokens": 16965,
         "output_tokens": 20299
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r37-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25333,
+        "output_tokens": 6531
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r37-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25333,
+        "output_tokens": 6224
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r37-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25333,
+        "output_tokens": 8793
+      }
     ]
   },
   "world": {
@@ -307,6 +342,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r37-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "roughly 210,000 Medicare enrollees lose coverage when refill gaps break the 80% adherence rule",
+          "field": "world/events/0/event",
+          "why": "Mechanism: about 10% of a 1.5–2.0M-person programme is locked out for a year because pens were unavailable, and CMS is said to grant no exception during a federal shortage listing. The world never shows why enrollees could not switch to Zepbound or the pills, or why CMS held the rule through its own shortage."
+        },
+        {
+          "quote": "FDA approves semaglutide for alcohol use disorder, the first label to list 'anhedonia/apathy' as an uncommon adverse reaction",
+          "field": "world/events/3/event",
+          "why": "Magnitude: the parent only says the AUD phase 3 reads out in 2029, and the candidate states no filing date. The envelope requires approval at least 12 months after filing, and a March 2030 approval after a 2029 readout barely or never meets that."
+        },
+        {
+          "quote": "Sportsbooks (DraftKings, FanDuel) added incretin compulsion prescribing to 10-K risk factors in 2030 after reporting lower handle among high-frequency bettors in early cohorts.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: off-label gambling prescribing started only after the 2029 readouts, yet firms already report cohort-level handle declines tied to the drug within about a year. The link is asserted, and no data pathway is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 7.0,
+        "inequality": 7.5,
+        "public_health": 6.0,
+        "cohesion": 6.0,
+        "epistemic": 4.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 7.0
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access stratifies hard: BMI surcharges are charged to import users who cannot prove adherence, 210k are locked out of Medicare for a supply failure, and children as young as 6 are on drug with only 56 weeks of growth data. Counterfeit-insulin deaths, the 38k-claim MDL and cycling harms add to the public-health ledger. Epistemic harm is lower than in 2028 because anhedonia is now on the label and measured, though real-world prevalence is not. Overall this is a recognisably harder, more surveilled and class-sorted society, not a catastrophic one.",
+        "plausibility": "driver_fidelity: Every driver is visible. The price shock comes from the recall, employer coverage falls 44→36%, MariTide supplies the monthly launch, the MDL and verdict cover the litigation, and the counterfeit pens, Chinese generics, anhedonia label and class stratification are all present, with state_action at none. mechanism: The recall-to-price-to-lockout chain is shown, but the no-exception CMS stance, the sportsbook handle claims, the speed of the anhedonia label and the 120k children on liraglutide within a year are asserted rather than demonstrated (claims 1 and 3). magnitude: Adoption 24.6%, ever-used 31.5%, the income and age bands, the payer-mix sum to 66M, Medicare ($5.9B) and Medicaid ($5.6B gross, $3.6B federal) spending, and the 35% cycling arithmetic all reconcile. The weak point is the AUD approval timing, with no stated filing and a 2029 readout against the 12-month rule (claim 2).",
+        "generativity": "The Dana Kowalczyk day is concrete: the wellness kiosk showing BMI 30.4 and a $75 surcharge, the import certificate in a site footer, Brandon's trained forearms, the lot-number list taped at Kroger, and Mason's liraglutide pen in the butter drawer. The flat close, 'can't remember the last time she wanted anything', carries the reward-blunting theme through implication. Several scenes are filmable and the world fields (church tables, strength studios, bar trivia) give plenty of side material."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s2-L3-r37-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "roughly 210,000 Medicare enrollees lose coverage when refill gaps break the 80% adherence rule",
+          "field": "world/events/0/event",
+          "why": "Mechanism: a manufacturer-caused recall of one product line locks out about 14% of enrollees, though tirzepatide and orals stayed available. The 'no exception' outcome is asserted rather than explained, and a pending class action would make CMS's refusal even less likely."
+        },
+        {
+          "quote": "Sportsbooks (DraftKings, FanDuel) added incretin compulsion prescribing to 10-K risk factors in 2030 after reporting lower handle among high-frequency bettors in early cohorts.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: off-label gambling prescribing only began after the 2029 readouts. Measurable handle declines in 'early cohorts' within about a year, with no data source, is a convenient and unshown chain."
+        },
+        {
+          "quote": "alcohol use disorder in adults (semaglutide, Mar 2030)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/7",
+          "why": "Magnitude: the parent had the AUD phase 3 reading out in 2029 with no filing stated. Under the envelope's rule, approval needs 12 months after a filing, and no filing date is given. A March 2030 approval is only possible if the filing was early 2029, so the timing is unverified and tight."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a harder, more stratified society. Adherence surveillance feeds BMI surcharges (conditioning_or_surveillance), the gray-market poor cannot waive surcharges, 210k people were locked out by a supply failure, and children aged 6–11 are on the drug with only 56 weeks of growth data. Inequality is the worst dimension, with shape reading as income and a quarter of users on unverified import or counterfeit product. Epistemic harm is lower than in 2028 because anhedonia is now labelled and measured, and the 3% vs 1% SHAPS figure makes the harm nameable.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events or fields: the shock_up recall, employer retreat from 44% to 36%, the AUD and gambling indications plus liraglutide 6–11, MDL 3094 with a verdict, MariTide as the monthly launch, counterfeits and Chinese generics, class stratification, the anhedonia label, and no new state action. The implant is correctly kept off the market. mechanism: The recall, shortage, compounding, price rise and counterfeit chain is well shown. Several links are asserted, including the unexcepted Medicare lockouts, the sportsbook handle data, and gambling RCTs finishing so soon after the parent world (claims 1 and 2). magnitude: Adoption (24.6), ever-used (31.5) and the income and age figures sit inside the envelope and reconcile. Payer mix sums to 66M, Medicare and Medicaid spending multiply out, and the cycling arithmetic closes. MariTide and survodutide timing is legal, but the AUD approval has no stated filing date to check against the 12-month rule (claim 3).",
+        "generativity": "The day in the life has concrete scenes and objects: the wellness kiosk and its $75 surcharge, the lot-number list taped at Kroger, the liraglutide pen in the butter drawer, Brandon's forearms, and the half turkey wrap given to Luis. It implies recurring characters and class friction without explaining them. A small tension is that Dana's child is on Medicaid while she holds an employer plan with a wellness kiosk."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s2-L3-r37-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Sportsbooks (DraftKings, FanDuel) added incretin compulsion prescribing to 10-K risk factors in 2030 after reporting lower handle among high-frequency bettors in early cohorts.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: off-label telehealth gambling prescribing is barely a year old, and no chain shows how firms would isolate a drug-driven fall in handle among 'early cohorts' in time for a 10-K. The claim is asserted and convenient."
+        },
+        {
+          "quote": "alcohol use disorder in adults (semaglutide, Mar 2030)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/7",
+          "why": "Magnitude: the parent says the AUD phase 3 reads out in 2029 with no filing stated. The approval rule requires approval at least 12 months after filing, so a Mar 2030 approval implies a filing by about Mar 2029, immediately after an early-2029 readout. The candidate never states the filing date."
+        },
+        {
+          "quote": "roughly 210,000 Medicare enrollees lose coverage when refill gaps break the 80% adherence rule",
+          "field": "world/events/0/event",
+          "why": "Mechanism: it is not shown why ~12% of enrollees could not switch to Zepbound or the orals (new starts are ~35–55% oral) during an 8-month shortage. It is also not shown why the PDC rule counted gaps in one drug rather than any GLP-1 fill."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Inequality and autonomy are the worst dimensions. Shape reads as income, the gray-market poor pay BMI surcharges they cannot waive, ~210k Medicare enrollees were locked out for gaps the manufacturer caused, and ~120k children aged 6–11 are on a daily injectable with only 56 weeks of growth data. Counterfeit-insulin deaths, a 38,000-claim MDL and a pending gambling indication add harm. The epistemic score is lower because anhedonia is now on the label and measured (SHAPS ~3% vs ~1%), although real-world prevalence is still unmeasured.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Price shock via the Feb 2029 recall, employer coverage 44→36%, AUD plus liraglutide 6–11, the MDL verdict, MariTide as the monthly launch, counterfeits, class stratification, niche anhedonia on the label, and no new state action. mechanism: The recall, shortage, compounding and counterfeit chain is well built. Several links are only asserted: the Medicare lockout scale, wellness vendors favouring clinic-administered MariTide within months of launch, and the sportsbook handle claim. magnitude: On-drug 24.6%, ever-used 31.5%, the income thirds and the age bands all sit inside the envelope, and the payer mix sums to 66M. Medicare, Medicaid and the cycling arithmetic reconcile. The residual issues are the tight AUD approval timing (no filing date given) and the fast growth of gray-market and pediatric use.",
+        "generativity": "The Dana Kowalczyk scene is dense with specifics: the wellness kiosk showing BMI 30.4 and a $75 surcharge, the batch certificate, the lot-number list at Kroger, the liraglutide pen in the butter drawer and Mason's growth checks. Brandon's monthly shot and the closing anhedonia beat add secondary characters and an open question. The world JSON adds many scene hooks: school nurses' lists, a leaked sales-memo joke, and Highland Park against Columbus."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "roughly 210,000 Medicare enrollees lose coverage when refill gaps break the 80% adherence rule",
+        "field": "world/events/0/event",
+        "why": "Mechanism: about 10% of a 1.5–2.0M-person programme is locked out for a year because pens were unavailable, and CMS is said to grant no exception during a federal shortage listing. The world never shows why enrollees could not switch to Zepbound or the pills, or why CMS held the rule through its own shortage."
+      },
+      {
+        "quote": "FDA approves semaglutide for alcohol use disorder, the first label to list 'anhedonia/apathy' as an uncommon adverse reaction",
+        "field": "world/events/3/event",
+        "why": "Magnitude: the parent only says the AUD phase 3 reads out in 2029, and the candidate states no filing date. The envelope requires approval at least 12 months after filing, and a March 2030 approval after a 2029 readout barely or never meets that."
+      },
+      {
+        "quote": "Sportsbooks (DraftKings, FanDuel) added incretin compulsion prescribing to 10-K risk factors in 2030 after reporting lower handle among high-frequency bettors in early cohorts.",
+        "field": "world/economy/alcohol/state",
+        "why": "Mechanism: off-label gambling prescribing started only after the 2029 readouts, yet firms already report cohort-level handle declines tied to the drug within about a year. The link is asserted, and no data pathway is shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.5,
+      "inequality": 7.17,
+      "public_health": 5.83,
+      "cohesion": 5.83,
+      "epistemic": 4.33,
+      "overall": 6.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.43,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Access stratifies hard: BMI surcharges are charged to import users who cannot prove adherence, 210k are locked out of Medicare for a supply failure, and children as young as 6 are on drug with only 56 weeks of growth data. Counterfeit-insulin deaths, the 38k-claim MDL and cycling harms add to the public-health ledger. Epistemic harm is lower than in 2028 because anhedonia is now on the label and measured, though real-world prevalence is not. Overall this is a recognisably harder, more surveilled and class-sorted society, not a catastrophic one.",
+      "plausibility": "driver_fidelity: Every driver is visible. The price shock comes from the recall, employer coverage falls 44→36%, MariTide supplies the monthly launch, the MDL and verdict cover the litigation, and the counterfeit pens, Chinese generics, anhedonia label and class stratification are all present, with state_action at none. mechanism: The recall-to-price-to-lockout chain is shown, but the no-exception CMS stance, the sportsbook handle claims, the speed of the anhedonia label and the 120k children on liraglutide within a year are asserted rather than demonstrated (claims 1 and 3). magnitude: Adoption 24.6%, ever-used 31.5%, the income and age bands, the payer-mix sum to 66M, Medicare ($5.9B) and Medicaid ($5.6B gross, $3.6B federal) spending, and the 35% cycling arithmetic all reconcile. The weak point is the AUD approval timing, with no stated filing and a 2029 readout against the 12-month rule (claim 2).",
+      "generativity": "The Dana Kowalczyk day is concrete: the wellness kiosk showing BMI 30.4 and a $75 surcharge, the import certificate in a site footer, Brandon's trained forearms, the lot-number list taped at Kroger, and Mason's liraglutide pen in the butter drawer. The flat close, 'can't remember the last time she wanted anything', carries the reward-blunting theme through implication. Several scenes are filmable and the world fields (church tables, strength studios, bar trivia) give plenty of side material."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.5556,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 6
   }
 }

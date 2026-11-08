@@ -51,6 +51,41 @@
         "input_tokens": 16487,
         "output_tokens": 24826
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r12-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24345,
+        "output_tokens": 7634
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r12-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24345,
+        "output_tokens": 6175
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r12-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24345,
+        "output_tokens": 6603
+      }
     ]
   },
   "world": {
@@ -308,6 +343,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r12-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "65+ recovered from 8% to 11% (≈7.0M) under the generic-first Medicare model and the 'strength-protected' marketing, though still below its 2026 peak.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the parent puts 65+ use at 9% in 2026 and 8% in 2028, so 11% is above that peak, not below it. A three-point jump is also credited to marketing that began only in Sep 2030, with the fracture hazard ratio unchanged."
+        },
+        {
+          "quote": "Medicaid must cover FDA-approved cessation drugs under ACA §2502, so every state now covers semaglutide for smokers regardless of its obesity-drug policy.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: it relies on a mis-cited statute and assumes a new adjunct indication becomes mandatory coverage in every state as soon as it is approved. No rulemaking, USPSTF update or state implementation lag is shown."
+        },
+        {
+          "quote": "Lilly ran a 48-week phase 3 of bimagrumab + tirzepatide. Topline (Sep 2030) showed the lean share of weight lost falling from ~35% to ~12%, with no fracture endpoint.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: a phase 2 asset in 2028 would need to start a phase 3 by about autumn 2029, then enrol, run 48 weeks, read out and file a BLA within three months. That is a very compressed timeline with no shown chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and prices fall, so the bottom third rises from 6.5% to 9.2%, which offsets some harm. The costs are still real. Gating spreads to nine states and about 45% of employers. Cessation coverage builds on/off cycling into plan design while bone harm from cycling persists. Reward blunting is normalised ('the flats') and invisible to PDC metrics. 'Muscle-protected' marketing outruns the evidence, and adolescent exposure goes unmeasured. That makes a harder society with new losers, not a catastrophe.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. The +2.0pp adoption delta, a generic collapse with the Aug 2029 settlement event, Medicare and Medicaid expansion, the Apr 2029 nicotine approval, no new safety signal, the bimagrumab filing plus Zepbound Strong, the unmedicated movement, nine-state conditioning and the mainstream 'flats' complaint all appear. mechanism: several chains are asserted or contradicted. The 65+ line says 11% is 'below its 2026 peak' when that peak was 9%, the §2502 automatic-coverage claim is mis-cited and instant, and the bimagrumab timeline is very compressed. The prose also says 'almost half' of users skip doses where the world says about 4 in 10. magnitude: ever-use (20.5) and current use (11.9) are inside the envelope, and the approvals (survodutide Jan 2029, amycretin Jul 2029, bimagrumab only filed) follow the rules. Payer shares sum to 100% and match 31.9M users. The Medicare and Medicaid spend, the age-weighted check, the income-third average and the cycling arithmetic all reconcile. The only gaps are minor: 65+ users are all assigned to Medicare, and a $245 Medicare brand price sits oddly beside a ≈$700 retatrutide net.",
+        "generativity": "The Lashonda Mills day is concrete and implies many scenes. It has the unused pens on the butter shelf, the kiosk saying VERIFIED, the locked-out woman folding the cash-price slip, the quinceañera drug holiday, the sister in Boise and the Medicare coach on a tablet. The world fields add texture through dating filters, holiday hours, supper clubs and the Montana coalition. Some prose passages explain more than they show."
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s2-L1-r12-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Seven more states adopt Indiana-style adherence and weigh-in gating.",
+          "field": "world/events/2/event",
+          "why": "Mechanism: 1115 waivers need CMS approval, state drafting and a comment period. Going from two states over about two years to nine in a single month, on the strength of a 'template', is asserted rather than shown."
+        },
+        {
+          "quote": "so every state now covers semaglutide for smokers regardless of its obesity-drug policy",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: ACA §2502 only removes the cessation-drug exclusion from the Medicaid statute. It does not stop states using prior authorisation or formulary controls. Universal coverage 'overnight' for every state overstates the legal chain."
+        },
+        {
+          "quote": "The bottom third rose the most (6.5 → 9.2) through Medicaid, the mandatory Medicaid coverage of cessation drugs, and $49 cash generics.",
+          "field": "world/population/note",
+          "why": "Magnitude and timing: $49 cash generics existed for only about six months by end-2030, and only 2.4M users have a cessation indication. Neither plausibly explains a 2.7-point jump in the bottom third."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadens and the price collapses, so the income gradient narrows. The harms persist and in places get built in: nine waiver states with lockouts, ~45% of employers gating, and cessation coverage that bakes on/off cycling into plans while the bone hazard ratio stays 1.3–1.4. Reward blunting is normalised as 'the flats' without measurement, adolescents accrue unmeasured exposure, and 'muscle-protected' marketing reaches Medicare-age users without fracture data. This is a recognisably harder society with new losers, but not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Generic collapse runs through the settlement event, public expansion through the Medicare model and Medicaid cessation coverage, and nicotine through the Apr 2029 approval. Muscle-preserving combo appears as a filing plus 'Zepbound Strong', benefit conditioning expands to nine states, the complaint layer is mainstream, and the unmedicated movement is present. mechanism: Most chains are shown, such as the settlement to the generic price, PDC blind to drug holidays, and ERISA limits on Montana. The seven-states-in-a-month event and the universal cessation-coverage claim are asserted, and the bottom-third rise is pinned on generics that existed only briefly (see claims 1–3). magnitude: Figures sit inside the envelope, and the payer mix, user counts, age-weighted and income averages, cycling arithmetic and Medicare and Medicaid spend all reconcile. Approvals respect the filing-lag rules, and the generic has an event mechanism. The prose 'almost half' versus the JSON '~4 in 10' on skipped doses is a small narrative mismatch.",
+        "generativity": "The Lashonda thread is concrete: pens on the butter shelf, the kiosk weigh-in saying VERIFIED, the woman folding the printout, Mr. Dobrowski's tablet coach, the quinceañera holiday, and a sister in Boise. The world supplies many further scenes, including unmedicated supper clubs, dating filters, union contract clauses and 'holiday hour' bars. The prose shows far more than it explains."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s2-L1-r12-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA approves semaglutide as an adjunct to cigarette smoking cessation.",
+          "field": "world/events/0/event",
+          "why": "Magnitude: the starting world has Novo filing the sNDA in May 2028, and the envelope allows approval of a phase 3 product no earlier than 12 months after filing. April 2029 is about 11 months, so approval comes slightly too early."
+        },
+        {
+          "quote": "and Medicaid must cover FDA-approved cessation drugs under ACA §2502, so every state now covers semaglutide for smokers regardless of its obesity-drug policy.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: it asserts universal, immediate state coverage of a newly labelled adjunct via a shaky statutory citation. It ignores formulary, prior-authorisation and rulemaking lags, and it carries the claimed jump in Medicaid and bottom-third use."
+        },
+        {
+          "quote": "≈7.0M aged 65+ plus ≈1.3M disabled under-65",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: the starting world had about 0.3M disabled under-65 enrollees. The candidate shows more than a fourfold rise in two years with no mechanism, and it also assumes every 65+ user is on Medicare."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the price falls, so inequality in who takes the drug narrows (bottom third 6.5→9.2) and the worst 2028 cost barriers ease. The harms are structural and easy to miss: Indiana-style adherence and weigh-in gating spreads to nine states, and cessation coverage built on 90-day courses bakes in on/off cycling despite the bone ledger. Reward blunting is normalised as 'the flats' and still unmeasured, and 'muscle-protected' marketing reaches Medicare-age users without fracture data. Adolescent exposure keeps accruing without bone-accrual data. Overall it is a harder but not collapsed society, about 5.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Generics come via an Aug 2029 settlement event, Medicare and Medicaid expand, the nicotine indication is approved, the bimagrumab combination is realised by a filing plus 'Zepbound Strong', the unmedicated movement and Montana law appear, and gating expands. Bone and muscle findings stay unchanged, consistent with safety_signal none. mechanism: most chains are shown, notably the cessation-to-Medicaid route, the cash-to-avoid-dashboards effect and the pharmacy-fill blindness to drug holidays. The ACA §2502 claim of instant universal coverage and the commercial-user decline despite higher employer coverage are asserted too neatly, and the prose says 'almost half' skip doses where the JSON says ~4 in 10. magnitude: population figures sit inside the envelope and reconcile, including age-weighted prevalence, income thirds, cycling share, payer mix and the Medicare and Medicaid spend arithmetic. Flaws are the nicotine approval at about 11 months against the 12-month rule, and the unexplained jump in disabled Medicare enrollees from 0.3M to 1.3M.",
+        "generativity": "The prose follows Lashonda from the butter-shelf pens to the kiosk weigh-in, the quinceañera skip, her client Mr. Dobrowski's tablet coach, the locked-out woman and her sister Tasha in Boise. The world fields supply specific, filmable detail: drug-holiday feasts, 'holiday hour' bars, unmedicated dating circles, kiosk lockouts and gray SARMs. Many implied scenes and distinct characters."
+      },
+      "plausibility": 6.55
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "65+ recovered from 8% to 11% (≈7.0M) under the generic-first Medicare model and the 'strength-protected' marketing, though still below its 2026 peak.",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: the parent puts 65+ use at 9% in 2026 and 8% in 2028, so 11% is above that peak, not below it. A three-point jump is also credited to marketing that began only in Sep 2030, with the fracture hazard ratio unchanged."
+      },
+      {
+        "quote": "Medicaid must cover FDA-approved cessation drugs under ACA §2502, so every state now covers semaglutide for smokers regardless of its obesity-drug policy.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: it relies on a mis-cited statute and assumes a new adjunct indication becomes mandatory coverage in every state as soon as it is approved. No rulemaking, USPSTF update or state implementation lag is shown."
+      },
+      {
+        "quote": "Lilly ran a 48-week phase 3 of bimagrumab + tirzepatide. Topline (Sep 2030) showed the lean share of weight lost falling from ~35% to ~12%, with no fracture endpoint.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: a phase 2 asset in 2028 would need to start a phase 3 by about autumn 2029, then enrol, run 48 weeks, read out and file a BLA within three months. That is a very compressed timeline with no shown chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.67,
+      "autonomy": 6.17,
+      "inequality": 4.33,
+      "public_health": 5.33,
+      "cohesion": 5.0,
+      "epistemic": 5.83,
+      "overall": 5.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.33,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.38,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Access broadens and prices fall, so the bottom third rises from 6.5% to 9.2%, which offsets some harm. The costs are still real. Gating spreads to nine states and about 45% of employers. Cessation coverage builds on/off cycling into plan design while bone harm from cycling persists. Reward blunting is normalised ('the flats') and invisible to PDC metrics. 'Muscle-protected' marketing outruns the evidence, and adolescent exposure goes unmeasured. That makes a harder society with new losers, not a catastrophe.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. The +2.0pp adoption delta, a generic collapse with the Aug 2029 settlement event, Medicare and Medicaid expansion, the Apr 2029 nicotine approval, no new safety signal, the bimagrumab filing plus Zepbound Strong, the unmedicated movement, nine-state conditioning and the mainstream 'flats' complaint all appear. mechanism: several chains are asserted or contradicted. The 65+ line says 11% is 'below its 2026 peak' when that peak was 9%, the §2502 automatic-coverage claim is mis-cited and instant, and the bimagrumab timeline is very compressed. The prose also says 'almost half' of users skip doses where the world says about 4 in 10. magnitude: ever-use (20.5) and current use (11.9) are inside the envelope, and the approvals (survodutide Jan 2029, amycretin Jul 2029, bimagrumab only filed) follow the rules. Payer shares sum to 100% and match 31.9M users. The Medicare and Medicaid spend, the age-weighted check, the income-third average and the cycling arithmetic all reconcile. The only gaps are minor: 65+ users are all assigned to Medicare, and a $245 Medicare brand price sits oddly beside a ≈$700 retatrutide net.",
+      "generativity": "The Lashonda Mills day is concrete and implies many scenes. It has the unused pens on the butter shelf, the kiosk saying VERIFIED, the locked-out woman folding the cash-price slip, the quinceañera drug holiday, the sister in Boise and the Medicare coach on a tablet. The world fields add texture through dating filters, holiday hours, supper clubs and the Montana coalition. Some prose passages explain more than they show."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.6289,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 37
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 16757,
         "output_tokens": 24276
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r19-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25185,
+        "output_tokens": 8832
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r19-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25185,
+        "output_tokens": 6400
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r19-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25185,
+        "output_tokens": 6780
+      }
     ]
   },
   "world": {
@@ -315,6 +350,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r19-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "because generic makers are shielded by preemption, plaintiffs' firms recruit generic users to sue brand makers.",
+          "field": "world/events/1/event",
+          "why": "Mechanism: the event is dated Nov 2029, but generic semaglutide pens only arrive in Jan 2030 (ANDAs approved Nov 2029), so there are no generic pen users to recruit yet. Most US jurisdictions also reject suing a brand maker over a generic product."
+        },
+        {
+          "quote": "Tirzepatide generics have begun launching in India and Brazil where its patents are weaker.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: no patent ruling, settlement or compulsory licence is shown, and the starting world only has semaglutide generics abroad. Tirzepatide's core patents run well past 2030, so launches by 2030 are asserted rather than caused."
+        },
+        {
+          "quote": "with ~350k US users by end 2030, mostly Medicare Part B women 65+",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: about nine months after approval, an adjunct approved on a DXA endpoint (list ~$1,800/month, roughly $7.6B a year at full list) reaches 350k users, mostly Medicare. No Part B coverage route or utilisation ramp is shown, and the infusion is excluded from the stated Medicare totals."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: 23% of adults are on a drug, obesity falls to ~32.5%, and the income gap narrows (bottom third 11→20%). The costs are real but not structural. The hip-fracture signal was replicated in a Danish registry and frail older adults on $55 generics go without the bimagrumab fix. Adolescents enter through Medicaid with no bone data, and 'quiet mind' marketing blurs mood effects. Fill-verified premium tracks persist but have softened (4-week holidays accepted by large vendors). Harm is nameable and discussed, so the world is a harder one with new losers rather than a refusable one.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is 23% (+6.7). The generic collapse runs through the Jun 2029 settlement event. Public expansion comes through Part D and Medicaid. The MDL tort, bimagrumab and aesthetic inversion are present, and the mood driver is realised only thinly, through the AUD label plus marketing. mechanism: Several chains are asserted or inconsistent: the Nov 2029 recruitment of generic users before generics exist (claim 1), tirzepatide generics in India and Brazil (claim 2), and Part D dropping PA across the board. The OPDP letter is dated 'within weeks' of May in the events but Aug 2030 in the pipeline note, and the 2029-09 event is listed out of order. magnitude: Population figures sit inside the envelope, and the Medicare ($22.6B), Medicaid ($4.8B), payer-mix and ever-used arithmetic all reconcile. The settlement-based generic entry and the approval timings obey the rules, though bimagrumab's Jan 2029 filing from 'phase 2/3' is fast and its filing is not in the events. Gaps: the route mix (45% generic injectables, 38% orals) does not fit the payer mix, 13.5M seniors conflicts with the 4.4-point age-band figure and the 71M senior base, and the bimagrumab uptake in claim 3 is unreconciled.",
+        "generativity": ""
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s2-L2-r19-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Registered claims pass 90,000, and because generic makers are shielded by preemption, plaintiffs' firms recruit generic users to sue brand makers.",
+          "field": "world/events/1/event",
+          "why": "The event is dated Nov 2029, but generic injectable semaglutide only reaches the US in Jan 2030 and ANDAs were approved Nov 2029. The recruitment of generic users therefore has no population to draw on yet, and innovator-liability suits against brand makers are legally doubtful. This is a mechanism and chronology failure."
+        },
+        {
+          "quote": "Route mix: generic injectables are ~45% of users and orals ~38%, the rest branded injectables.",
+          "field": "world/access/note",
+          "why": "This does not reconcile with the payer mix. Medicare has ~11M users on generic semaglutide, Medicaid is 'mostly generic' at 10.5M, and legitimate cash is 'mostly generic' at 19M. That is well over 55% of 61.4M on generic injectables before commercial generic-first step therapy, which leaves little room for 38% orals. This is a magnitude reconciliation failure."
+        },
+        {
+          "quote": "with ~350k US users by end 2030, mostly Medicare Part B women 65+",
+          "field": "world/drugs/pipeline_note",
+          "why": "A $1,800/month IV infusion reaching ~350k mostly-Medicare users within about nine months of the Mar 2030 approval implies roughly $7.5B annualised Part B spend. That is large and fast, and it is waved off as 'not included'. Part B coverage of a weight-loss adjunct is also asserted, not shown. This is a magnitude and mechanism failure."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadened: the income gap narrowed (bottom third 11% → 20%) and adult obesity fell to ~32.5%. Real harms persist: the ~95k-claim gastroparesis tort, the unresolved hip-fracture signal in frail older users on $55 generics, adolescents entering via Medicaid with no peak-bone-mass data, and chosen cycling that feeds regain. Blunting is normalised as a managed complaint, and a status inversion makes muscle the scarce, purchasable good. It is a mixed world, not clearly worse than 2028 for most people, so I score it mid-low.",
+        "plausibility": "driver_fidelity: Every driver is visible. Generic collapse comes through the Jun 2029 settlement event, public expansion through existing law, and mood is realised through AUD plus 'quiet mind'. The muscle-preserving combo is bimagrumab, and the GI/pancreatic tort, aesthetic inversion and mainstream complaint are all traceable. Introducing a new administration in Jan 2029 is unmotivated, but it does not contradict a driver. mechanism: Most chains are shown, but the Nov 2029 'recruit generic users' event predates generic entry, innovator liability is asserted, and the Medicare near-doubling and the class flip in coastal cities are largely asserted (claims 1 and 3). magnitude: Population figures sit inside the envelope, the approval timings (AUD at 12 months, bimagrumab at 14, survodutide at 16) satisfy the rules, and the Medicare and Medicaid arithmetic multiplies out. The generic-injectable ~45% route mix conflicts with the payer mix (claim 2), and the 65+ share of adults (23% in the age check, versus ~71M of ~267M) is inconsistent.",
+        "generativity": "The Tamika Rowe day shows rather than explains: the pen in the butter compartment, week three off before the wedding, fried bologna, and the daughter's 'did u eat lol'. The 81-year-old client with an infusion card and the bridesmaid dress add concrete scenes. Off Week festivals, natty-badge lab certificates, Foundayo-from-Wednesday holidays and steakhouse display dinners imply many more stories."
+      },
+      "plausibility": 6.85
+    },
+    {
+      "custom_id": "s2-L2-r19-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "because generic makers are shielded by preemption, plaintiffs' firms recruit generic users to sue brand makers",
+          "field": "world/events/1/event",
+          "why": "Mechanism: this is dated Nov 2029, but generic injectable semaglutide only launched in Jan 2030 (ANDAs approved Nov 2029). There were no generic semaglutide users to recruit, so the causal chain runs ahead of the timeline."
+        },
+        {
+          "quote": "Adult obesity is ~32.5%, and ~17% of adults have obesity and have never used a drug.",
+          "field": "world/population/note",
+          "why": "Magnitude: obese never-users fall from ~25% to ~17% while ever-use rises only 7.5 points. That implies nearly every new user had obesity, yet the world stresses non-obese 'quiet mind', dementia, AUD and 'body recomposition' users, so the figures don't reconcile."
+        },
+        {
+          "quote": "with ~350k US users by end 2030, mostly Medicare Part B women 65+",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: 350k users on a ~$1,800/month IV infusion within about nine months of approval implies ~$7.6B a year of Part B spend and a large new infusion-lounge build-out. It is asserted with no ramp, and the spend is left out of the Part D arithmetic."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadened sharply, with $45 pens, public payers as the default and the bottom-third use rate up from 11% to 20%, so this is a gentler world than 2028 on price. Real harms remain. Older users face a replicated hip-fracture signal (HR ~1.3), the infusion fix is proven only on DXA and mostly out of reach for frail generic users, and adolescents enter via Medicaid with no peak-bone-mass data. Fill-verified premium tracks persist, and 'quiet mind' marketing blurs side effect and feature. The harms are named, measured and litigated (epistemic ~4.5), which keeps this near 'a recognisably harder society with new losers' rather than structural and hidden.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. Adoption is exactly +6.7pp, generic collapse comes via a settlement event, public expansion via existing law, mood via the AUD label and 'quiet mind' marketing, the muscle combo via bimagrumab, and the MDL and aesthetic inversion are both present. Nothing contradicts state_action none or market_shock none. mechanism: Most chains are shown, but the Nov 2029 'recruit generic users' event predates generic launch (claim 1). The near-doubling of Medicare users from dropped prior authorisation and the 350k bimagrumab uptake (claim 3) are asserted more than shown. The events list is also out of chronological order. magnitude: Population, approval-timing and generic-rule limits are all met, and the payer mix (61.4M), Part D ($22.6B) and Medicaid ($4.8B) arithmetic reconciles. The obesity/never-used figure (claim 2) strains the arithmetic, and the route mix (45% generic injectables) looks tight against the payer descriptions.",
+        "generativity": "The Tamika Rowe scene is concrete: the pen in the butter compartment, week three off before the wedding, fried bologna, Mr. Halvorsen's infusion card, and Kiara's 'did u eat lol'. The world fields add vivid texture such as 'natty' lab certificates, 'Off Week' festivals, Foundayo-from-Wednesday holidays, and steakhouses as display. Several distinct characters and scenes are implied beyond the one shown."
+      },
+      "plausibility": 7.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "because generic makers are shielded by preemption, plaintiffs' firms recruit generic users to sue brand makers.",
+        "field": "world/events/1/event",
+        "why": "Mechanism: the event is dated Nov 2029, but generic semaglutide pens only arrive in Jan 2030 (ANDAs approved Nov 2029), so there are no generic pen users to recruit yet. Most US jurisdictions also reject suing a brand maker over a generic product."
+      },
+      {
+        "quote": "Tirzepatide generics have begun launching in India and Brazil where its patents are weaker.",
+        "field": "world/access/generic_rest_of_world",
+        "why": "Mechanism: no patent ruling, settlement or compulsory licence is shown, and the starting world only has semaglutide generics abroad. Tirzepatide's core patents run well past 2030, so launches by 2030 are asserted rather than caused."
+      },
+      {
+        "quote": "with ~350k US users by end 2030, mostly Medicare Part B women 65+",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: about nine months after approval, an adjunct approved on a DXA endpoint (list ~$1,800/month, roughly $7.6B a year at full list) reaches 350k users, mostly Medicare. No Part B coverage route or utilisation ramp is shown, and the infusion is excluded from the stated Medicare totals."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.17,
+      "autonomy": 4.0,
+      "inequality": 4.33,
+      "public_health": 5.0,
+      "cohesion": 4.17,
+      "epistemic": 4.83,
+      "overall": 4.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.17,
+      "magnitude": 6.5
+    },
+    "plausibility": 6.83,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Access broadens: 23% of adults are on a drug, obesity falls to ~32.5%, and the income gap narrows (bottom third 11→20%). The costs are real but not structural. The hip-fracture signal was replicated in a Danish registry and frail older adults on $55 generics go without the bimagrumab fix. Adolescents enter through Medicaid with no bone data, and 'quiet mind' marketing blurs mood effects. Fill-verified premium tracks persist but have softened (4-week holidays accepted by large vendors). Harm is nameable and discussed, so the world is a harder one with new losers rather than a refusable one.",
+      "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is 23% (+6.7). The generic collapse runs through the Jun 2029 settlement event. Public expansion comes through Part D and Medicaid. The MDL tort, bimagrumab and aesthetic inversion are present, and the mood driver is realised only thinly, through the AUD label plus marketing. mechanism: Several chains are asserted or inconsistent: the Nov 2029 recruitment of generic users before generics exist (claim 1), tirzepatide generics in India and Brazil (claim 2), and Part D dropping PA across the board. The OPDP letter is dated 'within weeks' of May in the events but Aug 2030 in the pipeline note, and the 2029-09 event is listed out of order. magnitude: Population figures sit inside the envelope, and the Medicare ($22.6B), Medicaid ($4.8B), payer-mix and ever-used arithmetic all reconcile. The settlement-based generic entry and the approval timings obey the rules, though bimagrumab's Jan 2029 filing from 'phase 2/3' is fast and its filing is not in the events. Gaps: the route mix (45% generic injectables, 38% orals) does not fit the payer mix, 13.5M seniors conflicts with the 4.4-point age-band figure and the 71M senior base, and the bimagrumab uptake in claim 3 is unreconciled.",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.3144,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 41
   }
 }

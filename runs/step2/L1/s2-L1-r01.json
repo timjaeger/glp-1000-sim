@@ -49,6 +49,41 @@
         "input_tokens": 16548,
         "output_tokens": 20532
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r01-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25291,
+        "output_tokens": 6136
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r01-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25291,
+        "output_tokens": 6028
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r01-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25291,
+        "output_tokens": 7156
+      }
     ]
   },
   "world": {
@@ -309,6 +344,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r01-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Ever-use rose 7.5 pts; ~4.2 pts of current users are first-course starters from this window, so restarts drive more of the growth than new starts do.",
+          "field": "world/population/note",
+          "why": "Fails magnitude and mechanism. A 7.5-pt rise in ever-use consists entirely of first-time users, since restarts do not change ever-use, so the conclusion is backwards. The 4.2 pts also contradicts the note's own 14.6 − 7.0 = 7.6 pts of first-course current users."
+        },
+        {
+          "quote": "The bottom third rose from 6.5% to 10.3%, mainly through Medicaid in waiver and non-waiver states and through ≈3.1M imported or counterfeit users who are counted here but under-measured.",
+          "field": "world/population/note",
+          "why": "Fails mechanism. A 3.8-pt rise across ~90M bottom-third adults is ~3.4M users. Medicaid users grow only from 2.6M to 3.5M (+0.9M), and the 3.1M gray-market users are not all bottom-third, so the stated drivers do not fully cover the jump."
+        },
+        {
+          "quote": "Medicare (Part D diabetes plus Bridge) pays ≈16% of fills ≈ 6.3M users (5.7M aged 65+ plus ≈0.6M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude. The 65+ band totals 8.5% × 67M ≈ 5.7M, so every 65+ user is on Medicare. That leaves none in commercial retiree plans, cash or imports, despite the price-sensitive gray market and the bone-driven pauses."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Coverage is now outcome-gated for ~70% of covering employers, and a bone-advised pause can cost a worker a year of coverage (open_tensions, Denise's scene). Fracture excess has spread to women aged 50–64, anhedonia data now exist, and ~3.1M people use unmonitored imports with counterfeit-insulin deaths. The bottom third has no DEXA access. Autonomy and epistemic harms are structural and normalised, partly offset by lower prices and wider access, so this is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is visible. Managed decline appears as the $199 deal, conditioning as the PBM default, the bone wave as the 410k cohort, counterfeits as the CDC alert, backlash as the Atlanta rally, and the marketed personality layer as the 'Quiet' subscription. State_action is held at none, and no forbidden approvals occur. mechanism: Most chains are shown, including price cuts leading to employer coverage and gating, and imports leading to counterfeit harm. Claims 1 and 2 are asserted or internally inconsistent: the restarts-versus-new-starts logic and the bottom-third attribution. magnitude: Current use of 14.6 and ever-use of 24.0 sit inside the envelope, though ever-use is near its cap of 24.2. Payer shares, the Bridge and Medicaid spend, the age bands and the hip-fracture arithmetic reconcile. Gaps remain in the 4.2 versus 7.6 first-course figure and in claim 3, where all 65+ users are on Medicare.",
+        "generativity": "The Denise Watkins vignette shows rather than explains: the kiosk receipt, the osteopenia letter, her sister's link to cheap pens, the church basement and the pen behind the eggs. The world has rich texture in 'the grey', 'unmedicated' dating filters, 'no-gram' restaurants, mobile DEXA vans and the odd backlash coalition. Many characters and scenes are implied."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s2-L1-r01-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "so restarts drive more of the growth than new starts do",
+          "field": "world/population/note",
+          "why": "The note's own figures contradict it. Ever-use rose 7.5 pts, close to the envelope maximum, and first-course users grew from about 4.9 to 7.6 pts. Second-course users grew only from about 5.0 to 7.0 pts, so new starts drove more growth than restarts. This is a reconciliation failure (magnitude)."
+        },
+        {
+          "quote": "Among an estimated ~1.5–2M Americans on low-dose 'calm' or 'craving freedom' subscriptions",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "The 'Quiet' brand launched in Oct 2029, so reaching 1.5–2M subscribers within about a year is an asserted jump with no adoption chain (mechanism). It is also not tied to the payer mix, where it would have to sit inside the 7.9M cash users (magnitude)."
+        },
+        {
+          "quote": "The bottom third rose from 6.5% to 10.3%, mainly through Medicaid in waiver and non-waiver states and through ≈3.1M imported or counterfeit users who are counted here but under-measured.",
+          "field": "world/population/note",
+          "why": "The stated drivers do not cover a 3.8-pt rise for the bottom third. Medicaid users rose only about 0.9M and the Indiana and Arkansas waivers are unchanged and gating. Imports and Medicaid together do not clearly account for roughly 3.4M extra bottom-third users, so the cause is asserted rather than shown (mechanism)."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "About 39M adults are on the drug under near-universal conditional coverage. Medically advised bone pauses can cost workers their coverage (open_tensions, Denise's letter). The ledger also shows about 5,000 excess hip fractures a year, counterfeit-pen deaths, and unmeasured 'calm' subscriptions sold to people without obesity. Autonomy and public health score highest. Epistemic harm is partly offset because the harms are measured and named (SHAPS data, FTC letters, DEXA), so this is a harder society with new losers, not a structurally invisible one.",
+        "plausibility": "driver_fidelity: every driver is traceable. Adoption delta of 4.7 pp, managed decline ($199 in Dec 2029), outcome-gated coverage, muscle/bone wave, counterfeit flood, backlash coalition and marketed 'Quiet' subscriptions all appear in fields and events. No new indication or launch occurs, and the smoking-cessation CRL and MariTide filing fit the approval rules. mechanism: most chains are shown, including price to employer budgetability to coverage, and DEXA pauses against adherence rules. Gaps remain in the subscriptions reaching 1.5–2M users within a year, the bottom-third rise, and the gating jump from 40% to 70% (claims 2 and 3). magnitude: current use of 14.6% is inside the envelope and ever-use of 24.0% is at its edge (24.2). Age bands, payer mix, Bridge spend ($4.3B) and Medicaid spend ($8.4B) all multiply out. The one visible failure is the note's claim that restarts drive more growth than new starts (claim 1).",
+        "generativity": "Denise's day gives a concrete kiosk, receipt, osteopenia letter, her sister's text, Mr. Hollins and the church basement. The world supplies named places (Merrillville, Atlanta, Tulsa–Dallas, Houston), 'the grey', and 'unmedicated' as a dating filter. It implies many other scenes: fleets, counterfeit-cluster cities, DEXA vans and the rally."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s2-L1-r01-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "so restarts drive more of the growth than new starts do.",
+          "field": "world/population/note",
+          "why": "Fails magnitude: the note's own numbers contradict it. Current users on a second or later course rise from about 5.0 to 7.0 points (+2.0), while first-course users rise from about 4.9 to 7.6 (+2.7), so new starts contribute at least as much as restarts. Ever-use also rose 7.5 points, which is entirely new starters."
+        },
+        {
+          "quote": "Among an estimated ~1.5–2M Americans on low-dose 'calm' or 'craving freedom' subscriptions, there is no systematic measurement.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Fails mechanism and magnitude: a $149 subscription first launched in Oct 2029 reaches 1.5–2M users in about 14 months, with no shown path. It also has no explicit place in the payer-mix reconciliation, and the FTC was already sending warning letters to the same brands."
+        },
+        {
+          "quote": "The 65+ band rose only 0.5 pts despite lower Medicare prices because of bone guidance and DEXA-driven pauses.",
+          "field": "world/population/note",
+          "why": "Fails mechanism: the Medicare rate fell only from $245 to $199 from Jan 2030, and the $50 beneficiary copay is unchanged. A lower Medicare price therefore gives 65+ users no reason to use more, so the stated offset is a mis-specified causal chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 39M adults are on the drug, mostly under conditional coverage. Roughly 70% of employers gate on adherence and a 5% loss threshold, which makes medically advised bone pauses coverage-threatening (open_tensions). Fracture excess, about 3M imported or counterfeit users, a retail anhedonia product, and a backlash coalition that agrees only on opposing gating all stack up. This is a harder society with new losers, but not a collapse, and the harms are partly measured and discussable, which limits the epistemic score.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 14.6%. Managed decline appears as $199 prices. Conditioning appears as 70% outcome-gated plans. The bone wave, the counterfeit and import flood, the backlash coalition and the marketed 'Quiet' subscriptions are all in fields and events. next_gen and new_indications remain none, with only line extensions and CRLs.\nmechanism: Most chains are shown, such as PBM gating making coverage budgetable and counterfeit pens leading to a CDC alert. Three are weak. The 65+ band is said to have been held down by 'lower Medicare prices' despite an unchanged copay. The 1.5–2M 'calm' subscribers appear within about 14 months. Employer coverage jumps 5 points after a mid-2029 PBM deal.\nmagnitude: Current use (14.6), ever-use (24.0, near the 24.2 cap), the income thirds, the age-band arithmetic, the payer mix (47+16+9+20+8=100), the Bridge and Medicaid spend, the hip-fracture arithmetic and the approval timing all reconcile. The flaws are the cycling and first-course narrative that contradicts its own numbers, the 65+ users all counted as Medicare, and a Nov versus Dec 2029 date mismatch for the same deal.",
+        "generativity": "The prose ends with a concrete Denise Watkins day: the pharmacy kiosk at six, the DEXA letter on the fridge, the sister's link to imported pens, and the church-basement 'Whole Table Wednesday'. The world fields add many scene hooks, including 'Quiet' subscriptions, 'no-gram' restaurants, mobile DEXA vans in gym car parks, the 'whole appetite' rally and 'unmedicated' dating filters. Daily life has real texture rather than explanation."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Ever-use rose 7.5 pts; ~4.2 pts of current users are first-course starters from this window, so restarts drive more of the growth than new starts do.",
+        "field": "world/population/note",
+        "why": "Fails magnitude and mechanism. A 7.5-pt rise in ever-use consists entirely of first-time users, since restarts do not change ever-use, so the conclusion is backwards. The 4.2 pts also contradicts the note's own 14.6 − 7.0 = 7.6 pts of first-course current users."
+      },
+      {
+        "quote": "The bottom third rose from 6.5% to 10.3%, mainly through Medicaid in waiver and non-waiver states and through ≈3.1M imported or counterfeit users who are counted here but under-measured.",
+        "field": "world/population/note",
+        "why": "Fails mechanism. A 3.8-pt rise across ~90M bottom-third adults is ~3.4M users. Medicaid users grow only from 2.6M to 3.5M (+0.9M), and the 3.1M gray-market users are not all bottom-third, so the stated drivers do not fully cover the jump."
+      },
+      {
+        "quote": "Medicare (Part D diabetes plus Bridge) pays ≈16% of fills ≈ 6.3M users (5.7M aged 65+ plus ≈0.6M disabled under-65)",
+        "field": "world/access/public_coverage",
+        "why": "Fails magnitude. The 65+ band totals 8.5% × 67M ≈ 5.7M, so every 65+ user is on Medicare. That leaves none in commercial retiree plans, cash or imports, despite the price-sensitive gray market and the bone-driven pauses."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 6.5,
+      "public_health": 6.67,
+      "cohesion": 6.0,
+      "epistemic": 6.17,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.83,
+      "magnitude": 6.5
+    },
+    "plausibility": 7.06,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Coverage is now outcome-gated for ~70% of covering employers, and a bone-advised pause can cost a worker a year of coverage (open_tensions, Denise's scene). Fracture excess has spread to women aged 50–64, anhedonia data now exist, and ~3.1M people use unmonitored imports with counterfeit-insulin deaths. The bottom third has no DEXA access. Autonomy and epistemic harms are structural and normalised, partly offset by lower prices and wider access, so this is a recognisably harder society with new losers, not a collapse.",
+      "plausibility": "driver_fidelity: Every driver is visible. Managed decline appears as the $199 deal, conditioning as the PBM default, the bone wave as the 410k cohort, counterfeits as the CDC alert, backlash as the Atlanta rally, and the marketed personality layer as the 'Quiet' subscription. State_action is held at none, and no forbidden approvals occur. mechanism: Most chains are shown, including price cuts leading to employer coverage and gating, and imports leading to counterfeit harm. Claims 1 and 2 are asserted or internally inconsistent: the restarts-versus-new-starts logic and the bottom-third attribution. magnitude: Current use of 14.6 and ever-use of 24.0 sit inside the envelope, though ever-use is near its cap of 24.2. Payer shares, the Bridge and Medicaid spend, the age bands and the hip-fracture arithmetic reconcile. Gaps remain in the 4.2 versus 7.6 first-course figure and in claim 3, where all 65+ users are on Medicare.",
+      "generativity": "The Denise Watkins vignette shows rather than explains: the kiosk receipt, the osteopenia letter, her sister's link to cheap pens, the church basement and the pen behind the eggs. The world has rich texture in 'the grey', 'unmedicated' dating filters, 'no-gram' restaurants, mobile DEXA vans and the odd backlash coalition. Many characters and scenes are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.8711,
+    "survived": true,
+    "new_lineage": "L2",
+    "floor_used": 6,
+    "rank": 2
   }
 }

@@ -37,6 +37,41 @@
         "input_tokens": 16941,
         "output_tokens": 18518
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r46-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24830,
+        "output_tokens": 4852
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r46-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24830,
+        "output_tokens": 4577
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r46-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24830,
+        "output_tokens": 5271
+      }
     ]
   },
   "world": {
@@ -294,6 +329,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r46-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA did not place tirzepatide back on the shortage list, because Lilly certified it could meet demand for existing patients; compounders sued and lost.",
+          "field": "world/access/note",
+          "why": "Mechanism: Lilly put tirzepatide on allocation for about ten months and cut off new cash patients. A regulator declining to call that a shortage on the manufacturer's say-so is a convenient assertion, and it is what keeps 503B compounding closed."
+        },
+        {
+          "quote": "AUD-coded coverage under parity ~1.5M;",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the AUD approval came in Apr 2030, yet 1.5M parity-covered AUD users are counted by late 2030. Diagnosis, audit-prone coding and plan onboarding would not plausibly scale that fast, and the figure is asserted, not derived."
+        },
+        {
+          "quote": "Couples therapists' discussion of low desire has moved from podcasts into practice guidelines from professional associations.",
+          "field": "world/interior_life/effect_on_intimacy",
+          "why": "Mechanism: the ledger says no trial, label or registry measures reward blunting, and no new data exist. Professional-association practice guidelines in two years, with no clinical evidence behind them, is an asserted institutional leap."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension. Tiers widen (29% vs 18.5% on-drug), and the cash middle was hit by the 2029 allocation and the price resets. The obesity-only uninsured are pushed toward AUD coding to get coverage. Autonomy suffers from the Medicare 80% PDC rule locking out older users who take holidays, and from connected-pen data that employers read. Epistemic harm is moderated because the flatness complaint is now named, though it is still unmeasured. The flourishing and public-health costs are a regain cohort, rising research-peptide harms and older users starting on the drug despite the bone-density concerns. Overall it is a harder society with new losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: All drivers are visible in fields and events: the recall and price resets, employer coverage at 36%, the AUD approval and ADA dementia endorsement, the retatrutide pipeline note, the Lilly recall and Novo whistleblower suit, normalisation and the mainstream complaint. The one blemish is the CMS administrative allocation exemption, which sits awkwardly against state_action none. mechanism: The recall to oral shift to gray-market surge chain is shown, as is parity law to AUD claims to audits. Weaker links are the FDA not declaring a shortage (claim 1), the AUD-coded user count within months (claim 2) and the fast leap to practice guidelines with no evidence (claim 3). magnitude: Adult use at 23.9% and ever-use at 32% are in the envelope. The payer mix sums to 64M, and Medicare ($7.4B) and Medicaid ($5.9B gross, $3.8B federal) reconcile. The age, income and cycling arithmetic check out. The AUD approval lands exactly at the 12-month minimum after filing, and the amycretin, survodutide and MariTide timings are permitted. Only small edge effects remain.",
+        "generativity": "The prose carries a concrete protagonist, a quinceañera hall with the caterer, half-bowls in the fridge, and the SKIP reminder. Secondary characters (Rudy, Mrs. Ochoa, the thin caterer) and a 'Saturday economy' with holiday diaries give daily-life texture. Several scenes could be filmed directly, and the world fields add Medicare lockout and AUD-audit conflicts."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s2-L3-r46-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "AUD treatment with semaglutide is covered as substance-use treatment in most state Medicaid programmes, outside the obesity budget.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: the AUD approval came in Apr 2030, so coverage in most state Medicaid programmes within about eight months is asserted. No benefit-design or formulary-adoption chain is shown, and Medicaid formulary and benefit changes usually take far longer."
+        },
+        {
+          "quote": "including ~1.5M pushed off during the 2029 Lilly allocation",
+          "field": "world/population/note",
+          "why": "mechanism: the candidate says Lilly 'protected existing patients first' during allocation, and the recall hit only Lilly products. Yet 1.5M people are said to be forced off, with no chain showing how existing patients were dropped, and orals and Novo pens were available."
+        },
+        {
+          "quote": "Women aged 45–64 in Sun Belt suburbs, the heaviest-using demographic, have turned skipping a dose into a ritual",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "mechanism: the world gives no sex-specific data to support 'heaviest-using'. A ritual of skipping doses to taste a meal also sits poorly with a weekly injectable's long half-life and the 80% PDC lockout. Only the short-half-life oral makes it plausible, and the claim spreads that to ~40% of all users."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Tiering widens: on-drug rates are 29% in the top income third against 18.5% in the bottom, employer coverage falls to 36%, and Medicare's 80% PDC rule penalises holidays. AUD coding gaming and audits make a stigmatising diagnosis the price of access, and connected-pen data exposes holiday patterns to employers. The flat-affect complaint is now nameable and discussed, which lowers epistemic harm relative to 2028, but it remains unmeasured. The overall picture is a harder, more stratified, more surveilled society that is not catastrophic.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised: 23.9% adoption, the shock-up recall and price resets, employer coverage 44→36%, AUD approved Apr 2030 and a dementia guideline endorsement, a retatrutide triple agonist, the Novo scandal, normalisation, and a mainstream complaint. The CMS allocation exemption slightly strains 'state_action none', but it was by administrative guidance only. mechanism: The recall to allocation to oral shift to gray-market chain and the parity-law route to AUD-coded claims are well shown. Claims 1–3 (Medicaid AUD coverage, 1.5M forced off despite protected existing patients, the holiday ritual) are asserted or in tension with the world's own text. magnitude: Every population figure sits inside the envelope (23.9 and 32), and the payer mix sums to 64M. Medicare ($7.4B) and Medicaid ($5.9B gross, $3.8B federal) arithmetic is correct, the age and income checks and the cycling arithmetic reconcile, and the pipeline filings respect the 12-month rule.",
+        "generativity": "The prose gives Marisol, her mother, the caterer, Rudy, the half-bowls in the fridge and a SKIP phone reminder, which makes several scenes filmable. The world fields add texture: a 'Saturday' economy of tasting menus, holiday-diary podcasts, sales teams scheduling pitches around holiday weeks, and seniors facing lockout. A few passages explain rather than show."
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s2-L3-r46-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Women aged 45–64 in Sun Belt suburbs, the heaviest-using demographic, have turned skipping a dose into a ritual",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: skipping one dose of a long-half-life weekly pen or a two-day pill would barely restore appetite, so a dosing ritual that tastes the meal is asserted rather than shown. It also sits badly with the regain and 80% PDC lockout pressures the candidate itself describes."
+        },
+        {
+          "quote": "Because the federal parity statute requires substance-use benefits on par with medical benefits, plans that exclude obesity must still cover semaglutide when it is prescribed for AUD.",
+          "field": "world/access/note",
+          "why": "Mechanism: parity law requires comparable limits, not coverage of a named drug, so plans could still use prior authorisation or step therapy. A hard coverage mandate, and ~1.5M AUD-coded users within months of the Apr 2030 approval, is overstated and moves too fast."
+        },
+        {
+          "quote": "FDA did not place tirzepatide back on the shortage list, because Lilly certified it could meet demand for existing patients; compounders sued and lost.",
+          "field": "world/access/note",
+          "why": "Mechanism: a ten-month allocation that suspends new cash patients is the textbook sign of a shortage. Declaring none, on the strength of a manufacturer's own certification, is a convenient assertion that keeps 503B compounding closed."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The two-tier system hardens: 64M users, the cash middle hit by the 2029 allocation, and gray-market users up to 10M. Medicare lockouts now catch holiday-takers, and employer connected-pen surveillance expands to 1 in 4 large self-funded employers. Parity-driven AUD coding makes a stigmatising diagnosis the price of access. Epistemic harm eases slightly because flatness is now nameable, but it is still unmeasured and the long-horizon and cycling effects are unstudied. This is a harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: All drivers are visible: adoption of 23.9%, a shock-up recall with price resets, employer coverage at 36%, AUD approval plus an ADA dementia endorsement, a scandal at Novo, normalisation, and a mainstream flatness complaint. The dementia indication is only a guideline, not a label, and the CMS exemption and the replicated bone-density finding sit slightly against state_action none and safety_signal none. mechanism: The recall to allocation to oral shift to gray-market growth chain is well shown. The parity-mandate claim, the no-shortage-listing claim and the dose-skipping ritual (claims 1–3) are asserted more than shown. magnitude: Every figure is inside the envelope: 23.9% on drug, 32% ever used, income thirds that bracket the national figure, an age check of about 23.95, and a payer mix summing to 64M. The Medicare ($7.4B) and Medicaid ($5.9B gross, $3.8B federal) arithmetic works, the cycling arithmetic reconciles, and the approval timings obey the 12-month rule.",
+        "generativity": "The Marisol day is concrete: half-bowls in the fridge, the SKIP reminder, the caterer arguing with her mother over portions, and Rudy's 'nothing to take a holiday from'. The world fields add implied scenes such as Saturday tasting menus, hidden holiday patterns in pen data, and seniors worried about lockout. Characters and conflicts are easy to extend."
+      },
+      "plausibility": 7.45
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "FDA did not place tirzepatide back on the shortage list, because Lilly certified it could meet demand for existing patients; compounders sued and lost.",
+        "field": "world/access/note",
+        "why": "Mechanism: Lilly put tirzepatide on allocation for about ten months and cut off new cash patients. A regulator declining to call that a shortage on the manufacturer's say-so is a convenient assertion, and it is what keeps 503B compounding closed."
+      },
+      {
+        "quote": "AUD-coded coverage under parity ~1.5M;",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: the AUD approval came in Apr 2030, yet 1.5M parity-covered AUD users are counted by late 2030. Diagnosis, audit-prone coding and plan onboarding would not plausibly scale that fast, and the figure is asserted, not derived."
+      },
+      {
+        "quote": "Couples therapists' discussion of low desire has moved from podcasts into practice guidelines from professional associations.",
+        "field": "world/interior_life/effect_on_intimacy",
+        "why": "Mechanism: the ledger says no trial, label or registry measures reward blunting, and no new data exist. Professional-association practice guidelines in two years, with no clinical evidence behind them, is an asserted institutional leap."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.17,
+      "inequality": 6.83,
+      "public_health": 5.5,
+      "cohesion": 5.0,
+      "epistemic": 4.67,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.83,
+      "mechanism": 6.33,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.55,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Inequality is the worst dimension. Tiers widen (29% vs 18.5% on-drug), and the cash middle was hit by the 2029 allocation and the price resets. The obesity-only uninsured are pushed toward AUD coding to get coverage. Autonomy suffers from the Medicare 80% PDC rule locking out older users who take holidays, and from connected-pen data that employers read. Epistemic harm is moderated because the flatness complaint is now named, though it is still unmeasured. The flourishing and public-health costs are a regain cohort, rising research-peptide harms and older users starting on the drug despite the bone-density concerns. Overall it is a harder society with new losers, not a structural catastrophe.",
+      "plausibility": "driver_fidelity: All drivers are visible in fields and events: the recall and price resets, employer coverage at 36%, the AUD approval and ADA dementia endorsement, the retatrutide pipeline note, the Lilly recall and Novo whistleblower suit, normalisation and the mainstream complaint. The one blemish is the CMS administrative allocation exemption, which sits awkwardly against state_action none. mechanism: The recall to oral shift to gray-market surge chain is shown, as is parity law to AUD claims to audits. Weaker links are the FDA not declaring a shortage (claim 1), the AUD-coded user count within months (claim 2) and the fast leap to practice guidelines with no evidence (claim 3). magnitude: Adult use at 23.9% and ever-use at 32% are in the envelope. The payer mix sums to 64M, and Medicare ($7.4B) and Medicaid ($5.9B gross, $3.8B federal) reconcile. The age, income and cycling arithmetic check out. The AUD approval lands exactly at the 12-month minimum after filing, and the amycretin, survodutide and MariTide timings are permitted. Only small edge effects remain.",
+      "generativity": "The prose carries a concrete protagonist, a quinceañera hall with the caterer, half-bowls in the fridge, and the SKIP reminder. Secondary characters (Rudy, Mrs. Ochoa, the thin caterer) and a 'Saturday economy' with holiday diaries give daily-life texture. Several scenes could be filmed directly, and the world fields add Medicare lockout and AUD-audit conflicts."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.13,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 22
   }
 }

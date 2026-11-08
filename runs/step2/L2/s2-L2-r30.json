@@ -51,6 +51,41 @@
         "input_tokens": 16783,
         "output_tokens": 17312
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r30-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24047,
+        "output_tokens": 6613
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r30-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24047,
+        "output_tokens": 6469
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r30-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24047,
+        "output_tokens": 7049
+      }
     ]
   },
   "world": {
@@ -297,6 +332,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r30-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "AUD increment: ~1.4M Medicare users × ~$274 × 12 ≈ $4.6B/year run-rate by late 2030.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: 1.4M Medicare AUD users within roughly ten months of the Feb 2030 approval is an implausibly fast ramp, and the claim is not tied to any diagnosis or PA throughput. The arithmetic multiplies out, but it is asserted rather than derived."
+        },
+        {
+          "quote": "commercial ~28% (~14M, flat in headcount while employer weight coverage fell, held up by diabetes, cardiac and new AUD codes",
+          "field": "world/population/note",
+          "why": "Mechanism: employer weight coverage fell from 44% to 34%, yet commercial headcount stays exactly flat at ~14M. That is attributed to AUD codes that existed for under a year, which looks like a convenient offset."
+        },
+        {
+          "quote": "Thinness alone stopped signalling wealth once free provision and Medicaid AUD coverage reached the bottom third.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Mechanism and magnitude: bottom-third use is still only 14% against 23% at the top, and only ~1.5M people are in free provision. A full collapse of the thinness-as-class signal in about two years is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy and inequality score highest. Adherence-conditioned premiums persist outside IL and CA, the AUD indication turns workplace drinking discipline into a prescriber referral, and the bone gap runs along class lines. Gray-market retatrutide users and an unmonitored 4.5M sit beside a muscle-as-status culture (Plano/Buckhead DXA comparisons). Free federal provision, falling prices and reduced drinking offset some of this, so the world is a harder but not catastrophic society.",
+        "plausibility": "driver_fidelity: Every driver is visible in the fields and events: managed price cuts, employer retreat from 44% to 34%, the AUD approval, no new safety signal, the co-pack, gray-market growth from 3M to 4.5M, class stratification, the HRSA subsidy, and the employer-encouraged personality layer. mechanism: Most chains are shown, including the price round, the AUD pathway into Medicaid and Medicare, and 503A and research-peptide routes into the gray market. The flat commercial headcount and the claim that thinness no longer signals wealth are asserted (claims 2 and 3). magnitude: Population figures, payer shares (which sum to 100%), the age-weighted check, HRSA ($2.7B) and the Medicare AUD spend ($4.6B) all reconcile and sit inside the envelope. The AUD approval lands exactly 12 months after filing. The 1.4M Medicare AUD ramp (claim 1) and the Medicaid rise from 3.4M to 5.5M are aggressive, and adverse-event reports at 1.7× are written as 'roughly doubled'.",
+        "generativity": "The Tanya Whitlock day is filmable: the HRSA sticker bottle, Mr. Kessler's DXA printout and uneaten eggs, the half sandwich, Darnell's 'reta' in the butter compartment, and the dark bar on Wayne Avenue. It implies several secondary characters and scenes. The world also supplies the Unmuted off nights, the Tulsa fasting churches and the EEOC case. The prose shows rather than explains."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s2-L2-r30-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "AUD increment: ~1.4M Medicare users × ~$274 × 12 ≈ $4.6B/year run-rate by late 2030.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: 1.4M Medicare AUD users within about 10 months of approval is implausibly fast. It also does not fit Medicare's total, which rises only from ~8M to ~9M. That would mean the non-AUD Medicare base shrank by about 0.4M even though a new dementia route opened."
+        },
+        {
+          "quote": "Medicaid ~11% (~5.5M, up because the AUD indication falls under mandatory Medicaid drug coverage)",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: Medicaid grows by about 2.1M users (3.4M to 5.5M) in under a year, even though every state gates AUD coverage behind prior authorisation needing an AUDIT score and a counselling referral. Weight-only coverage also shrank to 8 states. The ramp is asserted rather than shown."
+        },
+        {
+          "quote": "the tirzepatide+bimagrumab co-pack (Sep 2030) is cash ~$899, which is why both are pulled into gray channels",
+          "field": "world/access/note",
+          "why": "Mechanism: a product approved in September 2030 is described as already driving gray-market flows by year-end. A two-component co-pack with a monthly subcutaneous antibody is hard to counterfeit or import. The 'stacks' trade predates the approval, so this causal claim is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.0,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 7.0,
+        "magnitude": 6.0
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "The world is harder, with new losers but no collapse. Adherence-conditioned premiums reach 4.5M workers, and AUD drinking discipline now routes through prescribers ('recovery support'). The bone gap runs along class lines, and the near-poor above 200% FPL fall into the gray market (4.5M, rising). Offsetting this, free FQHC provision and lower alcohol volumes are real benefits, and blunting is measured and discussed, so epistemic harm is moderate. The harm is structural but visible.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Managed decline appears as the TrumpRx cuts and 5–8% net price falls. Employer retreat is 44→34%. AUD, the muscle co-pack, gray-market growth, HRSA subsidy and class stratification all have fields and events, and safety_signal 'none' holds because no new kind of signal appears. mechanism: Most chains are shown, including the AUD filing leading to Medicaid and Medicare routes, HRSA displacing the gray market, and the co-pack/retatrutide cash prices. Weak links are the co-pack driving gray channels within about 3 months and Medicaid AUD uptake (claims 2 and 3). magnitude: Population figures sit inside the envelope, and the payer mix, cycling arithmetic, HRSA ($2.7B) and AUD ($4.6B) products reconcile. Approval timings respect the 12-month rule. The gaps are the Medicare headcount (9M total against 1.4M new AUD users) and the large Medicaid jump, claims 1 and 2.",
+        "generativity": "The Tanya Whitlock day gives distinct scenes: the 5:40 pill and the HRSA sticker, Mr. Kessler's DXA printout and uneaten eggs, Darnell's 'reta' in the butter compartment, and the dark Wayne Avenue bar. The world fields add texture, such as DXA percentiles at book clubs, 'DXA verified' badges and Unmuted off nights. Class, age and work tensions are implied without being explained."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s2-L2-r30-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "AUD increment: ~1.4M Medicare users × ~$274 × 12 ≈ $4.6B/year run-rate by late 2030.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: The product multiplies out, but 1.4M new AUD users in Medicare within about ten months of approval exceeds the whole implied Medicare user growth (~8M to ~9M). That growth must also cover the dementia, CV and CKD routes, so the figures do not reconcile."
+        },
+        {
+          "quote": "Medicaid ~11% (~5.5M, up because the AUD indication falls under mandatory Medicaid drug coverage)",
+          "field": "world/population/note",
+          "why": "mechanism: Mandatory coverage is not uptake. It implies roughly 2M extra Medicaid users in under a year behind an AUDIT-score PA and a counselling referral. The candidate asserts this jump without showing diagnosis, prescribing or capacity chains."
+        },
+        {
+          "quote": "Thinness alone stopped signalling wealth once free provision and Medicaid AUD coverage reached the bottom third.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "mechanism: The bottom third is still at 14% versus 23% for the top, and free provision reaches only ~1.5M people. A cultural signal flipping in two years on that base is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.0,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 6.0
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Employer-conditioned premiums and 'recovery support' referrals turn drinking discipline into a prescription pathway (interior_life/effect_on_work, EEOC cause finding). The class split now runs along body composition and bone risk: gray-market retatrutide, no fracture data on the co-pack, and ~4.5M unmonitored users. Free FQHC provision, mandatory Medicaid AUD coverage and less drinking soften the picture. The result is a recognisably harder society with new losers, not a structural nightmare.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Adoption is +2.3pp, the TrumpRx round and Medicare MFP show managed decline, employer coverage falls 44→34, AUD is filed Feb 2029 and approved Feb 2030 (12 months, in line with the approval rules), and the co-pack is the form the envelope allows. The gray market grows 3M→4.5M, the HRSA programme is the subsidy, and the employer personality layer persists. mechanism: Most chains are shown (price rounds, 503A and 'research peptide' routes, the HRSA contract), but the Medicaid AUD surge and the thinness-signal flip (claims 2 and 3) are asserted. The commercial headcount holding flat at 14M while employer coverage falls is also asserted. magnitude: Population figures sit inside the envelope and the payer mix sums to 50M. The age-weighted check, the cycling arithmetic, the HRSA $2.7B and the $4.6B AUD product all reconcile. The weak spot is claim 1: 1.4M Medicare AUD users exceeds the net Medicare growth of ~1M implied by the payer mix.",
+        "generativity": "The prose shows rather than explains: Tanya's 5:40 pill, the fridge note, Mr. Kessler's DXA printout and flat appetite, Darnell's 'reta' in the butter compartment, and the dark bar on Wayne Avenue. Characters span the class, age and employer-pressure axes, and the world has plenty of implied scenes (Unmuted off nights, book-club DXA comparisons, EEOC conciliation). The ending is slightly tidy but the texture is strong."
+      },
+      "plausibility": 6.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "AUD increment: ~1.4M Medicare users × ~$274 × 12 ≈ $4.6B/year run-rate by late 2030.",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude and mechanism: 1.4M Medicare AUD users within roughly ten months of the Feb 2030 approval is an implausibly fast ramp, and the claim is not tied to any diagnosis or PA throughput. The arithmetic multiplies out, but it is asserted rather than derived."
+      },
+      {
+        "quote": "commercial ~28% (~14M, flat in headcount while employer weight coverage fell, held up by diabetes, cardiac and new AUD codes",
+        "field": "world/population/note",
+        "why": "Mechanism: employer weight coverage fell from 44% to 34%, yet commercial headcount stays exactly flat at ~14M. That is attributed to AUD codes that existed for under a year, which looks like a convenient offset."
+      },
+      {
+        "quote": "Thinness alone stopped signalling wealth once free provision and Medicaid AUD coverage reached the bottom third.",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "Mechanism and magnitude: bottom-third use is still only 14% against 23% at the top, and only ~1.5M people are in free provision. A full collapse of the thinness-as-class signal in about two years is asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.67,
+      "inequality": 6.67,
+      "public_health": 5.0,
+      "cohesion": 5.67,
+      "epistemic": 5.67,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 6.33
+    },
+    "plausibility": 7.01,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Autonomy and inequality score highest. Adherence-conditioned premiums persist outside IL and CA, the AUD indication turns workplace drinking discipline into a prescriber referral, and the bone gap runs along class lines. Gray-market retatrutide users and an unmonitored 4.5M sit beside a muscle-as-status culture (Plano/Buckhead DXA comparisons). Free federal provision, falling prices and reduced drinking offset some of this, so the world is a harder but not catastrophic society.",
+      "plausibility": "driver_fidelity: Every driver is visible in the fields and events: managed price cuts, employer retreat from 44% to 34%, the AUD approval, no new safety signal, the co-pack, gray-market growth from 3M to 4.5M, class stratification, the HRSA subsidy, and the employer-encouraged personality layer. mechanism: Most chains are shown, including the price round, the AUD pathway into Medicaid and Medicare, and 503A and research-peptide routes into the gray market. The flat commercial headcount and the claim that thinness no longer signals wealth are asserted (claims 2 and 3). magnitude: Population figures, payer shares (which sum to 100%), the age-weighted check, HRSA ($2.7B) and the Medicare AUD spend ($4.6B) all reconcile and sit inside the envelope. The AUD approval lands exactly 12 months after filing. The 1.4M Medicare AUD ramp (claim 1) and the Medicaid rise from 3.4M to 5.5M are aggressive, and adverse-event reports at 1.7× are written as 'roughly doubled'.",
+      "generativity": "The Tanya Whitlock day is filmable: the HRSA sticker bottle, Mr. Kessler's DXA printout and uneaten eggs, the half sandwich, Darnell's 'reta' in the butter compartment, and the dark bar on Wayne Avenue. It implies several secondary characters and scenes. The world also supplies the Unmuted off nights, the Tulsa fasting churches and the EEOC case. The prose shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.4833,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 8
   }
 }

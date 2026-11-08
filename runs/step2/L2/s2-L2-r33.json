@@ -51,6 +51,41 @@
         "input_tokens": 16734,
         "output_tokens": 21172
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r33-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24963,
+        "output_tokens": 7320
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r33-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24963,
+        "output_tokens": 7967
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r33-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24963,
+        "output_tokens": 9714
+      }
     ]
   },
   "world": {
@@ -307,6 +342,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r33-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "US cigarette volume fell ~11% in 2030, against a ~6% secular trend",
+          "field": "world/economy/alcohol/state",
+          "why": "Fails magnitude and mechanism. The nicotine course was approved in Mar 2030 and the world reports about 1.2M courses. At ~31% abstinence that is roughly 0.4M quitters out of ~28M smokers, about 1%, so it cannot explain a 5-point excess fall in volume."
+        },
+        {
+          "quote": "Orals are ~63% of all users and ~75% of new starts.",
+          "field": "world/access/note",
+          "why": "Fails mechanism. In 2028 orals were under 40% of users because established injectable users stayed put. Reaching 63% implies roughly 11M injectable users switching or leaving in two years while total users fell only ~2M, and no switching chain is shown."
+        },
+        {
+          "quote": "The FDA-requested postmarketing study (2029, n≈61k) confirmed a clinically meaningful rise in ~6.5% of users versus ~2.8% of matched controls.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Fails mechanism. A study requested in 2028 is reported in 2029 with a cohort nearly three times larger than the 2027 one. It also moves blunting from suspected to established, labelled and acted on by the FTC within about a year, which is implausibly fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 4,
+        "cohesion": 3,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder but partly improved society. Income inequality narrows at the bottom (bottom third 11→12.5%) and Medicare and Medicaid expand access. Against that, ~7,000 excess hip fractures a year, DXA-conditioned Medicare coverage, adherence documentation in Medicaid pool states, 23 mostly Southern states left out, and recruit stress fractures keep it near 4. The harms are named, measured and discussable (label changes, Beers criteria, FTC letters), so the epistemic and cohesion scores are low.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. These are adoption at 15.3%, managed price decline, the Medicare Act and Medicaid pool, nicotine (approved as a new indication on an existing product), the bone wave, a second oral reaching parity, normalisation, workforce and military action, and blunting as a niche labelled side effect. Nothing contradicts them. mechanism: Several shifts are asserted rather than shown, which is why this is the weakest axis. Claims 1–3 are the clearest: the cigarette volume effect, the oral share jump and the speed of the blunting study. Congress reversing its 2027 refusal on a $46B benefit and the sudden fading of 'steadiness' are also thinly argued. magnitude: All figures sit inside the envelope (15.3% current, 23.5% ever, approvals within the rules, no US generic). The payer mix sums to 40.9M, the age-band weights give 15.3, and the Medicare, CBO and Medicaid arithmetic all multiply out. The only gaps are the hip-fracture line, where '× HR ~1.3 ≈ 7,500' actually equals the excess only if (HR−1) is used, and the large share of 65+ users assumed to have more than 2 years of use.",
+        "generativity": "The prose ends with a concrete, textured day for Marisol: the DXA slot on Bandera Road, the 'bone break' lunch at Mi Tierra, the Y resistance class, and Connie's grandson at Lackland drinking shakes. The world fields imply many more scenes, such as the Villages hips-versus-brain debate, recruits tapering before basic, an EEOC conciliation in a Texas logistics firm, and Bread Alone congregations. Daily life has real texture and each institution has a human angle."
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s2-L2-r33-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "US cigarette volume fell ~11% in 2030, against a ~6% secular trend",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: the cessation label dates from Mar 2030 and the world's own figure is ~1.2M adults on a 12-week course, at ~31% abstinence versus ~18% on placebo. That is a few hundred thousand extra quitters among tens of millions of smokers, and cannot produce a 5-point excess volume drop in under a year."
+        },
+        {
+          "quote": "~5M users 65+ with more than 2 years' use × ~0.5%/yr baseline × HR ~1.3 ≈ 7,500",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "Magnitude: the product as written is ~32,500, and 7,500 is only the excess (0.3 × 25,000). Also, ~5M continuous 2+ year users aged 65+ is hard to square with ~1/3 persistence at one year, heavy cycling, a Medicare benefit that began only in Jan 2030, and ~9.8M total 65+ users."
+        },
+        {
+          "quote": "orals pass 60% of all US incretin users by year-end",
+          "field": "world/events/0/event",
+          "why": "Mechanism and magnitude: orals were under 40% of users in 2028 and established injectable users were described as staying put. Reaching ~63% of all users by 2030 means ~11M injectable users left in about two years. A parity trial and falling prices are asserted as the cause, but no switching chain is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 3,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access improves through the Medicare benefit and the $149 Medicaid pool, and employer conditioning retreats. The harms are real and now normalised: ~7,000 excess hip fractures a year, more stress fractures in recruits, uncertain adolescent BMD, and ~1.5M people with blunting. Autonomy is limited by mandatory DXA to keep coverage, DoD readiness files and gray-market residue, and inequality persists in the 23 non-pool states. Harms are measured and discussable (labels, Beers Criteria, FTC letters), so the epistemic score is low. Overall this is a somewhat better and more normalised world than 2028, with new bone and fracture costs.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Adoption is 16.3→15.3, the Medicare and Medicaid expansion is explicit, the nicotine approval comes from a new form of an existing product, oral parity arrives via Foundayo, and the military programme is detailed. market_shock stays none, and the approvals fit the envelope's timing rules. mechanism: Many chains are shown, including the headline fall explained by payer shifts, the CBO pay-fors and the FTC and label route to the end of 'steadiness'. Several are asserted: the 60% oral share without switching dynamics, the cigarette volume drop (claim 1), and the passage of a $46B Medicare benefit two years after Congress refused a similar one. magnitude: All headline figures fall inside the envelope (15.3, 23.5, age and income brackets), and payer shares, the CBO score, Medicaid and Medicare spending all multiply out. Flaws are the hip-fracture arithmetic and the 5M long-term 65+ users (claim 2), 65+ users (~9.8M) equal to Medicare users (~9.8M), and a minor mismatch in how many states have bans.",
+        "generativity": "The Marisol Vega scene is built from concrete detail: the DXA slot on Bandera Road, the 'bone break' lunch at Mi Tierra, Connie's grandson at Lackland drinking two shakes a day, and the Y class chanting 'Hips are a savings account!'. The world fields give further hooks: the Villages hips-versus-brain debate, Army recruits tapering, and police departments running supervised programmes. Together they support many scenes across age, class and institution."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L2-r33-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "US cigarette volume fell ~11% in 2030, against a ~6% secular trend, and vape cartridge sales to 21–34-year-olds fell for the first time.",
+          "field": "world/economy/alcohol/state",
+          "why": "Magnitude and mechanism: the world's own count is ~1.2M cessation-only users from a March 2030 launch, with ~31% vs ~18% abstinence, so the net quitters are about 1% of smokers. A five-point excess drop in cigarette volume in under a year is far larger than that cause allows."
+        },
+        {
+          "quote": "~5M users 65+ with more than 2 years' use × ~0.5%/yr baseline × HR ~1.3 ≈ 7,500",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "Magnitude: about half of the ~9.8M Medicare users are claimed to have more than 2 years of continuous use. That conflicts with ~1/3 persistence at one year, 2.4M brand-new obesity-only enrollees in 2030, and the Bridge-lapse churn. The formula is also wrong, because baseline × HR gives total fractures, not the excess."
+        },
+        {
+          "quote": "CMS opens $149 Medicaid purchasing pool, 27 states join",
+          "field": "world/events/2/event",
+          "why": "Mechanism: the count jumps from 9 states (after 5 dropped out on budget pressure) to 27 within the same event window. No chain explains the reversal, such as a federal match or the rebate economics that overcame the 2027 Medicaid budget stress."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 3.5,
+        "inequality": 4,
+        "public_health": 4.5,
+        "cohesion": 3,
+        "epistemic": 3,
+        "overall": 3.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "On balance this is a milder world than 2028. Medicare (`public_coverage`) and the $149 Medicaid pool narrow the income gap (bottom third 11→12.5), and the FTC letters, EEOC conciliation and state bans curb conditioned premiums and the 'steadiness' framing. The harms that remain are about 7,000 excess hip fractures a year, DXA-conditioned coverage for 65+, stress fractures in recruits, thin adolescent bone data, and 23 states still outside the pool. These are real but measured, named and discussed, which keeps the epistemic and cohesion scores low.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. The adoption delta is -1.0 (16.3→15.3), the price is in managed decline, Medicare and Medicaid expand, nicotine is approved, the bone signal strengthens, orals reach parity, there is no shock, culture normalises, the military programme exists, and blunting is a niche labelled side effect. The nicotine approval is fast but is the driver itself. mechanism: Medicare reversing after declining the $41B extension in 2027 is only partly explained by a pay-for. The 9→27 state jump in the Medicaid pool is asserted (claim 3). The 5-point excess fall in cigarette volume from ~1.2M cessation users does not follow from the stated cause (claim 1). There is also a small count mismatch: Illinois plus California plus 'three more' versus 'four state bans'. magnitude: Population, ever-used, income, age, payer-mix and spending figures all sit inside the envelope and add up (40.9M payer sum; $5.6B, $23.5B, $3.9B; CBO $46B). Approvals respect the rules (amycretin held to 2031+). The flaws are the ~5M 65+ users with 2+ years' continuous use (claim 2), a hip-fracture formula that mislabels excess as total, and all 9.8M 65+ users counted as Medicare.",
+        "generativity": "The Marisol Vega scene is built from concrete detail: the DXA slot on Bandera Road, the 'bone break' lunch at Mi Tierra, Connie's grandson at Lackland drinking shakes, and the 'Hips are a savings account!' class. The world fields give plenty of side stories: the Bread Alone network, military recruits, The Villages' 'hips versus brain' debate, and the Altria and Unmuted threads. It shows rather than explains."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "US cigarette volume fell ~11% in 2030, against a ~6% secular trend",
+        "field": "world/economy/alcohol/state",
+        "why": "Fails magnitude and mechanism. The nicotine course was approved in Mar 2030 and the world reports about 1.2M courses. At ~31% abstinence that is roughly 0.4M quitters out of ~28M smokers, about 1%, so it cannot explain a 5-point excess fall in volume."
+      },
+      {
+        "quote": "Orals are ~63% of all users and ~75% of new starts.",
+        "field": "world/access/note",
+        "why": "Fails mechanism. In 2028 orals were under 40% of users because established injectable users stayed put. Reaching 63% implies roughly 11M injectable users switching or leaving in two years while total users fell only ~2M, and no switching chain is shown."
+      },
+      {
+        "quote": "The FDA-requested postmarketing study (2029, n≈61k) confirmed a clinically meaningful rise in ~6.5% of users versus ~2.8% of matched controls.",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "Fails mechanism. A study requested in 2028 is reported in 2029 with a cohort nearly three times larger than the 2027 one. It also moves blunting from suspected to established, labelled and acted on by the FTC within about a year, which is implausibly fast."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 3.83,
+      "inequality": 4.0,
+      "public_health": 4.5,
+      "cohesion": 3.0,
+      "epistemic": 3.0,
+      "overall": 3.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.17,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.4,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a recognisably harder but partly improved society. Income inequality narrows at the bottom (bottom third 11→12.5%) and Medicare and Medicaid expand access. Against that, ~7,000 excess hip fractures a year, DXA-conditioned Medicare coverage, adherence documentation in Medicaid pool states, 23 mostly Southern states left out, and recruit stress fractures keep it near 4. The harms are named, measured and discussable (label changes, Beers criteria, FTC letters), so the epistemic and cohesion scores are low.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events. These are adoption at 15.3%, managed price decline, the Medicare Act and Medicaid pool, nicotine (approved as a new indication on an existing product), the bone wave, a second oral reaching parity, normalisation, workforce and military action, and blunting as a niche labelled side effect. Nothing contradicts them. mechanism: Several shifts are asserted rather than shown, which is why this is the weakest axis. Claims 1–3 are the clearest: the cigarette volume effect, the oral share jump and the speed of the blunting study. Congress reversing its 2027 refusal on a $46B benefit and the sudden fading of 'steadiness' are also thinly argued. magnitude: All figures sit inside the envelope (15.3% current, 23.5% ever, approvals within the rules, no US generic). The payer mix sums to 40.9M, the age-band weights give 15.3, and the Medicare, CBO and Medicaid arithmetic all multiply out. The only gaps are the hip-fracture line, where '× HR ~1.3 ≈ 7,500' actually equals the excess only if (HR−1) is used, and the large share of 65+ users assumed to have more than 2 years of use.",
+      "generativity": "The prose ends with a concrete, textured day for Marisol: the DXA slot on Bandera Road, the 'bone break' lunch at Mi Tierra, the Y resistance class, and Connie's grandson at Lackland drinking shakes. The world fields imply many more scenes, such as the Villages hips-versus-brain debate, recruits tapering before basic, an EEOC conciliation in a Texas logistics firm, and Bread Alone congregations. Daily life has real texture and each institution has a human angle."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 3.8144,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 48
   }
 }

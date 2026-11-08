@@ -34,6 +34,41 @@
         "input_tokens": 16938,
         "output_tokens": 22439
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r45-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25585,
+        "output_tokens": 6080
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r45-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25585,
+        "output_tokens": 7596
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r45-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25585,
+        "output_tokens": 7936
+      }
     ]
   },
   "world": {
@@ -288,6 +323,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r45-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "HHS finalises a rule that effectively ends 30-second TV ads for chronic weight-management drugs",
+          "field": "world/events/2/event",
+          "why": "mechanism: A federal rule ending broadcast DTC ads is finalised within about a year, with no proposed rule, rulemaking or court chain shown. It is not a stipulated driver, so this is an asserted change."
+        },
+        {
+          "quote": "It does suggest a lean-mass 'ratchet': each regain is proportionally more fat.",
+          "field": "world/safety_ledger/9/prevalence_note",
+          "why": "mechanism: The Sentinel study the world describes is claims-based and commissioned in 2028. It cannot measure body composition, and an interim read in 2030 of a lean-to-fat ratchet in regain is not credible from that data."
+        },
+        {
+          "quote": "Medicare added retatrutide to the Continuity Model at the $245 rate in Jan 2030, and ~4M Americans are on it by end-2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: Retatrutide's direct cash price is $449 and rising under the shock_up path, yet Medicare gets it at the $245 floor. No negotiation or concession is shown. About 4M retatrutide users also sits awkwardly beside only 3.8M Continuity enrollees and flat US volume."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy takes the largest hit. Adherence data from about 7M public enrollees and about 1 in 4 large employers is used for coverage, surcharges and scheduling ('Steady Shift'). The two-tier system is partly rearranged but not flattened: about 2.5M working-age regainers are squeezed, and about 1M are locked out of public coverage. Epistemic harm is real, since the SHAPS anhedonia study arrives pre-politicised and the steadiness is credited to the person. Physical harms (NAION, hip-fracture signal, regain cohorts) are moderate, so this is a harder society but not a catastrophic one.",
+        "plausibility": "driver_fidelity: Every driver is visible: -0.4pp adoption (17.4%), the tariff and import-ban price shock, public expansion to 31 states and mandatory Part D, the NAION class warning, retatrutide rollout, the Novo documents, backlash politics, nine-state restrictions and the employer 'Steady Shift'. No new indication is approved, consistent with the empty list. mechanism: Most chains are shown (documents → DOJ → class warning; tariff → seizures → 2.5M stops → regain cohorts). Three things are asserted: the fast DTC rule, the Sentinel lean-mass 'ratchet', and Medicare paying $245 for retatrutide against a $449 cash price. The prose also says Denise's pens stopped 'last spring' when the tariff was June 2029. magnitude: Current 17.4% and ever 26% are inside the envelope. The age, income, payer-mix (46.5M), public-share (41.5%), Medicare ($11.2B) and Medicaid ($10.3B, $6.7B federal) and cycling (34%) arithmetic all reconcile. Pipeline timing (survodutide and amycretin under review, AUD filed 2030, no generic) obeys the approval rules; only small gaps remain.",
+        "generativity": "Denise and Ray give a lived household with texture: the Foundayo bottle at 5:10, the Vireo app green check, the STEADY board, Marcus's flyers, the half sandwich, the March Medicare calendar and the eye self-test. The world also implies scenes such as 'regain rock' in Columbus and Detroit, optometry 'GLP-1 eye checks' and 'Full Table' Sundays. The day-in-the-life mostly shows rather than explains, though the final 'She's mostly just good now' leans toward stating the theme."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s2-L3-r45-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "HHS finalises a rule that effectively ends 30-second TV ads for chronic weight-management drugs",
+          "field": "world/events/2/event",
+          "why": "Mechanism: a rule banning an entire class of broadcast drug ads, with obvious First Amendment and rulemaking hurdles, appears with no causal chain from any driver or from the parent world. It reads as an extra scandal-era punishment bolted on."
+        },
+        {
+          "quote": "Medicare added retatrutide to the Continuity Model at the $245 rate in Jan 2030, and ~4M Americans are on it by end-2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: Lilly's premium product is sold at $449 cash and its price path is shock_up, yet Medicare gets it at the flat $245 rate. No negotiation or deal is shown, and 4M users in under three years is asserted rather than derived."
+        },
+        {
+          "quote": "At least two national logistics firms and a large hospital system give scheduling priority ('Steady Shift' or 'preferred rostering') to employees enrolled and adherent in the approved weight programme.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: preferential rostering by drug adherence within two years, at several large employers at once, runs into ADA, EEOC and ERISA exposure that the candidate never addresses. It jumps from 2028's anecdotal 'steady staff' to formal institutional practice with little causal chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy and epistemic harm are the heaviest. Public payers and employers condition coverage and schedules on refill and connected-pen data (conditioning_or_surveillance, effect_on_work), while reward blunting stays unmeasured and the one study is politically tainted. Coverage cycling by policy (~8M coverage stops, ~1M lockouts), a hardening class split, a class NAION warning and the 2.5M abrupt gray-market stops make this a harder society with new losers, but not yet structurally invisible, since the harms are named and litigated.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is 17.4 (−0.4), shock_up appears in the tariff and cash prices, public expansion in the 31 states and mandatory Medicare, and the NAION class warning, Novo scandal, state restrictions, backlash and employer 'Steady Shift' all appear. No new indication is approved, and the AUD sNDA is only filed. mechanism: most changes have shown chains (tariff and import end to gray-market loss, MDL documents to the warning). The unexplained additions are the DTC ad ban, retatrutide at Medicare's $245, and the rapid spread of adherence-based rostering (claims 1–3). magnitude: everything is inside the envelope, and the payer mix, age check, income thirds, cycling arithmetic and Medicare/Medicaid spending all reconcile. The only gap is that Medicare users (9.5M + 3.8M) slightly exceed the ~11M users aged 65+, which disability enrolment partly explains. Survodutide, amycretin and MariTide respect the approval rules.",
+        "generativity": "The Denise and Ray vignette shows rather than explains: the robe-and-coffee Foundayo, the Vireo app green check, the STEADY board, Marcus's flyers, the half sandwich and the circled March. The eye-covering ending adds quiet dread. The world fields add scenes of their own, including the 'regain rock' scene, the optometry 'GLP-1 eye checks', 'Full Table' Sundays and the NLRB complaint, so it is rich in characters and daily texture."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s2-L3-r45-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "In 2030 HHS, at the urging of the MAHA wing, funded the first prospective NIH study with a validated anhedonia scale (SHAPS) as a primary endpoint, n≈3,000, reporting 2032.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: the parent has no pipeline toward this study, and the MAHA wing only criticises 'lifelong drugs for kids'. A funded, n≈3,000 prospective NIH trial that is set up and scheduled to report within two years is asserted, and it arrives conveniently to feed the partisan-science theme."
+        },
+        {
+          "quote": "HHS finalises a rule that effectively ends 30-second TV ads for chronic weight-management drugs",
+          "field": "world/events/2/event",
+          "why": "Mechanism: a federal rulemaking that removes an entire DTC advertising pathway is finalised in the same month as the state pediatric bans and takes effect by 2030, with no proposal, comment period or litigation shown. It reads as a convenient addition to the backlash theme."
+        },
+        {
+          "quote": "Medicare added retatrutide to the Continuity Model at the $245 rate in Jan 2030, and ~4M Americans are on it by end-2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: the top-tier product is priced at $399–449 cash but Lilly accepts the same $245 as for semaglutide, with no deal or tariff trade-off shown. About 4M users within 2.7 years of a pen with dysesthesia and slow titration is asserted rather than derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society. Adherence-conditioned public coverage, refill data feeding employer scheduling ('Steady Shift'), 2.5M abrupt gray-market stops with visible regain, and a pediatric split by state all push autonomy and cohesion down. The epistemic score is highest: reward blunting is still unmeasured, and the only study is politically tainted, so people cannot neutrally name what is happening to them. Physical harms (NAION, bone loss, regain) are real but small in absolute terms, so flourishing is moderate.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is 17.4 (−0.4), prices shock up via the tariff, public expansion is the Continuity mandate plus 31 Medicaid states, no new indication is approved, the NAION class label, the retatrutide rollout, the Novo scandal, the body-politics backlash, import and pediatric restrictions, and the Steady Shift employer scheme. mechanism: most chains are shown (tariff and enforcement leading to price rises and 2.5M stops; documents leading to the warning), but the SHAPS study, the DTC rule and the retatrutide Medicare price are asserted, as listed above. The prose also says Denise's pens stopped 'last spring' while the crackdown was June 2029, a small timeline slip. magnitude: ever-used 26 and current 17.4 are inside the envelope, and the age and income checks, the payer-mix sum to 46.5M, the Medicare $11.2B and Medicaid $10.3B/$6.7B arithmetic, and the cycling arithmetic all reconcile. Survodutide and amycretin filings and the AUD sNDA obey the approval rules and no US generic appears. The only slack is minor: Medicare spend is computed on end-year enrolment, and the prose says generics are 'a year away' against the 2031–32 exclusivity in the world.",
+        "generativity": "The Denise, Ray and Marcus day carries a lot: the Foundayo bottle photographed for the Vireo app, the STEADY board, the flyers, the half-sandwich, and Ray's Medicare calendar. The world also supplies the 'regain rock' scene, optometry 'GLP-1 eye checks' and 'Full Table' Sundays. The final 'She's mostly just good now' shows the interior-life layer rather than explaining it."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "HHS finalises a rule that effectively ends 30-second TV ads for chronic weight-management drugs",
+        "field": "world/events/2/event",
+        "why": "mechanism: A federal rule ending broadcast DTC ads is finalised within about a year, with no proposed rule, rulemaking or court chain shown. It is not a stipulated driver, so this is an asserted change."
+      },
+      {
+        "quote": "It does suggest a lean-mass 'ratchet': each regain is proportionally more fat.",
+        "field": "world/safety_ledger/9/prevalence_note",
+        "why": "mechanism: The Sentinel study the world describes is claims-based and commissioned in 2028. It cannot measure body composition, and an interim read in 2030 of a lean-to-fat ratchet in regain is not credible from that data."
+      },
+      {
+        "quote": "Medicare added retatrutide to the Continuity Model at the $245 rate in Jan 2030, and ~4M Americans are on it by end-2030.",
+        "field": "world/drugs/pipeline_note",
+        "why": "magnitude: Retatrutide's direct cash price is $449 and rising under the shock_up path, yet Medicare gets it at the $245 floor. No negotiation or concession is shown. About 4M retatrutide users also sits awkwardly beside only 3.8M Continuity enrollees and flat US volume."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 7.0,
+      "inequality": 6.0,
+      "public_health": 5.33,
+      "cohesion": 6.0,
+      "epistemic": 6.83,
+      "overall": 6.3
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.85,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Autonomy takes the largest hit. Adherence data from about 7M public enrollees and about 1 in 4 large employers is used for coverage, surcharges and scheduling ('Steady Shift'). The two-tier system is partly rearranged but not flattened: about 2.5M working-age regainers are squeezed, and about 1M are locked out of public coverage. Epistemic harm is real, since the SHAPS anhedonia study arrives pre-politicised and the steadiness is credited to the person. Physical harms (NAION, hip-fracture signal, regain cohorts) are moderate, so this is a harder society but not a catastrophic one.",
+      "plausibility": "driver_fidelity: Every driver is visible: -0.4pp adoption (17.4%), the tariff and import-ban price shock, public expansion to 31 states and mandatory Part D, the NAION class warning, retatrutide rollout, the Novo documents, backlash politics, nine-state restrictions and the employer 'Steady Shift'. No new indication is approved, consistent with the empty list. mechanism: Most chains are shown (documents → DOJ → class warning; tariff → seizures → 2.5M stops → regain cohorts). Three things are asserted: the fast DTC rule, the Sentinel lean-mass 'ratchet', and Medicare paying $245 for retatrutide against a $449 cash price. The prose also says Denise's pens stopped 'last spring' when the tariff was June 2029. magnitude: Current 17.4% and ever 26% are inside the envelope. The age, income, payer-mix (46.5M), public-share (41.5%), Medicare ($11.2B) and Medicaid ($10.3B, $6.7B federal) and cycling (34%) arithmetic all reconcile. Pipeline timing (survodutide and amycretin under review, AUD filed 2030, no generic) obeys the approval rules; only small gaps remain.",
+      "generativity": "Denise and Ray give a lived household with texture: the Foundayo bottle at 5:10, the Vireo app green check, the STEADY board, Marcus's flyers, the half sandwich, the March Medicare calendar and the eye self-test. The world also implies scenes such as 'regain rock' in Columbus and Detroit, optometry 'GLP-1 eye checks' and 'Full Table' Sundays. The day-in-the-life mostly shows rather than explains, though the final 'She's mostly just good now' leans toward stating the theme."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.37,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 11
   }
 }

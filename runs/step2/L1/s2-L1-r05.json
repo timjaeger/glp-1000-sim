@@ -51,6 +51,41 @@
         "input_tokens": 16570,
         "output_tokens": 19451
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r05-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24274,
+        "output_tokens": 6267
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r05-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24274,
+        "output_tokens": 4648
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r05-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24274,
+        "output_tokens": 5957
+      }
     ]
   },
   "world": {
@@ -307,6 +342,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r05-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "This growth is only possible because persistence rose from ~35% to roughly 55–65% a year in gated plans.",
+          "field": "world/population/note",
+          "why": "Fails magnitude: the same note's flows have 7.0 of 9.9 pts (71%) of 2028 users still on after two years and 7.7 of 11.5 new starters (67%) on. That cannot come from 55–65% annual persistence without a restart story the note never gives."
+        },
+        {
+          "quote": "Semaglutide's 2029 smoking-cessation approval brought it under existing ACA preventive coverage of FDA-approved cessation drugs (two 90-day courses a year), which created a second commercial on-ramp.",
+          "field": "world/access/note",
+          "why": "Fails mechanism and magnitude: preventive-coverage mandates attach through USPSTF recommendations, not automatically through FDA approval. The Apr 2029 approval is also only ~11 months after the May 2028 filing, inside the envelope's 12-month floor. The 'second on-ramp' is asserted, not shown."
+        },
+        {
+          "quote": "orforglipron sNDA under priority review with a decision due ~Q1 2031",
+          "field": "world/drugs/mainstream_offlabel_uses/0",
+          "why": "Fails mechanism: the events list the filing in Mar 2030 while the pipeline note says Apr 2030. A priority-review sNDA filed then would be decided around Oct 2030, not Q1 2031. A phase 3 for a use that was only 'anecdotal' in 2028 is also very fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 50M adults are on drug, and refill data now set premiums for tens of millions (the 2029 wellness guidance). Six Medicaid waivers cut coverage after missed weigh-ins, and the 'calm' subscription market sells reward blunting that is still unmeasured as a harm. Prices fell, so access widened. The harm is structural and normalised: autonomy and epistemic clarity suffer most, and the family and generational split over 'unmedicated' is a cohesion cost. That puts it above a harder 2028 but below a society people would refuse to live in.",
+        "plausibility": "driver_fidelity: Every driver is traceable in events and fields: managed-decline prices ($199–299), benefits conditioning, retatrutide general availability, the Lilly scandal, the 'calm' marketed feature, aesthetic inversion, and compulsion realised as a sNDA filing. Safety_signal 'none' is honoured. Coverage_shift 'status_quo' is slightly strained by the ACA cessation on-ramp and the waiver spread (claim 2). mechanism: The surcharge-waiver chain explaining commercial users doubling is well shown. The persistence jump (claim 1), the ACA coverage leap (claim 2) and the sNDA timing (claim 3) are asserted or inconsistent. The 65+ rebound from 8% to 12% despite the fracture signal is only thinly justified. magnitude: The headline figures sit inside the envelope (18.7%, 28%, income thirds, survodutide and amycretin approval timing). Payer shares, Medicare/Medicaid dollar arithmetic and the cycling arithmetic reconcile. Gaps are the flows implying ~70% two-year retention against the stated 55–65% annual persistence, and the cessation approval about one month under the 12-month floor from the May 2028 filing.",
+        "generativity": "Marisol, Rubén and Ana are distinct, and the Irving kiosk weigh-in, the QR receipt, the QUIET lid and the unmedicated gym banner are concrete scenes. The details are fully usable: Rubén's flat Sundays, Marisol finding the burrito good without wanting it, and the 96% adherence portal. Each section of the world state (dating tags, feast clubs, union bargaining, sportsbook lobbying) opens further scenes."
+      },
+      "plausibility": 5.9
+    },
+    {
+      "custom_id": "s2-L1-r05-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "This growth is only possible because persistence rose from ~35% to roughly 55–65% a year in gated plans.",
+          "field": "world/population/note",
+          "why": "The note's own flows have 7.0 of 9.9 pts still on after two years (~71%) and 7.7 of 11.5 new starters still on (~67%). That implies annual persistence near 80%+, not 55–65%, and a 61% restart rate among those off in 2028, so the reconciliation fails (magnitude) and the stated mechanism does not match its own arithmetic."
+        },
+        {
+          "quote": "Sports-betting handle growth slows in high-uptake states. Mobile-game studios report lower spending among whales and redesign monetisation around novelty rather than compulsion.",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "The stated base is ~4M off-label craving users and 1.2M 'calm' subscribers, and the 'calm' services launched only in Aug 2029. Measurable macro effects on betting handle and game-studio monetisation within about a year are asserted with no chain from those numbers (mechanism and magnitude)."
+        },
+        {
+          "quote": "Commercial users doubled mostly inside already-covering employers, as employees enrolled to escape the surcharge.",
+          "field": "world/access/note",
+          "why": "BMI-linked surcharges of up to 30% already existed in 2028, when persistence and starts were low. A $50–100 cash price cut and one 2029 waiver rule are shown as the cause of ~11M extra commercial users and 11.5 pts of first-time starters. Most people facing a BMI-linked surcharge already qualified, so the chain is thin and the effect is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Refill data now sets premiums for tens of millions and decides Medicaid coverage in six states, so continuous exposure is rewarded despite the unchanged bone and sarcopenia findings. 'Calm' subscriptions sell reward blunting as a feature while its harm remains unmeasured (epistemic 7). Cheaper access, 65+ use recovering under DEXA monitoring, and the lack of new safety signals keep flourishing and inequality from rising higher. The worsening is mostly structural coercion and cultural splitting, not acute harm.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to fields and events: managed_decline in the $199–299 prices, benefits conditioning in the six waivers and the 2029 wellness guidance, a marketed 'calm' layer, aesthetic inversion in the 'unmedicated' culture, compulsive behaviour via the gambling sNDA filing, a triple-agonist mass launch, and a Lilly FCA scandal. Safety_signal 'none' is respected. mechanism: The price cuts, wellness waiver and ACA cessation coverage give some chain, but the doubling of users rests on thin causation, and the surcharge-escape claim and the betting/gaming effects are asserted (claims 2 and 3). magnitude: Headline figures sit inside the envelope (18.7% current, 28% ever, with 'ever' near the 28.4 cap). Approval timing is lawful, and the Medicare ($8.1B), Medicaid ($11.1B) and payer-mix arithmetic all reconcile. The flows contradict the stated persistence of 55–65% (claim 1), and the age-band adults sum to 265M against 268M.",
+        "generativity": "The prose scene is concrete and well-observed: the kiosk weigh-in and QR receipt, the QUIET box, the 'ALL COACHES UNMEDICATED' banner, and the burrito Marisol cannot enjoy. It implies several characters and settings, and it shows the effects without explaining them. The world fields add texture such as 'secret dosing' jokes, lifestyle-account reimbursement and feast supper clubs."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s2-L1-r05-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "This growth is only possible because persistence rose from ~35% to roughly 55–65% a year in gated plans.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: it asserts a near-doubling of persistence in two years as the only way the flow arithmetic closes. 7.0 of 9.9 pts of 2028 users still on is ~71% after two years, which does not follow from 55–65% annual persistence (0.6² ≈ 36%), and gating, a modest price cut and oral options are not shown to produce that."
+        },
+        {
+          "quote": "Medicare overall (Part D diabetes plus Bridge) pays 17% of incretin fills ≈ 8.5M users (≈7.6M aged 65+ plus ≈0.9M disabled under-65).",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude (reconciliation): 7.6M is the entire 65+ user count from the age-band arithmetic, so every 65+ user would be on Medicare, leaving none on employer plans, cash or imports. That is implausible, since the payer-mix cash and gray shares must include some older users."
+        },
+        {
+          "quote": "About 3.0M users run on imported generics and are under-measured.",
+          "field": "world/population/note",
+          "why": "Mechanism: gray-market users more than double (1.3M to 3.0M) in a window where legitimate prices fall to $199–299 and poison-centre calls are said to be flat. The cut is not shown to drive extra gray-market use, and the figure sits oddly against the stated price effects."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 50M adults are on drug while refill data sets premiums for tens of millions (up to 30% surcharge waivers via `conditioning_or_surveillance`) and decides Medicaid coverage in six states. The fracture and sarcopenia hazards are unchanged and still rewarded by adherence gating. Reward blunting is sold as 'quiet' and remains unmeasured as a harm, which drives the high autonomy and epistemic scores. Real offsets (cheaper pens, 65+ users monitored with DEXA, a muscular 'unmedicated' counter-culture) keep flourishing and public health near 5 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Managed decline appears as $199–299 prices, the compulsive-behaviour driver as a gambling sNDA filing with no approval, the triple agonist as retatrutide going to general availability, and the Lilly FCA settlement covers the scandal. Benefits conditioning, the marketed 'calm' layer, aesthetic inversion, no new safety signal and status-quo coverage are all present. Only the ACA cessation on-ramp strains 'status quo' slightly. mechanism: The surcharge-waiver chain for commercial users is shown, but the persistence jump from ~35% to 55–65% is asserted, as is the Bridge doubling on a ~19% price cut. The gray-market rise as legitimate prices fall is also not explained (see claims 1 and 3). The orforglipron filing is dated Mar 2030 in the event and Apr 2030 in `pipeline_note`. magnitude: Current use of 18.7% is inside 16.8–20.8, ever-use of 28 is just under the 28.4 cap, and approval timings (survodutide, amycretin) respect the 12-month rule. The payer mix, Bridge spend ($8.1B), Medicaid spend ($11.1B) and cycling arithmetic reconcile. Remaining flaws are the 65+ users all counted as Medicare (claim 2), age-band denominators summing to ~265M against a stated ~268M, and the implausibly high two-year retention.",
+        "generativity": "Many scenes are implied: kiosk weigh-ins with QR receipts, 'ALL COACHES UNMEDICATED' banners, QUIET-lidded pill boxes, and 'feast' supper clubs. The day-in-the-life shows rather than explains, with concrete details such as 'Adherence: 96%', the shredded chicken pouch, Rubén's 41 days without a bet and the sauce on Ana's wrist. A mother and daughter who sit on opposite sides of the on/off divide is a ready film premise."
+      },
+      "plausibility": 7.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "This growth is only possible because persistence rose from ~35% to roughly 55–65% a year in gated plans.",
+        "field": "world/population/note",
+        "why": "Fails magnitude: the same note's flows have 7.0 of 9.9 pts (71%) of 2028 users still on after two years and 7.7 of 11.5 new starters (67%) on. That cannot come from 55–65% annual persistence without a restart story the note never gives."
+      },
+      {
+        "quote": "Semaglutide's 2029 smoking-cessation approval brought it under existing ACA preventive coverage of FDA-approved cessation drugs (two 90-day courses a year), which created a second commercial on-ramp.",
+        "field": "world/access/note",
+        "why": "Fails mechanism and magnitude: preventive-coverage mandates attach through USPSTF recommendations, not automatically through FDA approval. The Apr 2029 approval is also only ~11 months after the May 2028 filing, inside the envelope's 12-month floor. The 'second on-ramp' is asserted, not shown."
+      },
+      {
+        "quote": "orforglipron sNDA under priority review with a decision due ~Q1 2031",
+        "field": "world/drugs/mainstream_offlabel_uses/0",
+        "why": "Fails mechanism: the events list the filing in Mar 2030 while the pipeline note says Apr 2030. A priority-review sNDA filed then would be decided around Oct 2030, not Q1 2031. A phase 3 for a use that was only 'anecdotal' in 2028 is also very fast."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 7.0,
+      "inequality": 5.17,
+      "public_health": 5.5,
+      "cohesion": 5.33,
+      "epistemic": 7.0,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.17,
+      "magnitude": 5.83
+    },
+    "plausibility": 6.5,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 50M adults are on drug, and refill data now set premiums for tens of millions (the 2029 wellness guidance). Six Medicaid waivers cut coverage after missed weigh-ins, and the 'calm' subscription market sells reward blunting that is still unmeasured as a harm. Prices fell, so access widened. The harm is structural and normalised: autonomy and epistemic clarity suffer most, and the family and generational split over 'unmedicated' is a cohesion cost. That puts it above a harder 2028 but below a society people would refuse to live in.",
+      "plausibility": "driver_fidelity: Every driver is traceable in events and fields: managed-decline prices ($199–299), benefits conditioning, retatrutide general availability, the Lilly scandal, the 'calm' marketed feature, aesthetic inversion, and compulsion realised as a sNDA filing. Safety_signal 'none' is honoured. Coverage_shift 'status_quo' is slightly strained by the ACA cessation on-ramp and the waiver spread (claim 2). mechanism: The surcharge-waiver chain explaining commercial users doubling is well shown. The persistence jump (claim 1), the ACA coverage leap (claim 2) and the sNDA timing (claim 3) are asserted or inconsistent. The 65+ rebound from 8% to 12% despite the fracture signal is only thinly justified. magnitude: The headline figures sit inside the envelope (18.7%, 28%, income thirds, survodutide and amycretin approval timing). Payer shares, Medicare/Medicaid dollar arithmetic and the cycling arithmetic reconcile. Gaps are the flows implying ~70% two-year retention against the stated 55–65% annual persistence, and the cessation approval about one month under the 12-month floor from the May 2028 filing.",
+      "generativity": "Marisol, Rubén and Ana are distinct, and the Irving kiosk weigh-in, the QR receipt, the QUIET lid and the unmedicated gym banner are concrete scenes. The details are fully usable: Rubén's flat Sundays, Marisol finding the burrito good without wanting it, and the 96% adherence portal. Each section of the world state (dating tags, feast clubs, union bargaining, sportsbook lobbying) opens further scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.13,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 23
   }
 }

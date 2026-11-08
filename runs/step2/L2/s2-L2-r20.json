@@ -52,6 +52,41 @@
         "input_tokens": 16787,
         "output_tokens": 18061
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r20-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24496,
+        "output_tokens": 5025
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r20-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24496,
+        "output_tokens": 5665
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r20-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24496,
+        "output_tokens": 5176
+      }
     ]
   },
   "world": {
@@ -303,6 +338,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r20-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Within the 65+ band, about 1 in 9 users now holds a dementia-risk code.",
+          "field": "world/population/note",
+          "why": "This fails magnitude reconciliation. About 14.5% of ~58M adults 65+ is ~8.4M users, and 1 in 9 of them is ~0.9M. The Medicare note puts the dementia route at ~1.6M, which is roughly 1 in 5."
+        },
+        {
+          "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+          "field": "prose/children paragraph",
+          "why": "The world state gives ~0.2% of 6–11-year-olds on liraglutide, which is about 50,000 children. A few hundred thousand contradicts the candidate's own population note, so the figure is asserted rather than derived."
+        },
+        {
+          "quote": "Among bottom-third women aged 50–64, the most visible group is the regainers: they were on the drug through the Bridge pilot or through jobs they no longer have.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "The Bridge pilot was a Medicare programme aimed at the 65+ cohort, so a 50–64 group that regained after it lapsed has no shown mechanism. The causal link between the pilot and this age band is asserted and does not match the parent world."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 6.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.0,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Inequality is the worst dimension. Body shape reads as income, gray-market use rose to ~5.2M with insulin-pen deaths, and the bottom third is pushed into abrupt discontinuation and regain. Autonomy is also bad: clinic-administered monthly MariTide makes adherence verification trivial inside the 4.5M-enrolee metabolic tracks, and 'steadiness' is written into competency language. The EPI signal, the fracture warning and decades-long pediatric exposure make the aggregate health ledger worse, but the harms are mostly chronic and nameable rather than catastrophic, so I did not go above 6–7.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +1.3pp to 17.6%, and the retreat to 36% shows employer coverage falling. Pediatric and dementia use are realised through generic liraglutide for ages 6–11 and the Part D route, with the sNDA only accepted. The EPI signal is the long-horizon driver, MariTide is the monthly launch, counterfeit insulin pens are the generic-flood shock, and the class split runs through the body_and_culture and economy fields. Approval timing respects the envelope rules. mechanism: Most chains are shown, such as MariTide to clinic dosing to trivial verification, and price cuts to flat-net PBM deals. The 1.6M dementia-route users, a jump from zero in 2028, are asserted. So is the 50–64 Bridge-pilot regainer group (claim 3), and the kids count in the prose conflicts with the world state (claim 2). magnitude: Population figures sit inside the envelope, and the payer shares sum to 100%. The cycling arithmetic and the $29.7B Medicare spend multiply out. There are two reconciliation gaps: the 1-in-9 versus ~1.6M dementia-route mismatch (claim 1), and the prose child count against 0.2% of ages 6–11.",
+        "generativity": "The Tonya Mercer day carries a lot of film. The badge-scan, syringe-scan, belly-scan at the dock-door trailer, the sister buying vials from a woman at church, the nine-year-old self-injecting at the counter, and the leaflet under a fridge magnet are all concrete. The world fields add textured settings such as Charlotte DXA gossip, Columbus logistics clinics, Unmuted off nights and 'lean-mass verified' badges. Some of the prose is summary rather than scene, but the cast and settings are rich."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s2-L2-r20-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+          "field": "prose/children_paragraph",
+          "why": "This contradicts the world state, where ~0.2% of 6–11-year-olds take liraglutide. Of roughly 25M children that is about 50k, not hundreds of thousands. It fails mechanism and magnitude as a prose-versus-state mismatch."
+        },
+        {
+          "quote": "A Feb 2030 registry study, replicated in a US Optum cohort in May 2030, found new EPI diagnoses",
+          "field": "world/safety_ledger/exocrine_pancreatic_insufficiency/prevalence_note",
+          "why": "With roughly one-third one-year persistence, few people have 5+ years of continuous use, yet the signal is found, replicated in a second country within three months, and met with an FDA safety communication a month later. The speed and statistical power are asserted rather than shown."
+        },
+        {
+          "quote": "Within the 65+ band, about 1 in 9 users now holds a dementia-risk code.",
+          "field": "world/population/note",
+          "why": "65+ users are about 14.5% of ~60M adults, or ~8.7M, so 1 in 9 is ~1M. The Medicare note claims ~1.6M on the dementia route, so the two figures do not reconcile. The indication also requires obesity plus established CVD and only dates from Aug 2028."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder, more stratified society. Steadiness is becoming a condition of insured jobs through clinic-verified monthly dosing (4.5M enrollees, EEOC charges unresolved), and gray-market use is up to ~5.2M with insulin-laced pens killing people. A new long-horizon EPI signal sits on top of the bone risk, and children as young as six are on the drugs. Body shape is read as income, with a 23 vs 12 top-to-bottom gap. Harms are measured and discussed, which keeps epistemic and cohesion scores moderate, and there is no melodrama.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +1.3pp (16.3→17.6), prices managed-decline via the May 2029 cuts, employer coverage falls 44→36%, liraglutide 6–11 and the dementia sNDA are in, EPI is the long-horizon signal, MariTide launches with no implant, counterfeits spread, class stratification runs through culture, and state_action is none. mechanism: Most chains are shown, such as monthly clinic dosing leading to verification and gray-market growth leading to bad batches and regain. Claim 2 is a fast, well-powered 5-year signal, and claim 1 is a prose contradiction of the state. magnitude: Population, ever-used and approval timing are inside the envelope, and the payer mix, the 9.9M×$250 Medicare arithmetic and the age weights reconcile. Claim 3's 1-in-9 against 1.6M does not reconcile, and the pediatric figures (1.1% overall, 0.2% of 6–11s) only roughly fit the prose.",
+        "generativity": "The Tonya Mercer day is concrete: the badge-scan, MariTide and belly at the dock clinic, her sister buying vials and checking lot numbers against a recall list, grandson Malik injecting at the kitchen counter, and the pancreas leaflet under a magnet. The world supplies regional detail (Groveport, Charlotte, Austin, Dayton) and class-coded textures such as DXA printouts and 'lean-mass verified' badges. Several scenes and characters are implied beyond the one shown."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s2-L2-r20-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+          "field": "prose/children paragraph",
+          "why": "Magnitude: the world state puts under-12 use at ~0.2% of 6–11-year-olds, roughly 50,000 children. 'A few hundred thousand' is several times that and does not reconcile with the population note."
+        },
+        {
+          "quote": "found new EPI diagnoses (low faecal elastase, steatorrhoea) at ~4.1 per 1,000 person-years in users continuously on drug for more than 5 years, against ~1.9 in matched controls",
+          "field": "world/safety_ledger/EPI prevalence_note",
+          "why": "Mechanism: with one-year persistence near one-third, very few users have 5+ years of continuous exposure. A Danish registry and a US Optum cohort both detecting a doubled rate within about three months, then an FDA communication a month later, is asserted rather than shown."
+        },
+        {
+          "quote": "Medicare ~21% (~9.9M, up mainly through tirzepatide's dementia-risk prior-authorisation route, ~1.6M)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the label is limited to obesity plus established CVD behind prior authorisation, yet it adds ~1.6M users in under two years. The note also says 'about 1 in 9' 65+ users hold a dementia code, which is ~1M of ~9M, so the figures do not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Employer-verified monthly dosing (4.5M enrollees, 'steadiness' in competency language) and an emerging EPI signal that compounds the bone warning in the oldest users both raise harm. Counterfeit insulin pens caused 4 deaths, the gray market grew to ~5.2M users, and children under 12 are now on drugs. Body shape reads as class, and the political coalition has stalled. The harm is structural, but it is still a harder 2028 rather than a wholly new regime, and it is mostly named and measured, so epistemic badness is moderate.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +1.3pp exactly; employer coverage fell 44→36; prices managed down; pediatric liraglutide and the dementia sNDA are present; EPI is the novel long-horizon signal; MariTide is the monthly launch; counterfeits and the class split are shown; there is no new state action. The unrealised implant is allowed under the approval rules. mechanism: The retreat, price cuts, monthly-clinic adherence and class sorting follow clearly from the parent world. The weak points are the fast replication and FDA response on EPI despite few continuous 5+-year users, and the large dementia-route uptake (claims 2 and 3). magnitude: Population figures sit inside the envelope, the payer mix sums to 100%, and Medicare spending multiplies out ($29.7B and $5.0B). Approval timings comply (retatrutide Q1 2029, survodutide 14 months, MariTide 13 months). The gaps are the child count versus 0.2% of 6–11-year-olds (claim 1) and the 1-in-9 versus 1.6M dementia-code mismatch (claim 3), plus a June event that mentions a September acceptance.",
+        "generativity": "Tonya Mercer's morning at the Groveport dock clinic, with the badge, syringe and belly scans, carries the monitoring theme. The sister buying Indian vials from a woman at church, the grandson Malik on liraglutide and the pancreas leaflet under a fridge magnet add family stakes and the gray market. World details like DXA printouts as gossip, 'lean-mass verified' badges, Unmuted off nights and Bread Alone churches give many implied scenes."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Within the 65+ band, about 1 in 9 users now holds a dementia-risk code.",
+        "field": "world/population/note",
+        "why": "This fails magnitude reconciliation. About 14.5% of ~58M adults 65+ is ~8.4M users, and 1 in 9 of them is ~0.9M. The Medicare note puts the dementia route at ~1.6M, which is roughly 1 in 5."
+      },
+      {
+        "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+        "field": "prose/children paragraph",
+        "why": "The world state gives ~0.2% of 6–11-year-olds on liraglutide, which is about 50,000 children. A few hundred thousand contradicts the candidate's own population note, so the figure is asserted rather than derived."
+      },
+      {
+        "quote": "Among bottom-third women aged 50–64, the most visible group is the regainers: they were on the drug through the Bridge pilot or through jobs they no longer have.",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "The Bridge pilot was a Medicare programme aimed at the 65+ cohort, so a 50–64 group that regained after it lapsed has no shown mechanism. The causal link between the pilot and this age band is asserted and does not match the parent world."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 6.83,
+      "inequality": 7.5,
+      "public_health": 6.17,
+      "cohesion": 5.83,
+      "epistemic": 5.33,
+      "overall": 6.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.14,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Inequality is the worst dimension. Body shape reads as income, gray-market use rose to ~5.2M with insulin-pen deaths, and the bottom third is pushed into abrupt discontinuation and regain. Autonomy is also bad: clinic-administered monthly MariTide makes adherence verification trivial inside the 4.5M-enrolee metabolic tracks, and 'steadiness' is written into competency language. The EPI signal, the fracture warning and decades-long pediatric exposure make the aggregate health ledger worse, but the harms are mostly chronic and nameable rather than catastrophic, so I did not go above 6–7.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +1.3pp to 17.6%, and the retreat to 36% shows employer coverage falling. Pediatric and dementia use are realised through generic liraglutide for ages 6–11 and the Part D route, with the sNDA only accepted. The EPI signal is the long-horizon driver, MariTide is the monthly launch, counterfeit insulin pens are the generic-flood shock, and the class split runs through the body_and_culture and economy fields. Approval timing respects the envelope rules. mechanism: Most chains are shown, such as MariTide to clinic dosing to trivial verification, and price cuts to flat-net PBM deals. The 1.6M dementia-route users, a jump from zero in 2028, are asserted. So is the 50–64 Bridge-pilot regainer group (claim 3), and the kids count in the prose conflicts with the world state (claim 2). magnitude: Population figures sit inside the envelope, and the payer shares sum to 100%. The cycling arithmetic and the $29.7B Medicare spend multiply out. There are two reconciliation gaps: the 1-in-9 versus ~1.6M dementia-route mismatch (claim 1), and the prose child count against 0.2% of ages 6–11.",
+      "generativity": "The Tonya Mercer day carries a lot of film. The badge-scan, syringe-scan, belly-scan at the dock-door trailer, the sister buying vials from a woman at church, the nine-year-old self-injecting at the counter, and the leaflet under a fridge magnet are all concrete. The world fields add textured settings such as Charlotte DXA gossip, Columbus logistics clinics, Unmuted off nights and 'lean-mass verified' badges. Some of the prose is summary rather than scene, but the cast and settings are rich."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.87,
+    "survived": true,
+    "new_lineage": "L3",
+    "floor_used": 6,
+    "rank": 3
   }
 }

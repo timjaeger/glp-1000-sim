@@ -52,6 +52,41 @@
         "input_tokens": 16788,
         "output_tokens": 25190
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r32-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26129,
+        "output_tokens": 6670
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r32-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26129,
+        "output_tokens": 6623
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r32-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26129,
+        "output_tokens": 5352
+      }
     ]
   },
   "world": {
@@ -310,6 +345,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r32-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "aid to smoking and vaping cessation, including limiting post-cessation weight gain (Wegovy pill, Apr 2030)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "The 2028 world lists nicotine use as 'observational support, no approvals' with no phase 3 programme. A full approval within about 16 months, five months after the AUD approval, shows no trial or filing chain, so it fails mechanism and approval timing."
+        },
+        {
+          "quote": "assuming ~8M incremental users at an average net of ~$160 as prices step down",
+          "field": "world/access/public_coverage",
+          "why": "The same note computes ~6.3M incremental Medicare users, and the safety ledger says the benefit added '~4M more older adults'. Three different incremental-user figures break reconciliation and undercut the $154B Medicare score."
+        },
+        {
+          "quote": "Tobacco feels the cessation label: cigarette volume declines accelerated from ~9% to ~12% a year",
+          "field": "world/economy/alcohol/state",
+          "why": "A measurable 3-point acceleration in cigarette volume decline is attributed to a label approved only months earlier, in April 2030. Uptake and sales-data lags make this asserted rather than shown, which fails mechanism and magnitude."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Coverage expands and the access gap narrows (bottom third 11→18%, Medicaid and HRSA coverage). Harms still accumulate: the gray market doubles to ~5.7M with insulin-pen deaths, fracture counts rise among 70+ new starters, and a pediatric growth and eating-disorder signal appears. Reward blunting becomes a mainstream complaint, and 30% adherence premiums survive outside two states. Harms are named, measured and argued over (FDA postmarketing interim, DSC, EEOC guidance), which keeps epistemic and inequality scores low. This is a harder society with new losers but not a refuse-to-live-in one.",
+        "plausibility": "driver_fidelity: Every driver is traceable. These are the adoption delta (21.3%), managed price decline ($195 net, TrumpRx step-downs), the Part D and Medicaid expansion plus HRSA subsidy, and the pediatric DSC. Also traceable are the counterfeit cluster, amycretin as oral parity, Whole Hunger, and mood marketing through addiction labels, which pipeline_note explains. Nothing is contradicted. mechanism: The subsidy, gray-market and pediatric chains are shown. The nicotine approval has no trial chain, the cigarette-decline acceleration is asserted (claims 1 and 3), and the Congress reversal rests on a thin 'election plus tariff relief' explanation. magnitude: Population figures, the payer-mix shares (26/14/4/26/20/10) and the Medicare and Medicaid dollar arithmetic reconcile, and the retatrutide, survodutide and amycretin timings fit the approval rules. The incremental-user figure appears three ways (~8M, 6.3M, ~4M; claim 2), and the nicotine approval timing is doubtful.",
+        "generativity": "The Marisol and Ari scenes show the drug-holiday app trick, the claims-processing job and the growth-chart appointment. They also carry the Whole Hunger bakery, the father's covered pill with a pre-scan, and the pancakes ending. The world fields add Foundayo weekends, 'the flats', hunger dinners and dating-app badges, so daily life has plenty of texture and many implied scenes."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s2-L2-r32-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "aid to smoking and vaping cessation, including limiting post-cessation weight gain (Wegovy pill, Apr 2030)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/7",
+          "why": "The 2028 world gave nicotine only 'observational support, no approvals'. No phase 3, filing event or review is shown, and approval comes five months after the AUD label, which fails the envelope's filing-then-12-months logic (magnitude) and has no causal chain (mechanism)."
+        },
+        {
+          "quote": "Medicare's new obesity benefit has put ~4M more older adults on drug, so fracture counts are rising even as rates stabilise.",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "This is inconsistent with the access note's ~6.3M incremental Medicare users and the CBO's ~8M. It also does not match the 65+ share rising from 12% to 22% (roughly +6M), so it is a magnitude reconciliation gap."
+        },
+        {
+          "quote": "The difference was the election, a visible cohort of regaining retirees, and a deal in which Lilly and Novo accepted about $195 a month from public payers in exchange for tariff relief.",
+          "field": "prose/paragraph_2",
+          "why": "Congress refused a $41B score in Dec 2027 and then enacted a ~$237B benefit 18 months later. The cause is gestured at ('the election') rather than shown, so the mechanism is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4.5,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access improves through Part D, Medicaid and HRSA, and employer conditioning is shrinking (California ban, EEOC dose-flex), so inequality and autonomy are somewhat better than in 2028. Costs remain: a pediatric growth and eating-disorder signal with ~0.66M children on drug, rising fracture counts among older adults, a gray market of ~5.7M with insulin-pen deaths, and blunting 'managed' through holidays that fill data cannot see. Whole Hunger and the fight over opt-in add polarisation without collapse. That is a recognisably harder society with new losers rather than a structurally hidden harm.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +5pp; subsidy is the Act plus the HRSA programme; the pediatric signal is the Mar 2030 DSC; amycretin gives oral parity; counterfeits and research peptides give the generic flood; Whole Hunger is the natural movement; the flats are a mainstream complaint; and nicotine and mood are realised through the cessation label and 'quiet mind', as the pipeline note says. mechanism: the gray-market growth drivers and the pediatric cohort chain are shown. The 2029 reversal on Medicare cost is only gestured at ('the election'), and the cigarette-decline acceleration within eight months of the cessation label is asserted (claims 1 and 3). magnitude: adult use of 21.3% and ever-used of 28.5% are inside the envelope, and approval timing for retatrutide, survodutide and amycretin follows the rules. Payer shares sum to 100%, and the Medicare, Medicaid, HRSA and CBO arithmetic multiplies out, but the '~4M more older adults' figure conflicts with the 6.3M and 8M incremental counts, and the cessation approval has no filing event (claims 1 and 2).",
+        "generativity": "The Marisol and Ari day is concrete and shows rather than explains: the Friday-morning tap with no Saturday dose, the stadiometer, the doctor's 'normalising', the Whole Hunger bakery on High Street, the father's $35 pill and bone scan, and pancakes on a holiday morning. The world fields supply many implied scenes: hunger dinners, Foundayo weekends, claims-processor reviews, senior strength studios and untitled-letter telehealth. Daily life has real texture, though some of it is told in the prose rather than dramatised."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L2-r32-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA approves the Wegovy pill as an aid to smoking and vaping cessation, five months after its alcohol-use-disorder approval",
+          "field": "world/events/4/event",
+          "why": "Mechanism: the 2028 world gives nicotine only 'observational support, no approvals', so no phase 3 trial, filing or review chain is shown. Approving a cessation label about 18 months later, five months after another new label, is asserted rather than derived."
+        },
+        {
+          "quote": "Medicare ~$154B (assuming ~8M incremental users at an average net of ~$160 as prices step down: 8M × $160 × 12 × 10)",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: the same note computes ~6.3M incremental Medicare users for the annual figure, and the safety ledger says the benefit added ~4M more older adults. The three incremental-user counts (8M, 6.3M, ~4M) do not reconcile."
+        },
+        {
+          "quote": "alcohol use disorder, adults (Wegovy pill, Nov 2029)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Magnitude: oral semaglutide AUD was in phase 3 in 2028, so the envelope requires a filing event in the window and approval at least 12 months later. No filing event is given, and an approval about 15 months after the start is thinly supported."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadened through Medicare, Medicaid and HRSA, and obesity fell to ~33.6%, so inequality and autonomy look better than in 2028. The new harms are real but bounded: a pediatric growth and eating-disorder signal affecting ~0.66M children, a gray market that nearly doubled to 5.7M with the insulin-pen deaths, fracture counts rising among the ~4M more older adults, and 'the flats' managed through holidays that fill data can't see. Whole Hunger polarisation and the 30% adherence differentials outside two states keep it a harder society with new losers, below the level of structural, hidden harm.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: +5pp adoption, managed price decline, Medicare and Medicaid expansion, the AUD and cessation labels, the pediatric growth signal, oral amycretin, the counterfeit insulin cluster, Whole Hunger, subsidy via the Act and HRSA, and 'the flats' as a mainstream complaint. The mood driver is honestly mapped to addiction labels, not a mood indication. mechanism: the Congressional reversal, the $195 price-for-tariff deal and the gray-market growth have shown chains. The AUD and nicotine approvals, with no trial or filing path, are asserted (claims 1 and 3). magnitude: on-drug 21.3%, ever-used 28.5% and the income thirds sit inside the envelope, and the payer mix, user counts, CBO arithmetic, age check and HRSA figures multiply out. The incremental Medicare user counts (8M vs 6.3M vs ~4M) conflict, and the AUD timing lacks a filing event (claims 2 and 3). Retatrutide, survodutide and amycretin approvals respect the 12-month rule.",
+        "generativity": "The day-in-the-life gives concrete scenes: the Foundayo weekend skip with the app tap, the claims-processing job that counts refills, the stadiometer visit, the Whole Hunger bakery line, and the father's pill and bone scan. The world fields add texture too: dating badges, 'hunger dinners', 'Foundayo weekends' and holiday-synced couples. Characters and scenes are implied throughout, and the prose shows more than it explains."
+      },
+      "plausibility": 6.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "aid to smoking and vaping cessation, including limiting post-cessation weight gain (Wegovy pill, Apr 2030)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "The 2028 world lists nicotine use as 'observational support, no approvals' with no phase 3 programme. A full approval within about 16 months, five months after the AUD approval, shows no trial or filing chain, so it fails mechanism and approval timing."
+      },
+      {
+        "quote": "assuming ~8M incremental users at an average net of ~$160 as prices step down",
+        "field": "world/access/public_coverage",
+        "why": "The same note computes ~6.3M incremental Medicare users, and the safety ledger says the benefit added '~4M more older adults'. Three different incremental-user figures break reconciliation and undercut the $154B Medicare score."
+      },
+      {
+        "quote": "Tobacco feels the cessation label: cigarette volume declines accelerated from ~9% to ~12% a year",
+        "field": "world/economy/alcohol/state",
+        "why": "A measurable 3-point acceleration in cigarette volume decline is attributed to a label approved only months earlier, in April 2030. Uptake and sales-data lags make this asserted rather than shown, which fails mechanism and magnitude."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.33,
+      "inequality": 3.67,
+      "public_health": 5.0,
+      "cohesion": 4.67,
+      "epistemic": 3.67,
+      "overall": 4.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.17,
+      "magnitude": 6.33
+    },
+    "plausibility": 6.82,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Coverage expands and the access gap narrows (bottom third 11→18%, Medicaid and HRSA coverage). Harms still accumulate: the gray market doubles to ~5.7M with insulin-pen deaths, fracture counts rise among 70+ new starters, and a pediatric growth and eating-disorder signal appears. Reward blunting becomes a mainstream complaint, and 30% adherence premiums survive outside two states. Harms are named, measured and argued over (FDA postmarketing interim, DSC, EEOC guidance), which keeps epistemic and inequality scores low. This is a harder society with new losers but not a refuse-to-live-in one.",
+      "plausibility": "driver_fidelity: Every driver is traceable. These are the adoption delta (21.3%), managed price decline ($195 net, TrumpRx step-downs), the Part D and Medicaid expansion plus HRSA subsidy, and the pediatric DSC. Also traceable are the counterfeit cluster, amycretin as oral parity, Whole Hunger, and mood marketing through addiction labels, which pipeline_note explains. Nothing is contradicted. mechanism: The subsidy, gray-market and pediatric chains are shown. The nicotine approval has no trial chain, the cigarette-decline acceleration is asserted (claims 1 and 3), and the Congress reversal rests on a thin 'election plus tariff relief' explanation. magnitude: Population figures, the payer-mix shares (26/14/4/26/20/10) and the Medicare and Medicaid dollar arithmetic reconcile, and the retatrutide, survodutide and amycretin timings fit the approval rules. The incremental-user figure appears three ways (~8M, 6.3M, ~4M; claim 2), and the nicotine approval timing is doubtful.",
+      "generativity": "The Marisol and Ari scenes show the drug-holiday app trick, the claims-processing job and the growth-chart appointment. They also carry the Whole Hunger bakery, the father's covered pill with a pre-scan, and the pancakes ending. The world fields add Foundayo weekends, 'the flats', hunger dinners and dating-app badges, so daily life has plenty of texture and many implied scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.1122,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 45
   }
 }

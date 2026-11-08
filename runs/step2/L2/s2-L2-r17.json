@@ -49,6 +49,41 @@
         "input_tokens": 16721,
         "output_tokens": 24359
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r17-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25972,
+        "output_tokens": 6500
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r17-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25972,
+        "output_tokens": 6142
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r17-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25972,
+        "output_tokens": 7535
+      }
     ]
   },
   "world": {
@@ -299,6 +334,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r17-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "About one in six adults with obesity has never used a drug.",
+          "field": "world/population/note",
+          "why": "Fails magnitude. The 2028 parent had ~25% of adults with obesity and never on a drug, and ever-use rises only 7.5 points to 29.5%. One in six of 33% obese adults is ~5.5% of adults, which would need the never-used pool to fall by ~20 points."
+        },
+        {
+          "quote": "That is far below the 2027 $41B score for a branded benefit with a smaller population, because generic prices arrived.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude and mechanism. $46B is higher than $41B, not far below it, and the prose repeats the error by calling it 'a fraction of the bill' that killed the 2027 pilot. The budget arithmetic contradicts its own framing."
+        },
+        {
+          "quote": "Medicaid EPSDT coverage has roughly doubled adolescent use with no peak-bone-mass data; the first pediatric DXA readouts are due 2031.",
+          "field": "world/safety_ledger/9/prevalence_note",
+          "why": "Fails magnitude. Under-18 use goes from 0.8% to 1.4%, about 1.75x, so 'roughly doubled' is loose. The asserted Medicaid-driven jump in adolescent use is not reconciled to the coverage figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 3.5,
+        "inequality": 4,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens sharply through the $10 Medicare copay, Medicaid expansion and free HRSA provision, and the anhedonia harm is measured and labelled. That keeps autonomy and epistemic scores low. The remaining harms are real but bounded: a rising absolute fracture count among ~4.5M more older users, doubled adolescent exposure with no bone data, unregulated 'calm' marketing to non-obese people, and an efficacy gap between pen and branded users. This is a harder society with new losers, but its harms are visible and discussable.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events: generic collapse via the settlement, public expansion and subsidy via the Act, anhedonia label, oral amycretin parity, natural movement, marketed 'calm', no new indications. Approval timings fit the envelope, and the generic mechanism appears in the 2030-01 event. mechanism: The chains are mostly shown (settlement to price to coverage to uptake, the label to the movement's placards, the API cost to pen-first public buying). The CBO 'far below $41B' and 'fraction of the bill' framing contradicts the $46B figure (claim 2), and the Pennsylvania law landing the same month as the march is convenient. magnitude: Headline figures sit inside the envelope (22.0% current, 29.5% ever, income and age bands reconcile, payer mix sums to 58.7M, spending arithmetic multiplies out). The 'one in six obese never used' figure cannot reconcile with the parent's 25% (claim 1), the CBO comparison is internally wrong, and the adolescent 'doubled' claim is loose (claim 3).",
+        "generativity": "The Rosa and Mr. Kowalczyk scenes show rather than explain: the staple on the Medication Guide bag, the DXA printout proudly shown, the uneaten sandwich, the long table with wheat-ear pins, the dose-timing text. The world also implies many other characters and scenes: telehealth 'calm' subscribers, Medicaid adolescents, Unmuted off nights, pharmacy DXA kiosks, couples therapists. Daily life has strong texture and the film potential is high."
+      },
+      "plausibility": 6.15
+    },
+    {
+      "custom_id": "s2-L2-r17-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "About one in six adults with obesity has never used a drug.",
+          "field": "world/population/note",
+          "why": "Fails magnitude. The 2028 world had ~25% of adults who are obese and never used a drug, but ever-use rose by only 7.5 points. Never-used obesity can fall to roughly 17.5% at the lowest, not the ~5.5% of adults that one in six of a 33% obese population implies. That would also mean nearly all ever-users are obese, which contradicts the 'calm' market being mostly non-obese."
+        },
+        {
+          "quote": "That is far below the 2027 $41B score for a branded benefit with a smaller population, because generic prices arrived.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude. The candidate's own $46B ten-year CBO score is higher than $41B, not far below it, and the prose repeats the error ('a fraction of the bill'). The stated reason also does not match the arithmetic shown beside it."
+        },
+        {
+          "quote": "Novo filed in Feb 2029 on a phase 3 programme that included a 72-week head-to-head against tirzepatide 15 mg (~20.6% vs ~21.0%, non-inferior).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism. Amycretin was still in phase 3 in 2028, so a completed 72-week head-to-head with a filing by Feb 2029 needs enrolment and readout unrealistically early. The 19-month review time satisfies the envelope rule but not the trial chronology."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the harm is named. The anhedonia label comes with a Medication Guide, and public payers cover the poorest third. The costs are still real: ~2.1M people with drug-attributable anhedonia, fracture exposure for ~4.5M more older adults, adolescent use roughly doubled with no bone data, and an efficacy gap between generic-pen users (~15%) and tirzepatide, retatrutide or oral amycretin users (~20–26%). The 'calm' telehealth market for non-obese people and the cultural split add moderate cohesion and autonomy costs. It is a harder society with new losers, not a structurally hidden harm.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events: the 2029-10 anhedonia label, the Nov 2029 Act, the Jan 2030 generics via settlement, the 'calm' marketing, the Long Table marches and the amycretin approval. Nothing contradicts a driver, and the generic-US exception has its settlement event. mechanism: The chains are mostly shown: settlement to price collapse, cheap drugs to Medicaid and Medicare coverage, label to movement rhetoric. Two weak points are the trial chronology for the amycretin head-to-head (claim 3) and the 'far below $41B' framing, which the numbers contradict (claim 2). magnitude: Adoption (22.0%), ever-use (29.5%), the income thirds, the age bands, the payer mix and the programme arithmetic all fit the envelope. The reconciliation failures are the $46B-versus-$41B contradiction and the never-used-obese share, which is inconsistent with only a 7.5-point rise in ever-use (claim 1). Approval timings are within the rules.",
+        "generativity": "The prose follows Rosa with concrete props: a Giant Eagle pharmacy bag, a stapled Medication Guide, a DXA printout from a CVS kiosk, chair squats, a wheat-ear pin and a Long Table supper. Her daughter's text ('Don't dose Saturday') and her watching people eat 'counting' show interior life instead of explaining it. The world fields add many scene hooks: telehealth brands, off nights, dating flags, school food waste and the Unmuted tours."
+      },
+      "plausibility": 6.4
+    },
+    {
+      "custom_id": "s2-L2-r17-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "That is far below the 2027 $41B score for a branded benefit with a smaller population, because generic prices arrived.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the same note scores the new benefit at $46B over 2030–2039, which is higher than $41B, not 'far below' it. The 7M-enrollee population is also larger than the pilot's, so the stated reason fails. The prose repeats the error ('a fraction of the bill that had killed the Medicare pilot')."
+        },
+        {
+          "quote": "Novo filed in Feb 2029 on a phase 3 programme that included a 72-week head-to-head against tirzepatide 15 mg (~20.6% vs ~21.0%, non-inferior).",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: amycretin was only 'in phase 3' in mid-2028 with filing 'planned for 2029'. A completed 72-week head-to-head against tirzepatide, read out and filed by Feb 2029, requires an implausibly early trial start. An oral peptide reaching tirzepatide-level weight loss non-inferiority is also asserted without support."
+        },
+        {
+          "quote": "Generic oral semaglutide costs more, $69–99, because a 25 mg daily tablet needs ~75× the API of a weekly 2.4 mg injection.",
+          "field": "world/access/note",
+          "why": "mechanism: if API volume drove cost, the pill would cost many times the $39–59 pen, not about 1.5×. The stated cause does not produce the stated price gap, and the same rationale is reused to explain why public programmes default to the pen."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the poorest third catches up (bottom third 11→19%). The anhedonia harm is labelled, measured and openly argued over, so epistemic badness is low. The remaining harms are real but bounded: ~2.1M with drug-attributable anhedonia, a fracture wave among ~4.5M newly covered older adults, doubled adolescent use with no bone data, an efficacy gap between pen and branded drug, and unregulated telehealth 'calm' marketing. Overall this is a different, somewhat harder society with new losers (snack workers, older fracture-exposed enrollees), but better than 2028 on access and transparency.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption at 22.0, generic_collapse via a May 2029 settlement and Jan 2030 launch, public_expansion and subsidy via the Act, the Oct 2029 anhedonia label, oral parity via amycretin, the natural movement, and marketed 'calm'. new_indications stays empty and market_shock is none. mechanism: Most chains are shown (settlement → generics → cheap coverage → employer step therapy; label → movement). The amycretin timeline and the API-cost rationale (claims 2 and 3) are asserted or illogical, and the reason Novo settles is not explained. magnitude: Population figures sit inside the envelope, and payer counts, the $3.0B, $4.6B, $5.6B and $0.58B arithmetic, and the cycling arithmetic all reconcile. But the access note calls the $46B CBO score 'far below' the $41B one (claim 1). The 65+ users implied by the 20% rate (~12.3M) also exceed the ~10.9M accounted for in the payer note.",
+        "generativity": "The Rosa Delgado scenes carry specific texture: the Giant Eagle pharmacy bag, the DXA printout 'like a report card', the uneaten sandwich, 'Don't dose Saturday', the wheat-ear pin and the Lawrenceville long table. The world fields imply many more characters and scenes: the 'calm' subscription apps, Medicaid clinic visits, Unmuted off nights and desire-mismatch therapy. Rosa's closing thought, watching people enjoy food the way she counts squats, shows rather than explains."
+      },
+      "plausibility": 6.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "About one in six adults with obesity has never used a drug.",
+        "field": "world/population/note",
+        "why": "Fails magnitude. The 2028 parent had ~25% of adults with obesity and never on a drug, and ever-use rises only 7.5 points to 29.5%. One in six of 33% obese adults is ~5.5% of adults, which would need the never-used pool to fall by ~20 points."
+      },
+      {
+        "quote": "That is far below the 2027 $41B score for a branded benefit with a smaller population, because generic prices arrived.",
+        "field": "world/access/public_coverage",
+        "why": "Fails magnitude and mechanism. $46B is higher than $41B, not far below it, and the prose repeats the error by calling it 'a fraction of the bill' that killed the 2027 pilot. The budget arithmetic contradicts its own framing."
+      },
+      {
+        "quote": "Medicaid EPSDT coverage has roughly doubled adolescent use with no peak-bone-mass data; the first pediatric DXA readouts are due 2031.",
+        "field": "world/safety_ledger/9/prevalence_note",
+        "why": "Fails magnitude. Under-18 use goes from 0.8% to 1.4%, about 1.75x, so 'roughly doubled' is loose. The asserted Medicaid-driven jump in adolescent use is not reconciled to the coverage figures."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 3.83,
+      "inequality": 4.33,
+      "public_health": 4.83,
+      "cohesion": 4.83,
+      "epistemic": 3.0,
+      "overall": 4.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 5.0
+    },
+    "plausibility": 6.27,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Access broadens sharply through the $10 Medicare copay, Medicaid expansion and free HRSA provision, and the anhedonia harm is measured and labelled. That keeps autonomy and epistemic scores low. The remaining harms are real but bounded: a rising absolute fracture count among ~4.5M more older users, doubled adolescent exposure with no bone data, unregulated 'calm' marketing to non-obese people, and an efficacy gap between pen and branded users. This is a harder society with new losers, but its harms are visible and discussable.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events: generic collapse via the settlement, public expansion and subsidy via the Act, anhedonia label, oral amycretin parity, natural movement, marketed 'calm', no new indications. Approval timings fit the envelope, and the generic mechanism appears in the 2030-01 event. mechanism: The chains are mostly shown (settlement to price to coverage to uptake, the label to the movement's placards, the API cost to pen-first public buying). The CBO 'far below $41B' and 'fraction of the bill' framing contradicts the $46B figure (claim 2), and the Pennsylvania law landing the same month as the march is convenient. magnitude: Headline figures sit inside the envelope (22.0% current, 29.5% ever, income and age bands reconcile, payer mix sums to 58.7M, spending arithmetic multiplies out). The 'one in six obese never used' figure cannot reconcile with the parent's 25% (claim 1), the CBO comparison is internally wrong, and the adolescent 'doubled' claim is loose (claim 3).",
+      "generativity": "The Rosa and Mr. Kowalczyk scenes show rather than explain: the staple on the Medication Guide bag, the DXA printout proudly shown, the uneaten sandwich, the long table with wheat-ear pins, the dose-timing text. The world also implies many other characters and scenes: telehealth 'calm' subscribers, Medicaid adolescents, Unmuted off nights, pharmacy DXA kiosks, couples therapists. Daily life has strong texture and the film potential is high."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.1278,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 44
   }
 }

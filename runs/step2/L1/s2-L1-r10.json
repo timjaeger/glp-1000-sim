@@ -51,6 +51,41 @@
         "input_tokens": 16517,
         "output_tokens": 22010
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r10-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24701,
+        "output_tokens": 6544
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r10-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24701,
+        "output_tokens": 4976
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r10-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24701,
+        "output_tokens": 7840
+      }
     ]
   },
   "world": {
@@ -309,6 +344,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r10-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "school-cafeteria waste studies report adults packing smaller lunches",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: school-cafeteria waste studies measure children's plate waste, not adults' packed lunches, so the cited evidence cannot support the claim. It reads as a decorative detail with no causal or measurement chain."
+        },
+        {
+          "quote": "Medicaid pays for 18% of fills ≈ 7.0M users",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicaid users rise from 2.6M to 7.0M, about 2.7 times, although the Act passed in June 2029 and coverage began in Jan 2030. The world shows no state plan amendment, enrolment or ramp-up chain, so one year of operation is asserted to produce the whole jump."
+        },
+        {
+          "quote": "Employer coverage slipped from 58% to 55% because some mid-size firms stopped covering weight management once public coverage expanded.",
+          "field": "world/access/note",
+          "why": "Mechanism: Medicare and Medicaid expansion does not cover working-age employees, so it is a weak reason for employers to drop coverage. Commercial users also rise from 11.8M to 12.4M while coverage falls and gating spreads, so the causal story is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder than 2028 with new losers, but it is not catastrophic. Access widens and the fracture and sarcopenia findings stay unchanged. The main harms are stratification by muscle quality and monitoring (inequality 6.5), adherence-gated Medicaid and dated in-clinic dose records (autonomy 6), reward blunting sold as 'calm' while unmeasured, and children aged 6-11 starting with no bone data (epistemic 6). The counterfeit toll of 19 deaths and 3,100 ED visits is real but small, so I kept public_health moderate.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 14.5%, up 4.6 points. Prices follow the $195 negotiated price. The Act gives public expansion. The under-12 label arrives in Sept 2029. The ledger shows no new safety signal. MariTide is the monthly agent. Counterfeits drive the market shock, class stratification is explicit, the telehealth and under-21 rules are the restriction, and 'Quiet Month' memberships are the marketed feature. mechanism: The Act to Medicare, Medicaid and price chain is shown, as is counterfeit harm leading to the import crackdown. Several changes are asserted, namely the Medicaid jump in one year, the employer drop, and the cafeteria claim (claims 1-3), and the Gary billboard implies a fast clinic-chain spread. magnitude: The envelope holds: 14.5% is within 12.5-16.5, ever-used 23% is within 16.5-24.1, and the income thirds bracket the national figure. The age bands, cycling (7.5/23 = 33%), payer mix (22+18+32+16+12 = 100), Medicare ($16.5B) and Medicaid ($16.4B, $13.1B federal) arithmetic reconcile, and approval timings of 16-19 months satisfy the rules. I found no material reconciliation failure.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 8.15
+    },
+    {
+      "custom_id": "s2-L1-r10-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The 2028 off-drug group of 6.6 pts returning at the starting world's ~40% one-year restart rate supplies most of the 5.5 restarter pts.",
+          "field": "world/population/note",
+          "why": "Magnitude: 40% of 6.6 pts is about 2.6 pts, under half of 5.5. The claim that this group supplies 'most' of the restarters does not reconcile, and it ignores that about 5.0 pts were already second-course users in 2028."
+        },
+        {
+          "quote": "Employer coverage slipped from 58% to 55% because some mid-size firms stopped covering weight management once public coverage expanded.",
+          "field": "world/access/note",
+          "why": "Mechanism: public Medicare and Medicaid expansion mostly covers different people (65+ and low-income) from employees. The text asserts that employers drop coverage but shows no chain, even though commercial users still rose in absolute number and gating spread."
+        },
+        {
+          "quote": "Las Vegas locals-casino operators tell analysts that slot spending by Nevada residents is softening in Medicaid-covered zip codes and list GLP-1 uptake among the possible causes",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism: a narrow, convenient effect on gambling is asserted from a reward-craving mechanism that the ledger calls anecdotal. Gambling approval does not exist, and the world shows no chain from Medicaid uptake to measurable casino revenue within about a year."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Coverage widens to about 39M users, and Medicaid reaches the bottom third, which is a real gain. Against that stand a persistent bone/muscle burden, surveillance through adherence gating and in-clinic dose records, counterfeit harms (19 deaths), and 6–11-year-olds starting lifelong exposure with no bone data. 'Soft-thin' as a cheap-care marker and 'Quiet Month' sold as calm add class stratification and epistemic fog, so the world is a recognisably harder society and not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption lands at +4.6, the 2029 Act covers public expansion, managed decline and restriction, the under-12 approval and MariTide are dated events, the counterfeit shock is shown, and the Quiet/Even memberships carry the marketed-feature layer. The 'none' safety signal is respected because the bone findings are only confirmed again with no new magnitude. mechanism: Most chains are shown, including the Act, the ad ban sending marketing to clinics, and the import crackdown. The employer-coverage drop and the Vegas slot-spending claim are asserted rather than shown. magnitude: All headline figures sit inside the envelope (14.5, 23, income gradient, age bands, approval lags of 17–19 months), and the payer mix and public spending multiply out. The only reconciliation gap is the restarter-composition sentence, which is arithmetically wrong.",
+        "generativity": "The Gary day is concrete: the kiosk weigh-in photograph, Mr. Kowalczyk's chair-squat sheet, the registry consent form with an undecided bone-scan box, Tasha's vials and the Quiet Month billboard. The world fields add Scottsdale vs. Maryvale, the AHCCCS Walgreens with scan machines, DEXA percentiles in dating profiles and union contract language. Many scenes are implied, and the ending line is strong."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s2-L1-r10-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "In the evening a billboard on the Borman Expressway shows a woman with sculpted shoulders and closed eyes.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world says 'Quiet Month' memberships are sold by concierge chains in Scottsdale, Austin and Miami, mostly to top-third adults, and the DTC ad ban covers manufacturers only. A billboard for them in Gary, Indiana, outside that market and aimed at a Medicaid user, is not explained."
+        },
+        {
+          "quote": "gray/imported/counterfeit 12% (4.7M)",
+          "field": "world/access/note",
+          "why": "Mechanism: gray-market users nearly quadruple, from 1.3M to 4.7M, in a period when public coverage expands and US cash prices fall to $199–299. The world also shows the March 2030 import ban and a counterfeit scare that would push users the other way, so the rise is asserted."
+        },
+        {
+          "quote": "65+ recovers to 12.5% because permanent Medicare coverage outweighs the bone warnings",
+          "field": "world/population/note",
+          "why": "Mechanism: use among 65+ rises from 8% to 12.5% over two years after a fracture finding that had pushed older users off. The only cause given is that coverage 'outweighs' the warnings, with no uptake chain, and the Medicare counselling-visit requirement would if anything slow it."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadens to about 39M users, but conditioning spreads: Indiana and Arkansas-style waivers reach 5 more states, 45% of covering employers gate, and monthly in-clinic dosing creates dated adherence records. Stratification moves from access to quality of body ('muscle gap', 'soft-thin'). Reward blunting is sold as a feature through 'Quiet' memberships, children aged 6–11 start with no bone or reward data, and counterfeit harm is real but modest (19 deaths). That is a recognisably harder society with new losers, not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible in the fields and events. Managed decline shows in the $195 Medicare price, public expansion in the 2029 Act, pediatric under-12 in the Sept 2029 approval, and MariTide as the monthly launch. Counterfeits, class stratification, restriction and the marketed-feature personality layer all appear too, and the safety ledger adds no new signal. mechanism: Most chains are shown (Act to Medicaid match to bottom-third rise; DTC ban to clinics filling the gap; counterfeit deaths to the importation ban). The weak points are the asserted 65+ rebound, the gray-market quadrupling despite lower prices, and the Gary billboard for a top-third concierge product. magnitude: All headline figures are inside the envelope: 14.5% on drug, 23% ever used, income thirds averaging 14.5, and approvals 16, 17 and 19 months after filing. Payer shares sum to 100%, and the Medicare ($16.5B) and Medicaid ($16.4B, $13.1B federal) arithmetic works. The small gap is the cycling note, where 6.6 pts returning at about 40% cannot supply 'most' of the 5.5 restarter pts, and there is no persistence arithmetic for the first-course holdovers.",
+        "generativity": "The world has many implied scenes and characters: a kiosk weigh-in in Gary, a walker-bound 81-year-old with a chair-squat counselling sheet, a nine-year-old at a specialist clinic, a cousin with Facebook vials, and Scottsdale versus Maryvale. The prose shows rather than explains and ends on a strong beat ('stop liking cake'). Small texture slips, such as the Gary billboard and the drive time to Indianapolis, do not reduce its filmability."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "school-cafeteria waste studies report adults packing smaller lunches",
+        "field": "world/body_and_culture/eating_as_ritual",
+        "why": "Mechanism: school-cafeteria waste studies measure children's plate waste, not adults' packed lunches, so the cited evidence cannot support the claim. It reads as a decorative detail with no causal or measurement chain."
+      },
+      {
+        "quote": "Medicaid pays for 18% of fills ≈ 7.0M users",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: Medicaid users rise from 2.6M to 7.0M, about 2.7 times, although the Act passed in June 2029 and coverage began in Jan 2030. The world shows no state plan amendment, enrolment or ramp-up chain, so one year of operation is asserted to produce the whole jump."
+      },
+      {
+        "quote": "Employer coverage slipped from 58% to 55% because some mid-size firms stopped covering weight management once public coverage expanded.",
+        "field": "world/access/note",
+        "why": "Mechanism: Medicare and Medicaid expansion does not cover working-age employees, so it is a weak reason for employers to drop coverage. Commercial users also rise from 11.8M to 12.4M while coverage falls and gating spreads, so the causal story is thin."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.17,
+      "inequality": 6.5,
+      "public_health": 5.5,
+      "cohesion": 4.83,
+      "epistemic": 6.0,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.85,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is recognisably harder than 2028 with new losers, but it is not catastrophic. Access widens and the fracture and sarcopenia findings stay unchanged. The main harms are stratification by muscle quality and monitoring (inequality 6.5), adherence-gated Medicaid and dated in-clinic dose records (autonomy 6), reward blunting sold as 'calm' while unmeasured, and children aged 6-11 starting with no bone data (epistemic 6). The counterfeit toll of 19 deaths and 3,100 ED visits is real but small, so I kept public_health moderate.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 14.5%, up 4.6 points. Prices follow the $195 negotiated price. The Act gives public expansion. The under-12 label arrives in Sept 2029. The ledger shows no new safety signal. MariTide is the monthly agent. Counterfeits drive the market shock, class stratification is explicit, the telehealth and under-21 rules are the restriction, and 'Quiet Month' memberships are the marketed feature. mechanism: The Act to Medicare, Medicaid and price chain is shown, as is counterfeit harm leading to the import crackdown. Several changes are asserted, namely the Medicaid jump in one year, the employer drop, and the cafeteria claim (claims 1-3), and the Gary billboard implies a fast clinic-chain spread. magnitude: The envelope holds: 14.5% is within 12.5-16.5, ever-used 23% is within 16.5-24.1, and the income thirds bracket the national figure. The age bands, cycling (7.5/23 = 33%), payer mix (22+18+32+16+12 = 100), Medicare ($16.5B) and Medicaid ($16.4B, $13.1B federal) arithmetic reconcile, and approval timings of 16-19 months satisfy the rules. I found no material reconciliation failure.",
+      "generativity": "placeholder"
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.1478,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 21
   }
 }

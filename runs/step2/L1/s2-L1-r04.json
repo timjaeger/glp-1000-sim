@@ -51,6 +51,41 @@
         "input_tokens": 16510,
         "output_tokens": 26536
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r04-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24497,
+        "output_tokens": 8468
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r04-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24497,
+        "output_tokens": 7740
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r04-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24497,
+        "output_tokens": 9167
+      }
     ]
   },
   "world": {
@@ -314,6 +349,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r04-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Commercial is −0.3M and gray/imported +0.2M.",
+          "field": "world/population/note",
+          "why": "Mechanism/magnitude: employer weight-management coverage falls from 58% to 44%, yet commercial users drop only about 2.5%. Cash users rise about 75% (5.2M to 9.1M) while cash prices go up. The chain from employer retreat to these payer-mix shifts is asserted, not shown."
+        },
+        {
+          "quote": "bottom 15.0% (13.4M), middle 14.5% (12.9M), top 19.1% (17.0M), which averages to 16.2%",
+          "field": "world/population/note",
+          "why": "Magnitude (reconciliation): the note says the middle third earns too much for NIAP's cutoff, so NIAP's 7.0M and Medicaid's 8.0M users sit mostly in the bottom third. That is 15.0M public users, more than the bottom third's 13.4M total, before counting any cash, gray or Medicare users there."
+        },
+        {
+          "quote": "Enrolment reaches 7 million and is waitlisted by November 2030",
+          "field": "world/events/4/event",
+          "why": "Mechanism: a new federal programme funded in December 2029 enrols 7M adults within one year through FQHCs and contracted pharmacies, while 31 states also add Medicaid coverage. No administrative ramp is shown, and 7M × 12 months of spend assumes everyone was enrolled from January."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world has a recognisably harder, more stratified society. Free unmonitored pills reach the bottom third (NIAP, Medicaid) while monitored, muscle-protected care costs $649 cash. The middle third is pushed into involuntary cycling, which the bone data flag, and NAION is now an established class risk. Children 6–11 start decades-long exposure with no bone-accrual data, and NIAP's registry and the Indiana/Arkansas gating persist. Offsetting this, access broadens, harms are labelled, a validated anhedonia scale exists, and the drug holiday gives people some agency. Inequality is the dominant harm, and the epistemic picture is mixed rather than concealed.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption of 16.2% is +6.3 pp, the tariff price shock is in the events, employer coverage falls 58→44, pediatric 6–11 is approved, NAION gets a class warning, and NIAP is the subsidy. The muscle combo is realised as Zepbound Strong, which the envelope allows, and market_shock none is respected. mechanism: the tariff-to-price, employer-retreat-to-cessation-recode and subsidy-to-bottom-third chains are shown, but claims 1 and 3 are asserted. The commercial and cash shifts do not follow from employer retreat and price increases, and the 7M NIAP enrolment in a single year has no ramp. magnitude: current use (16.2) and ever-use (25.5) are inside the envelope, the latter near its 25.9 edge. Approval timings are legal, and the payer mix, NIAP and Medicaid dollars, age bands and cycling arithmetic all reconcile. The income-third figures do not (claim 2), because NIAP plus Medicaid users exceed the bottom third's user count.",
+        "generativity": "The Renee Albright vignette is concrete and film-ready: the covered-eye check at the light, the 'I want to want the cake' staff-room scene, the sister's waitlist call, and the half-length Takis endcap. The Gwinnett/Buckhead contrast, 'coverage weight', 'the flats' and holiday-timed art give daily life real texture. Many implied characters (the 504-plan student, the trucker, the NIAP clinic) could each seed scenes. The day-in-the-life mostly shows rather than explains."
+      },
+      "plausibility": 6.25
+    },
+    {
+      "custom_id": "s2-L1-r04-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Wegovy smoking-cessation sNDA (Mar 2029)",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the parent and the 2028-05 event put the cessation filing at about May 2028. A March 2029 approval is roughly 10 months later, inside the envelope's 12-month minimum for a phase 3 product."
+        },
+        {
+          "quote": "Commercial is −0.3M and gray/imported +0.2M.",
+          "field": "world/population/note",
+          "why": "Mechanism: employer weight-management coverage falls from 58% to 44%, and Georgia, North Carolina and Colorado state plans drop it. Yet commercial users fall only 2.5% (11.8M to 11.5M), with no chain showing how the retreat barely dents commercial volume."
+        },
+        {
+          "quote": "cash (+3.9M)",
+          "field": "world/population/note",
+          "why": "Mechanism: cash users rise by about 75% in a stipulated price shock-up, with cheap imports shut off in April 2029. The candidate does not show who the new cash payers are or why they would buy at $399–649 injectable prices, and the only reasons given are partial ($149 orals, the Strong bundle)."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens (free pills for the bottom third, cessation coverage), but the world is more stratified. Monitored, muscle-protected use is a $649 product, while free-pill NIAP users get no DEXA or eye exams. Around 24.8M people are off-drug and regaining, the middle third cycles through 90-day cessation windows, and kids aged 6–11 take the drugs with no bone data. NAION is now established, there is an HRSA enrolment registry, and Indiana/Arkansas gating continues. Reward blunting is nameable and discussed, which limits the epistemic harm. Overall this is a recognisably harder society with new losers, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: All ten drivers are realised and traceable. Shock-up pricing and tariffs, the employer retreat from 58% to 44%, pediatric 6–11, the NAION class Warning & Precaution, NIAP as subsidy, the mainstream 'flats' complaint, class stratification, and the muscle combo realised as 'Zepbound Strong' with bimagrumab held in phase 3 as the envelope allows. \nmechanism: The NIAP, tariff, ACA zero-cost cessation and Strong-bundle chains are well shown. The weak points are the barely moved commercial count and the cash growth despite higher prices (claims 2 and 3), plus the unexplained end of retatrutide allocation. \nmagnitude: Current use (16.2%), ever-use (25.5%, near the 25.9 cap), income thirds, age bands, payer mix (43.3M) and the NIAP and Medicaid spending (≈$8.8B and ≈$6.2B) all reconcile. The cessation sNDA approval about 10 months after filing breaks the 12-month rule (claim 1), the pediatric 6–11 filing is never shown, and the +17.1M gain components sum to 17.2M.",
+        "generativity": "The prose ends with Renee's day: covering one eye at the light, 'I want to want the cake', the sister weighed in front of the receptionist, the half-length Takis endcap, and alarms set for December. These are filmable scenes. The Gwinnett/Buckhead contrast, 'coverage weight', 'holiday' as a genre and school-lunch protocols add texture and imply many other characters."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s2-L1-r04-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "bottom 15.0% (13.4M), middle 14.5% (12.9M), top 19.1% (17.0M)",
+          "field": "world/population/note",
+          "why": "magnitude: the public low-income programmes alone cover about 15M users (NIAP 7.0M plus Medicaid 8.0M), yet the bottom third has only 13.4M. NIAP's ≤250% FPL cutoff and Medicaid eligibility map mostly onto that third, and Medicare and cash users would add to it. The bottom-third figure looks understated and does not reconcile."
+        },
+        {
+          "quote": "Wegovy smoking-cessation sNDA (Mar 2029)",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: the parent world and the 2028-05 event put the sNDA filing in May 2028, so a Mar 2029 approval comes about 10 months after filing. The envelope requires at least 12 months for a product in phase 3 at the start."
+        },
+        {
+          "quote": "Commercial is −0.3M and gray/imported +0.2M.",
+          "field": "world/population/note",
+          "why": "mechanism: employer weight-management coverage falls from 58% to 44% (roughly a quarter lost in relative terms) and the narrative stresses employer retreat, yet commercial users barely fall (11.8M to 11.5M). The re-coding to diabetes, CVD, OSA and cessation is asserted, not shown, as the offset."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Access widens for the poor but with no bone, eye or strength monitoring, and the middle third cycles involuntarily, which is the pattern the bone data flag. Class sorting by body is explicit ('program body', 'coverage weight'). Children 6–11 now take the drugs with no accrual data, a doubled NAION risk is established, and NIAP has a registry and waitlists. The harms are recognisably harder but measured and discussed (anhedonia scale, OPDP letter), so epistemic harm stays moderate and the world sits mid-scale.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +6.3 pp, tariff-driven price shock, employer coverage down to 44%, pediatric 6–11 approval, class NAION warning, and the muscle combo realised as 'Zepbound Strong' with a pipeline_note that explains the substitution. Subsidy, class stratification and mainstream complaint are all present, and there is no market shock. mechanism: most chains are shown (tariffs to cash prices, employer retreat to the cessation code gaming, NIAP to bottom-third growth). Commercial users are nearly flat despite the 14-point coverage collapse (claim 3), and some jumps are asserted, such as NAION moving from conflicting to established. magnitude: current use, ever-use (25.5, near the 25.9 cap), age bands, payer mix and the NIAP, Bridge and Medicaid arithmetic all reconcile. The cessation approval comes about 10 months after filing, against the 12-month rule (claim 2), and the bottom-third count looks too low against public low-income users (claim 1).",
+        "generativity": "The Renee Albright vignette is concrete: the covered-eye check at the light, the $0.00 cessation sticker, the girl with the protein pouch, Carla 'wanting to want the cake', and the Takis endcap. The Gwinnett versus Buckhead contrast and the 'holiday' genre of art and parties imply many more scenes and characters. A few beats, such as the sister's weigh-in and the waitlist, lean on explanation rather than showing."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Commercial is −0.3M and gray/imported +0.2M.",
+        "field": "world/population/note",
+        "why": "Mechanism/magnitude: employer weight-management coverage falls from 58% to 44%, yet commercial users drop only about 2.5%. Cash users rise about 75% (5.2M to 9.1M) while cash prices go up. The chain from employer retreat to these payer-mix shifts is asserted, not shown."
+      },
+      {
+        "quote": "bottom 15.0% (13.4M), middle 14.5% (12.9M), top 19.1% (17.0M), which averages to 16.2%",
+        "field": "world/population/note",
+        "why": "Magnitude (reconciliation): the note says the middle third earns too much for NIAP's cutoff, so NIAP's 7.0M and Medicaid's 8.0M users sit mostly in the bottom third. That is 15.0M public users, more than the bottom third's 13.4M total, before counting any cash, gray or Medicare users there."
+      },
+      {
+        "quote": "Enrolment reaches 7 million and is waitlisted by November 2030",
+        "field": "world/events/4/event",
+        "why": "Mechanism: a new federal programme funded in December 2029 enrols 7M adults within one year through FQHCs and contracted pharmacies, while 31 states also add Medicaid coverage. No administrative ramp is shown, and 7M × 12 months of spend assumes everyone was enrolled from January."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 5.0,
+      "inequality": 6.5,
+      "public_health": 5.5,
+      "cohesion": 5.0,
+      "epistemic": 4.67,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 5.67
+    },
+    "plausibility": 6.68,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The world has a recognisably harder, more stratified society. Free unmonitored pills reach the bottom third (NIAP, Medicaid) while monitored, muscle-protected care costs $649 cash. The middle third is pushed into involuntary cycling, which the bone data flag, and NAION is now an established class risk. Children 6–11 start decades-long exposure with no bone-accrual data, and NIAP's registry and the Indiana/Arkansas gating persist. Offsetting this, access broadens, harms are labelled, a validated anhedonia scale exists, and the drug holiday gives people some agency. Inequality is the dominant harm, and the epistemic picture is mixed rather than concealed.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption of 16.2% is +6.3 pp, the tariff price shock is in the events, employer coverage falls 58→44, pediatric 6–11 is approved, NAION gets a class warning, and NIAP is the subsidy. The muscle combo is realised as Zepbound Strong, which the envelope allows, and market_shock none is respected. mechanism: the tariff-to-price, employer-retreat-to-cessation-recode and subsidy-to-bottom-third chains are shown, but claims 1 and 3 are asserted. The commercial and cash shifts do not follow from employer retreat and price increases, and the 7M NIAP enrolment in a single year has no ramp. magnitude: current use (16.2) and ever-use (25.5) are inside the envelope, the latter near its 25.9 edge. Approval timings are legal, and the payer mix, NIAP and Medicaid dollars, age bands and cycling arithmetic all reconcile. The income-third figures do not (claim 2), because NIAP plus Medicaid users exceed the bottom third's user count.",
+      "generativity": "The Renee Albright vignette is concrete and film-ready: the covered-eye check at the light, the 'I want to want the cake' staff-room scene, the sister's waitlist call, and the half-length Takis endcap. The Gwinnett/Buckhead contrast, 'coverage weight', 'the flats' and holiday-timed art give daily life real texture. Many implied characters (the 504-plan student, the trucker, the NIAP clinic) could each seed scenes. The day-in-the-life mostly shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.1111,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 24
   }
 }

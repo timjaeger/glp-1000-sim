@@ -51,6 +51,41 @@
         "input_tokens": 16528,
         "output_tokens": 17530
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r02-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24557,
+        "output_tokens": 4864
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r02-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24557,
+        "output_tokens": 5409
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r02-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24557,
+        "output_tokens": 4738
+      }
     ]
   },
   "world": {
@@ -325,6 +360,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r02-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Pharmacy trend fell from ~+9% to ~+3% on generic substitution.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism and magnitude: US volume nearly doubled and 65+ use rose from 8% to 15%, yet pharmacy trend is asserted to fall by two-thirds. Only semaglutide is generic, and the prose's 'pharmacy costs are flat' does not match the +3% in the JSON."
+        },
+        {
+          "quote": "cigarette and nicotine-pouch volumes fell sharply as quitlines in 30 states began supplying generic semaglutide with NRT.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: a 'sharp' fall in national nicotine volume within about a year of the Feb 2029 approval is asserted. No uptake, quit-rate or substitution figures are given, and quitlines reach a small share of smokers."
+        },
+        {
+          "quote": "funds generic semaglutide or tirzepatide through TRICARE and military treatment facilities",
+          "field": "world/state/workforce_or_military",
+          "why": "Mechanism: the same world says no generic tirzepatide is sold in the US and that tirzepatide exclusivity runs to 2031–32. A 'generic tirzepatide' pathway contradicts that, and the DoD's choice between the two drugs is left unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy takes the hardest hit. Adherence gating is now the norm: eleven Medicaid waivers with 12-month lockouts, about 55% of covering employers gating, Medicare demo PDC and DEXA rules, and a military and police body-composition regime. Drug holidays are treated as non-compliance unless a union contract covers them. Inequality shifts from who uses the drug to who gets monitoring and coaching, so bone and muscle harms follow income (the 'Medicaid face' versus the DEXA-and-trainer tier). Flourishing and public health are mixed: smoking falls, but there are fracture, GI-litigation, stress-fracture and adolescent-exposure harms, and about 10–15% of users report flatness. This is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +8 pp (17.9%); the Jun 2029 settlement is an event that justifies US generics; the Medicare demo and waivers cover conditioning; the cessation approval is present; MDL claims and the verdict cover litigation; retatrutide's end of allocation realises the triple agonist; the Pentagon directive covers the military; and the 'flatness' is mainstream. Market shock is 'none' and the candidate adds no new one. mechanism: The chains are mostly shown: generic price drives uptake, cheap coverage drives employer coverage, and the settlement drives revenue. Several changes are only asserted, namely the pharmacy trend falling to +3% with doubled volume (claim 1), the sharp nicotine-volume drop (claim 2), and persistence rising to ~50%. The DoD line contradicts the no-generic-tirzepatide fact (claim 3), and the prose's 'flat' pharmacy costs clashes with the +3% in the JSON. magnitude: Everything sits inside the envelope: 17.9% current use, 26% ever, thirds bracketing the national figure, and age bands summing to about 17.9. The cycling arithmetic gives 35%. The payer mix sums to 100% and matches the user counts, and the Medicare ($7.1B) and Medicaid ($6.0B) spending figures multiply out. Survodutide and amycretin approvals come more than 12 months after filing. The cessation sNDA took 9 months, which is arguably allowed because it was already under review at the start. Remaining nits are generic pen capacity constraints alongside doubled volume, and the incretin market at $100B despite a 70% semaglutide revenue drop.",
+        "generativity": "x"
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s2-L1-r02-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Roughly two million people who had stopped because of cost in 2027 and 2028 came back, and millions of new users joined them",
+          "field": "prose/article",
+          "why": "The world's population note says about 6.5 pts of adults (≈17M current users) are on a second or later course, mostly 2028 stoppers who restarted. Two million is off by almost an order of magnitude, so the prose contradicts the world state (mechanism and magnitude)."
+        },
+        {
+          "quote": "Eleven states now run Indiana/Arkansas-style adherence-and-weigh-in waivers.",
+          "field": "world/access/public_coverage",
+          "why": "The only event that adds waivers (2029-11) says 'three more states', so Indiana and Arkansas plus three gives five. The path to eleven has no stated mechanism or event, which fails mechanism."
+        },
+        {
+          "quote": "Pharmacy trend fell from ~+9% to ~+3% on generic substitution.",
+          "field": "world/economy/insurance/state",
+          "why": "Users nearly doubled to 48M, and brand tirzepatide and retatrutide still account for large spend, including 1.8M brand Medicare users. A collapse to +3% trend is asserted rather than shown, and the prose calls costs 'flat', which is inconsistent with it. This fails mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Cheap generics and cessation approval deliver real health gains, but access is wrapped in conditioning: eleven Medicaid waivers, about 55% of covering employers with adherence gating, Medicare PDC and DEXA rules, and military and police mandates. Lockouts, the 'medical holiday' fight and the flatness being treated as non-compliance cut autonomy hardest. Harms from bone and muscle loss, GI problems and research-peptide products concentrate in unmonitored cash and generic users, so the safety gap tracks income. Reward blunting is now named and surveyed but still has no validated measure.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and dated events: the +8 pp adoption, generic collapse via the June 2029 settlement, conditioning, nicotine approval, GI litigation, the retatrutide supply expansion, class stratification, the military directive and the mainstream flatness. Nothing contradicts them. mechanism: The settlement-to-price-to-uptake chain is shown, but several changes are asserted. Claim 2 (eleven waivers against three added in the event), claim 1 (two million restarters against ~17M in the world note) and claim 3 (pharmacy trend falling to +3%) fail, and generic makers are called capacity-constrained while volume nearly doubles. magnitude: Current use 17.9%, ever-use 26%, the income thirds, age bands and payer mix all sit inside the envelope and multiply out, and the Medicare and Medicaid spend arithmetic works. Approval timings are allowed. Small gaps remain: 66M versus 68.3M adults 65+, and the prose figure in claim 1.",
+        "generativity": "The Keisha and Darnell day is concrete and shows rather than explains. It has the skipped dose before a wedding, the CVS kiosk, Mrs. Pruitt's Medicaid slip and the son's wrestling weight. The world supplies Fort Bragg off-post gyms, 'reta' status on dating profiles, union holiday clauses and the Army tape-test, so many scenes are implied."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s2-L1-r02-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Eleven states now run Indiana/Arkansas-style adherence-and-weigh-in waivers.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism and magnitude: the only waiver event (2029-11) says 'three more states', which makes about five states, not eleven. No chain is shown for the other six."
+        },
+        {
+          "quote": "The semaglutide cessation sNDA filed May 2028 was approved Feb 2029.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: the indication was in phase 3 with a stated filing of May 2028, and the approval rules allow approval no earlier than 12 months after filing. Feb 2029 is 9 months, and the rule is not honoured for this filing."
+        },
+        {
+          "quote": "Pharmacy trend fell from ~+9% to ~+3% on generic substitution.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: US volume nearly doubled and branded tirzepatide and retatrutide still account for part of spend, so a drop to +3% is asserted without a spend reconciliation. The prose then calls pharmacy costs 'flat', which does not match +3%."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access is broader and smoking is down, but autonomy suffers most: 55% of covering employers use adherence gating, 11 Medicaid waivers carry a 12-month lockout, DoD and police programmes tie the drug to duty status, and holidays count as non-compliance unless a union clause exists. Inequality is mixed: the use gap narrows, but bone and muscle harms track coaching and DEXA access ('Medicaid face'). The GI mass tort leaves generic users with no defendant, and the stress-fracture signal in young trainees adds a new group of losers. This is a harder society with new losers, not a structural catastrophe, so about 6.",
+        "plausibility": "driver_fidelity: all ten drivers are visibly realised. The generic settlement event, quitlines, the DoD directive, the Medicare demo, the MDL verdict and the retatrutide end of allocation are each traceable. Retatrutide is realised as a supply expansion, which the rules allow. mechanism: most chains hold (price drop, bottom-third uptake, cheap covered generics, more employer coverage, litigation after generic entry). The waiver count of eleven against the 'three more states' event and the +3% pharmacy trend despite doubled volume are asserted rather than shown. magnitude: population, ever-use, income-third and age-band figures sit inside the envelope, and the payer mix, Medicare and Medicaid spend and cycling arithmetic all reconcile. The cessation approval 9 months after a stated filing breaks the 12-month rule, and the waiver count does not reconcile with the event. The 65+ adult share (25.5% vs 66M/268M ≈ 24.6%) is a minor slip.",
+        "generativity": "The prose has a concrete day-in-the-life (Keisha's skipped dose before a wedding, Darnell's Army-issue pen, the CVS kiosk, Mrs. Pruitt's Medicaid slip, Malik's weight class), and the world fields supply many implied scenes: Fort Bragg off-post gyms, 'reta' as status, union holiday clauses, tape-test prep, potluck decline. Texture is strong and shows rather than explains."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Pharmacy trend fell from ~+9% to ~+3% on generic substitution.",
+        "field": "world/economy/insurance/state",
+        "why": "Mechanism and magnitude: US volume nearly doubled and 65+ use rose from 8% to 15%, yet pharmacy trend is asserted to fall by two-thirds. Only semaglutide is generic, and the prose's 'pharmacy costs are flat' does not match the +3% in the JSON."
+      },
+      {
+        "quote": "cigarette and nicotine-pouch volumes fell sharply as quitlines in 30 states began supplying generic semaglutide with NRT.",
+        "field": "world/economy/alcohol/state",
+        "why": "Mechanism and magnitude: a 'sharp' fall in national nicotine volume within about a year of the Feb 2029 approval is asserted. No uptake, quit-rate or substitution figures are given, and quitlines reach a small share of smokers."
+      },
+      {
+        "quote": "funds generic semaglutide or tirzepatide through TRICARE and military treatment facilities",
+        "field": "world/state/workforce_or_military",
+        "why": "Mechanism: the same world says no generic tirzepatide is sold in the US and that tirzepatide exclusivity runs to 2031–32. A 'generic tirzepatide' pathway contradicts that, and the DoD's choice between the two drugs is left unexplained."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 7.0,
+      "inequality": 5.83,
+      "public_health": 5.0,
+      "cohesion": 5.17,
+      "epistemic": 5.0,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.03,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Autonomy takes the hardest hit. Adherence gating is now the norm: eleven Medicaid waivers with 12-month lockouts, about 55% of covering employers gating, Medicare demo PDC and DEXA rules, and a military and police body-composition regime. Drug holidays are treated as non-compliance unless a union contract covers them. Inequality shifts from who uses the drug to who gets monitoring and coaching, so bone and muscle harms follow income (the 'Medicaid face' versus the DEXA-and-trainer tier). Flourishing and public health are mixed: smoking falls, but there are fracture, GI-litigation, stress-fracture and adolescent-exposure harms, and about 10–15% of users report flatness. This is a recognisably harder society with new losers, not a collapse.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +8 pp (17.9%); the Jun 2029 settlement is an event that justifies US generics; the Medicare demo and waivers cover conditioning; the cessation approval is present; MDL claims and the verdict cover litigation; retatrutide's end of allocation realises the triple agonist; the Pentagon directive covers the military; and the 'flatness' is mainstream. Market shock is 'none' and the candidate adds no new one. mechanism: The chains are mostly shown: generic price drives uptake, cheap coverage drives employer coverage, and the settlement drives revenue. Several changes are only asserted, namely the pharmacy trend falling to +3% with doubled volume (claim 1), the sharp nicotine-volume drop (claim 2), and persistence rising to ~50%. The DoD line contradicts the no-generic-tirzepatide fact (claim 3), and the prose's 'flat' pharmacy costs clashes with the +3% in the JSON. magnitude: Everything sits inside the envelope: 17.9% current use, 26% ever, thirds bracketing the national figure, and age bands summing to about 17.9. The cycling arithmetic gives 35%. The payer mix sums to 100% and matches the user counts, and the Medicare ($7.1B) and Medicaid ($6.0B) spending figures multiply out. Survodutide and amycretin approvals come more than 12 months after filing. The cessation sNDA took 9 months, which is arguably allowed because it was already under review at the start. Remaining nits are generic pen capacity constraints alongside doubled volume, and the incretin market at $100B despite a 70% semaglutide revenue drop.",
+      "generativity": "x"
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.9811,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 30
   }
 }

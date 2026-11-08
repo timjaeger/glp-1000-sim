@@ -51,6 +51,41 @@
         "input_tokens": 16447,
         "output_tokens": 27662
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r13-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24068,
+        "output_tokens": 6343
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r13-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24068,
+        "output_tokens": 6252
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r13-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24068,
+        "output_tokens": 6280
+      }
     ]
   },
   "world": {
@@ -306,6 +341,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r13-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "smoking cessation adjunct to varenicline/NRT (semaglutide, approved Mar 2029)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "Magnitude: the sNDA was filed in May 2028, so approval in Mar 2029 comes about 10 months after filing. That is inside the 12-month minimum the envelope sets for phase-3 products, and the parent's retatrutide took 13 months even with priority review."
+        },
+        {
+          "quote": "Medicare alone is the largest single payer.",
+          "field": "prose/paragraph_1",
+          "why": "Mechanism: the prose contradicts the world state. Commercial is 36% of users (17.6M, about $73.9B) against Medicare's 20% (9.8M, about $28.8B), so Medicare is not the largest single payer by users or spend."
+        },
+        {
+          "quote": "65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage.",
+          "field": "world/population/note",
+          "why": "Mechanism: the Bridge already covered the same people on the same terms through Dec 2029, so permanence adds no new eligibility or price change. A 60% rise in 65+ use (Medicare obesity users from 1.5M to about 4.6M) is asserted without a chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Adherence data enter last-chance employment agreements (paragraph six, PBM refill checks) and the Indiana/Arkansas waivers persist, which gives high autonomy harm. About 8M older adults are on long-term exposure with no funded DEXA or strength benefit, there are stockouts and 3.4M unmonitored imported pens, and reward blunting is still unmeasured past 26 weeks. The narrowing income gradient, falling involuntary stops and AUD treatment access are real offsets, so the world is a harder society with new losers rather than a structurally hidden catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible. Adoption is 18.3% (+8.4pp), prices are stalled, public expansion comes through permanent Part D and the Medicaid mandate, AUD is approved, there is no new safety signal or next-gen launch, Lilly's $1.2B settlement is the scandal, and normalisation and the employer-encouraged layer both show. Mild deduction because the federal Medicaid mandate sits close to the state_action 'none' line. mechanism: the public-coverage and AUD-parity chains are well shown, but the 65+ jump from the Bridge becoming permanent is asserted (claim 3). Prose says Medicare is the largest payer against its own 36% commercial figure (claim 2), and the bottom third jumping from 6.5% to 15% leans on a thin Medicaid chain. magnitude: population figures sit inside the envelope (18.3 in 16.3–20.3, ever-use 27.5 with a +11.0 rise under the 11.4 ceiling). Payer mix, the Medicare $28.8B, CBO $138B, Medicaid $20.0B/$13.4B, market $172B and the cycling and flow arithmetic all reconcile. The cost is approval timing: smoking cessation (claim 1) and AUD (filed Apr 2029, approved Feb 2030) both come under 12 months after filing.",
+        "generativity": "The Renee Pruitt scene is concrete: the PBM green ring, a schedule taped over the old one with Sunday still readable, the hair-serum pen box, paragraph six of the last-chance agreement, a DEXA clinic in a mattress store, and the beer she declines. The Bardstown Road and Mount Washington place details and the 'one toast' wedding give many implied scenes and characters. The ending, with its good part and other part, is shown rather than explained."
+      },
+      "plausibility": 5.9
+    },
+    {
+      "custom_id": "s2-L1-r13-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare alone is the largest single payer.",
+          "field": "prose/article_body",
+          "why": "Fails mechanism: the world's own payer mix puts commercial at 36% (17.6M) and Medicare at 20% (9.8M), so the prose contradicts the world state."
+        },
+        {
+          "quote": "of 2028's 26.2M users, ~18.9M are still on or back on (72%; stable public coverage helps)",
+          "field": "world/population/note",
+          "why": "Fails magnitude and mechanism: the parent world fixes one-year persistence at ~35%, and 72% over two years is far above that. Most 2028 users were commercial or cash payers, so public coverage cannot explain it."
+        },
+        {
+          "quote": "~29.2M people started for the first time, mostly after January 2030",
+          "field": "world/population/note",
+          "why": "Fails mechanism: about 29M first-time starters compressed into roughly one year, in a window with fill-finish stockouts and AUD approval only in Feb 2030, is asserted rather than shown. The note also gives the same 70% persistence to people with under a year of exposure."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 49M users, expanded fracture and sarcopenia exposure in 65+ (the exposed older group grew by ~3M), 3.4M unmonitored imported-pen users, and 3–5M reporting flattening add up to a harder society. Refill data written into 'last-chance agreements' (interior_life/effect_on_work, state/conditioning_or_surveillance) coerce adherence, and the AUD label turns reward modulation into a reimbursed treatment while blunting stays unmeasured beyond 26 weeks. Access gains for the bottom third (6.5% to 15%) and falling involuntary stops partly offset this, so I score it a 6 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. AUD is approved Feb 2030, public expansion comes through Medicare and Medicaid, price stays stalled, the Lilly settlement supplies the scandal, and no next-gen class launches. Employer encouragement appears in the PBM-adherence last-chance agreements, and nothing contradicts a driver. mechanism: The coverage chain (permanent Part D, the Medicaid exclusion removed, parity for AUD in employer plans) is well shown. The contradicted 'Medicare alone is the largest single payer' line, the unexplained 72% persistence and the compressed 29.2M new-starter wave are the asserted or inconsistent parts. magnitude: Current use (18.3), ever-use (27.5), income thirds and payer shares are all inside the envelope and sum correctly, and the Medicare, Medicaid, CBO and market-size arithmetic multiplies out. The flaws are 72% two-year persistence against the parent's ~35% one-year figure, and commercial net of ~$350 sitting above Medicare's $245 under flat prices.",
+        "generativity": "The Renee Pruitt scene supplies concrete texture: the PBM app's green ring, the paragraph-six last-chance clause, the pen that arrived in a box marked hair serum, the DEXA place in the old mattress store, and the beer she declines. The Bardstown Road taprooms, bourbon-belt shift cuts and zero-proof weddings imply many more scenes. The ending shows the ambiguity rather than explaining it."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s2-L1-r13-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Public programmes now pay for more users than private insurers do. Medicare alone is the largest single payer.",
+          "field": "prose/body",
+          "why": "Mechanism: the world state has Medicare at 20% (9.8M) against commercial at 36% (17.6M), so Medicare is not the largest single payer. The prose contradicts the world state."
+        },
+        {
+          "quote": "FDA approves semaglutide for moderate-to-severe alcohol use disorder; CMS confirms all state Medicaid programmes must cover it with prior authorisation",
+          "field": "world/events/3/event",
+          "why": "Magnitude: the filing is dated 2029-04 (events/0) and approval is 2030-02, about 10 months later. The envelope allows approval no earlier than 12 months after filing for a phase 3 product. The smoking indication has the same problem (filed May 2028, approved Mar 2029)."
+        },
+        {
+          "quote": "65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage.",
+          "field": "world/population/note",
+          "why": "Mechanism: the Bridge already paid $245/$50 on identical criteria through Dec 2029, so making it permanent changes nothing about price or eligibility. It cannot plausibly triple Medicare obesity users (1.5M to 4.6M) in the year after, and the 8.4M Medicare users aged 65+ already exceed the 8.2M implied by 13% of ~63M 65+ adults."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadens and the income gap narrows (bottom third 6.5% to 15%), which eases inequality. Against that, the 65+ fracture and sarcopenia exposure grows by ~3M with no budget for DEXA or coaching. Refill data enter AUD last-chance agreements and employer adherence gating persists. Reward blunting is reimbursed as treatment but unmeasured beyond 26 weeks, and ~3.4M use unmonitored imported or counterfeit pens. The result is a harder, more surveilled society whose harms are normalised and partly invisible, not a catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: adoption 18.3%, stalled prices, public expansion, AUD, no new safety signal, no next-gen launch, the Lilly scandal, normalisation and the employer-encouraged personality layer. Nothing is contradicted. mechanism: the Medicaid, parity and stockout chains are shown. But the permanence of an unchanged-terms Bridge tripling Medicare obesity users is asserted (claim 3), and the prose says Medicare is the largest single payer when commercial is larger (claim 1). magnitude: population figures sit inside the envelope (18.3, 27.5, thirds bracket the national figure) and the payer, spending, CBO and market arithmetic all reconcile. The AUD and smoking approvals come about 10 months after filing against the 12-month rule (claim 2), and the 65+ count is slightly off.",
+        "generativity": "The Renee Pruitt scene is concrete and implies a full film: the PBM ring, the taped-over shift schedule, last-chance paragraph six, the counterfeit pen in a hair-serum box, the DEXA clinic in a mattress store, and the beer she declines. The Kentucky local detail and the cultural fields give strong texture and implied characters. It stays slightly explanatory in the opening sections."
+      },
+      "plausibility": 6.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "smoking cessation adjunct to varenicline/NRT (semaglutide, approved Mar 2029)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+        "why": "Magnitude: the sNDA was filed in May 2028, so approval in Mar 2029 comes about 10 months after filing. That is inside the 12-month minimum the envelope sets for phase-3 products, and the parent's retatrutide took 13 months even with priority review."
+      },
+      {
+        "quote": "Medicare alone is the largest single payer.",
+        "field": "prose/paragraph_1",
+        "why": "Mechanism: the prose contradicts the world state. Commercial is 36% of users (17.6M, about $73.9B) against Medicare's 20% (9.8M, about $28.8B), so Medicare is not the largest single payer by users or spend."
+      },
+      {
+        "quote": "65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage.",
+        "field": "world/population/note",
+        "why": "Mechanism: the Bridge already covered the same people on the same terms through Dec 2029, so permanence adds no new eligibility or price change. A 60% rise in 65+ use (Medicare obesity users from 1.5M to about 4.6M) is asserted without a chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.83,
+      "inequality": 4.83,
+      "public_health": 5.83,
+      "cohesion": 5.33,
+      "epistemic": 6.5,
+      "overall": 5.87
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.0,
+      "magnitude": 5.67
+    },
+    "plausibility": 6.3,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Adherence data enter last-chance employment agreements (paragraph six, PBM refill checks) and the Indiana/Arkansas waivers persist, which gives high autonomy harm. About 8M older adults are on long-term exposure with no funded DEXA or strength benefit, there are stockouts and 3.4M unmonitored imported pens, and reward blunting is still unmeasured past 26 weeks. The narrowing income gradient, falling involuntary stops and AUD treatment access are real offsets, so the world is a harder society with new losers rather than a structurally hidden catastrophe.",
+      "plausibility": "driver_fidelity: every driver is visible. Adoption is 18.3% (+8.4pp), prices are stalled, public expansion comes through permanent Part D and the Medicaid mandate, AUD is approved, there is no new safety signal or next-gen launch, Lilly's $1.2B settlement is the scandal, and normalisation and the employer-encouraged layer both show. Mild deduction because the federal Medicaid mandate sits close to the state_action 'none' line. mechanism: the public-coverage and AUD-parity chains are well shown, but the 65+ jump from the Bridge becoming permanent is asserted (claim 3). Prose says Medicare is the largest payer against its own 36% commercial figure (claim 2), and the bottom third jumping from 6.5% to 15% leans on a thin Medicaid chain. magnitude: population figures sit inside the envelope (18.3 in 16.3–20.3, ever-use 27.5 with a +11.0 rise under the 11.4 ceiling). Payer mix, the Medicare $28.8B, CBO $138B, Medicaid $20.0B/$13.4B, market $172B and the cycling and flow arithmetic all reconcile. The cost is approval timing: smoking cessation (claim 1) and AUD (filed Apr 2029, approved Feb 2030) both come under 12 months after filing.",
+      "generativity": "The Renee Pruitt scene is concrete: the PBM green ring, a schedule taped over the old one with Sunday still readable, the hair-serum pen box, paragraph six of the last-chance agreement, a DEXA clinic in a mattress store, and the beer she declines. The Bardstown Road and Mount Washington place details and the 'one toast' wedding give many implied scenes and characters. The ending, with its good part and other part, is shown rather than explained."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.2389,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 17
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 16519,
         "output_tokens": 23894
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r16-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25004,
+        "output_tokens": 7266
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r16-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25004,
+        "output_tokens": 7587
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r16-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25004,
+        "output_tokens": 6881
+      }
     ]
   },
   "world": {
@@ -305,6 +340,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r16-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "gray/imported 24% (8.1M)",
+          "field": "world/access/note",
+          "why": "magnitude/mechanism: the gray channel grows about sixfold in two years (1.3M to 8.1M) and supplies almost all net user growth. The cause offered is a $100 Wegovy price rise plus a seven-month shortage, with nothing showing how mail-order and border supply scaled that fast, and no sign it slowed after the CDC deaths."
+        },
+        {
+          "quote": "Among covering employers, ≈70% now use adherence-gated PBM programmes, up from ~40%, because the three largest PBMs made gating their default design in Jan 2030.",
+          "field": "world/access/note",
+          "why": "mechanism: a jump from 40% to 70% of covering employers within under a year of a January 2030 default change is asserted. Plan-year renewal cycles and employer opt-outs would slow it, and the candidate shows no step-by-step rollout."
+        },
+        {
+          "quote": "Novo resubmitted in Mar 2030 with a six-month review, and a decision is due ~Q4 2030 but is not approved as of year-end.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: a March 2030 resubmission with a six-month clock yields a September 2030 action date, not Q4. 'Due Q4' and 'not approved as of year-end' leaves an unexplained missed or ambiguous decision date."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 8M people take unmonitored imported or counterfeit product (9 deaths, tripled poison-centre calls). Roughly 70% of covering employers now gate coverage on adherence and weigh-ins, and the new anhedonia label (about 1.5–2.5M affected) sits against plans that reward uninterrupted fills. Stop-start cycling that the bone data link to fractures is rising, and about 365k teens use the drugs, some on parent-bought imports. The harm is named and labelled, so epistemic damage is moderate, but gray users are uncounted, and the burden falls on the bottom and middle thirds.",
+        "plausibility": "driver_fidelity: every driver is traceable. Shock-up is the 2029-01 price rise, gating is the Jan 2030 PBM default, mood and motivation is 'Quiet Mind', anhedonia is the Aug 2030 label, counterfeits is the Oct 2029 CDC report, no new launch and no new state action. mechanism: the chains mostly hold (tariff lapse, recall, imports, CDC report), but the 24% gray share (claim 1) and the 40%→70% gating jump in under a year (claim 2) are asserted more than shown. magnitude: adult use of 12.7% and ever-use of 20.5% sit inside the envelope. Payer shares, the Bridge ($5.6B) and Medicaid ($8.9B) spend, and the age and income weighting all reconcile. The only gap is the amycretin decision timing (claim 3), plus a small oddity that all 65+ users equal Medicare enrollees.",
+        "generativity": "The day-in-the-life scene is specific and shows rather than explains: the kiosk weigh-in, the lowered dose the plan doesn't notice, the Lubbock caller, the Juárez receipt, Ray's 'memory of beer' and the folded insert. The world fields add texture (El Paso, Dallas–Fort Worth lobbies, quinceañeras, drug-holiday albums), and each implies a scene."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s2-L1-r16-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Compounding stayed closed even during the shortage, because the 2027 503B exclusion and the 503A injunction do not depend on shortage status.",
+          "field": "world/access/note",
+          "why": "mechanism: US compounding rules are tied to the FDA shortage list, so a seven-month Wegovy shortage would plausibly reopen compounding. The candidate asserts this away to force users toward imports without showing why."
+        },
+        {
+          "quote": "The cheap import channel (≈8.1M users, up from 1.3M) pulled in bottom- and middle-third adults and took in people dropped by adherence-gated plans.",
+          "field": "world/population/note",
+          "why": "mechanism/magnitude: a sixfold rise to 24% of users in two years supplies about 6.8M of the 7.7M net increase in current users. Only a seven-month shortage and a generic-flood label are offered as cause, and the 2029 deaths and import alerts are not shown to have dampened it."
+        },
+        {
+          "quote": "Pooled placebo-controlled data using a prospective pleasure scale (SHAPS) plus clinician rating, together with retatrutide's postmarketing study",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "mechanism: semaglutide and tirzepatide trials were not run with SHAPS, and FDA only requested the retatrutide scale in 2028. A 52-week placebo-controlled class-wide dataset by Aug 2030 is convenient. The 1.5–2.5M figure also applies study rates to ~34M users, 8.1M of whom are unmeasured gray-channel users."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 8M people use unmonitored imported or counterfeit product (9 deaths, tripled poison-centre calls). Gated PBM programmes now cover ~70% of covering employers, and the Indiana and Arkansas waivers persist, so people are conditioned into continuous use that the bone label warns against. Roughly 1.5–2.5M have drug-attributable anhedonia, and ~365k teens are on the drug, some on parent-bought imported pens outside bone-accrual monitoring. The label naming the harm and the narrowed top/bottom ratio keep epistemic and inequality scores moderate rather than extreme.",
+        "plausibility": "driver_fidelity: all ten drivers are visibly realised: adoption +2.8, shock_up via the $349→$449 and $245→$275 rises, PBM gating, the Aug 2030 anhedonia label, no new class, counterfeits, normalisation, no new state action, and employer encouragement. The price 'shock' is modest (~12–28%), and 'mood and motivation' appears mainly as off-label telehealth plus the cessation approval. mechanism: the shortage-to-imports chain is shown, but compounding staying closed despite the shortage (claim 1), the sixfold gray-market jump (claim 2) and the convenient pooled anhedonia dataset (claim 3) are asserted more than demonstrated. magnitude: current 12.7 and ever-used 20.5 are inside the envelope, and the cycling arithmetic, payer-mix shares, Bridge $5.6B and Medicaid $8.9B all multiply out. Approvals (cessation sNDA, amycretin CRL, MariTide filed Dec 2029) respect the timing rules. Minor gaps: Medicare's 5.7M equals essentially every 65+ user, and the implied prior Zepbound prices exceed the 2028 $350 ceiling.",
+        "generativity": "The prose follows a named family through kiosk weigh-ins, a claims-centre call, a Juárez pharmacy receipt, a teen on semaglutide and a husband whose beer 'tastes like a memory of beer'. The world fields add concrete scenes: El Paso border runs, DFW lobby kiosks, a label-insert comedy special, and quinceañeras with smaller portions. Daily life is shown rather than explained."
+      },
+      "plausibility": 7.45
+    },
+    {
+      "custom_id": "s2-L1-r16-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The cheap import channel (≈8.1M users, up from 1.3M) pulled in bottom- and middle-third adults and took in people dropped by adherence-gated plans.",
+          "field": "world/population/note",
+          "why": "Mechanism: the gray channel grows about 6× in two years, to a quarter of all users. The shown chain is a seven-month Wegovy shortage, a price rise and gating dropouts, which is thin for that jump. Tirzepatide stayed available and cheaper cash options existed."
+        },
+        {
+          "quote": "He asks if she can just turn it back on. She reads him the twelve-month script.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: a Lubbock, Texas caller facing the twelve-month lockout contradicts the world state. That lockout belongs to the Indiana and Arkansas Medicaid waivers, and the world says \"No other state has joined them\". Private PBM gating is not described as having a lockout."
+        },
+        {
+          "quote": "Drug-attributable excess of ~4–8 pts across ~34M users implies roughly 1.5–2.5M affected people.",
+          "field": "world/safety_ledger/reward blunting",
+          "why": "Magnitude: the placebo-controlled rates are measured in trial populations, yet the excess is applied to all 34M users, including 8M gray-channel users the same note says no study counts. The excess runs 3.7–8.3 pts, so the low end gives about 1.4M, and the upper end leans on retatrutide, which is supply-allocated."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Worse than 2028 in recognisable, shown ways. PBM gating becomes the default at about 70% of covering employers. About 8M users are unmonitored on counterfeit or imported product, with nine deaths and tripled poison-centre calls. Involuntary stop-start cycling feeds the bone findings, and teens on parent-bought imported pens sit outside any bone monitoring. Anhedonia is now named and measured, which eases the epistemic score, but employers still reward its correlates and telehealth firms sell it as 'quiet mind'. The harm is structural and normalised without being catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Prices rise in Jan 2029, PBM gating becomes default in Jan 2030, 'Quiet Mind' follows the cessation approval, the anhedonia label lands in Aug 2030, counterfeits and the CDC report are shown, and next_gen_launch 'none' and state_action 'none' are respected. mechanism: most chains are shown, but the 8.1M gray-channel jump (claim 1), the fast 40%→70% employer gating shift, and the Lubbock twelve-month lockout (claim 2) are asserted or contradict the world state. magnitude: the figures reconcile: 12.7% is exactly 9.9+2.8, ever-use of 20.5% is within the cap, payer shares sum to 100%, and Bridge ($5.6B) and Medicaid ($8.9B) spend multiply out. Age and income weights check, and amycretin and MariTide are not approved, so only the loose anhedonia headcount (claim 3) is a minor flaw.",
+        "generativity": "The Marisol day is rich: the kiosk at 7:10, the claims-center call, the Juárez receipt, Diego's missing bone study, and Ray's 'memory of beer'. The world fields add texture too, including El Paso quinceañeras, 'are you on?' hosting etiquette, drug-holiday albums and the weigh-in kiosk in the Dallas–Fort Worth lobby. Many scenes are implied, though the Lubbock call clashes with the world state."
+      },
+      "plausibility": 8.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "gray/imported 24% (8.1M)",
+        "field": "world/access/note",
+        "why": "magnitude/mechanism: the gray channel grows about sixfold in two years (1.3M to 8.1M) and supplies almost all net user growth. The cause offered is a $100 Wegovy price rise plus a seven-month shortage, with nothing showing how mail-order and border supply scaled that fast, and no sign it slowed after the CDC deaths."
+      },
+      {
+        "quote": "Among covering employers, ≈70% now use adherence-gated PBM programmes, up from ~40%, because the three largest PBMs made gating their default design in Jan 2030.",
+        "field": "world/access/note",
+        "why": "mechanism: a jump from 40% to 70% of covering employers within under a year of a January 2030 default change is asserted. Plan-year renewal cycles and employer opt-outs would slow it, and the candidate shows no step-by-step rollout."
+      },
+      {
+        "quote": "Novo resubmitted in Mar 2030 with a six-month review, and a decision is due ~Q4 2030 but is not approved as of year-end.",
+        "field": "world/drugs/pipeline_note",
+        "why": "magnitude: a March 2030 resubmission with a six-month clock yields a September 2030 action date, not Q4. 'Due Q4' and 'not approved as of year-end' leaves an unexplained missed or ambiguous decision date."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 6.33,
+      "public_health": 6.67,
+      "cohesion": 5.5,
+      "epistemic": 5.0,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.83,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.83,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 8M people take unmonitored imported or counterfeit product (9 deaths, tripled poison-centre calls). Roughly 70% of covering employers now gate coverage on adherence and weigh-ins, and the new anhedonia label (about 1.5–2.5M affected) sits against plans that reward uninterrupted fills. Stop-start cycling that the bone data link to fractures is rising, and about 365k teens use the drugs, some on parent-bought imports. The harm is named and labelled, so epistemic damage is moderate, but gray users are uncounted, and the burden falls on the bottom and middle thirds.",
+      "plausibility": "driver_fidelity: every driver is traceable. Shock-up is the 2029-01 price rise, gating is the Jan 2030 PBM default, mood and motivation is 'Quiet Mind', anhedonia is the Aug 2030 label, counterfeits is the Oct 2029 CDC report, no new launch and no new state action. mechanism: the chains mostly hold (tariff lapse, recall, imports, CDC report), but the 24% gray share (claim 1) and the 40%→70% gating jump in under a year (claim 2) are asserted more than shown. magnitude: adult use of 12.7% and ever-use of 20.5% sit inside the envelope. Payer shares, the Bridge ($5.6B) and Medicaid ($8.9B) spend, and the age and income weighting all reconcile. The only gap is the amycretin decision timing (claim 3), plus a small oddity that all 65+ users equal Medicare enrollees.",
+      "generativity": "The day-in-the-life scene is specific and shows rather than explains: the kiosk weigh-in, the lowered dose the plan doesn't notice, the Lubbock caller, the Juárez receipt, Ray's 'memory of beer' and the folded insert. The world fields add texture (El Paso, Dallas–Fort Worth lobbies, quinceañeras, drug-holiday albums), and each implies a scene."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.4256,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 9
   }
 }

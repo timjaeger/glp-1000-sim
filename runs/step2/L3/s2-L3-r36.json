@@ -37,6 +37,41 @@
         "input_tokens": 16917,
         "output_tokens": 28867
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r36-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25799,
+        "output_tokens": 8386
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r36-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25799,
+        "output_tokens": 8235
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r36-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25799,
+        "output_tokens": 8972
+      }
     ]
   },
   "world": {
@@ -296,6 +331,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r36-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "gambling-disorder-coded 1.5M (commercial ~1.0M, Medicaid ~0.5M)",
+          "field": "world/population/note",
+          "why": "magnitude: the gambling indication was approved in Aug 2030, so 1.5M coded users, with commercial plans and Medicaid states already paying, would have to appear within about four months. That is a very steep uptake for a newly labelled psychiatric indication with no coverage ramp shown."
+        },
+        {
+          "quote": "Women over sixty-five in The Villages and in the Phoenix suburbs are the drug's newest majority",
+          "field": "prose/body_paragraph",
+          "why": "mechanism: the world's own figures put the 65+ band at 27% on-drug and ~16.6M of 72M users (~23%), so women over 65 cannot be the drug's majority. The claim is an asserted local vignette, and it contradicts the population arithmetic."
+        },
+        {
+          "quote": "The bottom third rose most (+10.5 pp), almost entirely through the Medicare and Medicaid cognition code; it was not cheaper drug.",
+          "field": "world/population/note",
+          "why": "mechanism: the cognition code applies only to adults 60+, and its 6.8M users are spread across income thirds. Yet the bottom third gained ~9.5M users while the top and middle thirds rose by similar amounts, so 'almost entirely' is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Inequality drives the score (7): body shape reads as income in three grades, muscle is the new class marker, and the muscle-preserving drug is unavailable to the frail seniors who most need it (lean_mass entry, open_tensions). Public health is harder than in 2028 through sarcopenia and dehydration admissions in over-75s, SARM 'recomposition stacks', and unstudied cycling. Autonomy is squeezed by lockouts and BMI surcharges, though the cognition-code escape hatch eases it for seniors. Epistemic is somewhat better than in 2028 because anhedonia is now labelled and measured, but the label defines everything milder as therapy. Overall it is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is traceable to events and fields (cognition and gambling labels, stalled prices, Part D expansion, Tirvanta, the Novo scandal, class stratification, the anhedonia label). The slight tension is that upgrading anhedonia to 'established' with a label change and adding geriatric dehydration notes sits awkwardly with safety_signal 'none', though the scandal and personality drivers explain it. mechanism: the chain from 'not weight loss' to the Part D exclusion falling away to the lockout escape hatch is well shown. Weak points are the bottom-third attribution, the 'newest majority' claim, and Ray remaining locked out although the cognition code carries no lockout, as the world itself says. magnitude: on-drug 26.9%, ever-used 34%, the income and age bands, the payer mix (sums to 72.0M), the Medicare and Medicaid dollar figures, and the approval timings all fit the envelope and reconcile. The remaining gaps are the implausibly fast 1.5M gambling-coded users and survodutide sitting under review for about 20 months.",
+        "generativity": "The prose gives concrete scenes: Denise's kitchen injection with the $47 bag, Ray's empty box and lockout, the resistance-band class, Lorraine finishing Pat's pierogi, and Tyler's flat laugh over the Browns game. The JSON adds many hooks (Tirvanta shoulders, SARM stacks, telepsychiatry for compulsions, senior-living dining, the Novo scandal, Pew survey). Daily life has texture and several characters are implied."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s2-L3-r36-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom third rose most (+10.5 pp), almost entirely through the Medicare and Medicaid cognition code; it was not cheaper drug.",
+          "field": "world/population/note",
+          "why": "Fails mechanism and magnitude. The cognition code covers only adults 60 and over, and about 6.8M users spread across all income thirds cannot account for roughly 9M extra users in the bottom third. The 30-49 band alone rose 8.5 pp with no cognition route."
+        },
+        {
+          "quote": "In Florida's The Villages and in Phoenix suburbs, the thin-soft silhouette is now the majority look among women over 65.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Fails magnitude. Only 27% of the 65+ band is on the drug nationally, so a 'majority look' in affluent retirement enclaves is a stretch. The prose compounds it by calling these women 'the drug's newest majority'."
+        },
+        {
+          "quote": "About 6M beneficiaries are cognition-coded",
+          "field": "world/access/public_coverage",
+          "why": "Fails mechanism. Six million Medicare starters within about ten months of a Feb 2030 approval is very fast. The benefit is a 0.3-point effect behind prior authorisation, and the same note says Lilly's fill-finish capacity is already saturated."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "This is a harder 2028, not a collapse. Stratification now shows in body composition: Tirvanta at $999 is the muscle-preserving drug and is uncovered, while Medicare seniors on plain tirzepatide lose lean mass at scale, with dehydration admissions in over-75s. Adherence lockouts and BMI surcharges persist, about 31% of ever-users cycle with no study able to read the effect, and gray-market adverse events reached ~7,000. Epistemic harm eased somewhat because anhedonia is now measured and labelled, though the label defines milder blunting as therapy.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events: +9.1 pp adoption (26.9), stalled prices, Part D expansion, the cognition and gambling indications, Tirvanta, the Novo scandal, class stratification, no new statute, and anhedonia as a niche side effect. The anhedonia relabel and its shift from emerging to established sits a little awkwardly against safety_signal 'none'. mechanism: Most chains are shown, notably the non-weight-loss indication avoiding the Part D exclusion, the lockout escape hatch and the SARM substitution for an uncopyable antibody. Several are asserted: the bottom-third rise 'almost entirely' via the cognition code (claim 1), the Villages majority look (claim 2), the 6M ramp in ten months (claim 3), and every approval landing at exactly 13 months. magnitude: All headline figures sit inside the envelope (26.9 on drug, 34 ever used, no US generic, filings dated so approvals fall 12 or more months later). The payer mix sums to 72M, the spending arithmetic multiplies out, the cycling arithmetic reconciles and income thirds bracket the national figure. The only real gap is the bottom-third attribution.",
+        "generativity": "The prose gives Denise in her Parma kitchen, Ray's empty box in the junk drawer, resistance-band class, Lorraine finishing Pat's pierogi, and Tyler's flat laugh at the Browns game. The ad slogan and the pharmacy bag price carry the world state through objects. The ledger fields supply many more implied figures: the telepsychiatrist, the strength-studio trainer, the Medicaid clinic and the sports-betting analyst."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s2-L3-r36-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "gambling-disorder-coded 1.5M (commercial ~1.0M, Medicaid ~0.5M)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the gambling indication was approved in Aug 2030, so 1.5M coded users within about four months, including 0.5M in Medicaid, which needs state-level adoption, is implausibly fast. The same indication is also credited with slowing the employer-coverage decline in a 2030 survey that probably predates the approval."
+        },
+        {
+          "quote": "The bottom third rose most (+10.5 pp), almost entirely through the Medicare and Medicaid cognition code; it was not cheaper drug.",
+          "field": "world/population/note",
+          "why": "Mechanism: the cognition code covers about 6.8M adults aged 60+ spread across all income thirds. A 10.5 pp rise in the bottom third is roughly 9M adults, and the top and middle thirds also rose 8 and 9 pp. The cognition code cannot explain 'almost entirely'."
+        },
+        {
+          "quote": "In Florida's The Villages and in Phoenix suburbs, the thin-soft silhouette is now the majority look among women over 65.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Magnitude: 65+ prevalence is 27% nationally. A majority of women in these enclaves on-drug and visibly thin-soft needs a rate about double that, which the cognition-code ramp and the payer mix do not show."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Inequality drives the score. Body composition becomes an income marker: Tirvanta at $999 is uncovered, seniors on plain tirzepatide are losing lean mass, and the gray market offers only SARM stacks. Adherence lockouts still bind younger obesity-only users while the cognition code exempts seniors. Compulsion indications spread off-label via telepsychiatry and the cycling cohort is unstudied. The anhedonia label makes the harm nameable and measured, which lowers the epistemic score, though the ~0.8% figure defines milder blunting as therapy. This is a harder society with new losers, not a refusable one.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised: adoption +9.1 pp, stalled prices, Part D expansion, cognition and gambling indications, the Tirvanta combo, the Novo scandal, class stratification and the niche anhedonia side effect. The anhedonia label upgrade sits uneasily with safety_signal 'none', though personality_layer licenses it. mechanism: The Part D chain (non-weight-loss indication, exclusion bypassed, $245, bids up 13%, lockout escape) is well shown. The scandal-to-label chain is also shown. Claims 1 and 2 are asserted or oddly timed: the bottom-third rise 'almost entirely' from the cognition code, and the gambling-coded users within four months. Ray's story ignores the cognition escape hatch the text describes. magnitude: The candidate is inside the envelope: 26.9% on drug, 34% ever used, approvals each 13 months after filing, and no US generic. The payer mix sums to 72.0M and the spending arithmetic checks ($17.6B, $3.5B, $5.3B, $2.35B). The age bands reproduce 26.9%. The one soft spot is the 1.5M gambling-coded users soon after approval (claim 1).",
+        "generativity": "The prose gives a concrete household: Denise, Ray in a lockout, Pat's arms, Lorraine and the pierogi, and Tyler's flat laugh. The world fields add texture: Medicare arms versus Tirvanta shoulders, SARM stacks, and trading desks quietly discouraging the drug. The label line works as a motif, with the insert read at bedtime and comedians' '1-in-100' bits. Many scenes are implied and the details are specific."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "gambling-disorder-coded 1.5M (commercial ~1.0M, Medicaid ~0.5M)",
+        "field": "world/population/note",
+        "why": "magnitude: the gambling indication was approved in Aug 2030, so 1.5M coded users, with commercial plans and Medicaid states already paying, would have to appear within about four months. That is a very steep uptake for a newly labelled psychiatric indication with no coverage ramp shown."
+      },
+      {
+        "quote": "Women over sixty-five in The Villages and in the Phoenix suburbs are the drug's newest majority",
+        "field": "prose/body_paragraph",
+        "why": "mechanism: the world's own figures put the 65+ band at 27% on-drug and ~16.6M of 72M users (~23%), so women over 65 cannot be the drug's majority. The claim is an asserted local vignette, and it contradicts the population arithmetic."
+      },
+      {
+        "quote": "The bottom third rose most (+10.5 pp), almost entirely through the Medicare and Medicaid cognition code; it was not cheaper drug.",
+        "field": "world/population/note",
+        "why": "mechanism: the cognition code applies only to adults 60+, and its 6.8M users are spread across income thirds. Yet the bottom third gained ~9.5M users while the top and middle thirds rose by similar amounts, so 'almost entirely' is asserted rather than shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.17,
+      "inequality": 7.0,
+      "public_health": 5.33,
+      "cohesion": 5.17,
+      "epistemic": 4.33,
+      "overall": 5.6
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.5,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.46,
+    "generativity": 8.5,
+    "rationale": {
+      "badness": "Inequality drives the score (7): body shape reads as income in three grades, muscle is the new class marker, and the muscle-preserving drug is unavailable to the frail seniors who most need it (lean_mass entry, open_tensions). Public health is harder than in 2028 through sarcopenia and dehydration admissions in over-75s, SARM 'recomposition stacks', and unstudied cycling. Autonomy is squeezed by lockouts and BMI surcharges, though the cognition-code escape hatch eases it for seniors. Epistemic is somewhat better than in 2028 because anhedonia is now labelled and measured, but the label defines everything milder as therapy. Overall it is a recognisably harder society with new losers, not a collapse.",
+      "plausibility": "driver_fidelity: every driver is traceable to events and fields (cognition and gambling labels, stalled prices, Part D expansion, Tirvanta, the Novo scandal, class stratification, the anhedonia label). The slight tension is that upgrading anhedonia to 'established' with a label change and adding geriatric dehydration notes sits awkwardly with safety_signal 'none', though the scandal and personality drivers explain it. mechanism: the chain from 'not weight loss' to the Part D exclusion falling away to the lockout escape hatch is well shown. Weak points are the bottom-third attribution, the 'newest majority' claim, and Ray remaining locked out although the cognition code carries no lockout, as the world itself says. magnitude: on-drug 26.9%, ever-used 34%, the income and age bands, the payer mix (sums to 72.0M), the Medicare and Medicaid dollar figures, and the approval timings all fit the envelope and reconcile. The remaining gaps are the implausibly fast 1.5M gambling-coded users and survodutide sitting under review for about 20 months.",
+      "generativity": "The prose gives concrete scenes: Denise's kitchen injection with the $47 bag, Ray's empty box and lockout, the resistance-band class, Lorraine finishing Pat's pierogi, and Tyler's flat laugh over the Browns game. The JSON adds many hooks (Tirvanta shoulders, SARM stacks, telepsychiatry for compulsions, senior-living dining, the Novo scandal, Pew survey). Daily life has texture and several characters are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.2222,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 18
   }
 }

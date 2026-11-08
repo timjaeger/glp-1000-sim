@@ -34,6 +34,41 @@
         "input_tokens": 16945,
         "output_tokens": 23746
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r42-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25542,
+        "output_tokens": 5709
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r42-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25542,
+        "output_tokens": 6112
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r42-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25542,
+        "output_tokens": 6658
+      }
     ]
   },
   "world": {
@@ -295,6 +330,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r42-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicaid obesity coverage expanded from 19 to 32 states",
+          "field": "world/population/note",
+          "why": "Mechanism: 13 states add a costly obesity benefit in two years, with no budget, federal-match or political cause shown beyond the stipulated driver, and it roughly triples enrollees from 1.5M to 4.0M."
+        },
+        {
+          "quote": "the FDA adds emotional blunting to semaglutide's adverse-reactions section in August 2030.",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the label change comes only eight months after the trial readout and four months after the sNDA filing, with no safety-labeling pathway shown. The FDA has already labelled hyposmia only slowly."
+        },
+        {
+          "quote": "Indian generics at a tenth of the price still reach about five million Americans by mail.",
+          "field": "prose/news_article",
+          "why": "Mechanism: the world state says the ~5.2M gray-market users are split across Indian/Turkish imports, 503A compounding and research peptides. The prose attributes all of them to Indian generics, so it contradicts the world state."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 4,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 3,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder but not collapsing world. Public expansion narrows the income gap (bottom third 12→14.5), and anhedonia is now measured and labelled, which lowers the epistemic score. Real costs remain: refill and weigh-in surveillance of the publicly covered, connected-pen BMI surcharges ($75 on Kayla's stub), nine under-16 prescribing bans, a 41,000-claim GI litigation docket, and church tables split by generation.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Public expansion is the Medicare/Medicaid growth, the litigation and Novo documents scandal are in the events, oral parity is amycretin approved 14 months after filing, and restriction is the nine-state bans plus adherence conditions. The restriction is partly offset by the shortened lockout, and no new indication is approved, as required. mechanism: Most changes have chains, but the Medicaid jump from 19 to 32 states (claim 1) and the very fast Aug 2030 label change (claim 2) are asserted rather than shown, and the prose overstates Indian generics (claim 3). magnitude: Every figure sits inside the envelope (19.0% on drug, 27.0% ever used). The payer mix sums to 50.7M, the Medicare ($11.6B) and Medicaid ($10.3B gross, $6.7B federal) arithmetic holds, and the cycling arithmetic is correct at 34%. Only minor looseness remains, such as the Medicare enrolment tripling in one year.",
+        "generativity": "The Darlene vignette is dense with usable detail: the green-ring app, 4 oz of water, the six-month weigh-in, the lawyer ads, Tyler's pediatrician saying 'law' twice, Kayla's pen-sync surcharge and the banana pudding at First Baptist. The world fields support many scenes across Medicare, church, workplace and clinic, though the closing beat is a little tidy."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s2-L3-r42-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Indian generics at a tenth of the price still reach about five million Americans by mail.",
+          "field": "prose/paragraph_4",
+          "why": "mechanism: The world note says the 5.2M gray-market users are split across personal importation, 503A compounding and research peptides. Prose credits Indian generics alone with about 5M, which contradicts that split. The 'tenth of the price' figure also does not match the $60–120 import price in the parent world."
+        },
+        {
+          "quote": "The bottom third rose most (12→14.5) because Medicaid obesity coverage expanded from 19 to 32 states.",
+          "field": "world/population/note",
+          "why": "mechanism: 13 states adding obesity coverage in two years is asserted, with no state budget, waiver or political path shown. The Medicaid population goes from 1.5M to 4.0M at the same time as the rate is cut from $245 to $215. Only the Medicare expansion has a visible causal chain."
+        },
+        {
+          "quote": "The first bellwether (Oct 2029, pre-2023-label plaintiff) returned a $38M verdict against Novo on failure to warn",
+          "field": "world/safety_ledger/1/prevalence_note",
+          "why": "magnitude: A federal MDL bellwether verdict about four months after the June 2029 document unsealing is very fast. Discovery, Daubert rulings and trial normally take longer. The claim count growing from ~3,000 to ~41,000 is aggressive but is covered by the litigation driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 5.5,
+        "inequality": 4.5,
+        "public_health": 4.0,
+        "cohesion": 5.0,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 7.0,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "The world is a harder but not collapsing society. Access widens through Medicare and Medicaid, but coverage stays conditioned on refill and weigh-in surveillance (state/conditioning, Kayla's $75 surcharge when the pen app fails). Under-16 bans, litigation over gastroparesis and eating-ritual splits (church tables) add cohesion and autonomy costs. Epistemic harm eases because anhedonia is now measured and labelled. Inequality narrows only partly (23.5% top vs 14.5% bottom).",
+        "plausibility": "driver_fidelity: Every driver is visible. Public expansion comes through the Medicare and Medicaid changes, the litigation and scandal chain is traceable through events, and oral parity is realised through the amycretin filing and approval inside the allowed window. The state_action restriction is carried mainly by the nine under-16 bans, while the lockout cut and Medicaid expansion pull the other way, so that driver is only partly clean. mechanism: Most chains are shown, including scandal to ads pause to label to counter-movement, and Medicare eligibility to the 65+ rise. Claims 1 and 2 are asserted or inconsistent, and the Medicaid expansion and the quick bellwether (claim 3) have thin causes. The 2028 lockout cohort 'returning once the lockout was cut' in 2030 is also muddled. magnitude: Adoption (19.0), ever-used (27.0), income thirds and age bands all sit inside the envelope and reconcile. The payer mix sums to 50.7M, the Medicare ($11.6B run-rate, $8.3B calendar) and Medicaid ($10.3B gross, $6.7B federal) figures multiply out, and the cycling arithmetic gives 34%. The amycretin timing (filed Feb 2029, approved Apr 2030) respects the 12-month rule. No generic is introduced in the US.",
+        "generativity": "The day-in-the-life gives concrete, specific scenes: Darlene's 4 oz of water and the pharmacy app's green ring, the six-month weigh-in, the lawyer ads, Tyler's age against the ban, Kayla's surcharge and the pen-app sync, and the banana pudding at church. They tie back to world fields such as the Medicare conditioning, the bans, the surcharges and the split supper tables. Several implied characters could carry scenes, and the texture is strong."
+      },
+      "plausibility": 7.85
+    },
+    {
+      "custom_id": "s2-L3-r42-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Obesity-only enrolment is ~4.5M by Dec 2030.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: enrolment triples from 1.5M in one year. The prior rule already admitted BMI ≥30 with comorbidity, which covers most older adults with obesity, so dropping the comorbidity requirement should add far fewer than 3M, and no uptake mechanism is shown."
+        },
+        {
+          "quote": "Subcutaneous amycretin is under review, with a decision in 2031.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the note says oral and subcutaneous amycretin were filed together in Feb 2029. The oral form was approved after about 14 months, yet the injectable is left under review for roughly 2.5 years with no stated reason."
+        },
+        {
+          "quote": "32 states cover obesity at the $215 multistate rate for ~4.0M enrolees.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: 13 more state Medicaid programmes add obesity-drug coverage in two years, a multi-billion-dollar commitment, and the candidate shows no budget or political chain for it beyond the federal price and the stipulated coverage driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5.5,
+        "inequality": 4.5,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 4.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.8,
+        "magnitude": 8.5
+      },
+      "generativity": 8.2,
+      "rationale": {
+        "badness": "The world is harder than 2028 but not much worse. Autonomy is squeezed by adherence surveillance (refill rings, pen-sync surcharges such as Kayla's $75) and by under-16 bans in nine states that cut off about 60k teenagers. Cohesion suffers from split church suppers, a polarised backlash and a mass tort. Inequality narrows with public coverage (bottom third 14.5% vs top 23.5%) and reward blunting is now measured and labelled, which lowers the epistemic score, but conditioned benefits, regain from cycling and cash-tier gaps remain.",
+        "plausibility": "driver_fidelity: every driver is traceable. Public expansion shows in Medicare and Medicaid, litigation in the MDL and the $38M verdict, oral parity in oral amycretin, the scandal in the June 2029 documents, the backlash in the marches, restriction in the under-16 bans, and the niche side effect in the 3.5% vs 1.2% anhedonia figure. No new indication is approved, which respects the empty new_indications driver. mechanism: most changes have chains, but the Medicare tripling to 4.5M, the 13-state Medicaid expansion and the slow subcutaneous amycretin review are asserted rather than shown (claims 1–3). The cycling rise attributed to a lockout cohort returning 'once the lockout was cut' is also loose, since the cut came in Jan 2030. magnitude: adults on drug 19.0% and ever used 27.0% are inside the envelope, the age, income and payer figures sum correctly, and the Medicare ($11.6B run-rate, $8.3B calendar) and Medicaid ($10.3B gross, $6.7B federal) arithmetic checks. Amycretin approval is 14 months after filing, within the rules, and no US generic appears.",
+        "generativity": "The prose supplies Darlene's measured water and green-ring app, the nurse's weigh-in, Kayla's pen-sync surcharge, Tyler caught by the under-16 ban, and the banana pudding at First Baptist. The world fields carry concrete detail such as Kingston Pike, Tulsa 'Made Whole' Sunday dinners, Medicare Advantage strength classes, and songs about 'coming back' after a dose cut. Many scenes and characters are implied."
+      },
+      "plausibility": 7.99
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicaid obesity coverage expanded from 19 to 32 states",
+        "field": "world/population/note",
+        "why": "Mechanism: 13 states add a costly obesity benefit in two years, with no budget, federal-match or political cause shown beyond the stipulated driver, and it roughly triples enrollees from 1.5M to 4.0M."
+      },
+      {
+        "quote": "the FDA adds emotional blunting to semaglutide's adverse-reactions section in August 2030.",
+        "field": "world/events/3/event",
+        "why": "Mechanism: the label change comes only eight months after the trial readout and four months after the sNDA filing, with no safety-labeling pathway shown. The FDA has already labelled hyposmia only slowly."
+      },
+      {
+        "quote": "Indian generics at a tenth of the price still reach about five million Americans by mail.",
+        "field": "prose/news_article",
+        "why": "Mechanism: the world state says the ~5.2M gray-market users are split across Indian/Turkish imports, 503A compounding and research peptides. The prose attributes all of them to Indian generics, so it contradicts the world state."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 5.67,
+      "inequality": 4.33,
+      "public_health": 4.0,
+      "cohesion": 5.0,
+      "epistemic": 3.33,
+      "overall": 4.53
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.77,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.92,
+    "generativity": 8.07,
+    "rationale": {
+      "badness": "This is a harder but not collapsing world. Public expansion narrows the income gap (bottom third 12→14.5), and anhedonia is now measured and labelled, which lowers the epistemic score. Real costs remain: refill and weigh-in surveillance of the publicly covered, connected-pen BMI surcharges ($75 on Kayla's stub), nine under-16 prescribing bans, a 41,000-claim GI litigation docket, and church tables split by generation.",
+      "plausibility": "driver_fidelity: All ten drivers are visibly realised. Public expansion is the Medicare/Medicaid growth, the litigation and Novo documents scandal are in the events, oral parity is amycretin approved 14 months after filing, and restriction is the nine-state bans plus adherence conditions. The restriction is partly offset by the shortened lockout, and no new indication is approved, as required. mechanism: Most changes have chains, but the Medicaid jump from 19 to 32 states (claim 1) and the very fast Aug 2030 label change (claim 2) are asserted rather than shown, and the prose overstates Indian generics (claim 3). magnitude: Every figure sits inside the envelope (19.0% on drug, 27.0% ever used). The payer mix sums to 50.7M, the Medicare ($11.6B) and Medicaid ($10.3B gross, $6.7B federal) arithmetic holds, and the cycling arithmetic is correct at 34%. Only minor looseness remains, such as the Medicare enrolment tripling in one year.",
+      "generativity": "The Darlene vignette is dense with usable detail: the green-ring app, 4 oz of water, the six-month weigh-in, the lawyer ads, Tyler's pediatrician saying 'law' twice, Kayla's pen-sync surcharge and the banana pudding at First Baptist. The world fields support many scenes across Medicare, church, workplace and clinic, though the closing beat is a little tidy."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.0733,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 46
   }
 }

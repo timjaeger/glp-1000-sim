@@ -36,6 +36,41 @@
         "input_tokens": 16909,
         "output_tokens": 22170
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r44-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25284,
+        "output_tokens": 5742
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r44-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25284,
+        "output_tokens": 7297
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r44-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25284,
+        "output_tokens": 6535
+      }
     ]
   },
   "world": {
@@ -298,6 +333,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r44-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly rations high-dose tirzepatide supply to stay off the FDA shortage list, which would reopen 503B compounding.",
+          "field": "world/access/note",
+          "why": "Mechanism: a manufacturer cannot hold supply below demand and also stay off the shortage list, because that is what a shortage is. The stated reason for flat prices is incoherent."
+        },
+        {
+          "quote": "That is roughly 15,000 excess hip fractures a year against a ~300,000 baseline.",
+          "field": "world/safety_ledger/bone",
+          "why": "Magnitude: 15,000 at an excess of ~3 per 1,000 person-years implies ~5M person-years in users ≥65 with ≥2 years on drug and ≥15% loss. That is hard to square with ~2.5M Medicare obesity-only users and a drug that was only ramping up in the older population."
+        },
+        {
+          "quote": "about 2.5 million beneficiaries are on dementia-coded prescriptions by December.",
+          "field": "world/events/5/event",
+          "why": "Magnitude and mechanism: 2.5M new users in about six months after a June label requires an extremely fast ramp. The split of ~1.6M switched from Continuity or cash and ~0.9M new is asserted, and it leaves Continuity at 2.5M after a large outflow."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Older users face roughly 15,000 excess hip fractures a year, 'thin-frail' patients, and a ~20% excess of falls needing ED care. Outcomes contracts punish dose reduction, so payer rules may manufacture frailty. Connected-pen, smart-scale and strength-app surveillance spreads, and a third of large employers apply premium differentials. Inequality hardens: the poorer old get more fractures and discontinuation is highest in the bottom third. Epistemic harm is lower than in 2028 because anhedonia and bone loss are now measured and labelled, though the dementia back door and the Novo concealment show how fragile that is.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to fields and events: 27.1% adoption, stalled prices, outcomes-contract conditioning, the tirzepatide dementia label, the bone and muscle wave, no new class (filings and a CRL only), the Novo scandal, Intact, nine-state under-16 limits, and a labelled niche anhedonia effect. Nothing contradicts a driver. mechanism: The bone, scandal, label and CMS chain is well shown. The Lilly rationing logic is incoherent (claim 1), the employer coverage rebound alongside a doubled gray market is thinly motivated, and the dementia ramp is asserted (claim 3). magnitude: Adoption, ever-used, income and age bands, the payer mix (sums to 72M), the cycling arithmetic and the Medicare and Medicaid dollar figures all reconcile and sit inside the envelope, and approvals respect the 12-month rule. The stop-reason list sums to 19.8M against 19.6M, and the hip-fracture exposure implied by 15,000 at 3 per 1,000 is a stretch (claim 2).",
+        "generativity": "The prose day with Denise has concrete texture: the app chiming green, the DXA letter under the Bengals magnet, the choice between Continuity and Part D, the granddaughter with the INTACT pin, and the final apathy line. The world fields imply many more scenes, including Intact suppers, employer outcomes-contract disputes, geriatric wards and a Nashville roots scene. The central tension is shown rather than explained."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L3-r44-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "about 2.5 million beneficiaries are on dementia-coded prescriptions by December",
+          "field": "world/events/5/event",
+          "why": "mechanism: this asserts 2.5M users within six months of a label whose absolute benefit is only 1.6 pp, with ~1.6M of them supposedly recoded from Continuity or cash. The ramp, prior authorisation and formulary mechanics are not shown, and the $245 Part D rate is carried over from the Continuity deal without a stated basis."
+        },
+        {
+          "quote": "Lilly rations high-dose tirzepatide supply to stay off the FDA shortage list, which would reopen 503B compounding",
+          "field": "world/access/note",
+          "why": "mechanism: shortage listing depends on supply failing to meet demand, so deliberately rationing a dose does not obviously prevent it. The causal chain for this part of the price stall is internally strained."
+        },
+        {
+          "quote": "Survodutide (Boehringer) was filed Feb 2029 and got a complete response letter in Dec 2030 asking for DXA and fracture data in participants ≥60.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a standard review clock puts a decision near Feb 2030, so a CRL ~22 months after filing is unexplained. The same applies to amycretin, filed Mar 2029 with a decision pushed to 2031. These pipeline timelines are convenient rather than derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy and inequality score highest. Outcomes contracts, connected-pen surveillance and surcharges for about a third of large employers punish dose reduction, and Part D recoding lets payer rules decide treatment. Bone harm (~15,000 excess hip fractures a year), labelled anhedonia and forced cycling that costs lean mass add a real health burden, and the poorer old get more fractures. Epistemic badness is lower than in 2028 because the harms are now labelled, measured and discussed. Dementia benefit and wider access partly offset the rest, so this is a recognisably harder society with new losers.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable: stalled prices, outcomes-contract conditioning, tirzepatide dementia label, bone and muscle wave, no new class, Novo scandal, Intact, nine-state under-16 bans, and a labelled niche anhedonia effect. mechanism: most chains are shown (MDL unsealing to labels to CMS rules, patent ruling to flat prices, employer coalition to outcomes contracts). The weak points are the 2.5M dementia users in six months, the logic of Lilly's rationing, and the odd survodutide and amycretin review timelines. magnitude: 27.1% on drug and 34.5% ever used sit inside the envelope, no US generic appears, and the payer mix sums to 72M. Age bands, income thirds, the cycling arithmetic and the Medicare and Medicaid spending figures all reconcile, with only trivial slack (19.8M vs 19.6M stoppers).",
+        "generativity": "The Denise Kowalczyk day is concrete: band rows against the toaster, the DXA letter under the Bengals magnet, the 'same drug, Part D, no app' offer, and her granddaughter's INTACT pin and lard pie. The world fields imply many more scenes, including outcomes-contract HR disputes, orthopaedic wards, Intact rallies, and couples asking for dose reductions. The ending on 'apathy' shows rather than explains."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s2-L3-r44-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "about 2.5 million beneficiaries are on dementia-coded prescriptions by December",
+          "field": "world/events/5/event",
+          "why": "mechanism/magnitude: 2.5M new Part D users within six months of a label is a very fast ramp. The $245 negotiated rate and the 1.6M 'switched from Continuity' are asserted rather than shown, and Continuity still holds 2.5M after losing them."
+        },
+        {
+          "quote": "Lilly rations high-dose tirzepatide supply to stay off the FDA shortage list, which would reopen 503B compounding",
+          "field": "world/access/note",
+          "why": "mechanism: FDA shortage status turns on supply versus demand, so rationing would deepen a shortage rather than prevent a listing. The chain is a convenient justification for 'prices stalled'."
+        },
+        {
+          "quote": "by 2030 employer coverage is back to 49%",
+          "field": "world/events/1/event",
+          "why": "mechanism: coverage had fallen 60→52→44% on cost pressure, and the world shows no new cost relief, so a reversal is asserted. The only stated reason is a coalition adopting outcomes contracts."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is conditional access made structural. Employer outcomes contracts and connected-pen surveillance feed payer rules. The Medicare strength-logging rule pushes toward frailty, with about 15,000 excess hip fractures a year and 'Zep hips'. Dose reduction for labelled anhedonia can cost people coverage, forced cycling costs lean mass, and a third of large employers apply surcharges that fall on hourly workers. Epistemic harm is lower than in 2028 because bone and anhedonia harms are now measured and labelled, which keeps the overall score at about 6.5.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +9.3pp, prices are stalled, conditioning appears in employer and Medicare rules, tirzepatide has a dementia label, bone/muscle warnings issued, no new class launched, the Novo scandal is dated, Intact movement, nine-state restrictions, and a niche anhedonia label. Nothing contradicts a driver. mechanism: Most chains are shown (MDL unsealing, bone label, CMS rule, dementia coding as a loophole). Claims 1–3 are asserted: the employer coverage rebound, Lilly's shortage-avoidance rationing, and the Part D dementia ramp. A DOJ/FTC settlement within a year and the fast Sentinel cycling findings are also generous. magnitude: Current use (27.1%), ever-used (34.5%), income thirds and age bands all sit inside the envelope and reconcile. The 72M payer mix sums and the cycling arithmetic closes, and approvals respect the 12-month rule with decisions pushed to 2031 and no US generic. There are only small gaps: stop reasons sum to ~19.8M against 19.6M, and a ~9% pharmacy trend and +22% global market sit awkwardly against a 53% rise in US users at flat prices.",
+        "generativity": "The Denise Kowalczyk day is concrete, with band rows under app surveillance, the DXA letter, the Part D recoding offer, Carol's new hip, granddaughter Madison's INTACT pin and the label's 'apathy' line. It shows the policy tensions through daily life. Intact potlucks, 'unmedicated supper clubs', couples asking for dose reductions and the Nashville songwriters give many more scenes."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Lilly rations high-dose tirzepatide supply to stay off the FDA shortage list, which would reopen 503B compounding.",
+        "field": "world/access/note",
+        "why": "Mechanism: a manufacturer cannot hold supply below demand and also stay off the shortage list, because that is what a shortage is. The stated reason for flat prices is incoherent."
+      },
+      {
+        "quote": "That is roughly 15,000 excess hip fractures a year against a ~300,000 baseline.",
+        "field": "world/safety_ledger/bone",
+        "why": "Magnitude: 15,000 at an excess of ~3 per 1,000 person-years implies ~5M person-years in users ≥65 with ≥2 years on drug and ≥15% loss. That is hard to square with ~2.5M Medicare obesity-only users and a drug that was only ramping up in the older population."
+      },
+      {
+        "quote": "about 2.5 million beneficiaries are on dementia-coded prescriptions by December.",
+        "field": "world/events/5/event",
+        "why": "Magnitude and mechanism: 2.5M new users in about six months after a June label requires an extremely fast ramp. The split of ~1.6M switched from Continuity or cash and ~0.9M new is asserted, and it leaves Continuity at 2.5M after a large outflow."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.83,
+      "inequality": 6.83,
+      "public_health": 6.17,
+      "cohesion": 5.83,
+      "epistemic": 4.17,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.53,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Older users face roughly 15,000 excess hip fractures a year, 'thin-frail' patients, and a ~20% excess of falls needing ED care. Outcomes contracts punish dose reduction, so payer rules may manufacture frailty. Connected-pen, smart-scale and strength-app surveillance spreads, and a third of large employers apply premium differentials. Inequality hardens: the poorer old get more fractures and discontinuation is highest in the bottom third. Epistemic harm is lower than in 2028 because anhedonia and bone loss are now measured and labelled, though the dementia back door and the Novo concealment show how fragile that is.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to fields and events: 27.1% adoption, stalled prices, outcomes-contract conditioning, the tirzepatide dementia label, the bone and muscle wave, no new class (filings and a CRL only), the Novo scandal, Intact, nine-state under-16 limits, and a labelled niche anhedonia effect. Nothing contradicts a driver. mechanism: The bone, scandal, label and CMS chain is well shown. The Lilly rationing logic is incoherent (claim 1), the employer coverage rebound alongside a doubled gray market is thinly motivated, and the dementia ramp is asserted (claim 3). magnitude: Adoption, ever-used, income and age bands, the payer mix (sums to 72M), the cycling arithmetic and the Medicare and Medicaid dollar figures all reconcile and sit inside the envelope, and approvals respect the 12-month rule. The stop-reason list sums to 19.8M against 19.6M, and the hip-fracture exposure implied by 15,000 at 3 per 1,000 is a stretch (claim 2).",
+      "generativity": "The prose day with Denise has concrete texture: the app chiming green, the DXA letter under the Bengals magnet, the choice between Continuity and Part D, the granddaughter with the INTACT pin, and the final apathy line. The world fields imply many more scenes, including Intact suppers, employer outcomes-contract disputes, geriatric wards and a Nashville roots scene. The central tension is shown rather than explained."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.3878,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 10
   }
 }

@@ -36,6 +36,41 @@
         "input_tokens": 16846,
         "output_tokens": 19729
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r48-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24834,
+        "output_tokens": 7366
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r48-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24834,
+        "output_tokens": 5860
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r48-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24834,
+        "output_tokens": 4962
+      }
     ]
   },
   "world": {
@@ -293,6 +328,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r48-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Half her volleyball team is on it.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: this contradicts the world's own pediatric figure of ~1.2% of under-18s (~0.9M, mostly cash-paying parents). Even allowing for teens being higher than the under-18 average, 'half a team' is an unsupported exaggeration of the adolescent uptake the state shows."
+        },
+        {
+          "quote": "New starts are ~55% oral, driven by oral amycretin and Foundayo.",
+          "field": "world/access/note",
+          "why": "magnitude: the payer mix shows 30.8M cash generic injectable users at $49–69 against brand cash falling from ~10M to ~8M. No generic oral exists in the US, and orals cost $99–199. Most new starts should therefore be generic injectable, so 55% oral does not reconcile."
+        },
+        {
+          "quote": "The sNDA was filed Jul 2029 and approved May 2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: the AUD programme was in phase 3 with no stated filing in the parent. The envelope allows approval no earlier than 12 months after filing, but this is 10 months. The candidate applies the 12-month gap to amycretin but not here."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5.5,
+        "inequality": 5.5,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadens sharply (29.7% on drug, $49 generic), so median health may even improve, which holds flourishing and public_health in the middling range. The costs are structural: adherence-receipt surveillance and BMI surcharges persist, and the bottom third cycles on cash generic with unstudied effects. Teen use is rising, and reward blunting is now sold as a benefit ('Quiet', 1.2M subscribers) with no measurement of its costs, which drives epistemic to 7. The body-as-class shift to muscle, skin and continuity keeps inequality at 5.5 even though the access gap narrowed.",
+        "plausibility": "driver_fidelity: every driver is traceable. The generic_collapse settlement is an event, oral amycretin gives oral parity, AUD is approved, employer coverage is static (44→43%), there is no new safety signal, no state action and no market shock, and the personality layer is marketed. Class stratification is realised through body signalling even though the income-third gap narrowed slightly. mechanism: the settlement-to-price-to-telehealth chain is well shown. Several changes are thin: the oral share of starts (claim 2), the 'half the team' prose against 1.2% pediatric use (claim 1), and Stillwater reaching 1.2M subscribers within about 7 months. magnitude: the population figures sit inside the envelope and reconcile (payer mix sums to 79M, age and income checks, Medicare $4.7B, Medicaid $2.9B gross / $1.9B federal, cycling ≈27%). The AUD approval 10 months after filing breaks the 12-month rule (claim 3). 'Unit volume +65%' with price 'down by more than half' implies revenue down at least 17%, not 'roughly flat'. The 1.2M 'Quiet' subscribers are described as both one firm's total and the all-brand total.",
+        "generativity": "The day-in-the-life gives Dana's receipt upload, the pen in the butter compartment, Marisol's forearms, Terrell's payday restart, Rick and the closed bar, and Kayla's request, each with concrete detail. The world fields add Columbus workers set against Upper Arlington professionals, DEXA chains, 'Quiet' ads and FTC letters. Many scenes are implied, and the closing 'we don't really want anything anymore' lands without explanation."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s2-L3-r48-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The sNDA was filed Jul 2029 and approved May 2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails magnitude. The starting world has the AUD programme in phase 3 with no filing stated. The envelope then requires approval at least 12 months after the filing, and 10 months breaks that rule."
+        },
+        {
+          "quote": "The model's rate is defined on brand products.",
+          "field": "world/access/public_coverage",
+          "why": "Fails mechanism. Medicare keeps paying $245 for a drug that sells at $49 and does not move to generics, while Medicaid in the same world substitutes mandatorily within a year. The asymmetry is asserted and the CMS chain is not shown."
+        },
+        {
+          "quote": "In Columbus, Ohio, warehouse and distribution workers are about as likely as Upper Arlington professionals to be on the drug",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Fails mechanism, as a narrative contradiction. The same world's by_income_third_pct shows a 10-point gap (34 vs 24) and says bottom-third use is held down by cycling and cost. 'About as likely' does not match that."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Cheap access raises adoption to 29.7% and removes the price barrier. Against that, the bottom third cycles on cash generic ('paused when money runs short') and teen use rises. BMI-surcharge verification now runs through cash-receipt uploads, and reward blunting is sold as a product ('Quiet', 1.2M subscribers) with no measurement of its costs. The epistemic harm is the most structural: the harm is unmeasured and the vocabulary is borrowed from medicine. A harder, more stratified society, but not catastrophic.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised. Generic collapse runs through the Sep 2029 settlement event and the Jan 2030 launch. AUD is approved, oral amycretin gives oral parity, coverage is flat at 43%, no safety signal is added, there is no state action, and 'Quiet' is the marketed feature. mechanism: Generic price to telehealth pivot to cash-generic dominance is well shown. Three things are weak: the Medicare brand-only rate (claim 2), the Columbus 'as likely' line against the 10-point income gap (claim 3), and a 6% spirits drop attributed to a label only seven months old. magnitude: Population, ever-used, income thirds, age bands, the payer-mix sum (79.0M), the cycling arithmetic and the Medicare/Medicaid spending (~$4.7B; ~$2.9B gross, ~$1.9B federal) all reconcile and sit inside the envelope. The AUD approval 10 months after filing violates the 12-month rule (claim 1). 'US revenue roughly flat' with volume +65% does not fit a price fall of 'more than half', and the 1.2M 'Quiet' subscribers equal the whole low-dose category despite a named rival.",
+        "generativity": "The prose gives a full set of characters: Dana with her receipt upload and $85 surcharge, Marisol with her 'forearms like rope', Terrell restarting on payday, Rick and closed Mulligan's, and Kayla saying the doctor costs more than the pen. The closing line, 'we don't really want anything anymore', shows the interior-life theme rather than explaining it. World fields add scenes: DEXA scans, 'Made Whole' fasting disputes, drug holidays around anniversaries, and the 'coming off to want things again' artists."
+      },
+      "plausibility": 6.25
+    },
+    {
+      "custom_id": "s2-L3-r48-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "New starts are ~55% oral, driven by oral amycretin and Foundayo.",
+          "field": "world/access/note",
+          "why": "mechanism: Injectable generic semaglutide costs $49 while oral amycretin costs $199 and Foundayo $99. Oral amycretin was approved in April 2030, so oral share of new starts rising from ~35% to over half in eight months is asserted rather than explained. It also sits oddly with ~30.8M people paying cash for generic injectables."
+        },
+        {
+          "quote": "ASAM and APA guidelines list it as a first-line option alongside naltrexone",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "mechanism: Professional-society guidelines normally take years to revise. Two bodies naming a drug first-line within weeks of approval, on a 1.4 heavy-drinking-days/week effect 'comparable to naltrexone', is a convenient shortcut. The candidate shows no chain for it."
+        },
+        {
+          "quote": "US generic semaglutide paid in cash ~30.8M",
+          "field": "world/population/note",
+          "why": "magnitude: About 39% of all users are on cash generics within roughly 11 months of the January 2030 launch. The payer mix sums, but a shift this fast, from a 2028 cash base of ~16M, is aggressive and shown only by assertion."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap access widens use, but the world shows new harms: class has moved to muscle, skin and continuity, and the bottom third cycles on and off cash generic (`thinness_and_class`). Teen use is rising, and BMI surcharges plus cash-receipt surveillance persist. The epistemic score is highest because reward blunting is sold as a benefit ('Quiet', 1.2M subscribers) while no trial or label measures its costs. Overall this is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is traceable. The September 2029 settlement and January 2030 generic launch honour generic_collapse. Oral amycretin honours oral_parity and the AUD label honours new_indications. Employer coverage holding at 43% fits status_quo, and Quiet fits marketed_feature. Nothing contradicts a driver, and no state action or safety signal appears. mechanism: The settlement-to-price chain and the Medicare copay-versus-cash arbitrage are well shown. Oral share of new starts exceeding half while $49 injectables dominate, and ASAM/APA first-line status within weeks, are asserted (claims 1 and 2). magnitude: Adult use (29.7%), ever-used (37.5%) and the income and age checks all fall inside the envelope and reconcile. The payer mix sums to 79M, Medicare comes to $4.7B, Medicaid to $2.9B gross and $1.9B federal, and cycling arithmetic gives ~27%. Approval timings obey the 12-month rule. The one soft spot is the speed of the generic uptake (claim 3).",
+        "generativity": "The prose has concrete characters: Dana photographing a receipt for the wellness app, Marisol with 'forearms like rope', Terrell restarting on payday, and Rick's union plan and the closed Mulligan's. The world fields add scenes: DEXA scanning, the 'Quiet' subscription, church potlucks and drug holidays around anniversaries. The closing exchange ('we don't really want anything anymore') shows rather than explains, and the daily-life texture is strong."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Half her volleyball team is on it.",
+        "field": "prose/a_day_in_the_life",
+        "why": "mechanism: this contradicts the world's own pediatric figure of ~1.2% of under-18s (~0.9M, mostly cash-paying parents). Even allowing for teens being higher than the under-18 average, 'half a team' is an unsupported exaggeration of the adolescent uptake the state shows."
+      },
+      {
+        "quote": "New starts are ~55% oral, driven by oral amycretin and Foundayo.",
+        "field": "world/access/note",
+        "why": "magnitude: the payer mix shows 30.8M cash generic injectable users at $49–69 against brand cash falling from ~10M to ~8M. No generic oral exists in the US, and orals cost $99–199. Most new starts should therefore be generic injectable, so 55% oral does not reconcile."
+      },
+      {
+        "quote": "The sNDA was filed Jul 2029 and approved May 2030.",
+        "field": "world/drugs/pipeline_note",
+        "why": "magnitude: the AUD programme was in phase 3 with no stated filing in the parent. The envelope allows approval no earlier than 12 months after filing, but this is 10 months. The candidate applies the 12-month gap to amycretin but not here."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 5.5,
+      "inequality": 5.67,
+      "public_health": 4.83,
+      "cohesion": 5.0,
+      "epistemic": 7.0,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 6.33
+    },
+    "plausibility": 6.93,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "Access broadens sharply (29.7% on drug, $49 generic), so median health may even improve, which holds flourishing and public_health in the middling range. The costs are structural: adherence-receipt surveillance and BMI surcharges persist, and the bottom third cycles on cash generic with unstudied effects. Teen use is rising, and reward blunting is now sold as a benefit ('Quiet', 1.2M subscribers) with no measurement of its costs, which drives epistemic to 7. The body-as-class shift to muscle, skin and continuity keeps inequality at 5.5 even though the access gap narrowed.",
+      "plausibility": "driver_fidelity: every driver is traceable. The generic_collapse settlement is an event, oral amycretin gives oral parity, AUD is approved, employer coverage is static (44→43%), there is no new safety signal, no state action and no market shock, and the personality layer is marketed. Class stratification is realised through body signalling even though the income-third gap narrowed slightly. mechanism: the settlement-to-price-to-telehealth chain is well shown. Several changes are thin: the oral share of starts (claim 2), the 'half the team' prose against 1.2% pediatric use (claim 1), and Stillwater reaching 1.2M subscribers within about 7 months. magnitude: the population figures sit inside the envelope and reconcile (payer mix sums to 79M, age and income checks, Medicare $4.7B, Medicaid $2.9B gross / $1.9B federal, cycling ≈27%). The AUD approval 10 months after filing breaks the 12-month rule (claim 3). 'Unit volume +65%' with price 'down by more than half' implies revenue down at least 17%, not 'roughly flat'. The 1.2M 'Quiet' subscribers are described as both one firm's total and the all-brand total.",
+      "generativity": "The day-in-the-life gives Dana's receipt upload, the pen in the butter compartment, Marisol's forearms, Terrell's payday restart, Rick and the closed bar, and Kayla's request, each with concrete detail. The world fields add Columbus workers set against Upper Arlington professionals, DEXA chains, 'Quiet' ads and FTC letters. Many scenes are implied, and the closing 'we don't really want anything anymore' lands without explanation."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.9078,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 31
   }
 }

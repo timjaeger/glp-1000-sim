@@ -51,6 +51,41 @@
         "input_tokens": 16712,
         "output_tokens": 20512
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r27-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25024,
+        "output_tokens": 8965
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r27-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25024,
+        "output_tokens": 7492
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r27-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25024,
+        "output_tokens": 7816
+      }
     ]
   },
   "world": {
@@ -304,6 +339,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r27-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "plus ~1.2M under AUD codes, which are outside the statutory weight-loss exclusion",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicare is said to cover about 1.2M people for AUD when the January 2030 benefit starts, but the FDA only approved the AUD indication in Jun 2030. The candidate shows no compendia listing or other route for Part D to cover an off-label use at that scale, so the figure looks asserted to inflate the Medicare total."
+        },
+        {
+          "quote": "found 18-month regain averaging ~115% of weight lost, versus ~60% in people stopping after under 2 years.",
+          "field": "world/safety_ledger/12/prevalence_note",
+          "why": "Magnitude and mechanism: a 38k-person registry cohort of people who stopped after 5+ years of continuous use is large for 2030, since few patients are that adherent. Regain exceeding total weight lost within 18 months is far above the 50–67% baseline, and the hypothalamic-adaptation mechanism rests on small substudies."
+        },
+        {
+          "quote": "27 states now do, covering ~6.5M people",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: opt-in states roughly triple from about 9 in 2028 (14 minus 5 dropouts) to 27, even though the starting world says Medicaid budgets were under pressure. The candidate gives no reason states would take on a ~$6B state share, because the Act's $245 rate and 'regular match' is not shown to differ from what was already on offer."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Coverage reaches poorer and older people, so the class gradient narrows, and the harms are measured and openly discussed (anhedonia at 6–8%, a Drug Safety Communication on lock-in, DXA requirements). Real losses remain. About 13.6M people 65+ are on a class with an unresolved hip-fracture signal. A new lock-in problem falls on the earliest and oldest users. Adherence-conditioned premiums persist outside Illinois and California, and adolescents in states without age floors keep starting. That makes a harder society with new losers, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events, including the stalled price path (list and cash prices unchanged, net prices flat), the Medicare Act, oral semaglutide for AUD, the lock-in signal, bimagrumab, normalisation, age floors and ad rescission, and the mainstream-complaint framing. mechanism: the main chains are shown (Bridge lapse and dementia label leading to the Act, parity leading to AUD coding drift, EEOC leading to holiday allowances). The weak points are Medicare AUD users counted before the Jun 2030 approval, the tripling of Medicaid states without a stated reason, and the extreme lock-in magnitudes (claims 1–3). magnitude: population figures sit inside the envelope (21.5%, 28.5%), and payer mix, age bands, income thirds and the CBO and Medicare arithmetic all reconcile. Approval timings obey the rules. Small gaps remain: the Medicare spend ignores retatrutide and bimagrumab prices, 'contained' gray market conflicts with its absolute growth, and 0.4M adolescents sits oddly against 0.9% of under-18s.",
+        "generativity": "The Marisol Vega vignette is concrete: a DXA clinic in a former Pier 1, a pill holiday, Ernesto's post-stop hunger, Diego and the vials, and tres leches. The world has many filmable locales (The Villages protein tables, holiday shows, the FMCSA docket, 'holidaying' dates). Texture is strong, though the vignette explains the Danish study somewhat."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L2-r27-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "found 18-month regain averaging ~115% of weight lost, versus ~60% in people stopping after under 2 years.",
+          "field": "world/safety_ledger/12/prevalence_note",
+          "why": "Mechanism and magnitude: regain above 100% of weight lost within 18 months is extreme for a registry cohort. Long-term users who stop are self-selected (for example, Ernesto stopped because of GI symptoms), and the cohort sits at the edge of any trial data, so the confounding is large. The 'lasting hypothalamic adaptation' explanation is asserted from small substudies."
+        },
+        {
+          "quote": "About 0.4M adolescents remain on a drug, concentrated in upper-income households in states without age floors.",
+          "field": "world/population/note",
+          "why": "Magnitude: 0.9% of roughly 73M under-18s is about 0.65M, not 0.4M. The 2028 baseline of 0.8% is also about 0.58M, so the figure fails to reconcile. The prose case (a Texas 15-year-old) also sits oddly with use being concentrated in states without floors."
+        },
+        {
+          "quote": "Lilly filed the BLA in Jan 2029 on a phase 2b/3 trial showing about half the lean-mass loss with tirzepatide and similar total weight loss.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Driver fidelity and magnitude: the parent lists bimagrumab-type adjuncts as phase 2/3 and unapproved. Approval 13 months after filing, on a DXA surrogate with no fracture data, is at the edge of the approval rules. It also rests on a phase 2/3 programme the parent never took to filing."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: Medicare covers about 15.5M users, the $50 copay and $245 lock apply, and the income gap narrows. Adherence conditioning is softened by the Illinois and California bans and the holiday allowances. New losers are older users on a doubled base with the unresolved hip-fracture HR of ~1.3, long-term users facing the 'lock-in' regain signal, and adolescents in states without age floors. Harms are measured and discussed openly, so this is a harder society with new risks but not a structurally hidden one.",
+        "plausibility": "driver_fidelity: Every driver is traceable: adoption at 21.5%, stalled prices, the Medicare Act, AUD approval, the lock-in signal, bimagrumab, normalisation, age floors and ad restrictions, and mainstream-complaint blunting. Bimagrumab sits at the edge of what the approval rules allow, and the 'contained' gray market is slightly at odds with its growth to 3.5M. mechanism: The Medicare law has a shown chain (angry seniors, the dementia label, the price lock), and the parity-driven AUD coding backdoor is credible. Weaker links are the jump to 27 Medicaid states, the quick FDA rescission of the ad standard, and the extreme lock-in magnitude (claim 1). magnitude: Population figures sit inside the envelope, and the payer mix sums to 57.6M. The CBO ($96B), Medicare and Medicaid arithmetic all multiply out, and the age bands check to 21.6. Flaws are the under-18 count (claim 2), the tight 65+ versus Medicare count, and the borderline bimagrumab timing (claim 3).",
+        "generativity": "The Marisol Vega day is concrete: the DXA clinic in a former Pier 1, the pamphlet folded in quarters, Ernesto's sopapillas, Diego and the vials, and the holiday that ends with tres leches. Supporting texture includes 'protein tables' in The Villages, 'holidaying' as a dating disclosure and 'holiday shows' in Austin. Many implied characters and scenes: AUD auditors, trucking disclosure, couples at conception, the Unmuted scene."
+      },
+      "plausibility": 7.3
+    },
+    {
+      "custom_id": "s2-L2-r27-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "plus ~1.2M under AUD codes, which are outside the statutory weight-loss exclusion",
+          "field": "world/access/public_coverage",
+          "why": "mechanism/magnitude: Part D normally pays for off-label use only with compendia support, and the AUD indication was not approved until Jun 2030. A 1.2M-person Medicare AUD cohort before that is asserted, and it is large against the Medicare population with moderate-to-severe AUD."
+        },
+        {
+          "quote": "Under federal mental-health parity, plans that dropped weight coverage must still cover AUD indications",
+          "field": "world/access/note",
+          "why": "mechanism: parity law requires comparable limits on MH/SUD benefits. It does not force a plan to cover a specific drug for a newly approved indication, so the 'coverage backdoor' is a doubtful legal chain that the whole alcohol-and-employer story relies on."
+        },
+        {
+          "quote": "A Danish national registry study linked to Kaiser Permanente data (Mar 2030, n≈38k who stopped after ≥5 years of continuous semaglutide use)",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "mechanism/magnitude: a cohort with 18 months of post-stopping follow-up published in Mar 2030 needs ≥5 years of continuous use ending by about Sep 2028, so starts by 2023. A cohort that size from Denmark plus one US insurer is hard to credit, and the ~115% regain and hypothalamic-adaptation story is asserted rather than built up."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadened through Medicare and Medicaid, so inequality narrows at the bottom, and AUD treatment and fewer drinkers are real benefits. Costs remain: a hip-fracture HR of ~1.3 now applies to a doubled Medicare base, the lock-in signal makes exit hard for the earliest and oldest users, drug holidays feed cycling, and adolescents in non-floor states keep starting. Harms are named and measured (DSC, interim postmarketing data), so epistemic harm is modest. This is a recognisably harder society with new losers, not a structural nightmare.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to fields and events: +5.2pp adoption, stalled prices, the Medicare Act, AUD approval, the lock-in signal, bimagrumab, no shock, normalisation, age floors and ad rescission, and mainstream complaint. mechanism: most chains are shown (the Act, EEOC conciliation, ad rule, filing-to-approval), but the parity-forced AUD coverage and the pre-approval Medicare AUD cohort (claims 1 and 2) are thinly argued, and the registry cohort (claim 3) is asserted. magnitude: population figures are inside the envelope, and the payer mix sums to 57.6M. The Medicare, CBO and Medicaid arithmetic multiplies out ($45.6B, $9.3B, $96B, $19.1B). Approval timings respect the 12-month rule. Small gaps remain: 0.9% under-18 implies ~0.66M against '~0.4M adolescents', and 50% of current users on a repeat course alongside a large wave of new Medicare starters strains the cycling dynamics.",
+        "generativity": "The Marisol Vega vignette shows rather than explains: the DXA clinic in a former Pier 1, the holiday she calls 'going loud', the muscle-shot pamphlet, Ernesto's hunger and sopapillas, and Diego's gray-market doubt. Scenes and characters are implied across the world fields too: The Villages protein tables, holiday shows, couples scheduling holidays, trucking disclosure. Daily-life texture is high."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "plus ~1.2M under AUD codes, which are outside the statutory weight-loss exclusion",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: Medicare is said to cover about 1.2M people for AUD when the January 2030 benefit starts, but the FDA only approved the AUD indication in Jun 2030. The candidate shows no compendia listing or other route for Part D to cover an off-label use at that scale, so the figure looks asserted to inflate the Medicare total."
+      },
+      {
+        "quote": "found 18-month regain averaging ~115% of weight lost, versus ~60% in people stopping after under 2 years.",
+        "field": "world/safety_ledger/12/prevalence_note",
+        "why": "Magnitude and mechanism: a 38k-person registry cohort of people who stopped after 5+ years of continuous use is large for 2030, since few patients are that adherent. Regain exceeding total weight lost within 18 months is far above the 50–67% baseline, and the hypothalamic-adaptation mechanism rests on small substudies."
+      },
+      {
+        "quote": "27 states now do, covering ~6.5M people",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: opt-in states roughly triple from about 9 in 2028 (14 minus 5 dropouts) to 27, even though the starting world says Medicaid budgets were under pressure. The candidate gives no reason states would take on a ~$6B state share, because the Act's $245 rate and 'regular match' is not shown to differ from what was already on offer."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 4.5,
+      "inequality": 4.0,
+      "public_health": 5.67,
+      "cohesion": 4.17,
+      "epistemic": 4.0,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.35,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Coverage reaches poorer and older people, so the class gradient narrows, and the harms are measured and openly discussed (anhedonia at 6–8%, a Drug Safety Communication on lock-in, DXA requirements). Real losses remain. About 13.6M people 65+ are on a class with an unresolved hip-fracture signal. A new lock-in problem falls on the earliest and oldest users. Adherence-conditioned premiums persist outside Illinois and California, and adolescents in states without age floors keep starting. That makes a harder society with new losers, not a structurally hidden one.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events, including the stalled price path (list and cash prices unchanged, net prices flat), the Medicare Act, oral semaglutide for AUD, the lock-in signal, bimagrumab, normalisation, age floors and ad rescission, and the mainstream-complaint framing. mechanism: the main chains are shown (Bridge lapse and dementia label leading to the Act, parity leading to AUD coding drift, EEOC leading to holiday allowances). The weak points are Medicare AUD users counted before the Jun 2030 approval, the tripling of Medicaid states without a stated reason, and the extreme lock-in magnitudes (claims 1–3). magnitude: population figures sit inside the envelope (21.5%, 28.5%), and payer mix, age bands, income thirds and the CBO and Medicare arithmetic all reconcile. Approval timings obey the rules. Small gaps remain: the Medicare spend ignores retatrutide and bimagrumab prices, 'contained' gray market conflicts with its absolute growth, and 0.4M adolescents sits oddly against 0.9% of under-18s.",
+      "generativity": "The Marisol Vega vignette is concrete: a DXA clinic in a former Pier 1, a pill holiday, Ernesto's post-stop hunger, Diego and the vials, and tres leches. The world has many filmable locales (The Villages protein tables, holiday shows, the FMCSA docket, 'holidaying' dates). Texture is strong, though the vignette explains the Danish study somewhat."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.3711,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 39
   }
 }

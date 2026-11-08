@@ -51,6 +51,41 @@
         "input_tokens": 16500,
         "output_tokens": 25327
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r09-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24654,
+        "output_tokens": 8225
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r09-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24654,
+        "output_tokens": 4994
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r09-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24654,
+        "output_tokens": 7324
+      }
     ]
   },
   "world": {
@@ -313,6 +348,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r09-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "smoking cessation adjunct (semaglutide, approved Mar 2029)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Magnitude: the sNDA was filed in May 2028, so a Mar 2029 approval comes about 10 months after filing. That is inside the 12-month minimum the envelope sets for products that were in phase 3. The candidate's own pipeline_note repeats the 'May 2028 sNDA' date."
+        },
+        {
+          "quote": "and 41 states now cover it for obesity",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicaid coverage is state-by-state and conditional at the start. A single January 2030 CMS guidance letter is shown moving 41 states within months, with no state budget or legislative step. A \"new\" Georgia Medicaid benefit also appears without any chain."
+        },
+        {
+          "quote": "Absolute excess is roughly 1 per 10,000 person-years.",
+          "field": "world/safety_ledger/NAION/prevalence_note",
+          "why": "Magnitude: general-population NAION incidence is a few per 100,000 a year. An HR of 1.8–2.2 therefore implies an excess of roughly 0.2–1 per 10,000, and 1 per 10,000 sits at the top of that range. The user base includes many under-50s, so the 'several thousand excess cases' headline is probably inflated."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Nearly one adult in five is on an incretin drug, about 510k adolescents have no bone-accrual data, and low-income unmonitored users are the ones losing lean mass and bone (safety_ledger lean-mass entry). About 3.2M people, 1.4M of them without obesity, buy reward-dampening as 'quiet mind', and adherence conditioning in Indiana and Arkansas continues. Offsetting gains are cheap access, a narrowed use gap (2.1× to 1.4×), a smoking-cessation approval and falling pharmacy trend. The harm is largely nameable and measured, though 'muscle gap' and anhedonia are poorly tracked. I score it a harder, more stratified society, not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: the Novo settlement, Part D and Medicaid expansion, the NAION class label, retatrutide widely available, the quiet-mind subscriptions, and no new state action. Mood_and_motivation is realised only as off-label marketing, which the pipeline_note states openly and the approval rules permit. mechanism: The settlement-to-price-to-employer-coverage chain and the retatrutide price cut are well shown. The 41-state Medicaid jump from one guidance letter is asserted, and the NAION excess is high (claims 2 and 3). magnitude: Current use of 19.2%, income thirds, age bands, payer mix, Medicaid and Medicare spend, and cycling arithmetic all reconcile inside the envelope. Ever-use of 28.5% sits at the edge, the smoking-cessation approval about 10 months after filing breaks the 12-month rule (claim 1), and the generic-user count of about 19M is loosely reconciled.",
+        "generativity": "The Denise Harlan scene is concrete and filmable: pen day, the Walgreens weigh-in kiosk that prints VERIFIED, the cartoon eye on the insert, Mr. Pruitt's retatrutide-and-trainer household, and her daughter's 'Lull' subscription. Atlanta street-by-street shoulders, school lunches skipped, and 'recorded loud' albums add texture. The prose summary explains more than it shows, but the vignette carries the class stratification and the quiet-mind theme through gesture."
+      },
+      "plausibility": 6.55
+    },
+    {
+      "custom_id": "s2-L1-r09-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Semaglutide smoking cessation was approved Mar 2029 on the May 2028 sNDA.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: approval comes about 10 months after the May 2028 filing, inside the envelope's 12-month minimum for products filed from phase 3. It reads as an unforced speed-up of an approval the envelope would delay."
+        },
+        {
+          "quote": "CMS guidance (Jan 2030) confirmed generic semaglutide as a rebate-eligible covered outpatient drug, and 41 states now cover it for obesity.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: guidance in January 2030 is said to move 41 state programmes, and Medicaid users to triple to 8.2M, by mid-2030. State budgeting, prior-authorisation build-out and provider capacity for that are not shown, though the 2028 baseline had only a few covering states."
+        },
+        {
+          "quote": "\"gray_market\": \"contained\",",
+          "field": "world/access/gray_market",
+          "why": "Mechanism: the market is labelled contained, yet gray/imported users rise from 1.3M to 1.5M. Unmonitored 'research-grade' retatrutide and tirzepatide copies are also said to be growing, and they sit beside a $549 legitimate retatrutide price."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens sharply and use converges (1.4× gradient), but harms are concentrated and mostly quiet. Unmonitored low-income users face the muscle and bone gap, NAION adds several thousand permanent vision-loss cases a year, and teens have no bone-accrual data. 'Quiet mind' is sold to 3.2M people as a feature while reward-blunting stays unmeasured, and Indiana/Arkansas conditioning now covers far more people. This is a harder society with new losers (about a 5), not a structural catastrophe, and the epistemic and inequality dimensions score highest.",
+        "plausibility": "driver_fidelity: Every driver is traceable: the generic settlement and Oct 2029 launch, permanent Part D and Medicaid expansion, the NAION class label, retatrutide realised through the existing product, quiet-mind marketing, and a body-composition class split. Two are reframed: mood_and_motivation is only off-label marketing, and class_stratification shows up as body divergence while use converges. mechanism: Generics via the settlement, Part D permanence at low cost, and the NAION label are well chained. Weaker links are the speed of 41-state Medicaid uptake and the 'contained' gray market alongside 1.5M users (claims 2 and 3). magnitude: Current use of 19.2% sits inside the envelope and ever-use of 28.5% is near its edge. Payer mix, age bands, cycling arithmetic and the Medicare, Medicaid and generics spend figures all reconcile. The deductions are the smoking-cessation approval about 10 months after filing (claim 1) and a minor gap between the 1.4M no-obesity quiet-mind subscribers and the 1.4M quiet-mind-plus-longevity users in the safety ledger.",
+        "generativity": ""
+      },
+      "plausibility": 6.95
+    },
+    {
+      "custom_id": "s2-L1-r09-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "CMS guidance in January prompts 41 state Medicaid programmes to cover generic semaglutide",
+          "field": "world/events/4/event",
+          "why": "Mechanism: Medicaid coverage was state-by-state at the start, and the jump to 41 states is asserted as following one CMS guidance letter within months. No state budget or rebate-driven decisions are shown."
+        },
+        {
+          "quote": "≈16% of users = 8.2M, of ~38M adult enrollees.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: 8.2M users is about 21% of adult Medicaid enrollees, above the 15.6% bottom-third rate and the 19.2% national rate. Medicaid adults are mostly bottom-third, so this strains the income-third reconciliation."
+        },
+        {
+          "quote": "≈1.4M quiet-mind and longevity users have no obesity.",
+          "field": "world/safety_ledger/13/prevalence_note",
+          "why": "Magnitude: the access note says about 1.4M of the 3.2M quiet-mind subscribers alone lack obesity, and longevity users come on top of that. Folding both groups into 1.4M leaves the non-obese user counts inconsistent."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens sharply, with $29 pens and $0 Medicaid and Medicare copays, but the harm is spread and normalised. Thousands of excess NAION cases a year, muscle and bone loss concentrated in unmonitored low-income users, and a widening pediatric cohort with no bone data (safety_ledger) add to it. About 3.2M people pay for a deliberately sold 'quiet mind' product, and Indiana and Arkansas conditioning now covers far more people. Epistemic opacity is high because reward blunting stays unmeasured and the muscle gap only becomes visible as body shape (body_and_culture).",
+        "plausibility": "driver_fidelity: Nearly every driver is visibly realised in events and fields: generic collapse, public expansion, the vision label, retatrutide via the existing product, class stratification and marketed personality. The mood_and_motivation indication is only an off-label telehealth category with no filing, which is thin. The note that nothing was filed is honest, but the driver is only weakly realised. mechanism: The settlement, the generic launch and the permanent Part D benefit have causal chains, but the settlement and the 41-state Medicaid jump (claim 1) are partly convenient. 'Scored cheaply' and the speed of employer coverage rising to 66% are asserted rather than shown. magnitude: Use at 19.2% and ever-use at 28.5% sit inside the envelope, ever-use near its top. Age bands, income thirds, the cycling arithmetic, the payer mix and the Medicare and Medicaid spending all reconcile. The Medicaid share exceeds the bottom-third rate (claim 2) and the non-obese user counts are muddled (claim 3). Approval timings for survodutide and amycretin are legal.",
+        "generativity": "The Denise Harlan day carries a lot of film: the pen day, the kiosk slip, Mr. Pruitt and his trainer, the 'different one' exchange, and Tasha's Lull subscription. The Atlanta street-by-street body split, the 'recorded loud' album and the dose-down weekends imply many more scenes and characters. It shows rather than explains, though the opening section is largely expository."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "smoking cessation adjunct (semaglutide, approved Mar 2029)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "Magnitude: the sNDA was filed in May 2028, so a Mar 2029 approval comes about 10 months after filing. That is inside the 12-month minimum the envelope sets for products that were in phase 3. The candidate's own pipeline_note repeats the 'May 2028 sNDA' date."
+      },
+      {
+        "quote": "and 41 states now cover it for obesity",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: Medicaid coverage is state-by-state and conditional at the start. A single January 2030 CMS guidance letter is shown moving 41 states within months, with no state budget or legislative step. A \"new\" Georgia Medicaid benefit also appears without any chain."
+      },
+      {
+        "quote": "Absolute excess is roughly 1 per 10,000 person-years.",
+        "field": "world/safety_ledger/NAION/prevalence_note",
+        "why": "Magnitude: general-population NAION incidence is a few per 100,000 a year. An HR of 1.8–2.2 therefore implies an excess of roughly 0.2–1 per 10,000, and 1 per 10,000 sits at the top of that range. The user base includes many under-50s, so the 'several thousand excess cases' headline is probably inflated."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.17,
+      "inequality": 6.0,
+      "public_health": 5.83,
+      "cohesion": 5.0,
+      "epistemic": 6.17,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.83,
+      "mechanism": 6.67,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.9,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Nearly one adult in five is on an incretin drug, about 510k adolescents have no bone-accrual data, and low-income unmonitored users are the ones losing lean mass and bone (safety_ledger lean-mass entry). About 3.2M people, 1.4M of them without obesity, buy reward-dampening as 'quiet mind', and adherence conditioning in Indiana and Arkansas continues. Offsetting gains are cheap access, a narrowed use gap (2.1× to 1.4×), a smoking-cessation approval and falling pharmacy trend. The harm is largely nameable and measured, though 'muscle gap' and anhedonia are poorly tracked. I score it a harder, more stratified society, not a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is traceable to events and fields: the Novo settlement, Part D and Medicaid expansion, the NAION class label, retatrutide widely available, the quiet-mind subscriptions, and no new state action. Mood_and_motivation is realised only as off-label marketing, which the pipeline_note states openly and the approval rules permit. mechanism: The settlement-to-price-to-employer-coverage chain and the retatrutide price cut are well shown. The 41-state Medicaid jump from one guidance letter is asserted, and the NAION excess is high (claims 2 and 3). magnitude: Current use of 19.2%, income thirds, age bands, payer mix, Medicaid and Medicare spend, and cycling arithmetic all reconcile inside the envelope. Ever-use of 28.5% sits at the edge, the smoking-cessation approval about 10 months after filing breaks the 12-month rule (claim 1), and the generic-user count of about 19M is loosely reconciled.",
+      "generativity": "The Denise Harlan scene is concrete and filmable: pen day, the Walgreens weigh-in kiosk that prints VERIFIED, the cartoon eye on the insert, Mr. Pruitt's retatrutide-and-trainer household, and her daughter's 'Lull' subscription. Atlanta street-by-street shoulders, school lunches skipped, and 'recorded loud' albums add texture. The prose summary explains more than it shows, but the vignette carries the class stratification and the quiet-mind theme through gesture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.0378,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 27
   }
 }

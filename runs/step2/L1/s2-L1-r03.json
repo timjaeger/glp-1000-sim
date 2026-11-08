@@ -51,6 +51,41 @@
         "input_tokens": 16551,
         "output_tokens": 20523
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r03-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24715,
+        "output_tokens": 7771
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r03-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24715,
+        "output_tokens": 8602
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r03-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24715,
+        "output_tokens": 7934
+      }
     ]
   },
   "world": {
@@ -315,6 +350,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r03-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the 16.5 pts who had used by 2028, 11.2 are on now (about 6.4 who stayed on plus 4.8 off-now people who restarted, mostly on pills) and 5.3 are off.",
+          "field": "world/population/note",
+          "why": "This implies about 65% of 2028 current users stayed on for two years and about 73% of the off-now group restarted. That conflicts with the ~35% one-year persistence and 36–47% restart-within-a-year figures the parent world sets. The cycling arithmetic reconciles only because these retention rates are asserted. Fails mechanism and magnitude."
+        },
+        {
+          "quote": "gambling disorder, adjunct to CBT in adults (semaglutide, Sep 2030): the first 'compulsion' indication",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "The parent world had gambling use as 'still anecdotal', and no filing event is stated. A phase 3 started in 2027 would not plausibly read out, be filed, and be approved by Sep 2030 under a 12-month-after-filing rule. The 'priority review' wording does not close the gap. Fails magnitude on approval timing."
+        },
+        {
+          "quote": "Most of the growth from 2.6M comes through the smoking-cessation indication (Mar 2029).",
+          "field": "world/access/public_coverage",
+          "why": "It asserts that about 2.6M additional Medicaid users are on 12-week courses at any one time within 21 months. States can still use prior authorisation and step therapy, and semaglutide is only an adjunct to standard therapy. The mandate-to-uptake chain is asserted, not shown. Fails mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "About 2M people carry drug-attributable anhedonia. A roughly 35M-person unmonitored cash and import tier skips DEXA while bone harm from cycling is confirmed. Built-in on/off cycling comes from 12-week Medicaid courses and employer withdrawals (open_tensions). Employer coverage is withdrawn, and the Indiana and Arkansas waivers persist. The body_and_culture severity of 5 and a politicised appetite register as real cohesion losses. Offsets: cheaper access and a harm that is now labelled, quantified and discussed, which keeps the epistemic score low. This is a harder society with new losers, not a structurally hidden harm.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: 24.2% adoption, managed-decline pricing in Jan 2030, employer coverage 43%, the gambling indication, the Dec 2029 anhedonia label, oral amycretin, the Unblunted backlash, and mainstream-complaint framing. No market shock or new state action appears, and the Bridge renewal is a continuation. mechanism: Payer shifts and the cessation pathway are mostly shown, but the persistence and restart rates (claim 1) and the Medicaid cessation uptake (claim 3) are asserted. Attributing most of the surge to one oral launch is also weak, because $149 pills already existed in 2028. magnitude: Current use (24.2%) is inside the envelope and ever-use (33.6%) is near its top. Payer shares sum to 100%, the age bands and income thirds sum correctly, and the Bridge ($8.6B) and cash ($66B) arithmetic holds. The gambling approval timing (claim 2) is doubtful against the 12-month rule.",
+        "generativity": "The Marisol vignette shows rather than explains: the Thursday pill, the Sunday 9 p.m. 'back on' alarm, Ines's 'blunted or tired' line and the tres leches. The world adds recognisable roles and settings, such as the dental hygienist, Gary and the Arkansas Delta, Friday 'off-day' plates, off-dose tasting menus and Nashville rallies. The prose supplies several ready scenes and characters."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L1-r03-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Semaglutide gained smoking cessation (Mar 2029) and gambling disorder (Sep 2030, priority review, built on a phase 3 that an NIH–academic consortium started in 2027).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism and approval timing. The 2028 parent calls gambling use 'still anecdotal' and mentions no trial. The candidate adds a 2027 phase 3 after the fact and shows no filing event, yet reaches approval by Sep 2030, which strains the 12-months-after-filing rule."
+        },
+        {
+          "quote": "Retatrutide postmarketing studies used SHAPS (Snaith-Hamilton Pleasure Scale) and found clinically meaningful anhedonia in ~9% at top doses against ~3% on placebo.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Fails mechanism. Retatrutide was approved in Mar 2028 with allocated supply, and FDA only requested an anhedonia scale in the parent. A powered postmarketing readout, a pooled reanalysis and a class-wide Warnings label by Dec 2029 is implausibly fast, with no chain shown."
+        },
+        {
+          "quote": "Most starts came after the August 2029 oral-parity launch, so most new users are under 12 months in.",
+          "field": "world/population/note",
+          "why": "Fails mechanism. About 45M new starters would have to arrive in roughly 16 months, though $149 orals (Foundayo, Wegovy pill) already existed in 2028 without driving adoption. Amycretin only matching tirzepatide's efficacy is asserted as the trigger, and 'under 12 months' does not fit a 16-month window."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "About 1 in 4 adults is on the drug, with roughly 35M in an unmonitored cash and import tier that mostly skips DEXA while bone and cycling harms are replicated. About 2M have label-grade anhedonia, Medicaid cessation courses force built-in cycling in the bottom third, and the Indiana and Arkansas conditioning waivers persist. Offsetting this, prices are lower, access is broader and the harm is now named and quantified, which is why epistemic scores lower than the other dimensions. Cohesion is strained by the backlash and split family tables, but this is a harder society rather than a refusable one.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption 24.2%, managed decline to $199–275, employer retreat to 43%, compulsion indication via gambling, anhedonia label, oral parity via amycretin, backlash, mainstream complaint, no shock, no new state action. The only weakness is the thin managed-decline magnitude. mechanism: The cycling, payer and Medicaid-cessation chains are shown, but the adoption surge attributed to amycretin, the 2029 SHAPS-based class label and the gambling trial history are asserted (see all three listed claims). The prose also has weekend holidays of two days causing ER vomiting, while the label line concerns restarts after more than 3 days. magnitude: Current use (24.2) and ever-use (33.6, near the 33.8 cap) are inside the envelope, and the age bands, income thirds, payer mix, Bridge spend ($8.6B), cash outlay (~$66B) and cycling arithmetic all reconcile. The approvals for amycretin, survodutide and MariTide obey the filing rules, but the gambling approval has no stated filing event, and the 65+ count (9.5M) equals Medicare's 9.7M fills with no room for other payers.",
+        "generativity": "Marisol's day has strong specifics: the 5:40 pill, the Thursday-yes and Friday-no rhythm, the $249 debit on the eighth, the 'Unblunted' flyer, and Ines's 'blunted or just tired' line. The world fields add scenes of off-dose tasting menus, Friday-night surges, Monday–Tuesday dips and split potlucks. It shows rather than explains, and several character threads are implied (Bea, the dental patient, Ines)."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s2-L1-r03-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Large employers cite the volume surge after oral parity and flat pharmacy budgets.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: oral parity arrived in Aug 2029, but the survey showing coverage already down to 43% (a 15-point drop from 58%) is dated Oct 2029. Employer benefit design resets annually, so a surge two months old cannot explain the drop."
+        },
+        {
+          "quote": "Short-half-life pills (orforglipron, oral amycretin) make weekend and event holidays easy.",
+          "field": "world/safety_ledger/14/prevalence_note",
+          "why": "mechanism: orforglipron's half-life is about a day or more and oral semaglutide's is about a week, so a 2-day skip barely lowers drug levels. The same ledger says anhedonia reverses only 4–8 weeks after stopping, which contradicts the weekend-holiday relief the prose relies on."
+        },
+        {
+          "quote": "Of the 16.5 pts who had used by 2028, 11.2 are on now (about 6.4 who stayed on plus 4.8 off-now people who restarted, mostly on pills)",
+          "field": "world/population/note",
+          "why": "magnitude: 6.4 of 9.9 points staying on for two years is about 65% persistence, against the parent world's ~35% one-year figure. 4.8 of the 6.6 off-now points restarting (about 73%) is also very high, and 'mostly on pills' is asserted without support."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 5.5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 5.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 64M people are on drugs with known bone, muscle and anhedonia harms, and a cash and import tier of ~35M is unmonitored (open_tensions, safety_ledger). Bottom-third users cycle through 12-week Medicaid courses, which the ledger says compounds fracture risk in women. Employer gating is shrinking and access has broadened, and anhedonia now has a label and a number, so autonomy and epistemic harm are lower than in 2028. The anhedonia warning and 'Unblunted' backlash split families and congregations, so cohesion worsens. The result is a harder society with new losers, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption is 24.2%, price falls on a managed path, employer coverage drops to 43%, the anhedonia label is dated Dec 2029, oral amycretin is the parity launch, the gambling approval and the Nashville rally are both present, and no new state action or market shock appears. The gambling approval's timeline is thin: the filing is not stated and the parent had no phase 3, which keeps this from a 10. mechanism: The cessation-via-Medicaid route and the 22% oral efficacy chain are well shown. Claims 1 and 2 are flawed. The employer-retreat causal story is mistimed against oral parity. The weekend-holiday pharmacology contradicts the ledger's own 4–8 week reversibility. The commercial user count also rises (11.8M to 14.2M) while weight coverage retreats, with no explanation. magnitude: Population figures sit inside the envelope, though ever-used at 33.6 is almost at the 33.8 cap. Age, income, payer-mix, Bridge spending ($8.6B) and cash ($66B) all reconcile. The persistence and restart arithmetic (claim 3) conflicts with the parent's 35% one-year figure. The Medicaid doubling to 5.2M through cessation courses alone is very large.",
+        "generativity": "The Marisol scene is concrete: the 5:40 pill, the $249 on the eighth, the Unblunted potluck flyer, Ines's 'blunted or tired' line, the Sunday 9 p.m. 'back on' alarm. The world fields add reusable texture: off-dose menus, dating-profile tags, Tuesday dips, Friday-night surges, and the Gary and Arkansas Delta quitline route. Many secondary characters and scenes are implied, such as the dental patient, Bea's church, the sex therapist and the trucker."
+      },
+      "plausibility": 6.7
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Of the 16.5 pts who had used by 2028, 11.2 are on now (about 6.4 who stayed on plus 4.8 off-now people who restarted, mostly on pills) and 5.3 are off.",
+        "field": "world/population/note",
+        "why": "This implies about 65% of 2028 current users stayed on for two years and about 73% of the off-now group restarted. That conflicts with the ~35% one-year persistence and 36–47% restart-within-a-year figures the parent world sets. The cycling arithmetic reconciles only because these retention rates are asserted. Fails mechanism and magnitude."
+      },
+      {
+        "quote": "gambling disorder, adjunct to CBT in adults (semaglutide, Sep 2030): the first 'compulsion' indication",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "The parent world had gambling use as 'still anecdotal', and no filing event is stated. A phase 3 started in 2027 would not plausibly read out, be filed, and be approved by Sep 2030 under a 12-month-after-filing rule. The 'priority review' wording does not close the gap. Fails magnitude on approval timing."
+      },
+      {
+        "quote": "Most of the growth from 2.6M comes through the smoking-cessation indication (Mar 2029).",
+        "field": "world/access/public_coverage",
+        "why": "It asserts that about 2.6M additional Medicaid users are on 12-week courses at any one time within 21 months. States can still use prior authorisation and step therapy, and semaglutide is only an adjunct to standard therapy. The mandate-to-uptake chain is asserted, not shown. Fails mechanism."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 4.5,
+      "inequality": 5.67,
+      "public_health": 6.17,
+      "cohesion": 5.67,
+      "epistemic": 4.0,
+      "overall": 5.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 5.83,
+      "magnitude": 7.0
+    },
+    "plausibility": 7.05,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "About 2M people carry drug-attributable anhedonia. A roughly 35M-person unmonitored cash and import tier skips DEXA while bone harm from cycling is confirmed. Built-in on/off cycling comes from 12-week Medicaid courses and employer withdrawals (open_tensions). Employer coverage is withdrawn, and the Indiana and Arkansas waivers persist. The body_and_culture severity of 5 and a politicised appetite register as real cohesion losses. Offsets: cheaper access and a harm that is now labelled, quantified and discussed, which keeps the epistemic score low. This is a harder society with new losers, not a structurally hidden harm.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: 24.2% adoption, managed-decline pricing in Jan 2030, employer coverage 43%, the gambling indication, the Dec 2029 anhedonia label, oral amycretin, the Unblunted backlash, and mainstream-complaint framing. No market shock or new state action appears, and the Bridge renewal is a continuation. mechanism: Payer shifts and the cessation pathway are mostly shown, but the persistence and restart rates (claim 1) and the Medicaid cessation uptake (claim 3) are asserted. Attributing most of the surge to one oral launch is also weak, because $149 pills already existed in 2028. magnitude: Current use (24.2%) is inside the envelope and ever-use (33.6%) is near its top. Payer shares sum to 100%, the age bands and income thirds sum correctly, and the Bridge ($8.6B) and cash ($66B) arithmetic holds. The gambling approval timing (claim 2) is doubtful against the 12-month rule.",
+      "generativity": "The Marisol vignette shows rather than explains: the Thursday pill, the Sunday 9 p.m. 'back on' alarm, Ines's 'blunted or tired' line and the tres leches. The world adds recognisable roles and settings, such as the dental hygienist, Gary and the Arkansas Delta, Friday 'off-day' plates, off-dose tasting menus and Nashville rallies. The prose supplies several ready scenes and characters."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.0011,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 29
   }
 }

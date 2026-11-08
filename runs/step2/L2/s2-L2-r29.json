@@ -49,6 +49,41 @@
         "input_tokens": 16707,
         "output_tokens": 21018
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r29-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24489,
+        "output_tokens": 5691
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r29-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24489,
+        "output_tokens": 4737
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r29-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24489,
+        "output_tokens": 7659
+      }
     ]
   },
   "world": {
@@ -297,6 +332,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r29-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare is now the single largest insurer of incretin fills.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude: the candidate's own payer mix has commercial at ~12.8M (28%) against Medicare at ~12.2M (27%), so Medicare is not the largest insurer. The prose repeats the claim."
+        },
+        {
+          "quote": "Golden Corral closed ~15% of Florida and Arizona units in 2030.",
+          "field": "world/economy/restaurants/state",
+          "why": "Fails mechanism: ~3.6M new Medicare oral users among tens of millions of seniors is asserted to explain a double-digit regional closure rate for one chain, with no intermediate chain such as per-meal spend or traffic data."
+        },
+        {
+          "quote": "Year-end health package creates first Medicare Part D obesity benefit, orals only, at $199 net after Novo and Lilly win Section 232 tariff exemptions; CBO scores ~$58B over ten years",
+          "field": "world/events/1/event",
+          "why": "Fails mechanism: the event is dated 2029-07 yet called a 'year-end' package, and the prose says 'last summer' when writing at the end of 2030. Congress also moves from refusing a $41B extension to passing a larger $58B one, with the change attributed to a tariff exemption and no political chain shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder, more stratified society, but not a catastrophic one. Medicare coverage helps seniors, while under-65 lower-income adults are left out and the pill shortage disrupts treatment. Quarterly anhedonia questionnaires feed adherence surveillance, and workers tied to a 30% premium game their answers (the Marcus scene). Minors' restrictions sort teen use by income, and the largest unscanned older cohort faces the known hip-fracture risk. The anhedonia label does make the harm nameable (epistemic), which keeps that score moderate.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised: adoption 17.1 (+0.8), the $299→$399 maintenance rise and vial price jump, the Medicare obesity benefit, the March 2030 anhedonia label, the Foundayo switch label, class stratification, minors' restriction and the ad rule, and employer tracks. The approvals (retatrutide, the survodutide CRL, the amycretin filing) obey the envelope's rules. mechanism: The chains are mostly shown: oral API demand, then the shortage, then the allocation. Weaker links are the India rule landing weeks after the TrumpRx price rise, the 'year-end package' dated July (claim 3), and the Golden Corral closures asserted from a thin Medicare effect (claim 2). The anhedonia evidence also arrives fast, via a reanalysis of trials that rarely collected SHAPS data. magnitude: Population figures sit inside the envelope, and the Medicare arithmetic ($149 × 12 × 3.6M ≈ $6.4B; ~$58B over nine years), the cycling arithmetic and the age-band weights all reconcile. The failures are 'Medicare is the largest insurer' while commercial is larger (claim 1), Medicaid users rising from 3.4M to 3.6M after five states dropped out, and 3.5M versus 3.6M enrollees.",
+        "generativity": "The world gives many scenes and characters. The Marcus Bell day shows the adherence app, a mood questionnaire he answers strategically, and his mother's pill switches. Other scenes include Plano DXA percentile swaps, Mesa seniors, families crossing state lines, Unmuted 'off nights', Bread Alone congregations and The Villages' small-plate dining. Daily life is shown with texture rather than only explained."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s2-L2-r29-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare is now the single largest insurer of incretin fills.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude and reconciliation: the payer mix in population.note puts Medicare at ~12.2M (27%) and commercial at ~12.8M (28%), so Medicare is not the largest insurer."
+        },
+        {
+          "quote": "Her Medicare pill has been switched again because of the shortage, the third brand since spring",
+          "field": "prose/a_day_in_the_life",
+          "why": "Fails mechanism: the Medicare benefit covers only two oral products (Wegovy pill and Foundayo), so a third brand in one spring is hard to explain, and FDA switching guidance is cited only for allocation-driven substitutions."
+        },
+        {
+          "quote": "Best efficacy is ~27% at 68–80 weeks, uptake is ~0.6M, and supply is limited.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism and magnitude: a ~$899/month cash drug restricted to BMI ≥35 reaching ~0.6M users within about 21 months of approval (Mar 2029 to end-2030) is asserted, and it is not placed in the payer-mix arithmetic."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a harder, more stratified society. Under-65 low-income adults fall between the price shock, the mail-order squeeze and no coverage; minors are sorted by income across state lines; and adherence-conditioned premiums continue in most states, with anhedonia questionnaires added to the monitoring (the Marcus Bell scene shows him answering carefully). The anhedonia label and the Medicare benefit soften some harms and the harm is now nameable, which keeps epistemic and public_health in the middle. Inequality is the dominant score.",
+        "plausibility": "driver_fidelity: Every driver is visible: the Medicare oral-only benefit, the $299→$399 shock, the Mar 2030 anhedonia label, the Foundayo switch label, the minors restrictions, class stratification and employer metabolic tracks. The API shortage sits slightly awkwardly against market_shock 'none' but is framed as part of the price shock. mechanism: Most chains are shown (API demand → allocation → price rise; the Medicare demand-on-top-of-private-demand story; India export rule → gray-market price rise). The third-brand switch and the fast retatrutide uptake are asserted rather than shown. magnitude: Population figures sit inside the envelope and the cycling and age-band arithmetic checks out, as does $149×12×3.6M ≈ $6.4B against $58B over 9 years. 'Medicare is the single largest insurer' contradicts the 27% vs 28% payer mix, and the 65+ jump to 18.5% against a total rise of only 0.8pp is tight.",
+        "generativity": "The Marcus Bell scene is concrete: the dosing app, the mood questionnaire he answers carefully, the 30% premium he fears losing, and his mother's shifted pill and the ballfield. The wider world implies many scenes: Mesa and The Villages, Plano DXA percentile swaps, cross-state teen clinic drives, Unmuted off-nights and Golden Corral closures. The prose summary explains more than it shows, but the texture is good."
+      },
+      "plausibility": 6.7
+    },
+    {
+      "custom_id": "s2-L2-r29-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Her Medicare pill has been switched again because of the shortage, the third brand since spring, and she is nauseous and furious and pays her fifty dollars anyway.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the Medicare benefit is oral-only and covers just the Wegovy pill and Foundayo, so a mother switched to a third brand since spring contradicts the world's own coverage rules."
+        },
+        {
+          "quote": "Year-end health package creates first Medicare Part D obesity benefit, orals only, at $199 net after Novo and Lilly win Section 232 tariff exemptions; CBO scores ~$58B over ten years",
+          "field": "world/events/1/event",
+          "why": "Mechanism: the event is dated 2029-07, but a 'year-end' package would pass in December, and the prose says 'last summer'. The timing is internally incoherent, and the tariff-for-price trade is asserted rather than shown."
+        },
+        {
+          "quote": "Golden Corral closed ~15% of Florida and Arizona units in 2030.",
+          "field": "world/economy/restaurants/state",
+          "why": "Mechanism and magnitude: a 15% regional closure rate is attributed to a benefit that only began in Jan 2030 and reached ~3.6M enrollees by year-end. The causal link to buffet traffic is asserted, and the figure is large for one year."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Under-65 low-income adults fall between the price shock, the mail-order squeeze and no coverage. Monitored metabolic tracks (~3.6M) turn the anhedonia label into another data stream that enrollees learn to answer defensively. The minors' restrictions sort adolescent use by income, and the 2030 wave of unscanned older starters carries a fracture risk. Offsetting this, Medicare coverage broadens access, the anhedonia harm is now named and measured, and the EEOC and state bans push back.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Price shock is the $299→$399 maintenance rise plus the India export rule, public expansion is the Medicare oral benefit, the anhedonia label is dated Mar 2030, and oral parity is realised through the Foundayo switch label. Restriction appears as the nine state minors' laws and the ad rule. The allocation and shortage story sits awkwardly against market_shock 'none', which keeps this from a 9. mechanism: The chains are mostly shown, running from oral API intensity to shortage to price rise and gray-market squeeze, and from bone data to state laws. Weaknesses are the 'year-end' package dated July, the 'third brand' incoherence in the mother's scene, and the asserted Golden Corral closures (claims 1–3). magnitude: Current use (17.1), ever-used (25) and income thirds are all inside the envelope. Approvals respect the timing rules, and the payer mix sums to 45.8M. The 3.6M × $149 × 12 ≈ $6.4B arithmetic and the cycling arithmetic hold. Minor gaps: Medicaid users rise even though dual-eligibles moved to Medicare, and 'largest insurer' is only defensible as a single-program claim against commercial 12.8M and cash 15.0M.",
+        "generativity": "The day-in-the-life is concrete: the 4:40 pill logged by the app, the eight-question anhedonia screen he answers carefully, the brisket he leaves, and the mother's Walgreens run. The world fields supply scenes such as Plano DXA percentiles, The Villages small plates, cross-state teen clinic drives, and Unmuted ticketed 'off nights'. Several implied characters and conflicts could carry a film."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicare is now the single largest insurer of incretin fills.",
+        "field": "world/access/public_coverage",
+        "why": "Fails magnitude: the candidate's own payer mix has commercial at ~12.8M (28%) against Medicare at ~12.2M (27%), so Medicare is not the largest insurer. The prose repeats the claim."
+      },
+      {
+        "quote": "Golden Corral closed ~15% of Florida and Arizona units in 2030.",
+        "field": "world/economy/restaurants/state",
+        "why": "Fails mechanism: ~3.6M new Medicare oral users among tens of millions of seniors is asserted to explain a double-digit regional closure rate for one chain, with no intermediate chain such as per-meal spend or traffic data."
+      },
+      {
+        "quote": "Year-end health package creates first Medicare Part D obesity benefit, orals only, at $199 net after Novo and Lilly win Section 232 tariff exemptions; CBO scores ~$58B over ten years",
+        "field": "world/events/1/event",
+        "why": "Fails mechanism: the event is dated 2029-07 yet called a 'year-end' package, and the prose says 'last summer' when writing at the end of 2030. Congress also moves from refusing a $41B extension to passing a larger $58B one, with the change attributed to a tariff exemption and no political chain shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.67,
+      "inequality": 6.83,
+      "public_health": 5.0,
+      "cohesion": 5.0,
+      "epistemic": 4.83,
+      "overall": 5.87
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.5,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.88,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "This is a recognisably harder, more stratified society, but not a catastrophic one. Medicare coverage helps seniors, while under-65 lower-income adults are left out and the pill shortage disrupts treatment. Quarterly anhedonia questionnaires feed adherence surveillance, and workers tied to a 30% premium game their answers (the Marcus scene). Minors' restrictions sort teen use by income, and the largest unscanned older cohort faces the known hip-fracture risk. The anhedonia label does make the harm nameable (epistemic), which keeps that score moderate.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised: adoption 17.1 (+0.8), the $299→$399 maintenance rise and vial price jump, the Medicare obesity benefit, the March 2030 anhedonia label, the Foundayo switch label, class stratification, minors' restriction and the ad rule, and employer tracks. The approvals (retatrutide, the survodutide CRL, the amycretin filing) obey the envelope's rules. mechanism: The chains are mostly shown: oral API demand, then the shortage, then the allocation. Weaker links are the India rule landing weeks after the TrumpRx price rise, the 'year-end package' dated July (claim 3), and the Golden Corral closures asserted from a thin Medicare effect (claim 2). The anhedonia evidence also arrives fast, via a reanalysis of trials that rarely collected SHAPS data. magnitude: Population figures sit inside the envelope, and the Medicare arithmetic ($149 × 12 × 3.6M ≈ $6.4B; ~$58B over nine years), the cycling arithmetic and the age-band weights all reconcile. The failures are 'Medicare is the largest insurer' while commercial is larger (claim 1), Medicaid users rising from 3.4M to 3.6M after five states dropped out, and 3.5M versus 3.6M enrollees.",
+      "generativity": "The world gives many scenes and characters. The Marcus Bell day shows the adherence app, a mood questionnaire he answers strategically, and his mother's pill switches. Other scenes include Plano DXA percentile swaps, Mesa seniors, families crossing state lines, Unmuted 'off nights', Bread Alone congregations and The Villages' small-plate dining. Daily life is shown with texture rather than only explained."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.3511,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 14
   }
 }

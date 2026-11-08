@@ -36,6 +36,41 @@
         "input_tokens": 16861,
         "output_tokens": 17083
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r49-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25021,
+        "output_tokens": 4656
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r49-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25021,
+        "output_tokens": 4889
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r49-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25021,
+        "output_tokens": 4889
+      }
     ]
   },
   "world": {
@@ -293,6 +328,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r49-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The semaglutide AUD sNDA was filed Oct 2029 on a phase 3 programme that read out mid-2029",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the envelope allows approval no earlier than 12 months after filing. An Oct 2029 filing with approval in Aug 2030 is only about 10 months, which breaks the approval-timing rule."
+        },
+        {
+          "quote": "under parity rules, many plans that exclude the drug for obesity must now cover it for drinking.",
+          "field": "world/events/5/event",
+          "why": "Mechanism: parity law does not mandate coverage of a specific drug, and the claim is asserted without a chain. It is also said to bite within weeks of the label, which is too fast for plans' formulary and utilisation-management cycles."
+        },
+        {
+          "quote": "Growth came mostly from the cash pill channel and from Medicare age-in, not from new insured coverage.",
+          "field": "world/population/note",
+          "why": "Mechanism/magnitude: cash users rise from ~10M to ~17M while prices are stalled and the only new pill is supply-limited with waitlists at $449. Medicare age-in adds only ~0.9M, so the stated growth drivers cannot account for the shift."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 7.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 5.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Body shape becomes a visible class marker (body_and_culture, thinness_and_class). Coverage-driven cycling of about 35% of ever-users is unstudied. Surveillance runs through refill data, pill-bottle sensors and BMI surcharges on hourly workers, and parental-consent registries and AUD-code audits add to it. Reward blunting stays unmeasured while 'reduced wanting' becomes an official endpoint, which is the epistemic harm. It is a harder, stratified society with no collapse, so it sits at 'recognisably harder, new losers' with some structural, normalised elements.",
+        "plausibility": "driver_fidelity: all drivers are traceable. Adoption is +5.2pp to 23.0%, prices are frozen, employer coverage falls 44→36%, AUD is approved, oral amycretin reaches parity, stratification is explicit, minor restrictions and the ad rule are in place, and no new safety signal appears. mechanism: price stasis is explained by oral API constraints and the cultural stratification is well chained. The parity-forces-coverage claim and the cash-channel growth explanation are asserted rather than shown (claims 2 and 3). magnitude: the headline figures sit inside the envelope and reconcile (payer mix sums to 61.6M, Medicare $7.1B, Medicaid $5.9B/$3.8B, cycling 35%). The AUD approval comes ~10 months after the Oct 2029 filing, which breaks the 12-month rule (claim 1).",
+        "generativity": "The Renee, Mike and Kayla vignette shows the world through the break room, the wellness-kiosk scale, the surcharge that stays because the pills don't sync, the Hyderabad blister pack in English and Hindi, Ohio's minor rules and dinner-table envy. The world state implies more scenes: AUD-code audits, full-plate Sundays, recruiters on 'executive presence', and bars closing. Some of the texture explains rather than shows, but there is plenty of film."
+      },
+      "plausibility": 6.15
+    },
+    {
+      "custom_id": "s2-L3-r49-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The semaglutide AUD sNDA was filed Oct 2029 on a phase 3 programme that read out mid-2029",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the AUD programme was phase 3 in the parent world, so approval should come at least 12 months after filing. Filing in Oct 2029 and approval in Aug 2030 is only about 10 months, which breaks the approval-timing rule."
+        },
+        {
+          "quote": "After the AUD approval, distillers cite 'incretin-driven heavy-drinker attrition' in guidance, and Diageo and Constellation take US brand impairments.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: the approval came in Aug 2030, so major spirits firms booking impairments and changing guidance because of it within months is asserted rather than shown. The parent world's spirits decline was already attributed to heavy-drinker attrition from earlier use."
+        },
+        {
+          "quote": "17 states cover obesity, down from 19 after Missouri and Indiana dropped coverage in 2029 budget cuts, for ~2.0M enrollees.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: Medicaid obesity enrollment rises from 1.5M to 2.0M (+33%) while two states drop coverage and adherence waivers expand from 7 to 9. No chain explains the enrollment growth."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 8,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 7.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension: body shape is a class marker, on-drug rates are 29% vs 17% by income third, and BMI surcharges and connected-pill adherence data fall on hourly workers. Epistemic harm is high because reward blunting is unmeasured, the AUD label makes reduced wanting the endpoint, and diagnoses are being coded for coverage. Cohesion is damaged by split tables, mismatched couples and Kayla's blocked access, but nothing is melodramatic. The overall score of 6.5 describes a harder, more stratified society, not a collapse.",
+        "plausibility": "driver_fidelity: All drivers are visible. Adoption is exactly +5.2pp, prices are frozen, employer coverage falls 44→36%, AUD is approved, oral amycretin realises oral parity, minor-prescribing and ad restrictions apply, there is no new safety signal, and the personality layer stays unrecognised. mechanism: Most chains are shown, including API scarcity stalling prices, parity driving AUD coding and PBM audits, and cash and age-in driving growth. The weak spots are the alcohol-industry impairments attributed to an approval only months old and Medicaid enrollment growing while states exit (claims 2 and 3). magnitude: Population figures are inside the envelope, and the payer mix (61.6M), Medicare ($7.1B), Medicaid ($5.9B gross, $3.8B federal), age and income checks and cycling arithmetic all reconcile. Oral amycretin's 14-month review is allowed, but the AUD approval at about 10 months after filing violates the 12-month rule for a phase 3 programme (claim 1).",
+        "generativity": ""
+      },
+      "plausibility": 6.05
+    },
+    {
+      "custom_id": "s2-L3-r49-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "(heavy-drinking days reduced ~30% vs placebo, a stronger effect than naltrexone in the subgroup with obesity) and was approved Aug 2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails magnitude and the envelope's approval rule. The AUD programme was in phase 3 at the start, so approval must come at least 12 months after filing, but the same note says it was filed Oct 2029 and approved Aug 2030, only 10 months later."
+        },
+        {
+          "quote": "Pew survey: 58% of Americans say they can 'usually tell' someone's income from their body, up from 41% in 2026",
+          "field": "world/events/1/event",
+          "why": "Fails mechanism. A 17-point jump in a subjective perception, with a specific survey number, is asserted with no causal chain, and it is the sole evidence for the headline cultural claim."
+        },
+        {
+          "quote": "Growth came mostly from the cash pill channel and from Medicare age-in, not from new insured coverage.",
+          "field": "world/population/note",
+          "why": "Fails mechanism and reconciliation against the note's own payer mix. Medicare rises only ~0.9M, and the largest single gain beyond cash is coded insured coverage (~20M to ~24M, plus AUD parity), so \"not from new insured coverage\" contradicts the figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 7.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder society with new losers. Inequality is the worst dimension: body shape reads as class, BMI surcharges and connected-pen or pill-sensor adherence data fall on hourly workers, and 12-month lockouts and state minor restrictions limit access. Epistemic harm is also high, because reward blunting is unmeasured while AUD makes reduced wanting the endpoint and ~62M are on drug. Physical harms are mostly continuations (cycling, gray-market adverse events, no new safety signal), so flourishing and public health sit mid-scale.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption lands at 23.0% (17.8+5.2), prices are frozen, employer coverage falls 44→36%, AUD is approved, oral amycretin gives oral parity, class stratification runs through the body and culture fields, state action takes the form of minor restrictions and the ad rule, and personality_layer stays unrecognised. Nothing contradicts a driver. mechanism: The cash and oral-API-constraint chain for stalled prices, and the AUD parity-coding-PBM audit chain, are well shown. Weaker are the Pew jump, the quick finalised ad rule, and the 'mostly cash and Medicare age-in' growth claim, which its own payer figures contradict. magnitude: Population figures, the payer mix (sums to 61.6M), the Medicare $7.1B and Medicaid $3.8B federal arithmetic, and the cycling arithmetic all reconcile and sit inside the bounds. The AUD sNDA filed Oct 2029 and approved Aug 2030 breaks the 12-month rule for phase-3 products, a clear envelope violation.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The semaglutide AUD sNDA was filed Oct 2029 on a phase 3 programme that read out mid-2029",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: the envelope allows approval no earlier than 12 months after filing. An Oct 2029 filing with approval in Aug 2030 is only about 10 months, which breaks the approval-timing rule."
+      },
+      {
+        "quote": "under parity rules, many plans that exclude the drug for obesity must now cover it for drinking.",
+        "field": "world/events/5/event",
+        "why": "Mechanism: parity law does not mandate coverage of a specific drug, and the claim is asserted without a chain. It is also said to bite within weeks of the label, which is too fast for plans' formulary and utilisation-management cycles."
+      },
+      {
+        "quote": "Growth came mostly from the cash pill channel and from Medicare age-in, not from new insured coverage.",
+        "field": "world/population/note",
+        "why": "Mechanism/magnitude: cash users rise from ~10M to ~17M while prices are stalled and the only new pill is supply-limited with waitlists at $449. Medicare age-in adds only ~0.9M, so the stated growth drivers cannot account for the shift."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.33,
+      "inequality": 7.67,
+      "public_health": 5.17,
+      "cohesion": 6.0,
+      "epistemic": 7.17,
+      "overall": 6.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.33,
+      "magnitude": 5.33
+    },
+    "plausibility": 6.2,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Body shape becomes a visible class marker (body_and_culture, thinness_and_class). Coverage-driven cycling of about 35% of ever-users is unstudied. Surveillance runs through refill data, pill-bottle sensors and BMI surcharges on hourly workers, and parental-consent registries and AUD-code audits add to it. Reward blunting stays unmeasured while 'reduced wanting' becomes an official endpoint, which is the epistemic harm. It is a harder, stratified society with no collapse, so it sits at 'recognisably harder, new losers' with some structural, normalised elements.",
+      "plausibility": "driver_fidelity: all drivers are traceable. Adoption is +5.2pp to 23.0%, prices are frozen, employer coverage falls 44→36%, AUD is approved, oral amycretin reaches parity, stratification is explicit, minor restrictions and the ad rule are in place, and no new safety signal appears. mechanism: price stasis is explained by oral API constraints and the cultural stratification is well chained. The parity-forces-coverage claim and the cash-channel growth explanation are asserted rather than shown (claims 2 and 3). magnitude: the headline figures sit inside the envelope and reconcile (payer mix sums to 61.6M, Medicare $7.1B, Medicaid $5.9B/$3.8B, cycling 35%). The AUD approval comes ~10 months after the Oct 2029 filing, which breaks the 12-month rule (claim 1).",
+      "generativity": "The Renee, Mike and Kayla vignette shows the world through the break room, the wellness-kiosk scale, the surcharge that stays because the pills don't sync, the Hyderabad blister pack in English and Hindi, Ohio's minor rules and dinner-table envy. The world state implies more scenes: AUD-code audits, full-plate Sundays, recruiters on 'executive presence', and bars closing. Some of the texture explains rather than shows, but there is plenty of film."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.6678,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 5
   }
 }

@@ -49,6 +49,41 @@
         "input_tokens": 16455,
         "output_tokens": 16638
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r06-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23775,
+        "output_tokens": 6585
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r06-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23775,
+        "output_tokens": 7152
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r06-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23775,
+        "output_tokens": 6719
+      }
     ]
   },
   "world": {
@@ -302,6 +337,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r06-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "found clinically meaningful anhedonia in ~3% of treated participants vs ~2% on placebo at 52 weeks, dose-dependent. That is far lower than the 10–15% self-report surveys, and it fixes the effect as real but uncommon.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "mechanism: A 1-point gap over placebo is too thin to move the status from 'emerging' to 'established' or to support a class-wide label. A dose-dependence claim from a 3% vs 2% split is also asserted rather than shown. Delivering a placebo-controlled 52-week postmarketing readout within about two years of the March 2028 approval is tight."
+        },
+        {
+          "quote": "Roughly half moved to cash at $245–350 or $149 orals, and about 0.3M moved to imported pens.",
+          "field": "world/population/note",
+          "why": "magnitude: Half of 2.3M dropped users is about 1.15M moving to cash. The payer mix has cash/direct rising only from 5.2M to 5.4M, so about 1M cash users would have to have quit unseen. This is a minor reconciliation gap."
+        },
+        {
+          "quote": "Lower US volume and ex-US generic erosion are offset by retatrutide's mix shift; Lilly gains share and Novo shrinks.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: US users fall about 14% (26.2M to 22.4M) at flat prices, yet the market is only 3% lower at ≈$102B. Retatrutide's mix shift is asserted, with no volume or price figures to back it, and supply is still allocated."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a recognisably harder society. Employer retreat (58% to 47%), 'involuntary stops' and 12-month Medicaid lockouts in five states, and a Medicare continuation rule that rewards continuous use all push people off the drug. BMI surcharges outlive the coverage, and the gray market grows to 1.6M unmonitored users. Class stratification is stark (12.5% top third vs 5.2% bottom), with the middle third falling most. The anhedonia measurement and the 60-day notice make the harms more nameable, so epistemic badness is lower, and nothing is melodramatic.",
+        "plausibility": "driver_fidelity: Adoption -1.5pp (9.9 to 8.4), stalled prices, employer retreat, benefits conditioning, normalisation and a niche side-effect layer are all visible in fields and events. The anhedonia label change sits uneasily with safety_signal 'none', though it is tied to the personality driver. Cessation is honoured as a CRL.\nmechanism: Most changes have chains: employer drops to cash and gray market, gating terminations, flat prices to low starts, and CRL events. The anhedonia 'established' upgrade from a 3% vs 2% result and the flat market despite a 14% volume fall are asserted rather than shown (claims 1 and 3).\nmagnitude: Current use 8.4, ever-use 17.6, the income thirds and age bands all sit inside the envelope and reconcile. Payer shares, the Medicare and Medicaid dollar figures, and the cycling arithmetic all multiply out. MariTide's filing and the CRLs obey the approval rules. The only gap is the cash-migration figure against the small cash-payer increase (claim 2).",
+        "generativity": "The day-in-the-life gives concrete texture: Thursday shot day, the $299 LillyDirect receipt, the $41 paycheck surcharge, the sister's kiosk weigh-in and the 60-day letter on the fridge. Characters (Marisol, Tanya, Greg, the sister in Linden) imply scenes. The Columbus local case and the 'coded / cash / off' split are filmable. The anhedonia intake form and the $38 Pune pens flyer add quiet detail."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L1-r06-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "found clinically meaningful anhedonia in ~3% of treated participants vs ~2% on placebo at 52 weeks, dose-dependent. That is far lower than the 10–15% self-report surveys, and it fixes the effect as real but uncommon.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "mechanism: A 1-point gap over placebo is too thin to move an 'emerging' effect to 'established' and to 'fix' it as real. A 52-week postmarketing study, a class-wide label change and an Apr 2030 clinic screening norm all within ~2 years of the Mar 2028 approval are also very fast. The status upgrade is asserted."
+        },
+        {
+          "quote": "Roughly half moved to cash at $245–350 or $149 orals, and about 0.3M moved to imported pens.",
+          "field": "world/population/note",
+          "why": "magnitude: Half of 2.3M dropped users is ~1.15M moving to cash, yet the payer mix has cash users rising only from 5.2M to 5.4M. The reconciliation depends on large unstated cash attrition."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.35",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "mechanism: Adolescent use rises from 0.3% to 0.35% in the same window that employer obesity coverage falls from 58% to 47%, Medicaid gating spreads and adult use drops 15%. The rise is explained only by 'parents' diabetes-coded or cash coverage', with no chain shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Employer retreat and the spread of adherence-gated Medicaid waivers (five states) and Medicare continuation rules cause involuntary stops, regain and BMI surcharges kept after coverage ends (population/note, access/note, open_tensions). The middle third falls from 10% to 7.5%, and a two-tier 'coded versus cash' society forms. This is a harder 2028 with new losers, not a catastrophe. Epistemic harm eases because anhedonia is now measured and labelled, and no spectacle inflates the score.",
+        "plausibility": "driver_fidelity: Adoption -1.5 pp (9.9 to 8.4), stalled prices, employer retreat (58% to 47%), no new indication or launch, no market shock, normalisation, benefits conditioning and a niche side-effect layer are all visible in fields and events. The anhedonia upgrade to 'established' sits slightly awkwardly beside safety_signal 'none'. mechanism: Most changes have chains (employer retreat to dropped users to cash, gray-market or off). Weak points are the thin anhedonia evidence behind a class label (claim 1) and the unexplained pediatric rise (claim 3). magnitude: Current use 8.4 and ever-use 17.6 are inside the envelope, and the cycling arithmetic, age bands, income thirds, payer mix (38+21+10+24+7=100), Bridge $4.1B and Medicaid $6.5B all multiply out. Approval timing is legal (MariTide filed Sep 2030, no approval before late 2031). The only gap is that cash users barely grow despite ~1.15M supposed movers (claim 2).",
+        "generativity": "The Marisol Reyes day gives concrete texture: Thursday shot day, a $299 vial, the $41 surcharge, a sister's kiosk weigh-in, the 60-day letter on the fridge, the anhedonia intake form and a $38 Pune flyer. Tanya with a diabetes code and Greg who regained imply further characters. The Columbus local case and the coded/cash/off tiers give strong scene seeds."
+      },
+      "plausibility": 7.45
+    },
+    {
+      "custom_id": "s2-L1-r06-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "That is far lower than the 10–15% self-report surveys, and it fixes the effect as real but uncommon.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "mechanism: a ~3% vs ~2% difference against placebo is a one-point excess that would not usually 'fix' causality, and it drives an 'established' upgrade and a class label by Apr 2030. A completed 52-week placebo-controlled postmarketing study on a drug approved in Mar 2028 is also tight, and the new labelling sits awkwardly with the safety_signal 'none' driver."
+        },
+        {
+          "quote": "Roughly half moved to cash at $245–350 or $149 orals, and about 0.3M moved to imported pens.",
+          "field": "world/population/note",
+          "why": "magnitude: half of 2.3M dropped users is ~1.15M moving to cash, yet cash/direct users rise only from 5.2M to 5.4M. The cash line does not reconcile with the stated employer-retreat flow, and the commercial drop (11.8M to 8.5M) exceeds the 2.3M stated."
+        },
+        {
+          "quote": "Lower US volume and ex-US generic erosion are offset by retatrutide's mix shift; Lilly gains share and Novo shrinks.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: US users fall ~15% and ex-US generics erode, yet the market is only ~3% lower. The offset relies on retatrutide, which has allocated supply, a $1,499 list with no discount channel, and gated coverage, so the chain is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 5.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Employer retreat, Medicaid and Medicare adherence gating, 12-month lockouts and surcharges that outlast coverage push involuntary stops and regain onto the middle and bottom thirds (middle third 10 to 7.5, bottom 6.5 to 5.2). Gating continues to reward the continuous exposure the label warns about, and 1.6M unmonitored gray-market users are a growing harm. Epistemic badness is lower because anhedonia is now measured and labelled, and regain is socially read as 'coverage' rather than character. Overall it is a harder, more stratified society, but one with a court-ordered 60-day notice and a DEXA rule.",
+        "plausibility": "driver_fidelity: adoption -1.5pp (9.9 to 8.4), stalled prices, employer retreat (58 to 47%), conditioning spreading to five waiver states plus Medicare, normalisation and niche_side_effect are all visible in fields and events. No new indication or launch appears (CRLs, a filing only). The anhedonia relabelling and upgrade to 'established' sits a little close to a safety signal. mechanism: most chains are shown (retreat to dropped users to cash, gray market and regain; CRLs with stated reasons). Weak points are the 3% vs 2% anhedonia study producing an established label (claim 1) and the flat market despite about 15% fewer US users (claim 3). magnitude: all headline figures are inside the envelope and reconcile: current 8.4, ever 17.6, income thirds average 8.4, age bands sum to ~8.39, cycling 7.4/17.6=42%, payer mix sums to 100%, and the Bridge ($4.1B) and Medicaid ($6.5B) arithmetic is correct. The one real gap is the cash-flow mismatch against the 2.3M dropped users (claim 2), plus a slightly off 65+ population count.",
+        "generativity": "The Marisol Reyes day is concrete: a Thursday shot day, a $299 vial, a $41 surcharge, the sister's kiosk weigh-in, the 60-day letter on the fridge, a DEXA she codes, and a SHAPS form she circles. The Columbus local case, Tanya and Greg, and the cousin's $38 Pune pens imply many further scenes. The 'coded / cash / off' tiers give daily life texture, though the closing sections lean somewhat on explanation."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "found clinically meaningful anhedonia in ~3% of treated participants vs ~2% on placebo at 52 weeks, dose-dependent. That is far lower than the 10–15% self-report surveys, and it fixes the effect as real but uncommon.",
+        "field": "world/safety_ledger/7/prevalence_note",
+        "why": "mechanism: A 1-point gap over placebo is too thin to move the status from 'emerging' to 'established' or to support a class-wide label. A dose-dependence claim from a 3% vs 2% split is also asserted rather than shown. Delivering a placebo-controlled 52-week postmarketing readout within about two years of the March 2028 approval is tight."
+      },
+      {
+        "quote": "Roughly half moved to cash at $245–350 or $149 orals, and about 0.3M moved to imported pens.",
+        "field": "world/population/note",
+        "why": "magnitude: Half of 2.3M dropped users is about 1.15M moving to cash. The payer mix has cash/direct rising only from 5.2M to 5.4M, so about 1M cash users would have to have quit unseen. This is a minor reconciliation gap."
+      },
+      {
+        "quote": "Lower US volume and ex-US generic erosion are offset by retatrutide's mix shift; Lilly gains share and Novo shrinks.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: US users fall about 14% (26.2M to 22.4M) at flat prices, yet the market is only 3% lower at ≈$102B. Retatrutide's mix shift is asserted, with no volume or price figures to back it, and supply is still allocated."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.17,
+      "inequality": 6.5,
+      "public_health": 5.17,
+      "cohesion": 4.5,
+      "epistemic": 3.5,
+      "overall": 5.23
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.67,
+      "mechanism": 6.67,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.29,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "This is a recognisably harder society. Employer retreat (58% to 47%), 'involuntary stops' and 12-month Medicaid lockouts in five states, and a Medicare continuation rule that rewards continuous use all push people off the drug. BMI surcharges outlive the coverage, and the gray market grows to 1.6M unmonitored users. Class stratification is stark (12.5% top third vs 5.2% bottom), with the middle third falling most. The anhedonia measurement and the 60-day notice make the harms more nameable, so epistemic badness is lower, and nothing is melodramatic.",
+      "plausibility": "driver_fidelity: Adoption -1.5pp (9.9 to 8.4), stalled prices, employer retreat, benefits conditioning, normalisation and a niche side-effect layer are all visible in fields and events. The anhedonia label change sits uneasily with safety_signal 'none', though it is tied to the personality driver. Cessation is honoured as a CRL.\nmechanism: Most changes have chains: employer drops to cash and gray market, gating terminations, flat prices to low starts, and CRL events. The anhedonia 'established' upgrade from a 3% vs 2% result and the flat market despite a 14% volume fall are asserted rather than shown (claims 1 and 3).\nmagnitude: Current use 8.4, ever-use 17.6, the income thirds and age bands all sit inside the envelope and reconcile. Payer shares, the Medicare and Medicaid dollar figures, and the cycling arithmetic all multiply out. MariTide's filing and the CRLs obey the approval rules. The only gap is the cash-migration figure against the small cash-payer increase (claim 2).",
+      "generativity": "The day-in-the-life gives concrete texture: Thursday shot day, the $299 LillyDirect receipt, the $41 paycheck surcharge, the sister's kiosk weigh-in and the 60-day letter on the fridge. Characters (Marisol, Tanya, Greg, the sister in Linden) imply scenes. The Columbus local case and the 'coded / cash / off' split are filmable. The anhedonia intake form and the $38 Pune pens flyer add quiet detail."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.8156,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 34
   }
 }

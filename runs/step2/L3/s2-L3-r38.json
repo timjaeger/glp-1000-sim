@@ -37,6 +37,41 @@
         "input_tokens": 16996,
         "output_tokens": 24650
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r38-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27020,
+        "output_tokens": 8560
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r38-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27020,
+        "output_tokens": 6551
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L3-r38-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27020,
+        "output_tokens": 9493
+      }
     ]
   },
   "world": {
@@ -300,6 +335,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L3-r38-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare's Continuity Model has always paid the lesser of $245 or a drug's net price",
+          "field": "prose/article",
+          "why": "mechanism: The 2028 world says Medicare pays about $245 a month, a flat rate. The 'lesser of' term and the 'fixed dollar budget' that lets enrollment double are invented retroactively and carry the whole public-expansion story."
+        },
+        {
+          "quote": "the cash price cut to $349 lifted users from ~0.6M to ~3M legitimate plus ~2M gray",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: A 12% cash price cut ($399 to $349) is credited with roughly a five-fold rise in retatrutide users. The 30% extension data and supply expansion are the only other causes offered, and neither is quantified."
+        },
+        {
+          "quote": "It read out in May 2029 with ~22% slowing on CDR-SB at 18 months, a small absolute effect, and was approved Feb 2030 on priority review.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: Approval about nine months after readout means filing came less than 12 months before approval, which breaks the envelope's phase-3 timing rule. The 2028 pipeline never listed tirzepatide MCI, so no earlier filing exists to justify it."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4.5,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 3.5,
+        "epistemic": 4.5,
+        "overall": 4.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: generics cost $39–69, public programmes cover 41% of users, and the bottom-to-top gap narrows from 11 to 7 points. Against that sit a documented fracture and sarcopenia ledger in `safety_ledger`, 340 counterfeit-pen hospitalisations, pediatric bone questions, and lockouts and DXA/grip-strength data flowing to wellness vendors. Reward blunting is now measured but anchored to one trial's 0.8-point figure, so the epistemic problem is eased rather than gone. This is a harder world with new losers (frail older users, cyclers, people in non-covering states), but better than 2028 on access and measurement, so mid-scale.",
+        "plausibility": "driver_fidelity: Every driver is visible in the fields and events: generic settlement, public expansion at 41%, MCI and longevity use, the bone and muscle communication, the 30% triple agonist, counterfeits, aesthetic inversion, and a niche anhedonia label. State action is mostly 'none', though eleven waivers versus seven is a thin stretch. mechanism: Claims 1 and 2 show the main asserted links, namely the retconned Medicare payment rule and the five-fold retatrutide uptake from a small price cut. The fracture finding is also hard to square with retatrutide's 2028 launch and its mostly cash-paid use, and the Medicaid-expansion rationale in the prose is garbled. magnitude: Population, income and age figures, the cycling arithmetic and the payer mix (57M) all reconcile, and the Medicare and Medicaid spending math checks out. Flaws are the MCI approval timing (claim 3) and 'Medicare is the largest single payer' when Medicare's 14M users are fewer than commercial's 15M.",
+        "generativity": "The Denise Kowalczyk scene is concrete: the Kroger refill, the DXA scan, the Humana strength class, her unmedicated grandson, faint lilacs, 'she's fine'. It implies several characters and ties the bone, hyposmia and anhedonia threads to daily life. The world fields add vivid cultural texture such as 'generic thin', butcher-bakery chains and DXA strip-mall studios."
+      },
+      "plausibility": 6.25
+    },
+    {
+      "custom_id": "s2-L3-r38-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "under its existing payment terms Medicare pays the lesser of $245 or the product's net price",
+          "field": "world/access/public_coverage",
+          "why": "The 2028 world states flatly that Medicare pays ~$245/month. The 'lesser of' clause is a retroactive rule invented so the same budget can cover twice the enrollees without a new rule. This is a convenient asserted mechanism (mechanism)."
+        },
+        {
+          "quote": "It read out in May 2029 with ~22% slowing on CDR-SB at 18 months, a small absolute effect, and was approved Feb 2030 on priority review.",
+          "field": "world/drugs/pipeline_note",
+          "why": "SURMOUNT-COG is not in the 2028 pipeline, and an 18-month trial reading out in May 2029 implies enrolment began before 2028. A 22% relative slowing is also large given EVOKE failed. Approval about 8–9 months after readout, with no filing event shown, sits uneasily with the envelope's 12-months-after-filing rule (mechanism and magnitude)."
+        },
+        {
+          "quote": "the cash price cut to $349 lifted users from ~0.6M to ~3M legitimate plus ~2M gray.",
+          "field": "world/drugs/pipeline_note",
+          "why": "A roughly 13% price cut ($399 to $349) plus extension data is asserted to produce a fivefold rise in users. The ~3M legitimate retatrutide users also take up most of the 4.5M brand-cash payer line that must hold Zepbound and Foundayo too, so the figures strain against each other (mechanism and magnitude)."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: the income gap narrows from 11 to 7 points, and public programmes pay for 41% of users. Against that, the ledger shows an established bone and fracture excess (2–3 per 1,000 person-years) in older women, lean-mass ratcheting from cycling, 340 counterfeit-pen hospitalisations, and Continuity lockouts and adherence waivers. Epistemic harm eases because anhedonia now has a label figure, but that one-trial number risks blocking further study (open_tensions). Overall this is a somewhat harder 2028 with new losers, not a structurally hidden harm.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Examples are the Jan 2030 generic settlement event, 41% public payer share, tirzepatide MCI, the Nov 2029 muscle and bone communication, April counterfeits, aesthetic inversion, the AUD label with anhedonia, and adoption at exactly +3.5 pp. Minor friction comes from state_action 'none' sitting beside Medicaid expansion to 31 states and 11 waivers, framed as ordinary P&T decisions. mechanism: Generic price falling to coverage is well chained (settlement, $55 net, Medicaid at $45). The 'lesser of $245 or net price' retcon, the MCI trial history and the retatrutide user jump are asserted (claims 1–3). The prose line that Medicaid covers obesity because 'the other states dropped' coverage has no basis in the world state. magnitude: Population figures sit inside the envelope (21.3% on drug, 29% ever used, income thirds bracketing the national figure), and the age check, payer mix (57M) and the Medicare and Medicaid dollar arithmetic reconcile. Survodutide and amycretin timing obey the rules. The MCI approval timing relative to the 12-month rule and the strained brand-cash line are small gaps.",
+        "generativity": "The Denise Kowalczyk day shows rather than explains: the refill day, the DXA scan, the Humana strength class, the faint lilacs and the 'she's fine' ending. Her grandson Tyler with the gym-bag vials and the pen on the windowsill imply further scenes. The world fields add texture, including DXA studios in strip malls, 'tapering for the tour' and 'generic thin' as an insult."
+      },
+      "plausibility": 6.65
+    },
+    {
+      "custom_id": "s2-L3-r38-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "It read out in May 2029 with ~22% slowing on CDR-SB at 18 months, a small absolute effect, and was approved Feb 2030 on priority review.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism and magnitude: a 22% CDR-SB slowing from a metabolic drug, after semaglutide's EVOKE failure, is close to the effect of anti-amyloid antibodies. An 18-month trial reading out in May 2029 with approval about nine months later on a trial absent from the 2028 pipeline is also very fast, and no filing is shown."
+        },
+        {
+          "quote": "the cash price cut to $349 lifted users from ~0.6M to ~3M legitimate plus ~2M gray",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a 12% price cut ($399 to $349) is credited with roughly an eightfold rise in retatrutide users. The cut is only one cause alongside supply expansion and the 2029 extension data, and it cannot carry that jump, so the attribution is asserted rather than shown."
+        },
+        {
+          "quote": "but under its existing payment terms Medicare pays the lesser of $245 or the product's net price.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: the 2028 world described a flat ~$245 rate and never mentioned a lesser-of-net-price clause. This retroactive 'existing term' is what lets enrollment double on the same budget with no new rule, which is convenient."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: generics at $39–69, public programmes paying for 41% of users, and the bottom-third on-drug rate up to 18%. That makes this world milder than 2028 on inequality. The harms are real but bounded: the bone and sarcopenia ledger (fracture HR ~1.3 in older women, 'thinner but weaker'), the April 2030 counterfeit cluster of about 340 hospitalisations, cycling, and conditioning that spreads from BMI to DXA and grip-strength metrics. The single 1.4% vs 0.6% anhedonia figure risks closing off measurement of the broader reward-blunting effect. Overall this is a harder society with new losers, but not structurally severe.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: the 3.5pp adoption rise to 21.3%, the Sep 2029 settlement, the Part D route via MCI, the muscle/bone communication, retatrutide at ~30%, counterfeits, aesthetic inversion, and the anhedonia label. There is mild strain on state_action 'none', since Medicaid adherence waivers rise from seven to eleven states and 12 more states add coverage. mechanism: Most chains are shown (settlement to price to coverage to Medicare budget; Part D exclusion sidestepped). Weak points are the invented lesser-of-net-price term, the 22% MCI effect after EVOKE failed, the 12% price cut credited with the retatrutide user jump, and the prose line that Medicaid expanded because of 'coverage the other states dropped', which contradicts the world state (19 states covered in 2028 and none are shown dropping it). magnitude: Adoption (21.3%) and ever-use (29%) sit inside the envelope, and the income and age checks, cycling arithmetic, payer mix (57M), Medicare ($4.7B) and Medicaid ($2.7B gross, $1.75B federal) all reconcile. Generic entry is backed by a settlement event, and survodutide (16 months from filing) and amycretin respect the approval rules. The remaining gap is that the AUD and MCI filing dates are not stated, so the 12-month rule cannot be checked.",
+        "generativity": "The Denise Kowalczyk day is concrete and shows rather than explains: the Toledo Kroger refill, the Hyderabad-made pen at a $12 copay, the DXA printout, the Humana strength class, faint lilacs, and 'She's fine'. Tyler, 'unmedicated', and Ray's question give her a household with implied scenes. The world fields also imply many characters: DXA strip-mall studios, tapering musicians, steakhouse 'appetite' rooms, sales managers asking about 'drive', and military stress-fracture concerns."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicare's Continuity Model has always paid the lesser of $245 or a drug's net price",
+        "field": "prose/article",
+        "why": "mechanism: The 2028 world says Medicare pays about $245 a month, a flat rate. The 'lesser of' term and the 'fixed dollar budget' that lets enrollment double are invented retroactively and carry the whole public-expansion story."
+      },
+      {
+        "quote": "the cash price cut to $349 lifted users from ~0.6M to ~3M legitimate plus ~2M gray",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: A 12% cash price cut ($399 to $349) is credited with roughly a five-fold rise in retatrutide users. The 30% extension data and supply expansion are the only other causes offered, and neither is quantified."
+      },
+      {
+        "quote": "It read out in May 2029 with ~22% slowing on CDR-SB at 18 months, a small absolute effect, and was approved Feb 2030 on priority review.",
+        "field": "world/drugs/pipeline_note",
+        "why": "magnitude: Approval about nine months after readout means filing came less than 12 months before approval, which breaks the envelope's phase-3 timing rule. The 2028 pipeline never listed tirzepatide MCI, so no earlier filing exists to justify it."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.5,
+      "inequality": 3.83,
+      "public_health": 5.0,
+      "cohesion": 3.83,
+      "epistemic": 4.33,
+      "overall": 4.27
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.0,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.77,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Access broadens: generics cost $39–69, public programmes cover 41% of users, and the bottom-to-top gap narrows from 11 to 7 points. Against that sit a documented fracture and sarcopenia ledger in `safety_ledger`, 340 counterfeit-pen hospitalisations, pediatric bone questions, and lockouts and DXA/grip-strength data flowing to wellness vendors. Reward blunting is now measured but anchored to one trial's 0.8-point figure, so the epistemic problem is eased rather than gone. This is a harder world with new losers (frail older users, cyclers, people in non-covering states), but better than 2028 on access and measurement, so mid-scale.",
+      "plausibility": "driver_fidelity: Every driver is visible in the fields and events: generic settlement, public expansion at 41%, MCI and longevity use, the bone and muscle communication, the 30% triple agonist, counterfeits, aesthetic inversion, and a niche anhedonia label. State action is mostly 'none', though eleven waivers versus seven is a thin stretch. mechanism: Claims 1 and 2 show the main asserted links, namely the retconned Medicare payment rule and the five-fold retatrutide uptake from a small price cut. The fracture finding is also hard to square with retatrutide's 2028 launch and its mostly cash-paid use, and the Medicaid-expansion rationale in the prose is garbled. magnitude: Population, income and age figures, the cycling arithmetic and the payer mix (57M) all reconcile, and the Medicare and Medicaid spending math checks out. Flaws are the MCI approval timing (claim 3) and 'Medicare is the largest single payer' when Medicare's 14M users are fewer than commercial's 15M.",
+      "generativity": "The Denise Kowalczyk scene is concrete: the Kroger refill, the DXA scan, the Humana strength class, her unmedicated grandson, faint lilacs, 'she's fine'. It implies several characters and ties the bone, hyposmia and anhedonia threads to daily life. The world fields add vivid cultural texture such as 'generic thin', butcher-bakery chains and DXA strip-mall studios."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 3.9244,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 47
   }
 }

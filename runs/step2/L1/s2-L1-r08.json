@@ -51,6 +51,41 @@
         "input_tokens": 16458,
         "output_tokens": 19779
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r08-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24400,
+        "output_tokens": 6430
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r08-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24400,
+        "output_tokens": 5982
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r08-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24400,
+        "output_tokens": 6961
+      }
     ]
   },
   "world": {
@@ -308,6 +343,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r08-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Weekend dose skipping lets people 'eat for real' at birthdays and Sunday dinners, so the family table has regained an appetite on Saturdays.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: oral semaglutide has a roughly week-long half-life, and the other daily orals also persist beyond a day. Skipping one or two doses should barely restore appetite, let alone cause 're-titration nausea on Mondays'. The central cultural shift is asserted without a plausible pharmacological chain."
+        },
+        {
+          "quote": "bought at a negotiated $149/month flat across doses: 2.0M × $149 × 12 = $3.6B/yr",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: the world says high-dose oral supply is binding and rationed by channel, yet manufacturers sell all doses to HRSA at $149, well below the $499 direct-cash price of amycretin. No reason is given why scarce tablets would go to the cheapest buyer at a flat price."
+        },
+        {
+          "quote": "The gambling sNDA was filed Sep 2029 on a phase 3 trial running since 2027 and got priority review, since no drug was approved for the condition.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: approval in May 2030 comes about 8 months after filing, inside the 12-month minimum for a phase 3 asset. The 2028 world also called gambling use 'still anecdotal', so a phase 3 running since 2027 appears from nowhere."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the use gap narrows, so the median person is not clearly worse off. The harms are structural and quiet: a bone and sarcopenia burden in 7.4M adults 65+, the body gap (muscle versus 'kiosk thin'), 'the flat' as an ordinary complaint, and BMI surcharges and gated waivers persisting. Adherence data are unverifiable with daily pills, and the anhedonia harm is still unmeasured while the state subsidises it. That is a recognisably harder society with new losers rather than a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable to fields and events, including adoption (+5.1), stalled prices, public expansion, gambling approval, oral parity, class stratification, the HRSA subsidy, and mainstream complaint. Safety and market shock stay at none. mechanism: Public expansion producing the bottom-third rise is well shown, but weekend skipping (claim 1) is pharmacologically doubtful and the flat $149 HRSA price under rationing (claim 2) is unexplained. Part D and Medicaid ramps are also fast. magnitude: Population figures sit inside the envelope, and the payer mix, cycling arithmetic, age check and $27.4B budget all reconcile. The gambling approval about 8 months after filing breaks the 12-month rule (claim 3), and the smoking indication is roughly 11 months after the May 2028 filing.",
+        "generativity": "The world and prose give strong characters and scenes: Denise, the Plano daughter, the pill bottle on the windowsill, Rick's 'quiet house', the Dollar General shake. Details like 'kiosk thin', 'off-dose Friday', Saturday sets, and Teamsters bargaining over skip data add texture. Cleveland and Dallas contrast, a ready film setting, and the day-in-the-life shows more than it explains."
+      },
+      "plausibility": 6.1
+    },
+    {
+      "custom_id": "s2-L1-r08-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The gambling sNDA was filed Sep 2029 on a phase 3 trial running since 2027 and got priority review, since no drug was approved for the condition.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the envelope allows approval of a phase 3 product no earlier than 12 months after filing, and this one is approved May 2030, 8 months after a Sep 2029 filing. The trial 'running since 2027' is invented, since the 2028 world called gambling use only anecdotal. The smoking-cessation sNDA, filed May 2028 and approved Apr 2029, is also 11 months."
+        },
+        {
+          "quote": "Weekend dose skipping lets people 'eat for real' at birthdays and Sunday dinners, so the family table has regained an appetite on Saturdays.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: oral semaglutide, which most Medicaid and HRSA users take, has a roughly week-long half-life, so skipping a weekend would barely change drug levels. The appetite release and the Monday re-titration nausea ('Everybody is') are asserted without a pharmacological chain."
+        },
+        {
+          "quote": "bought at a negotiated $149/month flat across doses: 2.0M × $149 × 12 = $3.6B/yr.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: the world says oral-peptide supply is binding and manufacturers ration high-dose orals by channel, yet they sell to a free programme at a flat starting-dose price across all doses. HRSA also reaches 2M enrolees within ten months of launch, with no chain showing why suppliers would accept this."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "About 40M users, bone and sarcopenia burdens that keep growing in absolute terms, unverifiable adherence metrics still used for gating (Indiana/Arkansas waivers, kiosk weigh-ins, BMI surcharges), and 'the flat' as an unmeasured but normalised harm make a harder society with new losers (low-wage oral users with no muscle support). Offsetting this, access widened, the use gap narrowed, and there is no new safety signal. The epistemic score is highest because dosing is now unverifiable and the reward-blunting mechanism is branded as therapy.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: adoption at 15.0%, stalled prices, public expansion, the gambling indication, oral parity via amycretin, no new safety signal, class stratification, the HRSA subsidy and the mainstream-complaint personality layer. mechanism: the chains for public expansion, the Medicaid and HRSA uptake of orals, and the supply-driven price stall are shown, but weekend-skipping pharmacology (claim 2) and HRSA's flat $149 under rationing (claim 3) are weak. magnitude: population figures, payer mix, age weighting, the cycling arithmetic and the $27.4B outlay all reconcile and sit inside the envelope. The deduction is for approval timing: gambling approved 8 months after filing (claim 1) and smoking cessation 11 months after filing, both under the 12-month rule.",
+        "generativity": "The prose has Denise, her Corolla and the windowsill pill bottle, Mr. Halloran's fridge DEXA printout, the Plano daughter with her 'You should lift', and Rick's gambling prescription. The world adds 'kiosk thin', 'Saturday sets', 'off-dose Friday', the Teamsters clause and the Ohio betting-tax funding, all of which could carry scenes. The day-in-the-life shows rather than explains."
+      },
+      "plausibility": 6.15
+    },
+    {
+      "custom_id": "s2-L1-r08-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The gambling sNDA was filed Sep 2029 on a phase 3 trial running since 2027 and got priority review, since no drug was approved for the condition.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the 2028 world lists gambling use as 'still anecdotal', with no phase 3 and no filing. A phase 3 programme is invented retroactively, and approval comes 8 months after filing (Sep 2029 to May 2030), inside the 12-month minimum the envelope sets even with priority review."
+        },
+        {
+          "quote": "Weekend dose skipping lets people 'eat for real' at birthdays and Sunday dinners, so the family table has regained an appetite on Saturdays.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: the candidate shows no pharmacology for appetite returning within a day or two of skipping a daily oral GLP-1/amylin agonist, whose effect persists across missed doses. The matching 'Monday re-titration nausea' is asserted, not explained, and the mass weekend-holiday culture is built on it."
+        },
+        {
+          "quote": "The figure is down from 40% because about 7.0 pts of adults started for the first time in 2029–30 and are still on their first course",
+          "field": "world/population/note",
+          "why": "Mechanism/magnitude: with the stated ~35% one-year persistence, most of the 7.0 pts who started over two years would have stopped by 2030. Claiming all of them are still on a first course sits badly with that persistence and with the 8.5-pt off-now pool."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "About 40M adults are on the drugs, with Part D and Medicaid expansion plus HRSA access reducing the use gap. Against that, the bone and sarcopenia burden grows with 65+ use at 12%, bottom-third and low-wage users are thin without protein or training, and the body gap widens ('kiosk thin'). Reward blunting is normalised as 'the flat' and still unmeasured, and adherence metrics are unverifiable, which makes the harm hard to name (epistemic 6). It is a harder society with new losers, but not a structural catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +5.1 pp to exactly 15.0, prices stalled, public expansion through Part D, Medicaid and HRSA, compulsive-behaviour indication, oral parity via amycretin, class stratification of bodies, mainstream complaint, and no new safety signal or market shock. mechanism: the chains are mostly shown (act, then opt-in, then Medicaid and HRSA volume; API-limited orals, then stalled prices), but claims 2 and 3 are asserted rather than explained: weekend dose-skipping as a stable behaviour, and new starters all still on a first course despite 35% persistence. The Medicaid jump from 2.6M to 9.0M while states opt in 'by late 2030' is also fast. magnitude: population figures sit inside the envelope (15.0, 23.5), and income, age, payer-mix and spending arithmetic all reconcile ($10.6B + $17.6B + $3.6B; $13.2B federal). The gambling approval is only 8 months after filing, with an unseeded phase 3, which breaks the 12-month approval rule (claim 1).",
+        "generativity": "The Denise Kowalczyk scene supplies characters (Denise, Mr. Halloran, the Plano daughter, Rick), objects (pill bottle on the windowsill, the DEXA printout, the Corolla) and a Saturday-skip ritual. The world fields add concrete locales (Parma, North Dallas), slang, genre labels like 'off-dose' and Teamsters bargaining. Many scenes are implied, such as the strength studio, the kiosk weigh-in and the sportsbook."
+      },
+      "plausibility": 6.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Weekend dose skipping lets people 'eat for real' at birthdays and Sunday dinners, so the family table has regained an appetite on Saturdays.",
+        "field": "world/body_and_culture/eating_as_ritual",
+        "why": "Mechanism: oral semaglutide has a roughly week-long half-life, and the other daily orals also persist beyond a day. Skipping one or two doses should barely restore appetite, let alone cause 're-titration nausea on Mondays'. The central cultural shift is asserted without a plausible pharmacological chain."
+      },
+      {
+        "quote": "bought at a negotiated $149/month flat across doses: 2.0M × $149 × 12 = $3.6B/yr",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: the world says high-dose oral supply is binding and rationed by channel, yet manufacturers sell all doses to HRSA at $149, well below the $499 direct-cash price of amycretin. No reason is given why scarce tablets would go to the cheapest buyer at a flat price."
+      },
+      {
+        "quote": "The gambling sNDA was filed Sep 2029 on a phase 3 trial running since 2027 and got priority review, since no drug was approved for the condition.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: approval in May 2030 comes about 8 months after filing, inside the 12-month minimum for a phase 3 asset. The 2028 world also called gambling use 'still anecdotal', so a phase 3 running since 2027 appears from nowhere."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 5.17,
+      "inequality": 5.17,
+      "public_health": 4.67,
+      "cohesion": 5.0,
+      "epistemic": 5.67,
+      "overall": 5.2
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 5.0
+    },
+    "plausibility": 6.17,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "Access broadens and the use gap narrows, so the median person is not clearly worse off. The harms are structural and quiet: a bone and sarcopenia burden in 7.4M adults 65+, the body gap (muscle versus 'kiosk thin'), 'the flat' as an ordinary complaint, and BMI surcharges and gated waivers persisting. Adherence data are unverifiable with daily pills, and the anhedonia harm is still unmeasured while the state subsidises it. That is a recognisably harder society with new losers rather than a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visible and traceable to fields and events, including adoption (+5.1), stalled prices, public expansion, gambling approval, oral parity, class stratification, the HRSA subsidy, and mainstream complaint. Safety and market shock stay at none. mechanism: Public expansion producing the bottom-third rise is well shown, but weekend skipping (claim 1) is pharmacologically doubtful and the flat $149 HRSA price under rationing (claim 2) is unexplained. Part D and Medicaid ramps are also fast. magnitude: Population figures sit inside the envelope, and the payer mix, cycling arithmetic, age check and $27.4B budget all reconcile. The gambling approval about 8 months after filing breaks the 12-month rule (claim 3), and the smoking indication is roughly 11 months after the May 2028 filing.",
+      "generativity": "The world and prose give strong characters and scenes: Denise, the Plano daughter, the pill bottle on the windowsill, Rick's 'quiet house', the Dollar General shake. Details like 'kiosk thin', 'off-dose Friday', Saturday sets, and Teamsters bargaining over skip data add texture. Cleveland and Dallas contrast, a ready film setting, and the day-in-the-life shows more than it explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.6311,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 36
   }
 }
