@@ -1,0 +1,33 @@
+{
+  "project": "GLP-1000",
+  "baseline_year": 2026,
+  "years_per_step": 2,
+  "steps": 5,
+  "runs_per_step": 50,
+  "beam": 3,
+  "beam_split": [17, 17, 16],
+  "plausibility_floor": 6,
+  "plausibility_floor_min": 4,
+  "min_survivors": 3,
+  "axes": {
+    "1": {"year": 2028, "name": "health",           "weights": {"flourishing": 2, "autonomy": 1, "inequality": 1, "public_health": 2, "cohesion": 1, "epistemic": 1}, "section_severity": null},
+    "2": {"year": 2030, "name": "economy",          "weights": {"flourishing": 1, "autonomy": 1, "inequality": 2, "public_health": 1, "cohesion": 1, "epistemic": 1}, "section_severity": "economy"},
+    "3": {"year": 2032, "name": "culture_and_body", "weights": {"flourishing": 1, "autonomy": 2, "inequality": 1, "public_health": 1, "cohesion": 2, "epistemic": 1}, "section_severity": "body_and_culture"},
+    "4": {"year": 2034, "name": "politics_and_state","weights": {"flourishing": 1, "autonomy": 2, "inequality": 1, "public_health": 1, "cohesion": 1, "epistemic": 2}, "section_severity": "state"},
+    "5": {"year": 2036, "name": "interior_life",    "weights": {"flourishing": 2, "autonomy": 1, "inequality": 1, "public_health": 1, "cohesion": 1, "epistemic": 2}, "section_severity": "interior_life"}
+  },
+  "section_severity_weight": 2,
+  "diversity_guard": {
+    "max_from_one_parent": 2,
+    "distinct_on": ["price_path", "cultural_response", "personality_layer"]
+  },
+  "models": {
+    "generator": "claude-opus-4-5",
+    "judge": "claude-sonnet-4-5",
+    "_note": "Check current model IDs in the Anthropic docs before the first run; judge must differ from generator."
+  },
+  "generation": {"temperature": 1.0, "max_tokens": 6000},
+  "judging": {"temperature": 0.0, "max_tokens": 1500, "judge_samples": 1},
+  "max_usd_per_step": 25,
+  "seed": 20261107
+}

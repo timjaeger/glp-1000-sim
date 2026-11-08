@@ -1,0 +1,125 @@
+{
+  "_doc": "Stochastic drivers drawn in code for every run. Weights are relative. 'parent_modifiers' are simple reweightings keyed on the parent world state; keep them few and legible. The generator must treat the drawn values as facts true by the end of the two-year step.",
+
+  "adoption_delta_pp": {
+    "type": "numeric",
+    "distribution": "normal",
+    "mean": 5.0,
+    "sd": 4.0,
+    "clip": [-8, 18],
+    "_note": "Percentage-point change in share of US adults currently on an incretin drug over two years. Baseline trend 2024→2026 was +8 pp (3%→11%, Gallup). Negative values model a retreat (coverage loss, safety scare, price shock).",
+    "parent_modifiers": [
+      {"if": {"path": "population.us_adults_on_drug_pct", "gte": 30}, "set": {"mean": 2.5, "sd": 4.0}},
+      {"if": {"path": "population.us_adults_on_drug_pct", "gte": 45}, "set": {"mean": 0.5, "sd": 3.5}}
+    ]
+  },
+
+  "price_path": {
+    "type": "categorical",
+    "options": {
+      "generic_collapse":  {"w": 2, "desc": "US cash price falls below ~$75/month as generics or near-generics arrive; access becomes an income floor question rather than a price question"},
+      "managed_decline":   {"w": 4, "desc": "Prices step down through negotiated channels (TrumpRx-style, Medicare, PBM deals) but brands hold ~$150–300/month; access is still rationed by coverage"},
+      "stalled":           {"w": 2, "desc": "Prices stop falling; litigation, patent extension or demand outpaces supply"},
+      "shock_up":          {"w": 1, "desc": "Price or availability shock: tariff, manufacturing failure, recall, or withdrawal of a public program"}
+    },
+    "parent_modifiers": [
+      {"if": {"path": "access.generic_us", "eq": true}, "set": {"generic_collapse": 0.5, "stalled": 3}}
+    ]
+  },
+
+  "coverage_shift": {
+    "type": "categorical",
+    "options": {
+      "public_expansion":            {"w": 3, "desc": "Medicare/Medicaid coverage widens; a public program becomes the default payer"},
+      "employer_retreat":            {"w": 3, "desc": "Employers keep dropping weight-loss coverage; coverage concentrates on diabetes/cardiac codes; a two-tier access system hardens"},
+      "status_quo":                  {"w": 2, "desc": "No structural change in who pays"},
+      "mandate_or_conditioning":     {"w": 1, "desc": "Coverage becomes conditional (BMI targets, adherence tracking) or is tied to employment, benefits or insurance premiums"}
+    }
+  },
+
+  "new_indications": {
+    "type": "multi",
+    "draws": {"0": 2, "1": 5, "2": 3},
+    "_note": "Number of new on-label or quasi-official indications arriving this step, then which.",
+    "options": {
+      "alcohol_use_disorder":        {"w": 5, "desc": "Approved or guideline-endorsed for alcohol use disorder"},
+      "nicotine":                    {"w": 3, "desc": "Smoking/vaping cessation"},
+      "compulsive_behaviour":        {"w": 3, "desc": "Gambling, shopping, screen or sexual compulsion — a 'compulsion' indication"},
+      "cognition_dementia":          {"w": 2, "desc": "Cognitive decline / dementia prevention"},
+      "pediatric_under_12":          {"w": 3, "desc": "Approval for children under 12"},
+      "longevity_wellness":          {"w": 3, "desc": "Off-label use for 'metabolic health' or longevity becomes mainstream among people without obesity"},
+      "mood_and_motivation":         {"w": 2, "desc": "Reward-modulation marketed as a mood, focus or 'quiet mind' indication"}
+    }
+  },
+
+  "safety_signal": {
+    "type": "categorical",
+    "options": {
+      "none":                        {"w": 3, "desc": "No new signal; existing ledger holds"},
+      "muscle_bone_wave":            {"w": 3, "desc": "Lean-mass and bone-density losses become a recognised population problem, especially in older users and long-term users"},
+      "vision_class_label":          {"w": 2, "desc": "Optic-nerve (NAION-type) risk moves from 'very rare' to a class warning"},
+      "gi_pancreatic_litigation":    {"w": 2, "desc": "Gastroparesis / pancreatic litigation reaches mass-tort scale"},
+      "anhedonia_labelled":          {"w": 3, "desc": "Reward-blunting / emotional flattening becomes a labelled adverse effect with a prevalence estimate"},
+      "pediatric_developmental":     {"w": 1, "desc": "A developmental, growth or psychiatric signal in children who started young"},
+      "novel_long_horizon":          {"w": 1, "desc": "An unforeseen effect appears only after 5+ years of continuous use"}
+    }
+  },
+
+  "next_gen_launch": {
+    "type": "categorical",
+    "options": {
+      "none":                        {"w": 2, "desc": "No new class reaches market this step"},
+      "triple_agonist_30pct":        {"w": 3, "desc": "A ~30%-weight-loss triple agonist launches; surgical-grade loss from a pen"},
+      "oral_parity":                 {"w": 3, "desc": "A pill matches injectables on efficacy; the needle barrier disappears"},
+      "monthly_or_implant":          {"w": 2, "desc": "Monthly injection or implant; adherence stops being a choice you make weekly"},
+      "muscle_preserving_combo":     {"w": 2, "desc": "Combination with a muscle-preserving agent; the 'skinny-frail' problem is sold as solved"}
+    }
+  },
+
+  "market_shock": {
+    "type": "categorical",
+    "options": {
+      "none":                        {"w": 4},
+      "generic_flood_counterfeits":  {"w": 2, "desc": "Cheap imports and counterfeits flood in; dosing errors and contaminated product become a public-health story"},
+      "tariff_geopolitics":          {"w": 1, "desc": "Supply politicised: tariffs, export controls, a national-champion manufacturer"},
+      "manufacturer_scandal":        {"w": 2, "desc": "Suppressed data, marketing misconduct or a trial scandal at a major manufacturer"},
+      "gray_market_resurgence":      {"w": 2, "desc": "Compounding / telehealth gray market regrows outside regulation, including for next-gen molecules"}
+    }
+  },
+
+  "cultural_response": {
+    "type": "categorical",
+    "options": {
+      "normalisation":               {"w": 3, "desc": "Being on it is unremarkable; being off it is what needs explaining"},
+      "backlash_body_politics":      {"w": 2, "desc": "A visible counter-movement: fat-acceptance revival, anti-pharma, religious or 'natural' framings"},
+      "class_stratification":        {"w": 3, "desc": "Body shape reads as income; thinness and muscle become class uniforms"},
+      "natural_movement":            {"w": 1, "desc": "An 'unmedicated' identity movement, with its own aesthetics and politics"},
+      "aesthetic_inversion":         {"w": 1, "desc": "Thinness devalues as it becomes cheap; a new scarce body ideal emerges (muscle, appetite, 'unmedicated vitality')"}
+    }
+  },
+
+  "state_action": {
+    "type": "categorical",
+    "options": {
+      "none":                        {"w": 3},
+      "subsidy":                     {"w": 2, "desc": "Direct subsidy or free provision as public-health policy"},
+      "restriction":                 {"w": 1, "desc": "Age limits, prescribing caps, advertising bans"},
+      "benefits_conditioning":       {"w": 2, "desc": "Benefits, premiums or employment conditioned on adherence or BMI; adherence monitored"},
+      "workforce_military":          {"w": 1, "desc": "Programmes for soldiers, pilots, police, shift workers; the drug as readiness infrastructure"}
+    }
+  },
+
+  "personality_layer": {
+    "type": "ordinal",
+    "options": {
+      "unrecognised":                {"w": 1, "desc": "Reward-blunting is anecdote only"},
+      "niche_side_effect":           {"w": 3, "desc": "Acknowledged in labels and clinics as an uncommon side effect"},
+      "mainstream_complaint":        {"w": 3, "desc": "Widely discussed; dose adjustment and 'drug holidays' are common practice"},
+      "marketed_feature":            {"w": 2, "desc": "Blunting is sold: calm, focus, freedom from craving — a wellness or productivity product"},
+      "employer_encouraged":         {"w": 1, "desc": "Institutions prefer or reward the blunted; adherence correlates with employment"}
+    },
+    "parent_modifiers": [
+      {"if": {"path": "interior_life.personality_layer", "in": ["marketed_feature", "employer_encouraged"]}, "set": {"unrecognised": 0, "niche_side_effect": 0.5}}
+    ]
+  }
+}

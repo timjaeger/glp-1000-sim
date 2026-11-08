@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ftrwrlds.com/glp-1000/run.schema.json",
+  "title": "GLP-1000 simulation run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "step", "year", "parent_lineage", "seed", "drivers", "status", "generator_model", "created_at"],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^s[1-5]-L[0-9]+-r[0-9]{2}$", "description": "e.g. s2-L1-r07"},
+    "step": {"type": "integer", "minimum": 1, "maximum": 5},
+    "year": {"type": "integer"},
+    "parent_lineage": {"type": "string", "description": "L0 for step 1 (the baseline), else the parent's lineage id"},
+    "seed": {"type": "integer"},
+    "drivers": {
+      "type": "object", "additionalProperties": false,
+      "required": ["adoption_delta_pp", "price_path", "coverage_shift", "new_indications", "safety_signal", "next_gen_launch", "market_shock", "cultural_response", "state_action", "personality_layer"],
+      "properties": {
+        "adoption_delta_pp": {"type": "number"},
+        "price_path": {"type": "string"},
+        "coverage_shift": {"type": "string"},
+        "new_indications": {"type": "array", "items": {"type": "string"}, "maxItems": 2},
+        "safety_signal": {"type": "string"},
+        "next_gen_launch": {"type": "string"},
+        "market_shock": {"type": "string"},
+        "cultural_response": {"type": "string"},
+        "state_action": {"type": "string"},
+        "personality_layer": {"type": "string"}
+      }
+    },
+    "status": {"type": "string", "enum": ["pending", "ok", "invalid", "error"]},
+    "generator_model": {"type": "string"},
+    "created_at": {"type": "string"},
+    "world": {"$ref": "world_state.schema.json"},
+    "prose": {
+      "type": "object", "additionalProperties": false,
+      "required": ["headline", "world_in_600_words", "a_day_in_the_life"],
+      "properties": {
+        "headline": {"type": "string", "maxLength": 140},
+        "world_in_600_words": {"type": "string"},
+        "a_day_in_the_life": {"type": "string", "description": "one ordinary person, one ordinary day, ~250 words; the film lives here"}
+      }
+    },
+    "scores": {
+      "type": "object", "additionalProperties": false,
+      "required": ["judge_model", "badness", "plausibility", "generativity", "rationale"],
+      "properties": {
+        "judge_model": {"type": "string"},
+        "badness": {
+          "type": "object", "additionalProperties": false,
+          "required": ["flourishing", "autonomy", "inequality", "public_health", "cohesion", "epistemic", "overall"],
+          "properties": {
+            "flourishing": {"type": "number", "minimum": 1, "maximum": 10},
+            "autonomy": {"type": "number", "minimum": 1, "maximum": 10},
+            "inequality": {"type": "number", "minimum": 1, "maximum": 10},
+            "public_health": {"type": "number", "minimum": 1, "maximum": 10},
+            "cohesion": {"type": "number", "minimum": 1, "maximum": 10},
+            "epistemic": {"type": "number", "minimum": 1, "maximum": 10},
+            "overall": {"type": "number", "minimum": 1, "maximum": 10}
+          }
+        },
+        "plausibility": {"type": "number", "minimum": 1, "maximum": 10},
+        "generativity": {"type": "number", "minimum": 1, "maximum": 10},
+        "rationale": {
+          "type": "object",
+          "required": ["badness", "plausibility", "generativity"],
+          "properties": {
+            "badness": {"type": "string"},
+            "plausibility": {"type": "string"},
+            "generativity": {"type": "string"}
+          }
+        }
+      }
+    },
+    "selection": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "axis": {"type": "string"},
+        "axis_badness": {"type": "number"},
+        "rank": {"type": "integer"},
+        "survived": {"type": "boolean"},
+        "new_lineage": {"type": ["string", "null"]},
+        "floor_used": {"type": "integer"}
+      }
+    }
+  }
+}
