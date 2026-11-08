@@ -20,7 +20,284 @@
     "state_action": "restriction",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:41:56Z"
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L3-r44",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16909,
+        "output_tokens": 22170
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 27.1,
+      "us_adults_ever_used_pct": 34.5,
+      "by_income_third_pct": {
+        "top": 33,
+        "middle": 27,
+        "bottom": 21
+      },
+      "by_age_band_pct": {
+        "18_29": 14,
+        "30_49": 28,
+        "50_64": 42,
+        "65_plus": 22
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 35,
+      "note": "FICTIONAL ESTIMATES. Current users: 27.1% of ~265M adults ≈ 72M. Age check: 0.20×14 + 0.33×28 + 0.24×42 + 0.23×22 = 2.8 + 9.24 + 10.08 + 5.06 ≈ 27.2. The income thirds (21/27/33) average 27. Ever-used: 34.5% (~91M), up 10.5 pp. Cycling: ever − current = 7.4 pp (~19.6M off now). Restarters are ~38% of current users (0.38×27.1 ≈ 10.3 pp), and ~25% of those off now had already cycled once (0.25×7.4 ≈ 1.85 pp), so (10.3 + 1.85)/34.5 ≈ 35% of ever-users have stopped and restarted. Why the 19.6M stopped: coverage events (job change, failed employer contract targets, Medicare lockout) ~7.5M; GI and other side effects ~5M, including ~0.8M told to stop or pause after a DXA scan or fracture since mid-2029; price or choice ~5M; Intact-movement 'quitters' a visible but small ~1M; other ~1.3M. Payer mix of the 72M current users: diabetes- or cardiac-coded across all payers ~23M; employer obesity coverage under outcomes contracts ~13M; Medicare obesity-only (Continuity Model) ~2.5M; Medicare Part D dementia-risk-coded tirzepatide ~2.5M since the Jun 2030 label (~1.6M switched from Continuity or cash, ~0.9M new); Medicaid obesity ~2.5M; brand cash ~17.5M; gray market ~11M. Sum: 23 + 13 + 2.5 + 2.5 + 2.5 + 17.5 + 11 = 72M. The big rise in the 50–64 band (29→42) comes from employer contracts, cash perimenopause and 'brain insurance' marketing, and 2028 users ageing in. Never-treated: roughly 55M adults with BMI ≥30 are not on a drug, concentrated in the bottom income third, the rural South and Intact-identifying households. Pediatric: ~0.6% of under-18s (~0.44M), down from 0.7% because nine states set under-16 limits. About 4 in 10 children live in a household with at least one adult on the drug."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 399,
+      "public_coverage": "Medicare GLP-1 Continuity Model: $245/month paid, ~$50 copay. It keeps the ≥80% refill-adherence rule, the ≥5% response at 6 months and the 12-month lapse lockout. From Apr 2030, enrollees 65+ also need a baseline DXA and ≥2 logged resistance sessions a week through a CMS-approved app or PT. About 2.5M enrollees: 2.5M × $245 × 12 ≈ $7.35B/yr. Part D dementia-risk indication (tirzepatide, Jun 2030): it is not a weight-loss use, so the statutory exclusion does not apply and plans must cover it at the $245 negotiated rate under standard cost-sharing, with no adherence or lockout conditions. About 2.5M users by Dec 2030: annualised 2.5M × $245 × 12 ≈ $7.35B, of which only ~$2.4B is booked in 2030 because of the ramp. Medicaid: 22 states cover obesity for ~2.5M enrollees, 2.5M × $245 × 12 ≈ $7.35B gross, federal share at ~65% FMAP ≈ $4.8B; 12 of those states attach adherence waivers, and CMS bars federal match for obesity-only use under age 12.",
+      "employer_coverage_pct": 49,
+      "generic_rest_of_world": "India has 70+ generic semaglutide brands at ~$8–40/month, and generic oral semaglutide has been on sale there since 2028. Canada, Brazil, Mexico, Turkey and most of Southeast Asia sell generic injectables. China launched domestic generic semaglutide in 2029. US exclusivity still runs to ~2031–32.",
+      "generic_us": false,
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Prices stalled. Direct and TrumpRx prices are unchanged from 2028: injectable semaglutide $199, Zepbound $249–299, orals from $149, retatrutide $399. The expected 2030 round of cuts did not happen, for three reasons. (1) The Federal Circuit upheld the semaglutide compound patent (Nov 2029), ending hopes of early generic entry. (2) The 2025 tariff-for-price deals were renewed at the same prices, not lower ones. (3) After the dementia label, Lilly rations high-dose tirzepatide supply to stay off the FDA shortage list, which would reopen 503B compounding. In real terms, prices are drifting slightly upward. Employer coverage rose 44%→49% (BGH 2030), but it is conditional. Most of it comes through 'metabolic outcomes contracts' run by vendors: connected-pen adherence, quarterly weigh-ins, and loss of coverage if the employee misses a ≥10% target at 12 months. About one in three large self-funded employers now apply a BMI or adherence premium differential, up from one in five. The gray market grew to ~11M people (~15% of users) at unchanged prices: imported Indian and Chinese generics at $60–120 and research-peptide retatrutide at $150–250. Since Jan 2030 it is barred from paid social and influencer advertising, and it now sells by referral codes and Discord. New starts are ~40% oral."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, Lilly; approved Feb 2028)",
+        "GLP-1 + amylin combination, weekly injectable (CagriSema; approved Dec 2026)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 29,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide; restricted under 16 in nine states)",
+        "smoking and nicotine-vaping cessation in adults with overweight or obesity (semaglutide, Sep 2028)",
+        "reduction in risk of incident mild cognitive impairment or dementia in adults ≥60 with obesity or type 2 diabetes (tirzepatide, Jun 2030)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'brain insurance': tirzepatide or semaglutide for dementia prevention in normal-weight or 50–59 adults, mostly cash-pay",
+        "nicotine cessation in normal-weight smokers and vapers",
+        "alcohol reduction: phase 3 positive, sNDA under review",
+        "microdosing for 'metabolic health' via gray-market telehealth",
+        "research-peptide retatrutide in gym and recomposition communities",
+        "perimenopausal weight and 'brain fog' use marketed by cash telehealth"
+      ],
+      "pipeline_note": "No new class reached the US market in 2029–30 (driver: none). Amycretin was filed Mar 2029 and is on standard review; the FDA extended it to request bone-density data, with a decision now expected 2031. Survodutide (Boehringer) was filed Feb 2029 and got a complete response letter in Dec 2030 asking for DXA and fracture data in participants ≥60. MariTide (monthly) was filed Sep 2030, so a decision is 2031 at the earliest. Semaglutide's alcohol-use-disorder sNDA was filed Jul 2029 after a positive phase 3. Its review was extended over SHAPS anhedonia data, an advisory committee met Nov 2030, and a decision is due 2031. Tirzepatide's dementia-risk label (Jun 2030) rests on SURMOUNT-MIND: ~9,000 adults ≥60 with obesity or T2D followed for 3 years. Incident MCI or dementia fell (HR 0.81), an absolute reduction of ~1.6 pp, with benefit concentrated in participants with vascular risk. The global incretin market is ~$140B (2030), and the growth is volume-driven because prices are flat."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading side-effect cause of discontinuation; worst with top-dose retatrutide and gray-market titration.",
+        "regulatory_response": "Labelled; Ozempic label 'not recommended in severe gastroparesis'."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; retatrutide real-world incidence is still above trial rates.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. MDL discovery mattered more for what it unsealed about bone data than for pancreatitis.",
+        "regulatory_response": "Labelled; MDL ongoing, first bellwether trial set for 2031."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Now treated as a population problem. In Medicare claims, falls requiring ED care in users ≥70 with ≥15% loss run ~20% above matched non-users. Geriatricians report 'thin-frail' patients. Interim Sentinel data suggest weight regained after cycling is disproportionately fat.",
+        "regulatory_response": "Class labeling change (Apr 2030): a sarcopenia and falls warning, with resistance exercise and ≥1.2 g/kg protein recommended in users ≥65. The CMS Continuity Model now requires a logged strength programme for enrollees 65+."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture in older and long-term users",
+        "status": "established",
+        "prevalence_note": "In Medicare claims (2029), hip fracture risk was HR ~1.35 in users ≥65 on drug ≥2 years with ≥15% loss, an excess of ~3 per 1,000 person-years, highest in women over 70. That is roughly 15,000 excess hip fractures a year against a ~300,000 baseline. Unsealed Novo DXA sub-study data (STEP-Senior) showed ~4–5% hip BMD loss at 68 weeks, unpublished for two years.",
+        "regulatory_response": "Class warning (Apr 2030): baseline DXA recommended ≥65 or for postmenopausal women on drug >1 year. The tirzepatide dementia label carries the same warning. FDA asks for DXA data in pending BLAs, and survodutide's complete response letter cites it."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; risk, if real, is very low.",
+        "regulatory_response": "EMA 'very rare' label for semaglutide; no US class label."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new causal evidence, including in the AUD and cessation trials.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / apathy / anhedonia",
+        "status": "established",
+        "prevalence_note": "At the FDA's request, the semaglutide AUD phase 3 used the SHAPS anhedonia scale. Clinically meaningful anhedonia appeared in ~3.5% on drug vs ~1.5% on placebo at week 26, mostly at top doses and reversible on dose reduction. Real-world prevalence is unknown. It is uncommon, not rare, and not universal.",
+        "regulatory_response": "Class labeling change (Apr 2030) lists 'apathy/anhedonia' as an uncommon adverse reaction (≥1% excess). Some health systems screen with PHQ-9 plus SHAPS at 3 months. It is a central question for the pending AUD decision."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Coverage-driven stops (failed employer contract targets, Medicare lockouts) remain the commonest cause of discontinuation. Roughly half of lost weight returns within a year.",
+        "regulatory_response": "None directly. It underpins the adherence conditions in Medicare, Medicaid and employer contracts."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Low protein and calcium intake are now implicated in the bone and muscle findings; vitamin D deficiency is common in older users.",
+        "regulatory_response": "The class labeling change references nutrition counselling; professional societies recommend annual labs."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; adolescents; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "Interim Sentinel cycling analysis (2030): each stop-and-restart cycle associates with a net loss of lean mass. This is unadjusted for age and is contested. The adolescent cohort has not yet reached 5 years.",
+        "regulatory_response": "Sentinel cycling study continuing; adolescent postmarketing registries; nine states have under-16 limits."
+      },
+      {
+        "effect": "Compounded / counterfeit / research-peptide product harms",
+        "status": "established",
+        "prevalence_note": "FDA adverse-event reports tied to non-approved product passed ~7,000 by late 2030. Research-peptide retatrutide drives dosing errors and contamination.",
+        "regulatory_response": "503B exclusion stands; joint FDA–FTC advertising enforcement (Jan 2030); personal importation still largely unpoliced."
+      },
+      {
+        "effect": "Acquired olfactory and taste dysfunction after ≥5 years of continuous use",
+        "status": "emerging",
+        "prevalence_note": "A replicating UK cohort (2029) found HR ~1.3; confounding by diabetes duration is still debated.",
+        "regulatory_response": "EMA PRAC concluded 2029 with 'uncommon: hyposmia with long-term use' on EU labels. The FDA has made no label change, with the Sentinel review ongoing."
+      },
+      {
+        "effect": "Dysesthesia (skin sensitivity/pain) with triple agonist",
+        "status": "established",
+        "prevalence_note": "Mostly mild and dose-related.",
+        "regulatory_response": "Labelled."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households are ~38% of US households. Snack and confectionery volumes are down ~3% more over two years, ~6–7% below 2026. Calcium- and protein-fortified 'bone and muscle' SKUs boomed after the Apr 2030 label. Hormel, Danone and General Mills market 'strong-aging' lines to over-60s. Bakeries and heritage brands with 'Intact' credibility (lard pie crust, whole-milk dairy) have a niche premium in Nashville and Austin. Midwest private-label snack plants keep consolidating.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Spirits volumes are down ~4% more over two years, and beer is slightly down. The pending AUD indication is now a named risk factor for Diageo and Constellation. Tobacco adds cessation-driven decline in menthol and vape volumes in GLP-1-dense states. Non-alc keeps growing but does not replace lost value.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat. Half-portion menus are standard and protein add-ons are universal. A small 'unmedicated supper club' format, with communal long tables and full plates, spreads in Nashville, Austin and Asheville. Buffets continue closing.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "The plus-size specialists keep shrinking. Size churn from regain cycles continues. Intact-aligned labels sell loose workwear and 'body as found' marketing to under-30 women, which is visible but small in volume.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Resistance training is the growth engine. The CMS strength-logging requirement turned SilverSneakers-style programmes, senior PT clinics and app vendors into compliance infrastructure. Big-box gyms are adding 'Continuity-approved' classes. Gray-market peptides are still sold in gym circles.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight-management coverage is back to 49%, nearly all of it under outcomes contracts with connected-pen adherence, quarterly weigh-ins and target-based termination. About a third of large self-funded employers use BMI or adherence premium differentials. Pharmacy trend is ~9% because volume grew and prices did not fall. Medicare Part D plans absorb dementia-coded tirzepatide and lobby CMS to apply Continuity-style conditions.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly is dominant and capacity-constrained. It rations high-dose tirzepatide and is building in North Carolina and Indiana. Novo is weakened: it paid a ~$1.9B DOJ/FTC settlement over the delayed DXA data, its CEO resigned, and its US share is still falling. Industry revenue grows on volume, and stalled prices protect margins.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Over 60, a very thin body now draws a second look as possibly frail, not just medicated. 'Reta face' has a companion phrase, 'Zep hips', for older women with visible wasting. Among under-30s in the South, a soft, untoned, ordinary body is worn as an identity: Intact.",
+      "thinness_and_class": "Payer still sorts bodies. Professionals hold employer contracts and cash. Hourly workers carry surcharges or gray-market product. Bottom-third use has risen to 21% through Medicaid expansion and $60 imports, but discontinuation is highest there. The affluent can afford DXA scans, trainers and protein, and the poorer old more often get fractures.",
+      "eating_as_ritual": "Half portions and protein-first are standard in GLP-1 households, with calcium and protein shakes added for over-60s. The Intact movement made the shared full plate a political act: Sunday suppers, bread-baking, potlucks with 'no pens at the table' signs, centred in Nashville, East Tennessee and Austin's church and homeschool networks.",
+      "dating_and_intimacy": "'Intact' badges appear on Hinge and on faith-dating apps, and 'on it / off it' is common in New York and LA. The new anhedonia label lets some couples name what they had already felt, and some partners ask for a dose reduction as a relationship request.",
+      "meaning_of_appetite": "Officially, appetite is treatable and so is wanting, and now even cognitive decline is part of the pitch. The Intact movement says appetite is the self. It fuses MAHA 'natural body' influencers, the evangelical Made Whole congregations and a younger secular homesteading aesthetic, and it is centred on under-30 women and rural men in Tennessee and Texas. Its politics: under-16 bans (won in nine states), ending BMI surcharges (stalled federally), and 'medical freedom in employment'. Oakland and Atlanta fat-liberation organisers reject it as a purity culture that celebrates naturally thin people as much as fat ones.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "It is acknowledged but uncommon. The FDA-requested SHAPS data from the AUD trial (~3.5% vs ~1.5% placebo) made it a labelled adverse reaction in Apr 2030. Clinics that screen report a few percent of users with flagged anhedonia, mostly at top doses. Many more users describe milder 'quieting' that falls below any threshold, and no instrument captures it.",
+      "framing": "Side effect, for a minority. 'Flatness' now has a label line and a clinic workflow: reduce the dose, switch agent, or add an antidepressant. For everyone below the threshold it remains framed as maturity or calm.",
+      "effect_on_work": "Some employees ask for dose reductions citing the label, which can make them miss outcomes-contract weight targets and lose coverage. HR vendors have not reconciled this. Sales managers privately joke about 'SHAPS scores'. Employers still praise steadier staff.",
+      "effect_on_art_and_play": "Songwriters in Nashville and Atlanta write openly about 'coming off to feel it', and an Intact-adjacent roots scene sells 'unmedicated' as authenticity. Bar trivia and bowling leagues keep thinning. High-sensation live formats keep their following.",
+      "effect_on_intimacy": "Couples therapists now ask about incretin dose at intake. Low libido and 'content not in love' complaints are being attributed to the drug for the first time, which some patients find relieving and some find threatening.",
+      "effect_on_politics": "Intact candidates in Tennessee and Texas legislative primaries cite the label: 'even the FDA admits it'. The pharma-aligned side cites the 3.5% figure as proof the effect is rare. Neither side has data on turnout.",
+      "severity": 3
+    },
+    "state": {
+      "regulatory_posture": "Restrictive at the edges, permissive at the core. The FDA approves fast (the dementia label on priority review) but slows the pipeline over bone data, issued class bone, muscle and anhedonia labeling, and with the FTC bans paid social and influencer ads for compounded and imported incretins. Nine states (TX, FL, TN, OK, UT, ID, AR, MO, LA) bar obesity-only prescribing under 16 except under a two-specialist review. The administration's MAHA wing claims the state bans and the ad rule. Its price-deal wing holds TrumpRx prices flat.",
+      "subsidy_or_mandate": "No mandate. Public obesity coverage is conditional: the Medicare Continuity Model with adherence, response and, for 65+, DXA and strength-logging conditions; Medicaid in 22 states, 12 with waivers. Dementia-coded Part D coverage sits outside those conditions, and CMS is reviewing that gap. Employers use outcomes contracts and ACA wellness differentials.",
+      "conditioning_or_surveillance": "Payers and employers now ingest connected-pen adherence, smart-scale weights and, for older Medicare enrollees, strength-app logs. About a third of large self-funded employers attach premium differentials of $50–150/month. A federal bill to bar BMI surcharges in ERISA plans died in committee in 2030. Texas's 2027 ban still covers only state-regulated plans.",
+      "workforce_or_military": "Accession waivers continue, with ≥6 months off-drug stability. After the bone warning, the Army added a stress-fracture screening requirement for recruits with drug-assisted weight loss. TRICARE coverage is unchanged.",
+      "geopolitics_of_supply": "The US–India price gap is unchanged (~$199 vs ~$15) and now includes Chinese generics. The tariff-for-price deals were renewed at flat prices. The Novo scandal is a Danish political story: the pension funds that own the Novo Holdings stake and Danish parliamentary debate. Lilly's supply rationing is quietly managed to keep compounding closed.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2029-06",
+        "event": "Documents unsealed in the incretin MDL show Novo Nordisk held back for two years a DXA sub-study (STEP-Senior) finding 4–5% hip bone loss in older semaglutide users; Novo's CEO resigns and the company later pays about $1.9 billion to settle DOJ and FTC claims.",
+        "driver": "manufacturer_scandal; safety_signal"
+      },
+      {
+        "date": "2029-09",
+        "event": "A coalition of large self-funded employers, led by the Business Group on Health, restores obesity coverage through vendor 'metabolic outcomes contracts' tied to connected-pen adherence and a ≥10% loss target; by 2030 employer coverage is back to 49%, and a third of large employers attach premium differentials.",
+        "driver": "coverage_shift"
+      },
+      {
+        "date": "2029-11",
+        "event": "The Federal Circuit upholds Novo's semaglutide compound patent; Lilly and Novo renew their tariff-for-price deals at unchanged TrumpRx prices for 2030, ending expectations of further cuts.",
+        "driver": "price_path"
+      },
+      {
+        "date": "2030-01",
+        "event": "Nine states' bars on prescribing incretins for obesity alone to children under 16 take effect, along with a joint FDA–FTC ban on paid social and influencer advertising for compounded and imported incretins; Intact rallies in Nashville claim the win.",
+        "driver": "state_action; cultural_response"
+      },
+      {
+        "date": "2030-04",
+        "event": "FDA class labeling change adds warnings for bone loss and sarcopenia (baseline DXA scans recommended at 65+) and lists apathy and anhedonia as an uncommon adverse reaction; CMS adds DXA and strength-logging requirements to the Medicare Continuity Model.",
+        "driver": "safety_signal; personality_layer; coverage_shift"
+      },
+      {
+        "date": "2030-06",
+        "event": "FDA approves tirzepatide to reduce the risk of mild cognitive impairment or dementia in adults 60 and older with obesity or type 2 diabetes; because this is not a weight-loss use, Medicare Part D must cover it, and about 2.5 million beneficiaries are on dementia-coded prescriptions by December.",
+        "driver": "new_indications"
+      }
+    ],
+    "open_tensions": [
+      "The dementia code is a back door. Medicare beneficiaries recoded from the conditioned Continuity Model into unconditioned Part D coverage escape adherence, DXA and strength-logging rules. CMS and Part D plans want to close the gap, and the dementia-prevention population (60+) is exactly the group the bone warning targets.",
+      "Outcomes contracts punish dose reduction. Employees who lower their dose for labelled anhedonia or bone loss can miss weight targets and lose coverage. Interim Sentinel data suggest each forced cycle costs lean mass, so payer rules may be manufacturing frailty.",
+      "Prices are flat, demand is up, and Lilly is rationing high-dose tirzepatide to keep compounding closed. The 2031–32 US generic cliff and the pending AUD, amycretin, survodutide and MariTide decisions all land at once, now under a regulator demanding bone data.",
+      "The Intact movement has won age limits and an ad ban and is pushing to end BMI surcharges in ERISA plans. It holds rural Southern legislatures while a quarter of adults are on the drug, which leaves a country split by payer and by identity."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; brand exclusivity still runs to roughly 2031–32.",
+      "The TrumpRx cash channel still operates, with oral initial doses (Wegovy pill, Foundayo) at $149/month and injectable semaglutide at $199.",
+      "Wegovy's list price is still $1,349/month, and almost nobody pays it.",
+      "Medicare pays ~$245/month with a ~$50 beneficiary copay for covered obesity use under the Continuity Model, with its 12-month lapse lockout.",
+      "The FDA's Jan 2026 removal of the suicidal-ideation warning from Wegovy, Zepbound and Saxenda labels stands; it has not been reinstated."
+    ]
+  },
+  "prose": {
+    "headline": "72 Million on the Pen, Prices Frozen, and Grandma's Hip Is Breaking: Inside America's Conditional Cure",
+    "world_in_600_words": "At the end of 2030 a little more than one American adult in four is on an incretin drug, about 72 million people, and almost 20 million more have been on one and stopped. Prices have stopped falling. Generics are coming in 2031 or 2032, but they are not here yet. The Federal Circuit kept Novo's patent intact in 2029, the tariff deals were renewed at the same numbers, and Lilly is quietly rationing its highest doses of tirzepatide so the FDA never declares a shortage and reopens the door to compounders. Brand semaglutide costs $199 a month in cash, the pills $149, Zepbound up to $299 and retatrutide $399, just as two years ago.\n\nWhat changed is the contract. Employers came back. Nearly half again cover obesity, but through vendors who read the connected pen, collect the smart-scale weight each quarter and end coverage if an employee has not lost a tenth of their body weight within a year. A third of big self-funded employers charge a monthly premium differential to anyone who is heavy and not complying. Medicare's Continuity Model still pays $245 and still locks out people who miss refills. Since April, enrollees over 65 must also have had a bone scan and must log two strength sessions a week in an approved app.\n\nThat rule exists because of bones. In mid-2029 documents unsealed in the pancreatitis litigation showed Novo had sat for two years on a bone-scan sub-study in older patients showing measurable hip loss. The CEO left and the company paid nearly two billion dollars. By then Medicare claims had already shown it: older people who lost a lot of weight and kept it off were breaking hips about a third more often. Spread across millions, that comes to roughly fifteen thousand extra hip fractures a year. Orthopaedic wards in Florida and Arizona noticed before the journals did. In April the FDA put bone and muscle warnings on every incretin label and, in the same action, admitted something it had long avoided. In a minority of patients, about two in a hundred more than on placebo, the drug flattens pleasure. Clinics now ask about it at three months. Most people never fall below the line, and some quietly lower their dose and then miss their employer's weight target.\n\nIn June the FDA approved tirzepatide to reduce the risk of dementia in people over sixty with obesity or diabetes. The benefit is real and modest, a point and a half over three years. Because the law bars Medicare from paying for weight loss but not for brains, Part D plans now cover it with no refill checks and no lockouts. Two and a half million older Americans hold dementia-coded prescriptions, many recoded by their doctors out of the conditioned obesity programme. CMS is studying the gap. These are the same patients the bone warning was written for.\n\nThe counter-movement has a name now: Intact. It began in Nashville church kitchens and East Tennessee homeschool co-ops. It is young, rural and female more than anyone expected, and it is aesthetically specific: lard crusts, long tables, soft arms, pins reading 'no pens at the table'. It won under-16 prescribing limits in nine states and a federal ban on influencer advertising for imported and compounded drugs. Its candidates quote the anhedonia label in primaries. Fat-liberation organisers in Oakland call it a purity cult. A federal bill to ban weight surcharges died in committee.\n\nSnack volumes are a few points lower again and spirits lower still. Calcium-fortified protein shakes sell to sixty-five-year-olds as 'strong aging'. Senior strength classes have become compliance infrastructure. The country is thinner, steadier and better documented. Its older users are a little more breakable, and who stays on the drug is decided by payer rules more than by doctors.",
+    "a_day_in_the_life": "Denise Kowalczyk, sixty-eight, does her band rows on the kitchen floor in Dayton at six-forty, phone propped against the toaster so StrongStart can watch her elbows. Two sets. The app chimes green. Ray, seventy, is already eating toast with real butter and does not comment.\n\nThe DXA letter is still on the fridge under the Bengals magnet: osteopenia, left hip, T-score minus two point one. Dr. Achebe circled it in blue.\n\nAt ten she sits in the exam room while Achebe types. 'I can move you off Continuity,' he says. 'Same drug. Part D, the brain indication. No app.' Denise thinks about her mother at the end, asking who Ray was. 'The copay?' 'About the same.' He prints the calcium sheet anyway.\n\nLunch at Bob Evans with Carol, who is back from rehab with a walker and a new hip. Carol orders the half portion. Denise orders the half portion. They split nothing.\n\nAt two her granddaughter Madison FaceTimes from Knoxville, fifteen, freckles, a wooden pin on her denim jacket that says INTACT. She shows Denise a pie she made with lard. 'Grandma, you look little.' Denise says thank you.\n\nWater aerobics at four. She logs it, though water doesn't count.\n\nAfter dinner she reads the new insert at the table, the long folded paper, all of it, past the bones, to a line she reads twice: apathy. She folds it back along the creases. Ray asks if she wants to watch something. She says sure, whatever he wants. She means it, mostly."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }

@@ -21,7 +21,301 @@
     "state_action": "none",
     "personality_layer": "unrecognised"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:41:56Z"
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L3-r34",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16946,
+        "output_tokens": 17024
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_019ahX37We8zkkKyAMvmBPHB",
+        "custom_id": "s2-L3-r34",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 29289,
+        "output_tokens": 11542
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2030,\"fictional\":true,\"still_true\":[\"No FDA-approved generic semaglutide or tirzepatide exists in the US; brand exclusivity still runs to roughly 2031–32.\",\"Medicare pays ~$245/month with a ~$50 beneficiary copay for covered obesity use under the CMS Medicare GLP-1 Continuity Model. The ≥80…"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; brand exclusivity still runs to roughly 2031–32.",
+      "Medicare pays ~$245/month with a ~$50 beneficiary copay for covered obesity use under the CMS Medicare GLP-1 Continuity Model. The ≥80% refill-adherence rule, the ≥5%-at-6-months response rule and the 12-month lapse lockout are all unchanged.",
+      "The TrumpRx cash channel still operates, with oral initial doses (Wegovy pill, Foundayo) at $149/month.",
+      "Wegovy's list price is still $1,349/month, and almost nobody pays it.",
+      "Texas's 2027 ban on BMI-based premium surcharges in state-regulated plans stands unchanged, and ERISA self-funded employer plans remain exempt from it."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 17.6,
+      "us_adults_ever_used_pct": 26.5,
+      "by_income_third_pct": {
+        "top": 23,
+        "middle": 17.5,
+        "bottom": 12.3
+      },
+      "by_age_band_pct": {
+        "18_29": 9.5,
+        "30_49": 17.5,
+        "50_64": 27.5,
+        "65_plus": 14.5
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 34,
+      "note": "FICTIONAL ESTIMATES. About 47.2M of ~268M US adults are currently on an incretin (17.6%), for any indication. Net adoption is flat because churn now matches new starts. Retatrutide uptake and normalisation add users. Three things offset them: the Aug 2029 counterfeit scare, which pushed some gray-market users off entirely; continuing coverage-driven stops; and Continuity Model lockouts. Age check: 0.20×9.5 + 0.33×17.5 + 0.24×27.5 + 0.23×14.5 = 1.90 + 5.78 + 6.60 + 3.34 ≈ 17.6. Income thirds (12.3/17.5/23) average to 17.6. Cycling arithmetic: ever 26.5% − current 17.6% = 8.9% of adults (~23.9M) have used and are off now. About 38% of current users are restarters (0.38×17.6 ≈ 6.7 pp), and about 25% of those currently off had already cycled at least once (0.25×8.9 ≈ 2.2 pp). That gives (6.7+2.2)/26.5 ≈ 34% of ever-users who have stopped and restarted at least once. Of the ~23.9M currently off, ~7M stopped because a coverage change, job change or lockout ended it; ~1.2M were gray-market users who quit after the 2029 counterfeit cluster; the rest stopped for GI effects, cost or choice. Payer mix of the 47.2M current users: diabetes- or cardiac-coded coverage ~20.5M; employer obesity coverage ~7.5M; Medicare obesity-only (Continuity Model) ~1.6M; Medicaid obesity ~1.5M; brand cash via TrumpRx or direct ~9.6M; gray market (imports, 503A, research peptide) ~6.5M. Sum: 20.5+7.5+1.6+1.5+9.6+6.5 = 47.2M. Roughly a third of US adults with obesity (~40M of ~110M) are on a drug at any time. The rest are uncovered, priced out, lapsed, intolerant or refusing. Pediatric: 0.6% of ~73M under-18s (~0.44M), down from ~0.5M after the 2030 growth signal, with starts in early puberty falling most. About 1 in 4 US children lives in a household where at least one adult is on the drug."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 299,
+      "public_coverage": "Medicare: the CMS Medicare GLP-1 Continuity Model is unchanged. It pays $245/month with a $50 copay, and requires ≥80% PDC and ≥5% loss at 6 months, with a 12-month lockout on lapse. About 1.6M obesity-only beneficiaries are enrolled. Spending: 1.6M × $245 × 12 ≈ $4.7B/yr, slightly above CBO's ~$4B/yr path, because retatrutide is billed at the same $245 under the model. About 140k beneficiaries were locked out in 2029, mostly for refill gaps. Medicaid: the same 19 states cover ~1.5M enrollees at $245, for 1.5M × $245 × 12 ≈ $4.4B/yr gross. The federal share at ~65% FMAP is ≈ $2.9B. Seven states keep adherence waivers; no state has joined or left since 2028.",
+      "employer_coverage_pct": 43,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 70+ semaglutide brands at ~$6–35/month, including oral generics launched in 2028. China's domestic semaglutide generics, after the 2026 patent expiry there, export API and finished pens at scale. Canada, Brazil, Mexico and Turkey have generics at CAD 60–100 or local equivalents. Generic liraglutide is everywhere. No generic tirzepatide exists anywhere in a major market.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Prices follow managed decline. TrumpRx and manufacturer direct: injectable semaglutide $179 (from $199, Jan 2030 renegotiation); Zepbound $249–279; orals from $149; retatrutide $299 (cut from $399 in the Nov 2029 TrumpRx round, in exchange for tariff relief on Lilly's Irish fill-finish). Brands now sit fully inside the $149–299 band. Employer weight-management coverage drifted from 44% to 43% (Business Group on Health 2030), a status quo with no structural change. Code-gated coverage (T2D, CVD, OSA, MASH, or BMI ≥35 plus a lifestyle programme) remains the norm. Gray market: the flood of Chinese and Indian finished product cut telehealth import prices to $35–90/month, and counterfeit brand-name pens circulate through social-media sellers at $90–150. Reports of counterfeits rose sharply after the Aug 2029 hospitalisation cluster. Gray volume still grew modestly, from 6M to 6.5M users, as cheaper product replaced the people who quit after the scare. Research-peptide retatrutide persists despite the $299 brand price, because it costs $90–150. New starts are ~45% oral."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, Lilly; approved Feb 2028, high-dose label expansion Mar 2029)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, Boehringer Ingelheim; approved Jun 2030)",
+        "GLP-1 + amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide at approval, Jun 2030)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "smoking and nicotine-vaping cessation in adults with overweight or obesity (semaglutide, Sep 2028)",
+        "alcohol use disorder in adults, regardless of BMI (semaglutide, Jun 2030; first incretin label without a weight criterion)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'Quiet Mind' and 'food-noise' programmes: low-dose oral semaglutide or compounded injectables marketed by telehealth firms for calm, focus and 'less mental chatter', with no label and no trial",
+        "nicotine cessation in normal-weight smokers and vapers",
+        "microdosing for 'metabolic health'",
+        "research-peptide retatrutide in gym and recomposition communities",
+        "gambling and compulsive shopping 'craving support' via addiction-medicine clinics, citing the AUD label",
+        "pediatric under-12 use under specialist care, now falling after the 2030 growth signal"
+      ],
+      "pipeline_note": "The triple-agonist driver is realised through retatrutide, already on the market. The Mar 2029 high-dose label expansion is based on TRIUMPH extension data showing ~30% mean loss in BMI ≥35. The TrumpRx price cut to $299 in Nov 2029 moved it from premium exception to mainstream, and retatrutide is now ~14% of new injectable starts. Survodutide was filed Feb 2029 and approved Jun 2030, 16 months later; it is positioned for MASH, with modest obesity uptake. Amycretin was filed Sep 2029 and is under FDA review, with no decision before 2031. MariTide (monthly) remains in phase 3, with filing expected 2031; it is not on the US market. The semaglutide AUD phase 3 read out Mar 2029 (heavy-drinking days cut ~30% vs placebo at 52 weeks). The sNDA was filed May 2029 and approved Jun 2030 under standard review. The 'mood and motivation' driver is realised through marketing rather than a label. No incretin carries a mood, focus or anhedonia indication, and Novo and Lilly do not promote one. Telehealth firms sell 'Quiet Mind' as wellness language around food noise, which the FDA has not challenged. A Lilly-sponsored phase 2 in binge-eating disorder is enrolling. The global incretin market is ~$135B in 2030."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of non-coverage discontinuation. Worse with the high-dose retatrutide label and with gray-market product of unknown concentration.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss. Retatrutide real-world cholecystectomy rates run above the trials.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low.",
+        "regulatory_response": "Labelled; MDL ongoing, first bellwether trial scheduled 2031."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone density",
+        "status": "established",
+        "prevalence_note": "Bone-density findings in women over 60 were replicated in a 2029 US cohort, with a modest excess of hip fracture after ~30% loss.",
+        "regulatory_response": "Retatrutide label recommends resistance exercise and DEXA consideration in older women; no class warning."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict.",
+        "regulatory_response": "EMA 'very rare' label; no US class label."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new causal evidence, including in AUD trial populations.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "emerging",
+        "prevalence_note": "Still unmeasured. The AUD trials used drinking endpoints only, and none included a validated anhedonia or motivation scale. The same mechanism is now sold as 'Quiet Mind', so the effect is advertised and unexamined at the same time.",
+        "regulatory_response": "None."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Coverage-driven stops are still the commonest cause. Roughly half of lost weight returns within a year. Interim Sentinel cycling data (2030) suggest regained weight is disproportionately fat mass.",
+        "regulatory_response": "None beyond the adherence conditions."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "More reports at retatrutide high doses: B12, iron, thiamine.",
+        "regulatory_response": "Society guidance for baseline and annual labs."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "~34% of ever-users have cycled. FDA Sentinel cycling study interim (2030): no excess cardiovascular events; less favourable body composition after repeated cycles.",
+        "regulatory_response": "Postmarketing requirements; final Sentinel report due 2032."
+      },
+      {
+        "effect": "Compounded / counterfeit / research-peptide product harms",
+        "status": "established",
+        "prevalence_note": "In Aug 2029 counterfeit 'Ozempic' and 'Zepbound' pens, some containing insulin and some 5–10× labelled semaglutide concentration, caused a CDC-investigated cluster of ~340 hospitalisations in 14 states and 9 deaths. FDA adverse-event reports tied to non-approved incretins passed ~11,000 by mid-2030. Endotoxin contamination of research-peptide retatrutide continues.",
+        "regulatory_response": "FDA public warnings and existing import alerts extended to further named shippers. No new rule; personal-importation enforcement remains mostly unpursued. Congressional hearings were held and no bill passed."
+      },
+      {
+        "effect": "Acquired olfactory and taste dysfunction after ≥5 years of continuous use",
+        "status": "suspected",
+        "prevalence_note": "A 2029 UK CPRD replication found HR ~1.4 after year 5, with partial recovery off-drug. The diabetes-duration confounding argument is weakened but not closed.",
+        "regulatory_response": "EU label adds hyposmia as 'uncommon' with long-term use (Mar 2029). US labels add it to postmarketing adverse reactions (2030) without a warning."
+      },
+      {
+        "effect": "Dysesthesia with triple agonist",
+        "status": "established",
+        "prevalence_note": "Dose-related; more frequent at the 2029 high-dose label.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Growth, pubertal and eating-disorder signal in children who started young",
+        "status": "emerging",
+        "prevalence_note": "Nordic pediatric registry plus US PEDSnet cohort (Mar 2030): ~21k adolescents who started semaglutide or liraglutide at ages 12–13, in early-to-mid puberty. Compared with lifestyle-treated matched controls, they show ~0.8–1.1 cm/yr lower height velocity over the first two years, menarche delayed ~4–5 months in girls, and an elevated rate of restrictive eating-disorder diagnoses (HR ~1.7, wide CI). There is no detectable signal in starters aged 15+. The small under-12 off-label subgroup shows the largest growth effect, but numbers are tiny. Whether final adult height is affected is unknown. Caloric restriction alone may explain part of it.",
+        "regulatory_response": "FDA Drug Safety Communication (May 2030) recommends growth-velocity and Tanner monitoring, with a label update under negotiation. AAP interim guidance advises caution in early puberty. EMA PRAC review is open. No restriction on prescribing."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households are ~29% of US households. Snack and confectionery unit volumes are down ~5–6% from 2026 and sugary drinks ~5%. Protein, fibre and small-format lines keep growing. 'Companion' labelling is now ordinary shelf language at Kroger and Target. Consolidation continues: two mid-size private-label snack makers closed Midwest plants in 2029, and Hershey and Mondelez report flat volumes offset by price and portion redesign.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down another ~4% over two years, and analysts expect the Jun 2030 AUD label to accelerate the heavy-drinker decline, because addiction clinics and employer EAPs can now prescribe semaglutide on-label without a BMI criterion. Craft distilleries are closing in Kentucky and Oregon. Beer is down ~2%. Non-alc keeps growing without replacing the lost value. Tobacco lists incretins as a material risk, and US cigarette volume decline has steepened by ~1 point a year.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat. Half-portion menus are universal at casual-dining chains. Steakhouses sell 6-oz cuts and tasting flights. Buffet closures continue, and the remaining Golden Corral-type sites cluster in rural markets. Bar revenue at casual chains is down ~8% since 2028.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking, and Torrid closed another ~120 stores. Mainstream retailers manage cycling customers through size-exchange and rental programmes. Maternity-style 'transition' sizing lines target people on titration.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength and 'muscle-preservation' studios are growing, many bundling DEXA scans and partnered telehealth prescriptions. Planet Fitness-style cardio boxes are flat. Bariatric surgery volume is down ~35% from 2024, and some hospital bariatric programmes have rebranded as 'metabolic medicine' clinics that prescribe retatrutide.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage is at 43% with the two-tier code-gated structure unchanged. About 1 in 5 large self-funded employers still run BMI or adherence differentials verified by refill data or connected pens. The AUD label created a new code that some plans cover under behavioural-health benefits, since parity rules make exclusion legally awkward. This reopens a side door to coverage for people who drink heavily but are not obese.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly is dominant (tirzepatide, Foundayo, retatrutide) at roughly 60% of US incretin revenue. Novo leans on the semaglutide AUD and cessation labels and on orals, while losing ex-US volume to generics. Boehringer enters with survodutide. Revenue is growing on volume despite per-unit erosion. Counterfeits of branded pens are now a brand-protection crisis, and Lilly and Novo fund serialised-pen authentication apps.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "In most of suburban America a mid-life body without visible loss now invites the question, usually kind and occasionally pointed: 'Have you tried it?' or 'Is it coverage?' Being on it is as unremarkable as statins. Being off it, or never on it, is what has to be explained, by a side effect, a lapse, a faith commitment or a price. 'Reta face' has stopped being a joke and become a dermatology service line.",
+      "thinness_and_class": "The tiers have held. Code-covered and insured users are at the top. The cash middle pays $149–299. Lower-income users buy $35–90 imports, and after Aug 2029 many of them check a pen-authentication app or quit. The counterfeit victims were overwhelmingly cash-poor social-media buyers, which hardened the sense that cheap access is dangerous access.",
+      "eating_as_ritual": "Half portions are the default at office lunches and weddings. Plano and Frisco, Texas caterers quote 'GLP-1 ratio' headcounts at about 40% light plates. Potluck splits have softened into separate dessert tables. Black church and Mennonite food traditions remain the most visible sites of unapologetic eating, now framed less as protest and more as heritage.",
+      "dating_and_intimacy": "'On it' is a default profile field on two major dating apps, and leaving it blank reads as 'off and not explaining'. Couples split by coverage describe mismatched appetite for food, drink and, quietly, each other. Sobriety from the drug is now a common first-date topic.",
+      "meaning_of_appetite": "Normalisation has done what the 2027 marches could not: it made the counter-movement smaller and more defensive. Fat-liberation groups in Oakland and Atlanta now focus on the pediatric signal and the counterfeit deaths rather than on surcharges. 'Made Whole' congregations in Oklahoma report steady membership. MAHA influencers seized on the May 2030 FDA communication ('they stunted our kids'). Appetite is now something the culture treats as a dial, and most people's question is where to set it.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "unrecognised",
+      "reward_blunting_prevalence_note": "Still unmeasured. No trial, registry or label tracks motivation, pleasure or desire. The AUD and nicotine labels define reduced wanting as the endpoint, and 'Quiet Mind' telehealth programmes sell it directly as calm. Reward blunting is therefore advertised as a benefit by sellers and dismissed as ideology by clinicians when critics raise it as a cost. Nobody is positioned to count it.",
+      "framing": "Treatment, character and now product. Quieter wanting is called recovery when it is about alcohol, discipline when it is about food, and 'a quiet mind' when someone is paying for it. It is never called a side effect in any official setting.",
+      "effect_on_work": "HR vendors market 'calm workforce' outcomes from bundled EAP prescribing under the new AUD label, citing fewer absences after weekend drinking. Hospitality and commission-sales managers trade stories about 'flat' staff on LinkedIn without naming the drug. Several Austin and Seattle tech firms offer Quiet Mind subscriptions as a wellness perk; none tracks output.",
+      "effect_on_art_and_play": "Bar trivia, bowling and late-night gaming leagues keep losing middle-aged members, now openly blamed on 'everyone being on it'. Live music skews further to loud, high-sensation formats. A small Nashville songwriter scene trades jokes about 'writing on reta'. Stand-up comics have a stock bit about the quiet-mind brunch.",
+      "effect_on_intimacy": "Couples therapists report more 'content, not hungry' couples and more mismatch when one partner lapses. Libido complaints are common in clinic but are coded as menopause, stress or age. It is still not in the literature.",
+      "effect_on_politics": "No measurable participation effect. 'Sedated nation' rhetoric now attaches to the pediatric and counterfeit stories in MAHA and body-liberation media, which keeps the interior question politicised and unstudied.",
+      "severity": 3
+    },
+    "state": {
+      "regulatory_posture": "Unchanged and split. The FDA is fast on approvals (survodutide; the semaglutide AUD label) and issued a pediatric Drug Safety Communication, but took no new rulemaking on importation, counterfeits or telehealth 'Quiet Mind' marketing. No state action this step: no new federal or state statute, CMS model, coverage rule or surveillance requirement was enacted in 2029–30. Congressional hearings on counterfeits and on the pediatric signal produced no law.",
+      "subsidy_or_mandate": "No mandate. Price-controlled public access continues: the Medicare Continuity Model and Medicaid in 19 states at $245, plus TrumpRx cash prices that stepped down by negotiation, not statute.",
+      "conditioning_or_surveillance": "Unchanged from 2028. Medicare and seven Medicaid waivers require ≥80% refill adherence and ≥5% loss at 6 months, with a 12-month lockout. About 1 in 5 large self-funded employers use BMI surcharges waived on biometric proof or programme adherence, verified by refill data or connected pens. One new private layer, not mandated: manufacturer pen-authentication apps record serial-number scans, and two wellness vendors now ingest the scans as adherence evidence.",
+      "workforce_or_military": "Accession waivers for recruits who met body-composition standards on a GLP-1 continue, with the ≥6 months off-drug stability requirement. TRICARE criteria are unchanged. The Army is reviewing whether the AUD label affects behavioural-health accession rules.",
+      "geopolitics_of_supply": "Chinese and Indian finished product, not just API, drives the gray flood. The Aug 2029 counterfeits were traced to a Guangdong filler shipping through Mexican freight forwarders. Lilly and Novo keep trading US price cuts for tariff relief. Canada's generic semaglutide remains a border-state cash channel.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2029-03",
+        "event": "FDA expands retatrutide's label to a higher maintenance dose on extension data showing about 30% average weight loss in patients with BMI 35 or above; in November Lilly cuts its TrumpRx price from $399 to $299 in a deal tied to tariff relief.",
+        "driver": "next_gen_launch; price_path"
+      },
+      {
+        "date": "2029-08",
+        "event": "CDC investigates about 340 hospitalisations and 9 deaths across 14 states linked to counterfeit Ozempic and Zepbound pens sold through social-media sellers, some filled with insulin and others with up to ten times the labelled dose; FDA issues warnings but proposes no new rule.",
+        "driver": "market_shock"
+      },
+      {
+        "date": "2029-10",
+        "event": "Two large telehealth firms launch 'Quiet Mind' subscriptions, low-dose oral semaglutide marketed for 'food noise and mental chatter' at $129–179 a month in compounded and cash-brand tiers; the FDA has not acted, and enrolment passes 400,000 by mid-2030.",
+        "driver": "new_indications (mood_and_motivation)"
+      },
+      {
+        "date": "2030-03",
+        "event": "A Nordic–US cohort of 21,000 adolescents finds that those who started GLP-1 drugs at 12–13 grew about a centimetre a year less over two years, with later menarche and more restrictive eating disorders; in May the FDA issues a safety communication urging growth monitoring.",
+        "driver": "safety_signal"
+      },
+      {
+        "date": "2030-06",
+        "event": "FDA approves semaglutide for alcohol use disorder in adults of any weight, the first incretin label without a BMI criterion; addiction clinics and employer assistance programmes begin prescribing within weeks.",
+        "driver": "new_indications (alcohol_use_disorder)"
+      },
+      {
+        "date": "2030-09",
+        "event": "KFF poll: 58% of adults with obesity who are not on an incretin say they have been asked by family, a doctor or a coworker why not; 'on it' is now as common a response as 'I don't drink' at office events.",
+        "driver": "cultural_response"
+      }
+    ],
+    "open_tensions": [
+      "The AUD label let the drug into behavioural-health benefits with no weight criterion, just as employers hold obesity coverage at 43%. Parity law may force coverage of the mechanism for drinking but not for eating, and the people who drink and also have obesity will test that line.",
+      "The pediatric growth signal arrived while ~0.44M adolescents are on the drug and US generics are 1–2 years away. Whether final adult height is affected won't be known until the 2028–30 starters finish growing, which is after cheap generics broaden use.",
+      "The gray flood made treatment cheap and dangerous at once. Counterfeit deaths fell on the poorest users, no state action followed, and pen-authentication data has quietly become another adherence stream for wellness vendors.",
+      "'Quiet Mind' sells reduced wanting as a product while no trial measures it as a cost. The effect is commercially recognised and clinically unrecognised, and the AUD label will add millions of normal-weight users on whom it was never studied."
+    ]
+  },
+  "prose": {
+    "headline": "Why Aren't You On It? Forty-Seven Million Users, Fake Pens, and the Kids Who Grew a Centimetre Less",
+    "world_in_600_words": "At the end of 2030 about 47 million American adults are on an incretin drug. That is almost exactly the number two years ago, and the flatness hides a great deal of movement. New users keep arriving, drawn by a retatrutide that now costs $299 a month and takes off nearly a third of body weight. Others leave just as steadily: a job changes, an employer narrows its formulary, a Medicare beneficiary misses too many refills and is locked out for a year, or a cash buyer reads about the counterfeit pens and stops. Nearly 24 million adults have been on the drug and are off it now. A third of everyone who has ever used it has stopped and started again at least once.\n\nThe structure of who pays has not changed. If a person has diabetes, heart disease, sleep apnea or a fatty liver, insurance still pays. If they have only obesity, it probably doesn't: 43 percent of employers cover weight management, down one point. Medicare still pays $245 under the Continuity Model and still checks refills. The middle class still buys brand product through TrumpRx, where the pills start at $149 and injectable semaglutide has slipped to $179. Washington passed no new law and launched no new programme. The changes came from labels, from markets and from the mail.\n\nThe mail brought the scare. Chinese and Indian finished pens flooded in during 2029, and import prices fell to $35 a month. In August pens bought through social-media sellers, some filled with insulin and some ten times too strong, put about 340 people in hospital across fourteen states, and nine died. The FDA issued warnings, Congress held hearings, and nothing else happened. The gray market lost a million users to fear and gained them back on price. Lilly and Novo now ship pens with serial numbers that a phone can verify, and two wellness vendors already read those scans as proof of adherence.\n\nThe label brought alcohol. In June semaglutide was approved for alcohol use disorder, with no weight requirement, the first time the drug has been sold to people who are not heavy. Addiction clinics began prescribing within weeks. Spirits makers, already down for four years, wrote that analysts expected a faster decline. The telehealth firms had arrived earlier. Since autumn 2029 they have sold 'Quiet Mind', low-dose pills for food noise and mental chatter, to 400,000 subscribers. No regulator has objected, and no trial has measured what quieter wanting costs. The effect people once called 'Ozempic personality' is now a product name, and it is still not a diagnosis.\n\nThe children's results came in March. A Nordic and American cohort found that adolescents who started at twelve or thirteen grew about a centimetre a year less for two years, that girls reached menarche later, and that restrictive eating disorders were more common. The FDA asked doctors to measure growth, and pediatric starts fell. Nobody yet knows about adult height, and the answer will come after US generics arrive.\n\nIn the suburbs of Plano, Columbus and Phoenix, being on the drug has stopped being news. A mid-life body that hasn't changed draws a gentle question: have you tried it, or is it coverage? Caterers plan for light plates and dating apps carry an 'on it' field. Fat-liberation groups and the Made Whole congregations still meet, smaller now and more focused on the children and the dead. Nothing has collapsed. The country is lighter, more sober and calmer, and nobody is measuring how much less it wants.",
+    "a_day_in_the_life": "Tammy Kowalski scans the pen before she uses it, the way the app taught her: the serial number shows green and the date is logged. The wellness vendor at the distribution center sees the scan, and that keeps the $75 surcharge off her paycheck. The Zepbound itself she pays for, $279 on the Lilly site, because Ridgeline Logistics covers it only for diabetics.\n\nAt seven she's on the dock outside Columbus, counting pallets. At lunch the break room splits the way it always does now: half the shift eating half a sandwich, half eating the whole one. Ray from receiving asks her husband's question for him. \"Dale still not on it?\"\n\n\"He's fine,\" she says. Dale had used the cheap ones from the website until August, when the news started. He threw the box out and hasn't said anything since.\n\nAfter work she takes Kayla, fourteen, to the pediatrician. Kayla has been on Wegovy for a year. The nurse measures her against the wall twice, then once more, and writes something down. The doctor says the word \"velocity\" and that they'll check again in three months. Kayla asks if she has to stop. The doctor says it's a conversation.\n\nAt home Dale has the grill going. He offers her a beer out of habit and she shakes her head, also out of habit. She isn't sure she has wanted one since spring.\n\nLater, on the couch, he puts his hand on her knee. It's nice, and she means that when she says it. She falls asleep before the show ends."
+  }
 }

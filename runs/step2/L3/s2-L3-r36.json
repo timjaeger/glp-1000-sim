@@ -21,7 +21,281 @@
     "state_action": "none",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:41:56Z"
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L3-r36",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16917,
+        "output_tokens": 28867
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 26.9,
+      "us_adults_ever_used_pct": 34,
+      "by_income_third_pct": {
+        "top": 31,
+        "middle": 27,
+        "bottom": 22.5
+      },
+      "by_age_band_pct": {
+        "18_29": 13.5,
+        "30_49": 26,
+        "50_64": 39,
+        "65_plus": 27
+      },
+      "pediatric_under_18_on_drug_pct": 1.1,
+      "cycled_off_and_on_pct": 31.5,
+      "note": "FICTIONAL ESTIMATES, ~268M US adults. About 72M are currently on an incretin (26.9%). Age check: 0.20×13.5 + 0.33×26 + 0.24×39 + 0.23×27 = 2.7 + 8.58 + 9.36 + 6.21 ≈ 26.9. In headcount that is ~7.2M + 23M + 25M + 16.7M ≈ 72M. Income thirds (31/27/22.5) average 26.8. The bottom third rose most (+10.5 pp), almost entirely through the Medicare and Medicaid cognition code; it was not cheaper drug. Cycling: ever 34% − current 26.9% = 7.1 pp of adults (~19M) have used and are off now. With ~33% of current users being restarters (0.33×26.9 ≈ 8.9 pp) and ~25% of those currently off having cycled before (≈1.8 pp), (8.9+1.8)/34 ≈ 31.5% of ever-users have stopped and restarted. About 6M of the ~19M currently off stopped because of a coverage event: Continuity lockouts, job change, employer exclusion. Payer mix of the 72M: diabetes/cardiac-coded across all payers 25M (Medicare ~8M, Medicaid ~3M, commercial ~14M); Medicare Part D cognition-coded 6M; Medicare Continuity Model obesity-only 1.2M (down from 1.5M as eligible seniors moved to the cognition code, which carries no lockout); Medicaid obesity 1.8M (same 19 states); Medicaid cognition-coded 0.8M; employer obesity coverage 9M; gambling-disorder-coded 1.5M (commercial ~1.0M, Medicaid ~0.5M); brand cash via TrumpRx/direct 17.5M; gray market 9.2M. Sum: 72.0M. Publicly paid ≈ 8+3+6+1.2+1.8+0.8+0.5 = 21.3M (~30%), and Medicare at ~15.2M is the largest single payer. Pediatric: ~1.1% of ~73M under-18s (~0.8M), nearly all aged 12+. About 1 in 3 US children now lives with at least one adult on the drug. Never-able-to-afford: roughly 9M adults with BMI ≥30 and no qualifying code report cost as the reason they have never started. Most are uninsured or in small-employer plans, aged 26–60, and concentrated in the South and the Mountain West."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 999,
+      "public_coverage": "Medicare: Part D now covers tirzepatide for its Feb 2030 indication, reduction in risk of cognitive decline in adults ≥60 with obesity or T2D plus vascular risk. Because that indication is not 'weight loss', the statutory Part D weight-loss exclusion does not apply, so no new law or CMS rule was needed. Plans pay the ~$245 rate set in the Nov 2025 deals, use prior authorisation, and set cost-sharing of ~$35–50/month within the IRA out-of-pocket cap. About 6M beneficiaries are cognition-coded: 6M × $245 × 12 ≈ $17.6B/yr at run rate (≈$12B in calendar 2030 given the Feb–Dec ramp). The CMS Continuity Model (obesity-only, same $245/$50, ≥80% PDC, ≥5% at 6 months, 12-month lockout) is unchanged and enrols 1.2M: 1.2M × $245 × 12 ≈ $3.5B/yr. Medicaid: the same 19 states cover obesity for 1.8M (1.8M × $245 × 12 ≈ $5.3B gross; federal share at ~65% ≈ $3.4B). Medicaid rebate-program rules require coverage of the cognition indication in every state; 0.8M enrollees use it (≈$2.35B gross, ≈$1.5B federal). Some states also cover gambling-disorder use for ~0.5M. Medicare is now the largest single payer of incretin fills.",
+      "employer_coverage_pct": 41,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 70+ generic semaglutide brands at ~$8–40/month, and generic oral semaglutide is now widespread there. Canada, Brazil, Mexico, Turkey and most of Southeast Asia have generic semaglutide; Chinese and Indian generic liraglutide is ubiquitous. No generic tirzepatide exists anywhere. US exclusivity still runs to ~2031–32.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Prices stalled. TrumpRx and direct prices are unchanged from 2028: injectable semaglutide $199, Zepbound $249–299, orals from $149, retatrutide $399. List prices are also unchanged. Lilly cites fill-finish capacity absorbed by Part D cognition demand and has made no further cuts. After its scandal Novo froze its US pricing to protect margin, and the 2025-style tariff-for-price arrangements were renewed with no new concessions. The new premium tier is Tirvanta (tirzepatide + bimagrumab) at $999/month cash. Commercial coverage for it is rare, and Medicare excludes it because its only indication is weight management. Employer weight-management coverage is 41% (BGH 2030). It drifted down more slowly than in 2026–28 because the gambling-disorder indication pulls some use into mental-health benefits, where federal parity rules limit exclusions. Gray market: personal-importation telehealth ($60–120), 503A 'personalised' compounding, and research-peptide retatrutide ($150–250) together serve ~9.2M (~13% of users). Bimagrumab is a monoclonal antibody and cannot practically be counterfeited, so gym communities substitute SARMs and 'research' activin and myostatin peptides. New starts are now ~40% oral."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, Lilly)",
+        "GLP-1 + amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "GIP/GLP-1 dual agonist + activin type II receptor antibody, weekly tirzepatide plus four-weekly subcutaneous bimagrumab (Tirvanta, Lilly; approved Apr 2030)"
+      ],
+      "best_efficacy_pct_body_weight": 29,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "smoking and nicotine-vaping cessation in adults with overweight or obesity (semaglutide, Sep 2028)",
+        "reduction in risk of cognitive decline in adults ≥60 with obesity or T2D and vascular risk (tirzepatide, Feb 2030)",
+        "gambling disorder in adults (semaglutide, Aug 2030), the first 'compulsion' indication"
+      ],
+      "mainstream_offlabel_uses": [
+        "dementia 'prevention' in adults under 60 and in normal-weight people with a family history of dementia",
+        "compulsive shopping, compulsive sexual behaviour and problem gaming/screen use, off-label since the gambling approval, prescribed largely by telepsychiatry",
+        "nicotine cessation in normal-weight smokers and vapers",
+        "alcohol reduction (AUD sNDA pending)",
+        "microdosing for 'metabolic health' via gray-market telehealth",
+        "research-peptide retatrutide plus SARMs as a 'poor man's Tirvanta' in gym communities",
+        "pediatric under-12 use under specialist care"
+      ],
+      "pipeline_note": "Tirvanta (tirzepatide + bimagrumab): phase 3 read out 2028 at ~21% mean weight loss, with ~90% of lost mass from fat vs ~70% on tirzepatide alone. BLA filed Mar 2029, approved Apr 2030 (13 months), launched May 2030 at $999 cash. It realises the muscle-preserving driver and is marketed as solving 'skinny-frail', but the trials enrolled adults aged 18–70 with few frail participants. Tirzepatide cognition sNDA: filed Jan 2029 on a 3-year phase 3 trial (composite cognitive score decline slowed ~20%, absolute difference ~0.3 points), supported by dementia-diagnosis secondaries from SURMOUNT-MMO; approved Feb 2030 (13 months). The American Academy of Neurology called the effect 'statistically real, clinically modest'. Semaglutide gambling disorder: two phase 3 trials (~600 each, PG-YBOCS endpoint); sNDA filed Jul 2029. A major amendment after the Novo data scandal extended review, and approval came Aug 2030 (13 months). Semaglutide AUD: phase 3 read out Mar 2029, with one of two trials meeting its primary endpoint; filed Dec 2029; decision expected 2031. Amycretin: filed Jun 2029, under review, decision 2031. Survodutide: filed Apr 2029, under review. MariTide (monthly): phase 3, not filed. Global incretin market ~$150B (2030). The ~30% rise from 2028 is volume-driven, with no price erosion in the US."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading side-effect cause of discontinuation. Tolerability among older Part D cognition starters is a growing clinic issue, with dehydration admissions in over-75s noted by geriatricians.",
+        "regulatory_response": "Labelled; Ozempic label 'not recommended in severe gastroparesis'."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; retatrutide real-world rates remain above trial rates.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation. The MDL's discovery process produced the Novo anhedonia documents, but nothing new on the pancreas.",
+        "regulatory_response": "Labelled; MDL first bellwether trial scheduled 2031; no verdicts."
+      },
+      {
+        "effect": "Lean mass (muscle) loss",
+        "status": "established",
+        "prevalence_note": "Tirvanta is marketed as the answer, but the people at highest sarcopenia risk are Medicare seniors on plain tirzepatide under the cognition code, who are not eligible for it. Cohort abstracts on lower bone density in women over 60 continue; there is no RCT.",
+        "regulatory_response": "Tirvanta labelled for preserved lean mass versus tirzepatide. No class warning. The cognition label recommends protein and resistance counselling in adults ≥60."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; no new data of note.",
+        "regulatory_response": "EMA 'very rare' label for semaglutide; no US class label."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new evidence. The gambling and cessation trials showed no excess.",
+        "regulatory_response": "Warning removed from US labels (Jan 2026); not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "established",
+        "prevalence_note": "This entry has been on the ledger since 2026 and is not a new signal; this step resolves it. Novo's own smoking-cessation trials collected the Snaith-Hamilton Pleasure Scale as an exploratory endpoint and left it out of the sNDA summary. Re-analysis after disclosure shows clinically meaningful anhedonia worsening in ~2.3% on semaglutide vs ~1.5% on placebo, an excess of ~0.8%, dose-related and mostly reversible on stopping. Broader 'quieter wanting' is not counted, because it is the therapeutic effect.",
+        "regulatory_response": "Mar 2030 label update across semaglutide products listing anhedonia/emotional blunting as an uncommon adverse reaction, carried into the Aug 2030 gambling label. FDA has requested equivalent data from Lilly; a tirzepatide class-labelling decision is pending."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Coverage-driven stops remain the most common cause of discontinuation. Roughly half of lost weight returns within a year.",
+        "regulatory_response": "None new; it still underpins Continuity Model and Medicaid-waiver adherence rules."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Concern has shifted to older cognition-coded users with low baseline intake.",
+        "regulatory_response": "None; professional societies recommend baseline and annual labs."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; adolescents; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "The ~31% of ever-users who cycle are still unstudied in any trial. The FDA Sentinel cycling study's 2030 interim report found no signal but is underpowered. The first 2026–27 adolescent starters reach year five in 2031–32.",
+        "regulatory_response": "Postmarketing requirements; Sentinel cycling study ongoing."
+      },
+      {
+        "effect": "Compounded / counterfeit / research-peptide product harms",
+        "status": "established",
+        "prevalence_note": "FDA adverse-event reports tied to non-approved incretins passed ~7,000. The newer share comes from 'recomposition stacks' that combine research retatrutide with SARMs (hepatotoxicity, lipid derangement).",
+        "regulatory_response": "503B exclusion and import alerts stand. Personal-importation enforcement still mostly unpursued."
+      },
+      {
+        "effect": "Acquired olfactory and taste dysfunction (hyposmia/dysgeusia) after ≥5 years of continuous GLP-1 RA use",
+        "status": "emerging",
+        "prevalence_note": "No new cohort has replicated or refuted the 2028 Danish–Swedish finding (HR ~1.5 after ≥5 years; ~2–3 excess per 1,000 person-years; partial recovery).",
+        "regulatory_response": "EMA PRAC closed its review in 2029 as 'insufficient evidence of causality' and requested a post-authorisation safety study. FDA Sentinel review is ongoing. No label change."
+      },
+      {
+        "effect": "Dysesthesia (skin sensitivity/pain) with triple agonist",
+        "status": "established",
+        "prevalence_note": "Mostly mild and dose-related, as in trials.",
+        "regulatory_response": "Labelled for retatrutide."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households are ~37% of US households. Snack and confectionery unit volumes are down ~6–7% from 2026 and sugary drinks ~5%. The newest pressure is from seniors: Part D cognition users cut volume at senior-living dining contractors (Sodexo, Aramark senior segments) and grocery 'empty nester' baskets. Protein, fibre, small-format and 'senior protein' SKUs grow. Midwest private-label snack plant closures continue at a slower pace.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down another ~4% over two years, and beer is down ~2%. Non-alc keeps growing. Tobacco volumes are falling faster than trend. The new adjacent casualty is legal sports betting: after the Aug 2030 gambling indication, DraftKings and Flutter add incretin use to their 10-K risk factors. Analysts see slower handle growth in mature states, not decline.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat and per-visit food volume is down. Half-portion and 'protein plate' menus are standard. Early-bird and senior-heavy chains (Cracker Barrel, Golden Corral) report the sharpest ticket pressure as Medicare users eat less. High-end steakhouses hold up on protein-forward 'Tirvanta crowd' business.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size keeps contracting. Premium brands push 'athletic tailoring': cuts for broad shoulders and narrow waists aimed at the combo-drug client. Mass retailers report a growing 'thin-soft' size curve among older shoppers that needs smaller sizes with more forgiving cuts.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "The market has split. Premium strength studios in coastal metros bundle Tirvanta telehealth and body-composition scans. Some lose clients who believe the antibody does the work. Medicare Advantage fitness benefits (SilverSneakers-type) add resistance-band classes for cognition-coded members. Gray-market 'recomposition stacks' spread through mid-market gyms.",
+        "direction": "adapted"
+      },
+      "insurance": {
+        "state": "Employer weight-management coverage is 41%, still two-tier and organised by code. Gambling-disorder coding through mental-health benefits creates parity disputes. Part D bears the new cost. 2031 Part D national average bids rose ~13%, with plans naming tirzepatide cognition fills. The IRA's 6% cap on base-premium growth pushes most of the increase onto Treasury reinsurance and the premium stabilisation demonstration, so beneficiaries see only modest premium increases.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly is dominant, with tirzepatide across obesity, diabetes, OSA and cognition, plus retatrutide, Tirvanta and Foundayo. Its US prices are flat and its volume is up sharply. Novo faces a DOJ civil investigative demand, state attorney-general consumer-protection suits and a ~20% share-price fall after the anhedonia-data scandal. Its chief medical officer resigned, and it is defending its gambling and AUD filings.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Shape now reads as income in three grades. Lean with visible shoulders and arms means Tirvanta at $999 plus a trainer. Thin and soft, the 'Medicare body' of loose upper arms and narrow shoulders, means Part D, Medicaid or cash semaglutide. Large means uninsured, locked out, or refusing. In Florida's The Villages and in Phoenix suburbs, the thin-soft silhouette is now the majority look among women over 65.",
+      "thinness_and_class": "Use has converged across incomes (31% top third, 22.5% bottom), but composition has not. Muscle is the new class marker because the drug that preserves it is an antibody the gray market cannot copy, and no public payer covers it. Gym culture's SARM stacks are the working-class imitation. In Atlanta, Buckhead strength studios and South Fulton Medicaid clinics prescribe the same molecule with different results.",
+      "eating_as_ritual": "Half portions are the default at senior centres and church suppers. The on-drug and off-drug table split of 2028 is now mostly a split between the generations of a family, with grandparents eating least. Black church and Midwest Catholic fish-fry traditions continue as deliberate, sometimes defiant abundance.",
+      "dating_and_intimacy": "Affluent urban dating profiles mention 'Tirvanta' or post body-composition numbers. 'On it' is no longer worth stating, but 'built' is. Couples therapists use the new anhedonia label line to justify dose reductions. Off-label prescribing for compulsive sexual behaviour is common enough in New York and LA telepsychiatry to draw tabloid coverage.",
+      "meaning_of_appetite": "Every appetite now has a code: food, nicotine, gambling, and by extension shopping and sex. Fear of dementia joins the list, which turns the drug into something taken for the mind as well as the body. Body-liberation, 'Made Whole' evangelical and MAHA-aligned groups cite the Novo scandal as proof they were right, and they still disagree with one another about everything else.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "Since the Novo disclosure, anhedonia is a labelled, uncommon adverse reaction on semaglutide: ~0.8% excess over placebo on a validated scale, dose-related and mostly reversible. Clinics added a two-item pleasure screen to follow-up visits, though the Medicare and Medicaid prior-auth forms do not require it. Labelling it as an uncommon side effect has a side effect of its own: anything short of clinical anhedonia counts as the intended effect.",
+      "framing": "Uncommon side effect at the clinical edge, treatment everywhere else. Patients say 'I'm not one of the 1 in 100, I'm just calmer.'",
+      "effect_on_work": "Sales organisations with commission-heavy pay quietly route gambling-coded staff through employee-assistance programmes. A few trading desks informally discourage the drug among traders, and nobody writes the policy down. HR wellness vendors now cite gambling-related absenteeism reductions in their pitches.",
+      "effect_on_art_and_play": "Fantasy-sports and sports-bar culture among men aged 22–35 is visibly thinner in Ohio and New Jersey. Stand-up comedians run bits on 'the 1-in-100 line' on the label. Loud, high-sensation live formats keep their vogue. Some artists now say publicly that they cut their dose because the work felt 'beige'.",
+      "effect_on_intimacy": "The label gives couples a vocabulary. 'Is it the dose?' is now a sentence spoken in therapy offices. Desire complaints still mostly go unattributed unless severe.",
+      "effect_on_politics": "The scandal gave the anti-pharma coalition its first documentary win. Senate HELP Committee members held a hearing with no legislative outcome. Turnout and participation show no measurable change. 'Sedated electorate' rhetoric is louder but still unmeasured.",
+      "severity": 3
+    },
+    "state": {
+      "regulatory_posture": "Unchanged in shape. The FDA approves fast (cognition, Tirvanta and gambling, each 13 months from filing) while staying passive on personal importation and research peptides. After the Novo disclosure it demanded exploratory-endpoint datasets for pending incretin sNDAs, which slowed the gambling and AUD reviews. No new statute or regulation was enacted in the window.",
+      "subsidy_or_mandate": "No mandate. Public coverage widened without new policy: an indication that is not 'weight loss' falls outside the Part D statutory exclusion and inside Medicaid's mandatory-coverage rules, so existing law carried the cost. Medicare is now the default payer for incretins in over-60s. The Continuity Model and the 19-state Medicaid obesity coverage are unchanged.",
+      "conditioning_or_surveillance": "The Continuity Model's refill and weigh-in conditions and lockout continue, as do the seven Medicaid waivers and employer BMI surcharges (about 1 in 5 large self-funded employers; ERISA-exempt from Texas's ban). The cognition code carries plan prior authorisation but no adherence lockout, so eligible seniors migrate to it. Only obesity-only, mostly younger, users remain under the lockout regime.",
+      "workforce_or_military": "Unchanged. Army and Air Force accession waivers require ≥6 months of off-drug weight stability. TRICARE covers active duty only, under strict criteria. Recruiters report Tirvanta-built applicants but cannot waive the off-drug rule.",
+      "geopolitics_of_supply": "The US–India price gap persists (~$199 vs ~$15 for semaglutide). Lilly's US fill-finish expansion is its argument in the renewed tariff-for-price deals. Danish parliamentary pressure on Novo after the scandal becomes a diplomatic irritant. Canada's generics still drain quietly across the border.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2029-11",
+        "event": "Documents surfaced in the pancreatitis MDL show Novo Nordisk measured anhedonia with a validated scale in its smoking-cessation trials and left the results out of its FDA submission; re-analysis finds a small but real excess. Novo's chief medical officer resigns, the DOJ opens a civil inquiry, and in March 2030 the FDA adds 'anhedonia/emotional blunting (uncommon)' to all semaglutide labels.",
+        "driver": "market_shock: manufacturer_scandal; personality_layer: niche_side_effect"
+      },
+      {
+        "date": "2030-02",
+        "event": "FDA approves tirzepatide to reduce the risk of cognitive decline in adults 60 and older with obesity or type 2 diabetes and vascular risk, 13 months after Lilly filed in January 2029; neurologists call the benefit 'modest', and primary-care demand surges within weeks.",
+        "driver": "new_indications: cognition_dementia"
+      },
+      {
+        "date": "2030-04",
+        "event": "FDA approves Lilly's Tirvanta, weekly tirzepatide plus a monthly muscle-preserving bimagrumab shot, 13 months after its March 2029 filing; it launches in May at $999 a month cash, uncovered by Medicare, under the slogan 'Lose the weight. Keep yourself.'",
+        "driver": "next_gen_launch: muscle_preserving_combo"
+      },
+      {
+        "date": "2030-07",
+        "event": "CMS bid data show 2031 Part D national average bids up about 13%, led by tirzepatide fills under the cognition indication: about 6 million beneficiaries, at the $245 rate. Medicare is now the largest payer of incretin drugs. Lilly says it will make no further cash-price cuts, citing capacity, and Novo freezes its prices.",
+        "driver": "coverage_shift: public_expansion; price_path: stalled; adoption_delta_pp"
+      },
+      {
+        "date": "2030-08",
+        "event": "FDA approves semaglutide for gambling disorder, the first incretin 'compulsion' indication, after a review extended by the anhedonia disclosure; the new label carries the anhedonia warning, and sports-betting operators add incretin uptake to their risk factors.",
+        "driver": "new_indications: compulsive_behaviour"
+      },
+      {
+        "date": "2030-10",
+        "event": "A Pew survey finds 58% of Americans say they can 'usually tell' someone's income from their body shape; 'Medicare arms' and 'Tirvanta shoulders' trend on social media as premium gyms in Manhattan and Buckhead sell combo-drug membership tiers.",
+        "driver": "cultural_response: class_stratification"
+      }
+    ],
+    "open_tensions": [
+      "Medicare became the default payer without anyone voting for it. A modest cognitive benefit now underwrites ~$17.6B a year in Part D spending at a $245 price that is no longer falling, and the 2031 Part D bids put that cost on Treasury. The cognition code also lets seniors escape the adherence lockout that still binds younger obesity-only users.",
+      "The muscle-preserving drug went to the affluent and middle-aged. The frail-prone population, Medicare seniors on plain tirzepatide, is losing lean mass at scale. No public payer covers Tirvanta, and it has no frail-elderly data.",
+      "The anhedonia label quantified the edge case (~0.8%) and in doing so defined everything milder as therapy, just as the drug gains compulsion indications and an AUD decision is due in 2031. Lilly's tirzepatide data are still pending, and Novo's credibility on every psychiatric filing is damaged.",
+      "US generics are due ~2031–32. The first adolescent cohorts cross five years of exposure at the same time, the hyposmia signal is unresolved, and ~31% of ever-users are cycling in ways no study is powered to read."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; exclusivity still runs to roughly 2031–32.",
+      "TrumpRx cash prices are unchanged from 2028: injectable semaglutide $199/month, Zepbound $249–299, orals (Wegovy pill, Foundayo) from $149, retatrutide $399.",
+      "Medicare pays ~$245/month for covered incretin use, the rate set in the Nov 2025 deals, with a ~$50 copay under the Continuity Model.",
+      "The CMS Medicare GLP-1 Continuity Model's ≥80% refill adherence, ≥5% loss at 6 months and 12-month lockout rules are unchanged, as are the seven matching Medicaid waivers.",
+      "Texas's 2027 ban on BMI-based premium surcharges still covers only state-regulated plans; ERISA self-funded employers remain exempt and about 1 in 5 large ones still levy surcharges."
+    ]
+  },
+  "prose": {
+    "headline": "Medicare Arms, Tirvanta Shoulders: 72 Million Americans on the Drug, and You Can Read Their Income Off Their Bodies",
+    "world_in_600_words": "At the end of 2030 a little over one American adult in four is on an incretin drug, about 72 million people. Another 19 million have used one and are off it for now. Two years ago the question was who pays. The answer turned out to be Medicare, and nobody decided it.\n\nThe decision came through a label. In February the FDA approved tirzepatide to reduce the risk of cognitive decline in people over sixty who have obesity or diabetes and vascular risk. The trial effect was small, a fraction of a point on a composite score that neurologists politely called modest. Fear of dementia is not modest, though, and an indication that is not 'weight loss' falls outside the old law barring Medicare from paying for weight-loss drugs. Part D plans had to cover it. Medicaid had to cover it. About six million beneficiaries filled prescriptions within months, at the same $245 a month Medicare has paid since 2025, and Medicare became the largest single payer of these drugs. Plans' bids for next year rose thirteen percent. Most of that lands on the Treasury rather than on seniors' premiums, which is why it has not yet become a story. For the 1.2 million still in Medicare's obesity-only programme, where a missed refill means a year's lockout, the cognition code is also an escape hatch. Doctors are quietly moving eligible patients onto it.\n\nPrices stopped falling. Semaglutide is still $199 on TrumpRx, Zepbound still $249 to $299, the pills still $149. Lilly says its plants are full of Medicare demand, and Novo, the other big maker, has had a bad year.\n\nIn November 2029, documents unearthed in pancreatitis litigation showed that Novo had measured anhedonia, the loss of pleasure, in its smoking-cessation trials and left the numbers out of what it sent the FDA. The excess was real but small, under one person in a hundred. In March every semaglutide label gained a line: anhedonia, uncommon. The 'Ozempic personality' that medicine had dismissed as ideology now has a frequency, and the frequency is low. The patients who feel merely calmer, merely less hungry for things, have been told precisely that they are not the side effect. In August the FDA approved semaglutide for gambling disorder, and that label carries the same line. Telepsychiatrists prescribe it off-label for compulsive shopping, sex and screens. Sports-betting companies have added the drug to their list of risks.\n\nIn April Lilly launched Tirvanta, tirzepatide paired with a monthly antibody that keeps muscle while fat goes. It costs $999 a month, no public payer covers it, and because it is an antibody the gray market cannot copy it. That has drawn a new line through the country's bodies. Lean and broad-shouldered means money. Thin and soft, with loose upper arms, means Medicare or Medicaid or cash semaglutide. Large means uninsured, locked out, or saying no. Women over sixty-five in The Villages and in the Phoenix suburbs are the drug's newest majority, and most of them are on the version that takes muscle with the fat. Young men in Ohio gyms stack research-peptide retatrutide with SARMs to imitate what Manhattan buys with a prescription.\n\nNothing has collapsed. Spirits, snacks and buffets are down a little further, and steakhouses are doing fine. The smell-loss signal from Scandinavia is still neither confirmed nor withdrawn. The first teenagers who started in 2026 will cross five years of use around the time generics arrive. The country is lighter, calmer and more medicated, its prescriptions increasingly paid for by the government, and its bodies sorted by income.",
+    "a_day_in_the_life": "Denise Kowalczyk, sixty-seven, injects in the kitchen in Parma before Ray is up. The pen is tirzepatide, and the bag from Discount Drug Mart says $47. Ray's box is in the junk drawer, empty since March, when he spent eleven days at Parma Hospital and missed two refills. His lockout ends in spring. He has put back fourteen pounds and says nothing about it.\n\nAt the senior centre the Tuesday class is resistance bands now. The instructor is twenty-six and calls them 'warriors'. Denise's friend Pat pulls a green band to her chest and her upper arms swing under the sleeve. Denise looks away, then down at her own.\n\nAt lunch half the tables leave half the pierogi. Lorraine, who refuses the drug and says so, finishes hers and then Pat's.\n\nThe afternoon television runs the ad twice: a woman about her daughter's age lifting a kayak onto a car roof. *Lose the weight. Keep yourself.* Ninety-nine-nine a month, her daughter told her once. Her daughter pays $249 for hers.\n\nAt four her grandson Tyler calls from Akron. He sounds slower to her, and nicer. He has deleted the apps. His union plan pays because the doctor wrote it a certain way. He says he watched the whole Browns game and didn't care who won, and he laughs, and she can't tell if it's a good laugh.\n\nShe reads the folded insert from the bag before bed. Ray is asleep. *Uncommon: loss of interest or pleasure.* She tries to remember the last thing she wanted badly. She wanted Ray not to be in the hospital. That counts, she decides, and turns off the lamp."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }

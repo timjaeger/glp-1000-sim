@@ -35,7 +35,285 @@
     "state_action": "benefits_conditioning",
     "personality_layer": "marketed_feature"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:41:56Z"
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L1-r11",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16518,
+        "output_tokens": 19398
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 15.7,
+      "us_adults_ever_used_pct": 25,
+      "by_income_third_pct": {
+        "top": 20,
+        "middle": 16,
+        "bottom": 11
+      },
+      "by_age_band_pct": {
+        "18_29": 8,
+        "30_49": 16,
+        "50_64": 24,
+        "65_plus": 13
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 36,
+      "note": "FICTIONAL. Cycling arithmetic: ever-users are 25.0% of adults and current users 15.7%, so 25.0 − 15.7 = 9.3% (≈24.8M) used and are off now. Of current users, ≈6.5 pts are restarters from the 2028 cohort and ≈0.5 pts are 2029–30 starters already on a second course; ≈2.0 pts of the off-now group restarted and stopped again. That gives (6.5+0.5+2.0)/25.0 = 36% cycled. Current users ≈ 41.9M of ~267M adults, up from 26.2M. Ever-use rose 8.5 pts, inside the 8.8 cap, so the increase comes mostly from persistence and restarts rather than new starters. About 66% of the 8.5 pts who started in 2029–30 are still on, against the 2028 figure of ~35% one-year persistence. Three things explain the higher retention: (a) coverage gated on adherence, so stopping costs you the benefit; (b) daily pills with milder dose escalation (oral amycretin, Wegovy pill); (c) cessation users, who are told relapse risk rises when they stop. The income gradient has partly narrowed from the bottom. The cessation indication and the requirement that Medicaid cover cessation drugs moved the bottom third from 6.5% to 11%, because smokers are concentrated there. The top third (20%) still leads, through cash 'metabolic' and focus use. Weighted by age band: 0.20×8 + 0.33×16 + 0.24×24 + 0.23×13 ≈ 15.6. The 65+ figure of 13% (≈8.1M), plus ≈1.1M disabled under-65 enrollees, matches the Medicare user count in access. Off-drug people: ≈24.8M adults who used and stopped, many after losing coverage at a gate. ≈200M never used, now skewed toward uninsured working-age adults in non-expansion, non-waiver states and toward adults 65+ who were warned off by bone findings. Pediatric: ≈0.6% of under-18s (≈440k), mostly adolescents 12+ on semaglutide for obesity, plus a contested off-label cluster of 16–17-year-old vapers treated through telehealth. Roughly one child in five now lives in a household where at least one adult is on a drug."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "The Medicare GLP-1 Bridge expired Dec 2029 and was replaced in Jan 2030 by permanent Part D obesity coverage (Medicare Metabolic Disease Coverage Act, enacted Dec 2029). Terms are unchanged: $245/month paid, $50 copay, same BMI/comorbidity criteria, plus a cessation pathway. For 65+ women the annual reauthorisation requires a documented strength-counselling visit and a DEXA every two years. Medicare pays ≈22% of incretin fills ≈ 9.2M users. ≈3.9M of these are diabetes users already on Part D. The other ≈5.3M obesity/cessation users × $245 × 12 ≈ $15.6B/yr federal, up from $4.4B under the Bridge. Medicaid pays ≈16% of fills ≈ 6.7M users at $245: 6.7M × $245 × 12 ≈ $19.7B/yr gross, ≈$14B federal at a blended ~71% match. Two things drive this. Once semaglutide had a cessation label, states could not exclude it, because federal law bars Medicaid from excluding tobacco-cessation drugs. And the Dec 2029 act gives states a +10-point match bump for obesity coverage that meets federal 'adherence verification' standards. Public payers (38% of fills) now exceed commercial (37%).",
+      "employer_coverage_pct": 54,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 80+ generic semaglutide brands at $8–40/month, including oral 25 mg. Canada: generic semaglutide CAD 70–100. Generic oral semaglutide is sold in ~170 countries. Chinese API makers now sell retatrutide and amycretin peptide as 'research chemicals'. US exclusivity still runs to ~2031–32.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Prices are still stalled. TrumpRx/direct cash is still ~$245–350 for injectables and $149 for oral starting doses. Oral amycretin (Aug 2029) lists at $1,299, with $399 direct cash and no TrumpRx tier. Retatrutide lists at $1,499 with $699 LillyDirect cash; supply is no longer formally allocated but is tight. Manufacturers cite Section 232 tariffs and the $245 public floor, which they call a 'ceiling we subsidise'. Payer mix of ≈41.9M users: commercial 37% (15.5M), Medicare 22% (9.2M), Medicaid 16% (6.7M), cash/direct 15% (6.3M), gray/unregulated 10% (4.2M) = 100%. Commercial plans must cover the cessation indication without cost-sharing under the ACA preventive mandate (USPSTF tobacco grade A, upheld in Braidwood). Plans apply 'reasonable medical management': cotinine verification, a 12-month cessation course and adherence gating, and they fight to stop the cessation course turning into indefinite weight coverage. Among covering employers, ~55% now run adherence-gated PBM programmes, up from ~40%. The gray market has three layers: mail-order Indian oral and injectable semaglutide (~2.0M users); 'research peptide' retatrutide and amycretin vials sold via Telegram, TikTok Shop resellers and gym networks (~1.4M); and offshore-pharmacy telehealth 'focus' and 'calm' microdose subscriptions (~0.8M). Together these make up the 4.2M."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, approved Jan 2029)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular agonist, daily oral (amycretin oral, approved Aug 2029)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide label at approval)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "smoking cessation, adjunct to standard therapy, adults any BMI (semaglutide injection and Wegovy pill, Mar 2029)"
+      ],
+      "mainstream_offlabel_uses": [
+        "vaping cessation, including adolescents 16–17 via telehealth (label covers adult cigarette smokers only)",
+        "low-dose 'calm/focus' and craving-free regimens sold by telehealth and longevity clinics, mostly oral semaglutide and Foundayo",
+        "alcohol reduction via EAP referral; a semaglutide alcohol-use-disorder phase 3 is under way",
+        "'metabolic health'/longevity use by people without obesity",
+        "gambling, compulsive shopping and sports-betting craving, now prescribed by some addiction telehealth platforms",
+        "pediatric under-12 use under specialist care"
+      ],
+      "pipeline_note": "FICTIONAL. The oral_parity driver is met by oral amycretin. Its NDA (filed Jun 2028) was approved Aug 2029, 14 months after filing, at 22% mean loss at 68 weeks, non-inferior to tirzepatide 15 mg in a head-to-head trial. It is the first pill at injectable-class efficacy. It does not match retatrutide's 28%, which stays the efficacy ceiling and is injectable only. Survodutide, under review at the start of the window, was approved Jan 2029 and sells modestly on its liver label. MariTide (monthly) completed phase 3, and Amgen filed its BLA Mar 2030; no approval is possible before Mar 2031. Muscle-preserving adjuncts (bimagrumab combinations) are in phase 3, not on the market, and are the most-watched assets. Lilly's oral retatrutide-class small molecule is in phase 2. Semaglutide sNDA for alcohol use disorder is not yet filed. The incretin market is ≈$150B in 2030: US volume growth at flat prices, offset by ex-US generic erosion."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Slightly lower rates with daily oral titration (amycretin oral, Foundayo) than with high-dose injectables.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; more salient with 22–28% agents.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation in ~8 years of data; absolute risk low. Case reports are rising from research-peptide retatrutide of unknown purity.",
+        "regulatory_response": "Labelled; MDL litigation ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Cohort data replicated: ~1.5× sarcopenia criteria in 65+ users on therapy >2 years. Lean-mass share of loss is 25–40%.",
+        "regulatory_response": "Class label; documented strength counselling written into the permanent Medicare Part D coverage criteria (Jan 2030)."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Fragility-fracture HR ~1.3–1.4 in 65+ long-term users, concentrated in women and in cycling users. Medicare's DEXA requirement means monitored users are now better characterised than gray-market users, who are not monitored at all.",
+        "regulatory_response": "Class label; DEXA every two years for 65+ women as a Medicare reauthorisation condition; Senate HELP report (2029) found Novo's disclosure 'materially delayed'; DOJ civil settlement pending."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings-section mention, no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association, including in the large cessation trials, whose populations had higher psychiatric comorbidity.",
+        "regulatory_response": "Warning removed Jan 2026; has not returned."
+      },
+      {
+        "effect": "Reward blunting / anhedonia ('Ozempic personality', emotional flattening)",
+        "status": "established",
+        "prevalence_note": "Now labelled with a prevalence estimate. In pooled trial data using the Snaith-Hamilton Pleasure Scale (retatrutide postmarketing, semaglutide cessation and AUD trials), clinically meaningful anhedonia developed in ~6% on semaglutide 2.4 mg/oral 25 mg, ~8% on tirzepatide 15 mg and ~9% on retatrutide 12 mg, versus ~3% on placebo. It is dose-dependent and usually resolves within 8 weeks of dose reduction or stopping. Self-reported reduced pleasure in long-term surveys is still higher (10–15%).",
+        "regulatory_response": "Class labelling (Apr 2030) in Warnings and Precautions with the tabulated rates, plus a Medication Guide paragraph advising dose review. No boxed warning. The FTC has opened inquiries into telehealth ads that quote the label rates as proof of 'calm'."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. Involuntary stops at coverage gates now affect a large population: an estimated ~1.1M people lost Medicaid or employer coverage at an adherence or weigh-in gate during 2029–30.",
+        "regulatory_response": "The Indiana waiver litigation reached the 7th Circuit (2030), with no ruling yet. The Dec 2029 act requires 60 days' notice before any gate termination."
+      },
+      {
+        "effect": "Nicotine relapse and mood after stopping cessation-course semaglutide",
+        "status": "emerging",
+        "prevalence_note": "Early registry data suggest relapse to smoking within 6 months of a 12-month course ends is higher in people whose weight also rebounds. Whether a 'rebound craving' syndrome exists is disputed.",
+        "regulatory_response": "FDA postmarketing requirement for 24-month follow-up of cessation users."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein insufficiency signals persist, especially in older, high-loss and low-income users with food insecurity.",
+        "regulatory_response": "Professional society guidance; some Medicaid MCOs pair coverage with produce or protein benefits."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; effects in adolescents who may take these for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About eight years of follow-up now exist. Bone findings suggest cycling compounds loss. The first adolescent bone-accrual interim data (2030) are underpowered and inconclusive.",
+        "regulatory_response": "Postmarketing requirements; pediatric bone-accrual studies ongoing."
+      },
+      {
+        "effect": "Compounded / counterfeit / research-peptide product harms (dosing errors, contamination, wrong molecule)",
+        "status": "established",
+        "prevalence_note": "Rising again. Poison-centre calls about incretins roughly doubled from 2028 to 2030, driven by reconstituted 'research' retatrutide vials (10× dosing errors, endotoxin) and counterfeit oral tablets. In FDA test buys, ~1 in 5 samples had the wrong strength or no active ingredient.",
+        "regulatory_response": "503B exclusion and the 503A injunction remain. FDA warning letters to 60+ telehealth and peptide sellers (2030); import alerts on Chinese API; first criminal case against a US reseller network. Individuals are still not prosecuted."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent in real-world use; usually transient.",
+        "regulatory_response": "Labelled."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With users up to ~42M, volume pressure is accelerating again. US snack and confectionery unit volumes are down ~3–4%/yr and sugary soft drinks ~3%. Protein, fibre and bone-health claims are standard. Big Food is selling or spinning off candy and salty-snack brands to private equity. Medicaid MCO 'protein box' contracts are a new channel.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Still contracting. Heavy-drinker volumes are falling, and the cessation label brings in a large lower-income cohort whose drinking falls alongside smoking. Low/no-alcohol products and 'one good drink' premiumisation are the growth pockets. Tobacco: US cigarette volumes fell ~9% in 2029 and ~11% in 2030, against a pre-2028 trend of ~5–6%. Vape volumes are flat to down, and convenience-store chains report lower tobacco-basket attachment.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic holds and check sizes shrink. Small plates, protein-forward menus and grazing portions are standard. Bars lean on non-alcoholic 'ritual' menus. Value-volume chains and buffets keep underperforming in high-uptake suburbs and Medicaid-heavy towns alike.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size runs flex both ways. Plus-size specialists are stable at a smaller base. Resale and 'size-swap' subscriptions are growing among cycling users.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Growing. DEXA-plus-coaching chains, Medicare Part D strength-counselling referrals and employer 'muscle insurance' benefits. Cessation users are a new entry demographic for low-cost gyms.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "The payer centre of gravity has moved public. Employers drift down to 54% coverage for weight management but must cover the cessation indication, and they gate both. BMI-linked and tobacco-linked surcharges are being merged into single 'metabolic-risk' surcharges whose waiver requires verified adherence. Commercial pharmacy trend is ~+8%. Medicaid MCOs are building weigh-in kiosk networks.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly leads on retatrutide and Foundayo. Novo is partly recovered on oral amycretin and the cessation label but is still under DOJ inquiry. Prices are flat everywhere in the US, so growth is volume. Ex-US generic erosion is deepening. Muscle-adjunct deals and oral next-gen molecules are the deal themes.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on is unremarkable across far more of the country than in 2028. It is no longer just insured professionals: Medicaid smokers, retirees on Part D and warehouse shift workers are on too. Being off is what needs explaining: 'bone scan', 'pregnant', 'missed my weigh-in'. Regain is read as a gate failure, a missed refill or a missed kiosk. The leaner, slightly stooped 'on it too long' look in older users is now matched by a younger tell: the ex-smoker who quit, stayed thin and seems pleasant and slightly far away.",
+      "thinness_and_class": "The gradient narrowed from below: 11% of the bottom third versus 20% of the top. The meaning split, though. The affluent buy calm: low-dose 'focus' regimens, DEXA monitoring and strength coaching. Lower-income users are on because Medicaid covers quitting cigarettes, and they live by the quarterly kiosk. Locally: among men and women 30–55 in Louisville, Kentucky's logistics workforce (UPS Worldport, Ford's Kentucky Truck Plant suppliers, regional warehouses), Kentucky's 2030 adherence-verified Medicaid option and Teamsters plan coverage put use near one in four. Smoke breaks on the Worldport sort shift have visibly thinned.",
+      "eating_as_ritual": "Smaller shared meals and sweets as ceremony are settled norms. In working-class households the cigarette after dinner disappeared alongside the second plate, and some families say the meal itself got shorter. Holiday etiquette for 'on' and 'off' guests is now covered in etiquette columns.",
+      "dating_and_intimacy": "'On/off' remains a dating-profile field. A newer field, 'dose: low/maintenance/full', has appeared on two apps, read partly as a signal of emotional temperature. Couples talk openly about one partner being 'flat'.",
+      "meaning_of_appetite": "Appetite of any kind is managed medically. Since the anhedonia label, people distinguish 'the good quiet' (no cravings) from 'the flat' (no pleasure) and treat the line between them as something to titrate.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL. The label now gives ~6–9% clinically meaningful anhedonia by drug and dose versus ~3% placebo. Long-term surveys still report reduced pleasure in 10–15%. In a ~41.9M user base, roughly 2.5–3.8M Americans meet the labelled definition at any time, mostly on higher doses. Telehealth 'calm' subscribers (~0.8M gray, plus an unknown number of legitimate off-label low-dose users) are choosing a mild version of the effect on purpose.",
+      "framing": "Three framings now sit side by side. On the label it is an adverse effect, with a percentage. In manufacturer cessation advertising, which stays on-label, it is a treatment: 'quiets the craving'. Telehealth and longevity clinics sell it outright as a feature, with ads that quote the label rate as a selling point: 'calm', 'focus', 'freedom from wanting'. Clinicians say 'titrate to quiet, not to flat'.",
+      "effect_on_work": "Employers moved from rewarding the correlates to buying the product. Two large wellness vendors sell 'craving-free workforce' programmes bundling cessation coverage, adherence gating and surcharge waivers, with reported reductions in smoke breaks, alcohol EAP claims and absenteeism. In logistics, call centres and compliance, staying on is the norm, and some supervisors read regain as a sign someone missed a gate. In sales, trading and creative roles, people lower their doses before pitches and quarter-ends. 'Off-dose Fridays' is office slang.",
+      "effect_on_art_and_play": "Songwriters and comics advertise themselves as 'full-dose free'. A small 'flat-music' ambient scene is made by and for users. Sports-betting handle in high-uptake states grew more slowly than projected, which operators blame partly on the drugs. Loud, high-stimulation leisure and intense flavours still sell to users chasing a signal through the quiet.",
+      "effect_on_intimacy": "Since the anhedonia label, sex therapists and couples counsellors routinely recommend dose review. Some couples negotiate 'dose holidays'. The Medication Guide's mention of reduced pleasure prompted a wave of first-person essays about partners who 'went quiet'.",
+      "effect_on_politics": "Visible on cost, control and surveillance rather than temperament. Democrats run on the India price gap and on the 'kiosk state'. Republicans run on smokers quitting and Medicaid accountability. Teamsters won contract language in 2029 barring PBM adherence data from reaching supervisors. ACLU and disability groups litigate gate terminations. Commentators argue over whether a calmer electorate exists. No turnout or polling effect is established.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-access and pro-speed on approvals (survodutide, oral amycretin, the cessation sNDA), and defensive on safety (anhedonia class label, Medicare DEXA conditions). Enforcement against the regrown gray market is reactive: warning letters, import alerts and one criminal case against a reseller network, but no individual prosecutions and no effective control of research-peptide sales.",
+      "subsidy_or_mandate": "No mandate to take the drug. The Medicare Bridge was made permanent as Part D obesity coverage (Jan 2030) at $245/$50. Medicaid must cover the cessation indication by statute. States get a +10-point federal match for obesity coverage that meets federal 'adherence verification' standards. Commercial plans must cover cessation use without cost-sharing under the ACA preventive mandate. TrumpRx cash tiers are frozen.",
+      "conditioning_or_surveillance": "Benefits conditioning is now national in design. The Dec 2029 act defined 'adherence verification' (≥80% proportion of days covered from claims plus quarterly verified weight, or cotinine for cessation enrollees) as the standard for the enhanced match. Nine states run it by end-2030, among them Indiana, Arkansas, Kentucky, Ohio, Missouri and Louisiana; the Indiana/Arkansas rules (miss two checks, lose 12 months) remain the template. Pharmacy weigh-in kiosks feed state Medicaid data hubs. About 55% of covering employers gate through their PBM, and combined metabolic-risk surcharges of up to 30% (BMI) or 50% (tobacco) of premium are waived only on verified adherence.",
+      "workforce_or_military": "DOT sleep-apnea screening still makes tirzepatide a de facto requirement for some commercial drivers. The Army allows GLP-1 use for recruits who meet accession standards, and the Navy has followed. Several state corrections departments offer semaglutide cessation to staff. No military mandate.",
+      "geopolitics_of_supply": "The flat US price against $8–40 Indian generics is still a trade irritant. India resists US pressure on mail exports. Chinese peptide API for research-grade retatrutide is the new front, with import alerts and talk of adding it to fentanyl-precursor style cooperation talks. Manufacturers cite Section 232 tariffs as the reason prices hold.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2029-03",
+        "event": "FDA approves semaglutide injection and Wegovy pill as an adjunct for adult smoking cessation at any BMI. CMS tells states the drug can no longer be excluded from Medicaid for that use, and HHS/DOL guidance says commercial plans must cover it without cost-sharing as a preventive service",
+        "driver": "new_indications: nicotine / coverage_shift: public_expansion"
+      },
+      {
+        "date": "2029-08",
+        "event": "FDA approves Novo's oral amycretin after a head-to-head trial shows a daily pill non-inferior to weekly tirzepatide at 22% mean loss; list $1,299, direct cash $399, no TrumpRx tier",
+        "driver": "next_gen_launch: oral_parity / price_path: stalled"
+      },
+      {
+        "date": "2029-12",
+        "event": "Year-end health package makes the Medicare GLP-1 Bridge permanent Part D coverage from January 2030 at $245/$50, and gives states a 10-point Medicaid match bonus for incretin coverage that meets a federal 'adherence verification' standard of refill data plus quarterly verified weight",
+        "driver": "coverage_shift: public_expansion / state_action: benefits_conditioning"
+      },
+      {
+        "date": "2030-02",
+        "event": "FDA test buys find one in five 'research-grade' retatrutide and amycretin products mislabelled. The agency sends warning letters to more than 60 telehealth and peptide sellers as poison-centre incretin calls reach double their 2028 level",
+        "driver": "market_shock: gray_market_resurgence"
+      },
+      {
+        "date": "2030-04",
+        "event": "FDA adds class labelling for anhedonia to all incretin products, citing 6–9% clinically meaningful reduced pleasure versus 3% on placebo, dose-dependent and reversible",
+        "driver": "safety_signal: anhedonia_labelled"
+      },
+      {
+        "date": "2030-07",
+        "event": "Two national wellness vendors launch 'craving-free workforce' employer programmes, and telehealth platforms run ads quoting the new FDA label rates as evidence of 'calm'; the FTC opens inquiries",
+        "driver": "personality_layer: marketed_feature / cultural_response: normalisation"
+      }
+    ],
+    "open_tensions": [
+      "The state now pays for incretins and verifies that people take them, through refill data, kiosks and cotinine, while the label warns about bones in older users and now lists anhedonia with a percentage. The federal match bonus rewards states for exactly the continuous exposure the label tells doctors to review.",
+      "Cessation coverage is mandatory and free at the point of use, but plans intend it as a 12-month course. Whether quitters who also lost weight can be cut off without triggering relapse, regain and litigation is unsettled, and the 7th Circuit has not ruled on gate terminations.",
+      "Prices are frozen at $149–1,499 in the US against $8–40 generics abroad and research-grade retatrutide sold by the vial. About 4.2M Americans use unmonitored product, and enforcement chases sellers without stopping supply.",
+      "Anhedonia is on the label as a harm, in cessation ads as a benefit and in telehealth ads as a product. The same pharmacology is regulated three ways, and the FTC, FDA and state medical boards have not agreed on who polices the 'calm' market."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; exclusivity still runs to ~2031–32.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149–150 a month cash through TrumpRx and manufacturer direct channels.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "Indiana's and Arkansas's 1115 waivers still end Medicaid GLP-1 coverage for 12 months after two missed checks (≥80% refill adherence, quarterly verified weigh-in); the disability-rights suit is still unresolved."
+    ]
+  },
+  "prose": {
+    "headline": "The Quiet Default: Medicaid Pays, the Kiosk Weighs You, and Now the Label Admits the Calm",
+    "world_in_600_words": "At the end of 2030 about one American adult in six is on an incretin drug, roughly 42 million people, up from 26 million two years ago. Prices did not fall to cause this. Cash prices are frozen where they stopped in 2027: $149 for an oral starting dose, $245 to $350 for injectables, and much more for the newest molecules. Wegovy still lists at $1,349. Public payers moved, and the people who got on stayed on.\n\nThe turn came in March 2029, when semaglutide was approved to help adults quit smoking. A forty-year-old federal rule bars Medicaid from excluding drugs that help people quit tobacco, so the drug that state budget officers had spent years rationing became one they could not refuse. Private plans found that the preventive-services mandate, upheld by the Supreme Court in 2025, required them to cover it without a copay. Smokers are poorest at the bottom of the income ladder, so the drug reached people it had missed. The bottom third of earners went from about one in fifteen on the drug to about one in nine.\n\nIn December 2029 Congress made Medicare's temporary $245 Bridge a permanent Part D benefit with the same $50 copay. The same bill offered states extra federal money for Medicaid obesity coverage if they adopted a federal standard of 'adherence verification': refill data, plus a weigh-in at a pharmacy kiosk every quarter, or a cotinine test for people quitting. Nine states have signed up. Indiana's rule, that two missed checks cost you a year of coverage, is now a national template. Public programmes pay for more fills than employers do. Employers that still cover weight loss mostly gate it too, merging their tobacco and BMI surcharges into a single 'metabolic risk' charge that is waived only while the refills keep arriving.\n\nThe pill changed who starts. Novo's oral amycretin, approved in August 2029, matched weekly tirzepatide in a head-to-head trial, and for many people the drug became one more tablet beside the statin. Retatrutide is still the injectable ceiling at 28 per cent. The muscle-saving add-ons that older users wait for are still in trials.\n\nIn April 2030 the FDA put the thing people had talked about since 2026 on every label. Clinically meaningful loss of pleasure occurs in about six to nine per cent of users depending on drug and dose, against three per cent on placebo, and it usually lifts when the dose comes down. The industry around the drugs has not treated this as a warning. Manufacturers advertise cessation as 'quieting the craving'. Telehealth clinics sell low-dose 'calm' and 'focus' plans and quote the label's percentages as evidence it works. Wellness vendors sell employers a 'craving-free workforce'. Clinicians tell patients to titrate to quiet, not to flat.\n\nAlongside the legal market a second one has regrown. Indian generics still arrive by mail for the price of lunch. Vials of research-grade retatrutide, synthesised from Chinese peptide powder and reconstituted in kitchens, are sold through gyms and group chats. In FDA test buys one in five was wrong. Poison-centre calls have doubled. Regulators send letters and the sellers move.\n\nIn Louisville, on the night sort at the UPS hub, the smoke-break crowd has thinned to a few people. Cigarette volumes are falling at about twice their old rate. Snack makers are selling off candy brands. Gyms selling a bone scan with a coaching package keep opening. Off the drug are about 25 million people who stopped, many at a kiosk gate, along with the uninsured, the retirees whose doctors warned them off, and teenagers growing up in homes where an adult is on it. The country is calmer, and the record shows who took their dose.",
+    "a_day_in_the_life": "Tammy Reece wakes at 5:40, takes the Wegovy pill with four ounces of water as the sheet says, and sits thirty minutes before coffee. It's the first rule she ever kept. Kentucky Medicaid pays for it. Her copay is a dollar.\n\nHer first client in Shively is Mr. Abernathy, ninety-one, who still smokes Pall Malls on the porch. She used to bum one off him. Now she holds his lighter while he lights up and feels nothing much. Her sponsor at the quitline calls this \"the good quiet\" and says to watch for the other one.\n\nAt noon she eats half a turkey wrap in the car and saves the rest. Her phone reminds her: QUARTERLY CHECK DUE — 6 DAYS. The Kroger on Dixie Highway has the kiosk by the blood-pressure cuff. You put your Medicaid card in, stand on the plate, look at the camera, and blow into a straw for the cotinine. Last time the straw jammed and she had to come back.\n\nHer son Caleb, sixteen, vapes in the bathroom with the fan on. A girl at his school gets pills from an app. Tammy has looked at the app and hasn't decided anything.\n\nAfter dinner Darrell has seconds, then a beer, then a cigarette in the yard. He got cut off his plan in March for missing a refill and has put back the weight. She watches him through the screen door. He is laughing at something on his phone, really laughing. She tries to remember the last time she laughed like that and can't tell whether she misses it.\n\nShe sets the alarm for 5:40."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }
