@@ -41,6 +41,8 @@
   },
   "batch_discount": 0.5,
   "chars_per_token_estimate": 3.5,
-  "max_usd_per_step": 25,
+  "max_usd_per_submission": 25,
+  "max_usd_total": 150,
+  "_note_cost": "Guardrail, checked before every batch is sent (main and repair): the batch's worst-case estimate must be <= max_usd_per_submission, and the ledger's cumulative recorded spend (runs/spend_ledger.json, every step and attempt, pilots included) plus that estimate must be <= max_usd_total. --yes overrides either.",
   "seed": 20261107
 }

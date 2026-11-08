@@ -8,7 +8,7 @@ import pytest
 
 from glpsim import generate as G
 from glpsim import judge as J
-from glpsim import runner
+from glpsim import batch, runner
 from glpsim import select as S
 from glpsim.common import load_json, load_sim_config
 from glpsim.validate import validate_tree
@@ -233,7 +233,7 @@ def test_truncated_generation_is_invalid_and_never_repaired(repo, monkeypatch):
 
 def test_cost_guardrail_aborts_before_submitting(repo, client, capsys):
     cfg = load_sim_config(repo)
-    cfg["max_usd_per_step"] = 0.01
+    cfg["max_usd_per_submission"] = 0.01
     (repo.config / "sim.json").write_text(json.dumps(cfg))
     assert G.main(repo, gargs()) == 2
     assert client.messages.batches.created == {}
@@ -439,17 +439,38 @@ def test_spend_ledger_survives_clearing_a_step_and_never_double_counts(repo, cli
     assert validate_tree(repo)[1] == []
 
 
-def test_guardrail_counts_earlier_attempts(repo, client, capsys):
+def test_total_cap_counts_every_attempt_but_the_submission_cap_does_not(repo, client, capsys):
     import shutil
     assert G.main(repo, gargs()) == 0
-    spent = runner.step_spent(repo, 1)
-    shutil.rmtree(repo.step_runs(1))
+    spent = runner.total_spent(repo)
+    assert spent == pytest.approx(runner.step_spent(repo, 1)) and spent > 0
+    shutil.rmtree(repo.step_runs(1))                    # a cleared pilot still counts toward the total
+    assert runner.total_spent(repo) == pytest.approx(spent)
+    est = batch.estimate(G.build(repo, load_sim_config(repo), 1, 6, load_sim_config(repo)["seed"])[1],
+                         load_sim_config(repo))
     cfg = load_sim_config(repo)
-    cfg["max_usd_per_step"] = spent + 0.01              # the rerun alone would fit; with history it does not
+    cfg["max_usd_total"] = spent + est["usd_max"] - 0.01   # the batch alone fits; with history it does not
     (repo.config / "sim.json").write_text(json.dumps(cfg))
     capsys.readouterr()
     assert G.main(repo, gargs()) == 2
-    assert f"${spent:.2f} already recorded" in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert f"total: ${spent:.2f} recorded" in out and "exceeds max_usd_total" in out
+    assert "exceeds max_usd_per_submission" not in out
+    cfg["max_usd_total"] = 150                          # raise the total: the same batch now goes
+    (repo.config / "sim.json").write_text(json.dumps(cfg))
+    assert G.main(repo, gargs()) == 0
+    assert runner.total_spent(repo) == pytest.approx(2 * spent)
+
+
+def test_total_spans_steps(repo):
+    led = {"batches": [
+        {"step": s, "kind": "generate", "role": "main", "batch_id": f"b{s}", "model": "m",
+         "submitted_at": "t", "request_count": 1, "estimate_usd": 9.0, "status": "collected",
+         "actual_usd": a} for s, a in ((1, 1.5), (2, 2.25), (3, None))]}
+    repo.runs.mkdir(parents=True, exist_ok=True)
+    (repo.runs / "spend_ledger.json").write_text(json.dumps(led))
+    assert runner.total_spent(repo) == pytest.approx(1.5 + 2.25 + 9.0)   # uncollected: estimate
+    assert runner.step_spent(repo, 2) == pytest.approx(2.25)
 
 
 # ---------------------------------------------------------------- rubric v2

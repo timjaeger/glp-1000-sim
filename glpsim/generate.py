@@ -61,10 +61,11 @@ def main(paths, args) -> int:
         est = batch.estimate(requests, cfg)
         print(f"DRY RUN — nothing submitted. step {step} ({step_year(cfg, step)}), seed {seed}, "
               f"{len(plan)} run(s) from {', '.join(sorted({i['parent_lineage'] for i in plan}))}")
-        from .runner import step_spent
-        print(batch.format_estimate("generation batch", est, cfg, cfg["generation"], step_spent(paths, step)))
-        if batch.over_cap(est, cfg):
-            print("  (a real submit would abort here without --yes)")
+        from .runner import step_spent, total_spent
+        print(batch.format_estimate("generation batch", est, cfg, cfg["generation"],
+                                    total_spent(paths), step_spent(paths, step)))
+        for b in batch.cap_breaches(est, cfg, total_spent(paths)):
+            print(f"  (a real submit would abort here without --yes: {b})")
         print(f"wrote {batch_path.relative_to(paths.root)} ({len(requests)} requests)")
         print(f"wrote readable prompts to {out.relative_to(paths.root)}/")
         return 0

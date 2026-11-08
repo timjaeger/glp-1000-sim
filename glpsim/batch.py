@@ -199,22 +199,37 @@ def actual_usd(cfg: dict, model: str, input_tokens: int, output_tokens: int) -> 
     return (input_tokens * pin + output_tokens * pout) / 1e6
 
 
-def format_estimate(label: str, est: dict, cfg: dict, call_cfg: dict, spent: float = 0.0) -> str:
+def cap_breaches(est: dict, cfg: dict, total_spent: float = 0.0) -> list[str]:
+    """The guardrail. Empty = may submit. `total_spent` is the ledger's cumulative total."""
+    out = []
+    if est["usd_max"] > cfg["max_usd_per_submission"]:
+        out.append(f"this batch's estimate ${est['usd_max']:.2f} exceeds max_usd_per_submission "
+                   f"${cfg['max_usd_per_submission']:.2f}")
+    if total_spent + est["usd_max"] > cfg["max_usd_total"]:
+        out.append(f"recorded total ${total_spent:.2f} + this batch ${est['usd_max']:.2f} exceeds "
+                   f"max_usd_total ${cfg['max_usd_total']:.2f}")
+    return out
+
+
+def over_cap(est: dict, cfg: dict, total_spent: float = 0.0) -> bool:
+    return bool(cap_breaches(est, cfg, total_spent))
+
+
+def format_estimate(label: str, est: dict, cfg: dict, call_cfg: dict, total_spent: float = 0.0,
+                    step_spent: float | None = None) -> str:
     model = est["models"][0] if est["models"] else "?"
     pin, pout = prices(cfg, model) if est["models"] else (0, 0)
-    cap = cfg["max_usd_per_step"]
-    total = spent + est["usd_max"]
-    verdict = "within cap" if total <= cap else "OVER CAP"
+    per, cap_total = cfg["max_usd_per_submission"], cfg["max_usd_total"]
+    total = total_spent + est["usd_max"]
+    step_note = f" (this step so far ${step_spent:.2f})" if step_spent is not None else ""
     return "\n".join([
         f"{label}: {est['requests']} request(s) to {', '.join(est['models'])} "
         f"(effort {call_cfg['effort']}, max_tokens {call_cfg['max_tokens']})",
         f"  input  ~{est['input_tokens']:,} tokens (estimated at {cfg['chars_per_token_estimate']} chars/token, incl. schema)",
         f"  output <={est['output_tokens_max']:,} tokens (max_tokens per request; thinking is billed as output)",
         f"  cost   <=${est['usd_max']:.2f} at batch prices (${pin:.2f}/MTok in, ${pout:.2f}/MTok out)",
-        f"  step budget: ${spent:.2f} already recorded + ${est['usd_max']:.2f} = ${total:.2f} "
-        f"vs max_usd_per_step ${cap:.2f} -> {verdict}",
+        f"  this submission: ${est['usd_max']:.2f} vs max_usd_per_submission ${per:.2f} -> "
+        + ("within cap" if est["usd_max"] <= per else "OVER CAP"),
+        f"  total: ${total_spent:.2f} recorded{step_note} + ${est['usd_max']:.2f} = ${total:.2f} "
+        f"vs max_usd_total ${cap_total:.2f} -> " + ("within cap" if total <= cap_total else "OVER CAP"),
     ])
-
-
-def over_cap(est: dict, cfg: dict, spent: float = 0.0) -> bool:
-    return spent + est["usd_max"] > cfg["max_usd_per_step"]

@@ -114,6 +114,20 @@ def _cost(b: dict) -> float:
     return b["actual_usd"] if b.get("actual_usd") is not None else b["estimate_usd"]
 
 
+def total_spent(paths) -> float:
+    """Cumulative recorded spend across every step, attempt and pilot: actual where collected,
+    worst-case estimate otherwise. Batches found only in a state file are counted once too."""
+    seen, total = set(), 0.0
+    for b in load_ledger(paths)["batches"]:
+        seen.add(b["batch_id"]); total += _cost(b)
+    if paths.runs.exists():
+        for sf in sorted(paths.runs.glob("step*/_state_*.json")):
+            for b in load_json(sf).get("batches", []):
+                if b["batch_id"] not in seen:
+                    seen.add(b["batch_id"]); total += _cost(b)
+    return total
+
+
 def step_spent(paths, step: int) -> float:
     """Recorded spend for the step, every attempt included: actual where collected, worst-case
     estimate otherwise. The ledger is the record; a batch found only in a state file (written
@@ -311,11 +325,11 @@ def guarded_submit(paths, cfg, args, client, state: dict, role: str, requests: l
                    batch_file, call_cfg: dict, label: str) -> str | None:
     """Estimate, check the cap, write the batch file, submit, record. None = aborted by guardrail."""
     est = batch.estimate(requests, cfg)
-    spent = step_spent(paths, state["step"])
-    print(batch.format_estimate(label, est, cfg, call_cfg, spent))
-    if batch.over_cap(est, cfg, spent) and not args.yes:
-        print(f"ABORT: estimate exceeds max_usd_per_step (${cfg['max_usd_per_step']:.2f}). "
-              f"Nothing submitted. Re-run with --yes to submit anyway.")
+    spent = total_spent(paths)
+    print(batch.format_estimate(label, est, cfg, call_cfg, spent, step_spent(paths, state["step"])))
+    breaches = batch.cap_breaches(est, cfg, spent)
+    if breaches and not args.yes:
+        print("ABORT: " + "; ".join(breaches) + ". Nothing submitted. Re-run with --yes to submit anyway.")
         return None
     batch.write_batch_file(batch_file, requests)
     try:
@@ -740,7 +754,7 @@ def summarise(paths, step: int, kind: str, state: dict) -> int:
     last_main = max(i for i, b in enumerate(state["batches"]) if b["role"] == "main")
     spent = sum(b["actual_usd"] or 0 for b in state["batches"][last_main:])
     print(f"{kind} step {step} done: {counts}; this pass's batches cost ${spent:.2f}; "
-          f"step total recorded ${step_spent(paths, step):.2f}")
+          f"step total recorded ${step_spent(paths, step):.2f}; all steps ${total_spent(paths):.2f}")
     print("next: " + (f"python sim.py judge --step {step}" if kind == "generate"
                       else f"python sim.py select --step {step}"))
     return 0

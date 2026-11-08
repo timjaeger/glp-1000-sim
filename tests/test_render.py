@@ -185,7 +185,13 @@ def test_estimate_and_guardrail():
     assert est["output_tokens_max"] == 10_000
     assert est["usd_max"] == round((210 * 2.0 + 10_000 * 10.0) / 1e6, 2)
     assert not batch.over_cap(est, cfg)
-    assert batch.over_cap(est, cfg, spent=cfg["max_usd_per_step"])
+    assert batch.cap_breaches(est, cfg, total_spent=cfg["max_usd_total"]) == [
+        f"recorded total ${cfg['max_usd_total']:.2f} + this batch ${est['usd_max']:.2f} exceeds "
+        f"max_usd_total ${cfg['max_usd_total']:.2f}"]
+    small = dict(cfg, max_usd_per_submission=est["usd_max"] - 0.01)
+    (b,) = batch.cap_breaches(est, small)                   # history is irrelevant to the per-submission cap
+    assert "exceeds max_usd_per_submission" in b
+    assert not batch.over_cap(est, dict(cfg, max_usd_per_submission=est["usd_max"]), total_spent=100)
     with pytest.raises(KeyError, match="no price"):
         batch.prices(cfg, "some-unpriced-model")
 

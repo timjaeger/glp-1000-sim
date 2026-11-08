@@ -89,8 +89,11 @@ def main(paths, args) -> int:
         est = batch.estimate(requests, cfg)
         print(f"DRY RUN — nothing submitted. step {step}: judging {len(runs)} run(s)"
               + (f" (FIXTURE {fixture}, not a generated run)" if use_fixture else ""))
-        from .runner import step_spent
-        print(batch.format_estimate("judge batch", est, cfg, cfg["judging"], step_spent(paths, step)))
+        from .runner import step_spent, total_spent
+        print(batch.format_estimate("judge batch", est, cfg, cfg["judging"],
+                                    total_spent(paths), step_spent(paths, step)))
+        for b in batch.cap_breaches(est, cfg, total_spent(paths)):
+            print(f"  (a real submit would abort here without --yes: {b})")
         print(f"wrote {batch_path.relative_to(paths.root)} ({len(requests)} requests)")
         print(f"wrote readable prompts to {out.relative_to(paths.root)}/")
         return 0

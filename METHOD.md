@@ -197,10 +197,24 @@ the people who never could afford it, and the children who grew up inside it.
 
 ## 9. Cost
 
-Rough per-step budget at 50 runs: generation ~50 × (6k in + 3k out) tokens;
-judging ~50 × (8k in + 1k out). On the Batch API with current pricing that is
-single-digit dollars per step, well under $50 for the whole run. The cost
-guardrail in `config/sim.json` is a ceiling, not a target.
+Every batch ever submitted is recorded in `runs/spend_ledger.json`: step, kind,
+batch id, the worst-case estimate printed before sending, and the actual cost
+from the usage the API reports. The ledger is cumulative and complete: pilots
+and failed attempts stay in it even after their run files are cleared. Two caps
+in `config/sim.json`, checked before every batch (main and repair) is sent:
+
+- `max_usd_per_submission` ($25): the worst-case estimate of the batch about
+  to be sent. History does not count against it.
+- `max_usd_total` ($150): the ledger's cumulative recorded spend (actual where
+  collected, estimate otherwise) plus that estimate.
+
+Either breach aborts the submission unless `--yes`. The estimate is a ceiling
+(every request at `max_tokens`, thinking billed as output), so actual spend
+runs well below it. Measured in the step-1 pilots (Opus 5.5 generation at
+`max_tokens` 32000, Sonnet 5.5 judging): roughly $0.15–0.30 per generated run
+and $0.04 per judge sample, so a 50-run step judged ×3 is on the order of
+$15–20 actual against a ~$17 generation and ~$8 judging worst case. The caps
+are a ceiling, not a target.
 
 ## 10. Output
 
