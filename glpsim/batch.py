@@ -1,8 +1,12 @@
 """Message Batches request building, cost estimation and the cost guardrail.
 
-Structured output: requests use `output_config.format` (JSON schema) rather
-than forced tool use, which both configured models reject. The API accepts a
-subset of JSON Schema (no numeric bounds, string lengths or array-size
+Structured output: judge requests use `output_config.format` (JSON schema).
+Generation requests instead carry the schema as the input_schema of one
+non-strict tool, `submit_world`: the world+prose schema compiles to a grammar
+larger than the API accepts ("The compiled grammar is too large", step 1
+attempts 1-2), and a non-strict tool compiles none. Forced tool use is rejected
+by both configured models, so the prompt and the tool description ask for the
+call. Both kinds use the API's subset of JSON Schema (no numeric bounds, string lengths or array-size
 constraints, `additionalProperties` must be false), so `to_api_schema` derives
 that subset from the repo schemas. The full repo schema is still applied
 locally to every response; that check is what triggers the repair attempt.
@@ -66,34 +70,8 @@ def to_api_schema(node, defs: dict | None = None, where: str = "#"):
     return out
 
 
-NULLABLE_NOTE = "simulated step: always give a number (your best estimate), never null"
-
-
-def drop_null_unions(node):
-    """Collapse every `anyOf: [{type: X}, {type: null}]` to `{type: X}`.
-
-    Union-typed parameters have exponential grammar-compilation cost: with ten
-    nullable numbers the generation schema is inside the documented limits yet
-    rejected as "The compiled grammar is too large". Nulls exist in the world
-    schema for unknown baseline facts; a simulated step is fiction and can always
-    commit to a figure, so the API constraint asks for one. The repo schema,
-    which still allows null, is applied locally to every response."""
-    if isinstance(node, list):
-        return [drop_null_unions(n) for n in node]
-    if not isinstance(node, dict):
-        return node
-    out = {k: drop_null_unions(v) for k, v in node.items()}
-    branches = out.get("anyOf")
-    if isinstance(branches, list) and len(branches) == 2 and {"type": "null"} in branches:
-        (keep,) = [b for b in branches if b != {"type": "null"}]
-        rest = {k: v for k, v in out.items() if k != "anyOf"}
-        desc = "; ".join(d for d in (rest.pop("description", None), NULLABLE_NOTE) if d)
-        out = {**keep, **rest, "description": desc}
-    return out
-
-
 def generation_api_schema(paths) -> dict:
-    world = drop_null_unions(to_api_schema(schemas.schema(paths, "world_state")))
+    world = to_api_schema(schemas.schema(paths, "world_state"))
     world["properties"]["fictional"] = {"type": "boolean", "enum": [True],
                                         "description": "always true for a simulated step"}
     prose = to_api_schema(schemas.schema(paths, "run")["properties"]["prose"])
@@ -121,20 +99,41 @@ def local_judge_validator(paths):
 
 # ---------------------------------------------------------------- requests
 
+GENERATION_TOOL = "submit_world"
+GENERATION_TOOL_DESCRIPTION = (
+    "Submit the simulated world: one object with exactly the keys `world` and `prose`, "
+    "every field filled. Call this tool exactly once, as your whole answer.")
+
+
 def build_request(custom_id: str, *, model: str, call_cfg: dict, system: str, user: str,
-                  schema: dict, prior: list[dict] | None = None) -> dict:
-    """One Message Batches request. `prior` prepends earlier turns (used by repair)."""
+                  schema: dict, prior: list[dict] | None = None, tool: str | None = None) -> dict:
+    """One Message Batches request. `prior` prepends earlier turns (used by repair).
+
+    With `tool`, the schema goes out as that non-strict tool's input_schema;
+    without it, as `output_config.format`."""
     params = {
         "model": model,
         "max_tokens": call_cfg["max_tokens"],
         "system": system,
         "messages": (prior or []) + [{"role": "user", "content": user}],
-        "output_config": {"effort": call_cfg["effort"],
-                          "format": {"type": "json_schema", "schema": schema}},
+        "output_config": {"effort": call_cfg["effort"]},
     }
+    if tool:
+        params["tools"] = [{"name": tool, "description": GENERATION_TOOL_DESCRIPTION,
+                            "input_schema": schema}]
+    else:
+        params["output_config"]["format"] = {"type": "json_schema", "schema": schema}
     if call_cfg.get("temperature") is not None:
         params["temperature"] = call_cfg["temperature"]
     return {"custom_id": custom_id, "params": params}
+
+
+def request_schema(req: dict) -> dict:
+    """The output schema a request carries, whether as a tool or as output_config.format."""
+    p = req["params"]
+    if p.get("tools"):
+        return p["tools"][0]["input_schema"]
+    return p["output_config"]["format"]["schema"]
 
 
 def write_batch_file(path: Path, requests: list[dict]) -> None:
@@ -147,7 +146,7 @@ def request_text_chars(req: dict) -> int:
     for m in p["messages"]:
         c = m["content"]
         n += len(c) if isinstance(c, str) else sum(len(b.get("text", "")) for b in c)
-    n += len(json.dumps(p["output_config"]["format"]["schema"]))
+    n += len(json.dumps(request_schema(req)))
     return n
 
 

@@ -28,7 +28,7 @@ def build(paths, cfg: dict, step: int, n: int, seed: int):
             drivers=item["drivers"], dcfg=dcfg)
         requests.append(batch.build_request(item["run_id"], model=cfg["models"]["generator"],
                                             call_cfg=cfg["generation"], system=system, user=user,
-                                            schema=schema))
+                                            schema=schema, tool=batch.GENERATION_TOOL))
     return plan, requests
 
 

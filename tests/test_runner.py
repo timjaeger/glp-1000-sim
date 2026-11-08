@@ -26,6 +26,20 @@ def text_result(cid, text, stop="end_turn", model="served-model"):
     return NS(custom_id=cid, result=NS(type="succeeded", message=msg))
 
 
+def tool_result(cid, obj, model="served-model"):
+    msg = NS(model=model, stop_reason="tool_use", stop_details=None,
+             content=[NS(type="thinking", thinking=""),
+                      NS(type="tool_use", id="toolu_x", name="submit_world", input=obj)],
+             usage=NS(input_tokens=1000, output_tokens=2000))
+    return NS(custom_id=cid, result=NS(type="succeeded", message=msg))
+
+
+def test_normalise_reads_the_tool_call_input_before_any_text():
+    n = runner.normalise(tool_result("a", GOOD))
+    assert json.loads(n["text"]) == GOOD and n["stop_reason"] == "tool_use"
+    assert json.loads(runner.normalise(text_result("b", json.dumps(GOOD)))["text"]) == GOOD
+
+
 def refusal_result(cid):
     msg = NS(model="served-model", stop_reason="refusal", stop_details=NS(category="general_harms"),
              content=[], usage=NS(input_tokens=1000, output_tokens=5))

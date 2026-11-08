@@ -142,6 +142,15 @@ def poll(client, batch_id: str, interval: float, sleep=time.sleep) -> None:
         sleep(interval)
 
 
+def response_text(content) -> str | None:
+    """The answer as JSON text: a tool call's input if there is one (generation), else the
+    first text block (judge, or a generator that answered in text instead of calling)."""
+    call = next((b for b in content if getattr(b, "type", None) == "tool_use"), None)
+    if call is not None:
+        return json.dumps(call.input, ensure_ascii=False)
+    return next((b.text for b in content if getattr(b, "type", None) == "text"), None)
+
+
 def normalise(result) -> dict:
     """SDK result object -> plain dict (also accepts the same shape from a fake client)."""
     r = result.result
@@ -153,7 +162,7 @@ def normalise(result) -> dict:
         out.update(
             served_model=getattr(m, "model", None),
             stop_reason=getattr(m, "stop_reason", None),
-            text=next((b.text for b in m.content if getattr(b, "type", None) == "text"), None),
+            text=response_text(m.content),
             input_tokens=(getattr(u, "input_tokens", 0) or 0) + (getattr(u, "cache_read_input_tokens", 0) or 0)
                          + (getattr(u, "cache_creation_input_tokens", 0) or 0),
             output_tokens=getattr(u, "output_tokens", 0) or 0,

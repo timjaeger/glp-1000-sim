@@ -79,4 +79,5 @@ Rules you must follow:
 9. `open_tensions`: 2–4 pressures that are unresolved at the end of
    {{target_year}}. The next step will inherit them.
 
-Return only the JSON object with keys `world` and `prose`.
+Submit the object with keys `world` and `prose` by calling the `submit_world`
+tool once. Write nothing else.
