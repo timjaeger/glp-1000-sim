@@ -62,6 +62,41 @@
         "input_tokens": 30374,
         "output_tokens": 13768
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r30-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28578,
+        "output_tokens": 7995
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r30-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28578,
+        "output_tokens": 6774
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r30-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28578,
+        "output_tokens": 6307
+      }
     ]
   },
   "validation": {
@@ -73,6 +108,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -329,5 +368,185 @@
     "headline": "One in five Americans is on it, and the boss has stopped paying. Inside the $179 cash-pay nation, quiet on weekdays and hungry on weekends",
     "world_in_600_words": "At the end of 2032 about one American adult in five takes an incretin drug, roughly fifty-seven million people. Two years ago it was one in seven. There was no new molecule, because the FDA sent every candidate back for more bone scans. A falling price did the work, and so, oddly, did employers who stopped paying for it. In December 2031 the government and the two manufacturers agreed a second step-down on the federal direct portal: weekly semaglutide and the higher oral doses at $179, tirzepatide from $179, starter pills still at $149. Medicare and Medicaid now pay $179, and Medicare patients still pay a $50 copay.\n\nAt that price benefits managers did the maths and pulled back. If an employee can buy the drug for about what a plan pays net, the reasoning went, why run weigh-ins, adherence tracking and disability complaints to cover it? The big pharmacy-benefit managers made diagnosis-anchored formularies the default. Diabetes, heart disease, sleep apnea, kidney and liver codes stay covered. Obesity alone became an optional rider, and fewer than half of employers kept it. Most people who lost coverage in January did not stop for long. They moved to the portal and paid out of pocket. Cash buyers are now more than a third of all users and spend about forty billion dollars a year. Another four and a half million inject pens mailed from India or China, which cost a tenth as much and come with no prescriber.\n\nThe result is two systems that look alike from the outside. People who are coded, meaning covered through a diagnosis, and Medicare patients get counselling visits, fall screening and DEXA scans. Cash buyers mostly get a box in the mail. Older long-term users still break hips about a third more often than they otherwise would, and with more of them that now means roughly eight thousand extra hip fractures a year. No new safety signal emerged, only the old ones growing with exposure. Telehealth weight clinics started ordering home sleep-apnea tests at twice the old rate, and insurers started auditing the codes.\n\nThe quieting effect stopped being a secret and became a common complaint. About five million people take low-dose pills sold as 'Quiet', 'Even' or 'Unhooked', for calm and focus and for less pull towards a drink or a phone. Roughly two-thirds of them have no weight problem, and some get the pills through employee-assistance platforms. They have a name for the downside, 'the grey', and a remedy: holidays. Thirty-eight percent of current users say they have deliberately skipped doses, and Quiet now sells a Weekend plan with the pauses built in. Bars see a Friday bump. Hosts ask guests whether they are on this weekend. Couples counsellors deal with partners whose holiday schedules don't match. In September Lilly filed to have low-dose Foundayo approved for heavy drinking, measured partly on the same pleasure scale that worries clinicians. A decision is a year away at least.\n\nThe counter-movement has grown. Atlanta's body-sovereignty collectives had argued about dignity. The coverage cuts, which hit teachers and service workers first, gave them an argument about money. The Southern Baptist Convention warned against 'chemical contentment'. Supplement sellers make money from both sides. Together these groups publish a voter guide in Georgia and Texas, and they still cannot agree whether they want the drugs cheaper or gone.\n\nSpirits fell for a fifth year. Snack aisles shrank and gyms filled. Everyone is waiting for January 2033, when the first US generic semaglutide is due, and nobody knows whether it will bring employers back, clean up the gray market, or just make the cash tier larger.",
     "a_day_in_the_life": "Renee Castillo, fifty-three, does payroll for the Northside school district in San Antonio. The district dropped its obesity rider in January, and her own payslip was the first she processed under the new plan. She pays $179 for the tirzepatide herself now, on the portal, with the debit card she used to keep for groceries.\n\nShe injects on Tuesdays before work. This week she does it standing at the kitchen counter, under the calendar where her husband Hector has written HOLIDAY across Saturday and Sunday in red marker. His sister's quinceañera is that weekend, for her granddaughter.\n\nAt lunch the front-office women eat cottage cheese and talk about Marisol from transportation, who got her sleep test approved. \"She snores,\" someone says, \"apparently.\"\n\nThe gym near the H-E-B has put a sticker on its window: DEXA + COACHING $79. Renee slows down when she passes it. The last scan she had was in 2030, when the plan still paid, and the letter called her hips \"low normal.\" She works out what $79 comes to over a year, then what $179 comes to, and drives on.\n\nHer son Danny calls from Austin. He started on Even through his company's wellness account, and he says he feels good, steady. He doesn't laugh at her story about Marisol. He doesn't really laugh at anything.\n\nAt night she sets out Saturday's dress. The waist has room in it, which she likes. She thinks about tamales, the real ones from his sister's kitchen, and about whether she will want them by Saturday.\n\nShe hopes she will."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r30-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The main mechanism: the $149–179 cash portal price is close to the PBM net of ≈$160–175, so benefits managers stopped seeing a reason to pay for a drug employees could buy themselves.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: the 2030 world had a nearly identical price relationship ($199 portal vs $170–190 PBM net), and employer coverage rose then, from 58% to 63%. The stipulated retreat is therefore explained by a gap that had barely changed."
+        },
+        {
+          "quote": "Of the 18.7M commercial users, ≈12.9M are covered through T2D (~9.0M), established CVD (~1.8M), OSA (~1.4M) or CKD/MASH (~0.7M).",
+          "field": "world/access/note",
+          "why": "mechanism: commercial users stay flat (18.5M to 18.7M) while employer obesity coverage drops 16 points. That requires a large, quick migration into diagnosis-coded coverage, which rests on one stat (home sleep tests 'more than doubled') and is not shown."
+        },
+        {
+          "quote": "In Sep 2032 Lilly filed an sNDA for low-dose orforglipron (Foundayo) to reduce heavy-drinking days in alcohol use disorder, with SHAPS anhedonia and motivation endpoints the FDA had asked for in the 2029 smoking CRL.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: no pivotal trial, start date or sponsor decision is shown that would produce a complete AUD dossier with new anhedonia endpoints in under two years. Whether an AUD filing really realises 'mood_and_motivation' is also thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "A harder, more stratified society: employer retreat pushes about 20M people into $179/month cash, and cash and imported users (nearly half of all users) get no DEXA or counselling while excess hip fractures grow to about 8,400 a year. Reward blunting is normalised ('the grey', weekend plans, with 'Quiet' users described as flat) and has no independent measurement. Offsets keep it near 5: private surveillance shrank, no mass-casualty event occurred, and the prevalence of harm is modest and nameable.",
+        "plausibility": "driver_fidelity: All drivers are visible. Adoption lands at 20.8% and employer coverage falls 63→47% via the PBM diagnosis-anchored formulary event. The backlash is present and personality_layer reads as mainstream_complaint. mood_and_motivation is realised only through marketing and an AUD sNDA filing, which is allowed but a loose fit. mechanism: The employer-retreat chain is shown (portal price, gating costs, tenure), as are cash restarts and diagnosis migration. The first two least-plausible claims are weak links: the price-gap logic is unchanged from 2030, and the commercial user count stays flat. The AUD filing has no trial path shown. magnitude: Current use 20.8% and ever-use 33.0% are inside the envelope, with ever-use near the cap. Payer mix, age bands, income thirds, Medicare 8.5M, Bridge spend ($5.6B), Medicaid ($9.7B), cash ($43B) and hip-fracture arithmetic all reconcile. Approval and generic timing obey the rules (first generic Jan 2033).",
+        "generativity": "The Renee Castillo scene is rich: the HOLIDAY marker on the calendar, the $79 DEXA sticker set against $179, the sleep-test gossip, and her son Danny who 'doesn't really laugh at anything'. The world fields imply many more scenes, including dose-holiday hosting, EAP 'Quiet' tracks, the Atlanta and Tulsa–Dallas backlash, and PBM audits. Some secondary characters stay thin."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s3-L2-r30-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "About 5.5 pts of those new users are still on, which is higher persistence than the 2028–30 cohorts.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 5.5 of 9.0 new-user points still on implies about 60% persistence, against the parent's ~35% one-year persistence. The offered explanation (low-dose starters, no gates) is asserted, and the employer gates being removed would more plausibly raise churn."
+        },
+        {
+          "quote": "her husband Hector has written HOLIDAY across Saturday and Sunday in red marker",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: Renee injects weekly tirzepatide on Tuesdays, and skipping Saturday and Sunday does nothing to a long-half-life weekly drug. The weekend-holiday device only makes pharmacological sense for daily oral low-dose products, so the prose contradicts its own world logic."
+        },
+        {
+          "quote": "38% of current users say they have taken a deliberate dose holiday",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: a jump to mass deliberate holidaying is asserted by one survey figure, with no chain from the 2030 baseline, in a population where most users are on weekly injectables. It also sits awkwardly with 'two-thirds restarted' stories and the cycling-fracture warnings."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "One adult in five is on the drug, and the safety gap now splits along payer lines: coded and Medicare users get DEXA and counselling, while cash and imported users, about 44% of all users, get none. Excess hip fractures grow to ~8,400 a year, and the employer retreat pushes the middle third into $179 cash bills (world/body_and_culture/thinness_and_class). About 5M 'quiet mind' subscribers have no independent measurement of reward blunting. Conditioning shrinks, but private surveillance is replaced by code audits. That is a recognisably harder society with new losers rather than a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption lands at 20.8%, employer coverage falls 63→47% by the June 2031 PBM event, the mood indication appears only as a filing, and no new safety signal, state action or market shock appears. Managed decline continues to $179. mechanism: The employer retreat chain is shown (cash price ≈ PBM net, a diagnosis-code workaround, OSA test migration). Weaker points are the ~60% persistence of new starters, the asserted 38% dose-holiday figure, and Renee's weekly injection set against a weekend holiday. magnitude: Current use 20.8% is inside the 18.8–22.8 envelope. Ever-use 33.0% sits at the 33.2 edge. The age, income, payer-mix, Medicare/Medicaid spend and cash-spend arithmetic all reconcile, and the pipeline timings and Jan 2033 generic date respect the rules.",
+        "generativity": "The Renee Castillo vignette implies a household, a husband, a son on 'Even', an office, a gym sticker and a quinceañera. Details such as the HOLIDAY marker, the $79 vs $179 arithmetic and 'the grey' show rather than explain. The world adds on/off/holiday dating profiles, 'unmedicated' communion meals and the Whole Appetite voter guide. A flaw is that the weekend-holiday device clashes with a weekly injection."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s3-L2-r30-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Incretin market ≈$128B in 2032: US users up ~44% against 2030, US net price down a further ~8–10%, ex-US revenue eroding as generics spread in the EU",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the 2030 market was ≈$118B. US users up 44% and net price down 8–10% imply roughly +30% US revenue, and ex-US is eroding. A total of only +8.5% does not reconcile, and cheap low-dose cash volume is not shown to close the gap."
+        },
+        {
+          "quote": "about two-thirds of those people restarted within months on the $149–179 cash portal or on imported pens",
+          "field": "world/population/note",
+          "why": "Mechanism: the restart rate is asserted with no support. Commercial users stay flat (18.5M to 18.7M) while employer coverage falls from 63% to 47%, which is hard to square with a retreat large enough to cause a one-time wave of involuntary stops."
+        },
+        {
+          "quote": "Hector has written HOLIDAY across Saturday and Sunday in red marker.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: Renee injects weekly tirzepatide on Tuesday, and its half-life of about 5 days means a weekend pause does nothing pharmacologically. The 'Weekend plan' and the 'Friday-Saturday bump' have the same problem for oral semaglutide, whose half-life is about a week. The dose-holiday culture is asserted, not shown to work."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with a stratified two-tier system. Coded and Medicare users get DEXA and counselling. Roughly 25M cash and imported users get no monitoring while bone excess grows to about 8,400 hip fractures a year (safety_ledger, open_tensions). The middle third is hit hardest by the coverage pullback, and 'quiet mind' use among about 3.4M non-obese people is unmeasured. Private surveillance shrinks, which tempers autonomy harm, and there is no mass-casualty event, so the overall score sits at 6.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Current use is 20.8% (14.6 + 6.2), employer coverage falls from 63% to 47%, and the managed-decline step-down is shown. The mood driver is realised through a filing and marketing, but the Lilly AUD sNDA is a slightly oblique fit for 'mood_and_motivation'. mechanism: The employer-retreat chain is shown (cash price close to PBM net, ADA complaints, tenure mismatch, diagnosis migration), but several links are asserted. These are the unsupported 'two-thirds restarted' claim, higher new-user persistence, flat commercial users despite the retreat, and the weekend dose-holiday pharmacology in the Renee scene. magnitude: Almost everything reconciles, including ages, income thirds, payer mix, Medicare and Medicaid spend, cash spend, the hip-fracture arithmetic and the 44% rise in users. Ever-use of 33.0 sits at the envelope edge, and the $128B market figure does not match the stated user and price changes.",
+        "generativity": "The prose Renee scene is strong: payroll at a school district, HOLIDAY in red marker, the $79 DEXA sticker, and Danny on 'Even' who doesn't laugh anymore. The world state adds weekend-holiday bars, OSA-code audits, gospel-soul 'unmedicated sessions' and couples on mismatched schedules. These imply many characters and scenes."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The main mechanism: the $149–179 cash portal price is close to the PBM net of ≈$160–175, so benefits managers stopped seeing a reason to pay for a drug employees could buy themselves.",
+        "field": "world/economy/insurance/state",
+        "why": "mechanism: the 2030 world had a nearly identical price relationship ($199 portal vs $170–190 PBM net), and employer coverage rose then, from 58% to 63%. The stipulated retreat is therefore explained by a gap that had barely changed."
+      },
+      {
+        "quote": "Of the 18.7M commercial users, ≈12.9M are covered through T2D (~9.0M), established CVD (~1.8M), OSA (~1.4M) or CKD/MASH (~0.7M).",
+        "field": "world/access/note",
+        "why": "mechanism: commercial users stay flat (18.5M to 18.7M) while employer obesity coverage drops 16 points. That requires a large, quick migration into diagnosis-coded coverage, which rests on one stat (home sleep tests 'more than doubled') and is not shown."
+      },
+      {
+        "quote": "In Sep 2032 Lilly filed an sNDA for low-dose orforglipron (Foundayo) to reduce heavy-drinking days in alcohol use disorder, with SHAPS anhedonia and motivation endpoints the FDA had asked for in the 2029 smoking CRL.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: no pivotal trial, start date or sponsor decision is shown that would produce a complete AUD dossier with new anhedonia endpoints in under two years. Whether an AUD filing really realises 'mood_and_motivation' is also thin."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 5.0,
+      "inequality": 6.33,
+      "public_health": 5.83,
+      "cohesion": 5.17,
+      "epistemic": 5.83,
+      "overall": 5.77
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.83,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.65,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "A harder, more stratified society: employer retreat pushes about 20M people into $179/month cash, and cash and imported users (nearly half of all users) get no DEXA or counselling while excess hip fractures grow to about 8,400 a year. Reward blunting is normalised ('the grey', weekend plans, with 'Quiet' users described as flat) and has no independent measurement. Offsets keep it near 5: private surveillance shrank, no mass-casualty event occurred, and the prevalence of harm is modest and nameable.",
+      "plausibility": "driver_fidelity: All drivers are visible. Adoption lands at 20.8% and employer coverage falls 63→47% via the PBM diagnosis-anchored formulary event. The backlash is present and personality_layer reads as mainstream_complaint. mood_and_motivation is realised only through marketing and an AUD sNDA filing, which is allowed but a loose fit. mechanism: The employer-retreat chain is shown (portal price, gating costs, tenure), as are cash restarts and diagnosis migration. The first two least-plausible claims are weak links: the price-gap logic is unchanged from 2030, and the commercial user count stays flat. The AUD filing has no trial path shown. magnitude: Current use 20.8% and ever-use 33.0% are inside the envelope, with ever-use near the cap. Payer mix, age bands, income thirds, Medicare 8.5M, Bridge spend ($5.6B), Medicaid ($9.7B), cash ($43B) and hip-fracture arithmetic all reconcile. Approval and generic timing obey the rules (first generic Jan 2033).",
+      "generativity": "The Renee Castillo scene is rich: the HOLIDAY marker on the calendar, the $79 DEXA sticker set against $179, the sleep-test gossip, and her son Danny who 'doesn't really laugh at anything'. The world fields imply many more scenes, including dose-holiday hosting, EAP 'Quiet' tracks, the Atlanta and Tulsa–Dallas backlash, and PBM audits. Some secondary characters stay thin."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.366,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 22
   }
 }

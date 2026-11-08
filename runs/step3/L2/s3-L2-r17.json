@@ -49,6 +49,41 @@
         "input_tokens": 18693,
         "output_tokens": 20869
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r17-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27547,
+        "output_tokens": 7915
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r17-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27547,
+        "output_tokens": 7779
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r17-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27547,
+        "output_tokens": 7547
+      }
     ]
   },
   "world": {
@@ -322,6 +357,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r17-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "≈5.5M users aged 65+ have more than 2 years' use.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "magnitude: only ~5.7M adults 65+ were on the drug in 2030, and 11.6M are on it now, so about half are new in the window. With ~35% one-year persistence and one in five ever-users paused, 5.5M with over 2 years' use is not reconcilable. It also drives the 11,500-fracture headline."
+        },
+        {
+          "quote": "the 2031–32 public expansion re-enrolled many lapsed users rather than recruiting new ones",
+          "field": "world/population/note",
+          "why": "mechanism: ever-use rose 11.5 pts, so most of the growth is first-time users. The off-now pool also grew from 9.4 to 10.5 pts rather than shrinking, which contradicts a re-enrolment story."
+        },
+        {
+          "quote": "With roughly 6–7M Americans on top-dose triple or dual regimens, that implies on the order of 400–500k excess cases of clinically meaningful anhedonia if the association is causal.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "magnitude: the 12% vs 5% figure comes from retatrutide 12 mg users only. That pen was on allocation for most of 2031–32, yet it is applied to 6–7M users including dual agonists, which inflates the excess-case count."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Coverage expansion helps access, but it comes with weigh-in conditioning. Fracture and fall harms concentrate in the 65+ cohort (~11,500 excess hip fractures), DEXA waits run 12–20 weeks, and private gated plans lack the bone-pause code, so a daughter can lose coverage for what her mother's plan allows. Norms flip to 'off needs a reason', 3.5M people without obesity buy reward modulation as 'focus', and the ~12% anhedonia signal is easily shrugged off. Quality of care is stratified, about 3.8M people use unscanned imports, and the harm is normalised but still nameable, so the world is harder with new losers rather than catastrophic.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These include adoption +10.4 (25.0%), stalled prices, public expansion, the 12 mg retatrutide dose within the approval rules, the CMS continuation standard, and no market shock. Generic entry is fixed for 2033, so generic_us stays false. mechanism: The payer-driven jump is traced through the reconciliation act, the 90% match and the CMS rule. The re-enrolment explanation contradicts the +11.5 pt ever-use rise (claim 2), and Medicare and Medicaid user counts triple within months of the rule. magnitude: Current use, ever-use and the income thirds sit inside the envelope, and the payer mix, spending and CBO arithmetic all multiply out. The 5.5M 65+ users with more than 2 years' use is irreconcilable with the starting cohort and persistence (claim 1), and the anhedonia excess-case count is overstated (claim 3). Pharmacy trend of +7% also looks low against a ~50% rise in commercial users.",
+        "generativity": "The Marlene Pruitt vignette is concrete: the kiosk receipt, the DEXA van at a church, the Strong Bones class, Gwen's son ordering from India, and Keisha's 'Even' subscription. The world state implies many more scenes, including waiting-room social life, gated-plan drop-offs, dose-holiday 'restart' packs and the HR-catalogue 'focus' market. The prose is a little summary-heavy before the scene."
+      },
+      "plausibility": 6.5
+    },
+    {
+      "custom_id": "s3-L2-r17-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "≈5.5M users aged 65+ have more than 2 years' use.",
+          "field": "world/safety_ledger/bone mineral density loss and fragility fracture/prevalence_note",
+          "why": "Only ~5.7M adults aged 65+ were on the drug in 2030, with ~35% one-year persistence and heavy cycling. Having 5.5M of them with over 2 years of use by 2032 would need nearly all of them to have stayed on. That fails magnitude, and it drives the headline 11,500 excess-fracture figure."
+        },
+        {
+          "quote": "the 2031–32 public expansion re-enrolled many lapsed users rather than recruiting new ones",
+          "field": "world/population/note",
+          "why": "Ever-use rose 11.5 pts and current use rose 10.4 pts, while the used-and-off pool barely moved (9.4 to 10.5 pts). The arithmetic shows mostly new starters, not re-enrolled lapsed users. This is a mechanism failure."
+        },
+        {
+          "quote": "Pharmacy trend is ~+7% on volume at flat price.",
+          "field": "world/economy/insurance/state",
+          "why": "Commercial users rose about 50% in two years (18.5M to 27.7M) at flat net price, and national volume rose about 70%. That cannot yield a +7% pharmacy trend, which was already +6% in the parent world with price cuts offsetting volume. It fails mechanism and reconciliation."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is normalised at 25% of adults, with continuation-standard surveillance (6-monthly kiosk weigh-ins, annual DEXA) now covering Medicare and most Medicaid. Private plans (~75% gated) have no bone-pause exemption, so a 58-year-old can lose coverage for following the same guidance her mother's Medicare plan allows. Harms are real but moderate: ~11.5k excess hip fractures, 12–20 week DEXA waits, and a quality gap between top-third and bottom-third users. The worst features are epistemic: anhedonia in about 12% of top-dose users, plus ~3.5M 'calm' subscribers with no independent measurement, is shrugged off. The 3.8M people on imported pens add a further gap. I stop at 6 because outcomes are neither catastrophic nor fully hidden.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption lands at 25.0%, price is stalled, and public expansion appears as the Part D benefit plus the Medicaid match. The bone wave, normalisation, conditioning (continuation standard) and the marketed 'calm' layer are all in fields and events. The 12 mg retatrutide dose is an allowed existing-product-new-form realisation, and no market shock appears. mechanism: Chains are mostly shown, covering payer shift, the talks collapse and the bone pause code. Three weak points remain: the 'lapsed re-enrolled' explanation is contradicted by the ever/off-now arithmetic, pharmacy trend of +7% conflicts with ~50–70% volume growth at flat price, and the prose receipt 'NEXT DUE 02/2033' sits awkwardly with an end-of-year setting. magnitude: Current 25.0% and ever 35.5% sit inside the envelope, and the age bands, payer mix, Medicare and Medicaid spend, and CBO sum all reconcile. Approvals follow the rules and US generics are not before 2033. The main flaw is the 5.5M 65+ users with over 2 years' exposure, which is not reachable from a 5.7M 65+ base in 2030.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s3-L2-r17-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "≈5.5M users aged 65+ have more than 2 years' use",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: 2032 users with over 2 years' use must have started by late 2030, when there were only 5.7M 65+ users, with ~35–45% yearly persistence. Retaining about 5.5M of them is not reconcilable, and the 11,500 excess hip fractures are built on this figure."
+        },
+        {
+          "quote": "the 2031–32 public expansion re-enrolled many lapsed users rather than recruiting new ones",
+          "field": "world/population/note",
+          "why": "Mechanism: ever-use rose 11.5 pts, so most of the growth is first-time users, since restarts cannot raise ever-use. Off-now also rose from 9.4 to 10.5 pts rather than shrinking as mass re-enrolment would imply, so the stated cause contradicts the figures."
+        },
+        {
+          "quote": "Medicare is now the largest single purchaser of incretins in the US.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: the candidate's own payer mix has commercial plans at 27.7M users (~$60B at ~$190 net) against Medicare's 12.8M users and $30.6B gross. Medicare leads only if each commercial plan is counted separately, which is a convenient framing rather than a reconciled figure."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "One in four adults is on the drug, with growing fracture, fall and sarcopenia burdens (11,500 excess hip fractures a year; 1.3M older users meeting sarcopenia criteria). The CMS continuation standard and ~75% gated employer plans condition coverage on weigh-ins, and employer plans have no bone-pause exemption, so the same guidance costs a 58-year-old her coverage. Care quality is stratified (12–20 week DEXA waits, imported pens with no scan). Normalisation, 3.5M 'calm' subscribers and an anhedonia signal that people 'mention with a shrug' make the harm hard to see from inside, which drives the epistemic and autonomy scores.",
+        "plausibility": "driver_fidelity: All drivers are traceable. Adoption is 25.0% (+10.4), prices stall with the collapsed 2032 talks, Part D and Medicaid expand, 12 mg retatrutide gives 30.1% loss as an allowed new form, and DEXA and bone events appear. The continuation standard, normalisation and 'Quiet' subscriptions are all present, and no indication or market shock is added. mechanism: Chains are mostly shown (reconciliation act, 90% match, 31 states, imports falling as a share). Two are weak: the 're-enrolled lapsed users' explanation contradicts ever-use rising 11.5 pts (claim 2), and the 'largest single purchaser' framing (claim 3). magnitude: Current use, ever-use, income thirds, age bands, payer mix, Medicare/Medicaid spend, the CBO figure and the $145B US market all reconcile and sit inside the envelope. The main failure is the ≈5.5M 65+ users with over 2 years' use (claim 1), which cannot follow from the 2030 base. Medicaid users tripling in about 18 months is aggressive but allowed.",
+        "generativity": "The prose has well-drawn scenes: Marlene on the kiosk with the receipt, the DEXA van at Southbrook Christian, Gwen's son dropped for missed weigh-ins and ordering from India, Keisha's 'Even' subscription and Darnell's late laugh. The granddaughter who finds meat-first eating normal closes it well. The world fields (mobile DEXA van waiting rooms, 'restart' anti-nausea packs, HR catalogues, life-insurer questions) imply many more characters and scenes."
+      },
+      "plausibility": 6.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "≈5.5M users aged 65+ have more than 2 years' use.",
+        "field": "world/safety_ledger/4/prevalence_note",
+        "why": "magnitude: only ~5.7M adults 65+ were on the drug in 2030, and 11.6M are on it now, so about half are new in the window. With ~35% one-year persistence and one in five ever-users paused, 5.5M with over 2 years' use is not reconcilable. It also drives the 11,500-fracture headline."
+      },
+      {
+        "quote": "the 2031–32 public expansion re-enrolled many lapsed users rather than recruiting new ones",
+        "field": "world/population/note",
+        "why": "mechanism: ever-use rose 11.5 pts, so most of the growth is first-time users. The off-now pool also grew from 9.4 to 10.5 pts rather than shrinking, which contradicts a re-enrolment story."
+      },
+      {
+        "quote": "With roughly 6–7M Americans on top-dose triple or dual regimens, that implies on the order of 400–500k excess cases of clinically meaningful anhedonia if the association is causal.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "magnitude: the 12% vs 5% figure comes from retatrutide 12 mg users only. That pen was on allocation for most of 2031–32, yet it is applied to 6–7M users including dual agonists, which inflates the excess-case count."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 6.67,
+      "inequality": 6.17,
+      "public_health": 6.0,
+      "cohesion": 5.17,
+      "epistemic": 6.67,
+      "overall": 6.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 6.5
+    },
+    "plausibility": 6.92,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Coverage expansion helps access, but it comes with weigh-in conditioning. Fracture and fall harms concentrate in the 65+ cohort (~11,500 excess hip fractures), DEXA waits run 12–20 weeks, and private gated plans lack the bone-pause code, so a daughter can lose coverage for what her mother's plan allows. Norms flip to 'off needs a reason', 3.5M people without obesity buy reward modulation as 'focus', and the ~12% anhedonia signal is easily shrugged off. Quality of care is stratified, about 3.8M people use unscanned imports, and the harm is normalised but still nameable, so the world is harder with new losers rather than catastrophic.",
+      "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These include adoption +10.4 (25.0%), stalled prices, public expansion, the 12 mg retatrutide dose within the approval rules, the CMS continuation standard, and no market shock. Generic entry is fixed for 2033, so generic_us stays false. mechanism: The payer-driven jump is traced through the reconciliation act, the 90% match and the CMS rule. The re-enrolment explanation contradicts the +11.5 pt ever-use rise (claim 2), and Medicare and Medicaid user counts triple within months of the rule. magnitude: Current use, ever-use and the income thirds sit inside the envelope, and the payer mix, spending and CBO arithmetic all multiply out. The 5.5M 65+ users with more than 2 years' use is irreconcilable with the starting cohort and persistence (claim 1), and the anhedonia excess-case count is overstated (claim 3). Pharmacy trend of +7% also looks low against a ~50% rise in commercial users.",
+      "generativity": "The Marlene Pruitt vignette is concrete: the kiosk receipt, the DEXA van at a church, the Strong Bones class, Gwen's son ordering from India, and Keisha's 'Even' subscription. The world state implies many more scenes, including waiting-room social life, gated-plan drop-offs, dose-holiday 'restart' packs and the HR-catalogue 'focus' market. The prose is a little summary-heavy before the scene."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.819,
+    "survived": true,
+    "new_lineage": "L3",
+    "floor_used": 6,
+    "rank": 3
   }
 }

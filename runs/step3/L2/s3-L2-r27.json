@@ -51,6 +51,41 @@
         "input_tokens": 18752,
         "output_tokens": 24700
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r27-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28359,
+        "output_tokens": 6461
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r27-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28359,
+        "output_tokens": 8195
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r27-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28359,
+        "output_tokens": 9262
+      }
     ]
   },
   "world": {
@@ -328,6 +363,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r27-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "for the first time the largest single source of payment is the government",
+          "field": "prose/opening",
+          "why": "mechanism: the world's own payer mix has commercial at 34.0% (23.2M) and Medicare at 23.0% (15.7M). The government is the largest source only if Medicare and Medicaid are combined (38.5%). The JSON says only that Medicare is the largest public purchaser, so the headline contradicts the world state."
+        },
+        {
+          "quote": "The 65+ band more than doubled (8.5%→20.5%) because the Jan 2032 Bridge agreement widened eligibility to label criteria",
+          "field": "world/population/note",
+          "why": "mechanism and magnitude: Bridge obesity users go from 1.8M to 8.6M, nearly fivefold. The only cause shown is a modest widening from BMI-plus-comorbidity to label criteria, and the agreement took effect only in Jan 2032. The jump is asserted, not derived."
+        },
+        {
+          "quote": "about 14 more states add adult Medicaid coverage at the same rate",
+          "field": "world/events/2/event",
+          "why": "mechanism: roughly 14 states adopt adult coverage in the same month as the Bridge deal, with no state-level trigger or budget chain shown. That is a convenient coincidence, and it triples Medicaid users from 3.5M to 10.6M."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "One in four adults is on the drug. About 10,500 excess hip fractures a year, DEXA waits of 6–14 weeks, and about 29M adults off-now with regain are the main health harms. Roughly 950k children are exposed, 160k of them aged 6–11 with no bone or anhedonia data. Gray use of 7.8M, with contamination deaths, and gating that counts skipped doses against adherence add to the harm. Coverage compresses the access gradient (27.5 vs 22.2), but the quality gradient widens through Kinetra. Anhedonia is labelled and measured at about 1M people, so harms are fairly nameable (epistemic 4.5). That is harder than 2030 but not structurally hidden.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These include the Bridge expansion, the under-12 approval, the anhedonia label, Kinetra, gray resurgence, the backlash, and the mainstream-complaint framing. Nothing contradicts them. mechanism: The label, the Kinetra approval timing, and the gray cluster each have a chain. The 65+ jump and the simultaneous 14-state Medicaid adoption are asserted (claims 2 and 3). The prose headline contradicts the payer mix (claim 1). The prose also puts an 80% adherence calendar on a Medicare Bridge user, though gating is not a Bridge feature. magnitude: Current use of 24.9%, ever-use of 35.5%, income thirds, approval timings, and the generic rule all fit the envelope. Payer shares, user counts and spend (8.6M×$179×12≈$18.5B, copays $5.2B, Medicaid $22.8B) reconcile. One minor gap: 15.7M Medicare users exceeds the 14.35M total users aged 65+ once disabled under-65 enrollees are counted.",
+        "generativity": "The Lorraine Pruitt day is rich, concrete and varied. It includes the HOLIDAY calendar with 80% in red, the week-nine bone-scan call, Kaylee's pediatric endocrinologist visit and the question about laughing, Darnell's research vials with the QR code, and the peach-cobbler close. Implied scenes abound, such as the DeKalb enrolment-fair picket, HR dose-holiday FAQs, and Kinetra-vs-Bridge divides. The world fields add many texture details."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s3-L2-r27-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare users ≈15.7M (23.0% of fills): ≈7.1M via Part D diabetes and ≈8.6M via the Bridge for obesity.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude/reconciliation: Medicare includes disabled under-65 beneficiaries (≈0.6M or more in 2030), so about 15M or more of the 15.7M would be aged 65+. That exceeds the 14.35M total 65+ users in the age check, and some 65+ users are on commercial, cash or gray supply."
+        },
+        {
+          "quote": "The 65+ band more than doubled (8.5%→20.5%) because the Jan 2032 Bridge agreement widened eligibility to label criteria",
+          "field": "world/population/note",
+          "why": "Mechanism: Bridge obesity users go from 1.8M to 8.6M, nearly fivefold, within roughly one year of the eligibility change. The candidate shows no supply, clinic or DEXA capacity chain for that, despite the stated 8–14 week scan waits and the counselling-visit gate."
+        },
+        {
+          "quote": "from pooled trial SHAPS/PHQ items plus the retatrutide postmarketing study, gives dose-tiered estimates of clinically meaningful anhedonia",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: the parent world has only an observational retatrutide SHAPS study and no systematic measurement elsewhere. The candidate gives no source for the pooled trial SHAPS data behind its semaglutide and tirzepatide estimates (4% vs 3%, 5% vs 3%). Moving the effect from 'emerging' to 'established' is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Use rises to a quarter of adults, with about 7.8M on gray product including contaminated research vials (the 2032 Ohio/Michigan/Indiana cluster) and roughly double the excess hip fractures. Children 6–11 are on a drug with no pediatric anhedonia or bone data, and Medicare and Medicaid users wait 6–14 weeks for scans while Kinetra goes to commercial and cash users. Gating still counts DEXA pauses and dose holidays as non-adherence for some users. Offsetting this, access widens, the gradient in level compresses (27.5% vs 22.2%) and anhedonia is now labelled and nameable, so this is a harder but more legible society rather than an extreme one.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption 24.9%, managed decline at $179, public expansion, the pediatric 6–11 approval, the anhedonia label, Kinetra, the gray-market resurgence, the backlash over pediatric use, no new state statute, and 'the grey' as a mainstream complaint. Approval timing respects the rules, and Kinetra comes 13 months after a filing inside the window. mechanism: Most chains are shown, including the Bridge and EPSDT pathways, the PBM medical-pause code and DEXA-gated Kinetra prior authorisation. The 65+ surge in one year and the pooled-SHAPS evidence base (claims 2 and 3) are asserted rather than shown. magnitude: Population, income-third, age-band, payer-mix and spending arithmetic all reconcile, and every headline figure is inside the envelope. The exception is the Medicare 15.7M total, which cannot fit inside the 14.35M of 65+ users once disabled beneficiaries are added (claim 1).",
+        "generativity": "The day in the life of Lorraine Pruitt, Kaylee and Darnell carries concrete scenes: the red '80%' calendar, the bone-scan call at week nine, the doctor asking whether Kaylee still laughs, and the vials Darnell cannot read. The world fields add many figures and institutions that imply further stories, such as the DeKalb picket, the Southern Baptist resolution, HR dose-holiday FAQs, Kinetra 'muscle insurance' and the cancellations of prescribed-lifting packages. The prose is somewhat summary-heavy in its first half, and the Thursday/Friday shot timing is slightly muddled."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s3-L2-r27-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Kinetra: the bimagrumab + tirzepatide phase 3 that began in 2029 read out in late 2030, Lilly filed the BLA in Feb 2031, and FDA approved it in Mar 2032 (13 months after filing).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: a phase 3 that began in 2029 reads out within about 18 months, while the FDA is stipulated to be slow and demanding about bone and DEXA data. A 13-month approval is allowed by the envelope but the candidate shows no reason for the speed."
+        },
+        {
+          "quote": "Medicare users ≈15.7M (23.0% of fills): ≈7.1M via Part D diabetes and ≈8.6M via the Bridge for obesity.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: Bridge obesity users rise about 4.8x in two years despite the stated DEXA waits and counselling requirement. Medicare users (15.7M) also exceed the entire 65+ user count (14.35M), which forces more than 1.35M under-65 disabled users, up from 0.6M, and ignores 65+ users on commercial, cash or gray supply."
+        },
+        {
+          "quote": "Adolescent bone-accrual interim (2031) inconclusive; under-12 approval made on weight and metabolic endpoints.",
+          "field": "world/safety_ledger/10/prevalence_note",
+          "why": "Mechanism: the FDA approves a drug for children despite inconclusive bone data, yet in the same world it demands bone endpoints for adult filings and blocked three products on lean-mass, bone and neuropsychiatric grounds. The candidate does not explain this regulatory inconsistency."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "A quarter of adults are on drug, and about 10,500 excess hip fractures a year fall on 65+ users who mostly cannot get Kinetra. Children aged 6–11 are exposed with no pleasure or bone measurement, 7.8M people use gray product with fatal contamination clusters, and gating still penalises dose holidays. Some of this is offset: the anhedonia label is named and measured (low epistemic harm), the level gradient compresses, and public financing widens access. That makes it a harder society with new losers, but not a structural catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Pediatric approval 6–11 is in the Jun 2031 event, the anhedonia label in Oct 2031, and the muscle-preserving combo (Kinetra) in the Mar 2032 event. Public expansion appears in the Nov 2031 Bridge and ~14 added Medicaid states, the gray-market resurgence in the Mar 2032 endotoxin cluster, backlash in the Jun 2032 event, and the mainstream-complaint framing in the prose. No driver is contradicted.\nmechanism: most changes have shown chains, such as the Bridge widening driving Medicare growth and EPSDT driving pediatric Medicaid. Weaker points are the fast Kinetra timeline and the FDA's approval of the under-12 indication on inconclusive bone data alongside its stipulated data-demanding posture, both in my claims list. The PBM medical-pause codes are asserted with no event.\nmagnitude: the headline figures sit inside the envelope (24.9% current, 35.5% ever), and the age bands, payer mix, Bridge, Medicaid and pediatric arithmetic all multiply out. Approval timings obey the 12-month rule and US generics are held to 2033. The gaps are minor: growth components sum to 29.0M against 28.9M, and Medicare 15.7M against 65+ users of 14.35M is strained, as flagged in claim 2.",
+        "generativity": "The prose carries a full day for Lorraine, with bone-scan waits, a pediatric visit that checks whether the child still laughs, a neighbour's research vials and a church supper. The world fields add texture such as 'Do you get the grey?' as a third-date question, HR FAQs on timing dose holidays around the 80% line, and 'written on holiday' credits. Many characters and scenes are implied."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "for the first time the largest single source of payment is the government",
+        "field": "prose/opening",
+        "why": "mechanism: the world's own payer mix has commercial at 34.0% (23.2M) and Medicare at 23.0% (15.7M). The government is the largest source only if Medicare and Medicaid are combined (38.5%). The JSON says only that Medicare is the largest public purchaser, so the headline contradicts the world state."
+      },
+      {
+        "quote": "The 65+ band more than doubled (8.5%→20.5%) because the Jan 2032 Bridge agreement widened eligibility to label criteria",
+        "field": "world/population/note",
+        "why": "mechanism and magnitude: Bridge obesity users go from 1.8M to 8.6M, nearly fivefold. The only cause shown is a modest widening from BMI-plus-comorbidity to label criteria, and the agreement took effect only in Jan 2032. The jump is asserted, not derived."
+      },
+      {
+        "quote": "about 14 more states add adult Medicaid coverage at the same rate",
+        "field": "world/events/2/event",
+        "why": "mechanism: roughly 14 states adopt adult coverage in the same month as the Bridge deal, with no state-level trigger or budget chain shown. That is a convenient coincidence, and it triples Medicaid users from 3.5M to 10.6M."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.33,
+      "inequality": 5.33,
+      "public_health": 6.17,
+      "cohesion": 5.83,
+      "epistemic": 4.17,
+      "overall": 5.6
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.11,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "One in four adults is on the drug. About 10,500 excess hip fractures a year, DEXA waits of 6–14 weeks, and about 29M adults off-now with regain are the main health harms. Roughly 950k children are exposed, 160k of them aged 6–11 with no bone or anhedonia data. Gray use of 7.8M, with contamination deaths, and gating that counts skipped doses against adherence add to the harm. Coverage compresses the access gradient (27.5 vs 22.2), but the quality gradient widens through Kinetra. Anhedonia is labelled and measured at about 1M people, so harms are fairly nameable (epistemic 4.5). That is harder than 2030 but not structurally hidden.",
+      "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These include the Bridge expansion, the under-12 approval, the anhedonia label, Kinetra, gray resurgence, the backlash, and the mainstream-complaint framing. Nothing contradicts them. mechanism: The label, the Kinetra approval timing, and the gray cluster each have a chain. The 65+ jump and the simultaneous 14-state Medicaid adoption are asserted (claims 2 and 3). The prose headline contradicts the payer mix (claim 1). The prose also puts an 80% adherence calendar on a Medicare Bridge user, though gating is not a Bridge feature. magnitude: Current use of 24.9%, ever-use of 35.5%, income thirds, approval timings, and the generic rule all fit the envelope. Payer shares, user counts and spend (8.6M×$179×12≈$18.5B, copays $5.2B, Medicaid $22.8B) reconcile. One minor gap: 15.7M Medicare users exceeds the 14.35M total users aged 65+ once disabled under-65 enrollees are counted.",
+      "generativity": "The Lorraine Pruitt day is rich, concrete and varied. It includes the HOLIDAY calendar with 80% in red, the week-nine bone-scan call, Kaylee's pediatric endocrinologist visit and the question about laughing, Darnell's research vials with the QR code, and the peach-cobbler close. Implied scenes abound, such as the DeKalb enrolment-fair picket, HR dose-holiday FAQs, and Kinetra-vs-Bridge divides. The world fields add many texture details."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.316,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 24
   }
 }

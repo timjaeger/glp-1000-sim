@@ -49,3 +49,26 @@ Runner-up: `s1-L0-r24` (parent L0; axis badness 5.67, plausibility 7.03, generat
 
 Runner-up: `s2-L2-r31` (parent L2; axis badness 5.72, plausibility 7.58, generativity 8) — ranked 4. One in four Americans is on it. The price hasn't moved, the pen does surgery, and now the quiet comes in a subscription.
 <!-- step:2:end -->
+
+<!-- step:3:begin -->
+## Step 3 · 2032 · axis of worst: culture_and_body
+
+- Selected 2026-11-08T07:09:56Z from 50 run(s) of parent lineage(s) L1, L2, L3; seed 20261107
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5
+- Weights: flourishing ×1, autonomy ×2, inequality ×1, public_health ×1, cohesion ×2, epistemic ×1, `body_and_culture` severity ×2
+- Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
+- Plausibility floor used: 6
+- Excluded before ranking: none; below floor: 0; eligible and ranked: 50
+
+| Lineage | Parent | Run | Rank | Axis badness | Plausibility | Generativity | Overall | price_path / cultural_response / personality_layer |
+|---|---|---|---|---|---|---|---|---|
+| **L1** | L1 | `s3-L1-r05` | 1 | 5.95 | 8.08 | 8.33 | 6.2 | managed_decline / backlash_body_politics / mainstream_complaint |
+| **L2** | L3 | `s3-L3-r41` | 2 | 5.88 | 8.3 | 7.83 | 6.27 | managed_decline / class_stratification / marketed_feature |
+| **L3** | L2 | `s3-L2-r17` | 3 | 5.82 | 6.92 | 7.67 | 6.17 | stalled / normalisation / marketed_feature |
+
+- **L1** — Lighter, Cheaper, Conditional: 75 Million Americans on the Pen, and Their Bones Are Starting to Show the Bill
+- **L2** — Calm, Sold Monthly: America Buys a Quieter Mind as Its Medicated Children Start Coming Up Short
+- **L3** — Off It? Explain Yourself. Medicare Now Pays for the Pen, and Wants to See Your Bones First
+
+Runner-up: `s3-L1-r16` (parent L1; axis badness 5.82, plausibility 8.05, generativity 8) — ranked 4. One in Four, With Strings: The Pill Caught the Needle, Coverage Got a Scale, and Tulsa Set the Table
+<!-- step:3:end -->

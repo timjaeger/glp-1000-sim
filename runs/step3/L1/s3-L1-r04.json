@@ -60,6 +60,41 @@
         "input_tokens": 29241,
         "output_tokens": 11190
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r04-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25051,
+        "output_tokens": 9436
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r04-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25051,
+        "output_tokens": 7082
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r04-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25051,
+        "output_tokens": 6012
+      }
     ]
   },
   "validation": {
@@ -71,6 +106,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -330,5 +369,185 @@
     "headline": "Why Aren't You On It? The Pill Caught Up With the Needle, Medicare Picked Up the Tab, and the Price Never Moved",
     "world_in_600_words": "At the end of 2032 almost one American adult in four takes an incretin drug, about sixty-four million people. Taking it no longer says anything about a person. Not taking it does. A woman who looks heavier than she did last year gets asked, gently, whether her coverage lapsed. A man who refuses a prescription gets a note in his chart and, this spring, a question on his life-insurance application asking why he declined.\n\nThe needle stopped mattering in May 2031. Lilly's high-dose orforglipron pill went head to head with injectable semaglutide and came out level, at about sixteen percent of body weight against fifteen. The FDA approved it, and more than half of new patients now start on a pill. The pill did not make the drug cheaper. Lilly priced it at $349 a month on the federal cash portal, the same as the injection. In June semaglutide's American patent and pediatric exclusivity lapsed and nothing happened: no generic has been approved, and the settled entry dates begin in 2033. Prices are still those of early 2029, and Wegovy's list price is still $1,349.\n\nWho pays has changed. Medicare passed the commercial plans as the largest single payer, and nobody voted for that. The baby-boom tail aged into it. About a third of people in their late fifties and early sixties were already on the drug, and when they turned sixty-five their prescriptions moved with them. The Medicare Bridge pays $275 a month for obesity alone, with a fifty-dollar copay and a bone-density counselling visit. Congress renewed it unchanged in a December extenders package. Part D covers everything else under the old indications: diabetes, heart, apnea, kidney, alcohol, nicotine. In March 2031 a federal appeals court held that state Medicaid programmes cannot refuse semaglutide prescribed for drinking or smoking, and Medicaid rolls on the drug grew by half. Public programmes now pay for more fills than employers do. The federal free-clinic programme was held flat at $4.5 billion and is full. About seven hundred thousand people are on its waitlist.\n\nMany of them did not wait. The gray market grew from nine million users to fourteen million, and its newest product is small enough to fit in an envelope. Orforglipron is a small molecule, not a peptide, so contract labs can make it the way they make any other pill. White bottles labelled for research use sell for forty to eighty dollars a month. Independent assays have found from under half to nearly twice the labelled dose. The FDA issued an import alert and seized parcels in Memphis, and the bottles keep arriving. Poison-centre calls are up again. No one has been charged for taking them.\n\nThe effect on mood is still a product. About three million people buy 'steady' or 'focus' subscriptions, and half of them now buy gray capsules and set their own dose. The long-awaited retatrutide anhedonia data arrived in 2031 and settled nothing: a small average shift, and a slightly larger share of users past the threshold than among comparators. The FDA called it not labelable.\n\nThe body still shows who paid. At the top, a coached, scanned build on retatrutide. Lower down, thinner frames on pills and pens. In The Villages, retirees compare bone-density printouts at pickleball. Snack volumes fell again, and spirits too. In a federal courtroom in Philadelphia, fifty-eight thousand claims are in settlement talks over effects the science still calls suspected. Women who stop the drug to get pregnant say the hardest part is explaining it.",
     "a_day_in_the_life": "Marisol Reyes, thirty-one, weighs herself before her husband wakes up, then turns the scale face down. Eleven weeks off. Four pounds.\n\nDanny takes his capsule with coffee. White bottle, black letters: FOR LABORATORY RESEARCH ONLY. Forty-nine dollars, shipped from a warehouse in New Jersey that ships from somewhere else. His plan at the tile distributor doesn't cover weight. He says it works better than the clinic pen did. Some days it feels like twice as much.\n\nAt the dental office in Mesa she cleans six mouths. Four patients mention dry mouth. One asks if she's still on, because she looks rested. She says, \"Off. Trying.\" The woman squeezes her wrist and says nothing more. The word works every time. Marisol has started using it on people she won't see again.\n\nAt lunch the break-room fridge holds eight identical protein cups and her burrito. She eats all of it. Nobody looks. She feels them not looking.\n\nHer mother calls from the Medicare pharmacy line. The Bridge pill is fifty dollars this month too, and she has a DEXA appointment on Thursday. \"They say my hips are fine. Are you eating?\"\n\nThe mail brings a life-insurance application for the policy they're buying ahead of the baby. Question 14: If BMI ≥35, were you offered incretin therapy? If declined, explain. Her BMI is thirty-three. She writes PREGNANCY ATTEMPT in capitals anyway, then wonders whether she has to update them if it takes a year.\n\nAt dinner Danny pushes away half his plate. She finishes it. He watches the game without yelling. She wants him to yell."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r04-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "CMS data show Medicare passing commercial plans as the largest single payer of incretin fills as users age in",
+          "field": "world/events/3/event",
+          "why": "Fails mechanism and reconciliation. The candidate's own payer mix has Medicare at 19.7% (12.6M) and commercial at 30% (19.2M), with gray at 22%, so Medicare is not the largest payer. The prose repeats the claim."
+        },
+        {
+          "quote": "Apps have quietly dropped the 'on/off' field because nearly everyone selects 'on'.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Fails mechanism. With 23.7% of adults on the drug (13% of 18–29s), 'nearly everyone' cannot be on. The same world says the 182M never-users must explain themselves, so the normalisation story contradicts the population figures."
+        },
+        {
+          "quote": "AUD coverage now reaches Medicaid in every state after the 2031 ruling.",
+          "field": "world/economy/alcohol/state",
+          "why": "Fails mechanism. The event describes a single Eighth Circuit ruling, which binds only that circuit's states, and 14 programmes rewrote prior-auth rules. Nationwide coverage in every state is asserted without a chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 5.5,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Use rises to 64M adults. Offsetting that, the drug treats AUD and smoking and public coverage is broad. The harms are structural and mostly unmeasured: 12M users aged 65+ with bone HR ~1.3–1.4 and no body-composition rule on Part D fills, and 140k children with no bone data until 2034. Gray capsules run 40–180% of label dose for 14M users, and a class split persists between retatrutide plus a coach and pills or pens. Life-insurer 'why did you decline' questions and the 'explaining tax' on women pausing for pregnancy add normalised social pressure, and reward-blunting data are ambiguous. It is a harder society with new losers, but not at the level of structural harm hidden from inside.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly +4.9pp, prices are stalled, public expansion comes via Medicare age-in and the Eighth Circuit ruling, and Foundayo HD realises oral parity as an existing product at a new dose. Gray-market resurgence, normalisation and the marketed-feature layer are all visible. Safety_signal and state_action 'none' are only lightly strained by the anhedonia readout and the Bridge extender. mechanism: Several chains are shown, including age-in, Medicaid growth from the court ruling and small-molecule gray supply. But the Medicare-largest-payer claim contradicts the candidate's own payer shares, and 'nearly everyone selects on' contradicts 23.7% prevalence. Medicaid 'in every state' from a single circuit ruling is asserted, and the persistence rise to 58% is stated rather than shown. magnitude: Every headline figure sits inside the envelope (23.7 on, 32.6 ever, thirds bracketing national, MariTide approved 15 months after its BLA, no US generic). The arithmetic for population, payer mix, Medicare/Medicaid/HRSA spend and the gray breakdown all reconciles. The payer-ranking contradiction is a share-level inconsistency, 'doubled' 65+ long-term users overstates a 7.4M→12.0M rise (about 1.6×), and all 12.0M users aged 65+ are placed under Medicare with none in gray or cash.",
+        "generativity": "The prose has distinct, filmable scenes: Marisol turning the scale face down, Danny's white 'FOR LABORATORY RESEARCH ONLY' bottle, the dental-office 'Off. Trying.', the break-room protein cups, her mother's DEXA call and Question 14 on the insurance form. The world fields add texture, including pickleball DEXA printouts in The Villages, 'off-dose nights' and the 'explaining tax'. The scenes imply a relationship and class backstory without explaining them."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s3-L1-r04-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare passed the commercial plans as the largest single payer, and nobody voted for that.",
+          "field": "prose/body",
+          "why": "This fails mechanism. The world's own payer mix has commercial at 30% (19.2M users) and Medicare at 19.7% (12.6M), so Medicare is not the largest single payer. Only combined public programmes (37.4%) exceed commercial, and the 2031-12 event repeats the same false claim."
+        },
+        {
+          "quote": "AUD coverage now reaches Medicaid in every state after the 2031 ruling.",
+          "field": "world/economy/alcohol/state",
+          "why": "This fails mechanism. A single Eighth Circuit ruling binds only a few states, and the event itself says only 14 programmes rewrote prior-auth rules. Nationwide coverage in every state, and a 5.5M to 8.3M Medicaid jump, is asserted rather than shown."
+        },
+        {
+          "quote": "Age-in has doubled the number of 65+ long-term users.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "This fails magnitude. The candidate's own 65+ user count rises from about 7.4M to 12.0M, roughly 1.6x, not 2x. The stated age-in arithmetic (8M turning 65, 31% of them users, about 2.5M) also explains little more than half of the 4.6M increase."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a recognisably harder 2030. Normalisation makes being off the drug something to explain, shown by the life-insurer underwriting question and the pregnancy-pause 'explaining tax'. About 14.1M people (22%) are on gray product of 40–180% label dose. Sarcopenia and fracture burden grow with the larger 65+ base, and there is still no pediatric bone data for roughly 140k children aged 6–11. Harm is diffuse, normalised and only partly measured, which fits epistemic and autonomy scores in the mid-sixes, but nothing is catastrophic.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised: 23.7% on drug, flat $349/$449/$199 prices, Medicare and Medicaid expansion, Foundayo HD for oral parity, the orforglipron gray surge, normalisation, no new indications, no state action, and the marketed-feature personality layer. MariTide's timing (BLA Jul 2030, approval Oct 2031) fits the approval rules. mechanism: The narrative claim that Medicare passed commercial plans as largest payer contradicts the 30% vs 19.7% payer mix. The Eighth Circuit ruling is stretched into Medicaid coverage in every state, and Medicaid growth is partly credited to a barely changed employer-coverage share (57% to 55%). magnitude: Every headline figure is inside the envelope and the main reconciliations work: payer shares sum to 100% and 64.0M users; the Medicare, Bridge and Medicaid dollar figures multiply out; the income and age bands average to 23.7; and the on/off cohort flow closes. The remaining flaw is the '65+ doubled' claim against 7.4M to 12.0M.",
+        "generativity": "The prose gives several concrete scenes and characters: Marisol's scale, Danny's research-use capsule bottle, the dental office exchange and the Question 14 insurance form. It shows daily texture through the break-room protein cups, the mother's DEXA call and the 'Off. Trying.' script. The Villages pickleball detail and the world's cultural fields imply more scenes. The prose leans on a few explanatory summary paragraphs before the scenes begin."
+      },
+      "plausibility": 6.85
+    },
+    {
+      "custom_id": "s3-L1-r04-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "CMS data show Medicare passing commercial plans as the largest single payer of incretin fills as users age in",
+          "field": "world/events/3/event",
+          "why": "Fails magnitude and mechanism. The candidate's own payer mix has commercial at 30% (19.2M) and Medicare at 19.7% (12.6M), so Medicare cannot be the largest single payer. The prose repeats the claim."
+        },
+        {
+          "quote": "Age-in has doubled the number of 65+ long-term users.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Fails magnitude. The candidate's own figures put 65+ users at about 7.4M in 2030 and 12.0M in 2032, a rise of about 60%, not a doubling. The other age-in figures (8M turning 65, 31% already users) support only about 2.5M of the 4.6M increase."
+        },
+        {
+          "quote": "Commercial pharmacy trend eases to ~+9% as long-term users age into Medicare and gray product undercuts cash.",
+          "field": "world/economy/insurance/state",
+          "why": "Fails mechanism. Gray product undercutting cash prices does not lower commercial plan pharmacy trend. Commercial users also rise from 17.8M to 19.2M, and the mandates that drove the 14% trend remain in force."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society than 2030. Being off the drug now has to be explained, through the life-insurer BMI question and the 'explaining tax' on women pausing for pregnancy. Gray product reaches 22% of users, with capsules assaying at 40–180% of labelled dose. The 65+ user base grows with no body-composition requirement outside the Bridge, and 140k children aged 6–11 are on drug with no bone data until 2034. Access is broader and the harms are mostly diffuse and normalised, so it sits around 6 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 23.7%, prices are stalled at $349/$449/$199, and Foundayo HD realises oral parity as an existing product at a new dose. Public expansion appears through the Eighth Circuit ruling and the Bridge extension, and gray-market resurgence through orforglipron capsules. There are no new indications, and the litigation adds no new safety signal. mechanism: Most chains are shown, including the Eighth Circuit ruling to Medicaid, small-molecule synthesis to gray capsules, and age-in to Medicare. The Medicare 'largest single payer' event contradicts the payer mix. The insurance-trend easing is asserted without a cause (claims 1 and 3). magnitude: Everything is inside the envelope: 23.7% on, 32.6% ever, income thirds and age bands that average to 23.7, and a payer mix that sums to 100%. The $41.6B, $27.4B and $69B spending figures all multiply out. The flaws are the Medicare-versus-commercial contradiction and the 'doubled' 65+ claim that the figures do not support (claims 1 and 2).",
+        "generativity": "The prose has concrete scenes: the scale turned face down, the 'FOR LABORATORY RESEARCH ONLY' bottle, 'Off. Trying.', and Question 14 on the insurance form. It carries a clear cast: Marisol, Danny, her mother, and the hygienist's patients. The world fields add settings such as The Villages pickleball, 'off-dose nights', and the HRSA waitlist. The strain between Marisol and Danny at dinner shows rather than explains."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "CMS data show Medicare passing commercial plans as the largest single payer of incretin fills as users age in",
+        "field": "world/events/3/event",
+        "why": "Fails mechanism and reconciliation. The candidate's own payer mix has Medicare at 19.7% (12.6M) and commercial at 30% (19.2M), with gray at 22%, so Medicare is not the largest payer. The prose repeats the claim."
+      },
+      {
+        "quote": "Apps have quietly dropped the 'on/off' field because nearly everyone selects 'on'.",
+        "field": "world/body_and_culture/dating_and_intimacy",
+        "why": "Fails mechanism. With 23.7% of adults on the drug (13% of 18–29s), 'nearly everyone' cannot be on. The same world says the 182M never-users must explain themselves, so the normalisation story contradicts the population figures."
+      },
+      {
+        "quote": "AUD coverage now reaches Medicaid in every state after the 2031 ruling.",
+        "field": "world/economy/alcohol/state",
+        "why": "Fails mechanism. The event describes a single Eighth Circuit ruling, which binds only that circuit's states, and 14 programmes rewrote prior-auth rules. Nationwide coverage in every state is asserted without a chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.33,
+      "inequality": 6.33,
+      "public_health": 5.83,
+      "cohesion": 5.5,
+      "epistemic": 6.17,
+      "overall": 5.97
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 5.67,
+      "magnitude": 6.83
+    },
+    "plausibility": 6.78,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Use rises to 64M adults. Offsetting that, the drug treats AUD and smoking and public coverage is broad. The harms are structural and mostly unmeasured: 12M users aged 65+ with bone HR ~1.3–1.4 and no body-composition rule on Part D fills, and 140k children with no bone data until 2034. Gray capsules run 40–180% of label dose for 14M users, and a class split persists between retatrutide plus a coach and pills or pens. Life-insurer 'why did you decline' questions and the 'explaining tax' on women pausing for pregnancy add normalised social pressure, and reward-blunting data are ambiguous. It is a harder society with new losers, but not at the level of structural harm hidden from inside.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly +4.9pp, prices are stalled, public expansion comes via Medicare age-in and the Eighth Circuit ruling, and Foundayo HD realises oral parity as an existing product at a new dose. Gray-market resurgence, normalisation and the marketed-feature layer are all visible. Safety_signal and state_action 'none' are only lightly strained by the anhedonia readout and the Bridge extender. mechanism: Several chains are shown, including age-in, Medicaid growth from the court ruling and small-molecule gray supply. But the Medicare-largest-payer claim contradicts the candidate's own payer shares, and 'nearly everyone selects on' contradicts 23.7% prevalence. Medicaid 'in every state' from a single circuit ruling is asserted, and the persistence rise to 58% is stated rather than shown. magnitude: Every headline figure sits inside the envelope (23.7 on, 32.6 ever, thirds bracketing national, MariTide approved 15 months after its BLA, no US generic). The arithmetic for population, payer mix, Medicare/Medicaid/HRSA spend and the gray breakdown all reconciles. The payer-ranking contradiction is a share-level inconsistency, 'doubled' 65+ long-term users overstates a 7.4M→12.0M rise (about 1.6×), and all 12.0M users aged 65+ are placed under Medicare with none in gray or cash.",
+      "generativity": "The prose has distinct, filmable scenes: Marisol turning the scale face down, Danny's white 'FOR LABORATORY RESEARCH ONLY' bottle, the dental-office 'Off. Trying.', the break-room protein cups, her mother's DEXA call and Question 14 on the insurance form. The world fields add texture, including pickleball DEXA printouts in The Villages, 'off-dose nights' and the 'explaining tax'. The scenes imply a relationship and class backstory without explaining them."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.699,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 9
   }
 }

@@ -52,6 +52,41 @@
         "input_tokens": 17714,
         "output_tokens": 28796
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r44-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26846,
+        "output_tokens": 9941
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r44-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26846,
+        "output_tokens": 6981
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r44-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26846,
+        "output_tokens": 7776
+      }
     ]
   },
   "world": {
@@ -311,6 +346,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r44-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "making Medicare the largest single payer for incretins",
+          "field": "world/events/1/event",
+          "why": "Fails magnitude/reconciliation: the candidate's own payer mix puts Medicare at ~16.5M (28%) and legitimate cash at ~18.5M (32%). Only the combined 'public total' of Medicare and Medicaid (38%) is largest, so the claim contradicts the user counts."
+        },
+        {
+          "quote": "The first randomised data came from SHAPS-scored amycretin and retatrutide phase 3s",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Fails mechanism: retatrutide was approved Mar 2029 and amycretin was filed Oct 2029, both before the parent's 'no randomised data' state. The parent shows no SHAPS scoring in those programmes, so it is unclear when those phase 3s ran, and the result conveniently matches the 2029 observational 7–8% vs 3%."
+        },
+        {
+          "quote": "incl. ~0.9M on the AUD label since Apr 2032",
+          "field": "world/population/note",
+          "why": "Fails magnitude and mechanism: 0.9M Medicaid enrollees stabilised on a newly approved oral drug within about eight months of approval is very fast. It needs state formulary and prior-authorisation implementation and diagnosis coding at scale, and the candidate gives no ramp."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 4.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a mixed world, arguably less bad than 2030. Access widened ($49 generics, income gap 23:12 → 25:17.5), counterfeit harm fell, and anhedonia is now labelled and discussable, which keeps epistemic and inequality low. Costs remain: ~2.3–2.6M attributable anhedonia cases, EPI exposure for millions on indefinite semaglutide, a nearly tripled dementia-route population (~4.4M) at HR ~1.3–1.45 fracture risk, adherence-conditioned premiums still standing, off-label generic semaglutide in under-12s, and AUD diagnoses coded onto Medicaid records. Cohesion is strained by the polarised backlash (Bread Alone, Big Table, Tulsa rally).",
+        "plausibility": "driver_fidelity: All ten drivers are traceable to events and fields: 21.5% adoption, patent-expiry generics, label-driven coverage with no new law, AUD approval, anhedonia class label, oral amycretin, 232 tariffs, backlash, mainstream 'hush'. The 'mood and motivation' indication is realised only as telehealth marketing, which is thin but explained in pipeline_note. mechanism: Most chains are shown (patent expiry → generics → price → gray-market displacement; label → Part D/Medicaid statute). Weak points are the SHAPS randomised-data claim (claim 2), which conflicts with the parent's approval timeline, and the rapid AUD Medicaid ramp (claim 3). magnitude: Population figures, age and income checks, cycling arithmetic, approval timings and Part D/Medicaid spend ($13.2B + $17.4B; $6.3B) all reconcile and sit inside the envelope. The flaws are the Medicare breakdown (13.2M + 1.8M = 15.0M, not 16.5M), payer percentages summing to ~100.5%, and the 'largest single payer' claim (claim 1), which contradicts the 28% vs 32% shares.",
+        "generativity": "The prose has a concrete scene with Marlene and Roy: the Medication Guide in the Zepbound box, the DXA scan, the split $49 pen, 'loud week', the cane, and Darla at the fasting church. The world fields add texture: Hikma's Columbus generic versus the plant clinic's monthly shot, Kentucky clinics coding borderline drinkers, 'holiday-friendly' dating tags, the Tulsa rally, and union-hall 'Full Volume' nights. Many implied characters and scenes, though the day-in-the-life leans somewhat on explanation."
+      },
+      "plausibility": 6.55
+    },
+    {
+      "custom_id": "s3-L3-r44-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Orals are ~46% of users.",
+          "field": "world/access/note",
+          "why": "Fails magnitude and mechanism. The payer mix has ~16M+ on generic injectable semaglutide, ~4.4M on tirzepatide, and only ~7M on cash orals, so ~26.7M oral users cannot fit. The prose also says the $299 pill is six times the $49 shot."
+        },
+        {
+          "quote": "the counterfeit pens that killed people in 2029 lost most of their customers to a legal product that cost less.",
+          "field": "prose/paragraph_2",
+          "why": "Fails mechanism. The world state shows imported/counterfeit users falling only from ~5.2M to ~3.8M (about 27%), which is not 'most', and the gray market is described as still active with research-grade peptides."
+        },
+        {
+          "quote": "Medicare ~16.5M (28%), of whom ~13.2M are 65+, ~1.8M are under-65 disability/ESRD",
+          "field": "world/population/note",
+          "why": "Fails magnitude. The components sum to ~15.0M, not 16.5M, leaving ~1.5M Medicare users unaccounted for, and the same figure feeds the $30.6B Part D spend arithmetic."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "On balance this is a modestly better or comparable world to 2030. Price fell, the income gap narrowed (12 to 17.5 in the bottom third), and anhedonia is now labelled, which is good for epistemics. Remaining harms are real: ~4.4M fracture-prone dementia-route users, the labelled exocrine insufficiency (EPI) signal on indefinite low-cost semaglutide, pediatric exposure, adherence-verified tracks that persist, and AUD diagnoses sitting in Medicaid claims records. Backlash and 'quiet mind' marketing add cohesion and autonomy strain, but nothing is catastrophic.",
+        "plausibility": "driver_fidelity: Every driver is traceable to a dated event or field. Generic collapse is Dec 2031 patent expiry plus Jan 2032 launches. Public expansion runs through labels. AUD and mood are realised through approval and marketing. Anhedonia is labelled Oct 2031, oral parity is amycretin filed Oct 2029 and approved Aug 2031, tariffs are May 2031, and the backlash is shown. mechanism: Most changes have chains, but several are asserted. Four generics and Novo's authorised generic reach $45–69 within months of tariffs on API, with no US-synthesis capacity shown. The Medicaid AUD mandate is stated as automatic with ~0.9M enrolled in 8 months. The oral share conflicts with the payer mix (claim 1), and the prose overstates the counterfeit collapse (claim 2). magnitude: Population figures are inside the envelope (21.5, 31, income thirds averaging 21.5, age check ≈21.5), and the payer shares, Part D $30.6B and Medicaid $6.3B arithmetic reconcile. The Medicare component sum is short by ~1.5M (claim 3), the 46% oral share does not fit, and the pediatric figures are slightly high.",
+        "generativity": ""
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s3-L3-r44-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicaid ~5.5M (9.5%), incl. ~0.9M on the AUD label since Apr 2032",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 0.9M Medicaid users on a new AUD label within about eight months of approval is a very fast ramp. It rests on clinicians coding 'borderline drinkers' and on a mandatory-coverage reading of the rebate statute, with no uptake path shown."
+        },
+        {
+          "quote": "~9M on generic semaglutide, ~7M on TrumpRx orals incl. amycretin, ~2.5M on direct branded injectables",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: about 9M cash users plus roughly 7M Medicare users on generics means over 15M generic users within 11 months of a January 2032 launch. The ramp relies on newly built US-synthesised API capacity, and the world never shows that capacity existing at this scale."
+        },
+        {
+          "quote": "The first randomised data came from SHAPS-scored amycretin and retatrutide phase 3s",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: retatrutide was approved in Mar 2029, so its phase 3s predate any FDA request for SHAPS scoring, which the world ties to amycretin. Class labelling for every incretin also follows only about two months after amycretin's approval, which is a convenient shortcut."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Net harm is lower than in 2030 on several dimensions. The income gap narrowed (12→17.5), counterfeit users fell (5.2M→3.8M), and anhedonia is now labelled and nameable. Real costs remain: ~4.4M dementia-route Medicare users with a hip-fracture HR of 1.3–1.45, semaglutide exocrine insufficiency now established, 2.3–2.6M attributable anhedonia cases, adherence-verified tracks still covering ~3.9M workers, permanent AUD diagnoses in Medicaid claims, and growing generic semaglutide use in adolescents and children. The result is a harder but more legible society, so I score it a bit above a worse 2030.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields. These are the generic collapse, the Medicare and Medicaid expansion through labels, AUD, the anhedonia label, oral parity via amycretin, tariffs, backlash, no state action and the mainstream complaint. 'Mood and motivation' is realised only through telehealth marketing, which is thin but allowed. mechanism: Most chains are shown, such as patent expiry, settlements, Section 232 tariffs and labels flowing into Part D and Medicaid rebate rules. Several are asserted: the unshown US API capacity for the generic ramp, the SHAPS scoring of retatrutide phase 3s, and class labelling only two months after amycretin's approval (claims 2 and 3). magnitude: Population figures sit inside the envelope (21.5, 31.0, income thirds bracketing correctly, age-band check holds). Approval timings are legal (amycretin 22 months after filing, AUD 13 months) and Part D and Medicaid arithmetic multiplies out. Small gaps remain: Medicare 16.5M versus 13.2M + 1.8M = 15.0M, and pediatric rates that only roughly reconcile. The AUD and generic ramps (claims 1 and 2) are aggressive but not outside any bound.",
+        "generativity": "The prose carries a real scene with Marlene, Roy, Darla, the Kroger loop and the half sheet cake, and it shows rather than explains. The world also supplies strong vernacular ('the hush', 'a loud week'), events such as the Full Volume tour, Big Table potlucks and the Tulsa rally, and concrete workplace details like dose-review forms and the Hikma $49 purchase in Columbus. Many further scenes are implied, including Kentucky AUD coding, the DXA-for-prior-authorisation table and generic holidays before anniversaries."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "making Medicare the largest single payer for incretins",
+        "field": "world/events/1/event",
+        "why": "Fails magnitude/reconciliation: the candidate's own payer mix puts Medicare at ~16.5M (28%) and legitimate cash at ~18.5M (32%). Only the combined 'public total' of Medicare and Medicaid (38%) is largest, so the claim contradicts the user counts."
+      },
+      {
+        "quote": "The first randomised data came from SHAPS-scored amycretin and retatrutide phase 3s",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "Fails mechanism: retatrutide was approved Mar 2029 and amycretin was filed Oct 2029, both before the parent's 'no randomised data' state. The parent shows no SHAPS scoring in those programmes, so it is unclear when those phase 3s ran, and the result conveniently matches the 2029 observational 7–8% vs 3%."
+      },
+      {
+        "quote": "incl. ~0.9M on the AUD label since Apr 2032",
+        "field": "world/population/note",
+        "why": "Fails magnitude and mechanism: 0.9M Medicaid enrollees stabilised on a newly approved oral drug within about eight months of approval is very fast. It needs state formulary and prior-authorisation implementation and diagnosis coding at scale, and the candidate gives no ramp."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.33,
+      "autonomy": 4.67,
+      "inequality": 3.67,
+      "public_health": 5.0,
+      "cohesion": 5.0,
+      "epistemic": 3.17,
+      "overall": 4.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.5,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.99,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a mixed world, arguably less bad than 2030. Access widened ($49 generics, income gap 23:12 → 25:17.5), counterfeit harm fell, and anhedonia is now labelled and discussable, which keeps epistemic and inequality low. Costs remain: ~2.3–2.6M attributable anhedonia cases, EPI exposure for millions on indefinite semaglutide, a nearly tripled dementia-route population (~4.4M) at HR ~1.3–1.45 fracture risk, adherence-conditioned premiums still standing, off-label generic semaglutide in under-12s, and AUD diagnoses coded onto Medicaid records. Cohesion is strained by the polarised backlash (Bread Alone, Big Table, Tulsa rally).",
+      "plausibility": "driver_fidelity: All ten drivers are traceable to events and fields: 21.5% adoption, patent-expiry generics, label-driven coverage with no new law, AUD approval, anhedonia class label, oral amycretin, 232 tariffs, backlash, mainstream 'hush'. The 'mood and motivation' indication is realised only as telehealth marketing, which is thin but explained in pipeline_note. mechanism: Most chains are shown (patent expiry → generics → price → gray-market displacement; label → Part D/Medicaid statute). Weak points are the SHAPS randomised-data claim (claim 2), which conflicts with the parent's approval timeline, and the rapid AUD Medicaid ramp (claim 3). magnitude: Population figures, age and income checks, cycling arithmetic, approval timings and Part D/Medicaid spend ($13.2B + $17.4B; $6.3B) all reconcile and sit inside the envelope. The flaws are the Medicare breakdown (13.2M + 1.8M = 15.0M, not 16.5M), payer percentages summing to ~100.5%, and the 'largest single payer' claim (claim 1), which contradicts the 28% vs 32% shares.",
+      "generativity": "The prose has a concrete scene with Marlene and Roy: the Medication Guide in the Zepbound box, the DXA scan, the split $49 pen, 'loud week', the cane, and Darla at the fasting church. The world fields add texture: Hikma's Columbus generic versus the plant clinic's monthly shot, Kentucky clinics coding borderline drinkers, 'holiday-friendly' dating tags, the Tulsa rally, and union-hall 'Full Volume' nights. Many implied characters and scenes, though the day-in-the-life leans somewhat on explanation."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.551,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 45
   }
 }

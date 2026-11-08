@@ -49,6 +49,41 @@
         "input_tokens": 18645,
         "output_tokens": 22124
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r33-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28241,
+        "output_tokens": 5500
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r33-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28241,
+        "output_tokens": 6744
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r33-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28241,
+        "output_tokens": 5349
+      }
     ]
   },
   "world": {
@@ -315,6 +350,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r33-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "≈1.4M enrolled by Dec 2032 × $42 net × 12 ≈ $0.71B for drug",
+          "field": "world/access/public_coverage",
+          "why": "mechanism and magnitude: a programme funded in the March 2032 omnibus reaches 1.4M enrollees at federally qualified health centres within about nine months. No stated chain explains how that capacity (staffing, kiosks, visits) was built. The enrolment figure is also what makes the $1.06B spend fit the $1.1B appropriation."
+        },
+        {
+          "quote": "About one US child in five now lives with a parent who is currently on the drug.",
+          "field": "world/population/note",
+          "why": "magnitude: this is not derived from the stated adult rates. With 24% of adults aged 30-49 on the drug and two parents per household, the share of children with at least one parent on it should be well above one in five."
+        },
+        {
+          "quote": "Net GLP-1 spend per covered member fell ~40%, and pharmacy trend eased to ~+3%.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: the same world has users up about 40%, the branded tirzepatide and retatrutide tier growing in volume, and new DEXA, eye and fracture claims lines. A trend of +3% with a 40% fall in per-member spend is asserted without a shown calculation."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Cheap generics ($39-69) and free health-centre provision widen access, but the world adds a NAION class warning, rising excess hip fractures (~7,600/yr), and lean-mass loss patterned by income (38% vs 24% of weight lost). Gating still treats medically advised stops as missed fills, and about 3.2M low-dose 'calm' subscribers have no measurement of mood effects. The main new loss is class-legible bodies and a subsidy that pays for the drug but not the scan (`open_tensions`, `thinness_and_class`). It is a recognisably harder, more stratified society rather than a collapse, so I score it around 5.5.",
+        "plausibility": "driver_fidelity: every driver is visible in the fields and events. Generic collapse comes via patent settlements in an event, the NAION class label is dated Aug 2031, the HRSA subsidy is dated Mar 2032, and the personality layer, class stratification, no new indication, no next-gen launch, no market shock and status-quo coverage all hold. The pipeline CRLs respect the approval rules. mechanism: most chains are shown (generics cut imports, step therapy, NAION pauses colliding with gating). Three claims are weaker: the 1.4M enrolment in nine months, the 'one child in five' figure, and the ~+3% pharmacy trend alongside rising volume and new claims lines. magnitude: all headline figures sit inside the envelope (20.7% on the drug, 31.5% ever used). Payer shares sum to 100%, Medicare, Medicaid and HRSA spend multiply out, the age bands and income thirds reconcile, and the cycling arithmetic gives 43%. The only reconciliation gap is the child-exposure figure.",
+        "generativity": "The prose opens with a worked scene: Dwayne Pruitt at the Southaven health centre, the kiosk weigh-in, the laminated screening card, the blurry-eye admission, the resistance band and cartoon-egg handout, and his wife calling it 'the government's pill'. The world fields add many implied scenes: Houston zip-code divides, 'body comp verified' badges, 'no-grey' worship sets, and dose-holiday weekends. Daily life has real texture and several recurring characters are implied."
+      },
+      "plausibility": 8.3
+    },
+    {
+      "custom_id": "s3-L2-r33-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "≈1.4M enrolled by Dec 2032 × $42 net × 12 ≈ $0.71B for drug",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: it costs everyone enrolled by December at a full 12 months, though the programme was funded in March and ramped through the year. The ramp to 1.4M in about nine months is also asserted, and the spend only reconciles to the $1.1B appropriation under that annualisation."
+        },
+        {
+          "quote": "All of these subscribers sit inside the 14.6M cash/direct users, and roughly 40% have a BMI under 27.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: the same world says some 'calm' subscriptions are employer-reimbursed lifestyle accounts and some are offered at $0 as an EAP option. Those would not count as cash/direct users, so the payer-mix placement contradicts the narrative."
+        },
+        {
+          "quote": "About 70% of covering employers still gate (≥80% PDC, verified weigh-ins, ≥5% at 6 months), now with generic-semaglutide step therapy before tirzepatide.",
+          "field": "world/access/note",
+          "why": "Mechanism: the gating share is held exactly flat while the drug falls to $49 cash and net spend per member falls ~40%. The cost-control rationale for gating weakens sharply, and no chain explains why employers keep it unchanged."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Access broadens (generics at $39–69, free HRSA provision), but the harms spread down the income ladder. Lean-mass loss is patterned by income (38% vs 24% of weight lost), excess hip fractures reach ≈7,600, and NAION adds ~1,500–3,000 cases a year. Outcome gating still penalises medically advised stops, and ≈3.2M mostly non-obese 'calm' users are unmeasured. Class legibility of bodies and the backlash coalition add harm, but nothing is catastrophic, so the world is recognisably harder with new losers.",
+        "plausibility": "driver_fidelity: every driver is visible. Generic semaglutide launches Jan 2032 via patent settlements, the NAION class label appears in Aug 2031, the HRSA subsidy is funded in Mar 2032, and the 'calm' product persists. MariTide and amycretin CRLs plus the ex-US EMA approval keep next_gen at none within the approval rules. mechanism: most chains are shown, such as generics undercutting imports, step therapy and the apparel and fitness stratification, but gating persistence (claim 3) and the subscriber payer placement (claim 2) are asserted or contradictory. magnitude: all headline figures sit inside the envelope (20.7% current, 31.5% ever) and the arithmetic reconciles. The age bands sum to ≈56.2M, the payer shares sum to 100%, and the Bridge, Medicaid and HRSA spend figures multiply out. The one flaw is the annualised HRSA cost for a mid-year ramp (claim 1).",
+        "generativity": "The Dwayne Pruitt scene is concrete: a kiosk thumb scan, a laminated question card, a six-week eye-clinic wait, a resistance band, and Keisha's plate. The world fields add class-coded details such as Houston zip codes, the 'Structured' apparel line, 'body comp verified' badges and 'no-grey' worship sets. Many further scenes are implied, though the prose summary section is explanatory in places."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s3-L2-r33-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "About one US child in five now lives with a parent who is currently on the drug.",
+          "field": "world/population/note",
+          "why": "Magnitude: with 24% of 30–49-year-olds and 33% of 50–64-year-olds on the drug, the share of children with at least one parent on it should be well above one in five, probably 35–40%. The figure does not reconcile with the age bands."
+        },
+        {
+          "quote": "first-course starters from this window are ≈5.5 pts of current users, and the rest of the +6.1 rise is restarts",
+          "field": "world/population/note",
+          "why": "Magnitude: the note's own figures put second-or-later-course users at 10.0 pts, up from 7.0, so restarts account for about 3.0 pts of the rise, not about 0.6. The first-course/restart split does not reconcile with the cycling arithmetic."
+        },
+        {
+          "quote": "1.4 million enrol by December",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the programme is funded in March 2032, and 1.4M people are enrolled at federally qualified health centres within about nine months. The candidate shows no capacity build-out, staffing or outreach, so the ramp is asserted. It conveniently lands at about 95% of the appropriation."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is harder, with new losers: lean-mass loss patterned by income (38% vs 24% of weight lost), about 7,600 excess hip fractures a year, NAION excess cases, and cheap generics used with no scan. Gating still treats medically advised pauses as non-adherence, and reward blunting is sold to roughly 3.2M people with no independent measurement. Access has expanded sharply (free drug, $49 generics), which offsets some autonomy and flourishing harm. Inequality moves to quality of monitoring and body texture rather than access, so inequality is scored highest.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is +6.1pp, generic semaglutide is introduced by a settlement event, status-quo coverage holds, the NAION class warning is in the ledger and events, the HRSA subsidy is funded, and stratification and the calm-subscription product are present. Approvals follow the pipeline rules. mechanism: Most chains are shown: generics lead to lower imports, the cheap drug reaches the bottom third, and lean-mass loss tracks training and protein. The 1.4M enrolment in nine months is asserted without a build-out (claim 3). magnitude: All headline figures sit inside the envelope (20.7, 31.5, income thirds, age bands summing to 56.2M, payer mix at 100%), and the Bridge, Medicaid and HRSA spending arithmetic checks. Two reconciliation slips remain: the 'one child in five' claim and the first-course/restart split (claims 1 and 2).",
+        "generativity": "The prose has a concrete scene: Dwayne at the FQHC kiosk, the blurry-eye disclosure, the six-week eye-clinic wait, the resistance band and cartoon-egg handout, and the mirror and shot-night ending. The world implies many more scenes: Houston zip-code divides, DEXA-badge dating, 'no-grey' worship sets, and gated workers facing eye-stop rules. Texture is strong and shown rather than explained, though the early prose is expository."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "≈1.4M enrolled by Dec 2032 × $42 net × 12 ≈ $0.71B for drug",
+        "field": "world/access/public_coverage",
+        "why": "mechanism and magnitude: a programme funded in the March 2032 omnibus reaches 1.4M enrollees at federally qualified health centres within about nine months. No stated chain explains how that capacity (staffing, kiosks, visits) was built. The enrolment figure is also what makes the $1.06B spend fit the $1.1B appropriation."
+      },
+      {
+        "quote": "About one US child in five now lives with a parent who is currently on the drug.",
+        "field": "world/population/note",
+        "why": "magnitude: this is not derived from the stated adult rates. With 24% of adults aged 30-49 on the drug and two parents per household, the share of children with at least one parent on it should be well above one in five."
+      },
+      {
+        "quote": "Net GLP-1 spend per covered member fell ~40%, and pharmacy trend eased to ~+3%.",
+        "field": "world/economy/insurance/state",
+        "why": "mechanism: the same world has users up about 40%, the branded tirzepatide and retatrutide tier growing in volume, and new DEXA, eye and fracture claims lines. A trend of +3% with a 40% fall in per-member spend is asserted without a shown calculation."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 5.0,
+      "inequality": 6.33,
+      "public_health": 5.33,
+      "cohesion": 5.0,
+      "epistemic": 5.33,
+      "overall": 5.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 7.5,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.88,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Cheap generics ($39-69) and free health-centre provision widen access, but the world adds a NAION class warning, rising excess hip fractures (~7,600/yr), and lean-mass loss patterned by income (38% vs 24% of weight lost). Gating still treats medically advised stops as missed fills, and about 3.2M low-dose 'calm' subscribers have no measurement of mood effects. The main new loss is class-legible bodies and a subsidy that pays for the drug but not the scan (`open_tensions`, `thinness_and_class`). It is a recognisably harder, more stratified society rather than a collapse, so I score it around 5.5.",
+      "plausibility": "driver_fidelity: every driver is visible in the fields and events. Generic collapse comes via patent settlements in an event, the NAION class label is dated Aug 2031, the HRSA subsidy is dated Mar 2032, and the personality layer, class stratification, no new indication, no next-gen launch, no market shock and status-quo coverage all hold. The pipeline CRLs respect the approval rules. mechanism: most chains are shown (generics cut imports, step therapy, NAION pauses colliding with gating). Three claims are weaker: the 1.4M enrolment in nine months, the 'one child in five' figure, and the ~+3% pharmacy trend alongside rising volume and new claims lines. magnitude: all headline figures sit inside the envelope (20.7% on the drug, 31.5% ever used). Payer shares sum to 100%, Medicare, Medicaid and HRSA spend multiply out, the age bands and income thirds reconcile, and the cycling arithmetic gives 43%. The only reconciliation gap is the child-exposure figure.",
+      "generativity": "The prose opens with a worked scene: Dwayne Pruitt at the Southaven health centre, the kiosk weigh-in, the laminated screening card, the blurry-eye admission, the resistance band and cartoon-egg handout, and his wife calling it 'the government's pill'. The world fields add many implied scenes: Houston zip-code divides, 'body comp verified' badges, 'no-grey' worship sets, and dose-holiday weekends. Daily life has real texture and several recurring characters are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.382,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 21
   }
 }

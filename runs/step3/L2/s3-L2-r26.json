@@ -51,6 +51,41 @@
         "input_tokens": 18708,
         "output_tokens": 23098
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r26-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28522,
+        "output_tokens": 7238
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r26-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28522,
+        "output_tokens": 8819
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r26-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28522,
+        "output_tokens": 7507
+      }
     ]
   },
   "world": {
@@ -320,6 +355,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r26-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "≈4.5M adults have ≥5 years of continuous use, the population in which the new pancreatic signal appears.",
+          "field": "world/population/note",
+          "why": "magnitude: the world gives ~35–45% one-year persistence and 42–44% cycling. 4.5M uninterrupted five-year users (about 9% of 49M current users, all starting by 2027) is far too many given that attrition. The EPI excess arithmetic (≈6,800 diagnoses a year) depends on this figure."
+        },
+        {
+          "quote": "From Apr 2032 CMS allows generic semaglutide substitution at ≈$45 net, and the copay stays $50 because the agreement fixed it.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: a $50 beneficiary copay on a $45 drug is incoherent, since a copay cannot exceed the plan's net price. It also leaves no reason for 1.0M beneficiaries to take the Medicare generic route when warehouse-club cash is $39–55. The Treasury-saving story is asserted rather than shown."
+        },
+        {
+          "quote": "PDUFA VIII (signed Sep 2032) carries three incretin provisions, all effective Mar 2033",
+          "field": "world/state/regulatory_posture",
+          "why": "mechanism: a user-fee reauthorisation signed in 2032 is mislabelled as PDUFA VIII. The starting world had Congress passing no importation law, yet one bill closes importation, bans DTC promotion and mandates telehealth visits. The only chain shown is a hearing driven by 'grey' testimony."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.0,
+        "inequality": 6.5,
+        "public_health": 6.0,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.0,
+        "magnitude": 6.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "About 49M users, fracture excess of ~7,400 a year, a new EPI signal of ~6,800 a year, and a mislabelled-vial cluster make the public-health ledger worse than 2030 (public_health 6). The sharpest losses are in stratification: `thinness_and_class` and `open_tensions` show shape reading as income, with unscanned generic users and teenage retatrutide users at the bottom (inequality 6.5). Harms are named and discussed ('the grey', EPI, the DSC), and the cheap generic gives gated-out users an exit, so epistemic and autonomy stay near mid-scale. Overall it is a harder society with new losers, not a structurally hidden catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. Generic collapse comes with a settlement mechanism, MariTide is approved 23 months after filing, EPI is the long-horizon signal, and Chinese vials are the counterfeit shock. The AUD label stands in for mood_and_motivation, which the approval rules allow. mechanism: most chains are shown, but the $50-copay-on-$45-drug claim and the PDUFA VIII omnibus (claims 2 and 3) are asserted or incoherent. The prose also has Marisol skipping 'this week' while also at 'day five without a dose' and dosing Sunday. magnitude: current use (18.0), ever use (29.5), income thirds, age bands, Medicare ($4.4B) and Medicaid ($7.0B) spending, and payer mix all reconcile and sit inside the envelope. The 4.5M five-year-continuous figure (claim 1) conflicts with the stated persistence rates, and 'all first-time starters' sits oddly beside rising restarts.",
+        "generativity": "The Marisol day scene is well observed: the calendar skip, the Costco $44 pen, the Scottsdale dental office, Danny's vials, the DEXA van she drives past, and the mango tasting sweet. The Paradise Valley and Maryvale contrast, 'holiday weekend' dating and hosting, and the six-week MariTide thaw imply many more scenes. Minor timeline muddle in the dosing details slightly weakens it."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s3-L2-r26-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "From Apr 2032 CMS allows generic semaglutide substitution at ≈$45 net, and the copay stays $50 because the agreement fixed it.",
+          "field": "world/access/public_coverage",
+          "why": "A $50 copay on a $45 drug means the beneficiary pays more than the drug costs, so Medicare would collect rather than pay. Yet the Bridge spend line still books 1.0M × $45 × 12 ≈ $0.54B as outlay. This fails mechanism and magnitude (reconciliation)."
+        },
+        {
+          "quote": "PDUFA VIII (signed Sep 2032) carries three incretin provisions, all effective Mar 2033",
+          "field": "world/state/regulatory_posture",
+          "why": "The start state gives no reason to shift the user-fee calendar. A user-fee reauthorisation falling in 2032 is out of step with the real cycle (PDUFA VII runs to 2027), and it is the only vehicle for the importation ban, the DTC ban and the telehealth visit rule. That makes the restriction mechanism feel convenient rather than caused."
+        },
+        {
+          "quote": "The 65+ band rose 3.5 pts because generic semaglutide made cash use trivial for people outside Bridge criteria.",
+          "field": "world/population/note",
+          "why": "The same note gives only 1.2M cash users among 8.3M 65+ users, and Medicare 65+ users rose from 5.7M to 7.1M. Cash therefore explains under half of the roughly 2.6M increase, so the stated cause and the safety ledger's 'most new 65+ growth' do not follow from the numbers."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics widen access and let people escape gating (cash $39–55), which softens autonomy harms. Offsetting that: a new EPI signal sits alongside bone and sarcopenia harms, with about 6,800 and 7,400 excess cases a year and 3.5M+ gray-market users on Chinese vials. Class stratification of body quality (Paradise Valley vs Maryvale), 'the grey' as a mainstream complaint, and gated plans that reward uninterrupted use all count too. The result is a recognisably harder society with new losers, but harm is named and discussed, which keeps epistemic scores low.",
+        "plausibility": "driver_fidelity: Nearly every driver is visibly realised: 18.0% adoption, a generic launch via settlements, an EPI long-horizon signal, MariTide monthly, Chinese vial shock, class stratification, restriction, and 'the grey'. The mood_and_motivation driver is realised only through an AUD label, which the candidate itself concedes is not a mood or motivation indication, so that driver is thin. mechanism: Most chains are shown, such as generic price to counterfeit decline to Chinese vials, and PDC arithmetic to dose-skipping. Weak points are the Medicare copay exceeding price, the PDUFA VIII timing (claims 1–2), the 65+ growth attribution (claim 3), and upgrading reward blunting to 'established' on observational data. magnitude: Current 18.0, ever 29.5, the income thirds and the age bands all sit inside the envelope and reconcile. Payer mix, Medicaid $7.0B and the EPI and fracture arithmetic all check. Approval timings obey the rules. Deductions are the $45-below-$50 Bridge spend line and the 65+ cash-share mismatch.",
+        "generativity": "The Marisol Vega day is concrete, with a Costco pen, a skipped dose before the quinceañera, a DEXA van she drives past, and her son's retatrutide box. It shows the grey rather than explaining it. The world fields supply scenes such as Paradise Valley vs Maryvale, a Brooklyn 'holiday week' reading series, and monthly-injection users who cannot take a holiday. The prose frame is somewhat short and expository in places."
+      },
+      "plausibility": 6.85
+    },
+    {
+      "custom_id": "s3-L2-r26-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "≈4.5M adults have ≥5 years of continuous use, the population in which the new pancreatic signal appears.",
+          "field": "world/population/note",
+          "why": "Fails magnitude and mechanism. The starting world gives 35% one-year persistence (about 45% in gated plans) and 42% cycling. Having 4.5M uninterrupted five-year users out of roughly 25M users in 2027 contradicts that. The whole EPI excess count of about 6,800 diagnoses a year rests on this figure."
+        },
+        {
+          "quote": "Who pays is structurally unchanged.",
+          "field": "world/access/note",
+          "why": "Fails mechanism. Cash fills fall to $39–55 and gated plans have cut off about 6M people, and the same note says those stops 'increasingly become switches to cash'. Yet the cash/direct share stays at exactly 20% and commercial at exactly 47%. The stable payer mix is asserted, not derived."
+        },
+        {
+          "quote": "It is concentrated among cash generic users with no body-composition monitoring, who now make up most new 65+ growth.",
+          "field": "world/safety_ledger/lean_mass",
+          "why": "Fails magnitude and reconciliation. The 65+ band grows from 5.7M to 8.3M (+2.6M). Of that, Medicare accounts for +1.4M (5.7M to 7.1M) and cash for only 1.2M, so cash users are under half of the growth, not most of it."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.0,
+        "inequality": 6.5,
+        "public_health": 6.0,
+        "cohesion": 5.0,
+        "epistemic": 5.0,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.0,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Cheap generics widen access, but the candidate shows layered harms: about 7,400 excess hip fractures a year, about 6,800 new EPI diagnoses a year, and sarcopenia among unmonitored cash users. Gray-market Chinese vials caused a mass-vomiting cluster, and gating still rewards uninterrupted use. Inequality is the sharpest dimension, because body shape now sorts by class (MariTide, DEXA and coaching versus a Costco pen and no scan). Autonomy and epistemic harms are partly offset by the 2033 ad ban and importation closure, and by the fact that 'the grey' is named and debated.",
+        "plausibility": "driver_fidelity: Most drivers are traceable to fields and events. These are class stratification, the Chinese-vial counterfeit shock, EPI as the long-horizon signal, MariTide as the monthly launch, PDUFA riders as restriction, and 'the grey' as a mainstream complaint. The mood_and_motivation indication is realised only as an alcohol-use-disorder label and the candidate admits no mood indication exists, so that driver is thin. mechanism: Generic launch via settlements, the vial-substitution shift and the ad ban following the hearings are each given a chain. The payer mix staying identical, the unexplained 4.5M continuous-use base and the abrupt arrival of the EPI signal are asserted (claims 1 and 2). magnitude: Every population figure is inside the envelope, and the age bands, income thirds, cycling arithmetic, payer shares, Bridge spend ($4.4B) and Medicaid spend ($7.0B) all multiply out, as do the approval timings. The residual flaws are the 4.5M continuous-use count and the 'most new 65+ growth' claim, which contradicts the candidate's own 65+ numbers (claim 3).",
+        "generativity": "The prose has a clear protagonist (Marisol), a sister-world contrast (Paradise Valley vs Maryvale), and concrete details: the skipped-dose arithmetic, the DEXA van, the $28 vial and the quinceañera. Tensions such as the six-week MariTide thaw and the PDC-versus-holiday conflict imply many scenes. Danny reads as an adult son alongside a granddaughter, which sits awkwardly with the world's 'teenage sons' detail, and the final scene is somewhat expository."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "≈4.5M adults have ≥5 years of continuous use, the population in which the new pancreatic signal appears.",
+        "field": "world/population/note",
+        "why": "magnitude: the world gives ~35–45% one-year persistence and 42–44% cycling. 4.5M uninterrupted five-year users (about 9% of 49M current users, all starting by 2027) is far too many given that attrition. The EPI excess arithmetic (≈6,800 diagnoses a year) depends on this figure."
+      },
+      {
+        "quote": "From Apr 2032 CMS allows generic semaglutide substitution at ≈$45 net, and the copay stays $50 because the agreement fixed it.",
+        "field": "world/access/public_coverage",
+        "why": "mechanism: a $50 beneficiary copay on a $45 drug is incoherent, since a copay cannot exceed the plan's net price. It also leaves no reason for 1.0M beneficiaries to take the Medicare generic route when warehouse-club cash is $39–55. The Treasury-saving story is asserted rather than shown."
+      },
+      {
+        "quote": "PDUFA VIII (signed Sep 2032) carries three incretin provisions, all effective Mar 2033",
+        "field": "world/state/regulatory_posture",
+        "why": "mechanism: a user-fee reauthorisation signed in 2032 is mislabelled as PDUFA VIII. The starting world had Congress passing no importation law, yet one bill closes importation, bans DTC promotion and mandates telehealth visits. The only chain shown is a hearing driven by 'grey' testimony."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 5.0,
+      "inequality": 6.5,
+      "public_health": 6.0,
+      "cohesion": 5.0,
+      "epistemic": 4.5,
+      "overall": 5.63
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.5,
+      "mechanism": 6.33,
+      "magnitude": 7.0
+    },
+    "plausibility": 6.9,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 49M users, fracture excess of ~7,400 a year, a new EPI signal of ~6,800 a year, and a mislabelled-vial cluster make the public-health ledger worse than 2030 (public_health 6). The sharpest losses are in stratification: `thinness_and_class` and `open_tensions` show shape reading as income, with unscanned generic users and teenage retatrutide users at the bottom (inequality 6.5). Harms are named and discussed ('the grey', EPI, the DSC), and the cheap generic gives gated-out users an exit, so epistemic and autonomy stay near mid-scale. Overall it is a harder society with new losers, not a structurally hidden catastrophe.",
+      "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. Generic collapse comes with a settlement mechanism, MariTide is approved 23 months after filing, EPI is the long-horizon signal, and Chinese vials are the counterfeit shock. The AUD label stands in for mood_and_motivation, which the approval rules allow. mechanism: most chains are shown, but the $50-copay-on-$45-drug claim and the PDUFA VIII omnibus (claims 2 and 3) are asserted or incoherent. The prose also has Marisol skipping 'this week' while also at 'day five without a dose' and dosing Sunday. magnitude: current use (18.0), ever use (29.5), income thirds, age bands, Medicare ($4.4B) and Medicaid ($7.0B) spending, and payer mix all reconcile and sit inside the envelope. The 4.5M five-year-continuous figure (claim 1) conflicts with the stated persistence rates, and 'all first-time starters' sits oddly beside rising restarts.",
+      "generativity": "The Marisol day scene is well observed: the calendar skip, the Costco $44 pen, the Scottsdale dental office, Danny's vials, the DEXA van she drives past, and the mango tasting sweet. The Paradise Valley and Maryvale contrast, 'holiday weekend' dating and hosting, and the six-week MariTide thaw imply many more scenes. Minor timeline muddle in the dosing details slightly weakens it."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.433,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 19
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 17628,
         "output_tokens": 20561
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r38-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25818,
+        "output_tokens": 6373
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r38-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25818,
+        "output_tokens": 6308
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r38-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25818,
+        "output_tokens": 7518
+      }
     ]
   },
   "world": {
@@ -304,6 +339,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r38-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Health plans that refuse the pill for weight now have to cover it, under parity law, for drinking.",
+          "field": "prose/article",
+          "why": "Mechanism: parity law requires comparable limits on mental-health and substance-use benefits. It does not require a plan to cover a specific drug that it excludes for another use, so the claim overstates the legal chain."
+        },
+        {
+          "quote": "Oral semaglutide for AUD cannot be excluded under the rebate statute, so every state now covers it behind prior authorisation",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: it asserts that all states adopted coverage, and that about 0.5M Medicaid AUD users appeared, within roughly six months of the June 2032 approval. No state formulary or enrolment process is shown, so the speed is asserted."
+        },
+        {
+          "quote": "smaller than the 2029 cohort, which had depression-screening confounding",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: anhedonia prevalence roughly halves (7–8% to about 4%) and the status moves from suspected to established in one sentence. The rationale is convenient, because it conveys the personality-layer driver's shift to a niche side effect without showing how the earlier cohort was confounded."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society. The income gap in obesity (26% vs 39%) and in use (28 vs 16.5) widens, and the body now signals class down to loose skin and surgical finishing. About 7.3M gray-market users sit outside NAION, DXA and elastase screening, and verified-adherence tracks persist (~5.0M). Harms are now labelled and measured (NAION, anhedonia, EPI warnings), which lowers the epistemic score and keeps overall below the harsher anchors.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events and fields. The NAION class label is Feb 2032, AUD is approved Jun 2032, and retatrutide 12 mg reaches ~28.7% as an existing product in a new form. Anhedonia becomes a labelled niche effect, class stratification is in the NHANES event, coverage is flat at 35%, and nothing contradicts the stipulated none-drivers. mechanism: Most chains are shown, including the label that led vendors to drop 'steadiness' and the Sentinel-derived NAION excess. The parity-law mandate, the immediate every-state Medicaid AUD coverage, and the halved anhedonia prevalence (claims 1–3) are asserted rather than shown. magnitude: All headline figures sit inside the envelope (22.4% on drug, 31% ever-used). The payer mix sums to 60.5M, the cycling arithmetic reconciles to 47.4%, and the Medicare ($37.5B, $10.6B) and Medicaid ($1.4B) spend figures multiply out. Approval timings (amycretin, 12 mg sNDA, AUD 14 months after filing) obey the rules, and the NAION excess of about 6,700 cases follows from the stated rates.",
+        "generativity": "The day-in-the-life follows Darnell and Tonya through concrete scenes: the 5:40 pill, the AUD-code copay, the Mercy Health eye-exam envelope, Duffy's boarded windows, the two-question anhedonia screen and the $11k surgery quote. The world fields add texture: contouring backlogs in Scottsdale and Miami, sober-but-unmedicated 'off nights', the CDL-driver question and Part 2 confidentiality collisions. Several of these could carry a film."
+      },
+      "plausibility": 8.4
+    },
+    {
+      "custom_id": "s3-L3-r38-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "smaller than the 2029 cohort, which had depression-screening confounding",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism: the 2030 world had a replicated n≈31k cohort at ~7–8% anhedonia (~10% on retatrutide), and it is dismissed here as confounded. The drop to ~4% is convenient, it conveniently supports the personality_layer driver, and it is asserted rather than shown."
+        },
+        {
+          "quote": "Once it was labelled, wellness vendors' counsel stripped 'steadiness' from competency frameworks and coaching scripts",
+          "field": "world/interior_life/framing",
+          "why": "mechanism: a change from employer-encouraged steadiness to scrubbed vocabulary within months is asserted from an ADA-exposure argument. The world also says verification, shift-lead favouritism and surveillance all persist, so the scrub looks tidy and convenient."
+        },
+        {
+          "quote": "Lilly filed an sNDA for retatrutide 12 mg in Nov 2030 on TRIUMPH programme data, and the FDA approved it in Oct 2031 with labelled mean loss of ~28.7% (~30% in completers)",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: approval comes about 11 months after filing, short of the 12-month norm for phase 3 products. The 2030 label capped most patients at 9 mg for dysesthesia, yet 12 mg is approved at ~29% against the 24% labelled efficacy."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension. Body shape now reads as income down to the skin, with contouring surgery at $9–14k, a bottom-third obesity rate of 39% versus 26% at the top, and a gray market of 7.3M with no eye, DXA or elastase screening. NAION adds roughly 5–7k mostly irreversible cases a year, adherence-verified tracks persist (~5.0M enrollees), and Medicare fracture exposure grows. Epistemic harm is lower than in 2030 because anhedonia, NAION and EPI are now measured and labelled, which tempers the overall score.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. Adoption is 22.4% (inside the envelope). AUD is approved in Jun 2032, 14 months after filing. NAION gets a class label in Feb 2032. Retatrutide 12 mg is the allowed 'existing product in a new form' route to the 30% driver. Managed-decline prices, status-quo coverage, niche side-effect labelling and class stratification are all present. mechanism: Most chains are shown, including parity and the Medicaid rebate statute driving AUD coverage, and the Sentinel analysis leading to the NAION label. Two changes are convenient: the anhedonia prevalence is revised down by dismissing the 2029 cohort as confounded, and vendors scrub 'steadiness' from HR materials almost immediately. magnitude: The arithmetic reconciles. Payer mix sums to 60.5M, the cycling arithmetic gives 47.4%, the age and income checks give 22.4, and the Medicare ($37.5B), dementia ($10.6B) and Medicaid AUD ($1.4B) spending figures multiply out. Remaining flaws are small: the retatrutide sNDA approval comes about 11 months after filing, and the pediatric figures (3% of 12–17s, 0.35% of 6–11s) give ~1.1% of under-18s versus the stated 1.4%.",
+        "generativity": "x"
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L3-r38-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "AUD fills ride on behavioural-health parity, so plans that exclude weight loss now cover the same pill under an F10 code with prior authorisation.",
+          "field": "world/access/note",
+          "why": "mechanism: parity law bars more restrictive limits on SUD benefits but does not obligate plans to cover a particular drug, so the claimed forced coverage is asserted rather than shown. The prose repeats it as 'have to cover it, under parity law'."
+        },
+        {
+          "quote": "Once it was labelled, wellness vendors' counsel stripped 'steadiness' from competency frameworks and coaching scripts, because promoting a labelled adverse reaction as a job trait was an ADA exposure while the EEOC charges were pending.",
+          "field": "world/interior_life/framing",
+          "why": "mechanism: the label covers uncommon anhedonia, and the same world says mild 'evenness' 'is not a labelled event'. The industry-wide vocabulary reversal within months rests on a convenient legal rationale."
+        },
+        {
+          "quote": "Pediatric: ~1.4% of under-18s, ~3% of 12–17s and ~0.35% of 6–11s",
+          "field": "world/population/note",
+          "why": "magnitude: with roughly 25M children in each of the two age bands, these band rates give about 0.85M children, or ~1.15% of under-18s, not 1.4%. The headline figure does not reconcile with its components."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a harder version of 2030 with new losers. NAION is now established at HR ~2.0 and ~5–7k excess cases a year, with the 7.3M gray-market users outside screening. Class stratification deepens through contouring surgery, the obesity gap (26% vs 39%) and cash-pay retatrutide. Adherence verification persists while 'steadiness' language is scrubbed, and the anhedonia estimate was revised down, so interior-life harm eased. Harms are measured and nameable (labels, NHANES, Sentinel), which keeps epistemic badness moderate, and nothing reaches structural 7+ overall.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Retatrutide 12 mg gives the ~30% launch as an existing product in a new form, which the rules allow. The NAION class label (Feb 2032), the AUD indication (Jun 2032), the anhedonia adverse-reaction label, managed price decline and class stratification are all in events and fields. AUD fills moving into parity and Medicaid coverage sits slightly uneasily with 'status_quo' coverage. mechanism: Most changes have chains: the Sentinel study leads to the label, and the label leads to vendor language changes. The parity-forced coverage claim (claim 1) and the vendors' ADA-driven scrubbing of 'steadiness' (claim 2) are asserted, and the anhedonia estimate is conveniently halved by a 'confounding' retcon. magnitude: The population figures sit inside the envelope (22.4 and 31.0), and the age, income, cycling and payer-mix arithmetic all reconcile. Part D spend (13.3M × $235 × 12 ≈ $37.5B), the dementia route ($10.6B) and Medicaid AUD ($1.4B) multiply out. Approval timings (AUD 14 months, amycretin, bimagrumab not approved) obey the rules. The only gap is the pediatric headline vs its bands (claim 3).",
+        "generativity": "The day-in-the-life gives Darnell and Tonya distinct, concrete scenes: the 5:40 pill with four ounces of water, the AUD-code copay, the Mercy Health eye-exam envelope, the mirror and the $11k surgery, Duffy's with plywood, the two-question anhedonia screen, and the February ophthalmology wait. World fields add recognisable settings (Toledo, the Columbus plant clinic, Scottsdale contouring, Unmuted sober rooms). It shows rather than explains, though a few beats are on-the-nose."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Health plans that refuse the pill for weight now have to cover it, under parity law, for drinking.",
+        "field": "prose/article",
+        "why": "Mechanism: parity law requires comparable limits on mental-health and substance-use benefits. It does not require a plan to cover a specific drug that it excludes for another use, so the claim overstates the legal chain."
+      },
+      {
+        "quote": "Oral semaglutide for AUD cannot be excluded under the rebate statute, so every state now covers it behind prior authorisation",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: it asserts that all states adopted coverage, and that about 0.5M Medicaid AUD users appeared, within roughly six months of the June 2032 approval. No state formulary or enrolment process is shown, so the speed is asserted."
+      },
+      {
+        "quote": "smaller than the 2029 cohort, which had depression-screening confounding",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "Mechanism: anhedonia prevalence roughly halves (7–8% to about 4%) and the status moves from suspected to established in one sentence. The rationale is convenient, because it conveys the personality-layer driver's shift to a niche side effect without showing how the earlier cohort was confounded."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.33,
+      "inequality": 7.0,
+      "public_health": 5.5,
+      "cohesion": 5.0,
+      "epistemic": 4.33,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.83,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.98,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The world is a recognisably harder society. The income gap in obesity (26% vs 39%) and in use (28 vs 16.5) widens, and the body now signals class down to loose skin and surgical finishing. About 7.3M gray-market users sit outside NAION, DXA and elastase screening, and verified-adherence tracks persist (~5.0M). Harms are now labelled and measured (NAION, anhedonia, EPI warnings), which lowers the epistemic score and keeps overall below the harsher anchors.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events and fields. The NAION class label is Feb 2032, AUD is approved Jun 2032, and retatrutide 12 mg reaches ~28.7% as an existing product in a new form. Anhedonia becomes a labelled niche effect, class stratification is in the NHANES event, coverage is flat at 35%, and nothing contradicts the stipulated none-drivers. mechanism: Most chains are shown, including the label that led vendors to drop 'steadiness' and the Sentinel-derived NAION excess. The parity-law mandate, the immediate every-state Medicaid AUD coverage, and the halved anhedonia prevalence (claims 1–3) are asserted rather than shown. magnitude: All headline figures sit inside the envelope (22.4% on drug, 31% ever-used). The payer mix sums to 60.5M, the cycling arithmetic reconciles to 47.4%, and the Medicare ($37.5B, $10.6B) and Medicaid ($1.4B) spend figures multiply out. Approval timings (amycretin, 12 mg sNDA, AUD 14 months after filing) obey the rules, and the NAION excess of about 6,700 cases follows from the stated rates.",
+      "generativity": "The day-in-the-life follows Darnell and Tonya through concrete scenes: the 5:40 pill, the AUD-code copay, the Mercy Health eye-exam envelope, Duffy's boarded windows, the two-question anhedonia screen and the $11k surgery quote. The world fields add texture: contouring backlogs in Scottsdale and Miami, sober-but-unmedicated 'off nights', the CDL-driver question and Part 2 confidentiality collisions. Several of these could carry a film."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.249,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 25
   }
 }

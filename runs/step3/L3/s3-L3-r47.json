@@ -52,6 +52,41 @@
         "input_tokens": 17745,
         "output_tokens": 23372
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r47-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28448,
+        "output_tokens": 5193
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r47-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28448,
+        "output_tokens": 7644
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r47-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28448,
+        "output_tokens": 5458
+      }
     ]
   },
   "world": {
@@ -313,6 +348,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r47-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "the sNDA was filed in May 2031 with priority review, and approval came Dec 2031",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the parent lists the oral semaglutide AUD indication as phase 3 reading out in 2031. The envelope bars approval earlier than 12 months after filing, and here approval comes about 7 months after. Priority review is allowed as a realisation of the driver, but approval at 7 months is not."
+        },
+        {
+          "quote": "Medicare's dementia-route users climb from 1.6M to 6.5M by late 2032",
+          "field": "world/events/1/event",
+          "why": "Mechanism and magnitude: a fourfold jump in about 17 months is asserted from a relaxed prior-authorisation rule alone, with no uptake or supply chain shown. The label covers adults 60+, yet the route is counted entirely inside Medicare, which mostly excludes ages 60–64."
+        },
+        {
+          "quote": "7.5M × $245 × 12 ≈ $22.1B gross, federal share ≈ $16.5B",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: an 80% federal match on $22.1B is about $17.7B, not $16.5B. The 20% state share is also given as ~$1.4B for the 12 new states, which does not fit a state share of roughly $4.4B across 21 states."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5.5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens (bottom third 12→20%, HRSA, Medicaid), but harms accumulate. About 2,000 excess NAION cases a year, EPI, 1.3–1.45 fracture HR in a quadrupled 65+ user base, and a growing gray market (8.5M, 503A compounding hospitalisations). HRSA disenrolment after missed refills, adherence differentials, and molecule-based class stratification (oral vs Forte) add autonomy and inequality costs. Harms are nameable and measured, so the epistemic score is low.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (+5.4pp adoption, subsidy and public expansion, AUD, longevity microdosing, NAION class label, Forte, gray market 5.2M→8.5M, class stratification, flatness as mainstream complaint). mechanism: most chains are shown, such as the HRSA package, the CMS prior-authorisation change and the 503A telehealth route. The 1.6M→6.5M dementia-route surge is asserted rather than explained, and the prose line that nobody says why premiums rose contradicts the world's CMS citation. magnitude: population figures, the age check, the payer mix sum to 62M and the cycling arithmetic all reconcile. The AUD approval 7 months after filing breaks the 12-month phase 3 rule, and the Medicaid federal-share and state-share figures do not multiply out.",
+        "generativity": "The Denise Kowalczyk day is concrete: pen in the butter compartment, skipping a dose for the grandson's cake, the eye-exam leaflet, the $599 ad against her $47, the pastor's wife on the HRSA waitlist, and Ray with the gray-market reta. The world adds scene-ready texture such as 'holiday weekend' club nights, the HBO comedy, pen-muscle versus bar-muscle, and quarter-end holidays for traders."
+      },
+      "plausibility": 6.4
+    },
+    {
+      "custom_id": "s3-L3-r47-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Oral semaglutide's AUD phase 3 read out positive in Feb 2031, the sNDA was filed in May 2031 with priority review, and approval came Dec 2031.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the starting world has the AUD indication in phase 3, and the envelope bars approval earlier than 12 months after filing. Approval here comes about 7 months after filing, so it breaks the stated approval-timing rule."
+        },
+        {
+          "quote": "Most large employers removed 'even under pressure' language and stopped reporting adherence beside safety metrics.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: one non-binding EEOC reasonable-cause finding in one of two charges is asserted to have changed practice across most large employers within months. The same world says metabolic tracks, clinic dose records and the 30% differential persist, so the change is asserted rather than shown."
+        },
+        {
+          "quote": "Orals are ~52% of users, driven by HRSA's oral-only formulary.",
+          "field": "world/access/note",
+          "why": "Magnitude: HRSA covers only ~3.5M of 62M users (~6%), and the same note says Medicare users take tirzepatide and commercial users take injectables. The orals share does not reconcile with the stated payer-by-molecule mix."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Use rises to 23%, and the bad outcomes are real. NAION adds ~2,000 excess cases a year, and the 65+ fracture hazard sits on a quadrupled dementia-route population whose confirmatory trial has not read out. Gray-market use rises to 8.5M, HRSA disenrolls after two missed refills, and the class split moves from access to molecule (free oral versus $599 Forte). Offsetting this, the harms are measured and named (NAION label, EPI label, anhedonia RCT), access broadens, and holidays give users some control, so this is a harder but recognisable society.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised in fields and events: HRSA subsidy and Medicaid match, NAION class label, Forte, 503A gray-market growth, and the flatness as a mainstream complaint. The Forte filing (Feb 2031) and approval (Apr 2032) respect the 12-month rule, and no driver is contradicted. mechanism: Most chains are shown, including the Jul 2031 label with relaxed prior authorisation driving dementia-route growth, the 80% match driving Medicaid states, and the bottom-third rise, which reconciles to HRSA plus Medicaid. The weak links are the sweeping employer reversal after one EEOC finding, and the prose line that nobody in Washington will say why Part D premiums rose, which contradicts the world's CMS citation of incretin spend. magnitude: Population figures sit inside the envelope, and payer mix, age bands, cycling arithmetic and the Part D, Medicaid and HRSA dollar figures all reconcile. The AUD approval about 7 months after filing breaks the 12-month approval rule, and the orals ~52% share is shaky against the payer-by-molecule mix.",
+        "generativity": "The Toledo day-in-the-life shows rather than explains: the pen in the butter compartment, skipping a dose for the cake, the $599 ad against her $47 copay, Ray's nine days off and the pierogi. The world supplies many specific hooks, including Austin 'pen muscle' versus 'bar muscle', holiday-weekend club nights, the HBO comedy and the HRSA waitlists. Characters and scenes are easy to imagine."
+      },
+      "plausibility": 6.2
+    },
+    {
+      "custom_id": "s3-L3-r47-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "the sNDA was filed in May 2031 with priority review, and approval came Dec 2031",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the starting world had oral semaglutide's AUD trial in phase 3 with no filing stated. The envelope allows approval no earlier than 12 months after filing, and this one comes 7 months after, so priority review is used to break the rule."
+        },
+        {
+          "quote": "and Medicare's dementia-route users climb from 1.6M to 6.5M by late 2032",
+          "field": "world/events/1/event",
+          "why": "Mechanism: the quadrupling is asserted to follow from a prior-authorisation relaxation alone. The candidate gives no uptake chain for roughly 5M new users in about 16 months, such as clinician capacity, patient demand, or the NAION warning's drag on starts."
+        },
+        {
+          "quote": "Most large employers removed 'even under pressure' language and stopped reporting adherence beside safety metrics.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: one non-binding EEOC reasonable-cause finding against a single firm is said to change practice across most large employers. The 2030 world had these practices entrenched, and the 30% differential guidance is unchanged."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 4.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens through HRSA, Medicaid and the Medicare dementia route, but costs accrue. About 2,000 excess NAION cases a year, a quadrupled 65+ cohort at fracture and EPI risk, and Forte muscle sold on an unproven label all land on people. HRSA disenrolment after two missed refills, the 30% adherence differential and a 8.5M gray market add harm, while holidays and the flatness vocabulary make harms nameable, which keeps the epistemic score low. The result is a harder but legible society, around 5.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: 23% adoption, managed decline, public expansion via HRSA/Medicaid/Medicare, AUD and longevity indications, the NAION class label, Forte, gray-market regrowth to 8.5M, class stratification, subsidy and 'the flatness'. mechanism: most changes have chains (March 2031 package, July 2031 label, Sentinel analysis), but the Medicare 1.6M→6.5M jump and the employer-wide reaction to one EEOC finding are asserted. The prose also says Part D premiums rose and 'nobody in Washington will say why', while the world says CMS cited incretin spend. magnitude: population figures, age weights, payer mix (62M) and the Medicare, Medicaid and HRSA arithmetic reconcile and sit inside the envelope. The AUD approval 7 months after filing breaks the 12-month rule, and the state-share figure of ~$1.4B for 12 states is loose against the ~$22B Medicaid base.",
+        "generativity": "The Denise Kowalczyk day has scenes and texture: the pen in the butter compartment, the skipped dose before the birthday cake, the eye-exam leaflet, the $599 ad against her $47 copay, and her son-in-law's off-days with 'reta'. The world fields add holiday weekend club nights, an HBO comedy, 'pen muscle' versus 'bar muscle', and HRSA waitlist lines, all of which imply further characters and scenes."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "the sNDA was filed in May 2031 with priority review, and approval came Dec 2031",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: the parent lists the oral semaglutide AUD indication as phase 3 reading out in 2031. The envelope bars approval earlier than 12 months after filing, and here approval comes about 7 months after. Priority review is allowed as a realisation of the driver, but approval at 7 months is not."
+      },
+      {
+        "quote": "Medicare's dementia-route users climb from 1.6M to 6.5M by late 2032",
+        "field": "world/events/1/event",
+        "why": "Mechanism and magnitude: a fourfold jump in about 17 months is asserted from a relaxed prior-authorisation rule alone, with no uptake or supply chain shown. The label covers adults 60+, yet the route is counted entirely inside Medicare, which mostly excludes ages 60–64."
+      },
+      {
+        "quote": "7.5M × $245 × 12 ≈ $22.1B gross, federal share ≈ $16.5B",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude: an 80% federal match on $22.1B is about $17.7B, not $16.5B. The 20% state share is also given as ~$1.4B for the 12 new states, which does not fit a state share of roughly $4.4B across 21 states."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.67,
+      "autonomy": 5.17,
+      "inequality": 5.33,
+      "public_health": 5.17,
+      "cohesion": 4.33,
+      "epistemic": 3.67,
+      "overall": 4.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 7.0,
+      "magnitude": 5.0
+    },
+    "plausibility": 6.33,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Access broadens (bottom third 12→20%, HRSA, Medicaid), but harms accumulate. About 2,000 excess NAION cases a year, EPI, 1.3–1.45 fracture HR in a quadrupled 65+ user base, and a growing gray market (8.5M, 503A compounding hospitalisations). HRSA disenrolment after missed refills, adherence differentials, and molecule-based class stratification (oral vs Forte) add autonomy and inequality costs. Harms are nameable and measured, so the epistemic score is low.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events (+5.4pp adoption, subsidy and public expansion, AUD, longevity microdosing, NAION class label, Forte, gray market 5.2M→8.5M, class stratification, flatness as mainstream complaint). mechanism: most chains are shown, such as the HRSA package, the CMS prior-authorisation change and the 503A telehealth route. The 1.6M→6.5M dementia-route surge is asserted rather than explained, and the prose line that nobody says why premiums rose contradicts the world's CMS citation. magnitude: population figures, the age check, the payer mix sum to 62M and the cycling arithmetic all reconcile. The AUD approval 7 months after filing breaks the 12-month phase 3 rule, and the Medicaid federal-share and state-share figures do not multiply out.",
+      "generativity": "The Denise Kowalczyk day is concrete: pen in the butter compartment, skipping a dose for the grandson's cake, the eye-exam leaflet, the $599 ad against her $47, the pastor's wife on the HRSA waitlist, and Ray with the gray-market reta. The world adds scene-ready texture such as 'holiday weekend' club nights, the HBO comedy, pen-muscle versus bar-muscle, and quarter-end holidays for traders."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.784,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 41
   }
 }

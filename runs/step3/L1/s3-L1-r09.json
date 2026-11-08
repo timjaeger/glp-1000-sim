@@ -51,6 +51,41 @@
         "input_tokens": 17472,
         "output_tokens": 18855
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r09-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25523,
+        "output_tokens": 5952
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r09-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25523,
+        "output_tokens": 5814
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r09-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25523,
+        "output_tokens": 6416
+      }
     ]
   },
   "world": {
@@ -315,6 +350,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r09-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Wegovy's list price is still $1,349 for the brand, which is now mostly prescribed for gambling disorder under its exclusive label.",
+          "field": "world/access/note",
+          "why": "Mechanism: the gambling label was approved in Mar 2032, and the same world says plans steer patients to carved-out generics and that the gambling label is only 'a small offset' for Novo. Saying the brand is 'mostly' prescribed for gambling within months contradicts that and is unshown."
+        },
+        {
+          "quote": "Persistence rose from ~50% to 55% because generic semaglutide removed price-driven stops.",
+          "field": "world/population/note",
+          "why": "Mechanism: generic semaglutide launched only in Jan 2032 and reached $39–69 by Q3 2032, yet the persistence gain is attributed to it across a two-year window. The restart-rate drop is likewise asserted as an effect of the backlash with no evidence."
+        },
+        {
+          "quote": "The gray market halved from 9.0M to 5.7M because $49 legal generic undercut $129–249 compounded vials.",
+          "field": "world/access/note",
+          "why": "Magnitude and mechanism: 9.0M to 5.7M is a ~37% fall, not a halving. About 2.5M of the remainder is gym retatrutide, which cheap semaglutide cannot displace, so the stated cause covers only part of the drop."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 60M adults are on drug, and the fastest-growing group is the unmonitored, low-protein cheap-generic cohort, so sarcopenia and fracture risk grows (safety_ledger, open_tensions). Pediatric bone data are still absent and reward blunting is now mainstream and tied to the gambling indication. Cohesion erodes through stance mismatches ending relationships, church and activist counter-classes, and politicised 'on or off' questions. Access, price and the use gap improve, which holds the score near a harder society with new losers rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. adoption_delta is exactly +3.7 (22.5 vs 18.8), generic collapse has an event and a Novo authorised generic, the gambling sNDA is a supplement to an existing molecule, the backlash events are present, and coverage, state action, safety signal, next-gen and market shock stay at status quo or none. mechanism: Most chains are shown, but the three claims above are asserted or overstated, and the persistence and restart-rate shifts are loosely attributed. The prose also contradicts itself: Dale's 'brand box' was 'filled generic', and a Mar 2032 label is credited with casino coin-in effects. magnitude: Every figure is inside the envelope, and population, payer mix (100%), Medicare ($5.1B), Medicaid ($11.3B), HRSA (~$4.45B vs $4.5B), age bands and income thirds all reconcile. The minor slips are 'halved' for a 37% fall and the 'US incretin market' described as a global figure.",
+        "generativity": "The prose has a concrete family with Renée's skip-week 'S' on the calendar, Dale's pen in the butter compartment and his eleven weeks away from the riverboat, plus the coworker on the Daniel Fast and Marcus on gym retatrutide. The world fields add specific hooks: the Tulsa 140-congregation network, the 'Full Plate' march and 'skip week' pharmacy scripts. Daily life has strong texture and many implied scenes."
+      },
+      "plausibility": 7.85
+    },
+    {
+      "custom_id": "s3-L1-r09-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "include ~3.8M who say in surveys that they stopped for 'natural', religious or body-acceptance reasons",
+          "field": "world/population/note",
+          "why": "Mechanism: the backlash is credited with 3.8M quitters, and with cutting restarts from 55% to 50%, within about 18 months of a June 2031 resolution and march. Cheap $49 generics should push restarts up, so the opposite effect is asserted rather than shown."
+        },
+        {
+          "quote": "Plus-size stabilises for the first time since 2025, helped by a fat-acceptance revival brand cluster in Oakland and Portland",
+          "field": "world/economy/apparel/state",
+          "why": "Mechanism: plus-size retail is said to stabilise while use rose to 22.5% and bottom-third use rose 4.5 pts, which are the forces that shrank it. Two small-city brand clusters cannot plausibly offset that, so the causal link is asserted."
+        },
+        {
+          "quote": "Wegovy's list price is still $1,349 for the brand, which is now mostly prescribed for gambling disorder under its exclusive label.",
+          "field": "world/access/note",
+          "why": "Mechanism and magnitude: gambling disorder affects roughly 1–2% of adults and the label is only about 3 months old. Brand semaglutide being 'mostly' prescribed for it conflicts with the same world's statements that plans steer patients to carved-out generics and that Novo's revenue halves."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics widen access, but the open tensions show growth concentrated in unmonitored, low-protein users facing sarcopenia and fracture risk (safety_ledger lean mass and bone entries). Pediatric bone data are still absent, reward blunting is normalised into skip-week self-titration, and culture splits into on/off/refusing camps with stance mismatches ending relationships. Inequality eases on use but persists on monitoring and finish. This is a harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: adoption is 22.5 (inside the envelope), generic collapse has a settlement-licensed event, the gambling indication comes as an sNDA, and the backlash has events and fields. Safety_signal none, next_gen none, state_action none and the personality layer are honoured, and the pipeline rules are respected. mechanism: most chains are shown, such as generics shrinking the gray market and Mensing preemption pushing litigation toward brands. Several are asserted, as in the claims above: backlash opt-outs lowering restarts, plus-size stabilising, and the brand being 'mostly' prescribed for gambling. The prose also has Dale holding a brand box that was filled generic. magnitude: every figure is inside the envelope (on 22.5, ever 32.0, income thirds bracket the national figure). The persistence/restart arithmetic, age-band weighting, payer mix (100%), Bridge $5.1B, Medicaid $11.3B and HRSA $4.45B for 4.0M users all multiply out. The only blemish is the muddled '$120B globally' US-revenue wording.",
+        "generativity": "The prose gives a full household: Renée on skip weeks, Dale's brand-box pen and sleep, Marcus with retatrutide from a Plano gym, and a coworker on the Daniel Fast eating boudin balls. The world fields add Tulsa potlucks, 'Full Plate' patches, stance filters on dating apps and the Oklahoma stump line. Daily life has real texture, though the opening news-style paragraphs explain more than they show."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L1-r09-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Wegovy's list price is still $1,349 for the brand, which is now mostly prescribed for gambling disorder under its exclusive label.",
+          "field": "world/access/note",
+          "why": "This fails mechanism. The same world says plans steer gambling patients to $49 carved-out generics, and gambling disorder is a far narrower population than obesity, cardiovascular or AUD use. A brand 'mostly' prescribed for it, at a $1,349 list price, is asserted rather than shown."
+        },
+        {
+          "quote": "Persistence rose from ~50% to 55% because generic semaglutide removed price-driven stops.",
+          "field": "world/population/note",
+          "why": "This fails mechanism. Generic semaglutide launched in Jan 2032, so it could affect only a fraction of the two-year window, yet it is credited with a five-point rise in persistence. The offsetting fall in restarts, from 55% to 50%, is likewise asserted, and the two shifts happen to net out to the target adoption figure."
+        },
+        {
+          "quote": "It's the brand box, because his plan made the paperwork say gambling disorder, though the pharmacist filled it generic.",
+          "field": "prose/a_day_in_the_life",
+          "why": "This fails mechanism as a narrative contradiction. A generic fill would come in a generic box, and the world's own premise is that the gambling indication is carved out of generic labels, so a gambling-coded prescription filled generically is incoherent."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 60M adults are on the drug, and the unmonitored cheap-generic cohort is growing fastest. Sarcopenia, fracture and pediatric bone gaps persist, and 6–11 use rises to 120k. Cohesion suffers from stance-based splits (church fasts, 'Full Plate', couples ending over stance) and from reward blunting becoming a mainstream complaint. Offsetting this, price-driven inequality narrows, the anhedonia signal is now measured and nameable, and the gray market halves, so overall harm is moderately worse than 2030 rather than far worse.",
+        "plausibility": "driver_fidelity: Adoption (22.5), generic collapse (Jan 2032 settlement-licensed entry), status quo coverage, the gambling indication, backlash and mainstream_complaint all appear in fields and events. The 2031 retatrutide anhedonia report sits slightly awkwardly against safety_signal none, and the prose says 'the ledger has not moved' after describing it. mechanism: Most chains are shown, such as generic price to bottom-third use, gray-market halving, Mensing preemption and skinny-label carve-out. The weak points are the 'mostly prescribed for gambling' brand claim, the persistence shift attributed to a generic that existed for under a year, and the Dale brand-box/generic contradiction. magnitude: Every figure sits inside the envelope (22.5, 32.0, income thirds bracketing the national figure, age bands weighting to 22.5). Payer shares sum to 100% and match 60.5M users. The Bridge ($152 blended, $5.1B), Medicaid ($11.3B) and HRSA ($4.45B against $4.5B) all multiply out, and MariTide and the other pipeline timing obey the approval rules.",
+        "generativity": "The prose gives a recognisable cast and scenes: Renée's 'W' and 'S' calendar, Dale's pen in the butter compartment and his quieter arguments, the friend with the Daniel Fast and boudin balls, Marcus's gym retatrutide, and the gumbo table. The world fields add Tulsa potlucks, the 'Full Plate' march, Oklahoma 'unmedicated' stump lines, and the casino coin-in note on the break-room fridge. The texture is dense, though a little tidy and tour-like."
+      },
+      "plausibility": 7.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Wegovy's list price is still $1,349 for the brand, which is now mostly prescribed for gambling disorder under its exclusive label.",
+        "field": "world/access/note",
+        "why": "Mechanism: the gambling label was approved in Mar 2032, and the same world says plans steer patients to carved-out generics and that the gambling label is only 'a small offset' for Novo. Saying the brand is 'mostly' prescribed for gambling within months contradicts that and is unshown."
+      },
+      {
+        "quote": "Persistence rose from ~50% to 55% because generic semaglutide removed price-driven stops.",
+        "field": "world/population/note",
+        "why": "Mechanism: generic semaglutide launched only in Jan 2032 and reached $39–69 by Q3 2032, yet the persistence gain is attributed to it across a two-year window. The restart-rate drop is likewise asserted as an effect of the backlash with no evidence."
+      },
+      {
+        "quote": "The gray market halved from 9.0M to 5.7M because $49 legal generic undercut $129–249 compounded vials.",
+        "field": "world/access/note",
+        "why": "Magnitude and mechanism: 9.0M to 5.7M is a ~37% fall, not a halving. About 2.5M of the remainder is gym retatrutide, which cheap semaglutide cannot displace, so the stated cause covers only part of the drop."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.17,
+      "inequality": 4.33,
+      "public_health": 5.67,
+      "cohesion": 5.67,
+      "epistemic": 4.5,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.33,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.85,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "About 60M adults are on drug, and the fastest-growing group is the unmonitored, low-protein cheap-generic cohort, so sarcopenia and fracture risk grows (safety_ledger, open_tensions). Pediatric bone data are still absent and reward blunting is now mainstream and tied to the gambling indication. Cohesion erodes through stance mismatches ending relationships, church and activist counter-classes, and politicised 'on or off' questions. Access, price and the use gap improve, which holds the score near a harder society with new losers rather than higher.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. adoption_delta is exactly +3.7 (22.5 vs 18.8), generic collapse has an event and a Novo authorised generic, the gambling sNDA is a supplement to an existing molecule, the backlash events are present, and coverage, state action, safety signal, next-gen and market shock stay at status quo or none. mechanism: Most chains are shown, but the three claims above are asserted or overstated, and the persistence and restart-rate shifts are loosely attributed. The prose also contradicts itself: Dale's 'brand box' was 'filled generic', and a Mar 2032 label is credited with casino coin-in effects. magnitude: Every figure is inside the envelope, and population, payer mix (100%), Medicare ($5.1B), Medicaid ($11.3B), HRSA (~$4.45B vs $4.5B), age bands and income thirds all reconcile. The minor slips are 'halved' for a 37% fall and the 'US incretin market' described as a global figure.",
+      "generativity": "The prose has a concrete family with Renée's skip-week 'S' on the calendar, Dale's pen in the butter compartment and his eleven weeks away from the riverboat, plus the coworker on the Daniel Fast and Marcus on gym retatrutide. The world fields add specific hooks: the Tulsa 140-congregation network, the 'Full Plate' march and 'skip week' pharmacy scripts. Daily life has strong texture and many implied scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.901,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 36
   }
 }

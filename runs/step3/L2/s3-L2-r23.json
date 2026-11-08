@@ -52,6 +52,41 @@
         "input_tokens": 18753,
         "output_tokens": 24603
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r23-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28256,
+        "output_tokens": 7572
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r23-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28256,
+        "output_tokens": 7784
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r23-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28256,
+        "output_tokens": 7692
+      }
     ]
   },
   "world": {
@@ -316,6 +351,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r23-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the same world puts 65+ users at 12.9M (19% × 68M), so Medicare would cover 99% of them. That leaves almost no room for 65+ commercial, VA, cash or imported users, so the payer mix does not reconcile with the age band."
+        },
+        {
+          "quote": "The 65+ band more than doubled (8.5→19%) because Medicare's permanent benefit replaced the Bridge in Jan 2032",
+          "field": "world/population/note",
+          "why": "mechanism: the Bridge already covered the same population with the same BMI/comorbidity criteria and $50 copay, and the rate fell only from $199 to $169. Only the ≈1.3M MCI starters have a shown chain, so obesity/MCI Medicare users rising from 1.8M to 7.5M is asserted."
+        },
+        {
+          "quote": "Imports are flat in absolute numbers but their share is falling, because the Medicaid Option and $179 cash undercut the effort of buying abroad.",
+          "field": "world/access/note",
+          "why": "mechanism: $179 cash is far above the $4–25 Indian price, and the 'contained' gray market sits beside an unchanged 3.0M imported/counterfeit users while total users grew about 50%. The offered cause cannot explain the flat count."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Federal law now writes two-miss conditioning into the Medicaid Option, and the pause code covers bone but not mood. The poorest users therefore bear the cost of anhedonia holidays (autonomy 6.5). Class sorting by regimen is explicit ('built thin' versus 'cycle thin'), and ≈8,400 excess hip fractures a year, an adolescent BMD lag and a frail MCI cohort add to it. Anhedonia is labelled, measured and discussable, which keeps epistemic harm low, so this is a harder society with clear losers but not a structural one hidden from view.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable in fields and events. Nicotine and MCI approvals, the Act, the Feb 2032 anhedonia label, the retatrutide label update for the 30% driver, no market shock and the Medicaid gating are all present. The only blemish is that the 2031-11 event text also describes a February 2032 action. mechanism: some chains are shown, such as the Act, the MCI trial and the label, but the Medicare 65+ doubling and the flat-imports explanation are asserted (claims 2 and 3), and the SURMOUNT-MIND trial is introduced without being set up in the parent world. magnitude: population figures, income thirds, age check, approval timing and generics are all inside the envelope, and the Medicare and Medicaid dollar arithmetic multiplies out. The deductions are the 12.8M Medicare 65+ users against 12.9M total 65+ users (claim 1) and a shaky first-course arithmetic in the note.",
+        "generativity": "The Rosa Delgado and Mr. Pruitt scenes give concrete texture: the PDC envelope math, the pen beside the hot sauce, the chair-stand count, the ZEPBOUND — MEMORY card and 'You seem flat today'. The world fields add the Scottsdale/Maryvale contrast, holiday-weekend dosing, 'holiday set' comedy nights and union bargaining for holiday allowances, so many scenes are implied. It is slightly tidy but very filmable."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s3-L2-r23-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicaid pays 18% ≈ 10.8M users at $169",
+          "field": "world/access/public_coverage",
+          "why": "magnitude/mechanism: Medicaid users triple from 3.5M to 10.8M in two years under an optional state benefit with gating. About a third of adult Medicaid enrollees would be on the drug, against 22% of adults overall. The arithmetic reconciles, but the uptake is very aggressive and only thinly explained."
+        },
+        {
+          "quote": "tirzepatide's Oct 2031 MCI indication brought in ≈1.3M older first-time users",
+          "field": "world/population/note",
+          "why": "mechanism: 65+ prevalence goes from 8.5% to 19% in 24 months, and the Medicare benefit only started in Jan 2032. 1.3M MCI-diagnosed first-time starters within about 14 months of a narrow label is asserted, not shown, given diagnosis bottlenecks and DEXA waits of 10–14 weeks."
+        },
+        {
+          "quote": "sNDA filed Oct 2030 on the SURMOUNT-MIND phase 3: 2,900 adults aged 60–82 with MCI and BMI ≥27, 30 months",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a 30-month trial that read out before an Oct 2030 filing must have started by about early 2028. The 2030 pipeline_note lists no such phase 3, so a convenient, unprecedented trial appears. Approval exactly 12 months after filing is also at the envelope's edge."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The harms are real but measured and labelled. There are about 8,400 excess hip fractures a year, 2–3M people with drug-attributable blunting, and a frail MCI cohort. Autonomy and inequality take the worst of it: conditioning is now federal law, and the Medicaid pause code covers bone but not mood, so the poorest users' dose holidays count as non-adherence (Maryvale vs Scottsdale, Rosa's 81% PDC). Epistemic is lower because anhedonia is labelled, quantified and discussable, and coverage widens.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These include adoption at 22.1%, the Act, the nicotine and MCI indications, the Feb 2032 anhedonia label, a 30% retatrutide label update instead of a new molecule, and Medicaid Option gating. The stratification is explicit, so I found no contradiction. mechanism: Most changes have a chain (Act → Option → Medicaid growth; MCI label → older starters; label → dose-holiday allowances). Claims 2 and 3 above are asserted or convenient, the SURMOUNT-MIND timeline is the weakest, and one event is dated 2031-11 but describes February 2032. magnitude: Every headline figure is inside the envelope: on-drug 22.1, ever 32, thirds bracket the national figure, and approval timings are legal. Payer shares sum to 100, and the Medicare ($15.2B/$10.7B), Medicaid ($21.9B/$16.9B), age-band and cycling arithmetic all reconcile. Minor flaws: MCI approval sits exactly at the 12-month limit, and the Medicaid tripling is aggressive (claim 1).",
+        "generativity": "The prose gives Rosa Delgado, with a phone alert, a pen beside the hot sauce, an envelope calculation of PDC and a quinceañera dose skip. Mr. Pruitt has a laminated card and a chair-stand routine. The Scottsdale and Maryvale contrast is concrete. The world fields add dose-holiday allowances, 'holiday set' comedy nights and union bargaining, which imply many more scenes."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L2-r23-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "sNDA filed Oct 2030 on the SURMOUNT-MIND phase 3: 2,900 adults aged 60–82 with MCI and BMI ≥27, 30 months",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the parent world mentions no tirzepatide dementia trial, yet a 30-month phase 3 readout is filed by Oct 2030, which implies enrolment around 2027. Approval comes exactly 12 months after filing, the earliest the envelope allows. The chain is asserted, not shown."
+        },
+        {
+          "quote": "\"gray_market\": \"contained\"",
+          "field": "world/access/gray_market",
+          "why": "Mechanism: the parent had 'significant', and the candidate shows no mechanism for the change. Imports are flat at about 3.0M, poison-centre calls are flat, and the price gap with India widened to $4–25. Only the share of users fell (8% to 5%), because legal coverage grew."
+        },
+        {
+          "quote": "Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: the 65+ band holds only ≈12.9M users, so Medicare would cover nearly all of them. That leaves almost no room for 65+ users in VA/TRICARE (1.2M), commercial plans, cash or imports. This is a small reconciliation gap."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Adherence gating is written into federal law for Medicaid (two misses means a year off, with a pause code for bone but not mood). Body shape now reads openly as income ('built thin' versus 'cycle thin'). About 8,400 excess hip fractures a year, DEXA waits of 10–14 weeks, and 2–3M people with drug-attributable blunting add real harm. Epistemic harm is lower than in 2030 because anhedonia is now measured and labelled, which keeps the overall score near 6 rather than 7.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events. The nicotine and dementia indications, the 30% triple-agonist label update (allowed via an existing product, as the pipeline note says), the anhedonia class label, the Act with Medicaid gating, class stratification and the 'the grey' complaint all appear, and nothing contradicts them. mechanism: most chains are shown (the Act leads to payer shift, the label leads to holiday allowances and the Medicaid mismatch). The weak points are claim 1 (a trial absent from the parent), claim 2 ('contained' gray market without a cause), an event dated 2031-11 that mentions 'in February', and Rosa's '81%' figure, which only works over six months, not 'this year'. magnitude: on-drug 22.1%, ever-used 32% and the income thirds (mean 22.1) all sit inside the envelope. Age bands, payer shares, Medicare and Medicaid spending, the federal match and the fracture arithmetic all multiply out. The only gap is claim 3, and the first-course versus restart split is loosely stated.",
+        "generativity": "The prose has concrete scenes: Rosa's CHECK-IN WINDOW phone alert, the pen next to the hot sauce, Mr. Pruitt's laminated card and chair-stand, and the quinceañera dose skip. The Scottsdale versus Maryvale contrast is vivid. The world fields add holiday Fridays, 'holiday set' comedy nights, union bargaining for holiday allowances and DEXA vans, all of which could carry further scenes."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65)",
+        "field": "world/access/public_coverage",
+        "why": "magnitude: the same world puts 65+ users at 12.9M (19% × 68M), so Medicare would cover 99% of them. That leaves almost no room for 65+ commercial, VA, cash or imported users, so the payer mix does not reconcile with the age band."
+      },
+      {
+        "quote": "The 65+ band more than doubled (8.5→19%) because Medicare's permanent benefit replaced the Bridge in Jan 2032",
+        "field": "world/population/note",
+        "why": "mechanism: the Bridge already covered the same population with the same BMI/comorbidity criteria and $50 copay, and the rate fell only from $199 to $169. Only the ≈1.3M MCI starters have a shown chain, so obesity/MCI Medicare users rising from 1.8M to 7.5M is asserted."
+      },
+      {
+        "quote": "Imports are flat in absolute numbers but their share is falling, because the Medicaid Option and $179 cash undercut the effort of buying abroad.",
+        "field": "world/access/note",
+        "why": "mechanism: $179 cash is far above the $4–25 Indian price, and the 'contained' gray market sits beside an unchanged 3.0M imported/counterfeit users while total users grew about 50%. The offered cause cannot explain the flat count."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 6.5,
+      "inequality": 7.0,
+      "public_health": 5.5,
+      "cohesion": 5.17,
+      "epistemic": 4.0,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.47,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Federal law now writes two-miss conditioning into the Medicaid Option, and the pause code covers bone but not mood. The poorest users therefore bear the cost of anhedonia holidays (autonomy 6.5). Class sorting by regimen is explicit ('built thin' versus 'cycle thin'), and ≈8,400 excess hip fractures a year, an adolescent BMD lag and a frail MCI cohort add to it. Anhedonia is labelled, measured and discussable, which keeps epistemic harm low, so this is a harder society with clear losers but not a structural one hidden from view.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable in fields and events. Nicotine and MCI approvals, the Act, the Feb 2032 anhedonia label, the retatrutide label update for the 30% driver, no market shock and the Medicaid gating are all present. The only blemish is that the 2031-11 event text also describes a February 2032 action. mechanism: some chains are shown, such as the Act, the MCI trial and the label, but the Medicare 65+ doubling and the flat-imports explanation are asserted (claims 2 and 3), and the SURMOUNT-MIND trial is introduced without being set up in the parent world. magnitude: population figures, income thirds, age check, approval timing and generics are all inside the envelope, and the Medicare and Medicaid dollar arithmetic multiplies out. The deductions are the 12.8M Medicare 65+ users against 12.9M total 65+ users (claim 1) and a shaky first-course arithmetic in the note.",
+      "generativity": "The Rosa Delgado and Mr. Pruitt scenes give concrete texture: the PDC envelope math, the pen beside the hot sauce, the chair-stand count, the ZEPBOUND — MEMORY card and 'You seem flat today'. The world fields add the Scottsdale/Maryvale contrast, holiday-weekend dosing, 'holiday set' comedy nights and union bargaining for holiday allowances, so many scenes are implied. It is slightly tidy but very filmable."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.734,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 6
   }
 }

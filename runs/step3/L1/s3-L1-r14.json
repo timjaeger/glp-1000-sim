@@ -51,6 +51,41 @@
         "input_tokens": 17524,
         "output_tokens": 17743
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r14-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25490,
+        "output_tokens": 5684
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r14-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25490,
+        "output_tokens": 6595
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r14-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25490,
+        "output_tokens": 6283
+      }
     ]
   },
   "world": {
@@ -321,6 +356,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r14-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "CDC's first NHANES 2029–31 release shows the income gap in obesity prevalence narrowed by a third",
+          "field": "world/events/5/event",
+          "why": "Mechanism and magnitude: a national survey with body-composition data released in May 2032, months after the 2029–31 fieldwork, is much faster than NHANES normally reports. A one-third narrowing of the income obesity gap is also asserted with no chain, when bottom-third users are mostly on low-efficacy or unverified product."
+        },
+        {
+          "quote": "The nurse calls at four for the week-eight check-in.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world's own Foundayo cessation label requires mood check-ins at weeks 4 and 12, not week 8. It is also day sixty-one, which is week nine, so the prose contradicts the world state."
+        },
+        {
+          "quote": "Market ≈$140B in 2032: US volume +25% offsets a ~20% net price decline.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: 1.25 × 0.8 = 1.0, so US revenue is flat. With ex-US generic erosion continuing, the market should not rise from about $135B to $140B. This also sits badly with pharmacy trend easing only to +10% and with Lilly's growth slowing."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension (7). Lean mass and bone now track income (NHANES event, safety ledger), a subsidised population gets no body-composition monitoring, and 16–17-year-olds are using gray Foundayo with unreported adolescent bone data. Flourishing and cohesion are worse than 2030 through reward blunting, 'flat' as a breakup reason, and dose-holiday-driven social planning. Epistemic harm is lower (4) because the label and SHAPS scores make the harm nameable and measured. The overall 5.5 is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +4.4 exactly, managed decline is the 2031 portal reset, the anhedonia label is Sep 2031, the Lilly scandal is Feb 2031, nicotine is realised as a Foundayo sNDA, and the subsidy is the $5.8B HRSA rider. Nothing contradicts a driver. mechanism: most changes have chains, such as price cuts driving persistence, cessation caps driving cycling, and the scandal leading to the label, the employer perk drop and the FTC orders. Weak points are the rushed NHANES release and unexplained obesity-gap narrowing (claim 1), persistence rising despite voluntary stops after the label, and the prose week-8 check-in contradicting the label's weeks 4 and 12 (claim 2). magnitude: on-drug 23.2, ever-used 32.9, the income thirds and the age bands all sit inside the envelope and reconcile. The payer mix, the Bridge, Medicaid and HRSA arithmetic, and the user counts also multiply out. The only gap is the market-size arithmetic (claim 3).",
+        "generativity": "The Marisol Treviño day-in-the-life shows rather than explains: the nurse's pleasure rating, the dead vape, the almond-eating finance woman with the circled body scan, her mother no longer making tamales, and 'skipping Friday'. The world has many implied scenes, including the half-tray cafeteria, dose-holiday weddings and Legacy West versus the night cleaners. A few passages stay at the level of policy summary."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L1-r14-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "CDC's first NHANES 2029–31 release shows the income gap in obesity prevalence narrowed by a third while the gap in lean-mass index between top and bottom income thirds widened",
+          "field": "world/events/5/event",
+          "why": "Mechanism and magnitude: a national survey with DXA-derived lean-mass data covering 2029–31 is released in May 2032, and it already shows a one-third narrowing of the income gap in obesity. Survey release lags and a two-year effect size make this fast and convenient, and no chain is shown."
+        },
+        {
+          "quote": "Persistence improved slightly from 50% to 55% because the price steps down.",
+          "field": "world/population/note",
+          "why": "Mechanism: the world also reports a September 2031 anhedonia label, 'voluntary stops after the anhedonia label', and about 40% of long-term users taking dose holidays. A roughly 25% price cut is asserted as the cause of better persistence while the countervailing forces are ignored."
+        },
+        {
+          "quote": "Market ≈$140B in 2032: US volume +25% offsets a ~20% net price decline.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: 1.25 × 0.8 leaves US revenue flat, and ex-US generic erosion continues (India and China, generic tirzepatide in India from 2031). The global market should fall from $135B, not rise to $140B."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder version of 2030 with new losers. Lean mass and bone now track income (NHANES event, lean-mass ledger entry), about 800k minors are on drug including 60–90k 16–17-year-olds on off-label or gray Foundayo for vaping, and a subsidised low-income population gets no body-composition monitoring. Coercive conditioning persists (Indiana, Arkansas and Oklahoma weigh-in kiosks), and reward blunting is a mainstream complaint managed with dose holidays. Epistemic harm is lower than in 2030 because anhedonia is now measured and labelled, so the overall score is about 5.5 rather than higher.",
+        "plausibility": "driver_fidelity: every driver is visibly realised in events and fields. Adoption lands at 23.2%, price_path shows a managed decline to $249/$299/$149, nicotine comes through an orforglipron sNDA, and anhedonia is labelled in Sep 2031. The scandal (Lilly whistleblower suit), subsidy (HRSA to $5.8B), class stratification, status-quo coverage, no next-gen launch and the mainstream-complaint personality layer are all present and consistent. mechanism: the chains for the price cuts, the scandal-to-label sequence and the Foundayo expansion are shown. Weak points are the fast NHANES release with lean-mass data, the persistence-because-of-price assertion, and the prose 'week-eight check-in' contradicting the label's week 4 and 12 check-ins. magnitude: all figures sit inside the envelope (23.2 on, 32.9 ever, bottom third 17.6 ≤ 23.2 ≤ top 29), no generic arrives and the Foundayo approval is a supplement to a marketed drug. The population arithmetic, payer mix (sums to 62.6M), Bridge, Medicaid and HRSA dollar figures all multiply out. The only gap is the market-size sentence, where flat US revenue plus ex-US erosion cannot produce $140B.",
+        "generativity": "The prose has a vivid day in the life of Marisol, covering the quitline nurse's mood rating, the finance woman with the almonds and body-scan printout, her mother who has stopped making tamales, and the 'skipping Friday' text. The world fields supply many scene seeds: half trays, 'holiday weekend' bookings, dating-profile dose bands, and the Plano–Frisco 'Legacy West look'. The class contrast is shown rather than explained, so there is a great deal of usable film."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s3-L1-r14-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Vape makers report the steepest US decline in their history after Foundayo's cessation label and quitline distribution.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: only ~0.6M free Foundayo users exist 14 months after approval, which is too few to drive a record industry decline or 8–12% cuts to state excise forecasts. No chain through the wider nicotine-user base is shown."
+        },
+        {
+          "quote": "Persistence improved slightly from 50% to 55% because the price steps down.",
+          "field": "world/population/note",
+          "why": "Mechanism: the price cuts only began in Jun 2031, and the same world says the Sep 2031 label prompted voluntary stops and dose reductions. The claimed rise in persistence is asserted against the world's own pressures toward stopping."
+        },
+        {
+          "quote": "Market ≈$140B in 2032: US volume +25% offsets a ~20% net price decline.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: 1.25 × 0.8 = 1.0, so US revenue is flat. The parent said ex-US generic erosion was already being offset, and it continues, so a rise from $135B to $140B does not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Stratification deepens: lean mass and bone track income (NHANES, events 2032-05), and a subsidised population is left without body-composition monitoring. Children aged 6–11 and adolescents on drug have no bone data, and free Foundayo goes to young vapers with logged mood check-ins. The anhedonia harm is now labelled, measured and discussable, which lowers epistemic badness compared with 2030. The world is harder but not catastrophic, and the main losers are the poor, the young and older women with bone risk.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: 23.2% adoption (+4.4), managed_decline pricing, nicotine realised as a Foundayo sNDA, the anhedonia label, the Lilly scandal, class stratification, the HRSA subsidy, and the mainstream-complaint framing. No driver is contradicted. mechanism: Most chains are shown, such as scandal to label to dose holidays to dropped employer perks, and price cuts to a lower gray share. But the vape-industry collapse, the persistence gain (claims 1 and 2), and the prose's 'week-eight check-in' against a label requiring weeks 4 and 12 are asserted or inconsistent. magnitude: Population figures, payer mix, Medicare/Medicaid/HRSA spending, income thirds and age bands all reconcile and sit inside the envelope. Approval timings are allowed and there is no US generic. The one gap is the market arithmetic (claim 3).",
+        "generativity": "Marisol Treviño's night shift gives a concrete scene: the quitline nurse's pleasure rating, the almond-eating finance woman with the circled scan percentage, her mother's liraglutide pickups and abandoned tamales, and the 'skipping Friday' text. World fields such as 'half trays', dose-holiday weddings and 'flat' as a breakup reason add further texture. The prose shows rather than explains, though the opening summary section is expository."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "CDC's first NHANES 2029–31 release shows the income gap in obesity prevalence narrowed by a third",
+        "field": "world/events/5/event",
+        "why": "Mechanism and magnitude: a national survey with body-composition data released in May 2032, months after the 2029–31 fieldwork, is much faster than NHANES normally reports. A one-third narrowing of the income obesity gap is also asserted with no chain, when bottom-third users are mostly on low-efficacy or unverified product."
+      },
+      {
+        "quote": "The nurse calls at four for the week-eight check-in.",
+        "field": "prose/a_day_in_the_life",
+        "why": "Mechanism: the world's own Foundayo cessation label requires mood check-ins at weeks 4 and 12, not week 8. It is also day sixty-one, which is week nine, so the prose contradicts the world state."
+      },
+      {
+        "quote": "Market ≈$140B in 2032: US volume +25% offsets a ~20% net price decline.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: 1.25 × 0.8 = 1.0, so US revenue is flat. With ex-US generic erosion continuing, the market should not rise from about $135B to $140B. This also sits badly with pharmacy trend easing only to +10% and with Lilly's growth slowing."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.0,
+      "inequality": 7.0,
+      "public_health": 5.67,
+      "cohesion": 5.0,
+      "epistemic": 3.83,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.8,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Inequality is the worst dimension (7). Lean mass and bone now track income (NHANES event, safety ledger), a subsidised population gets no body-composition monitoring, and 16–17-year-olds are using gray Foundayo with unreported adolescent bone data. Flourishing and cohesion are worse than 2030 through reward blunting, 'flat' as a breakup reason, and dose-holiday-driven social planning. Epistemic harm is lower (4) because the label and SHAPS scores make the harm nameable and measured. The overall 5.5 is a recognisably harder society with new losers, not a collapse.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +4.4 exactly, managed decline is the 2031 portal reset, the anhedonia label is Sep 2031, the Lilly scandal is Feb 2031, nicotine is realised as a Foundayo sNDA, and the subsidy is the $5.8B HRSA rider. Nothing contradicts a driver. mechanism: most changes have chains, such as price cuts driving persistence, cessation caps driving cycling, and the scandal leading to the label, the employer perk drop and the FTC orders. Weak points are the rushed NHANES release and unexplained obesity-gap narrowing (claim 1), persistence rising despite voluntary stops after the label, and the prose week-8 check-in contradicting the label's weeks 4 and 12 (claim 2). magnitude: on-drug 23.2, ever-used 32.9, the income thirds and the age bands all sit inside the envelope and reconcile. The payer mix, the Bridge, Medicaid and HRSA arithmetic, and the user counts also multiply out. The only gap is the market-size arithmetic (claim 3).",
+      "generativity": "The Marisol Treviño day-in-the-life shows rather than explains: the nurse's pleasure rating, the dead vape, the almond-eating finance woman with the circled body scan, her mother no longer making tamales, and 'skipping Friday'. The world has many implied scenes, including the half-tray cafeteria, dose-holiday weddings and Legacy West versus the night cleaners. A few passages stay at the level of policy summary."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.15,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 29
   }
 }

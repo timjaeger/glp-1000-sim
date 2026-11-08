@@ -51,6 +51,41 @@
         "input_tokens": 17678,
         "output_tokens": 20888
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r49-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25714,
+        "output_tokens": 5795
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r49-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25714,
+        "output_tokens": 6544
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r49-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25714,
+        "output_tokens": 9077
+      }
     ]
   },
   "world": {
@@ -305,6 +340,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r49-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+          "field": "prose/safety_paragraph",
+          "why": "Mechanism: liraglutide was approved for ages 6–11 in Jun 2029, so a child who started at six is about nine in 2032 and not in middle school. The JSON's 'now three years in' contradicts the prose."
+        },
+        {
+          "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration.",
+          "field": "world/access/note",
+          "why": "Mechanism: parity law governs how mental-health benefits are limited and does not mandate coverage of a specific drug. The world asserts a hard mandate and a fully formed PBM audit regime within months of approval, with no chain shown."
+        },
+        {
+          "quote": "Bottom-third use rose only 0.5 pt, because cheaper legitimate orals moved some gray-market users into TrumpRx rather than adding new ones.",
+          "field": "world/population/note",
+          "why": "Mechanism: this sits awkwardly with the same note's imported/counterfeit count rising from ~5.2M to ~5.4M, and with the claim that 'five million people still buy' gray-market product. The explanation is convenient and asserted, and the gray market apparently did not shrink."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is a harder version of 2030, not a new regime. Medicaid waivers lock poor enrollees out of coverage for 12 months after a missed 5% target (~420k under conditions). Employer coverage fell to 30%, and adherence verification extends to pills via app photo check-ins. Inequality and autonomy score highest. Epistemic is lower because the harms are named, studied, labelled and litigated, and the holidays guidance offers a partial escape for those who can afford it.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +0.7pp, oral amycretin gives oral parity, the compulsive-behaviour indication is Foundayo for gambling, employer coverage fell 36→30%, Medicaid waivers condition benefits, and 'flat' is a mainstream complaint. The EPI label is the existing signal, so safety_signal none is fine. mechanism: most chains are shown (pill → apps, holidays → guidance → vendor codes), but claim 1 (middle school at age six start) contradicts the 2029 approval timeline, claim 2 (parity law as a hard mandate) is asserted, and claim 3 does not match the rising gray-market count. magnitude: on-drug 18.3 and ever-used 28.4 are inside the envelope. The payer mix sums to 49.4M, the Medicare spend arithmetic multiplies out, the cycled share reconciles at ~45%, and approval timings (13 months each) obey the rules. The only gaps are minor, such as the 11-state count versus four newly covering waiver states.",
+        "generativity": "The Tamika Holloway scene is strong: the 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, DeShawn's foil-strip text, and the sportsbook ad followed by the pill ad. The world supplies many implied scenes, including Friday 'holiday' menus, off-weekend negotiations, telehealth notes for documented holidays, Ohio's gambling-fund pilot and the Southern District of Ohio suit. Daily life has texture."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s3-L3-r49-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+          "field": "prose/body",
+          "why": "Fails mechanism. Pediatric liraglutide for ages 6–11 was approved in June 2029, so a child who started at six would be about nine in 2032, not in middle school. The prose contradicts the world's own timeline."
+        },
+        {
+          "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder",
+          "field": "world/access/note",
+          "why": "Fails mechanism. Parity rules require comparable limits on mental-health benefits and do not mandate coverage of a specific drug. The note asserts that this forces plans to cover it, and the world also counts ~150k commercial gambling-code users within months of approval without showing how."
+        },
+        {
+          "quote": "scheduled drug holidays on short-half-life orals (Foundayo 'weekends off')",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "Fails mechanism. Orforglipron and oral semaglutide are not short-half-life drugs in any pharmacological sense, yet the world builds a Friday-dinner, weekend-weight-swing and 'Saturday face' culture on skipping them. The claimed pharmacology is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main new harm is Medicaid conditioning (≥80% adherence, 5% loss at month 6, 12-month lockout) for ~420k poor enrollees, layered on employer retreat and a gray market of ~5.4M that now includes counterfeit tablets. Body-as-income stratification persists and the Medicare fracture risk (HR ~1.3) is unchanged. Offsetting this, the guidance on dose step-down and planned holidays, and the open naming of flatness (~7% anhedonia), make the harms more discussable. That is a harder society with new losers (about a 5–6 level), not a hidden structural one.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events: +0.7pp, managed decline to $199–299, employer coverage 36→30%, gambling indication, oral parity via amycretin, Medicaid conditioning, mainstream complaint. The safety signal stays 'none', since EPI and fracture are existing signals. The holiday theme slightly dilutes class stratification. mechanism: Several links are asserted. The parity-forces-coverage chain, the gambling phase 3 that appears from nowhere, the short-half-life holiday pharmacology and the middle-school contradiction are the weak ones (all in my claims list). The 'cheaper orals moved gray-market users into TrumpRx' story also sits oddly with a gray market that grew from 5.2M to 5.4M. magnitude: 18.3% current and 28.4% ever-used are inside the envelope. The cycled arithmetic (12.75/28.4≈45%), the payer sum (49.4M), the age and income checks and the Part D spend ($29.3B and $5.3B) all reconcile, and the approval timings of 13 months follow the rules. The only slips are 'one adult in six' for 18.3% and the gray-market direction.",
+        "generativity": "The Tamika Holloway scene is concrete: a 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, the nurse practitioner's non-fix, and her brother's foil strip with Hindi on it. It implies a Georgia Pathways setting, a home-care job and a Medicaid lockout. The world adds texture through holiday dinners, Saturday-face comedy, Ohio's self-excluded bettors and the monthly-versus-daily clinic asymmetry, so many scenes are implied."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s3-L3-r49-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+          "field": "prose/body",
+          "why": "Mechanism: the under-12 approval was June 2029, so a child who started at six is about nine at the end of 2032 and in elementary school. The prose contradicts the world's own timeline."
+        },
+        {
+          "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration.",
+          "field": "world/access/note",
+          "why": "Mechanism: parity law requires comparable limits on mental-health benefits; it does not force coverage of a specific drug. The reopening of employer coverage is asserted as automatic, with no formulary or plan-design chain shown, and it supports ~150k commercial gambling users within months."
+        },
+        {
+          "quote": "scheduled drug holidays on short-half-life orals (Foundayo 'weekends off')",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "Mechanism: the world also names Wegovy pill (oral semaglutide, half-life of about a week) as an oral, and a skipped weekend of a roughly day-and-a-half half-life drug barely changes exposure. The Friday 'holiday dinner' and weekly weight-swing culture rests on pharmacology that is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society than 2030. Six states now condition Medicaid coverage on 80% adherence and a 5% loss at month 6, with a 12-month lockout (access/public_coverage, the state fields). Employer coverage fell to 30%, and the gambling label makes 'turning down wanting' the official treatment. Offsets are real: the FDA study quantified anhedonia, guidance endorses step-down, and 'steadiness' was dropped from large-firm HR language. So it reads as stratified and conditioned but not catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Adoption is +0.7 (18.3%), coverage fell 36→30%, the gambling indication was approved Mar 2032, oral amycretin gives oral parity, Medicaid waivers carry the conditioning, and no new safety signal appears (EPI is an existing signal getting a label). mechanism: most chains are shown, but three claims weaken it. The 'started at six… now in middle school' contradiction, the parity-forces-coverage assertion, and the weekend-holiday pharmacology are all flagged above. The 'cheaper orals moved gray-market users into TrumpRx' explanation also sits oddly with gray-market users rising from ~5.2M to ~5.4M. magnitude: population figures are inside the envelope (18.3 in 16.3–20.3; ever-used 28.4 under 29.2). The payer mix sums to 49.4M, age and income checks hold, and Medicare spend (10.4M×$235×12≈$29.3B) and the gambling split (220k) reconcile. Approval timings are 13 months after filing. Minor gaps remain: the 9→11 states against four new waivers is unclear, and the gambling phase 3 had no stated start.",
+        "generativity": "The Tamika Holloway scene is concrete and film-ready: the 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, the nurse practitioner's helplessness, and DeShawn's foil strip with Hindi on it. The world adds Friday 'holiday' menus, documented-holiday telehealth codes, the Ohio ADA suit, and Georgia Pathways enrollees. Daily life has texture and implied characters throughout."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+        "field": "prose/safety_paragraph",
+        "why": "Mechanism: liraglutide was approved for ages 6–11 in Jun 2029, so a child who started at six is about nine in 2032 and not in middle school. The JSON's 'now three years in' contradicts the prose."
+      },
+      {
+        "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration.",
+        "field": "world/access/note",
+        "why": "Mechanism: parity law governs how mental-health benefits are limited and does not mandate coverage of a specific drug. The world asserts a hard mandate and a fully formed PBM audit regime within months of approval, with no chain shown."
+      },
+      {
+        "quote": "Bottom-third use rose only 0.5 pt, because cheaper legitimate orals moved some gray-market users into TrumpRx rather than adding new ones.",
+        "field": "world/population/note",
+        "why": "Mechanism: this sits awkwardly with the same note's imported/counterfeit count rising from ~5.2M to ~5.4M, and with the claim that 'five million people still buy' gray-market product. The explanation is convenient and asserted, and the gray market apparently did not shrink."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.5,
+      "inequality": 6.5,
+      "public_health": 5.17,
+      "cohesion": 5.17,
+      "epistemic": 4.5,
+      "overall": 5.9
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.67,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is a harder version of 2030, not a new regime. Medicaid waivers lock poor enrollees out of coverage for 12 months after a missed 5% target (~420k under conditions). Employer coverage fell to 30%, and adherence verification extends to pills via app photo check-ins. Inequality and autonomy score highest. Epistemic is lower because the harms are named, studied, labelled and litigated, and the holidays guidance offers a partial escape for those who can afford it.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +0.7pp, oral amycretin gives oral parity, the compulsive-behaviour indication is Foundayo for gambling, employer coverage fell 36→30%, Medicaid waivers condition benefits, and 'flat' is a mainstream complaint. The EPI label is the existing signal, so safety_signal none is fine. mechanism: most chains are shown (pill → apps, holidays → guidance → vendor codes), but claim 1 (middle school at age six start) contradicts the 2029 approval timeline, claim 2 (parity law as a hard mandate) is asserted, and claim 3 does not match the rising gray-market count. magnitude: on-drug 18.3 and ever-used 28.4 are inside the envelope. The payer mix sums to 49.4M, the Medicare spend arithmetic multiplies out, the cycled share reconciles at ~45%, and approval timings (13 months each) obey the rules. The only gaps are minor, such as the 11-state count versus four newly covering waiver states.",
+      "generativity": "The Tamika Holloway scene is strong: the 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, DeShawn's foil-strip text, and the sportsbook ad followed by the pill ad. The world supplies many implied scenes, including Friday 'holiday' menus, off-weekend negotiations, telehealth notes for documented holidays, Ohio's gambling-fund pilot and the Southern District of Ohio suit. Daily life has texture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.484,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 15
   }
 }

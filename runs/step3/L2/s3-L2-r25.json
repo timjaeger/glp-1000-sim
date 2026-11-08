@@ -52,6 +52,41 @@
         "input_tokens": 18725,
         "output_tokens": 20801
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r25-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27794,
+        "output_tokens": 6093
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r25-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27794,
+        "output_tokens": 5264
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r25-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27794,
+        "output_tokens": 6161
+      }
     ]
   },
   "world": {
@@ -313,6 +348,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r25-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "within a year several large employers drop weight-management coverage entirely and keep only diabetes, cardiac and sleep-apnea codes",
+          "field": "world/events/0/event",
+          "why": "Mechanism: one district-court ADA ruling and a handful of large employers cannot plausibly account for employer coverage falling from 63% to 49% nationally in two years. The chain from ruling to a 14-point drop is asserted, not shown."
+        },
+        {
+          "quote": "Poison-centre calls have plateaued at the 2030 level while import volume grew ~20% (3.1M→3.7M users).",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism: calls doubled over 2028–30 and are now flat while imported-product users rise about 20%. No enforcement, authentication uptake or behavioural change is given to explain the plateau."
+        },
+        {
+          "quote": "A further ~0.9M carry alcohol use disorder as their primary prescribing diagnosis.",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: about 0.9M AUD prescribing within roughly a year of a guideline endorsement, with no FDA label, is a steep uptake for a medication class with historically very low AUD uptake. It is also unclear whether these users sit inside the 37.3M or the 2.9M non-obesity group."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The main harms are a hardened two-tier system, with middle-income obesity-only users losing employer coverage and cycling or stretching cash pens, and a thin-signals-poverty class flip. Unstudied weekend-off dosing adds to this. Offsetting these, conditioning pressure eases after the ADA ruling, there is no new mass-casualty cluster, DEXA waits have eased, and the AUD indication gives a real benefit. It is a harder society with new losers, but not a structurally concealed one, since the harm is openly named in the Pew data.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events: 13.7% adoption, stalled price, employer retreat at 49%, AUD and longevity, no new safety signal, no market shock, aesthetic inversion, state restriction, and mainstream-complaint reward blunting. Pipeline items are handled within the approval rules. mechanism: Most chains are shown (settlement and tariffs for the price, ADA ruling for gating costs, state laws for minors). Several are thin, namely the national coverage drop from one ruling, the poison-call plateau, and the state laws being credited for slowed ever-use before most took effect (claims 1 and 2). magnitude: Figures reconcile closely: payer mix sums to 100%, Medicare and Medicaid spend multiply out, age and income thirds check, cycling is (7.4+4.4)/25.6 ≈ 46%, and population and ever-use sit inside the envelope. The AUD user count is aggressive (claim 3), and an event dated 2031-04 mentions a March 2032 filing.",
+        "generativity": "The Dana Reyes vignette is concrete: the Kroger kiosk, the stretched $279 pen, the Devanagari box from the sister in Phoenix, the quinceañera dose skip, Mateo's lifting coach. The world fields add holiday-weekend bar spikes, 'grey albums', the AUD-code audits and the 'Appetite' campaigns. Many scenes are implied, though some prose explains rather than shows."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s3-L2-r25-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "within a year several large employers drop weight-management coverage entirely and keep only diabetes, cardiac and sleep-apnea codes",
+          "field": "world/events/0/event",
+          "why": "Mechanism: one district-court ADA ruling that only requires pause exceptions is offered as the cause of a 14-point national fall in employer coverage (63% to 49%). Employers could have dropped gating instead of dropping the benefit, and 'several large employers' cannot produce that drop."
+        },
+        {
+          "quote": "Bottom-third users on Medicaid or imports are now the visibly thin group.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Mechanism: it contradicts the world's own income data, where the top third has 18% uptake against 10.1% for the bottom third. It also ignores that the $199+ cash fills and longevity regimens are concentrated in the affluent."
+        },
+        {
+          "quote": "Novo files an sNDA in March 2032",
+          "field": "world/events/1/event",
+          "why": "Mechanism: the event is dated 2031-04 but narrates a filing eleven months later. This is a narrative contradiction inside the timeline, and the same event bundles the guideline endorsement with a later regulatory step."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder, more stratified society. Obesity-only patients lose employer coverage and pay $199–279 cash or buy imports. The ~46% of ever-users who have cycled are exposed to a bone risk that is worse with cycling, and drug holidays are unstudied. Offsets keep it near 5: no new safety signal, DEXA waits have eased, restrictions protect minors, and the AUD indication gives a real therapeutic use. Epistemic clarity is relatively good because the 'grey' is named and measured, though it remains largely self-reported.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: 13.7% against 14.6%, a frozen $199 price via the 2031 settlement and renewal, employer coverage at 49%, AUD and longevity use, no new safety signal, no launch, no shock, the aesthetic inversion, state restrictions and the Pew 'grey' data. mechanism: The price freeze and AUD pathways are traced well. The employer-exodus chain rests on a single district-court ruling (claim 1). The claim that the visibly thin are now the bottom third contradicts the income data (claim 2). The 2031-04 event narrates a 2032 filing (claim 3). Cultural flips such as agency bookings are stated more than shown. magnitude: Current use, ever-use (25.6), income thirds and age bands all fall inside the envelope and reconcile (37.3M). Payer mix sums to 100%. Medicare $4.5B and Medicaid $8.1B multiply out. The Pew counts and cycling arithmetic (46%) check. Approval timing is allowed and US generic entry stays at 2033. The only slips are minor: 400k concierge members against 1.6M longevity users, and the event dating.",
+        "generativity": "The prose carries a fully drawn protagonist: the Kroger kiosk, a $279 pen stretched to ten days, a sister with a $22 pen from India, and a skipped dose before a quinceañera. The world fields also give many scene hooks: drug-holiday weekends, AUD code audits, 'grey albums', and strength coaching that costs as much as the drug. Daily life is shown rather than explained, with only a few expository passages."
+      },
+      "plausibility": 7.85
+    },
+    {
+      "custom_id": "s3-L2-r25-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo settles US patent litigation with five generic semaglutide filers, setting entry for 2033",
+          "field": "world/events/2/event",
+          "why": "mechanism: the parent world puts exclusivity at ~2031–32, and a settlement with challengers normally sets entry at or before that date. A settlement that pushes entry later is unexplained, and the stall in price seems to depend on it."
+        },
+        {
+          "quote": "Bottom-third users on Medicaid or imports are now the visibly thin group.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "mechanism: the bottom third has the lowest use rate (10.1%), below the middle (13%) and top (18%). Calling that group the visibly thin one, and a reversal of class marking, is asserted against the candidate's own prevalence figures."
+        },
+        {
+          "quote": "Federal judge in the Northern District of Illinois rules in Okafor v. Midwest Logistics Benefit Plan that ending GLP-1 coverage after a DEXA-advised pause violates the ADA, requiring medical-pause exceptions",
+          "field": "world/events/0/event",
+          "why": "mechanism: a single district-court ruling on one plan is treated as forcing industry-wide pause exceptions and a 14-point fall in employer coverage within two years. Employers dropping the benefit entirely is an odd response to a rule that only requires exceptions, and the chain from ruling to coverage collapse is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder place for middle-income people with obesity but no qualifying code. Employer coverage falls from 63% to 49%, they face $199–279 a month cash or imports (3.7M users), and cycling rises to 46% with unstudied weekend-off dosing on top of the known bone harm. There are no new safety signals or mass-casualty clusters. The reward blunting is openly discussed (Pew 29% 'the grey'), which lowers the epistemic score, and the 2030 insulin-counterfeit deaths are not repeated. Overall it is a recognisably harder, more stratified society, not a catastrophic one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Use falls 14.6 to 13.7, price is frozen at $199, employer coverage drops to 49%, AUD and longevity appear as guideline endorsement plus an sNDA filing and as off-label practice, there is no new signal, launch or shock, the aesthetic inversion is in the culture fields, state restrictions in CA/NY/IL/WA, and the 'grey' is a mainstream complaint. mechanism: most chains are shown, but the patent settlement sets entry later than the stated exclusivity, one ADA ruling is made to drive an industry-wide retreat, and the bottom third as the 'visibly thin' group conflicts with its low prevalence; the AUD phase 3 trials and rapid endorsement are also asserted. magnitude: ever-use 25.6 sits inside 24–26.1 and current use 13.7 inside 11.7–15.7. Income thirds average 13.7, age bands sum to 37.3M, payer shares sum to 100% and match the counts, and the Bridge ($4.5B) and Medicaid ($8.1B) arithmetic holds. The ever-used and off-now changes also reconcile, and the approvals respect timing rules.",
+        "generativity": "The prose follows Dana Reyes through a specific day: the 6:10 weigh-in, the Kroger kiosk, the $279 pen stretched to ten days, the sister's Devanagari box from Phoenix, and the skipped dose before a quinceañera with the nausea on restart. It shows these details rather than explaining them. The world fields add many other implied characters, such as the concierge patient, the AUD-coded worker, the muscle-ideal model and the Atlanta collectives."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "within a year several large employers drop weight-management coverage entirely and keep only diabetes, cardiac and sleep-apnea codes",
+        "field": "world/events/0/event",
+        "why": "Mechanism: one district-court ADA ruling and a handful of large employers cannot plausibly account for employer coverage falling from 63% to 49% nationally in two years. The chain from ruling to a 14-point drop is asserted, not shown."
+      },
+      {
+        "quote": "Poison-centre calls have plateaued at the 2030 level while import volume grew ~20% (3.1M→3.7M users).",
+        "field": "world/safety_ledger/11/prevalence_note",
+        "why": "Mechanism: calls doubled over 2028–30 and are now flat while imported-product users rise about 20%. No enforcement, authentication uptake or behavioural change is given to explain the plateau."
+      },
+      {
+        "quote": "A further ~0.9M carry alcohol use disorder as their primary prescribing diagnosis.",
+        "field": "world/population/note",
+        "why": "Magnitude/mechanism: about 0.9M AUD prescribing within roughly a year of a guideline endorsement, with no FDA label, is a steep uptake for a medication class with historically very low AUD uptake. It is also unclear whether these users sit inside the 37.3M or the 2.9M non-obesity group."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.83,
+      "inequality": 6.33,
+      "public_health": 4.83,
+      "cohesion": 4.33,
+      "epistemic": 4.0,
+      "overall": 5.07
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.95,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The main harms are a hardened two-tier system, with middle-income obesity-only users losing employer coverage and cycling or stretching cash pens, and a thin-signals-poverty class flip. Unstudied weekend-off dosing adds to this. Offsetting these, conditioning pressure eases after the ADA ruling, there is no new mass-casualty cluster, DEXA waits have eased, and the AUD indication gives a real benefit. It is a harder society with new losers, but not a structurally concealed one, since the harm is openly named in the Pew data.",
+      "plausibility": "driver_fidelity: Every driver is traceable to fields and events: 13.7% adoption, stalled price, employer retreat at 49%, AUD and longevity, no new safety signal, no market shock, aesthetic inversion, state restriction, and mainstream-complaint reward blunting. Pipeline items are handled within the approval rules. mechanism: Most chains are shown (settlement and tariffs for the price, ADA ruling for gating costs, state laws for minors). Several are thin, namely the national coverage drop from one ruling, the poison-call plateau, and the state laws being credited for slowed ever-use before most took effect (claims 1 and 2). magnitude: Figures reconcile closely: payer mix sums to 100%, Medicare and Medicaid spend multiply out, age and income thirds check, cycling is (7.4+4.4)/25.6 ≈ 46%, and population and ever-use sit inside the envelope. The AUD user count is aggressive (claim 3), and an event dated 2031-04 mentions a March 2032 filing.",
+      "generativity": "The Dana Reyes vignette is concrete: the Kroger kiosk, the stretched $279 pen, the Devanagari box from the sister in Phoenix, the quinceañera dose skip, Mateo's lifting coach. The world fields add holiday-weekend bar spikes, 'grey albums', the AUD-code audits and the 'Appetite' campaigns. Many scenes are implied, though some prose explains rather than shows."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.831,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 38
   }
 }

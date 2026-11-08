@@ -52,6 +52,41 @@
         "input_tokens": 18761,
         "output_tokens": 28964
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r20-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29555,
+        "output_tokens": 10513
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r20-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29555,
+        "output_tokens": 9246
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r20-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29555,
+        "output_tokens": 10635
+      }
     ]
   },
   "world": {
@@ -322,6 +357,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r20-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer retreat added a wave of involuntary stops in Jan 2031 and Jan 2032 plan years.",
+          "field": "world/safety_ledger/weight_regain_on_discontinuation/prevalence_note",
+          "why": "mechanism: the chain names the Feb 2031 EEOC guidance as the trigger, so it cannot cause a January 2031 wave of stops. Employers that remain keep gating at ~75%, up from ~70%, which cuts against the claim that ADA exposure drove the retreat."
+        },
+        {
+          "quote": "The 18–29 band rose most (7.5→10.5) because the Mar 2032 vaping/smoking-cessation approval brings $0 preventive coverage, and normalisation reaches people who were never heavy.",
+          "field": "world/population/note",
+          "why": "mechanism: the largest age-band jump, about 1.6M extra young users, is credited to an approval only about nine months old at end-2032. Preventive-coverage rules and 12-week courses would not plausibly ramp that fast, and no earlier young-adult driver is shown."
+        },
+        {
+          "quote": "With an estimated ~3.5M continuous ≥5-year users nationally, ~0.4%/yr baseline stone incidence × 0.3 ≈ 4,000 excess stones a year",
+          "field": "world/safety_ledger/blunted_thirst_hypodipsia/prevalence_note",
+          "why": "magnitude: 3.5M users with five unbroken years looks too large against the stated ~33–50% one-year persistence and ~44% cycling. It sits close to the 3M 65+ users on more than two years, so the headline excess-stone count rests on a shaky base."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. The middle third is squeezed ('tiers have hardened', employer retreat), children are on the drugs with inconclusive bone data, anhedonia is on a free cessation course going to 18–29s, and a new kidney/heat signal falls on the most adherent users. Offsets are the free programme, less gating coercion, falling smoking and harms that are named, measured and labelled, which keeps epistemic and autonomy scores moderate. Inequality is highest because of the on-code-or-credit-card split.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +2.8 to 17.4%. Employer coverage fell 63→51%, the 6–11 and cessation approvals and the 50 mg pill (a line extension) are all in, as are the counterfeit pills, the Safe Incretin Access Act subsidy, the 'grey' as a labelled complaint, and the kidney/thirst signal. mechanism: most chains are shown (EEOC to retreat, the Act, the cessation trial to label to coverage), but the Jan 2031 stops predate the Feb 2031 EEOC trigger, the 18–29 jump is attributed to a nine-month-old approval, and the new thirst effect arrives with a convenient substudy and a fast FDA response. magnitude: current, ever-use, income thirds, age bands, payer mix, the Medicare, Medicaid and CIP spend and pediatric counts all sit inside the envelope and multiply out. The only gaps are the inherited near-total overlap of Medicare 65+ (6.8M) with the 65+ band (7.1M) and the doubtful 3.5M continuous five-year users.",
+        "generativity": "The prose ends with a lived day: Marisol's measured four ounces of water, Lupe's stone and the Sharpie lines on the jug, Ray's flat vaping course, the roofer's 'Everybody's on', and the pediatrician's call about Mateo. These are concrete and imply many further scenes, and the world fields add texture in dose-holiday sets, 'off-week' weekends, hydration marketing and the clinic-counter conversation about 'the grey'."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L2-r20-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer retreat added a wave of involuntary stops in Jan 2031 and Jan 2032 plan years.",
+          "field": "world/safety_ledger/weight_regain_on_discontinuation/prevalence_note",
+          "why": "This fails mechanism. The EEOC technical assistance that triggers the retreat is dated Feb 2031, and employers announce drops 'for 2032', so a Jan 2031 plan-year wave of employer-driven stops has no cause in the candidate's own timeline."
+        },
+        {
+          "quote": "The 18–29 band rose most (7.5→10.5) because the Mar 2032 vaping/smoking-cessation approval brings $0 preventive coverage",
+          "field": "world/population/note",
+          "why": "This fails mechanism. A 3-point rise over two years is attributed to an indication only about nine months old, covering 12-week, step-therapy-limited courses. The ≈1.75M cessation-coded commercial users at a point in time also looks too fast to account for most of the rise."
+        },
+        {
+          "quote": "With an estimated ~3.5M continuous ≥5-year users nationally",
+          "field": "world/safety_ledger/blunted_thirst_hypodipsia/prevalence_note",
+          "why": "This fails magnitude and mechanism. With the parent world's ~33–35% one-year persistence, only a small fraction of pre-2027 starters could still be continuous 5+ years later. The figure also sits oddly beside a 190k-person study cohort and a 'none detectable below 2 years' finding drawn from a ≥5-year cohort."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "There are real new losers: a middle third that lost employer coverage and pays $199 cash, ~660k children on the drug, a reward-blunting label warning, and a new kidney/heat harm in the longest-term users. Gated plans (~75% of covering employers), the Indiana/Arkansas waivers and ~5.1M imported-product users persist. Offsetting this, the Community Incretin Program is ungated, employer gating is shrinking, and harms are measured, labelled and discussed openly (epistemic is low), so this reads as a harder but legible society, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to fields and events: +2.8pp adoption, managed decline, employer retreat (63→51%), the 6–11 and cessation approvals, the thirst/kidney signal, the 50 mg pill as a line extension, counterfeit pills, the CIP subsidy, normalisation, and 'the grey' as mainstream complaint. Nothing contradicts a driver. mechanism: The employer-retreat chain is thin and has a timing contradiction (Jan 2031 stops versus the Feb 2031 EEOC trigger; see the first claim). The 18–29 jump rests on a nine-month-old cessation indication (second claim). The other chains (counterfeit cluster → Act → CIP, oral parity → pill share, thirst → kidney stones and heat AKI) are shown. magnitude: All headline figures are inside the envelope (17.4, 28.6) and reconcile, including age bands, payer mix, Medicare/Medicaid/CIP spending, cycling arithmetic, pediatric counts and the income thirds. Remaining gaps are minor: the ≥5-year-user count is generous (third claim), and 6.8M Medicare 65+ users against 7.1M total 65+ users leaves almost no room for cash or imported use in that band.",
+        "generativity": "The prose ends with a vivid day-in-the-life: Marisol, her mother Lupe with the jug and hour lines, Ray's vaping course and flattened guitar, Mateo and the pediatrician call. It carries the thirst, the plan loss, the 'grey' and the roofer's 'Everybody's on' without explaining them. The world JSON adds many implied scenes (holiday sets, 'smoker coding' fights, Southwest hydration protocols, birthday parties planned for kids on semaglutide)."
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s3-L2-r20-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "2032 spend is ≈1.2M average × $149 × 12 ≈ $2.15B against a $3.0B/yr appropriation",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism/magnitude: a 1.2M average that ends at 1.52M implies roughly 0.9M enrollees on 1 Jan 2032, about six weeks after the Nov 2031 Act. Standing up a national FQHC distribution programme that fast is unshown and implausible."
+        },
+        {
+          "quote": "The 18–29 band rose most (7.5→10.5) because the Mar 2032 vaping/smoking-cessation approval brings $0 preventive coverage",
+          "field": "world/population/note",
+          "why": "Mechanism: 30–49 and 50–64 each rose 3.5 points against 3.0 for 18–29, so 'rose most' holds only in relative terms. A roughly nine-month-old, 12-week-course indication is also an thin explanation for a 1.5M-person jump in one age band."
+        },
+        {
+          "quote": "EEOC issues technical assistance warning that employer GLP-1 coverage rules which end benefits after doctor-ordered DEXA pauses may violate the ADA; within months several Fortune 100 employers announce they will drop weight-management coverage for 2032",
+          "field": "world/events/0/event",
+          "why": "Mechanism: non-binding technical assistance is asserted to drive a 12-point fall in employer coverage. The obvious alternative, loosening the gates, is dismissed rather than shown to fail, so the chain is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access has split into 'a qualifying code' and 'a credit card', with a squeezed middle third (field `thinness_and_class`). About 38% of users say the drug dulls things, a new thirst-and-kidney harm falls on the longest-term users, and kids are on the drugs at scale with inconclusive bone data. The free programme, $0 cessation and a normalised culture soften autonomy and cohesion harms. The harms are named, measured and debated, so this is a harder but legible society, not a hidden one.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: adoption +2.8 to 17.4%, managed decline, employer retreat to 51%, pediatric 6–11 and nicotine approvals, the thirst signal, the oral-parity line extension, counterfeits, normalisation, the CIP subsidy and mainstream complaint. Nothing contradicts them. mechanism: most chains are shown, but the weaker ones are the EEOC-driven employer exit (claim 3), the CIP launching with about 0.9M enrollees six weeks after enactment (claim 1), the cessation-to-18–29 attribution (claim 2), and the 72-week head-to-head Wegovy 50 mg pill approved by Jun 2031. magnitude: 17.4% on-drug and 28.6% ever-use sit inside the envelope, and the age, income, payer-mix, pediatric and Medicare/Medicaid/CIP arithmetic all reconciles. Approvals fit the rules and no generic arrives before 2033. The residual flags are the aggressive CIP ramp and the tight pill timeline.",
+        "generativity": "The world implies many scenes: DEXA waits, January regain surges, 'holiday sets', hydration campaigns, kids' birthday parties and Southwest heat protocols. The prose vignette shows rather than explains, with Marisol, Lupe's hour-marked jug, Ray's flatness and the roofer's 'Everybody's on'. Texture is dense and the characters are specific, with a few expository passages."
+      },
+      "plausibility": 7.6
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Employer retreat added a wave of involuntary stops in Jan 2031 and Jan 2032 plan years.",
+        "field": "world/safety_ledger/weight_regain_on_discontinuation/prevalence_note",
+        "why": "mechanism: the chain names the Feb 2031 EEOC guidance as the trigger, so it cannot cause a January 2031 wave of stops. Employers that remain keep gating at ~75%, up from ~70%, which cuts against the claim that ADA exposure drove the retreat."
+      },
+      {
+        "quote": "The 18–29 band rose most (7.5→10.5) because the Mar 2032 vaping/smoking-cessation approval brings $0 preventive coverage, and normalisation reaches people who were never heavy.",
+        "field": "world/population/note",
+        "why": "mechanism: the largest age-band jump, about 1.6M extra young users, is credited to an approval only about nine months old at end-2032. Preventive-coverage rules and 12-week courses would not plausibly ramp that fast, and no earlier young-adult driver is shown."
+      },
+      {
+        "quote": "With an estimated ~3.5M continuous ≥5-year users nationally, ~0.4%/yr baseline stone incidence × 0.3 ≈ 4,000 excess stones a year",
+        "field": "world/safety_ledger/blunted_thirst_hypodipsia/prevalence_note",
+        "why": "magnitude: 3.5M users with five unbroken years looks too large against the stated ~33–50% one-year persistence and ~44% cycling. It sits close to the 3M 65+ users on more than two years, so the headline excess-stone count rests on a shaky base."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.33,
+      "inequality": 6.0,
+      "public_health": 5.33,
+      "cohesion": 4.0,
+      "epistemic": 3.83,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.7,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a recognisably harder society with new losers, not a collapse. The middle third is squeezed ('tiers have hardened', employer retreat), children are on the drugs with inconclusive bone data, anhedonia is on a free cessation course going to 18–29s, and a new kidney/heat signal falls on the most adherent users. Offsets are the free programme, less gating coercion, falling smoking and harms that are named, measured and labelled, which keeps epistemic and autonomy scores moderate. Inequality is highest because of the on-code-or-credit-card split.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +2.8 to 17.4%. Employer coverage fell 63→51%, the 6–11 and cessation approvals and the 50 mg pill (a line extension) are all in, as are the counterfeit pills, the Safe Incretin Access Act subsidy, the 'grey' as a labelled complaint, and the kidney/thirst signal. mechanism: most chains are shown (EEOC to retreat, the Act, the cessation trial to label to coverage), but the Jan 2031 stops predate the Feb 2031 EEOC trigger, the 18–29 jump is attributed to a nine-month-old approval, and the new thirst effect arrives with a convenient substudy and a fast FDA response. magnitude: current, ever-use, income thirds, age bands, payer mix, the Medicare, Medicaid and CIP spend and pediatric counts all sit inside the envelope and multiply out. The only gaps are the inherited near-total overlap of Medicare 65+ (6.8M) with the 65+ band (7.1M) and the doubtful 3.5M continuous five-year users.",
+      "generativity": "The prose ends with a lived day: Marisol's measured four ounces of water, Lupe's stone and the Sharpie lines on the jug, Ray's flat vaping course, the roofer's 'Everybody's on', and the pediatrician's call about Mateo. These are concrete and imply many further scenes, and the world fields add texture in dose-holiday sets, 'off-week' weekends, hydration marketing and the clinic-counter conversation about 'the grey'."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.665,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 43
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 17662,
         "output_tokens": 24211
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r35-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26462,
+        "output_tokens": 8563
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r35-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26462,
+        "output_tokens": 6267
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r35-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26462,
+        "output_tokens": 6384
+      }
     ]
   },
   "world": {
@@ -306,6 +341,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r35-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The sNDA was filed May 2031 and approved Jan 2032 under priority review.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: oral semaglutide for AUD was a phase 3 programme with no filing at the start, so approval cannot come sooner than 12 months after filing. Filing in May 2031 and approval in Jan 2032 is about 8 months, which breaks the envelope's approval-timing rule."
+        },
+        {
+          "quote": "FDA pooled 19 randomised trials that had used validated hedonic scales (SHAPS).",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: the 2030 ledger said there were no randomised data on anhedonia, and the FDA study under way was observational. Nineteen trials with validated hedonic scales appearing within a year, shrinking an observational 7–8% to ~1% and flipping the status to 'established', is a convenient reversal with no shown chain."
+        },
+        {
+          "quote": "Metabolic tracks shrank to ~3.6M enrollees (inside the 13.5M commercial users) because generics made verification less worth paying for.",
+          "field": "world/access/note",
+          "why": "Mechanism: clinic-administered monthly dosing made verification trivial and the 2027 differential guidance still stands. Employer coverage also rose from 36% to 43%, so the stated cause for a one-fifth fall in track enrollment is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This world is better than 2030 on several dimensions: $39 generics, a Medicare and Medicaid obesity benefit, a narrowing income gap, and anhedonia downgraded to an uncommon label. The harms that remain are real: gray-market contamination (64 infections, 3 deaths), rising fracture counts among ~5M new older users, EPI, and 26 non-adopting states. Cohesion worsens through the Unmedicated identity politics and state under-12 limits. Employer adherence verification persists in smaller form. Overall it is a harder but not worse society than 2030, near the '3–5' anchor.",
+        "plausibility": "driver_fidelity: every driver is traceable to an event or field. These are the patent-expiry generic collapse, the July 2031 public expansion, oral semaglutide for AUD, bimagrumab, the 'none' safety signal (EPI unchanged), the contamination shock, the natural movement, and state restrictions. The anhedonia niche label and the state-level restriction are thinner. mechanism: most chains are shown, such as patent expiry to $39 to Medicaid uptake to bottom-third rise, and generics to lower pharmacy trend. The weak points are the sudden RCT evidence that reverses anhedonia, the unexplained shrinkage of metabolic tracks (claims 2 and 3), and the top income third barely moving (23 to 24). magnitude: population figures sit inside the envelope, and the payer mix, Part D, Medicaid and CBO arithmetic all reconcile (e.g. 3.5M×$40×12≈$1.7B, total ≈$23.7B). The oral semaglutide AUD approval about 8 months after filing breaks the 12-month rule for a phase 3 product (claim 1), which is the main deduction.",
+        "generativity": "The Denise and Ray scene is dense with specifics: the Kroger pharmacy poster, $8.40 for four pens, the 30-minute oral wait, Monday supper with a hollow-circle pin, and the DXA card reading 'osteopenic, monitor'. The world fields also supply implied characters and places: Tulsa supper clubs, Charlotte infusion selfies, Toledo retirees, Columbus plant clinics. The prose shows more than it explains, and the ending is quiet and ambiguous."
+      },
+      "plausibility": 6.05
+    },
+    {
+      "custom_id": "s3-L3-r35-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The sNDA was filed May 2031 and approved Jan 2032 under priority review.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: oral semaglutide AUD was in phase 3 at the start, so the envelope allows approval no earlier than 12 months after filing. Eight months breaks that rule, and priority review can only be realised as a priority review, not an early approval."
+        },
+        {
+          "quote": "That outbreak gave a movement its legislation.",
+          "field": "prose/the_30_dollar_shot",
+          "why": "Mechanism: a contaminated-vial infection cluster is said to cause under-12 prescribing limits and social-media ad bans, which are a different problem. The world also says some of these laws were enacted from late 2031, before the May 2032 outbreak."
+        },
+        {
+          "quote": "Once the drug cost $39, declining it stopped being a sign of poverty and became an identity.",
+          "field": "world/body_and_culture/meaning_of_appetite",
+          "why": "Mechanism: it asserts that a mass identity movement formed within about 18 months, with Bread Alone growing from ~500 to ~900 congregations and the movement winning seven state laws. The causal chain from cheap generics to mass refusal is declared, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 3.5,
+        "inequality": 4,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadened and the income gap narrowed for the first time (bottom third 12→18, Medicaid in 24 states, $39 generics), and adherence-linked job pressure eased (steadiness language retired, metabolic tracks shrinking, one EEOC charge settled). Remaining harms are real but mostly continuations: a constant fracture HR of ~1.3 across ~5M added older users, 6M on the gray market with a contaminated-vial outbreak, the exocrine signal, a politicised split over refusal, and 26 states outside the Medicaid benefit. This is a harder society than a benign one but easier than 2030 on several measures, so it sits near a 4.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Generic collapse comes through the Dec 2031 patent expiry and ANDA events, public expansion through the Part D and Medicaid law, AUD through the Jan 2032 label, bimagrumab as the muscle-preserving combo, state restrictions, the natural movement, and anhedonia as a niche side effect. There is no new safety signal beyond the EPI labelling. The only blemish is the AUD approval timing, which I score under magnitude. mechanism: the generics → $39 price → Medicare/Medicaid expansion → lower trend → employer generic tiers chain is shown well. The outbreak → state restriction link and the cultural-identity jump (claims 2 and 3) are asserted, and some laws pre-date the trigger. magnitude: population figures sit inside the envelope (21.1 current, 30.5 ever), and the cycling, age, payer-mix, Part D, Medicaid and CBO arithmetic all reconcile. The AUD approval 8 months after filing breaks the 12-month rule for phase 3 products (claim 1).",
+        "generativity": "The prose gives Denise, Ray, the pharmacist Tran, Kayla's Monday full table, the pin and the pie, and the car ending are concrete scenes. The world fields add many implied characters: Toledo/Dayton retirees, Charlotte infusion-selfie professionals, Columbus clinic staff, and Tulsa supper clubs. Daily life has strong texture, though a few sections slide into explaining."
+      },
+      "plausibility": 5.9
+    },
+    {
+      "custom_id": "s3-L3-r35-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The sNDA was filed May 2031 and approved Jan 2032 under priority review.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: oral semaglutide AUD was in phase 3 with no filing stated at the start, so the envelope requires approval at least 12 months after the in-window filing. Eight months breaks that rule, and priority review only permits the filing or review, not an early approval."
+        },
+        {
+          "quote": "That outbreak gave a movement its legislation.",
+          "field": "prose/body",
+          "why": "Mechanism: the outbreak is dated May 2032, but state_posture says the under-12 and ad-ban laws were enacted 'from late 2031 to mid-2032'. At least some of the laws predate the outbreak, so the stated cause is partly contradicted by the world state."
+        },
+        {
+          "quote": "FDA pooled 19 randomised trials that had used validated hedonic scales (SHAPS).",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: the parent world says 'No randomised data' on anhedonia and a postmarketing study was under way. The candidate conveniently produces 19 trials with validated scales that shrink a 7–8% vs 3% observational signal to about 0.7 points, so a big reversal is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 3.5,
+        "autonomy": 3.0,
+        "inequality": 4.0,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "This is a milder world than 2030. Prices collapse, Medicare and Medicaid expand, the income gap narrows (12→18 for the bottom third) and adherence tracks shrink. The costs are 6M gray-market users with contaminated-vial deaths, rising absolute fracture counts among ~5M new older users, unresolved EPI and fracture questions, 26 states without the Medicaid option, restricted pediatric care and a polarised identity politics. These make it a harder society for some but not a structurally hidden harm.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is 17.6→21.1, the generic collapse has a patent-expiry event, public expansion is the Part D and Medicaid benefit, AUD is approved, and bimagrumab, counterfeits, state restriction, the natural movement and niche anhedonia are all present. Safety_signal 'none' is respected, with EPI explicitly unchanged. mechanism: most chains are shown (patent expiry → $39 → Medicaid and bottom-third uptake; label → HR language dropped → EEOC settlement). Two are weak: the 'outbreak gave a movement its legislation' timing contradiction and the convenient RCT reversal of the anhedonia figures (claims 2 and 3). magnitude: population figures are inside the envelope and the age, cycling, payer-mix, Part D, Medicaid and CBO arithmetic all reconcile. The AUD approval 8 months after an in-window filing breaks the 12-month rule for phase-3 products (claim 1).",
+        "generativity": "The prose gives Denise, Ray, the pharmacist Tran, Kayla and Liam, with concrete details: the $8.40 pens, the laminated DO NOT BUY ONLINE poster, the 30-minute pill wait, the full-table Monday supper and the half roll left for the birds. The world fields add named places (Toledo, Tulsa, Perrysburg), institutions and artifacts such as the hollow-circle pin and the Unmedicated app badge. It shows daily life rather than explaining it, with only a few expository passages."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The sNDA was filed May 2031 and approved Jan 2032 under priority review.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: oral semaglutide for AUD was a phase 3 programme with no filing at the start, so approval cannot come sooner than 12 months after filing. Filing in May 2031 and approval in Jan 2032 is about 8 months, which breaks the envelope's approval-timing rule."
+      },
+      {
+        "quote": "FDA pooled 19 randomised trials that had used validated hedonic scales (SHAPS).",
+        "field": "world/safety_ledger/6/prevalence_note",
+        "why": "Mechanism: the 2030 ledger said there were no randomised data on anhedonia, and the FDA study under way was observational. Nineteen trials with validated hedonic scales appearing within a year, shrinking an observational 7–8% to ~1% and flipping the status to 'established', is a convenient reversal with no shown chain."
+      },
+      {
+        "quote": "Metabolic tracks shrank to ~3.6M enrollees (inside the 13.5M commercial users) because generics made verification less worth paying for.",
+        "field": "world/access/note",
+        "why": "Mechanism: clinic-administered monthly dosing made verification trivial and the 2027 differential guidance still stands. Employer coverage also rose from 36% to 43%, so the stated cause for a one-fifth fall in track enrollment is asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 3.83,
+      "autonomy": 3.5,
+      "inequality": 4.0,
+      "public_health": 4.5,
+      "cohesion": 4.83,
+      "epistemic": 3.83,
+      "overall": 4.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.33,
+      "magnitude": 5.17
+    },
+    "plausibility": 6.12,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This world is better than 2030 on several dimensions: $39 generics, a Medicare and Medicaid obesity benefit, a narrowing income gap, and anhedonia downgraded to an uncommon label. The harms that remain are real: gray-market contamination (64 infections, 3 deaths), rising fracture counts among ~5M new older users, EPI, and 26 non-adopting states. Cohesion worsens through the Unmedicated identity politics and state under-12 limits. Employer adherence verification persists in smaller form. Overall it is a harder but not worse society than 2030, near the '3–5' anchor.",
+      "plausibility": "driver_fidelity: every driver is traceable to an event or field. These are the patent-expiry generic collapse, the July 2031 public expansion, oral semaglutide for AUD, bimagrumab, the 'none' safety signal (EPI unchanged), the contamination shock, the natural movement, and state restrictions. The anhedonia niche label and the state-level restriction are thinner. mechanism: most chains are shown, such as patent expiry to $39 to Medicaid uptake to bottom-third rise, and generics to lower pharmacy trend. The weak points are the sudden RCT evidence that reverses anhedonia, the unexplained shrinkage of metabolic tracks (claims 2 and 3), and the top income third barely moving (23 to 24). magnitude: population figures sit inside the envelope, and the payer mix, Part D, Medicaid and CBO arithmetic all reconcile (e.g. 3.5M×$40×12≈$1.7B, total ≈$23.7B). The oral semaglutide AUD approval about 8 months after filing breaks the 12-month rule for a phase 3 product (claim 1), which is the main deduction.",
+      "generativity": "The Denise and Ray scene is dense with specifics: the Kroger pharmacy poster, $8.40 for four pens, the 30-minute oral wait, Monday supper with a hollow-circle pin, and the DXA card reading 'osteopenic, monitor'. The world fields also supply implied characters and places: Tulsa supper clubs, Charlotte infusion selfies, Toledo retirees, Columbus plant clinics. The prose shows more than it explains, and the ending is quiet and ambiguous."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.282,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 50
   }
 }

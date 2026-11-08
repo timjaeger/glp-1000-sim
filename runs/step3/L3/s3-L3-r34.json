@@ -49,6 +49,41 @@
         "input_tokens": 17637,
         "output_tokens": 21348
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r34-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26162,
+        "output_tokens": 7423
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r34-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26162,
+        "output_tokens": 7897
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r34-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26162,
+        "output_tokens": 6925
+      }
     ]
   },
   "world": {
@@ -302,6 +337,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r34-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "~17.4M users are 65+ (0.28 × ~62M); ~15.9M of them are on Medicare, joined by ~2.8M disabled under-65 beneficiaries, for ~18.7M.",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: the 65+ user rate doubles (14.5% to 28%) and Medicare users nearly double within the first year of the benefit. About 1.5M users aged 65+ are also left off Medicare, despite near-universal enrolment and a $0 copay."
+        },
+        {
+          "quote": "MariTide has ~6M users.",
+          "field": "world/access/note",
+          "why": "Magnitude: this is about 9% of all users within 20 months of an April 2030 launch, for a drug with ~17% weight loss and the worst early vomiting. Orals (~24M), generic semaglutide (~25M) and MariTide leave only ~11.7M for tirzepatide, retatrutide, amycretin and brand semaglutide, which is tight against the 2030 mix."
+        },
+        {
+          "quote": "It became a status marker in New York, LA and Austin within weeks and drew ridicule elsewhere.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Mechanism: a self-declared dating-app tag is said to become a class marker within weeks, and DXA printouts are said to be out of fashion within a year. The cultural inversion is asserted at a speed no shown mechanism supports."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 3,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: the income gap narrows (27 vs 22), gray-market use falls, and harms are named and measured, including the EPI label and the EEOC finding. Remaining costs are the Medicare 6-month continuation weigh-ins that make weight a coverage condition for ~6.5M people, and clinic-recorded employer adherence. Others are growing adolescent exposure via Medicaid, rising absolute fracture counts among older users, and a class-performed 'unmedicated' status game. That is a different and arguably milder world than 2030, not a harsher one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is 24.7%, generic collapse comes via patent expiry and an authorised generic in the events, public expansion and subsidy via the Dec 2031 package, monthly dosing via the MariTide autoinjector, and the EEOC finding fits the mainstream complaint. Safety 'none' and no new indications are respected, since the EPI language is a response to an existing signal. mechanism: most changes have a chain (patent expiry, rescoring, $0 copay, cheaper gray-market alternatives, Medicaid match), but the speed of Medicare uptake, MariTide's 6M users and the Bumble status flip are asserted rather than shown, as in my claims above. magnitude: all headline figures are inside the envelope, and the age-band check, payer mix (sums to 100%), Medicare/Medicaid/HRSA spending and cycled arithmetic all reconcile. The weak spots are the product-mix squeeze, 1.5M 65+ users unexplained off Medicare, and 'contained' gray market at 4M users.",
+        "generativity": "The day-in-the-life gives Darlene a kiosk weigh-in, a CONTINUATION ELIGIBLE printout, a $0.00 Teva box, an unattended bone scan, a Medicaid-covered teen and a daughter-in-law bragging about hunger. The world fields add 'ghosting', holiday memoirs, ticketed off nights, continuation-check comedy and long months. Many scenes are implied, and daily life has real texture."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s3-L3-r34-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer coverage recovered to 41% on generic-first designs, and pharmacy trend fell to ~+3% in 2032.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: pharmacy trend halves from ~+7% while users grow ~40% and tirzepatide, retatrutide, amycretin and MariTide stay branded at $199–1,299. No arithmetic is shown for how generic semaglutide alone offsets that."
+        },
+        {
+          "quote": "MariTide has ~6M users.",
+          "field": "world/access/note",
+          "why": "Magnitude and mechanism: a drug launched Apr 2030 with worse early vomiting and ~17% efficacy reaches ~6M users in about 2.5 years, with ~4M clinic-administered inside employer tracks. This is aggressive uptake with a thin chain."
+        },
+        {
+          "quote": "\"65_plus\": 28",
+          "field": "world/population/by_age_band_pct",
+          "why": "Magnitude: 65+ use doubles from 14.5% in two years, though the Part D benefit only began in Jan 2032 and carries a 6-month continuation test. The payer arithmetic reconciles, but the jump is steep for a benefit about a year old."
+        }
+      ],
+      "badness": {
+        "flourishing": 3.5,
+        "autonomy": 5,
+        "inequality": 3.5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadens and prices collapse: the income gap closes from 23 vs 12 to 27 vs 22, and the gray market shrinks. The harms that remain are real. Medicare's 6-month weight-based continuation test, employer clinic-recorded adherence under the unchanged 2027 premium guidance, and a doubled pool of older users carrying the ~1.3 fracture HR. Children's exposure through Medicaid grows ~40%, and the long-term EPI signal is labelled but not understood. The status inversion adds stigma for subsidised bodies, but harms are measured and discussable, so this is a somewhat harder society with new losers rather than a clearly worse one.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Generic collapse has a patent-expiry and ANDA event, public expansion and subsidy come through the Dec 2031 package, and monthly dosing comes through the MariTide autoinjector. Safety signal 'none' and no new indications are honoured by the CRL, and the personality layer through the EEOC finding and the KFF holiday poll. mechanism: Most chains are shown (rescored benefit, 90% match, HRSA grant, price drop, cultural inversion). Pharmacy trend falling to +3% (claim 1), the persistence rise to ~40%, and the rapid MariTide uptake (claim 2) are asserted rather than shown. magnitude: All headline figures sit inside the envelope (24.7, 33.0, and thirds that average to 24.7). Payer shares sum to 100%, Medicare/Medicaid/HRSA spending multiplies out, and the age-band and cycling arithmetic closes. The 65+ doubling (claim 3) and ~6M MariTide users are the only strained points.",
+        "generativity": "The world is rich with concrete scenes and texture: the Bumble 'unmedicated' tag, 'ghosting', grip-strength replacing DXA at Charlotte dinners, ticketed 'off nights', continuation weigh-in kiosks and weigh-in comedy. The prose day-in-the-life shows rather than explains, with a kiosk printout, a foil-wrapped sandwich, a daughter-in-law bragging about hunger and a teenager asking what it was like to 'just want things'. Characters and cross-generational tension are clearly implied."
+      },
+      "plausibility": 8.3
+    },
+    {
+      "custom_id": "s3-L3-r34-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Orals fell to ~36% of users.",
+          "field": "world/access/note",
+          "why": "Fails magnitude and mechanism. 36% of ~66.7M is about 24M oral users, up from about 21M (45% of 47M) in 2030. Orals cost $129-229 a month against $39-69 generic injectable semaglutide, and generic oral semaglutide is blocked by patents, so an absolute rise is not explained."
+        },
+        {
+          "quote": "One-year persistence rose from about a third to about 40%, driven by $0 generic copays and monthly dosing.",
+          "field": "world/population/note",
+          "why": "Fails mechanism. Monthly dosing reaches only about 6M users. Medicare continuation criteria cause coverage-loss regain, and 31% of users report planned holidays or dose cuts. Rising persistence with cycled_off_and_on_pct unchanged at exactly 44% is asserted, not derived."
+        },
+        {
+          "quote": "The company settled, and the word steadiness disappeared from a great many HR documents.",
+          "field": "prose/paragraph_4",
+          "why": "Fails mechanism. A single settled EEOC reasonable-cause finding against one firm is stretched into a broad, rapid change in national employers' written language, and the world adds only that employers kept verification. Two charges had been unresolved for two years, and no chain explains why one settlement changes behaviour broadly."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 3.5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens sharply: the income gap narrows (27 vs 22), the gray market shrinks, and Medicare and Medicaid reach millions. Costs remain: the Medicare 6-month weight criterion conditions coverage on weight, employer verification and premium differentials persist, and Medicare fracture exposure about doubles at HR ~1.3. Adolescent exposure grows through Medicaid, and EPI is labelled but not understood. The harms are named and discussed, so epistemic harm is low, and the world is milder than 2030, not harsher.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Generic collapse is tied to the Dec 2031 patent expiry and Jan 2032 launches, public expansion and subsidy to the Dec 2031 package, monthly dosing to the MariTide autoinjector and clinic administration, aesthetic inversion to the Bumble tag and the 'ghosting' scene, and mainstream_complaint to the KFF poll and the EEOC finding. Safety_signal none and no new indications are respected, since the dementia extension gets a complete response letter. mechanism: The generic-to-rescoring-to-Medicare chain is well shown, but the 36% orals share, the persistence rise, and the one EEOC finding producing broad employer change (my claims 1-3) are asserted. magnitude: Adoption (24.7), ever-used (33), the income bracketing, the age-band check and the payer mix summing to 100% all fit the envelope, and Medicare, Medicaid and HRSA spending multiply out. Remaining gaps are the oral absolute count, cycled share frozen at 44% despite mass holidays, and 65+ use doubling to 28% in one year of benefit.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "~17.4M users are 65+ (0.28 × ~62M); ~15.9M of them are on Medicare, joined by ~2.8M disabled under-65 beneficiaries, for ~18.7M.",
+        "field": "world/population/note",
+        "why": "Magnitude/mechanism: the 65+ user rate doubles (14.5% to 28%) and Medicare users nearly double within the first year of the benefit. About 1.5M users aged 65+ are also left off Medicare, despite near-universal enrolment and a $0 copay."
+      },
+      {
+        "quote": "MariTide has ~6M users.",
+        "field": "world/access/note",
+        "why": "Magnitude: this is about 9% of all users within 20 months of an April 2030 launch, for a drug with ~17% weight loss and the worst early vomiting. Orals (~24M), generic semaglutide (~25M) and MariTide leave only ~11.7M for tirzepatide, retatrutide, amycretin and brand semaglutide, which is tight against the 2030 mix."
+      },
+      {
+        "quote": "It became a status marker in New York, LA and Austin within weeks and drew ridicule elsewhere.",
+        "field": "world/body_and_culture/dating_and_intimacy",
+        "why": "Mechanism: a self-declared dating-app tag is said to become a class marker within weeks, and DXA printouts are said to be out of fashion within a year. The cultural inversion is asserted at a speed no shown mechanism supports."
+      }
+    ],
+    "badness": {
+      "flourishing": 3.83,
+      "autonomy": 5.0,
+      "inequality": 3.33,
+      "public_health": 4.67,
+      "cohesion": 4.0,
+      "epistemic": 3.33,
+      "overall": 4.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 7.17,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.7,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Access broadens: the income gap narrows (27 vs 22), gray-market use falls, and harms are named and measured, including the EPI label and the EEOC finding. Remaining costs are the Medicare 6-month continuation weigh-ins that make weight a coverage condition for ~6.5M people, and clinic-recorded employer adherence. Others are growing adolescent exposure via Medicaid, rising absolute fracture counts among older users, and a class-performed 'unmedicated' status game. That is a different and arguably milder world than 2030, not a harsher one.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is 24.7%, generic collapse comes via patent expiry and an authorised generic in the events, public expansion and subsidy via the Dec 2031 package, monthly dosing via the MariTide autoinjector, and the EEOC finding fits the mainstream complaint. Safety 'none' and no new indications are respected, since the EPI language is a response to an existing signal. mechanism: most changes have a chain (patent expiry, rescoring, $0 copay, cheaper gray-market alternatives, Medicaid match), but the speed of Medicare uptake, MariTide's 6M users and the Bumble status flip are asserted rather than shown, as in my claims above. magnitude: all headline figures are inside the envelope, and the age-band check, payer mix (sums to 100%), Medicare/Medicaid/HRSA spending and cycled arithmetic all reconcile. The weak spots are the product-mix squeeze, 1.5M 65+ users unexplained off Medicare, and 'contained' gray market at 4M users.",
+      "generativity": "The day-in-the-life gives Darlene a kiosk weigh-in, a CONTINUATION ELIGIBLE printout, a $0.00 Teva box, an unattended bone scan, a Medicaid-covered teen and a daughter-in-law bragging about hunger. The world fields add 'ghosting', holiday memoirs, ticketed off nights, continuation-check comedy and long months. Many scenes are implied, and daily life has real texture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.316,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 48
   }
 }

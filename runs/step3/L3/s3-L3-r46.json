@@ -51,6 +51,41 @@
         "input_tokens": 17606,
         "output_tokens": 17955
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r46-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25565,
+        "output_tokens": 8320
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r46-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25565,
+        "output_tokens": 6463
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r46-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25565,
+        "output_tokens": 6314
+      }
     ]
   },
   "world": {
@@ -303,6 +338,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r46-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "It does not curb microdose compounding after losing the June 2031 case, and has not appealed.",
+          "field": "world/state/regulatory_posture",
+          "why": "Mechanism: the June 2031 event is Lilly's private suit being dismissed, and the FDA was not a party. It cannot have 'lost' that case or failed to appeal it, so the stated reason for the FDA's inaction contradicts the world's own events."
+        },
+        {
+          "quote": "It weighed in the Sept 2031 dementia sNDA rejection.",
+          "field": "world/safety_ledger/3/regulatory_response",
+          "why": "Mechanism: the sentence follows the March 2032 strengthened warning, which cannot have influenced a September 2031 decision. This is a chronology contradiction. The rejection may rest only on earlier Medicare-cohort data."
+        },
+        {
+          "quote": "~9,000 excess a year attributed to incretins",
+          "field": "world/events/4/event",
+          "why": "Mechanism: the 9,000 figure comes from multiplying the 1.3 hazard ratio by a baseline rate, not from a measured national excess. Presenting it as the finding of a claims analysis that 'attributes' it to incretins asserts causation from an aggregate trend, a leap the candidate does not show."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 4.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "public_health: a hip-fracture wave, EPI on the label, a contaminated compounded lot and decades of microdosing in normal-weight adults with no data. autonomy and inequality: ~4.8M workers in adherence-verified tracks cannot take the 'holiday' everyone else uses to manage the flats, and cash and compounded users skip doses while the verified cannot. The harms are measured and discussable (KFF poll, claims analysis, FDA label changes), so epistemic and cohesion score lower. The result is a harder society with new losers, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: every driver is visible. Adoption is +5.0pp, prices are frozen, coverage is 36→35%, longevity use is mainstream, the bone wave, gray-market growth, normalisation and the 'flats' complaint all appear, and next_gen is realised as a CRL plus a filing. The only strain is routine FDA label action against state_action none. mechanism: most chains are shown (patent ruling → frozen prices; microdose ruling → kits; fractures → label and sNDA rejection), but the FDA 'losing the case and not appealing' contradicts the events, the March 2032 warning is said to have influenced a September 2031 decision, and the 9,000 excess is attributed rather than measured. magnitude: 22.6% on drug and 32.0% ever-used are inside the envelope, the income and age checks reconcile, and the payer mix sums to 61.0M. Medicare spending (10.8M×$250×12 = $32.4B) and the cycling arithmetic also reconcile. Approval timing is respected, with no generic and bimagrumab decided no earlier than 2033. The only gap is a minor pediatric sub-band mismatch.",
+        "generativity": "The prose and the Renee Castillo vignette give concrete scenes: the skipped dose before Hector's birthday, the mother's rehab laps, the Basal upsell email and the hygienist's 'sinus thing'. The world has texture (holiday menus, bone clinics in The Villages, Detroit off-dose club nights, DXA at firehouses) and implies many other characters. The vignette shows rather than explains, though 'most charts now' is hyperbole."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s3-L3-r46-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "It does not curb microdose compounding after losing the June 2031 case, and has not appealed.",
+          "field": "world/state/regulatory_posture",
+          "why": "Mechanism: the June 2031 event is Lilly's private suit against a telehealth network, so the FDA was not a party and could not have 'lost' or appealed it. The state field contradicts the events list."
+        },
+        {
+          "quote": "Federal judge in Texas dismisses Lilly's suit against a telehealth-compounding network, finding sub-0.5 mg 'metabolic microdose' tirzepatide clinically different from Zepbound; within six months ~40 platforms sell $99–179 kits, many to people without obesity",
+          "field": "world/events/2/event",
+          "why": "Mechanism: a single district-court dismissal is not binding nationally, yet it is credited with building a ~5.5M-user compounded market and doubling gray-market users within about 18 months. The scaling is asserted, not shown, and FDA's non-response is unexplained."
+        },
+        {
+          "quote": "Pediatric: ~1.4% of under-18s (≈3.0% of 12–17s, ≈0.35% of 6–11s on daily liraglutide).",
+          "field": "world/population/note",
+          "why": "Magnitude: with roughly 25M children in each of the 12–17 and 6–11 bands, those sub-band rates give about 1.15% of under-18s, not 1.4%. The pediatric figure does not reconcile with its own sub-figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 6.0,
+        "autonomy": 6.0,
+        "inequality": 5.5,
+        "public_health": 6.5,
+        "cohesion": 4.5,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.0
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is harder with new losers. About 9,000 excess hip fractures a year, a fracture wave in older women, and normal-weight users losing proportionally more lean mass lower flourishing and public health. About 12M people use uninspected product, with sepsis lots and tenfold reconstitution errors, and the 4.8M workers in adherence-verified tracks cannot take the 'holiday' everyone else uses to manage the flats. Harms are measured and discussed (KFF poll, claims analysis, FDA label changes) and cohesion mostly adapts, so this is not structural-invisible harm.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption +5.0 is in range, prices are frozen, coverage is flat at 35%, longevity use is mainstream, the bone wave and its FDA response are shown, and 'none' for next gen is realised through the amycretin CRL and the bimagrumab filing. The Texas ruling stands in for the gray-market shock without breaching 'state_action none'. mechanism: The fracture arithmetic (6M × 0.005 × 0.3 = 9,000) and the dementia rejection chain are shown, but the FDA 'losing' and not appealing a private suit is a contradiction (claim 1), and the microdose boom rests on one district ruling (claim 2). magnitude: Population, ever-used, age, income, payer mix (13.8+10.8+3.4+21.0+12.0 = 61.0M) and Part D spend ($32.4B) all reconcile and sit inside the envelope. Only the pediatric sub-rates fail to sum to 1.4% (claim 3).",
+        "generativity": "The world and prose give many distinct scenes: holiday menus, Friday-to-Sunday club nights, bone clinics in The Villages, and the Columbus plant-clinic workers. The Renee Castillo vignette shows the world through objects and small choices (the skipped dose, the unbooked DXA scan, the Basal upsell email, the smell of the grill) rather than explaining it. Secondary characters (Tasha, Hector, her mother) imply more stories."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s3-L3-r46-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Federal judge in Texas dismisses Lilly's suit against a telehealth-compounding network, finding sub-0.5 mg 'metabolic microdose' tirzepatide clinically different from Zepbound",
+          "field": "world/events/2/event",
+          "why": "Mechanism: a single district-court dismissal is made to unlock ~5.5M compounded users within about a year. The world also has Lilly not appealing and the FDA doing nothing, which is convenient and unexplained."
+        },
+        {
+          "quote": "It weighed in the Sept 2031 dementia sNDA rejection.",
+          "field": "world/safety_ledger/3/regulatory_response",
+          "why": "Mechanism: a warning strengthened in March 2032 cannot have weighed in a September 2031 decision. The ledger and the event timeline contradict each other."
+        },
+        {
+          "quote": "Medicare claims analysis finds hip-fracture rates in women 65+ rose for a second year after three decades of decline, ~9,000 excess a year attributed to incretins",
+          "field": "world/events/4/event",
+          "why": "Mechanism and magnitude: the ~9,000 figure is the world's own back-of-envelope (HR 1.3 applied to ~6M users), not something a claims analysis could causally attribute. A national rate reversal within two years is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The harms are real but partly offset. About 9,000 excess hip fractures a year, rising sarcopenia, EPI now labelled, and ~5M normal-weight people on decades-long therapy with no data weigh on flourishing and public health. About 4.8M adherence-tracked workers risk a 30% premium differential if they skip a dose (autonomy), and gray-market growth tracks income. The harms are openly measured and discussed, with DXA, FDA labels and a KFF poll, which keeps epistemic and cohesion scores moderate.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption is +5.0pp, prices are frozen (Delaware ruling), coverage is 36→35%, longevity use runs on $149 orals and kits, the fracture wave is in the ledger, amycretin gets a CRL and bimagrumab is filed Apr 2032 with a 2033 decision (next_gen none), and the Texas ruling drives the gray-market resurgence. Normalisation and the mainstream-complaint personality layer are in the KFF poll and culture fields. Routine FDA actions do not breach state_action none.\nmechanism: Most chains are shown, such as the court ruling to kits to 12M gray users, and the fracture data to the dementia sNDA rejection and bone clinics. The three listed claims weaken it: the single-ruling causation, the March 2032 warning cited in a September 2031 decision, and a causal fracture attribution that rests on assumed HRs. The prose line that 'most charts' show tirzepatide overstates a ~23% user base.\nmagnitude: Current use (22.6) and ever-use (32.0) are inside the envelope, and income and age bands bracket and average correctly. The payer mix sums to 61.0M, Medicare ($32.4B, dementia $5.6B) and gray-market (5.5+4+2.5=12M) arithmetic holds, and the cycling arithmetic reconciles. Minor gaps remain: pediatric subgroup rates give ~0.84M against ~1.0M implied, and net attrition is light given the stated one-third persistence.",
+        "generativity": "The Renee Castillo scene is concrete: the dental hygienist, the skipped dose before Hector's sixtieth, the mother's hip fracture at Publix, Basal's 'Bone-Safe Protocol' upsell, and the smell of the grill. The world fields add holiday menus, Friday-to-Sunday club nights, bone clinics in The Villages, and pitch holidays. The prose shows rather than explains, though the opening section is largely summary."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "It does not curb microdose compounding after losing the June 2031 case, and has not appealed.",
+        "field": "world/state/regulatory_posture",
+        "why": "Mechanism: the June 2031 event is Lilly's private suit being dismissed, and the FDA was not a party. It cannot have 'lost' that case or failed to appeal it, so the stated reason for the FDA's inaction contradicts the world's own events."
+      },
+      {
+        "quote": "It weighed in the Sept 2031 dementia sNDA rejection.",
+        "field": "world/safety_ledger/3/regulatory_response",
+        "why": "Mechanism: the sentence follows the March 2032 strengthened warning, which cannot have influenced a September 2031 decision. This is a chronology contradiction. The rejection may rest only on earlier Medicare-cohort data."
+      },
+      {
+        "quote": "~9,000 excess a year attributed to incretins",
+        "field": "world/events/4/event",
+        "why": "Mechanism: the 9,000 figure comes from multiplying the 1.3 hazard ratio by a baseline rate, not from a measured national excess. Presenting it as the finding of a claims analysis that 'attributes' it to incretins asserts causation from an aggregate trend, a leap the candidate does not show."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 6.0,
+      "inequality": 5.83,
+      "public_health": 6.5,
+      "cohesion": 4.67,
+      "epistemic": 4.5,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.33,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.68,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "public_health: a hip-fracture wave, EPI on the label, a contaminated compounded lot and decades of microdosing in normal-weight adults with no data. autonomy and inequality: ~4.8M workers in adherence-verified tracks cannot take the 'holiday' everyone else uses to manage the flats, and cash and compounded users skip doses while the verified cannot. The harms are measured and discussable (KFF poll, claims analysis, FDA label changes), so epistemic and cohesion score lower. The result is a harder society with new losers, not a structurally hidden one.",
+      "plausibility": "driver_fidelity: every driver is visible. Adoption is +5.0pp, prices are frozen, coverage is 36→35%, longevity use is mainstream, the bone wave, gray-market growth, normalisation and the 'flats' complaint all appear, and next_gen is realised as a CRL plus a filing. The only strain is routine FDA label action against state_action none. mechanism: most chains are shown (patent ruling → frozen prices; microdose ruling → kits; fractures → label and sNDA rejection), but the FDA 'losing the case and not appealing' contradicts the events, the March 2032 warning is said to have influenced a September 2031 decision, and the 9,000 excess is attributed rather than measured. magnitude: 22.6% on drug and 32.0% ever-used are inside the envelope, the income and age checks reconcile, and the payer mix sums to 61.0M. Medicare spending (10.8M×$250×12 = $32.4B) and the cycling arithmetic also reconcile. Approval timing is respected, with no generic and bimagrumab decided no earlier than 2033. The only gap is a minor pediatric sub-band mismatch.",
+      "generativity": "The prose and the Renee Castillo vignette give concrete scenes: the skipped dose before Hector's birthday, the mother's rehab laps, the Basal upsell email and the hygienist's 'sinus thing'. The world has texture (holiday menus, bone clinics in The Villages, Detroit off-dose club nights, DXA at firehouses) and implies many other characters. The vignette shows rather than explains, though 'most charts now' is hyperbole."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.417,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 20
   }
 }

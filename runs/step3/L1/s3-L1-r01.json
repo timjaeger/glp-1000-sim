@@ -52,6 +52,41 @@
         "input_tokens": 17577,
         "output_tokens": 24135
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r01-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26286,
+        "output_tokens": 6601
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r01-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26286,
+        "output_tokens": 7763
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r01-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26286,
+        "output_tokens": 7500
+      }
     ]
   },
   "world": {
@@ -323,6 +358,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r01-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "ASAM and APA guidelines endorse semaglutide for gambling disorder and extend the alcohol-use-disorder recommendation to tirzepatide; FDA accepts Novo's gambling sNDA and Lilly's AUD sNDA for review",
+          "field": "world/events/3/event",
+          "why": "Mechanism: the 2030 world calls gambling use 'still anecdotal', yet two years later a guideline endorsement and an accepted sNDA appear with no trial. Likewise, tirzepatide gets an AUD endorsement and a filing with no AUD trial shown. The evidence chain is asserted rather than shown."
+        },
+        {
+          "quote": "Planned dose skipping ('holidays', 'Friday skip') is reported by ~30% of long-term users, roughly 15M people.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Magnitude: 15M at 30% implies about 50M long-term users, out of 57.8M total on-drug. By the candidate's own flow arithmetic only about 25–35M have used continuously for 2+ years, so the count does not reconcile."
+        },
+        {
+          "quote": "Cash-paid generics leave no PBM adherence record, so the 13% of users who moved to cash have dropped out of the data employers and Medicaid waivers rely on.",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "Magnitude: the payer note puts cash at 20% of users, up from 14%, a rise of about 6 points, so '13%' matches no figure in the world. The claim also assumes everyone paying cash left the commercial or Medicaid data, which is unshown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Public health bears the clearest cost: about 9–10k excess hip fractures a year, sarcopenia at 1.6×, DEXA waitlists of 3–5 months, and uninterpretable but worrying adolescent bone-accrual data across ~800k minors. Against that, generic prices close much of the price gap, gambling and alcohol harms fall, and harms are now measured and labelled, which lowers epistemic badness. Inequality shifts from price to monitoring (Sun City retirees; the 'grey'; being off the drug needing an excuse). This is a harder society with new losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Generic semaglutide arrives via patent expiry plus settlement, the 16 mg retatrutide is an existing product in a new form, the DSC covers muscle and bone, state action is none, and the gray market shifts to next-gen molecules. Compulsion and AUD appear as guideline endorsements plus filed sNDAs, which the approval rules allow. mechanism: most chains are shown (generic price → cash shift → PBM data loss; DSC → DEXA waits → planned stops), but the gambling and tirzepatide-AUD endorsements arrive with no trial evidence (claim 1), and the effect of generic entry on persistence is only asserted. magnitude: ever-used (31.0), on-drug (21.4), age-band and income arithmetic, payer mix, Medicaid, Medicare, HRSA and the hip-fracture arithmetic all reconcile, and MariTide approval 15 months after filing is allowed. The flaws are small: 15M skippers imply ~50M long-term users (claim 2), and the stray '13%' cash figure (claim 3).",
+        "generativity": "The Rosa and Tomás scenes carry strong texture: the pen in the butter compartment, the November DEXA slot, protein bars that taste like drywall, the $49 Visa charge, a daughter's text about Tía Carmen, and the missing laughter at the Raiders. Several characters are implied (Lupe, Marisol, Tía Carmen), along with institutions (Culinary Health Fund, the Maryland Parkway clinic). The world JSON adds Sun City, Charlotte and Vegas detail, so daily life is shown rather than explained."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s3-L1-r01-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Generic prices have nearly closed the gap between rich and poor users.",
+          "field": "prose/closing_summary",
+          "why": "Mechanism and magnitude: the candidate's own income thirds show 26% vs 16.7%, a 9.3-point gap that was 12 points in 2030. The generics have been on sale for about a year, and the world JSON itself says only the price gap closed, not the use or monitoring gap."
+        },
+        {
+          "quote": "so the 13% of users who moved to cash have dropped out of the data employers and Medicaid waivers rely on",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "Magnitude: the payer note has cash/direct rising from 14% to 20% of users, about 6 points. Nothing in the candidate produces a 13% share of users who \"moved to cash\", so the figure does not reconcile."
+        },
+        {
+          "quote": "Generic entry in 2032 did not raise persistence within the window, because the bone warning and the 'grey' complaint pushed planned stops and drug holidays up about as much as the lower price reduced cost-driven stops.",
+          "field": "world/population/note",
+          "why": "Mechanism: two opposing forces are asserted to cancel exactly, which conveniently lets the 2030 persistence and restart rates be reused unchanged. No evidence is shown that cost-driven stops fell or that planned stops rose by any measured amount."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is a harder one with new losers, not a collapse. The Medicare claims analysis (hip fracture HR 1.42, about 9–10k excess hip fractures and about 2,000 deaths a year), the 3–5 month DEXA waitlists and the unresolved adolescent bone-accrual signal weigh on public_health and flourishing. Dose holidays in about 15M people, validated reward blunting and monitoring-driven stratification add to that. Access improved, with $45–69 generics, and the harms are now measured and named, so autonomy and epistemic scores are lower than in 2030.",
+        "plausibility": "driver_fidelity: every driver is traceable to events and fields. Generic collapse, the 16 mg retatrutide dose (30.4%), the muscle/bone DSC, the guideline-plus-sNDA route for gambling, status-quo coverage and no new state action are all present. Gray-market resurgence is realised mostly as a shift up the molecule ladder, since gray share slightly fell to 16.5%, which is thin. mechanism: most chains are shown, including generics undercutting copays, cash purchases leaving PBMs without adherence data, and the claims study leading to the DSC and planned stops. Weaknesses are claims 1 and 3 above, plus compounded semaglutide \"nearly disappearing\" while about 2.0M residual users remain. magnitude: the figures sit inside the envelope (21.4% on drug, 31.0% ever used, income thirds and age bands reconcile). Payer shares, Medicaid and HRSA spending ($12.3B, $2.86B, $1.6B unobligated), the fracture arithmetic and the MariTide and bimagrumab timing all multiply out. The one flaw is the unreconciled \"13%\" cash figure in claim 2.",
+        "generativity": "The Rosa and Tomás vignette is concrete: the pen in the butter compartment, the November DEXA slot, union protein bars, a $49 Visa charge, and a spouse who has stopped laughing at the Raiders. It implies a whole cast, including Lupe, the daughter, Tía Carmen and the Maryland Parkway clinic. The world fields (Sun City, 'Friday skip' festivals, Las Vegas buffets) give daily-life texture that supports many more scenes."
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s3-L1-r01-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Planned dose skipping ('holidays', 'Friday skip') is reported by ~30% of long-term users, roughly 15M people.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "magnitude: 15M at 30% implies about 50M long-term users, but only ~25M (9.4 pts) of the 2030 users stayed on through the window. It is also out of line with the 4.5M long-term 65+ figure and the 57.8M total."
+        },
+        {
+          "quote": "gambling disorder (semaglutide, ASAM/APA guideline-endorsed Oct 2031; sNDA accepted, PDUFA date Q2 2033)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "mechanism and magnitude: gambling use was 'still anecdotal' in 2030, and no trial evidence is shown for a guideline plus an sNDA 15 months later. An sNDA accepted in Oct 2031 would normally get a decision within about 10 months, not ~20 (the parent's AUD sNDA took 10 months), so the 2033 PDUFA date is out of line."
+        },
+        {
+          "quote": "Cash-paid generics leave no PBM adherence record, so the 13% of users who moved to cash have dropped out of the data employers and Medicaid waivers rely on.",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "magnitude: the payer mix puts cash at 20%, up from 14%, which is about 6 points or 4.6M users, not 13%. The figure does not reconcile with the access note."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 6,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The ledger shows real harm: ~9–10k excess hip fractures and ~2k excess deaths a year, sarcopenia at 1.6×, a growing unmonitored gray market, and suspected adolescent bone-accrual effects across ~800k minors. Against that, the price barrier has largely closed, harms are now measured and named (DSC, SHAPS data), and daily life is adapted rather than coerced. The main losers are low-income older users who face 3–5 month DEXA waits and are told by relatives to stop. Overall this is a harder society with new losers, but not a structural horror.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption of 21.4%, generic collapse via the Jan 2032 settlement event, status-quo coverage, gambling and AUD indications, the muscle/bone DSC, the 16 mg retatrutide dose at 30.4%, gray-market resurgence, normalisation, and personality_layer as mainstream_complaint. Launches use allowed forms (MariTide Oct 2031, a new retatrutide dose, filings only for bimagrumab). mechanism: Most chains are shown: generics undercutting copays and compounded semaglutide, fractures leading to planned stops, and gray use moving to next-gen molecules. Weaker points are the gambling guideline and sNDA with no trial basis (claim 2), the asserted pharmacy-trend drop from +14% to +6%, and the 2033 decision dates that don't follow from the acceptance dates. magnitude: The core figures are inside the envelope (21.4% on, 31.0% ever, income thirds and age bands reconcile) and the payer mix, Medicaid, HRSA and fracture arithmetic all multiply out. The gaps are the 15M dose-skipping figure (claim 1), the '13%' cash figure against a 20% share (claim 3), and the inconsistent PDUFA timing.",
+        "generativity": "The prose gives Rosa, Tomás, Lupe, the DEXA wait, the Culinary Health Fund protein bars, the pen in the butter compartment and the skip-Saturday ending. The world fields add texture: dose-holiday festivals, Sun City retirees, Vegas spa spending, and hip protectors. Several scenes and characters are implied beyond what is stated."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "ASAM and APA guidelines endorse semaglutide for gambling disorder and extend the alcohol-use-disorder recommendation to tirzepatide; FDA accepts Novo's gambling sNDA and Lilly's AUD sNDA for review",
+        "field": "world/events/3/event",
+        "why": "Mechanism: the 2030 world calls gambling use 'still anecdotal', yet two years later a guideline endorsement and an accepted sNDA appear with no trial. Likewise, tirzepatide gets an AUD endorsement and a filing with no AUD trial shown. The evidence chain is asserted rather than shown."
+      },
+      {
+        "quote": "Planned dose skipping ('holidays', 'Friday skip') is reported by ~30% of long-term users, roughly 15M people.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "Magnitude: 15M at 30% implies about 50M long-term users, out of 57.8M total on-drug. By the candidate's own flow arithmetic only about 25–35M have used continuously for 2+ years, so the count does not reconcile."
+      },
+      {
+        "quote": "Cash-paid generics leave no PBM adherence record, so the 13% of users who moved to cash have dropped out of the data employers and Medicaid waivers rely on.",
+        "field": "world/state/conditioning_or_surveillance",
+        "why": "Magnitude: the payer note puts cash at 20% of users, up from 14%, a rise of about 6 points, so '13%' matches no figure in the world. The claim also assumes everyone paying cash left the commercial or Medicaid data, which is unshown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 4.33,
+      "inequality": 4.83,
+      "public_health": 6.0,
+      "cohesion": 4.83,
+      "epistemic": 4.0,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.83,
+      "magnitude": 7.0
+    },
+    "plausibility": 7.25,
+    "generativity": 8.33,
+    "rationale": {
+      "badness": "Public health bears the clearest cost: about 9–10k excess hip fractures a year, sarcopenia at 1.6×, DEXA waitlists of 3–5 months, and uninterpretable but worrying adolescent bone-accrual data across ~800k minors. Against that, generic prices close much of the price gap, gambling and alcohol harms fall, and harms are now measured and labelled, which lowers epistemic badness. Inequality shifts from price to monitoring (Sun City retirees; the 'grey'; being off the drug needing an excuse). This is a harder society with new losers, not a structural catastrophe.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. Generic semaglutide arrives via patent expiry plus settlement, the 16 mg retatrutide is an existing product in a new form, the DSC covers muscle and bone, state action is none, and the gray market shifts to next-gen molecules. Compulsion and AUD appear as guideline endorsements plus filed sNDAs, which the approval rules allow. mechanism: most chains are shown (generic price → cash shift → PBM data loss; DSC → DEXA waits → planned stops), but the gambling and tirzepatide-AUD endorsements arrive with no trial evidence (claim 1), and the effect of generic entry on persistence is only asserted. magnitude: ever-used (31.0), on-drug (21.4), age-band and income arithmetic, payer mix, Medicaid, Medicare, HRSA and the hip-fracture arithmetic all reconcile, and MariTide approval 15 months after filing is allowed. The flaws are small: 15M skippers imply ~50M long-term users (claim 2), and the stray '13%' cash figure (claim 3).",
+      "generativity": "The Rosa and Tomás scenes carry strong texture: the pen in the butter compartment, the November DEXA slot, protein bars that taste like drywall, the $49 Visa charge, a daughter's text about Tía Carmen, and the missing laughter at the Raiders. Several characters are implied (Lupe, Marisol, Tía Carmen), along with institutions (Culinary Health Fund, the Maryland Parkway clinic). The world JSON adds Sun City, Charlotte and Vegas detail, so daily life is shown rather than explained."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.815,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 39
   }
 }

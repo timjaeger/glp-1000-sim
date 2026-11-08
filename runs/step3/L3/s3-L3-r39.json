@@ -49,6 +49,41 @@
         "input_tokens": 17673,
         "output_tokens": 23630
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r39-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25903,
+        "output_tokens": 7595
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r39-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25903,
+        "output_tokens": 9140
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r39-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25903,
+        "output_tokens": 5459
+      }
     ]
   },
   "world": {
@@ -308,6 +343,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r39-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The largest single cause of growth was the government.",
+          "field": "prose/body",
+          "why": "Mechanism: the candidate's own payer mix contradicts this. The CMHP's 5.0M users are fewer than the 8.0M new compounded users and the roughly 6.5M added legitimate-cash users, so the government is not the largest single source of growth."
+        },
+        {
+          "quote": "That is the main reason the bottom third rose 12 → 21.",
+          "field": "world/population/note",
+          "why": "Mechanism: the bottom-third rise of 9 points is roughly 8M users. CMHP's 5.0M covers a ≤250% FPL group wider than the bottom third, and 1.3M of them were already current gray-market users. CMHP cannot be the main driver."
+        },
+        {
+          "quote": "by year-end ~6M Americans use compounded product",
+          "field": "world/events/1/event",
+          "why": "Magnitude and mechanism: compounded use goes from none in the 2030 payer mix to ~6M in about seven months, and ~8M in 2032. No supply, telehealth-capacity or demand chain is shown for that speed, and compounded product is not an obvious substitute for the paused semaglutide pens."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 17M people are on compounded or imported product with dosing errors and uncertain concentrations (poison-centre calls ~5× 2025). A second long-horizon signal (Barrett's) has appeared with cancer data a decade away. Roughly 6M workers are in employer-verified tracks with 'steadiness' in promotion packets, and 'why aren't you on one?' is asked by insurers and employers. This is a recognisably harder society with new losers, not a structural catastrophe. The free pill gives the poor real access, which softens inequality, but the tiers are now chemical and the harm is mostly nameable and measured.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is exactly +8.9pp. The price shock comes from the recall and shortage, the gray resurgence from compounding, and the subsidy is CMHP. Employer coverage falls 36→29%, the retatrutide 12 mg dose reaches 28.9%, and Barrett's is the novel signal. No new indication arrives, the dementia CRL does not contradict that, and the normalisation and employer-steadiness drivers are present. mechanism: The recall-to-shortage-to-compounding chain and the CMHP funding path are shown, but the claims above are asserted or contradicted: the 'largest single cause' line, CMHP as the main cause of the bottom-third rise, and compounded use jumping to 6M within months. The Barrett's signal arriving on schedule and insurers asking 'why aren't you on one?' are also thinly supported. magnitude: 26.5% on drug and 35% ever are inside the envelope. The age, income and payer-mix totals (71.5M) reconcile. The Medicare ($32.3B, $5.9B) and CMHP ($3.5B) arithmetic multiplies out, and the amycretin, retatrutide 12 mg and AUD timings obey the approval rules. Minor gaps remain: the 60M CMHP fills imply monthly fills while the prose shows 90-tablet quarterly bags, and the pediatric split is slightly loose.",
+        "generativity": "Lorena Ruiz, her brother Ray with his vial, Denise who went off after the recall, and the Groveport warehouse girlfriend who gets her shot by the time clock make a coherent cast. The scenes are concrete: the cafeteria half-trays, the laminated doctor's card, the kitchen-table dose arithmetic, the quarterly clipboard and scale. The world fields (CMHP, Ohio ADA suit, Fort Wayne and Toledo, compounder lobbyists) imply many more stories. The last line shows rather than explains."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s3-L3-r39-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "9.5 points are first-time users since 2030; 3.8 points are 2030 first-course users who stayed on continuously",
+          "field": "world/population/note",
+          "why": "Ever-used rose 25.5 to 35, which is exactly 9.5 points, so every post-2030 starter is still on the drug. That contradicts the note's own one-year persistence near one-third and its restart rates. It is a magnitude reconciliation failure."
+        },
+        {
+          "quote": "the federal Community Metabolic Health Program (free oral orforglipron) 5.0M",
+          "field": "world/population/note",
+          "why": "A program launched in Jun 2031 reaches 5.0M enrollees in about 18 months through FQHCs and 340B pharmacies, with quarterly clinic weight checks. That is a very fast ramp for a system of that size, and the supply and capacity chain is not shown. Mechanism and magnitude are both strained."
+        },
+        {
+          "quote": "FDA Drug Safety Communication (Jul 2032) advises GI evaluation for long-term users with chronic reflux.",
+          "field": "world/safety_ledger/10/regulatory_response",
+          "why": "A registry study in May 2032 produces a Drug Safety Communication two months later, and a second novel long-horizon signal follows the EPI signal within two years. Its HR 1.6 is detected through endoscopy registries and is not tied to mechanism or exposure. It reads as convenient for the safety driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 71M users, with 17M on compounded or gray product, poison-centre calls ~5× 2025, and two long-horizon safety signals (EPI, Barrett's) make this a harder world. Employer-verified 'steadiness' tracks (6.1M) and 'why aren't you on one?' pressure from underwriters and employers lower autonomy. Stratification shifts to chemical tiers (free ~12% pill versus $649 ~29% pen) rather than disappearing, and the free pill narrows the use gap for the poor, so inequality and flourishing sit mid-range. This is a recognisably harder society, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Price shock comes from the Clayton recall, employer retreat from 36% to 29%, and the subsidy from the CMHP. The gray-market resurgence is the compounding revival, and the triple-agonist driver is realised as a 12 mg dose, which the approval rules allow. Adoption is 26.5%, inside the envelope. mechanism: The recall, shortage list, compounding and price chain is well shown, as is the CMHP political coalition. The weaker links are the CMHP's 5.0M ramp (claim 2) and the quick second long-horizon signal and DSC (claim 3). magnitude: Population, payer mix (71.5M), age and income checks, Medicare spend ($32.3B) and the CMHP budget (~$3.5B) all reconcile and sit inside the envelope. The persistence arithmetic fails, though: all 9.5 points of new ever-users are still on the drug (claim 1). The pediatric subtotals are also loose.",
+        "generativity": "The prose vignette gives concrete scenes: Lorena's six-minute window, the half-trays, Ray's twice-checked vial concentration, and the girlfriend's first-Tuesday plant-clinic shot. The world fields add named places (Fort Wayne, Groveport, Toledo) and cultural texture such as 'off sets' and the Bread Alone plateau. Some world-state passages explain rather than show, but many characters and scenes are implied."
+      },
+      "plausibility": 6.8
+    },
+    {
+      "custom_id": "s3-L3-r39-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "That is the main reason the bottom third rose 12 → 21.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: only about 3.7M of the 5.0M CMHP enrollees are net-new (2.1M never-used plus 1.6M restarters), which is roughly 4 points of ~90M bottom-third adults. That cannot be the main cause of a 9-point rise, and the other ~5 points are left unexplained."
+        },
+        {
+          "quote": "Orals are now ~50% of users because the CMHP is oral-only.",
+          "field": "world/access/note",
+          "why": "Mechanism and magnitude: orals were ~45% of ~47M (~21M) and are now ~50% of 71.5M (~36M). The 5.0M CMHP enrollees explain only a third of that ~15M rise, so the stated cause is asserted rather than shown."
+        },
+        {
+          "quote": "found new Barrett's diagnoses at HR ~1.6 in users continuously on semaglutide for >6 years versus weight-matched controls, with no excess before year 5.",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism: a second novel long-horizon signal (after EPI) is found, replicated in VA data and turned into an FDA safety communication within about two months (May to Jul 2032). That is fast and convenient, and the 'no excess before year 5' / '>6 years' framing is loosely tied to the exposure cohorts."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "A society where 26.5% of adults are on a drug, steadiness is written into promotion packets (~6.1M in adherence-verified tracks, the Ohio ADA suit), and a second long-horizon harm (Barrett's) has appeared is a recognisably harder world. Compounded and gray-market product (~17M users, poison-centre calls ~5× 2025) and the pediatric cohort add real harm. Autonomy is the worst dimension, with 'why aren't you on one?' pressure and employer conditioning. The free CMHP pill narrows the access gap, which tempers inequality, and no melodrama is claimed. The harm is mostly normalised and diffuse, which supports about 6.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +8.9pp to 26.5. The shock_up path comes from the Novo recall and shortage. Employer coverage falls 36→29%. The Barrett's signal covers long-horizon safety. The triple_agonist_30pct driver becomes a 12 mg retatrutide sNDA, which the approval rules allow. Gray-market resurgence comes through compounding. The CMHP is the subsidy. new_indications stays empty, with a CRL on the dementia extension. mechanism: The recall to shortage to legal compounding to Lilly price rises chain is well shown, but the bottom-third jump and the orals share are asserted (claims 1 and 2), and the second safety signal arrives conveniently fast (claim 3). magnitude: All figures sit inside the envelope (26.5 current, 35 ever, age and income checks close). The payer mix sums to 71.5M, the cycled 47% reconciles, and the Medicare, dementia and CMHP spending arithmetic multiplies out. Only small gaps remain: the pediatric band arithmetic is slightly loose and the bottom-third and orals attributions are thin.",
+        "generativity": "The prose gives a strong scene set: Lorena in the Fort Wayne cafeteria, Ray's vial arithmetic, Denise off since the recall, the Groveport first-Tuesday shot. The world fields add concrete places and institutions: Columbus corridor, YMCA CMHP classes, Unmuted off sets, church potlucks. One detail jars: 'thirty minutes before food' fits the Wegovy pill's dosing rather than the small-molecule Foundayo named in the world."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The largest single cause of growth was the government.",
+        "field": "prose/body",
+        "why": "Mechanism: the candidate's own payer mix contradicts this. The CMHP's 5.0M users are fewer than the 8.0M new compounded users and the roughly 6.5M added legitimate-cash users, so the government is not the largest single source of growth."
+      },
+      {
+        "quote": "That is the main reason the bottom third rose 12 → 21.",
+        "field": "world/population/note",
+        "why": "Mechanism: the bottom-third rise of 9 points is roughly 8M users. CMHP's 5.0M covers a ≤250% FPL group wider than the bottom third, and 1.3M of them were already current gray-market users. CMHP cannot be the main driver."
+      },
+      {
+        "quote": "by year-end ~6M Americans use compounded product",
+        "field": "world/events/1/event",
+        "why": "Magnitude and mechanism: compounded use goes from none in the 2030 payer mix to ~6M in about seven months, and ~8M in 2032. No supply, telehealth-capacity or demand chain is shown for that speed, and compounded product is not an obvious substitute for the paused semaglutide pens."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 6.5,
+      "inequality": 5.67,
+      "public_health": 6.33,
+      "cohesion": 5.5,
+      "epistemic": 5.5,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.83,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.4,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "About 17M people are on compounded or imported product with dosing errors and uncertain concentrations (poison-centre calls ~5× 2025). A second long-horizon signal (Barrett's) has appeared with cancer data a decade away. Roughly 6M workers are in employer-verified tracks with 'steadiness' in promotion packets, and 'why aren't you on one?' is asked by insurers and employers. This is a recognisably harder society with new losers, not a structural catastrophe. The free pill gives the poor real access, which softens inequality, but the tiers are now chemical and the harm is mostly nameable and measured.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is exactly +8.9pp. The price shock comes from the recall and shortage, the gray resurgence from compounding, and the subsidy is CMHP. Employer coverage falls 36→29%, the retatrutide 12 mg dose reaches 28.9%, and Barrett's is the novel signal. No new indication arrives, the dementia CRL does not contradict that, and the normalisation and employer-steadiness drivers are present. mechanism: The recall-to-shortage-to-compounding chain and the CMHP funding path are shown, but the claims above are asserted or contradicted: the 'largest single cause' line, CMHP as the main cause of the bottom-third rise, and compounded use jumping to 6M within months. The Barrett's signal arriving on schedule and insurers asking 'why aren't you on one?' are also thinly supported. magnitude: 26.5% on drug and 35% ever are inside the envelope. The age, income and payer-mix totals (71.5M) reconcile. The Medicare ($32.3B, $5.9B) and CMHP ($3.5B) arithmetic multiplies out, and the amycretin, retatrutide 12 mg and AUD timings obey the approval rules. Minor gaps remain: the 60M CMHP fills imply monthly fills while the prose shows 90-tablet quarterly bags, and the pediatric split is slightly loose.",
+      "generativity": "Lorena Ruiz, her brother Ray with his vial, Denise who went off after the recall, and the Groveport warehouse girlfriend who gets her shot by the time clock make a coherent cast. The scenes are concrete: the cafeteria half-trays, the laminated doctor's card, the kitchen-table dose arithmetic, the quarterly clipboard and scale. The world fields (CMHP, Ohio ADA suit, Fort Wayne and Toledo, compounder lobbyists) imply many more stories. The last line shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.7,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 7
   }
 }

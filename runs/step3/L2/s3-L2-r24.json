@@ -52,6 +52,41 @@
         "input_tokens": 18765,
         "output_tokens": 21960
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r24-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28927,
+        "output_tokens": 8437
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r24-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28927,
+        "output_tokens": 6786
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r24-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28927,
+        "output_tokens": 5024
+      }
     ]
   },
   "world": {
@@ -321,6 +356,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r24-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "≈4.5M users aged 65+ have more than 2 years' use",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "The 2030 world had only ~2.5M such users among 5.7M current 65+ users. The 65+ band's growth to 9.2M is attributed mainly to restarts and new starts, at ~42% one-year persistence. Nearly doubling the >2-year cohort is therefore hard to reconcile, and the 9,500 excess-fracture figure rests on it (magnitude)."
+        },
+        {
+          "quote": "Eleven states fund generic semaglutide through tobacco quitlines after the cessation approval.",
+          "field": "world/state/subsidy_or_mandate",
+          "why": "The approval came in Aug 2032 and the world ends in Dec 2032. Eleven state budgets or programmes cannot plausibly be redirected in about four months, and no mechanism is shown (mechanism)."
+        },
+        {
+          "quote": "Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2032 on two phase 3 trials begun in 2029.",
+          "field": "world/drugs/pipeline_note",
+          "why": "The 2030 parent lists gambling craving reduction only as anecdotal off-label use, with no trial programme. Two phase 3 trials started in 2029 appear with no basis in the parent world (mechanism)."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "A cheap, ungated, free-at-the-floor world with no mandate lowers autonomy harm. The harms are a hardened two-tier system (diagnosis-code access, no DEXA for cash generic users at <15% versus ~70% insured), a growing bone and fall ledger, and 'the grey' normalised as a side effect. Telehealth and loyalty data sold outside HIPAA, the monthly-depot loss of dose control, and backlash splitting over the free pens add further losses. The harm is measured and discussable, so the epistemic score stays moderate. Overall this is a harder society with new losers, not a structural nightmare.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Generic collapse comes via the Jan 2032 settlement event, employer retreat via the Oct 2031 event, and MariTide via the Jun 2031 approval. Subsidy is the HHS programme, nicotine is the Aug 2032 approval, and compulsive behaviour is realised as a filing with Apr 2033 action, as the rules allow. adoption_delta is exactly 6.6. mechanism: Most chains are shown (cheap generics → employer retreat → tiering by diagnosis code, with the coding battleground). Some are asserted or invented: eleven states adopting quitline coverage within months, trials 'begun in 2029' for gambling, and Denise's A1c of 5.9 being 'one tenth short' when the world says prediabetes codes are covered. magnitude: All headline figures sit inside the envelope (21.2%, 32%, income thirds bracket the national figure). Payer mix sums to 100%, and the Medicare, Medicaid and HHS arithmetic multiplies out. The main gap is the ~4.5M 65+ users with >2 years' use, which is hard to square with the 2030 base and persistence. The HHS cost is also annualised against a nine-month programme.",
+        "generativity": "The prose gives a concrete scene-based day: Denise at the steam line, the empty chip rack, Marcus leaving a full tray, the DEXA call, the 200% FPL rejection, Pastor Oliver on manna, and the skipped dose before a wedding. The world adds texture such as 'molecule mismatch', 'grey' lo-fi music, casino lobbying, and the split backlash coalition. A few lines (the six pounds, the A1c) are muddled, but characters and scenes are strongly implied."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s3-L2-r24-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "It has priority review plus a 3-month extension for anhedonia data, and the action date is Apr 2033.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: a filing in Apr 2032 with priority review (about 6 months) plus a 3-month extension gives an action date near Jan 2033, not Apr 2033. The timeline does not reconcile."
+        },
+        {
+          "quote": "Her A1c is 5.9, one tenth short of the code that would have kept it.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: an A1c of 5.9 is already in the prediabetes range (5.7+), which the world says is a heavily used coverage code. A diagnosis threshold of 6.0 contradicts the world's own coding battleground, so the prose disagrees with the world state."
+        },
+        {
+          "quote": "Generic injectable semaglutide launches in the US under Paragraph IV settlements with eight ANDA holders and a Novo authorised generic",
+          "field": "world/events/2/event",
+          "why": "mechanism: eight ANDA holders launching on the same day under settlements is not how Paragraph IV works. First-filer exclusivity and staggered settlement dates are the norm, and no chain explains the simultaneous entry that drives the price collapse."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access is cheap and partly free, and private gating has shrunk. Against that, the world has a hardened two-tier system (inequality 7): unscanned generic users in a fracture wave (~9,500 excess hip fractures a year), DEXA waits of 10–14 weeks, and adolescent bone signals. Other harms are the loss of user dose control with monthly depots, sale of non-HIPAA cash-buyer data to marketers, a split backlash coalition, and 'the grey' now labelled and measured. This is a harder but not collapsing society, so overall 5.5.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable: adoption is 14.6+6.6=21.2, the generic launch is an event, employer coverage falls 63→41, MariTide is approved, the nicotine indication is approved and the gambling indication is filed, the VA cohort and FDA Limitations of Use cover the bone wave, the HHS program is the subsidy, and 'the grey' is mainstream. The backlash splits over the free pens, and no market shock is introduced. mechanism: the chains are mostly shown (cheap generics → employer retreat, DEXA gap → bone harm), but the eight-ANDA simultaneous launch, the asserted $1.1B DOJ settlement, and the A1c 5.9 prose error are weaker. 'Gray market: contained' also sits oddly beside the new gray 'reta' trade. magnitude: the population figures sit inside the envelope, and the payer mix, Medicare/Medicaid/HHS arithmetic, age bands and cycling figure all reconcile. Minor flaws are the priority-review date arithmetic, 'nearly doubled' for a 1.75× rise, and every 65+ user being counted as Medicare-paid.",
+        "generativity": "The Denise Harlan scene gives a cafeteria, a student who leaves his tray full, a telehealth nurse in Ohio, a DEXA wait and a church sermon on manna. The world also supplies the free-pen queues in Jackson, dose-holiday etiquette, 'molecule mismatch' couples, and casino lobbying against 'medicalising fun'. Daily life is shown with real texture, though the prose also explains in places."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s3-L2-r24-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Her A1c is 5.9, one tenth short of the code that would have kept it.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: an A1c of 5.9 is prediabetic, and the diabetes threshold is 6.5, so 'one tenth short' is wrong. It also sits oddly with the world's own note that prediabetes coding is surging as a coverage workaround."
+        },
+        {
+          "quote": "It has priority review plus a 3-month extension for anhedonia data, and the action date is Apr 2033.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: an sNDA filed in Apr 2032 on priority review (6 months) plus a 3-month extension gives about Jan 2033. An Apr 2033 action date is a standard 12-month clock, so the stated review path does not produce the date."
+        },
+        {
+          "quote": "≈2.4M Americans were on it by Dec 2032.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: 2.4M monthly-injectable users within 18 months of approval is fast. The label requires a baseline DEXA for over-50s while DEXA waits run 10–14 weeks, and the payer mix gives only about 3.5M branded direct-pay users across all brands. The uptake path is not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers: a hardened two-tier system in which the generic and free tier gets no DEXA scans. Excess hip fractures are about 9,500 a year, adolescent bone data are worrying, and monthly depots remove dose control. It is offset by much cheaper access, less employer conditioning, and 'the grey' now being named and measured, so I score it near 5 rather than higher. Inequality is the worst dimension (6) because of the scan gap and the 'medicating poverty' split.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable. Adoption is +6.6 exactly, generics arrive via Paragraph IV settlement events, employer coverage falls from 63% to 41%, the HHS subsidy is in place, MariTide is approved, the cessation label is approved, and the compulsion indication is a filing. mechanism: most changes have their chains, such as price falling and employers retreating, but the Foundayo priority-review date does not follow from its own stated clock, the A1c 5.9 'code' line in the prose is wrong, and the gambling trials and the 2029–31 cessation trial are convenient backfill. magnitude: current use is 21.2% and ever-use 32%, both inside the envelope. The income thirds bracket the national figure, the age bands sum to about 57.3M, and the payer mix sums to 100% and matches the user counts. The Medicare, Medicaid and HHS spending arithmetic reconciles, and approval timings are legal. The only blemishes are the aggressive MariTide uptake and Medicare users equalling all 65+ users.",
+        "generativity": "The Denise Harlan scene gives a cafeteria, a rack of removed chips, a teen skipping lunch, a telehealth nurse, a DEXA wait, an FPL cutoff, a manna sermon and a dose skipped for a wedding. The world fields add concrete texture: 'molecule mismatch', 'grey' lo-fi, casino lobbying and a split backlash coalition. It shows more than it explains."
+      },
+      "plausibility": 8.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "≈4.5M users aged 65+ have more than 2 years' use",
+        "field": "world/safety_ledger/4/prevalence_note",
+        "why": "The 2030 world had only ~2.5M such users among 5.7M current 65+ users. The 65+ band's growth to 9.2M is attributed mainly to restarts and new starts, at ~42% one-year persistence. Nearly doubling the >2-year cohort is therefore hard to reconcile, and the 9,500 excess-fracture figure rests on it (magnitude)."
+      },
+      {
+        "quote": "Eleven states fund generic semaglutide through tobacco quitlines after the cessation approval.",
+        "field": "world/state/subsidy_or_mandate",
+        "why": "The approval came in Aug 2032 and the world ends in Dec 2032. Eleven state budgets or programmes cannot plausibly be redirected in about four months, and no mechanism is shown (mechanism)."
+      },
+      {
+        "quote": "Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2032 on two phase 3 trials begun in 2029.",
+        "field": "world/drugs/pipeline_note",
+        "why": "The 2030 parent lists gambling craving reduction only as anecdotal off-label use, with no trial programme. Two phase 3 trials started in 2029 appear with no basis in the parent world (mechanism)."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.17,
+      "inequality": 6.5,
+      "public_health": 5.67,
+      "cohesion": 5.0,
+      "epistemic": 4.17,
+      "overall": 5.27
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.68,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "A cheap, ungated, free-at-the-floor world with no mandate lowers autonomy harm. The harms are a hardened two-tier system (diagnosis-code access, no DEXA for cash generic users at <15% versus ~70% insured), a growing bone and fall ledger, and 'the grey' normalised as a side effect. Telehealth and loyalty data sold outside HIPAA, the monthly-depot loss of dose control, and backlash splitting over the free pens add further losses. The harm is measured and discussable, so the epistemic score stays moderate. Overall this is a harder society with new losers, not a structural nightmare.",
+      "plausibility": "driver_fidelity: Every driver is realised and traceable. Generic collapse comes via the Jan 2032 settlement event, employer retreat via the Oct 2031 event, and MariTide via the Jun 2031 approval. Subsidy is the HHS programme, nicotine is the Aug 2032 approval, and compulsive behaviour is realised as a filing with Apr 2033 action, as the rules allow. adoption_delta is exactly 6.6. mechanism: Most chains are shown (cheap generics → employer retreat → tiering by diagnosis code, with the coding battleground). Some are asserted or invented: eleven states adopting quitline coverage within months, trials 'begun in 2029' for gambling, and Denise's A1c of 5.9 being 'one tenth short' when the world says prediabetes codes are covered. magnitude: All headline figures sit inside the envelope (21.2%, 32%, income thirds bracket the national figure). Payer mix sums to 100%, and the Medicare, Medicaid and HHS arithmetic multiplies out. The main gap is the ~4.5M 65+ users with >2 years' use, which is hard to square with the 2030 base and persistence. The HHS cost is also annualised against a nine-month programme.",
+      "generativity": "The prose gives a concrete scene-based day: Denise at the steam line, the empty chip rack, Marcus leaving a full tray, the DEXA call, the 200% FPL rejection, Pastor Oliver on manna, and the skipped dose before a wedding. The world adds texture such as 'molecule mismatch', 'grey' lo-fi music, casino lobbying, and the split backlash coalition. A few lines (the six pounds, the A1c) are muddled, but characters and scenes are strongly implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.951,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 33
   }
 }

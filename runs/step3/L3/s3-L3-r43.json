@@ -51,6 +51,41 @@
         "input_tokens": 17637,
         "output_tokens": 24599
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r43-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26568,
+        "output_tokens": 9225
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r43-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26568,
+        "output_tokens": 8577
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r43-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26568,
+        "output_tokens": 8312
+      }
     ]
   },
   "world": {
@@ -305,6 +340,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r43-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Cheap generics raised restart rates (now ~45–50% within a year) but did not change one-year persistence (~one-third).",
+          "field": "world/population/note",
+          "why": "Higher restart rates should raise the cycled share and the share of current users on a second course. The world instead holds `cycled_off_and_on_pct` at exactly 44 and says the second-course share fell from ~53% to ~50%, so the stated mechanism contradicts the reconciled figures (magnitude and mechanism)."
+        },
+        {
+          "quote": "Novo filed oral semaglutide for smoking and vaping cessation in Jan 2031 on two phase 3 trials (about 8–10 points higher continuous abstinence at 24 weeks vs placebo), and it was approved Nov 2031.",
+          "field": "world/drugs/pipeline_note",
+          "why": "The parent lists no nicotine filing and no nicotine phase 3. Under the envelope's approval rule, a phase 3 product that files in this window cannot be approved earlier than 12 months after the filing, and Jan to Nov 2031 is 10 months (magnitude)."
+        },
+        {
+          "quote": "CBO scored the change at ~$26B over 2032–41: ≈5.5M added Medicare users at maturity × ~$55 × 12 ≈ $3.6B a year gross, less modest medical offsets, ramping in.",
+          "field": "world/access/public_coverage",
+          "why": "The arithmetic does not reach the score. $3.6B a year gross over ten years is about $36B, and 'modest' offsets cannot remove ~28% of it. The score also omits the mandatory Medicaid expansion (~$2.7B a year generic spend on 5.6M users), so the budget figure is under-reconciled (magnitude)."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 3.5,
+        "inequality": 3.5,
+        "public_health": 4.5,
+        "cohesion": 4.0,
+        "epistemic": 3.5,
+        "overall": 4.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "This is a mixed world, with access widened but new costs. Cheap generics and Medicaid/Medicare coverage narrow the income gap (top 26 vs bottom 19.4). Anhedonia (~2.5M excess cases), a rising absolute fracture burden among ~5M untrained older starters, a ~$7B compounded gray market with contamination harms, and divergent pediatric use by state and class keep it from being benign. Harms are named and measured (FDA interim, EPI label, EEOC finding), so the epistemic score is low, and the 'steadiness' pressure at work has eased. Overall it reads as a somewhat harder society with new losers, not a worse one.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Generic collapse comes through the Jan 2031 settlement event, public expansion through the March 2031 law, nicotine through the Nov 2031 approval, and restriction through the eleven states. Gray-market resurgence, natural movement (Unassisted), mainstream complaint and MariTide spread are also traced to events. No signal is added, and nothing contradicts a driver. mechanism: Most chains are shown, such as the generic price leading to coverage law, Medicaid starters and regainers, and the EEOC finding leading to 'steadiness' dropped. Weaker links are the restart-rate claim against an unchanged 44% cycled share, a new Unassisted movement producing both eleven state laws and a federal ad rule within a year, and the headline 'Teenagers Refuse', which the 18–29 data (10 to 12%) and the affluent-18–29 Unassisted description do not support. magnitude: The population figures sit inside the envelope, and age, income, payer mix and the Medicare and Medicaid spend all multiply out. The nicotine approval in 10 months breaks the 12-month rule, the CBO $26B score does not match its own arithmetic and omits Medicaid, and the cycled-share inconsistency and the pediatric counts (~0.9M implied vs 1.5%) are minor gaps. These are the flagged claims.",
+        "generativity": "The Denise Harper scene is concrete and implies a whole cast: the pen in the butter compartment, the Hyderabad label, the $3.40 Ohio Medicaid copay, the one-cookie coffee hour at church, Mr. Okafor and the Y strength class, and Kayla's UNASSISTED bakery. Her quitting menthols without asking it to is a neat unplanned detail. The world fields add rich texture, including the Unassisted long tables, off-week requests like PTO, and the sitcom on alternating drug holidays."
+      },
+      "plausibility": 6.4
+    },
+    {
+      "custom_id": "s3-L3-r43-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo filed oral semaglutide for smoking and vaping cessation in Jan 2031 on two phase 3 trials",
+          "field": "world/drugs/pipeline_note",
+          "why": "Approval came in Nov 2031, about 10 months after filing. The envelope requires at least 12 months for a product not yet approved, and the filing is not listed as an event. The phase 3 trials are also new, with no basis in the 2030 pipeline. This fails magnitude."
+        },
+        {
+          "quote": "including Part D under CV codes from 2032",
+          "field": "world/drugs/pipeline_note",
+          "why": "MariTide was approved for obesity at ~17% efficacy and has no stated CV indication. Part D coverage under CV codes is asserted with no label or trial to support it, yet it carries part of the 3.2M-user figure. This fails mechanism."
+        },
+        {
+          "quote": "an FDA rule effectively ends incretin TV ads, after lobbying by the 'Unassisted' movement and MAHA legislators",
+          "field": "world/events/5/event",
+          "why": "A final federal rule from an FDA described as pro-speed is credited to a young cultural movement's lobbying, within about a year of that movement emerging. No rulemaking chain is shown. This fails mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This world is arguably less bad than 2030 on inequality and autonomy. The top-to-bottom gap narrows (26 vs 19.4), Medicaid and Medicare reach the poor, employer 'steadiness' conditioning recedes after the EEOC finding, and the harms are measured (EPI label, FDA interim anhedonia study). Remaining harms are a likely rise in absolute fractures among ~5M untrained older starters, a 7.4M gray market with compounded retatrutide and endotoxin lots, diverging pediatric access by state and class, and normalised flatness. Only in epistemic terms is it clearly better. Overall it is a harder society with new losers, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Adoption is exactly +5.2pp. The generic collapse has a settlement event. Public expansion is the March 2031 law. Nicotine is an existing product in a new indication. Gray-market resurgence appears as compounded next-gen peptides. Eleven state restrictions and the Unassisted movement are present, as is mainstream flatness. The safety signal is 'none' (the EPI label action is not a new signal). mechanism: The generic-to-coverage-to-Medicaid chain is well shown. The EEOC-to-HR shift is plausible. The MariTide Part D route under CV codes is unsupported (claim 2). The federal ad-ban rule credited to Unassisted lobbying is asserted (claim 3). The prose's 'within a year' framing credits the new law with all 16M Medicare users, though ~9.9M were already covered, and the title 'Teenagers refuse' conflicts with rising pediatric use. magnitude: Population figures sit inside the envelope (22.8, 31.5, income thirds bracketing the national figure, age bands summing to 22.8). The payer mix sums to 100% and the Medicare, Medicaid and CBO arithmetic multiplies out. The nicotine approval at ~10 months after filing breaks the 12-month rule (claim 1). Minor gaps: the gray-market 'halved' figure only roughly reconciles, and 13.6M Medicare users aged 65+ leaves almost no 65+ users elsewhere.",
+        "generativity": "The Denise Harper vignette gives concrete texture: pen in the butter compartment, Ohio Medicaid $3.40 copay, the Hyderabad label, church coffee hour, menthols cut to four a day, Mr. Okafor's strength class, and daughter Kayla at the UNASSISTED bakery. The world also supplies sitcoms, long-table dinners, 'off-week' requests to managers, and telehealth sites that change their names. Many scenes and characters are implied."
+      },
+      "plausibility": 6.05
+    },
+    {
+      "custom_id": "s3-L3-r43-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo filed oral semaglutide for smoking and vaping cessation in Jan 2031 on two phase 3 trials (about 8–10 points higher continuous abstinence at 24 weeks vs placebo), and it was approved Nov 2031.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Approval comes 10 months after filing, inside the envelope's 12-month minimum for phase-3 products. The 2030 world stated no nicotine phase 3 or filing, so two completed 24-week trials are asserted within about four months of the start. This fails magnitude and mechanism."
+        },
+        {
+          "quote": "The monthly driver is realised by MariTide's spread to ~3.2M users, including Part D under CV codes from 2032.",
+          "field": "world/drugs/pipeline_note",
+          "why": "MariTide was approved for weight loss in Apr 2030 and no cardiovascular indication is shown. Medicare cannot cover it under CV codes without one, so that coverage route is asserted. Reaching 3.2M users in under three years, at ~17% efficacy and with worse early vomiting, is also unexplained."
+        },
+        {
+          "quote": "the same month an FDA rule effectively ends incretin TV ads, after lobbying by the 'Unassisted' movement and MAHA legislators",
+          "field": "world/events/5/event",
+          "why": "A final rule that takes a whole drug class off broadcast TV within about two years of a movement appearing, at an FDA described as pro-speed and pro-industry, has no shown chain through rulemaking or pharma opposition. It is a convenient coincidence."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 4.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 61.6M users, a Medicare population of older, untrained starters facing a fracture HR of ~1.3, and a EPI signal on a permanent-therapy footing keep public_health high. Roughly 2.5M excess anhedonia cases and a 7.4M gray market, with harm moving to compounded retatrutide, also weigh. Offsetting this, generics and Medicaid narrow the income gap (26 vs 19.4), and the EEOC finding and 'off weeks' ease workplace coercion. The result is a harder but more open society, with harms named and measured.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: generic collapse, public expansion, nicotine, no new safety signal, MariTide, gray-market resurgence, Unassisted, 11-state restriction and mainstream flatness. Nothing contradicts a driver. mechanism: The generic-to-coverage-to-payer-mix chain is well shown. The nicotine approval (claim 1), MariTide Part D under CV codes (claim 2) and the ad ban (claim 3) are asserted, and 'within months' HR changes after the EEOC finding are fast. magnitude: Population figures sit inside the envelope, and payer shares, Medicare and Medicaid arithmetic and the anhedonia count all reconcile. Nicotine approval 10 months after filing breaks the 12-month rule (claim 1). The 65+ users are all assigned to Medicare, leaving no room for cash or gray use, and the pediatric percentages imply slightly under 1.5%.",
+        "generativity": "The Denise Harper scene has strong texture: the pen in the butter compartment, the Hyderabad label in small type, the church coffee hour, the menthols, Mr. Okafor's strength class and Kayla's UNASSISTED bakery. The world fields supply many implied characters (Dayton women on Medicaid, MariTide employer-clinic enrollees, Unassisted organisers, off-week requests to managers). The prose summary is more explanatory than shown."
+      },
+      "plausibility": 5.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Cheap generics raised restart rates (now ~45–50% within a year) but did not change one-year persistence (~one-third).",
+        "field": "world/population/note",
+        "why": "Higher restart rates should raise the cycled share and the share of current users on a second course. The world instead holds `cycled_off_and_on_pct` at exactly 44 and says the second-course share fell from ~53% to ~50%, so the stated mechanism contradicts the reconciled figures (magnitude and mechanism)."
+      },
+      {
+        "quote": "Novo filed oral semaglutide for smoking and vaping cessation in Jan 2031 on two phase 3 trials (about 8–10 points higher continuous abstinence at 24 weeks vs placebo), and it was approved Nov 2031.",
+        "field": "world/drugs/pipeline_note",
+        "why": "The parent lists no nicotine filing and no nicotine phase 3. Under the envelope's approval rule, a phase 3 product that files in this window cannot be approved earlier than 12 months after the filing, and Jan to Nov 2031 is 10 months (magnitude)."
+      },
+      {
+        "quote": "CBO scored the change at ~$26B over 2032–41: ≈5.5M added Medicare users at maturity × ~$55 × 12 ≈ $3.6B a year gross, less modest medical offsets, ramping in.",
+        "field": "world/access/public_coverage",
+        "why": "The arithmetic does not reach the score. $3.6B a year gross over ten years is about $36B, and 'modest' offsets cannot remove ~28% of it. The score also omits the mandatory Medicaid expansion (~$2.7B a year generic spend on 5.6M users), so the budget figure is under-reconciled (magnitude)."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.17,
+      "autonomy": 3.83,
+      "inequality": 3.83,
+      "public_health": 5.0,
+      "cohesion": 4.33,
+      "epistemic": 3.67,
+      "overall": 4.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.33,
+      "magnitude": 5.17
+    },
+    "plausibility": 6.12,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "This is a mixed world, with access widened but new costs. Cheap generics and Medicaid/Medicare coverage narrow the income gap (top 26 vs bottom 19.4). Anhedonia (~2.5M excess cases), a rising absolute fracture burden among ~5M untrained older starters, a ~$7B compounded gray market with contamination harms, and divergent pediatric use by state and class keep it from being benign. Harms are named and measured (FDA interim, EPI label, EEOC finding), so the epistemic score is low, and the 'steadiness' pressure at work has eased. Overall it reads as a somewhat harder society with new losers, not a worse one.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Generic collapse comes through the Jan 2031 settlement event, public expansion through the March 2031 law, nicotine through the Nov 2031 approval, and restriction through the eleven states. Gray-market resurgence, natural movement (Unassisted), mainstream complaint and MariTide spread are also traced to events. No signal is added, and nothing contradicts a driver. mechanism: Most chains are shown, such as the generic price leading to coverage law, Medicaid starters and regainers, and the EEOC finding leading to 'steadiness' dropped. Weaker links are the restart-rate claim against an unchanged 44% cycled share, a new Unassisted movement producing both eleven state laws and a federal ad rule within a year, and the headline 'Teenagers Refuse', which the 18–29 data (10 to 12%) and the affluent-18–29 Unassisted description do not support. magnitude: The population figures sit inside the envelope, and age, income, payer mix and the Medicare and Medicaid spend all multiply out. The nicotine approval in 10 months breaks the 12-month rule, the CBO $26B score does not match its own arithmetic and omits Medicaid, and the cycled-share inconsistency and the pediatric counts (~0.9M implied vs 1.5%) are minor gaps. These are the flagged claims.",
+      "generativity": "The Denise Harper scene is concrete and implies a whole cast: the pen in the butter compartment, the Hyderabad label, the $3.40 Ohio Medicaid copay, the one-cookie coffee hour at church, Mr. Okafor and the Y strength class, and Kayla's UNASSISTED bakery. Her quitting menthols without asking it to is a neat unplanned detail. The world fields add rich texture, including the Unassisted long tables, off-week requests like PTO, and the sitcom on alternating drug holidays."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.299,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 49
   }
 }

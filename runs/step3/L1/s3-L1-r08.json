@@ -49,6 +49,41 @@
         "input_tokens": 17520,
         "output_tokens": 19964
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r08-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24925,
+        "output_tokens": 8096
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r08-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24925,
+        "output_tokens": 5453
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r08-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24925,
+        "output_tokens": 6994
+      }
     ]
   },
   "world": {
@@ -330,6 +365,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r08-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Why persistence rose: the permanent Medicare benefit and Medicaid national rate ended the Bridge-renewal and cessation-cap churn for millions",
+          "field": "world/population/note",
+          "why": "Mechanism: two-year persistence jumps from 51% to 64%, but the permanent benefit began only in Jan 2032 and the Medicaid rate in Feb 2032, with criteria and copay unchanged. The note also cuts restart from 55% to 38% on the thin explanation that the off-pool is 'more deliberate'."
+        },
+        {
+          "quote": "The HRSA Community Incretin Access Program has a two-year appropriation at $4.8B for FY2032.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: a two-year $4.8B appropriation would fund about $2.4B a year, yet the same note itemises about $4.79B of annual spend. The 2030 baseline was $4.5B for a single year, so the budget does not reconcile."
+        },
+        {
+          "quote": "US generic entry for semaglutide is set by patent settlements for 2033, and tirzepatide later.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: the parent world has exclusivity running to about 2031–32, and settlements normally allow entry earlier, not later. No event shows how entry slips to 2033."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Use is flat at about 19%, but 65+ use rises to 9.3M on a single counselling visit, so fracture and sarcopenia exposure grow. The pediatric growth signal (0.8–1.2 cm/yr slower, later puberty, ARFID HR 1.6) is a new harm, and the HRSA pause leaves poorer children without the free option that affluent families can still buy. Public payment narrows access gaps and reward blunting is now named and labelled, which helps epistemics. Normalisation ('being off invites a question'), Indiana steering members to monthly dosing and reduced ability to take a break add soft coercion, so this is a harder society with new losers but not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. These include managed-decline cash prices, the permanent Medicare benefit plus the Medicaid rate, the pediatric growth signal, MariTide approved 14 months after its Jul 2030 filing (allowed), the anhedonia label, HRSA funding, no new indication and no market shock. mechanism: the chain from Medicare permanence to 65+ use rising 12%→15% and persistence rising 51%→64% is asserted (claim 1). Three employers dropping coverage is offered to explain a 3-point fall in employer coverage. The 2033 generic date has no event and conflicts with the parent's 2031–32 exclusivity (claim 3). magnitude: on-drug 19.1, ever-used 28.8, income thirds, age bands, payer mix (sums to 100%), Medicare/Medicaid/HRSA arithmetic and the ever/on/off flow all reconcile and sit inside the envelope. The main gap is the ambiguous HRSA two-year $4.8B versus about $4.79B annual spend (claim 2), plus a fast Medicaid jump to 8.3M users.",
+        "generativity": "The Merrillville scene works: Tamika, Marcus's height measurement, the kiosk check, the pending move to monthly dosing and the 'week off' talk. Sun City pickleball, Charlotte and Maricopa add texture, and the Indiana clinic-given monthly dose is a good detail. Some of the prose is still explanatory, but the world implies many scenes."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s3-L1-r08-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Of these ≈60k are aged 6–11, down from ~90k after the May 2032 growth signal paused HRSA new starts and the AAP restricted under-12 initiation to pediatric endocrinologists.",
+          "field": "world/population/note",
+          "why": "Mechanism: a pause on new starts in May 2032 cannot plausibly cut the stock of 6–11 users by a third by year-end. Stopping new starts only cuts inflow, and the note attributes the whole fall to it."
+        },
+        {
+          "quote": "of whom 5.5 restarted (38%, down from 55% because the off-pool is now older and more deliberate)",
+          "field": "world/population/note",
+          "why": "Mechanism: the restart rate falls from 55% to 38% for a hand-waved reason, while persistence rises and cycling share climbs to 39%. The chosen figures just make the on-drug total land at 19.1."
+        },
+        {
+          "quote": "36 states plus DC have opted in.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: 36 states plus DC opting in within about ten months of the February 2032 rate, taking Medicaid users from 5.5M to 8.3M, is very fast. No state budget, waiver or political process is shown, and the Indiana and Arkansas conditioning regimes still stand."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is a recognisably harder one in places. Pediatric growth and puberty effects are ambiguous, a 9.3M-strong 65+ base is on a one-visit, low-monitoring regimen, and fractures are rising. Monthly clinic dosing is being steered by Indiana's conditioning regime, and being off the drug now has to be explained. Offsetting this, harms are now named and measured: the anhedonia label, the Drug Safety Communication and the pediatric registry. Cost and access improved, so epistemic and cohesion badness are moderate, and the overall score is about 5.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events: managed decline, public expansion, the pediatric developmental signal, MariTide, subsidy, the anhedonia complaint and normalisation. No new indication or market shock appears, and the 14-month MariTide approval fits the envelope. mechanism: most chains are shown, such as the price agreement tied to tariff exemptions, commercial users shifting to Medicare and Medicaid, and the Indiana PDC steering toward clinic-given MariTide. Three are asserted: the 90k to 60k pediatric drop, the 55% to 38% restart rate, and the fast 36-state opt-in. magnitude: all population figures sit inside the envelope (19.1 current, 28.8 ever) and the age, income, payer-mix, Medicare, Medicaid and HRSA arithmetic reconciles. The only strain is that the 41k registry children and the 60k 6–11 count are loosely linked.",
+        "generativity": "The Merrillville scene (the height bar, the blue sheet, the kiosk green check, the Thanksgiving 'week off', the monthly shot at the Medicaid clinic) implies characters and institutions well. The world also supplies strong texture: Sun City pickleball, 'Any flatness?' intake forms, and 'Monthly' dating tags. The prose is partly explanatory up front, but the vignette shows rather than tells."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s3-L1-r08-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "US generic entry for semaglutide is set by patent settlements for 2033, and tirzepatide later.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "mechanism: the 2030 world put exclusivity at ~2031–32, and no settlement appears among the events. The date moves out a year with no stated cause, and the rest of the world (plans, Indian manufacturing deals) is built on it."
+        },
+        {
+          "quote": "Of the 18.8 on in 2030, 12.0 stayed on (64% two-year persistence, up from 51%)",
+          "field": "world/population/note",
+          "why": "mechanism: a 13-point rise in two-year persistence is credited to the permanent Medicare benefit (Jan 2032) and the Medicaid national rate (Feb 2032). Both took effect in the last 12 months of a 24-month window, and the 2030 Bridge was already renewed, so the chain is too thin for the size of the jump."
+        },
+        {
+          "quote": "the obesity-only benefit is ≈4.6M × $245 × 12 ≈ $13.5B",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: Medicare obesity-only users double from 2.3M to 4.6M although criteria and copay are 'unchanged' and the Bridge was already in force. Making the benefit permanent does not explain a doubling in about a year; the arithmetic is fine but the cause is missing."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is harder in some ways and better in others. About 9.3M users aged 65+ sit on a Medicare benefit with a single counselling visit, and fractures are rising. A pediatric growth and eating-disorder signal affects about 60k children. Indiana steers Medicaid members to monthly MariTide to meet adherence rules, and 'being off needs explaining' adds pressure to take the drug (autonomy 5). Inequality eases on access, though pediatric access is still stratified by who can pay for a private endocrinologist, and epistemic opacity falls because anhedonia and pediatric harms are now measured and labelled. The overall score is a recognisably harder society with a few new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is 19.1% (+0.3), managed_decline is the July 2031 price deal, public_expansion is the permanent Medicare benefit plus the Medicaid rate, and the pediatric growth signal is the May 2032 DSC. MariTide is approved 14 months after its filing, the anhedonia label fits mainstream_complaint, and no new indication is added. mechanism: several changes are asserted rather than shown (see the three listed claims): the persistence jump, the doubling of Medicare obesity users, and the 2033 generic date. The cash-price cuts, the Medicaid shift and the commercial decline are otherwise well chained. magnitude: all headline figures sit inside the envelope (19.1% on drug, 28.8% ever, income thirds bracketing the national figure, MariTide approval timing). The payer shares sum to 100%, the Medicare, Medicaid and HRSA dollar arithmetic multiplies out, and the age-band weighting and cycling arithmetic reconcile. The small gaps are that the market falls only ~5% ($135B to $128B) against a ~15% US net price fall on flat volume plus deeper ex-US erosion, and that 1.6M MariTide users within about 15 months of launch is brisk.",
+        "generativity": "The Tamika and Marcus scene is concrete and varied: height bar, kiosk weigh-in, a doctor probing about skipped lunch, the sister's Thanksgiving call, the growth-chart app, and Indiana's monthly-dose steering as a personal decision. Secondary threads add texture, such as Sun City pickleball clubs, the Charlotte build, 'the grey' on intake forms, and flat-week holidays around pitches. These imply many further scenes."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Why persistence rose: the permanent Medicare benefit and Medicaid national rate ended the Bridge-renewal and cessation-cap churn for millions",
+        "field": "world/population/note",
+        "why": "Mechanism: two-year persistence jumps from 51% to 64%, but the permanent benefit began only in Jan 2032 and the Medicaid rate in Feb 2032, with criteria and copay unchanged. The note also cuts restart from 55% to 38% on the thin explanation that the off-pool is 'more deliberate'."
+      },
+      {
+        "quote": "The HRSA Community Incretin Access Program has a two-year appropriation at $4.8B for FY2032.",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude: a two-year $4.8B appropriation would fund about $2.4B a year, yet the same note itemises about $4.79B of annual spend. The 2030 baseline was $4.5B for a single year, so the budget does not reconcile."
+      },
+      {
+        "quote": "US generic entry for semaglutide is set by patent settlements for 2033, and tirzepatide later.",
+        "field": "world/access/generic_rest_of_world",
+        "why": "Mechanism: the parent world has exclusivity running to about 2031–32, and settlements normally allow entry earlier, not later. No event shows how entry slips to 2033."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.0,
+      "inequality": 4.83,
+      "public_health": 5.67,
+      "cohesion": 4.67,
+      "epistemic": 3.83,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.53,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "Use is flat at about 19%, but 65+ use rises to 9.3M on a single counselling visit, so fracture and sarcopenia exposure grow. The pediatric growth signal (0.8–1.2 cm/yr slower, later puberty, ARFID HR 1.6) is a new harm, and the HRSA pause leaves poorer children without the free option that affluent families can still buy. Public payment narrows access gaps and reward blunting is now named and labelled, which helps epistemics. Normalisation ('being off invites a question'), Indiana steering members to monthly dosing and reduced ability to take a break add soft coercion, so this is a harder society with new losers but not a collapse.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. These include managed-decline cash prices, the permanent Medicare benefit plus the Medicaid rate, the pediatric growth signal, MariTide approved 14 months after its Jul 2030 filing (allowed), the anhedonia label, HRSA funding, no new indication and no market shock. mechanism: the chain from Medicare permanence to 65+ use rising 12%→15% and persistence rising 51%→64% is asserted (claim 1). Three employers dropping coverage is offered to explain a 3-point fall in employer coverage. The 2033 generic date has no event and conflicts with the parent's 2031–32 exclusivity (claim 3). magnitude: on-drug 19.1, ever-used 28.8, income thirds, age bands, payer mix (sums to 100%), Medicare/Medicaid/HRSA arithmetic and the ever/on/off flow all reconcile and sit inside the envelope. The main gap is the ambiguous HRSA two-year $4.8B versus about $4.79B annual spend (claim 2), plus a fast Medicaid jump to 8.3M users.",
+      "generativity": "The Merrillville scene works: Tamika, Marcus's height measurement, the kiosk check, the pending move to monthly dosing and the 'week off' talk. Sun City pickleball, Charlotte and Maricopa add texture, and the Indiana clinic-given monthly dose is a good detail. Some of the prose is still explanatory, but the world implies many scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.867,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 37
   }
 }

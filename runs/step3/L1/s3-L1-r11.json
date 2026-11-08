@@ -51,6 +51,41 @@
         "input_tokens": 17589,
         "output_tokens": 22678
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r11-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26680,
+        "output_tokens": 7397
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r11-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26680,
+        "output_tokens": 6678
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r11-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26680,
+        "output_tokens": 7136
+      }
     ]
   },
   "world": {
@@ -329,6 +364,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r11-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "12.5 of the 18.8 then on stayed on (66% two-year persistence, up from ~50%; monthly MariTide, clinic-administered dosing and adherence-gated premiums explain the rise)",
+          "field": "world/population/note",
+          "why": "Mechanism: MariTide was approved only in Sep 2031 and reaches ~2.5M of 62M users by end 2032, so it cannot explain a 16-point persistence jump across the whole 2030 cohort. The restart-rate drop from 55% to 43% is attributed to 'deliberate opt-outs' with no shown chain."
+        },
+        {
+          "quote": "an NIH-co-funded and Novo-sponsored phase 3 in gambling disorder read out Mar 2031, the sNDA was filed Sep 2031 with priority review, and approval followed Jun 2032",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: gambling use was only anecdotal in 2030 with no phase 3 in the starting pipeline. A phase 3 reading out within about nine months is very fast. Approval 9 months after filing is also under the 12-month floor the envelope applies to filed products."
+        },
+        {
+          "quote": "Interim pediatric registry analysis (Nov 2031, ~38k children who started at ages 6–11): height velocity ~0.6 cm/yr below matched controls in the first two years",
+          "field": "world/safety_ledger/13/prevalence_note",
+          "why": "Mechanism: the label began Apr 2029 and only ~90k children aged 6–11 were on drug by 2030. A 38k cohort with two full years of height follow-up by Nov 2031 needs most starts to have occurred in the label's first months, which is a stretch."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Conditioning is now the dominant coverage design: six Medicaid waivers, outcome-based employer premium differentials, and clinic-administered MariTide that bypasses union limits on PBM data. That heavily erodes autonomy for the poor and for workers. The pediatric growth and puberty signal, the restrictive-eating signal, the lean-mass and bone harms in the unmonitored HRSA and waiver populations, and the Bridge's six-month cut-off add to the public-health burden. Prices fall, harms become measured, and the affluent turn away from the medicated body, so epistemic and flourishing scores stay moderate.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: 23.0% adoption (18.8+4.2), managed decline in Jan 2031, waivers and Bridge conditioning, the gambling label, the pediatric signal, MariTide, the aesthetic inversion, HRSA subsidy, and the anhedonia complaint. Nothing contradicts a driver. mechanism: Most chains are shown, such as price step-down to lower gray share and the Daubert ruling to claim dismissals. The persistence jump to 66% is credited to a MariTide that barely exists at scale (claim 1), the gambling pipeline is compressed (claim 2), and the registry cohort size is a stretch (claim 3). magnitude: Adult use and ever-use sit inside the envelope, the income thirds and age bands reconcile, and the payer mix sums to 62.1M. The Bridge, Medicaid and HRSA dollar figures multiply out, and no US generic appears. The deductions are the gambling approval 9 months after filing and the strained persistence arithmetic.",
+        "generativity": "The prose gives implied characters and scenes: Rosa at the workplace clinic trailer, the green app tied to a $212 premium discount, Darnell off Wegovy, and Mateo's growth check with the pencil mark on the doorframe. The world fields add Austin appetite rooms, 'fed cut' tailoring, never-used dating badges, holiday math and unmedicated festivals. Daily life has strong texture and many film-ready tensions."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s3-L1-r11-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "66% two-year persistence, up from ~50%; monthly MariTide, clinic-administered dosing and adherence-gated premiums explain the rise",
+          "field": "world/population/note",
+          "why": "Mechanism: a 16-point jump in persistence across the whole 2030 user cohort is credited to MariTide, which launched Sep 2031 and reaches only ~2.5M users (about 4% of the total) by end 2032. Premium gating and clinic dosing cover a minority, and the same world has affluent young adults tapering off and Bridge non-responder cut-offs, both of which push persistence down."
+        },
+        {
+          "quote": "In the US, Paragraph IV settlements disclosed in 2031 set generic semaglutide entry for 2033",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: the parent world puts US exclusivity at ~2031–32. Paragraph IV settlements normally allow entry at or before expiry, not later, so a 2033 date contradicts the parent timeline and is not shown in any event."
+        },
+        {
+          "quote": "Nine states use sports-betting problem-gambling earmarks to fund free semaglutide for ~0.1M people",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: nine state legislatures redirect earmarked funds, contract for the drug and enrol ~100k people within months of a Jun 2032 label. The chain is asserted, not shown, and it needs rapid, coordinated state budget action that the world never explains."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harms are conditioning that falls on the poor (six Medicaid waivers, the Bridge 6-month response test, employer premium differentials and clinic-administered MariTide that bypasses union protections), and the pediatric growth and puberty signal with about 60k children still on drug. Reduced pleasure at 12–16% of long-term users and a possible rise in restrictive eating among early starters add to it. Offsetting this, thinness is cheaper, harms are now measured (the anhedonia study and registry), and the affluent backlash gives some epistemic clarity. The result is a harder society with new losers rather than a structurally hidden harm.",
+        "plausibility": "driver_fidelity: every driver is visibly realised in fields and dated events (managed decline Jan 2031, MariTide Sep 2031, gambling label Jun 2032, the Nov 2031 pediatric signal, conditioning waivers, the anhedonia complaint and the aesthetic inversion), and nothing contradicts one. mechanism: most chains are shown, but persistence rising from 50% to 66% is over-credited to MariTide, the 2033 Paragraph IV date contradicts the parent's 2031–32 exclusivity, nine states fund free drug almost instantly after the label, and employer coverage rising to 61% is thinly explained. magnitude: 23.0% on drug and 32.0% ever are inside the envelope, the age and income bands bracket correctly, and the population note, payer mix (sums to 100%), Bridge, Medicaid and HRSA spend all multiply out. MariTide approval is at least 12 months after filing, and generic_us stays false.",
+        "generativity": "The Rosa Delgado scene is filmable: the clinic trailer, the badge scan, the green app, the $212 premium, the mole she can't taste and the pencil mark on the doorframe. It has other characters (Darnell, Mateo, the nurse, Dr. Hsu) and texture from dose-holiday math and the growth chart on the fridge. The world fields add scenes of their own, such as Austin appetite rooms, 'never-used' badges, grievances over adherence tracking and touring musicians describing their dosing."
+      },
+      "plausibility": 7.85
+    },
+    {
+      "custom_id": "s3-L1-r11-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "12.5 of the 18.8 then on stayed on (66% two-year persistence, up from ~50%; monthly MariTide, clinic-administered dosing and adherence-gated premiums explain the rise)",
+          "field": "world/population/note",
+          "why": "Mechanism: MariTide launched in Sep 2031 and reaches only ~2.5M of 62M users (about 4%), so it cannot lift two-year persistence by 16 points. The rise is asserted, and the cheaper cash prices and waiver lockouts are not credited."
+        },
+        {
+          "quote": "Interim pediatric registry analysis (Nov 2031, ~38k children who started at ages 6–11): height velocity ~0.6 cm/yr below matched controls in the first two years",
+          "field": "world/safety_ledger/pediatric_growth",
+          "why": "Mechanism and magnitude: the 6–11 label began Apr 2029, so 'first two years' of follow-up for ~38k children by Nov 2031 needs a large cohort enrolled almost immediately. Only ~90k were on drug by 2030, so this is a tight fit."
+        },
+        {
+          "quote": "nine states route sports-betting problem-gambling funds to free provision",
+          "field": "world/events/5/event",
+          "why": "Mechanism: nine state budgets are said to redirect earmarked funds in the same month as the Jun 2032 approval, and operators already blame the label on earnings calls. The speed is unshown. The gambling approval also came ~9 months after the sNDA filing, short of the envelope's 12-month rule."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Conditioning is now the dominant coverage design: six Medicaid waivers, the Bridge 6-month response test, and employer premium differentials. It binds the poor to a body standard the affluent are abandoning. The pediatric growth and puberty signal, a possible ARFID signal, and anhedonia now 'established' add real harm. Offsets are lower prices, wider access, and harms that are now named and measured, which keeps epistemic badness low. This is a recognisably harder society with new losers, not a refusal-level one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised (+4.2pp to 23.0%, managed decline with the Jan 2031 step-down, waiver and employer conditioning, gambling label, pediatric signal, MariTide, aesthetic inversion, subsidy, mainstream complaint), and nothing contradicts one. mechanism: most chains are shown, but persistence rising 50%→66% is credited to a 4%-share product (claim 1), the registry timeline is tight (claim 2), and state gambling funding appears instantly (claim 3). magnitude: on-drug 23.0, ever-used 32.0 and the income thirds are inside the envelope, and the age bands, payer mix, HRSA, Bridge and Medicaid arithmetic all reconcile. Minor flaws are the gambling approval at ~9 months after filing and a market that grows to $142B despite flat US revenue (+24% volume at −20% price) and deeper ex-US erosion.",
+        "generativity": "The Rosa Delgado scene (badge scan at the workplace clinic, the green app and $212 premium discount, the mole she can't taste, Mateo's growth check, the pencil mark on the doorframe) shows the conditioning and pediatric themes rather than explaining them. The world fields add texture: Austin appetite rooms, 'fed cut' tailoring, 'never-used' badges, holiday math, and grievances over monthly dosing. Many scenes are implied."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "12.5 of the 18.8 then on stayed on (66% two-year persistence, up from ~50%; monthly MariTide, clinic-administered dosing and adherence-gated premiums explain the rise)",
+        "field": "world/population/note",
+        "why": "Mechanism: MariTide was approved only in Sep 2031 and reaches ~2.5M of 62M users by end 2032, so it cannot explain a 16-point persistence jump across the whole 2030 cohort. The restart-rate drop from 55% to 43% is attributed to 'deliberate opt-outs' with no shown chain."
+      },
+      {
+        "quote": "an NIH-co-funded and Novo-sponsored phase 3 in gambling disorder read out Mar 2031, the sNDA was filed Sep 2031 with priority review, and approval followed Jun 2032",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude and mechanism: gambling use was only anecdotal in 2030 with no phase 3 in the starting pipeline. A phase 3 reading out within about nine months is very fast. Approval 9 months after filing is also under the 12-month floor the envelope applies to filed products."
+      },
+      {
+        "quote": "Interim pediatric registry analysis (Nov 2031, ~38k children who started at ages 6–11): height velocity ~0.6 cm/yr below matched controls in the first two years",
+        "field": "world/safety_ledger/13/prevalence_note",
+        "why": "Mechanism: the label began Apr 2029 and only ~90k children aged 6–11 were on drug by 2030. A 38k cohort with two full years of height follow-up by Nov 2031 needs most starts to have occurred in the label's first months, which is a stretch."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 7.0,
+      "inequality": 6.17,
+      "public_health": 6.0,
+      "cohesion": 5.5,
+      "epistemic": 4.17,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.61,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Conditioning is now the dominant coverage design: six Medicaid waivers, outcome-based employer premium differentials, and clinic-administered MariTide that bypasses union limits on PBM data. That heavily erodes autonomy for the poor and for workers. The pediatric growth and puberty signal, the restrictive-eating signal, the lean-mass and bone harms in the unmonitored HRSA and waiver populations, and the Bridge's six-month cut-off add to the public-health burden. Prices fall, harms become measured, and the affluent turn away from the medicated body, so epistemic and flourishing scores stay moderate.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: 23.0% adoption (18.8+4.2), managed decline in Jan 2031, waivers and Bridge conditioning, the gambling label, the pediatric signal, MariTide, the aesthetic inversion, HRSA subsidy, and the anhedonia complaint. Nothing contradicts a driver. mechanism: Most chains are shown, such as price step-down to lower gray share and the Daubert ruling to claim dismissals. The persistence jump to 66% is credited to a MariTide that barely exists at scale (claim 1), the gambling pipeline is compressed (claim 2), and the registry cohort size is a stretch (claim 3). magnitude: Adult use and ever-use sit inside the envelope, the income thirds and age bands reconcile, and the payer mix sums to 62.1M. The Bridge, Medicaid and HRSA dollar figures multiply out, and no US generic appears. The deductions are the gambling approval 9 months after filing and the strained persistence arithmetic.",
+      "generativity": "The prose gives implied characters and scenes: Rosa at the workplace clinic trailer, the green app tied to a $212 premium discount, Darnell off Wegovy, and Mateo's growth check with the pencil mark on the doorframe. The world fields add Austin appetite rooms, 'fed cut' tailoring, never-used dating badges, holiday math and unmedicated festivals. Daily life has strong texture and many film-ready tensions."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.684,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 10
   }
 }

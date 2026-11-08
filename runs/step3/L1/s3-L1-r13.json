@@ -49,6 +49,41 @@
         "input_tokens": 17577,
         "output_tokens": 24191
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r13-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26100,
+        "output_tokens": 7839
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r13-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26100,
+        "output_tokens": 6564
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r13-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26100,
+        "output_tokens": 7511
+      }
     ]
   },
   "world": {
@@ -314,6 +349,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r13-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "In phase 3 the oral tablet produced a mean ~22% loss at 68 weeks, non-inferior to tirzepatide 15 mg in a head-to-head study.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: a daily tablet matching the best injectable is a large jump from the parent's oral agents. The head-to-head result is also supposed to sit in an NDA filed Jun 2028, and the candidate does not explain how a comparator trial that large existed by then."
+        },
+        {
+          "quote": "65+ use doubled, from 12% to 23.8% (~14.8M), once the Bridge became permanent Part D coverage with a $35 copay, even though fracture and NAION warnings now sit on the label.",
+          "field": "world/population/note",
+          "why": "Mechanism: permanent Part D only began Jan 2032, and it changes the copay from $50 to $35 for people already covered by the Bridge. Doubling 65+ use in two years while the labels warn against it is asserted, not shown, and it leaves almost no 65+ users outside Medicare."
+        },
+        {
+          "quote": "States that cover obesity drugs at the national $179 net price, and that adopt CMS 'verified engagement' continuation rules, get a 75% match. 40 states plus DC have opted in.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: 40 states pass enabling legislation, build CMS-approved engagement systems and triple Medicaid users (5.5M to 15.5M) within about 18 months of a Jun 2031 law. The candidate gives no administrative or budget chain for that speed, and several states would be expected to resist the conditioning rules."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 4.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 76M adults are on the drug, and public payers condition continuation on adherence in 11 Medicaid states, in Part D and, via the wellness rule, in employer plans. Surveillance that counts fills rather than bodies drives private skipping and lockouts. The elderly base doubled under fracture, sarcopenia and NAION warnings with checkbox monitoring, and about 875k children are on the drug with underpowered bone data. Inequality in results narrows as oral parity and Medicaid reach the bottom third, which holds that score down, but autonomy and epistemic harm are high because adherence monitoring is gamed and manufacturer safety data are distrusted after the Lilly scandal. This is a recognisably harder society with new losers (lockouts, the elderly, kids), not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver appears at its stipulated value and is traceable to fields and events: 28.2% adoption, $349→$249 managed decline, Part D and Medicaid expansion, no new indications, the NAION class label, oral amycretin, the Lilly scandal, the unmedicated movement, conditioning rules and the mainstream 'grey'. Approval timing respects the envelope's rules. mechanism: Most chains are shown (price cuts traded for tariff exemptions; Lilly's miscoding leading to the label and the Part D eye screen; adherence-based surveillance leading to holidays), but the amycretin efficacy claim, the 65+ doubling and the 40-state Medicaid uptake (my claims 1–3) are largely asserted. magnitude: All headline figures sit inside the envelope, and the payer mix sums to 76.0M and 100%. Medicare ($40.1B), Medicaid ($33.3B) and HRSA ($3.1B) arithmetic multiplies out, and the ever/current/cycled arithmetic closes. The only gap is minor: ~38M users over 50 against roughly 41M implied by the age bands, and a NAION case range slightly under the stated rate.",
+        "generativity": "The world has strong scene material: Foundayo behind the coffee tin, the BrightPath adherence ring and $90 surcharge, the supper club, Tasha's tote bag, the cookout and the grey-patch eye check. The Charlotte build, Asheville/Boise unmedicated subculture, dating tags and record labels tagged 'unmedicated' all imply further characters. The Marcus vignette shows rather than explains, though the opening prose section is largely expository."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s3-L1-r13-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Idaho and Montana enact 'Appetite Freedom' laws banning adherence- or BMI-conditioned premiums in state-regulated plans after a campaign led by the unmedicated movement; employer groups sue, citing ERISA",
+          "field": "world/events/5/event",
+          "why": "Mechanism: the movement is only a couple of years old, yet it passes statutes in two states by May 2032 with no legislative chain shown. Montana's legislature does not hold a regular session in even years, so a May 2032 enactment is doubtful."
+        },
+        {
+          "quote": "Bottom-third use rose by 10 pts, the largest jump of any group.",
+          "field": "world/population/note",
+          "why": "Magnitude: the candidate's own figures contradict it. Middle-third use rose 10.1 points (18.5 to 28.6), and the 65+ band rose 11.8 points (12 to 23.8), so the stated explanation does not reconcile."
+        },
+        {
+          "quote": "~16.8M users (14.3M aged 65+ and 2.5M disabled under 65) = 22.1% of users.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: disabled under-65 Medicare users jump from ~0.4M to 2.5M, about sixfold in two years, with no stated cause. Medicare also absorbs 14.3M of the ~14.8M users aged 65+, which leaves almost no 65+ users in any other payer channel."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the class gap in outcomes narrows (oral parity, Medicaid match), so inequality is arguably lower than in 2030. Against that: the elderly base doubles under fracture, sarcopenia and NAION warnings with checkbox counselling, and conditioning reaches 11 Medicaid states, Part D and employer premiums, with lockouts pushing people into the gray market. Surveillance that counts fills rather than bodies, plus normalised dose-skipping and 'the grey', makes the harm harder to measure. This is a harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visibly realised in fields and dated events. These include the Part D/Medicaid expansion, TrumpRx cuts, the NAION class label, amycretin oral, the Lilly scandal, the unmedicated movement, conditioning rules and the mainstream grey. The pipeline timing is allowed by the envelope. mechanism: most chains are shown (price cuts and match drive uptake, the scandal leads to the label, conditioning leads to private skipping). The Idaho and Montana laws appear too quickly, and the sixfold jump in disabled Medicare users and the 2033 generic date are asserted, not explained. magnitude: 28.2% on drug and 37.0% ever-used sit inside the envelope, and the age and income arithmetic works. The payer mix, $33.1B Medicare, $33.3B Medicaid and $3.1B HRSA figures all multiply out. The 'largest jump of any group' line is contradicted by the middle third (+10.1) and the 65+ band (+11.8), and the '1 in 6 never-users ≈ 6% of adults' figure is loosely stated.",
+        "generativity": "The Marcus Bell scene is concrete and implies a whole household and wider world: the Foundayo bottle behind the coffee tin, the BrightPath ring at 94%, the $90 surcharge, Tasha's supper club and tote bag, and the eye-checking habit after the Lilly report. The world fields add texture: supper clubs, 'unmedicated' record tags, holiday-takers, and the Charlotte build. Strong implied scenes and characters."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s3-L1-r13-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Daily pills wear off in a day or two, so people take Saturdays off, or the week of a wedding.",
+          "field": "prose/body",
+          "why": "mechanism: The world says oral semaglutide (the Wegovy pill) and Foundayo are in the market, and oral semaglutide has a roughly one-week half-life. Skipping one daily dose would not bring back appetite by the next morning, so the holiday behaviour at the centre of the interior-life and surveillance story lacks a pharmacological basis, and Marcus 'starving by nine' after one skipped Friday dose is a stretch."
+        },
+        {
+          "quote": "40 states plus DC have opted in.",
+          "field": "world/access/public_coverage",
+          "why": "mechanism: The 75% match is stated to require adopting CMS 'verified engagement' continuation rules, yet the conditioning section and prose say only 11 states run such rules. Both cannot hold, so the opt-in count and the lockout footprint contradict each other."
+        },
+        {
+          "quote": "US volume is up ~50% and US net price down ~25%: ~$95B × 1.5 × 0.75 ≈ $107B, plus ex-US ≈ $43B.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: The payer lines alone sum to far more than a $107B US market. Medicare is about $40B, Medicaid about $33B and HRSA about $3B, which is roughly $76B public. Commercial users at $220–280 net come to roughly $60–75B, and cash users add more still. The market total does not reconcile with the payer spend."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Public and employer benefits are conditioned on adherence, 11 Medicaid states impose lockouts, premium surcharges are routed through wellness vendors, and people skip doses in private to game fill-based monitoring. Public health is worse because 65+ use doubled under fracture, sarcopenia and NAION warnings with only checkbox counselling, and the pediatric bone data are underpowered. Inequality actually narrows through oral parity and coverage, which tempers the overall score. Epistemic harm is moderate: surveillance counts fills rather than bodies, trust in manufacturer safety data is damaged, and the anhedonia data are distrusted.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption lands at 28.2% (+9.4), prices follow the managed decline, Part D and the Medicaid match give public expansion, there are no new indications, the NAION class label is in place, oral amycretin gives oral parity, the Lilly coding scandal is an event, the unmedicated movement appears, conditioning spreads, and the grey is a mainstream complaint. mechanism: Most chains are shown, such as the scandal leading to the label, the match leading to Medicaid growth, and oral starters leading to bottom-third uptake. Weaknesses are the 40-states-opted-in versus 11-states-conditioned contradiction (claim 2), the one-skipped-dose appetite return that pharmacology does not support (claim 1), and 65+ use doubling largely off a copay cut from $50 to $35 that took effect only in January 2032. magnitude: The population figures are inside the envelope and the stock-flow, age-band, income-third and payer-mix arithmetic all reconcile, as do the Medicare, Medicaid and HRSA dollar calculations. The main gap is the $107B US market against roughly $140B or more of implied payer spend (claim 3). The NAION estimate of 2,000–3,500 cases is also a little low for 38M users at 1 per 10,000.",
+        "generativity": "The Marcus Bell scene is concrete and implies a wider cast. It has the Foundayo bottle behind the coffee tin, the BrightPath refill ring at 94%, Tasha's supper club and tote bag, the cookout and the left-side eye check. The world supplies many other settings: Charlotte bankers, Asheville supper clubs, Medicaid kiosks, and wellness-vendor surcharges. Daily life has texture, and the prose shows the surveillance, the holiday-taking and the unmedicated movement through the scene."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "In phase 3 the oral tablet produced a mean ~22% loss at 68 weeks, non-inferior to tirzepatide 15 mg in a head-to-head study.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: a daily tablet matching the best injectable is a large jump from the parent's oral agents. The head-to-head result is also supposed to sit in an NDA filed Jun 2028, and the candidate does not explain how a comparator trial that large existed by then."
+      },
+      {
+        "quote": "65+ use doubled, from 12% to 23.8% (~14.8M), once the Bridge became permanent Part D coverage with a $35 copay, even though fracture and NAION warnings now sit on the label.",
+        "field": "world/population/note",
+        "why": "Mechanism: permanent Part D only began Jan 2032, and it changes the copay from $50 to $35 for people already covered by the Bridge. Doubling 65+ use in two years while the labels warn against it is asserted, not shown, and it leaves almost no 65+ users outside Medicare."
+      },
+      {
+        "quote": "States that cover obesity drugs at the national $179 net price, and that adopt CMS 'verified engagement' continuation rules, get a 75% match. 40 states plus DC have opted in.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: 40 states pass enabling legislation, build CMS-approved engagement systems and triple Medicaid users (5.5M to 15.5M) within about 18 months of a Jun 2031 law. The candidate gives no administrative or budget chain for that speed, and several states would be expected to resist the conditioning rules."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.83,
+      "inequality": 4.17,
+      "public_health": 5.67,
+      "cohesion": 5.0,
+      "epistemic": 5.83,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.5,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 76M adults are on the drug, and public payers condition continuation on adherence in 11 Medicaid states, in Part D and, via the wellness rule, in employer plans. Surveillance that counts fills rather than bodies drives private skipping and lockouts. The elderly base doubled under fracture, sarcopenia and NAION warnings with checkbox monitoring, and about 875k children are on the drug with underpowered bone data. Inequality in results narrows as oral parity and Medicaid reach the bottom third, which holds that score down, but autonomy and epistemic harm are high because adherence monitoring is gamed and manufacturer safety data are distrusted after the Lilly scandal. This is a recognisably harder society with new losers (lockouts, the elderly, kids), not a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver appears at its stipulated value and is traceable to fields and events: 28.2% adoption, $349→$249 managed decline, Part D and Medicaid expansion, no new indications, the NAION class label, oral amycretin, the Lilly scandal, the unmedicated movement, conditioning rules and the mainstream 'grey'. Approval timing respects the envelope's rules. mechanism: Most chains are shown (price cuts traded for tariff exemptions; Lilly's miscoding leading to the label and the Part D eye screen; adherence-based surveillance leading to holidays), but the amycretin efficacy claim, the 65+ doubling and the 40-state Medicaid uptake (my claims 1–3) are largely asserted. magnitude: All headline figures sit inside the envelope, and the payer mix sums to 76.0M and 100%. Medicare ($40.1B), Medicaid ($33.3B) and HRSA ($3.1B) arithmetic multiplies out, and the ever/current/cycled arithmetic closes. The only gap is minor: ~38M users over 50 against roughly 41M implied by the age bands, and a NAION case range slightly under the stated rate.",
+      "generativity": "The world has strong scene material: Foundayo behind the coffee tin, the BrightPath adherence ring and $90 surcharge, the supper club, Tasha's tote bag, the cookout and the grey-patch eye check. The Charlotte build, Asheville/Boise unmedicated subculture, dating tags and record labels tagged 'unmedicated' all imply further characters. The Marcus vignette shows rather than explains, though the opening prose section is largely expository."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.433,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 18
   }
 }

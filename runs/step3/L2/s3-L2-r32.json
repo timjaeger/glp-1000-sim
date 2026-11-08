@@ -51,6 +51,41 @@
         "input_tokens": 18634,
         "output_tokens": 24289
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r32-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27333,
+        "output_tokens": 7596
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r32-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27333,
+        "output_tokens": 8894
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r32-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27333,
+        "output_tokens": 8565
+      }
     ]
   },
   "world": {
@@ -314,6 +349,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r32-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare is now the largest single payer of incretin fills in the US.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude: the candidate's own payer mix gives commercial 40.0% (26.4M) against Medicare 22.6% (14.9M), so the claim contradicts the reconciliation it sits beside."
+        },
+        {
+          "quote": "About one American child in six now lives with at least one parent currently on an incretin.",
+          "field": "world/population/note",
+          "why": "Fails magnitude: with 26.5% of 30–49-year-olds on the drug, even perfectly correlated couples give at least ~25% of children, and independent parents give ~45%, so one in six does not follow from the age-band data."
+        },
+        {
+          "quote": "Squeezed cash buyers and gray-market buyers moved into public programs, so the price shock ended up on the government's books.",
+          "field": "prose/paragraph_2",
+          "why": "Fails mechanism: the world state shows cash/direct users rising from ≈7.9M to 12.85M at an unchanged ~20% share after the price rise, and gray users fell only 0.5M, so the shift into public programs is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 24% of adults are on the drug, ~10,500 excess hip fractures a year, 75% of employers gate, and ~1M children are on it with bone and growth data not due until 2035 (population, safety_ledger, open_tensions). Monthly MariTide makes pauses slow and takes away the quick dose holiday, and DEXA waits run 10–14 weeks. Normalisation, a thinning backlash and a named, discussable 'grey' keep this a harder but legible society, not a catastrophe; the quality gap by class persists, and public spending reaches ~$52B.",
+        "plausibility": "driver_fidelity: All ten drivers show up in fields and events: +9.6pp adoption, shock_up, public expansion, pediatric 6–11 approval, monthly MariTide with no implant, normalisation and mainstream complaint. The one blemish is that the Aug 2031 fill-finish failure, shortage and counterfeit revival sit uneasily with market_shock: none. mechanism: The price shock (China API licensing, recall, tariff pass-through) and the MariTide persistence story are traced, but the claim about cash buyers moving into public programs conflicts with the candidate's own payer figures, and 65+ use jumping from 8.5% to 20% is credited mostly to a criteria widening that took effect only in January 2032. magnitude: The headline figures sit inside the envelope, the age bands, cycling arithmetic, Bridge spend ($24.7B) and Medicaid spend ($27.0B) reconcile, and approval timing follows the rules. The 'largest single payer' claim contradicts commercial's 40%, 'one child in six' is too low for the age-band prevalence, and PBM net up ~35% sits against 'US net price up ~10–20%'.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 5.7
+    },
+    {
+      "custom_id": "s3-L2-r32-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "≈5.0M 65+ users on >2 years × ~0.6%/yr baseline × 0.35 excess ≈ 10,500 excess hip fractures a year",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: the 65+ band grew from 5.7M to 13.8M mostly because the Bridge widened in Jan 2032, so most of the added users cannot have >2 years of use. Getting 5.0M requires roughly 88% retention of the 2030 cohort, against the world's own ~55% persistence."
+        },
+        {
+          "quote": "Medicare pays 22.6% of adult fills ≈ 14.9M users (13.4M aged 65+ plus 1.5M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: 13.4M Medicare-paid users aged 65+ is 97% of the 13.8M users in that band. That leaves almost no room for 65+ users paying cash, via employer retiree plans or by import, and the prose itself says insurers ask retirees to move to the Bridge. The population and payer figures reconcile only by carrying over the starting world's near-100% overlap."
+        },
+        {
+          "quote": "Squeezed cash buyers and gray-market buyers moved into public programs, so the price shock ended up on the government's books.",
+          "field": "prose/paragraph_2",
+          "why": "Mechanism: the payer mix contradicts this causal story. Cash/direct users rose from 7.9M to 12.85M and commercial from 18.5M to 26.4M, even though prices rose about 25–35%, employer coverage fell to 61% and gating reached 75%. Gray-market volume fell only from 3.1M to 2.6M, so the chain that moves people into public programs is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 6,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About a quarter of adults, roughly 0.95M children and 13.8M people over 65 are on a drug whose ledger has ~10,500 excess hip fractures a year, 10–14 week DEXA waits and 75% employer gating. The harm is normalised ('the grey' as household vocabulary, 'Nobody asks Ray anything') and still unmeasured. Under-12 exposure is only ~1.5 years, with bone data not due until 2035. It is a harder society with new losers (non-responders, the cycled, the 2.6M on imports) but not a collapse, so it sits at 5 rather than higher.",
+        "plausibility": "driver_fidelity: Pediatric under-12 approval (Mar 2031), MariTide (monthly), public_expansion, shock_up, no new safety signal, normalisation and mainstream_complaint are all visibly realised in events and fields. The Aug 2031 plant recall, shortage listing and returning counterfeit retatrutide sit awkwardly with market_shock: none, so I dock it. mechanism: Most chains are shown (China API licensing to gray prices, MariTide to PDC to persistence, widened Bridge to Medicare share, EPSDT to pediatric payer). The cash and commercial growth under a price shock, the doubling of adolescent users and the 65+ jump from 8.5% to 20% are asserted (claim 3). magnitude: Adoption (24.2%), ever-use (33.5%), the approval timings (MariTide filed Apr 2030, approved Jun 2031) and the no-US-generic rule are inside the envelope. The cycling arithmetic, age bands, payer mix and spend ($24.7B, $27.0B) all multiply out. The deductions are the >2-year 65+ count (claim 1) and the ~97% Medicare share of 65+ users (claim 2).",
+        "generativity": "The prose gives concrete characters (Ray, Lorraine, nine-year-old Mia) and specific scenes: the MariTide pen in the butter compartment, the trap-bar session, the churro. Dr. Pham's six-week washout line, the shot-week dating joke and the out-of-sync-couple sitcom imply more scenes. Daily life has texture and the world shows more than it explains."
+      },
+      "plausibility": 6.5
+    },
+    {
+      "custom_id": "s3-L2-r32-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Incretin market ≈$152B in 2032: US volume up ~67% since 2030 and US net price up ~10–20% after the shock, while ex-US revenue keeps eroding to generics.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the 2030 market was $118B. US volume x1.67 at net price x1.1–1.2 implies roughly 1.8–2.0x US revenue, which is incompatible with total revenue up only 29% unless ex-US collapses. The PBM net rise from $170–190 to $225–260 (+30–37%) also does not match 'up ~10–20%'."
+        },
+        {
+          "quote": "supply ramped through 2032 to ≈5.5M users",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: a new monthly conjugate approved in Jun 2031 reaches 5.5M users in about 18 months while the same note calls it supply-constrained. The same window includes a fill-finish sterility failure and a shortage. No manufacturing chain is shown."
+        },
+        {
+          "quote": "The 65+ band jumped from 8.5% to 20% when the Bridge criteria widened",
+          "field": "world/population/note",
+          "why": "Mechanism: the widened criteria came from the Nov 2031 agreement and apply from Jan 2032, so one year of effect is asked to explain 5.7M to 13.8M users aged 65+. That is more than doubling, and the Bridge obesity user count rises about 4.7x (1.8M to 8.4M). The ramp is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 4,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About a quarter of adults, plus ~0.95M children, are on the drug. Fracture excess doubles in absolute terms (~10,500 hip fractures a year). Gating reaches ~75% of employers, kiosk weigh-ins spread to more Medicaid states, and a monthly drug that cannot be paused after a bad DEXA creates a new constraint. Pediatric bone and growth data are not due until 2035, and DEXA waits of 10–14 weeks and the bottom-third quality gap persist. Offsetting this, the stratification gap narrows, cultural friction fades, and 'the grey' is named and discussed, so the world is harder but not structurally hidden. That puts it near 'recognisably harder society'.",
+        "plausibility": "driver_fidelity: Adoption (24.2%), shock_up, public_expansion, the pediatric 6–11 approval, monthly MariTide, normalisation and mainstream_complaint are all visible in fields and events. However, the Aug 2031 contract-plant recall and shortage, and the revived counterfeit retatrutide, read like a market shock when market_shock is 'none', and the Chinese export licensing sits close to the state_action 'none' driver. mechanism: Price-shock chains are shown (China licensing, recall, tariff pass-through), and MariTide's effect on gating is plausible. But cash/direct users rise 7.9M to 12.85M despite the narrative that cash buyers were squeezed into public programs, employer coverage falls while commercial users rise 43%, and the 65+ jump is asserted (claim 3). magnitude: Population, income, age, payer-mix and spending arithmetic (8.4M x $245 x 12 ≈ $24.7B; 9.2M ≈ $27B) all reconcile, and approval timing and the no-generic rule are respected. The $152B market figure and 'net price up 10–20%' do not fit +67% volume or the PBM net rise (claim 1), and MariTide's 5.5M users is aggressive (claim 2).",
+        "generativity": "The Ray, Lorraine and Mia scenes carry the texture: the MariTide pen in the empty butter compartment, Lorraine saying 'Bones' before anyone asks, Mia handing back half a churro, trap-bar deadlifts, and Dr. Pham on the six-week washout. The JSON adds the 'shot week' dating joke, the sitcom, and synced or offset injection dates for couples. Many characters and scenes are implied, and daily life is shown through objects rather than explained."
+      },
+      "plausibility": 6.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicare is now the largest single payer of incretin fills in the US.",
+        "field": "world/access/public_coverage",
+        "why": "Fails magnitude: the candidate's own payer mix gives commercial 40.0% (26.4M) against Medicare 22.6% (14.9M), so the claim contradicts the reconciliation it sits beside."
+      },
+      {
+        "quote": "About one American child in six now lives with at least one parent currently on an incretin.",
+        "field": "world/population/note",
+        "why": "Fails magnitude: with 26.5% of 30–49-year-olds on the drug, even perfectly correlated couples give at least ~25% of children, and independent parents give ~45%, so one in six does not follow from the age-band data."
+      },
+      {
+        "quote": "Squeezed cash buyers and gray-market buyers moved into public programs, so the price shock ended up on the government's books.",
+        "field": "prose/paragraph_2",
+        "why": "Fails mechanism: the world state shows cash/direct users rising from ≈7.9M to 12.85M at an unchanged ~20% share after the price rise, and gray users fell only 0.5M, so the shift into public programs is asserted rather than shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.33,
+      "inequality": 5.0,
+      "public_health": 5.67,
+      "cohesion": 4.0,
+      "epistemic": 4.83,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 6.67,
+      "mechanism": 6.0,
+      "magnitude": 6.0
+    },
+    "plausibility": 6.13,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 24% of adults are on the drug, ~10,500 excess hip fractures a year, 75% of employers gate, and ~1M children are on it with bone and growth data not due until 2035 (population, safety_ledger, open_tensions). Monthly MariTide makes pauses slow and takes away the quick dose holiday, and DEXA waits run 10–14 weeks. Normalisation, a thinning backlash and a named, discussable 'grey' keep this a harder but legible society, not a catastrophe; the quality gap by class persists, and public spending reaches ~$52B.",
+      "plausibility": "driver_fidelity: All ten drivers show up in fields and events: +9.6pp adoption, shock_up, public expansion, pediatric 6–11 approval, monthly MariTide with no implant, normalisation and mainstream complaint. The one blemish is that the Aug 2031 fill-finish failure, shortage and counterfeit revival sit uneasily with market_shock: none. mechanism: The price shock (China API licensing, recall, tariff pass-through) and the MariTide persistence story are traced, but the claim about cash buyers moving into public programs conflicts with the candidate's own payer figures, and 65+ use jumping from 8.5% to 20% is credited mostly to a criteria widening that took effect only in January 2032. magnitude: The headline figures sit inside the envelope, the age bands, cycling arithmetic, Bridge spend ($24.7B) and Medicaid spend ($27.0B) reconcile, and approval timing follows the rules. The 'largest single payer' claim contradicts commercial's 40%, 'one child in six' is too low for the age-band prevalence, and PBM net up ~35% sits against 'US net price up ~10–20%'.",
+      "generativity": "placeholder"
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.916,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 35
   }
 }

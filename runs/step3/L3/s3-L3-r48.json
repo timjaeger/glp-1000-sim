@@ -52,6 +52,41 @@
         "input_tokens": 17692,
         "output_tokens": 25234
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r48-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26874,
+        "output_tokens": 10453
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r48-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26874,
+        "output_tokens": 9732
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r48-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26874,
+        "output_tokens": 8248
+      }
     ]
   },
   "world": {
@@ -305,6 +340,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r48-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Over the same period, the NAION class warning (Aug 2031), the Novo disclosure scandal and mainstream holiday-taking pulled the 18–49 bands down slightly.",
+          "field": "world/population/note",
+          "why": "Mechanism: the candidate asserts that a warning for a risk of about 0.5–1 per 10,000 person-years, plus a corporate scandal, pushed young-adult use down in the same window that cash prices fell about 4x. No chain is shown, and the explanation looks convenient for keeping adoption at +0.8."
+        },
+        {
+          "quote": "gambling disorder: guideline-endorsed, not FDA-labelled (APA conditional recommendation for GLP-1 RAs, Sep 2032, on phase 2 RCTs; a semaglutide phase 3 is enrolling)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Mechanism: the starting world lists gambling reduction only as an off-label use. A formal APA recommendation within two years would need phase 2 RCTs to run and report, then a guideline panel to convene and publish. That whole chain is compressed and not shown."
+        },
+        {
+          "quote": "their neighbourhoods are visibly thinner for the first time",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Magnitude: bottom-third use rose only from 12% to 14% and national adult obesity moved from 33.9% to 33.6%. A visible neighbourhood-level change in body size is out of proportion to those figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 4.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the income gap narrows (22 vs 14, gray market halved, free HRSA provision), which offsets the harms. The costs are NAION, rising fracture counts among newly enrolled older Medicare users with no DXA, and the EPI warning. Also in the ledger: adherence premiums that still penalise holidays, 41% of users self-adjusting doses for anhedonia, and plant-clinic surveillance. The harms are named and publicly debated (Medication Guides, a Medicare surveillance cohort), which keeps epistemic low. Overall it is a harder but not dystopian world.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: generic collapse, Medicare and Medicaid expansion, the AUD label, the gambling guideline, the NAION class label, the Novo scandal, the HRSA subsidy, and the 41% holiday-taking figure. next_gen_launch=none is honoured, and adoption is exactly +0.8. Class stratification is somewhat softened by the narrower income gap and 'thinness no longer separates anyone', but it survives through muscle, scans and managed holidays. mechanism: Most chains are shown, such as generics driving the CBO score, the law, Medicaid and the payer-substitution reconciliation. The weak points are the asserted 18–49 decline (claim 1), the compressed APA guideline path (claim 2), and the amycretin CRL tied to NAION data handling. magnitude: Current use (18.4) and ever-used (28.6) sit inside the envelope, the age bands reconstruct 18.4, and the payer mix sums to 49.7M. Medicare, Medicaid and HRSA spend and the CBO range all multiply out, and the AUD approval is 14 months after its filing. The only slack is the exaggerated neighbourhood claim (claim 3) and loose pediatric arithmetic.",
+        "generativity": "The Teresa Nowak vignette is concrete and consistent with the world state: the Lorain clinic label at $0.00, the CDL examiner's note, the SKIP square on the calendar, Ray's Medicare copay and his self-exclusion, and the half-eaten pork chop. The world supplies many hooks: skip-week etiquette, holiday fiction, 'loud weeks' at warehouses, and sportsbook-tax fights in Ohio. One small muddle is Dot's line 'Ray's idea', which is ambiguous."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s3-L3-r48-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "A 2032 national poll found ~41% of current users had lowered a dose or skipped doses in the past year for mood, pleasure or sex reasons.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Mechanism: 41% is far above the stated 7–8% clinically meaningful anhedonia. The jump in just-named holiday-taking is asserted, with no shown chain from a June 2032 label line to this prevalence. It also sits oddly beside the continued 30% adherence-premium penalty."
+        },
+        {
+          "quote": "HRSA free provision (Mar 2032): ~1.5M uninsured or under-insured adults under 200% FPL get generic semaglutide free at community health centres.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: a new programme reaches 1.5M enrollees within about nine months of launch. The source of the $650M appropriation is never shown, and the clinic enrolment, labs and dispensing ramp is simply asserted."
+        },
+        {
+          "quote": "Employer coverage recovered from 36% to 40% as generic-first step therapy made coverage cheap.",
+          "field": "world/access/note",
+          "why": "Mechanism: employer coverage rises 4 points, yet commercial users fall from ~13.6M to 13.0M and metabolic-track enrolment falls. The world never reconciles rising coverage with fewer commercially covered users."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "On access the world is better than 2030: $39–69 generics, a gray market halved, an income gap narrowed from 23/12 to 22/14, and harms now named (NAION label, AUD label, EPI warning). Costs remain: ~2,500–5,000 excess NAION cases a year, rising fracture counts among older Medicare enrollees with no DXA, and unexamined cycling and EPI exposure. Adherence-premium penalties collide with holiday-taking, and the government is both payer and monitor. That is a mildly harder society with new losers, not a worse 2030.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: the generic collapse, Medicare and Medicaid expansion, AUD and gambling indications, the NAION label, the Novo scandal, HRSA subsidy, no new class, and mainstream complaint. Class stratification is realised thinly: the body sorts by muscle and scans while the use gap narrows, and the stratification driver is never stated in an event. mechanism: Most chains are shown (settlement to $49, CBO scoring, payer substitution, scandal to label to CRLs). The 41% poll, 9→22 Medicaid states, the fast HRSA ramp and employer coverage rising while commercial users fall are asserted (claims 1–3). magnitude: Population figures sit inside the envelope, the age check gives 18.4, and the cycling arithmetic and payer mix sum to 49.7M. The Medicare, Medicaid and HRSA spend figures multiply out, the CBO figure fits, and the AUD approval is 14 months after filing. Remaining strains are minor: ever-use rises 3.1 of 3.8 allowed, 65+ use jumps 5 points, and commercial users fall unexplained.",
+        "generativity": "The Teresa Nowak scene is concrete and well observed: the bus medical card, the $0.00 label, the Medication Guide highlight, the SKIP calendar square, and Ray's quieter laugh with the self-exclusion thread. The world fields give many implied scenes (skip-week specials, plant-clinic records, Ohio funding fights, Cleveland and the Delta). The 'holiday' culture adds fresh texture beyond the 2030 baseline."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s3-L3-r48-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "HRSA free provision (Mar 2032): ~1.5M uninsured or under-insured adults under 200% FPL get generic semaglutide free at community health centres.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: a programme launched in March 2032 is shown with a full 1.5M enrolled by year-end through community health centres, with no ramp-up, staffing or lab capacity shown. The $650M appropriation leaves only ~$110M, about $73 per person, for dispensing and labs."
+        },
+        {
+          "quote": "Employer coverage recovered from 36% to 40% as generic-first step therapy made coverage cheap.",
+          "field": "world/access/note",
+          "why": "Mechanism: coverage rising four points sits oddly beside commercial users falling from ~13.6M to ~13.0M and metabolic-track enrolment falling from 4.5M to 4.0M. The candidate never reconciles these, so cheaper drugs and more coverage coexist with fewer commercial users."
+        },
+        {
+          "quote": "A 2032 national poll found ~41% of current users had lowered a dose or skipped doses in the past year for mood, pleasure or sex reasons.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "Magnitude and mechanism: the world holds clinically meaningful anhedonia at the same ~7–8% as 2030, yet over four in ten users act on mood or pleasure within two years. The jump is asserted rather than caused by anything other than the AUD label and APA guidance, both of which came in the last six months."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 3,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Several things improve on 2030: the gray market halves to ~2.7M, the income gap narrows (22 vs 14), and cheap drugs and public provision reach the bottom third. Real harms remain: an estimated ~2,500–5,000 excess NAION cases a year, a fracture HR of ~1.3–1.45 concentrated in unscanned older Medicare enrollees, and employers or plant clinics still penalising holidays under the 30% differential. Trust in labels and Novo is damaged, and the state is both main payer and main monitor of a drug meant for decades. That is a worse-in-places, better-in-others world, a bit harder than 2030 for older and cycling users, so overall badness is about 4.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: the generic collapse via settlements, Part D and Medicaid expansion, the AUD approval and APA gambling guideline, the NAION class label, no new class, the Novo scandal, the HRSA subsidy, and 'the flats' as a mainstream complaint. Class stratification is thinner, because the candidate says income gaps narrowed and thinness no longer signals money, leaving only a muscle and DXA gradient. mechanism: Most chains are shown, for example scandal to OSI audit to amycretin CRL, price to payer substitution, and Medicare enrolment to the 65+ band rising. Weak spots are the employer-coverage claim against falling commercial users, the 18–49 decline attributed loosely to the scandal and holidays, and the abrupt 41% mood-skipping figure. magnitude: All headline figures sit inside the envelope (18.4, 28.6) and reconcile: payers sum to 49.7M, Medicare $27.0B, Medicaid $7.5B, HRSA $540M of $650M, and the CBO figure ≈ $19B. The AUD sNDA has a 14-month review, and amycretin and the dementia sNDA timings fit. Minor gaps: the pediatric 1.3% does not quite match the stated band rates (~1.0%, a gap inherited from 2030), and the June 2032 event includes a September APA action. The HRSA ramp is fast but arithmetically consistent.",
+        "generativity": "The prose gives a concrete scene: Teresa on the school-bus route, the label reading $0.00, the CDL examiner writing down her shot, SKIP and 'eye dr?' on the calendar, and Ray's quieter laugh. The world supplies many hooks: skip-week etiquette, holiday-friendly app tags, 'holiday' fiction, Ohio's sportsbook-tax funding fight, plant clinics making gaps visible, and Cleveland and Delta neighbourhoods growing thinner. Daily life has strong texture and several characters and scenes are implied."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Over the same period, the NAION class warning (Aug 2031), the Novo disclosure scandal and mainstream holiday-taking pulled the 18–49 bands down slightly.",
+        "field": "world/population/note",
+        "why": "Mechanism: the candidate asserts that a warning for a risk of about 0.5–1 per 10,000 person-years, plus a corporate scandal, pushed young-adult use down in the same window that cash prices fell about 4x. No chain is shown, and the explanation looks convenient for keeping adoption at +0.8."
+      },
+      {
+        "quote": "gambling disorder: guideline-endorsed, not FDA-labelled (APA conditional recommendation for GLP-1 RAs, Sep 2032, on phase 2 RCTs; a semaglutide phase 3 is enrolling)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "Mechanism: the starting world lists gambling reduction only as an off-label use. A formal APA recommendation within two years would need phase 2 RCTs to run and report, then a guideline panel to convene and publish. That whole chain is compressed and not shown."
+      },
+      {
+        "quote": "their neighbourhoods are visibly thinner for the first time",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "Magnitude: bottom-third use rose only from 12% to 14% and national adult obesity moved from 33.9% to 33.6%. A visible neighbourhood-level change in body size is out of proportion to those figures."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.17,
+      "autonomy": 4.83,
+      "inequality": 3.5,
+      "public_health": 4.83,
+      "cohesion": 4.0,
+      "epistemic": 3.5,
+      "overall": 4.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.83,
+      "mechanism": 7.0,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.75,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Access broadens and the income gap narrows (22 vs 14, gray market halved, free HRSA provision), which offsets the harms. The costs are NAION, rising fracture counts among newly enrolled older Medicare users with no DXA, and the EPI warning. Also in the ledger: adherence premiums that still penalise holidays, 41% of users self-adjusting doses for anhedonia, and plant-clinic surveillance. The harms are named and publicly debated (Medication Guides, a Medicare surveillance cohort), which keeps epistemic low. Overall it is a harder but not dystopian world.",
+      "plausibility": "driver_fidelity: Every driver is traceable to events and fields: generic collapse, Medicare and Medicaid expansion, the AUD label, the gambling guideline, the NAION class label, the Novo scandal, the HRSA subsidy, and the 41% holiday-taking figure. next_gen_launch=none is honoured, and adoption is exactly +0.8. Class stratification is somewhat softened by the narrower income gap and 'thinness no longer separates anyone', but it survives through muscle, scans and managed holidays. mechanism: Most chains are shown, such as generics driving the CBO score, the law, Medicaid and the payer-substitution reconciliation. The weak points are the asserted 18–49 decline (claim 1), the compressed APA guideline path (claim 2), and the amycretin CRL tied to NAION data handling. magnitude: Current use (18.4) and ever-used (28.6) sit inside the envelope, the age bands reconstruct 18.4, and the payer mix sums to 49.7M. Medicare, Medicaid and HRSA spend and the CBO range all multiply out, and the AUD approval is 14 months after its filing. The only slack is the exaggerated neighbourhood claim (claim 3) and loose pediatric arithmetic.",
+      "generativity": "The Teresa Nowak vignette is concrete and consistent with the world state: the Lorain clinic label at $0.00, the CDL examiner's note, the SKIP square on the calendar, Ray's Medicare copay and his self-exclusion, and the half-eaten pork chop. The world supplies many hooks: skip-week etiquette, holiday fiction, 'loud weeks' at warehouses, and sportsbook-tax fights in Ohio. One small muddle is Dot's line 'Ray's idea', which is ambiguous."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.366,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 47
   }
 }

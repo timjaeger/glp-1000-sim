@@ -52,6 +52,41 @@
         "input_tokens": 17735,
         "output_tokens": 21154
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r42-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26503,
+        "output_tokens": 6530
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r42-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26503,
+        "output_tokens": 5231
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r42-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26503,
+        "output_tokens": 5445
+      }
     ]
   },
   "world": {
@@ -307,6 +342,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r42-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "alcohol use disorder in adults (oral semaglutide/Wegovy pill, approved Jan 2032 on phase 3 data read out Feb 2031, priority review)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Magnitude: the starting world has the AUD phase 3 reading out in 2031 with no filing stated, so approval is allowed no earlier than 12 months after a filing that must follow the readout. Approval within 11 months of readout breaks the envelope's timing rule, and priority review is not a permitted exception."
+        },
+        {
+          "quote": "The bottom third rose 12 → 15 through gray-market growth, the state AUD programmes and Medicaid AUD coverage (AUD is not a weight-loss exclusion)",
+          "field": "world/population/note",
+          "why": "Mechanism: the +3 points in the bottom third is about 2.7M users. State AUD programmes (~0.2M) and the Medicaid AUD route (~0.2M or less in its first year) cannot account for most of that. The gray-market rise (+2.4M overall) would have to cover almost all of it, so the stated chain is asserted rather than shown."
+        },
+        {
+          "quote": "Demand from the dementia extension and the AUD label kept fill-finish capacity tight, so neither firm needed to cut.",
+          "field": "world/access/note",
+          "why": "Mechanism: a capacity story is offered for the stalled price path, but the parent world has net prices drifting down, a 40× gap to Indian generics, and a growing gray market. It is a convenient single-cause explanation and does not account for those downward pressures."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Conditioning spreads from employers into public programmes: state AUD pickup and adherence logs, Part D DXA plus 80% proportion-of-days-covered (PDC) renewals, and a vendor log that records a skipped clinic visit. Access now depends on the state line (Kentucky vs Oklahoma), and the gray market grows to 7.6M users. Real harms accumulate: ~5,000 excess NAION cases a year, EPI, rising fracture counts, and monthly MariTide that cannot be stopped quickly. Epistemic is moderate because the harms are now measured, labelled and openly discussed ('the flat', the APA guideline), and some of the effects are therapeutic gains (AUD, dementia).",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events: price stalled, conditioning mandates, AUD and compulsion indications, NAION class label, MariTide, gray-market growth, backlash (Oklahoma, Bread Alone), subsidy (SAMHSA), and the 'flat' as a mainstream complaint. mechanism: most chains are shown (settlement to price freeze, SAMHSA guidance to state programmes, DXA mandate to wait times), but claims 2 and 3 are thinly supported or convenient. magnitude: on-drug 20.7, ever-used 30, the age and income checks, the payer-mix sum of 55.9M, and the Part D, state-programme, Kentucky and West Virginia arithmetic all reconcile. The AUD approval in Jan 2032 on a Feb 2031 readout breaks the 12-month rule (claim 1), and the pediatric split (3.0% of 12–17s, 0.3% of 6–11s) only gets to about 1.1%, not the stated 1.4%.",
+        "generativity": "The Tammy Combs scene is concrete: the KY Clear tap, the pharmacist's three questions, the yellow vision-loss insert, the sister in Tulsa, and the unfilled holiday form. The world fields add other implied scenes: Bread Alone suppers, 'sober (medicated)' dating filters, the logistics holiday code, and DXA wait lists. The prose sometimes explains rather than shows, but the human thread carries the central tension."
+      },
+      "plausibility": 6.25
+    },
+    {
+      "custom_id": "s3-L3-r42-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Kentucky (~38,000 enrollees, ≈ $112M) and West Virginia (~14,000, ≈ $41M) are the largest.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: if West Virginia at 14,000 is the second-largest of 11 states, the other nine can hold at most ~126,000 combined. Total enrollment is then at most ~178,000, not the stated ~210,000 (and $617M), so the figures do not reconcile."
+        },
+        {
+          "quote": "alcohol use disorder in adults (oral semaglutide/Wegovy pill, approved Jan 2032 on phase 3 data read out Feb 2031, priority review)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Magnitude: the AUD phase 3 had no stated filing at the start and read out in 2031. Under the envelope's rule, filing is a window event and approval comes at least 12 months later. A filing after the Feb 2031 readout cannot be approved in Jan 2032. Priority review is a substitute for approval, not a way around the 12-month floor."
+        },
+        {
+          "quote": "The AUD label and state free programmes remove the heaviest drinkers, whose spending was a disproportionate share of volume.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: spirits fell a further ~4 points (-10% to -14% versus 2025) in two years, and this sentence attributes it to a label approved in Jan 2032 and programmes launched that month. Those reach only ~0.55M people (0.35M Medicare AUD plus ~0.2M state-programme enrollees), within months, so the claimed causal chain is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society. Adherence conditioning now reaches public programmes (monthly in-person pickup, 80% PDC for Part D dementia renewals, breathalyser check-ins). Gray-market use is up to ~7.6M. NAION adds ~5,000 excess cases a year, and EPI plus the fracture signal sit on a larger older exposed group. Epistemic harm is lower than in 2030 because the harms are measured, labelled and openly discussed ('the flat', the APA guideline). Some benefit is real: free AUD treatment and holiday codes ease it a little.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events: stalled prices, conditioning in Part D and employer tracks, AUD and compulsion (via the APA guideline), the NAION class label, MariTide monthly dosing, the gray-market resurgence, the Oklahoma backlash, the SOR subsidy, and 'the flat' as a mainstream complaint. Compulsion is realised only as a guideline, which the rules allow. mechanism: Most chains are shown, including the patent settlement plus fill-finish constraint behind flat prices, the SOR guidance behind the state programmes, and the pooled registry analysis behind the NAION label. The spirits decline (claim 3) is asserted and out of proportion to the reach of the AUD programmes. The price freeze rests on a convenient capacity story. magnitude: Population, age, income, payer-mix, Part D ($38.6B) and dementia ($10.6B) arithmetic all reconcile and sit inside the envelope. The state enrollment total contradicts the stated largest-state figures (claim 1). The AUD approval at ~10 months after a Feb 2031 readout breaks the 12-month phase-3 rule (claim 2).",
+        "generativity": "The Tammy Combs scene is concrete and lived-in: the KY Clear app and its green circle, the pharmacist's three questions, the unfilled holiday form, Darlene in Tulsa, a $16.40 hourly wage, half a ham biscuit. The world fields imply many other scenes: logistics-corridor holiday codes, Bread Alone suppers, 'sober (medicated)' dating filters, peptide-clinic raids. The prose has a clear arc and shows rather than explains."
+      },
+      "plausibility": 6.15
+    },
+    {
+      "custom_id": "s3-L3-r42-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "alcohol use disorder in adults (oral semaglutide/Wegovy pill, approved Jan 2032 on phase 3 data read out Feb 2031, priority review)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/7",
+          "why": "The starting world has oral semaglutide AUD in phase 3 with no filing stated. The envelope allows approval no earlier than 12 months after a filing made in the window, and the Feb 2031 readout leaves only about 11 months. Priority review is a way to realise the driver with a filing, not a licence to approve early, so this fails magnitude."
+        },
+        {
+          "quote": "within months most Part D plans tie renewal to DXA and 80% verified adherence",
+          "field": "world/events/1/event",
+          "why": "Part D plans are asserted to converge on a uniform renewal rule within months, with no CMS action or other mechanism shown. DXA capacity is also already strained, with 6–10 week waits, so this is a mechanism failure."
+        },
+        {
+          "quote": "The AUD label and state free programmes remove the heaviest drinkers, whose spending was a disproportionate share of volume.",
+          "field": "world/economy/alcohol/state",
+          "why": "The AUD routes stated total only about 0.55M users (0.35M Medicare, 0.2M state programmes), and the label was approved in Jan 2032. That is too few, and too recent, to explain spirits falling from ~10% to ~14% below 2025. The causal attribution is asserted and the size is doubtful."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Conditioning spreads from employers to Part D (DXA plus 80% PDC) and to state AUD programmes with monthly pickup and logs. The gray market grows to ~7.6M users, with abscess and endotoxin cases. NAION (~5,000 excess cases a year), EPI and fracture burdens rise among older users, and state-line access differs (Kentucky vs Oklahoma). Offsetting this, AUD treatment is free for some, harms such as 'the flat' are now named, and holidays are officially sanctioned, so epistemic badness is lower. This is a recognisably harder society with new losers, not a structurally hidden one.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption +3.1, stalled prices, Part D and state conditioning, AUD and the APA guideline, the NAION class label, MariTide, gray-market resurgence, backlash (Oklahoma, Bread Alone) and the SAMHSA subsidy. The 'flat' is a mainstream complaint. Nothing contradicts a driver. mechanism: Most chains are shown, including the price freeze via patent settlement and capacity limits, the Kentucky/Oklahoma split, and the NAION pooled analysis. The weak links are the rapid Part D DXA/PDC uniformity and the alcohol-volume attribution (claims 2 and 3). magnitude: Population figures sit inside the envelope, and the payer mix (sums to 55.9M), Medicare, dementia and AUD spending, and age and income checks all reconcile. The AUD approval about 11 months after readout breaks the 12-month rule (claim 1). The ever-used cycling arithmetic is also slightly off, since 45% of 30% is 13.5, not 13.4.",
+        "generativity": "The Tammy Combs scene is rich, with the KY Clear day counter, the pharmacist's three questions, the unfilled holiday form and the sister in Tulsa. The world implies many further scenes: Pikeville vs Tulsa, the logistics 'holiday' billing code, peptide clinics, NAION sunglasses, and app filters for 'sober (medicated)'. A small timing slip: Day 211 of a programme launched in Jan 2032 doesn't fit the stated year-end."
+      },
+      "plausibility": 6.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "alcohol use disorder in adults (oral semaglutide/Wegovy pill, approved Jan 2032 on phase 3 data read out Feb 2031, priority review)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "Magnitude: the starting world has the AUD phase 3 reading out in 2031 with no filing stated, so approval is allowed no earlier than 12 months after a filing that must follow the readout. Approval within 11 months of readout breaks the envelope's timing rule, and priority review is not a permitted exception."
+      },
+      {
+        "quote": "The bottom third rose 12 → 15 through gray-market growth, the state AUD programmes and Medicaid AUD coverage (AUD is not a weight-loss exclusion)",
+        "field": "world/population/note",
+        "why": "Mechanism: the +3 points in the bottom third is about 2.7M users. State AUD programmes (~0.2M) and the Medicaid AUD route (~0.2M or less in its first year) cannot account for most of that. The gray-market rise (+2.4M overall) would have to cover almost all of it, so the stated chain is asserted rather than shown."
+      },
+      {
+        "quote": "Demand from the dementia extension and the AUD label kept fill-finish capacity tight, so neither firm needed to cut.",
+        "field": "world/access/note",
+        "why": "Mechanism: a capacity story is offered for the stalled price path, but the parent world has net prices drifting down, a 40× gap to Indian generics, and a growing gray market. It is a convenient single-cause explanation and does not account for those downward pressures."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.67,
+      "inequality": 6.0,
+      "public_health": 5.67,
+      "cohesion": 5.67,
+      "epistemic": 4.33,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.5,
+      "magnitude": 5.17
+    },
+    "plausibility": 6.3,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Conditioning spreads from employers into public programmes: state AUD pickup and adherence logs, Part D DXA plus 80% proportion-of-days-covered (PDC) renewals, and a vendor log that records a skipped clinic visit. Access now depends on the state line (Kentucky vs Oklahoma), and the gray market grows to 7.6M users. Real harms accumulate: ~5,000 excess NAION cases a year, EPI, rising fracture counts, and monthly MariTide that cannot be stopped quickly. Epistemic is moderate because the harms are now measured, labelled and openly discussed ('the flat', the APA guideline), and some of the effects are therapeutic gains (AUD, dementia).",
+      "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events: price stalled, conditioning mandates, AUD and compulsion indications, NAION class label, MariTide, gray-market growth, backlash (Oklahoma, Bread Alone), subsidy (SAMHSA), and the 'flat' as a mainstream complaint. mechanism: most chains are shown (settlement to price freeze, SAMHSA guidance to state programmes, DXA mandate to wait times), but claims 2 and 3 are thinly supported or convenient. magnitude: on-drug 20.7, ever-used 30, the age and income checks, the payer-mix sum of 55.9M, and the Part D, state-programme, Kentucky and West Virginia arithmetic all reconcile. The AUD approval in Jan 2032 on a Feb 2031 readout breaks the 12-month rule (claim 1), and the pediatric split (3.0% of 12–17s, 0.3% of 6–11s) only gets to about 1.1%, not the stated 1.4%.",
+      "generativity": "The Tammy Combs scene is concrete: the KY Clear tap, the pharmacist's three questions, the yellow vision-loss insert, the sister in Tulsa, and the unfilled holiday form. The world fields add other implied scenes: Bread Alone suppers, 'sober (medicated)' dating filters, the logistics holiday code, and DXA wait lists. The prose sometimes explains rather than shows, but the human thread carries the central tension."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.601,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 12
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 17556,
         "output_tokens": 21441
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r03-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26062,
+        "output_tokens": 6687
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r03-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26062,
+        "output_tokens": 7449
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r03-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26062,
+        "output_tokens": 7962
+      }
     ]
   },
   "world": {
@@ -322,6 +357,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r03-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "11.0 stayed on (58.5%, up from ~50% last step because established users persist longer)",
+          "field": "world/population/note",
+          "why": "Persistence is raised from 50% to 58.5% by assertion. The same note says coverage caps, employer exclusions and Medicaid lockouts are driving more stops, so the rise is unshown and runs against the world's own mechanism."
+        },
+        {
+          "quote": "plus ~3.0M 'focus/calm' subscribers",
+          "field": "world/access/note",
+          "why": "This note puts all ~3.0M focus subscribers in the cash channel. interior_life says only ~2.4M are cash and ~0.6M are gray. The channel counts do not reconcile, which is a magnitude flaw."
+        },
+        {
+          "quote": "US entry is set by patent settlements and pediatric exclusivity to 2033.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "The 2030 world had exclusivity running to ~2031–32. Moving it to 2033 through 'patent settlements' that appear in no event is an unshown mechanism, even though the generic rule is not breached."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Benefits conditioning has converged across Medicaid (five states), HRSA and employer tobacco-surcharge waivers, so adherence is now policed through pay and coverage. That scores high on autonomy. Coverage-driven stop-start cycling, the new EPI signal, uninterpretable pediatric bone data, a 1.5–2M-to-3M 'calm' subscriber base with a small SHAPS shift, and class-coded bodies make it a recognisably harder society. It is not catastrophic, and harms are partly named and measured, which keeps epistemic scoring moderate.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: 25.2% adoption (+6.4), the March 2031 managed price decline, employer coverage 57→44%, the vaping and orforglipron nicotine indications, the EPI long-horizon signal, the Full Table backlash, five-state conditioning, and marketed 'focus' subscriptions. None is contradicted. mechanism: Most chains are shown (the vaping mandate drives the 18–29 rise; the price agreement drives cash growth; employer retreat feeds cash and cessation coding). The asserted persistence rise to 58.5% and the unshown 2033 patent settlements are the weak spots (see claims 1 and 3). magnitude: On-drug (25.2), ever-used (34.0), income-third and age-band arithmetic, the payer mix (sums to 68.0M), the Medicare, Medicaid and HRSA spending products, and the approval timing all sit inside the envelope and reconcile. The one clear gap is the focus-subscriber channel split (claim 2); a smaller tension is the plateaued poison-centre calls alongside gray users rising from 9.0M to 12.8M.",
+        "generativity": "The Kaylee Brandt scene implies a whole cast: her mother Brenda at the kiosk, Devontae at the dock, and Jess and the Broken Arrow fellowship hall. It shows daily texture through the 5:10 alarm, the day-71-of-90 app, the $75 surcharge waiver and the 'volume is down' feeling. The world fields add concrete settings and rituals: Full Table dinners, Charlotte versus Tulsa and Memphis bodies, and the 90-day cessation rhythm in couples."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L1-r03-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "at ~3.1 per 1,000 person-years, against ~1.7 in matched non-users: HR ~1.8, absent before year 4",
+          "field": "world/safety_ledger/14/prevalence_note",
+          "why": "magnitude/mechanism: a baseline EPI incidence of 1.7 per 1,000 person-years in matched non-users is implausibly high for a condition diagnosed this narrowly. A clean registry signal that appears only after year 4 and prompts an FDA Drug Safety Communication and class label review within three months is also very fast."
+        },
+        {
+          "quote": "Poison-centre calls plateaued at 2030 levels.",
+          "field": "world/safety_ledger/12/prevalence_note",
+          "why": "mechanism: gray-market users rose from 9.0M to 12.8M (about +42%) and teens now buy gray pens, yet poison-centre calls are said to be flat, with no explanation. The parent world showed calls doubling over two years."
+        },
+        {
+          "quote": "The 18–29 band nearly doubled (10→18) on the vaping-cessation label and 'craving-free' subscriptions.",
+          "field": "world/population/note",
+          "why": "magnitude/mechanism: an 8-point rise in two years, larger than the national +6.4 and larger than any other age band, rests on one adult cessation label with two 90-day courses a year plus roughly 3M subscribers across all ages. That does not obviously account for a jump of this size."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Conditioning has spread across Medicaid in five states, HRSA programmes and employer tobacco-surcharge waivers, with 12-month lockouts and PBM-verified adherence. Coverage-driven stops and gray-market use (12.8M) also hurt, and 16–17-year-olds are on the drug off-label. Cheaper cash prices, cessation benefits and an EPI signal that is low-risk and treatable offset some of this, so the world is harder with new losers, not a refusal-level society. Epistemic harm is moderate: the new EPI signal and the SHAPS anhedonia data are unresolved but named and being studied.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption of 25.2% (+6.4), managed-decline pricing, employer coverage falling from 57% to 44%, the nicotine indication realised through supplements, the EPI long-horizon signal, no next-gen launch, no market shock, the Full Table backlash, five-state conditioning, and the marketed-feature personality layer. mechanism: Most chains are shown, such as cessation mandate to young vapers, employer retreat to cash and stipends, and tariff relief for fill-finish capacity to price cuts. A few are asserted, notably the flat poison-centre calls, the very high EPI baseline with its fast regulatory reaction, and the 18–29 jump. The text also says middle-third growth was 'held back most', yet the middle third (+6.1) outgrew the top (+6.0). magnitude: On-drug 25.2% and ever-used 34.0% are inside the envelope, and the income and age arithmetic checks out. The payer mix sums to 68.0M, and Bridge ($8.8B), Medicaid ($19.4B) and HRSA ($5.6B) all multiply out. The pipeline timing is legal. The only minor gap is that Medicare's 10.2M users roughly equal all 9.9M adults 65+ on the drug, leaving no 65+ users in other payer channels.",
+        "generativity": "The prose has a concrete protagonist with recurring details: the 5:10 alarm, day 71 of 90, the $75 surcharge waiver, her mother's kiosk weigh-in, the dock-door smokers and the church fellowship hall. It shows flattened affect and conditioning through scene rather than explanation. The world fields add usable settings such as Springfield, Tulsa, Charlotte, Oakland and Brooklyn, plus Full Table dinners, 90-day cycle jokes and 'unmedicated praise'."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L1-r03-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "US entry is set by patent settlements and pediatric exclusivity to 2033.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: the 2030 world put US exclusivity at ~2031–32. Pushing entry to 2033 through unnamed settlements and pediatric exclusivity is asserted with no event or causal chain, yet employer behaviour and Novo's outlook are then built on it."
+        },
+        {
+          "quote": "Poison-centre calls plateaued at 2030 levels.",
+          "field": "world/safety_ledger/13/prevalence_note",
+          "why": "Mechanism: gray-market users rose from 9.0M to 12.8M (~+42%) and a new teen gray-pen subgroup appeared. Enforcement stayed token, so a flat poison-centre call count has no stated cause."
+        },
+        {
+          "quote": "Users with ≥5 years of continuous exposure now number in the millions, which made the EPI signal detectable.",
+          "field": "world/safety_ledger/12/prevalence_note",
+          "why": "Mechanism: the EPI signal comes from a Nordic registry with HR ~1.8 and onset only after year 4, and the 2030 world has low persistence and heavy cycling. A dependable ≥5-year uninterrupted cohort large enough to detect it, plus an FDA Drug Safety Communication within three months, is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society. Conditioning has converged across Medicaid (five states), HRSA and employer tobacco-surcharge waivers, and a bipartisan-style conflict over adherence data runs through the prose and the Missouri law. Coverage events now drive the stop-start cycling that raises bone-loss and regain risk. The EPI signal leaves people with contradictory guidance on staying on versus cycling. Harms are real but spread out and mostly measured (SHAPS, EPI, registry bone data), which keeps epistemic badness moderate and holds the overall score near 6.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events: adoption 25.2%, managed decline via the Mar 2031 agreement, employer retreat 57→44, the vaping and orforglipron nicotine indications, the EPI signal, no new class, no market shock, the Full Table backlash, five-state conditioning, and 'focus' subscriptions as a marketed feature. Nothing contradicts a driver. mechanism: Most changes have chains, such as the ACA mandate pulling in young vapers and employer retreat pushing workers to cash. The 2033 generic date, the flat poison-centre calls and the EPI detectability (claims 1–3) are asserted. magnitude: Use (25.2%), ever-used (34.0%), income and age bands, and the payer mix (19.0+10.2+7.5+4.5+14.0+12.8=68.0M) all sit inside the envelope and reconcile. The $ figures for Bridge, Medicaid and HRSA multiply out, and approval timing is legal. The only gap is that 'focus' subscribers are ~3.0M in the cash note but 2.4M cash plus 0.6M gray elsewhere.",
+        "generativity": "The prose follows Kaylee through a day: the 5:10 alarm, the day-71 adherence app, the kiosk weigh-in for her mother, the dock-door smokers and the Broken Arrow fellowship hall. These give concrete texture and imply further characters and scenes. The world fields supply specifics such as Springfield, 'unmedicated praise' and Missouri's split policy. It shows more than it explains, though some summary paragraphs lean on exposition."
+      },
+      "plausibility": 8.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "11.0 stayed on (58.5%, up from ~50% last step because established users persist longer)",
+        "field": "world/population/note",
+        "why": "Persistence is raised from 50% to 58.5% by assertion. The same note says coverage caps, employer exclusions and Medicaid lockouts are driving more stops, so the rise is unshown and runs against the world's own mechanism."
+      },
+      {
+        "quote": "plus ~3.0M 'focus/calm' subscribers",
+        "field": "world/access/note",
+        "why": "This note puts all ~3.0M focus subscribers in the cash channel. interior_life says only ~2.4M are cash and ~0.6M are gray. The channel counts do not reconcile, which is a magnitude flaw."
+      },
+      {
+        "quote": "US entry is set by patent settlements and pediatric exclusivity to 2033.",
+        "field": "world/access/generic_rest_of_world",
+        "why": "The 2030 world had exclusivity running to ~2031–32. Moving it to 2033 through 'patent settlements' that appear in no event is an unshown mechanism, even though the generic rule is not breached."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.83,
+      "inequality": 5.83,
+      "public_health": 5.5,
+      "cohesion": 5.83,
+      "epistemic": 5.17,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 7.17,
+      "magnitude": 8.17
+    },
+    "plausibility": 8.04,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Benefits conditioning has converged across Medicaid (five states), HRSA and employer tobacco-surcharge waivers, so adherence is now policed through pay and coverage. That scores high on autonomy. Coverage-driven stop-start cycling, the new EPI signal, uninterpretable pediatric bone data, a 1.5–2M-to-3M 'calm' subscriber base with a small SHAPS shift, and class-coded bodies make it a recognisably harder society. It is not catastrophic, and harms are partly named and measured, which keeps epistemic scoring moderate.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: 25.2% adoption (+6.4), the March 2031 managed price decline, employer coverage 57→44%, the vaping and orforglipron nicotine indications, the EPI long-horizon signal, the Full Table backlash, five-state conditioning, and marketed 'focus' subscriptions. None is contradicted. mechanism: Most chains are shown (the vaping mandate drives the 18–29 rise; the price agreement drives cash growth; employer retreat feeds cash and cessation coding). The asserted persistence rise to 58.5% and the unshown 2033 patent settlements are the weak spots (see claims 1 and 3). magnitude: On-drug (25.2), ever-used (34.0), income-third and age-band arithmetic, the payer mix (sums to 68.0M), the Medicare, Medicaid and HRSA spending products, and the approval timing all sit inside the envelope and reconcile. The one clear gap is the focus-subscriber channel split (claim 2); a smaller tension is the plateaued poison-centre calls alongside gray users rising from 9.0M to 12.8M.",
+      "generativity": "The Kaylee Brandt scene implies a whole cast: her mother Brenda at the kiosk, Devontae at the dock, and Jess and the Broken Arrow fellowship hall. It shows daily texture through the 5:10 alarm, the day-71-of-90 app, the $75 surcharge waiver and the 'volume is down' feeling. The world fields add concrete settings and rituals: Full Table dinners, Charlotte versus Tulsa and Memphis bodies, and the 90-day cessation rhythm in couples."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.699,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 8
   }
 }

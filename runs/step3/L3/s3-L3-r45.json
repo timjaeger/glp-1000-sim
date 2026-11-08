@@ -51,6 +51,41 @@
         "input_tokens": 17674,
         "output_tokens": 22005
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r45-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26587,
+        "output_tokens": 5046
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r45-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26587,
+        "output_tokens": 7317
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r45-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26587,
+        "output_tokens": 8029
+      }
     ]
   },
   "world": {
@@ -303,6 +338,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r45-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "gross first-time starts were ~1.7M over two years, with first-time starts in 2031 at their lowest since 2023. About 1.4M ever-users died in the window",
+          "field": "world/population/note",
+          "why": "Magnitude: 1.7M starts minus 1.4M deaths nets about +0.3M. But 25.5% of ~268M to 25.6% of ~271M is roughly +1.1M ever-users, so the stated flows do not reproduce the ever-used figure."
+        },
+        {
+          "quote": "~3.0% of 12–17s (~0.75M) and ~0.8% of 6–11s (~0.19M), split between generic liraglutide and, since Oct 2031, weekly semaglutide, now mostly generic.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: pediatric use rises (12–17 from ~2.4% to ~3.0%, 6–11 from ~0.2% to ~0.8%) while adult use falls 16% under the NAION, anhedonia and scandal shock. No reason is shown why parents would move the opposite way, and a quadrupling of 6–11 use within about 14 months of approval is aggressive."
+        },
+        {
+          "quote": "its members are the longest continuous users, the group the exocrine and vision findings hit hardest, and the most exposed to the Unpinned movement.",
+          "field": "world/population/note",
+          "why": "Mechanism: a 22% relative fall in top-third use (23 to 18) in two years, against a 4% fall in the bottom third, is asserted from loosely sourced causes. The note does not explain why the affluent stop while the generic price cut should pull in lapsed users at every income level."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms are real but partly offset. About 3,500 excess NAION cases a year, EPI, fracture, and conditional employer tracks covering ~6M workers with fill and weight surveillance keep autonomy and public health in a harder-society range. Children from age six are on a lifelong-therapy assumption. Offsetting this, $39–69 generics shrink the gray market, the harms are now labelled and discussable (lowering epistemic harm), and the class divide is partly reversed. Overall is about 5.",
+        "plausibility": "driver_fidelity: Every driver is visible. Generic semaglutide arrives through an event-backed patent expiry and settlement, the NAION class label is Jul 2031, the pediatric approval is Oct 2031, the Unpinned movement and the niche side-effect label are present, retatrutide 12 mg is realised as a new dose of an existing product, and state action stays none. mechanism: The scandal-to-quit-to-generic-to-conditioned-coverage chain is largely shown, but the top-third collapse and the rising pediatric uptake (claims 3 and 2) are asserted rather than shown, and some prose details are loose, such as vials with serial codes. magnitude: Population figures sit inside the envelope, and payer mix, Medicare spend ($4.7B + $14.2B) and the cycling arithmetic reconcile. The ever-used flow arithmetic (claim 1) is off by about 0.8M.",
+        "generativity": "Renee at the Kroger with her pen, the unscheduled eye referral and the FaceTime call with Kayla about the Unpinned pin and loaf give concrete, filmable scenes. The world has strong texture: pin-free badges, the Pin-Free Sunday crowd, weigh-in sheets in Columbus and the laminated warning card. It shows more than it explains, though the opening is essay-like."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s3-L3-r45-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "its members are the longest continuous users, the group the exocrine and vision findings hit hardest, and the most exposed to the Unpinned movement.",
+          "field": "world/population/note",
+          "why": "Mechanism: the top third falls 23 to 18 (about 22% relative) while the bottom third barely moves, and the cause is credited partly to Unpinned. That movement only crystallises in 2032, after the 2031 stops, and no chain shows why affluent users quit at four times the rate of lower-income users."
+        },
+        {
+          "quote": "gross first-time starts were ~1.7M over two years, with first-time starts in 2031 at their lowest since 2023. About 1.4M ever-users died in the window",
+          "field": "world/population/note",
+          "why": "Magnitude: 25.5% of ~268M is ~68.3M ever-users and 25.6% of ~271M is ~69.4M, a rise of ~1.1M. The stated flows (+1.7M starts minus 1.4M deaths) give only about +0.3M, so the ever-used figure does not reconcile."
+        },
+        {
+          "quote": "FDA approves weekly semaglutide for obesity in children aged 6–11 on STEP Young data, with bone, growth and ophthalmology postmarketing requirements",
+          "field": "world/events/2/event",
+          "why": "Mechanism and magnitude: no filing event is shown, and the 2030 parent had no stated filing for under-12 semaglutide. The envelope requires a filing at least 12 months before approval. The approval also comes three months after the NAION scandal and class warning and eight months after Novo's CEO resigned, with no regulatory chain explained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 4.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens and the gray market shrinks (5.2M to 3.0M). Harms are now labelled (NAION, EPI, anhedonia), which lowers the epistemic score. Costs remain: roughly 3,500 excess NAION cases a year, about 6M employees in conditional tracks with fill-data and 5%-target surveillance, a ~0.94M-child cohort on lifelong therapy, and a large regain cohort. Inequality is partly reshuffled (body-as-class signal flips, price gap narrows) but the paperwork and monitoring burden falls on lower-paid workers.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events. These are the 2032-01 generic launch, the 2031-07 NAION class label, the Novo scandal, retatrutide 12 mg as the ~29% triple-agonist dose, pediatric semaglutide, the Unpinned movement, anhedonia as a labelled uncommon side effect, and no new state law. mechanism: The generic chain (patent expiry, settlement, ANDAs) and the Novo document-to-label chain are shown. The Unpinned-driven top-third exit is asserted and anachronistic, and the pediatric approval has no stated filing (claims 1 and 3). magnitude: Adoption (14.8), ever-used (25.6), the income and age bands, payer mix, Medicare spend ($4.7B + $14.2B) and the cycling arithmetic all reconcile and sit inside the envelope. The ever-used flow arithmetic is off by roughly 0.8M (claim 2).",
+        "generativity": "The Renee/Kayla scene is rich in specifics: the Kroger pen, the laminated blurring card, the unscheduled eye referral in Perrysburg, the Unpinned pin, the loaf of bread on FaceTime. The world fields supply many implied scenes, including Green Hills dinners, the Columbus weigh-in sheets, the Pin-Free Sunday rally and couples' appetite mismatch. One small date slip in the prose (she stopped 'last August' when the news broke) is minor."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s3-L3-r45-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "She stopped last August, the week the news said 'optic nerve'.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world state dates the optic-nerve news to Feb 2031 (unsealing) and Jul 2031 (class warning), not August of 2032. The vignette contradicts the world's own timeline."
+        },
+        {
+          "quote": "The decline is steepest in the top third (23 → 18): its members are the longest continuous users, the group the exocrine and vision findings hit hardest, and the most exposed to the Unpinned movement.",
+          "field": "world/population/note",
+          "why": "Mechanism: a 22% fall in top-third use is asserted rather than shown. The NAION excess is about 1.6 vs 0.7 per 10,000 person-years, and the world elsewhere says the poorest users have the worst persistence, so 'longest continuous users' is a convenient claim."
+        },
+        {
+          "quote": "Lilly filed an sNDA for retatrutide 12 mg in Jun 2031 on 80-week TRIUMPH data (~28.7% mean loss). The FDA approved it in Apr 2032",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the approval comes about 10 months after filing, inside the envelope's 12-month minimum for products not yet filed. It is realised as a new dose of an existing product, but the timing is still tight."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics ($39–69) and a contained gray market ease access, but about 40M users remain, with roughly 3,500 excess NAION cases a year, EPI, anhedonia and fracture all on the label. About 90% of covering employers condition coverage on weight targets and fill data, and 0.94M children are on weekly drugs. Class and body signalling flips rather than fades ('born weight'), and the harms are now named and discussed, so epistemic badness is lower. Overall this is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is traceable. The adoption delta is exactly -2.8, generic collapse is carried by the patent and settlement events, conditioning is in employer tracks, the NAION class label is in the ledger, the retatrutide 12 mg and pediatric semaglutide approvals are present, and the Novo scandal, the Unpinned movement, the anhedonia label as a niche side effect and no state action all appear. mechanism: The scandal-to-label-to-generic chain is shown. Three things are asserted or contradicted: the top-third drop (claim 2), the Renee 'last August' contradiction (claim 1), and the fast reversal of HR 'steadiness' language. magnitude: Population figures sit inside the envelope (14.8, 25.6), and the age, income, payer-mix, Medicare ($18.9B) and pediatric arithmetic all reconcile. The weak points are the retatrutide approval about 10 months after filing (claim 3), a small ever-user flow gap (68.3+1.7−1.4 ≠ ~69.4M), and Part D spend down 36% against US net revenue down only 15%.",
+        "generativity": "The vignette is concrete: the Kroger on Monroe Street, the laminated eye card, the unscheduled Perrysburg ophthalmology referral, the FaceTime call about bread and the enamel pin. The world fields supply many scenes: Pin-Free Sunday, the Columbus weigh-in sheets, Green Hills dinner quitting stories, and dating-app badges. The prose opening explains a lot, but the closing scene shows rather than tells."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "gross first-time starts were ~1.7M over two years, with first-time starts in 2031 at their lowest since 2023. About 1.4M ever-users died in the window",
+        "field": "world/population/note",
+        "why": "Magnitude: 1.7M starts minus 1.4M deaths nets about +0.3M. But 25.5% of ~268M to 25.6% of ~271M is roughly +1.1M ever-users, so the stated flows do not reproduce the ever-used figure."
+      },
+      {
+        "quote": "~3.0% of 12–17s (~0.75M) and ~0.8% of 6–11s (~0.19M), split between generic liraglutide and, since Oct 2031, weekly semaglutide, now mostly generic.",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: pediatric use rises (12–17 from ~2.4% to ~3.0%, 6–11 from ~0.2% to ~0.8%) while adult use falls 16% under the NAION, anhedonia and scandal shock. No reason is shown why parents would move the opposite way, and a quadrupling of 6–11 use within about 14 months of approval is aggressive."
+      },
+      {
+        "quote": "its members are the longest continuous users, the group the exocrine and vision findings hit hardest, and the most exposed to the Unpinned movement.",
+        "field": "world/population/note",
+        "why": "Mechanism: a 22% relative fall in top-third use (23 to 18) in two years, against a 4% fall in the bottom third, is asserted from loosely sourced causes. The note does not explain why the affluent stop while the generic price cut should pull in lapsed users at every income level."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.67,
+      "inequality": 5.0,
+      "public_health": 5.17,
+      "cohesion": 4.67,
+      "epistemic": 3.83,
+      "overall": 4.9
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.83,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.23,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Harms are real but partly offset. About 3,500 excess NAION cases a year, EPI, fracture, and conditional employer tracks covering ~6M workers with fill and weight surveillance keep autonomy and public health in a harder-society range. Children from age six are on a lifelong-therapy assumption. Offsetting this, $39–69 generics shrink the gray market, the harms are now labelled and discussable (lowering epistemic harm), and the class divide is partly reversed. Overall is about 5.",
+      "plausibility": "driver_fidelity: Every driver is visible. Generic semaglutide arrives through an event-backed patent expiry and settlement, the NAION class label is Jul 2031, the pediatric approval is Oct 2031, the Unpinned movement and the niche side-effect label are present, retatrutide 12 mg is realised as a new dose of an existing product, and state action stays none. mechanism: The scandal-to-quit-to-generic-to-conditioned-coverage chain is largely shown, but the top-third collapse and the rising pediatric uptake (claims 3 and 2) are asserted rather than shown, and some prose details are loose, such as vials with serial codes. magnitude: Population figures sit inside the envelope, and payer mix, Medicare spend ($4.7B + $14.2B) and the cycling arithmetic reconcile. The ever-used flow arithmetic (claim 1) is off by about 0.8M.",
+      "generativity": "Renee at the Kroger with her pen, the unscheduled eye referral and the FaceTime call with Kayla about the Unpinned pin and loaf give concrete, filmable scenes. The world has strong texture: pin-free badges, the Pin-Free Sunday crowd, weigh-in sheets in Columbus and the laminated warning card. It shows more than it explains, though the opening is essay-like."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.968,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 30
   }
 }

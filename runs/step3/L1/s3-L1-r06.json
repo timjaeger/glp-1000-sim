@@ -51,6 +51,41 @@
         "input_tokens": 17533,
         "output_tokens": 21904
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r06-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26077,
+        "output_tokens": 7294
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r06-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26077,
+        "output_tokens": 5814
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r06-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26077,
+        "output_tokens": 6219
+      }
     ]
   },
   "world": {
@@ -315,6 +350,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r06-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo Nordisk settles Paragraph IV litigation with generic semaglutide filers, setting first US generic entry for Q2 2033",
+          "field": "world/events/3/event",
+          "why": "Mechanism: a Paragraph IV settlement normally lets generics in at or before patent expiry, and the parent put exclusivity at ~2031–32. A settlement that pushes entry later is asserted as the cause of stalled prices and the retreat of the 2032 price-break expectation, with no mechanism shown."
+        },
+        {
+          "quote": "The 65+ band rose more slowly (12 → 16.5) after the NAION class label, because ophthalmology history now screens some people out.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the +4.5 points is larger than the +4 gained in 2028–30, and the label arrived only in Aug 2031. Medicare's 9.5M aged 65+ users out of ~10.25M 65+ users also leaves almost no room for the 65+ share of VA, cash, gray and commercial users, so the NAION screening story is asserted rather than shown."
+        },
+        {
+          "quote": "The 50–64 band is at 40%, the first band where users are near-majority among people with obesity.",
+          "field": "world/population/note",
+          "why": "Mechanism: 40% of all 50–64s on drug would already be a clear majority of those with obesity, since many users are on it for cessation, AUD or diabetes. The band also already led at 31% in 2030, so 'first band' is wrong."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Use is up to 25.4%, with 12.7M on uninspected gray product, a middle third pushed to $349–449 cash after employer retreat, and a state-issued body in the DoD programme. Harms are real but modest: NAION adds 2–4k cases a year, bone data in children are ambiguous, and 150k children are on liraglutide. The Lilly scandal made reward blunting a named, labelled and measured harm, which helps the epistemic score. The result is a recognisably harder society with new losers (the middle third, aircrew, enlisted members), not a structural disaster.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: +6.6pp (25.4%), stalled prices, coverage down 57→45%, nicotine via Foundayo and semaglutide label broadening, the NAION class label, the Lilly scandal, normalisation, the DoD programme, and a niche side effect with a 1.8% label number. Nothing contradicts them. mechanism: Most chains are shown (employer retreat → indication-coded formularies → commercial users up while cash and gray grow; the Lilly scandal → label → FTC orders → fewer focus subscriptions). The weak points are the settlement setting generic entry after the stated exclusivity, the NAION explanation for 65+ growth, and the flawed 'near-majority among people with obesity' line (claims 1–3). magnitude: On 25.4%, ever 34.5%, income thirds, age bands, payer shares, user counts and the Medicare, Medicaid, HRSA and DoD spending figures all reconcile and sit inside the envelope. The only gap is 65+ users against Medicare's 9.5M, which leaves little room for other payers.",
+        "generativity": "The prose gives named characters (Rosa, Arturo, Benny, Mateo, Dani) and concrete scenes: the pill by the coffee maker, a Wilford Hall eye scan, the anhedonia screen on a phone, the half taco, the empty vape pocket. The world fields add texture such as San Antonio uniforms, sunflower-seed rituals and 'whose plan dropped it'. Minor slips, such as flight-line duty versus the aircrew OCT rule, do not reduce the film-ready quality."
+      },
+      "plausibility": 8.15
+    },
+    {
+      "custom_id": "s3-L1-r06-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Commercial users still rose from 17.8M to 20.6M, entirely through coded indications, while weight-only commercial fills fell by roughly a third.",
+          "field": "world/access/note",
+          "why": "Mechanism: a 16% rise in commercial users, all through coded indications, is asserted rather than shown. It sits uneasily beside pharmacy trend cooling to ~+7%, and the roughly 8.6M people moved to cash and gray product look larger than a one-third fall in weight-only fills would release."
+        },
+        {
+          "quote": "The 'focus' subscriptions that sold quiet as a product mostly shut down, and employers stopped paying for them because their lawyers would not let them subsidise a listed harm.",
+          "field": "prose/paragraph_on_scandal",
+          "why": "Mechanism: the prose contradicts the world state, which says about 0.8M users remain, down from 1.5–2M, so roughly 40–50% survive. The anhedonia label is also mainly for retatrutide, while these subscriptions sell low-dose oral semaglutide or Foundayo, so the causal link is thin."
+        },
+        {
+          "quote": "The DoD programme pairs drug with mandatory strength training, and early data show lean-mass preservation in that group.",
+          "field": "world/safety_ledger/lean_mass",
+          "why": "Mechanism and magnitude: a programme launched in Jan 2031 enrolling ~270k members is reported with lean-mass outcome data inside two years, and no study design, comparator or body-composition measurement is shown. It reads as a convenient good-news finding."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 25% of adults are on drug. The middle third is priced out by employer retreat and moves to $349–449 cash or to ~12.7M gray-market users. NAION is now a labelled class risk with an estimated 2,000–4,000 extra cases a year. Anhedonia is labelled, 150k children aged 6–11 are on drug with unexplained bone data, and the DoD programme pairs offered treatment with failing body-standard consequences. Harms are now more measured and nameable, which softens the epistemic score. Normalisation (being off now needs an explanation) and the class sorting by who pays keep it a recognisably harder society, not an extreme one.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events and fields: adoption +6.6pp, stalled prices, employer coverage 57→45%, nicotine via Foundayo and a broadened semaglutide label, the NAION class label, no new class, the Lilly scandal, normalisation, the DoD workforce programme, and anhedonia as a niche side effect. mechanism: Most chains are shown, but the employer-retreat to commercial-user arithmetic (claim 1), the prose saying focus subscriptions 'mostly shut down' while 0.8M remain (claim 2), and the DoD lean-mass data (claim 3) are asserted or inconsistent. magnitude: Population figures sit inside the envelope (25.4 on, 34.5 ever), and the cohort arithmetic, age and income weighting, and payer mix all sum to 100% and 68.6M. Medicare, Medicaid, HRSA and DoD spending multiply out, no generic arrives before 2031, and no unapproved product launches.",
+        "generativity": "The day-in-the-life scenes are well specified: Rosa's Foundayo countdown and anhedonia screen, Arturo's eye scan at Wilford Hall, Benny's dropped plan and the Hyderabad pens, and Mateo and Dani on free liraglutide. The world fields add texture too, such as sunflower-seed bowls, 'you can tell whose plan dropped it', the 'calm platoon' and half-portion menus. Many characters and scenes are implied."
+      },
+      "plausibility": 8.4
+    },
+    {
+      "custom_id": "s3-L1-r06-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The 65+ band rose more slowly (12 → 16.5) after the NAION class label, because ophthalmology history now screens some people out.",
+          "field": "world/population/note",
+          "why": "Mechanism: the explanation is asserted. 12→16.5 is a 37.5% relative rise, faster than the 50–64 band's 29%, and Medicare users also rose from 7.8M to 10.0M. The label is only 17 months old, so NAION screening is a thin cause."
+        },
+        {
+          "quote": "About 270,000 are enrolled.",
+          "field": "prose/body",
+          "why": "Magnitude and mechanism: a programme launched in Jan 2031 under an NDAA reaches 270k enrollees and a base-town contractor market within two years, with no ramp shown. That is very fast for a standing-start DoD programme with DLA contracting and mandatory strength components."
+        },
+        {
+          "quote": "Commercial users still rose from 17.8M to 20.6M, entirely through coded indications, while weight-only commercial fills fell by roughly a third.",
+          "field": "world/access/note",
+          "why": "Mechanism: a 16% rise in commercial users under falling employer coverage (57%→45%) is attributed wholly to coded indications. The world never shows how many were cessation, AUD or OSA, or how the coded indications offset a one-third drop in weight-only fills."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 68.6M adults are on drug. NAION is now a labelled class risk with 2,000–4,000 extra cases a year. Pediatric bone data are ambiguous. Gray-market use is 12.7M, the middle third is priced to cash or compounded pens, and military members who fail body-composition standards are offered the drug with mandatory strength training. Several harms are now named, measured and labelled, and normalisation has eased the moral reading of appetite, so cohesion and epistemic scores are moderate. This is a harder, more stratified society, not a catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events and fields. These are the 25.4% adult use, stalled $349/$449 prices, employer retreat to 45%, nicotine approvals, the NAION class label, the Lilly scandal, normalisation, the DoD programme and the niche anhedonia label. The pipeline and generic rules are respected, since the Q2 2033 settlement leaves generic_us false. mechanism: most chains are shown, such as indication-coded formularies pushing users to cash and gray and the Lilly disclosure leading to the label and the focus-subscription collapse. Weak spots are the 65+ NAION explanation, the unshown split of commercial coded fills, and the fast 270k DoD ramp. magnitude: on-drug 25.4, ever-used 34.5 and the income thirds sit inside the envelope. The age-band weights give 25.4, the payer mix sums to 100% and 68.6M, and the Medicare, Medicaid, HRSA and DoD dollar figures all multiply out. The cycled and persistence arithmetic closes, so only minor stretch remains.",
+        "generativity": "Rosa, Arturo, Benny, Mateo and Dani are implied. The prose has concrete scenes: the pill by the coffee maker, the eye scan at Wilford Hall, the half taco, the anhedonia screen buzzing on her phone, and the hand reaching for the vape pocket. The world fields add texture such as gum bowls, sunflower seeds, DoD protein packs and 'you can tell whose plan dropped it'. The scenes show more than they explain."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo Nordisk settles Paragraph IV litigation with generic semaglutide filers, setting first US generic entry for Q2 2033",
+        "field": "world/events/3/event",
+        "why": "Mechanism: a Paragraph IV settlement normally lets generics in at or before patent expiry, and the parent put exclusivity at ~2031–32. A settlement that pushes entry later is asserted as the cause of stalled prices and the retreat of the 2032 price-break expectation, with no mechanism shown."
+      },
+      {
+        "quote": "The 65+ band rose more slowly (12 → 16.5) after the NAION class label, because ophthalmology history now screens some people out.",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: the +4.5 points is larger than the +4 gained in 2028–30, and the label arrived only in Aug 2031. Medicare's 9.5M aged 65+ users out of ~10.25M 65+ users also leaves almost no room for the 65+ share of VA, cash, gray and commercial users, so the NAION screening story is asserted rather than shown."
+      },
+      {
+        "quote": "The 50–64 band is at 40%, the first band where users are near-majority among people with obesity.",
+        "field": "world/population/note",
+        "why": "Mechanism: 40% of all 50–64s on drug would already be a clear majority of those with obesity, since many users are on it for cessation, AUD or diabetes. The band also already led at 31% in 2030, so 'first band' is wrong."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 5.33,
+      "inequality": 5.83,
+      "public_health": 5.33,
+      "cohesion": 4.33,
+      "epistemic": 4.17,
+      "overall": 5.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 8.67
+    },
+    "plausibility": 8.18,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Use is up to 25.4%, with 12.7M on uninspected gray product, a middle third pushed to $349–449 cash after employer retreat, and a state-issued body in the DoD programme. Harms are real but modest: NAION adds 2–4k cases a year, bone data in children are ambiguous, and 150k children are on liraglutide. The Lilly scandal made reward blunting a named, labelled and measured harm, which helps the epistemic score. The result is a recognisably harder society with new losers (the middle third, aircrew, enlisted members), not a structural disaster.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events: +6.6pp (25.4%), stalled prices, coverage down 57→45%, nicotine via Foundayo and semaglutide label broadening, the NAION class label, the Lilly scandal, normalisation, the DoD programme, and a niche side effect with a 1.8% label number. Nothing contradicts them. mechanism: Most chains are shown (employer retreat → indication-coded formularies → commercial users up while cash and gray grow; the Lilly scandal → label → FTC orders → fewer focus subscriptions). The weak points are the settlement setting generic entry after the stated exclusivity, the NAION explanation for 65+ growth, and the flawed 'near-majority among people with obesity' line (claims 1–3). magnitude: On 25.4%, ever 34.5%, income thirds, age bands, payer shares, user counts and the Medicare, Medicaid, HRSA and DoD spending figures all reconcile and sit inside the envelope. The only gap is 65+ users against Medicare's 9.5M, which leaves little room for other payers.",
+      "generativity": "The prose gives named characters (Rosa, Arturo, Benny, Mateo, Dani) and concrete scenes: the pill by the coffee maker, a Wilford Hall eye scan, the anhedonia screen on a phone, the half taco, the empty vape pocket. The world fields add texture such as San Antonio uniforms, sunflower-seed rituals and 'whose plan dropped it'. Minor slips, such as flight-line duty versus the aircrew OCT rule, do not reduce the film-ready quality."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.948,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 34
   }
 }

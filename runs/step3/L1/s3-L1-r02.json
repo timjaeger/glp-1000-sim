@@ -51,6 +51,41 @@
         "input_tokens": 17528,
         "output_tokens": 19371
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r02-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26373,
+        "output_tokens": 6056
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r02-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26373,
+        "output_tokens": 6607
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r02-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26373,
+        "output_tokens": 6490
+      }
     ]
   },
   "world": {
@@ -328,6 +363,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r02-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Within the 2030 cohort, 10.5 of the 18.8 then on stayed on (56%, up from ~50% because monthly MariTide and clinic-administered dosing lift persistence)",
+          "field": "world/population/note",
+          "why": "Mechanism: MariTide covers about 1.3M of 57M users and clinic-administered dosing is barely evidenced, so neither can raise cohort-wide persistence by 6 points. The persistence figure is back-fitted to make the arithmetic close."
+        },
+        {
+          "quote": "In the US, Paragraph IV settlements (Feb 2031) set generic semaglutide entry no earlier than Apr 2033.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism/driver fidelity: the starting world puts US exclusivity at ~2031–32, so an entry date in 2033 is later than expiry. Settlements normally license entry before expiry, and the candidate gives no secondary patents to explain the later date."
+        },
+        {
+          "quote": "Most of the new entrants are normal-BMI 'metabolic healthspan' users in the top third (top 25→29).",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: about 7M net new users are added, but wellness users total only 4.5M, of whom 1.9M are gray-market and 1.5–2M already existed in 2030. The income-third gains (top +4, middle +2.5, bottom +1.2) also don't support 'most' being top-third wellness entrants."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Class stratification is explicit: the Charlotte build and finish, the EEOC charge, and low-income users pushed onto imported pens that hit them hardest in the counterfeit clusters. Harms also include 13 deaths from counterfeits, eating-disorder masking in lean young women, ambiguous bone data for 130k children, and anhedonia sold as a feature. It is a recognisably harder society, but not structurally hidden, because the anhedonia label is a measured, nameable harm, which lowers the epistemic score.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events (MariTide, anhedonia label, healthspan memberships, counterfeit clusters, stalled price, no new state action, marketed feature). The only strain is the settlement date, which runs later than the parent's stated exclusivity. mechanism: most changes have shown chains, but the persistence rise attributed to MariTide, the 'most new entrants are top-third wellness users' line, and the 2033 settlement date are asserted or conflict with the parent (claims 1–3). magnitude: all headline figures are inside the envelope (21.4% on, 30.5% ever, income thirds and age bands reconcile, payer mix sums to 57.4M, Bridge, Medicaid and HRSA dollars multiply out, MariTide approval exactly 12 months after filing). Minor gaps remain: disabled Medicare users jump from 0.4M to 1.0M to fit the 15.5% share, and wellness enrolment passes 4M within months of the March 2032 launch.",
+        "generativity": "The prose ends with a full day for Tamika: the focus tablet, the signed label form, the men with shakers, her mother's Indian envelope, and Jaylen at the FQHC with the registry questions. The world fields add Charlotte, the EEOC charge, the unmedicated festival stages, and anaesthesiologists cancelling cases. The scenes are specific and show rather than explain, though several are standard tropes."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s3-L1-r02-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Most of the new entrants are normal-BMI 'metabolic healthspan' users in the top third (top 25→29).",
+          "field": "world/population/note",
+          "why": "Fails magnitude. 4.0 pts of new ever-users is about 10.7M adults, but the whole healthspan/focus population is 4.5M, and 1.5–2M of those were already users in 2030. So these users cannot be most of the new entrants."
+        },
+        {
+          "quote": "up from ~50% because monthly MariTide and clinic-administered dosing lift persistence",
+          "field": "world/population/note",
+          "why": "Fails mechanism. MariTide has about 1.3M users, roughly 2% of the 57M total, and launched only in Jul 2031 under supply limits. It cannot move persistence in the 18.8-pt 2030 cohort from 50% to 56%; the cause is asserted, not shown."
+        },
+        {
+          "quote": "≈1.3M users by end 2032, ~80% commercial.",
+          "field": "world/access/note",
+          "why": "Fails mechanism and magnitude. Reaching 1.3M users in about 17 months on a rationed, supply-limited launch priced at $549 cash or $1,299 list, and outside the Medicare Bridge, is aggressive with no supply-expansion chain shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a harder, more stratified world than 2030, not a catastrophe. Low-income users are pushed to imported pens, which brought counterfeit clusters (212 hospitalisations, 13 deaths across both clusters), and HRSA waitlists run 7–10 weeks. Normal-BMI young women show undernutrition and eating-disorder masking, ~130k children on liraglutide have ambiguous bone data, and anhedonia is both labelled and marketed. Epistemic harm is somewhat eased because the label names and quantifies anhedonia, but it is still sold as a feature and the pediatric data are not interpretable.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: 21.4% is exactly 18.8+2.6, price stalled, MariTide launched, counterfeits, a Nov 2031 anhedonia label, healthspan memberships, stratification, and no new state action. Longevity wellness appears only as off-label telehealth memberships, not a labelled indication, which is slightly thin. mechanism: Several shifts are asserted rather than shown. These are the MariTide-driven persistence gain (claim 2), the restart rate falling because of opt-outs, the disabled Medicare population rising from 0.4M to 1.0M unexplained, and rapid MariTide uptake (claim 3). magnitude: Population and approval figures sit inside the envelope, and the payer mix, public spending lines and age/income arithmetic all reconcile. The failure is the claim that most new ever-users are healthspan users, which cannot fit inside 4.5M against ~10.7M new ever-users (claim 1). The 'passes 4 million' enrolment in the same month as the launch is also strained.",
+        "generativity": "The prose follows Tamika through a fraud-ops shift with a 'focus' tablet, the signed label form, a flattened emotional reaction to a caller, and the 'monthly' men in the elevator. Her mother's imported pen and the nine-week waitlist, and Jaylen at the FQHC registry visit, add more scenes. The world fields supply further scenes: the EEOC charge, unmedicated stages, and dosing-week holiday planning."
+      },
+      "plausibility": 6.75
+    },
+    {
+      "custom_id": "s3-L1-r02-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "10.5 of the 18.8 then on stayed on (56%, up from ~50% because monthly MariTide and clinic-administered dosing lift persistence)",
+          "field": "world/population/note",
+          "why": "Mechanism: MariTide launched Jul 2031 under supply limits and has about 1.3M users, roughly 2% of adults. That cannot lift persistence by six points across the whole 18.8-point 2030 on-drug cohort. The cohort arithmetic is built on this asserted effect."
+        },
+        {
+          "quote": "generic tirzepatide launched in Indian and Brazilian markets in 2031 at $25–60/month",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism and magnitude: the parent world has only first Indian tirzepatide filings in 2030. A full generic launch within a year, including in Brazil with no shown patent or regulatory route, is asserted. It is also the main supply for the 'imported generic tirzepatide' gray-market story."
+        },
+        {
+          "quote": "Most of the new entrants are normal-BMI 'metabolic healthspan' users in the top third (top 25→29).",
+          "field": "world/population/note",
+          "why": "Magnitude: about 4.5M wellness users, 1.9M of them gray-market, do not fit 'most' of the top third's net gain. That gain is about 3.6M (4 points of ~89M adults) of ~7.2M total net new users. Middle and bottom thirds also gained, and the wellness users are not all top-third."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is a harder version of 2030 with new losers. Counterfeit and imported-pen clusters (13 deaths, 552 hospitalisations or infections) fall mainly on low-income users facing HRSA waitlists. Eating-disorder masking in young women, ambiguous pediatric bone data for 130k children, and class-coded bodies (the 'Charlotte build' and 'finish', the EEOC charge) deepen stratification. The anhedonia label makes the harm nameable, which softens epistemic badness, but it is still marketed and subsidised. Nothing is melodramatic and there is no collapse.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable. Adoption is exactly +2.6 pp, prices are stalled, MariTide is approved, the anhedonia label is in the ledger and events, the counterfeit clusters are present, and state_action is none (only existing-authority enforcement). mechanism: most chains are shown, but the persistence rise from MariTide (claim 1) and the 2031 Indian and Brazilian generic tirzepatide launch (claim 2) are asserted. The FDA class label within two months of the retatrutide study is quick but defensible. magnitude: all headline figures sit inside the envelope (21.4 on, 30.5 ever, MariTide approval exactly 12 months after filing). The payer mix, the Medicare, Medicaid and HRSA spending, the age and income averages and the cohort arithmetic all reconcile. Remaining flaws are the 'most new entrants top third' framing (claim 3) and the odd jump in disabled Medicare users from ~0.4M to ~1.0M.",
+        "generativity": "The prose has strong scenes: Tamika's 'focus' tablet and the signed label form, the elevator of identical shakers, her mother's Hindi customs slip and the nine-week waitlist, and Jaylen at the FQHC registry questions. It also has dinner-table detail ('monthly like it's a club') and an ending that shows reward blunting rather than explaining it. The world fields give plenty of extra hooks, including the EEOC charge, the anaesthesia holds and the Indiana kiosk litigation."
+      },
+      "plausibility": 7.6
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Within the 2030 cohort, 10.5 of the 18.8 then on stayed on (56%, up from ~50% because monthly MariTide and clinic-administered dosing lift persistence)",
+        "field": "world/population/note",
+        "why": "Mechanism: MariTide covers about 1.3M of 57M users and clinic-administered dosing is barely evidenced, so neither can raise cohort-wide persistence by 6 points. The persistence figure is back-fitted to make the arithmetic close."
+      },
+      {
+        "quote": "In the US, Paragraph IV settlements (Feb 2031) set generic semaglutide entry no earlier than Apr 2033.",
+        "field": "world/access/generic_rest_of_world",
+        "why": "Mechanism/driver fidelity: the starting world puts US exclusivity at ~2031–32, so an entry date in 2033 is later than expiry. Settlements normally license entry before expiry, and the candidate gives no secondary patents to explain the later date."
+      },
+      {
+        "quote": "Most of the new entrants are normal-BMI 'metabolic healthspan' users in the top third (top 25→29).",
+        "field": "world/population/note",
+        "why": "Magnitude/mechanism: about 7M net new users are added, but wellness users total only 4.5M, of whom 1.9M are gray-market and 1.5–2M already existed in 2030. The income-third gains (top +4, middle +2.5, bottom +1.2) also don't support 'most' being top-third wellness entrants."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 5.5,
+      "inequality": 6.83,
+      "public_health": 6.17,
+      "cohesion": 5.33,
+      "epistemic": 4.83,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.17,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.33,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "Class stratification is explicit: the Charlotte build and finish, the EEOC charge, and low-income users pushed onto imported pens that hit them hardest in the counterfeit clusters. Harms also include 13 deaths from counterfeits, eating-disorder masking in lean young women, ambiguous bone data for 130k children, and anhedonia sold as a feature. It is a recognisably harder society, but not structurally hidden, because the anhedonia label is a measured, nameable harm, which lowers the epistemic score.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events (MariTide, anhedonia label, healthspan memberships, counterfeit clusters, stalled price, no new state action, marketed feature). The only strain is the settlement date, which runs later than the parent's stated exclusivity. mechanism: most changes have shown chains, but the persistence rise attributed to MariTide, the 'most new entrants are top-third wellness users' line, and the 2033 settlement date are asserted or conflict with the parent (claims 1–3). magnitude: all headline figures are inside the envelope (21.4% on, 30.5% ever, income thirds and age bands reconcile, payer mix sums to 57.4M, Bridge, Medicaid and HRSA dollars multiply out, MariTide approval exactly 12 months after filing). Minor gaps remain: disabled Medicare users jump from 0.4M to 1.0M to fit the 15.5% share, and wellness enrolment passes 4M within months of the March 2032 launch.",
+      "generativity": "The prose ends with a full day for Tamika: the focus tablet, the signed label form, the men with shakers, her mother's Indian envelope, and Jaylen at the FQHC with the registry questions. The world fields add Charlotte, the EEOC charge, the unmedicated festival stages, and anaesthesiologists cancelling cases. The scenes are specific and show rather than explain, though several are standard tropes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.532,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 14
   }
 }
