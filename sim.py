@@ -22,6 +22,10 @@ def build_parser() -> argparse.ArgumentParser:
     v = sub.add_parser("validate", help="validate world/ and runs/ against schema/")
     v.add_argument("-v", "--verbose", action="store_true", help="also list passing files")
 
+    s = sub.add_parser("select", help="apply the METHOD §7 selection rule to a judged step")
+    s.add_argument("--step", type=int, required=True, choices=range(1, 6))
+    s.add_argument("--force", action="store_true", help="redo a step that was already selected")
+
     return p
 
 
@@ -31,6 +35,9 @@ def main(argv=None) -> int:
     if args.cmd == "validate":
         from glpsim import validate
         return validate.main(paths, args)
+    if args.cmd == "select":
+        from glpsim import select
+        return select.main(paths, args)
     raise SystemExit(f"unknown command {args.cmd}")
 
 
