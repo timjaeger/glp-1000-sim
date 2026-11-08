@@ -35,7 +35,8 @@ Steps 1–5 → years 2028, 2030, 2032, 2034, 2036.
 - **Never invent a baseline statistic.** Step 0 facts come only from `data/step0_sources.md`. Simulated steps are fiction and may contain invented figures — they must carry `"fictional": true` in the world state so nothing from a simulated step can be mistaken for research.
 - **Judge independence.** The judge never sees other runs' scores, the step's "worst axis" weighting, or which lineage a run came from. It sees baseline + run and scores the rubric. The weighting is applied in `select`, in code.
 - **Cost guardrail.** Print an estimated token count and USD before submitting any batch; abort above `config/sim.json: max_usd_per_step` unless `--yes`.
-- **No secrets in the repo.** `ANTHROPIC_API_KEY` comes from the environment (set it as an environment secret in the Claude Code cloud session). `.gitignore` already excludes `.env`.
+- **No secrets in the repo, no secrets in the transcript.** `ANTHROPIC_API_KEY` comes from the cloud environment's variables and is read only by the `anthropic` client. Never print, log, echo, `env`-dump or commit environment variables, never write the key to a file, and never paste it into a prompt or a batch request body. The key belongs to a dedicated, spend-capped workspace and is revoked when the run is complete. `.gitignore` already excludes `.env`.
+- **Dry-run first.** `generate` and `judge` accept `--dry-run`, which renders every prompt and writes the batch as `runs/stepN/_batch.jsonl` without submitting, so the whole pipeline can be built and tested with no key present.
 - **Commit after every completed step** (`runs/`, `world/`, `lineage.md`). The lineage is the product.
 
 ## Repo layout
