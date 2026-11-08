@@ -1,0 +1,550 @@
+{
+  "run_id": "s3-L2-r19",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 19,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": -1.3,
+    "price_path": "managed_decline",
+    "coverage_shift": "public_expansion",
+    "new_indications": [],
+    "safety_signal": "none",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "none",
+    "cultural_response": "backlash_body_politics",
+    "state_action": "subsidy",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r19",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18688,
+        "output_tokens": 23346
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L2-r19",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 31446,
+        "output_tokens": 12797
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r19-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27663,
+        "output_tokens": 8169
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r19-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27663,
+        "output_tokens": 6388
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r19-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27663,
+        "output_tokens": 6956
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "prose/(root): '{\"headline\":\"Free Pill, Steady Worker: Washington Pays for the Drug, Your Boss Pays You to Stay on It, and Fewer Americans Take It\",\"world_in_600_words\":\"At the end of 2032 about one American adult in seven and a half is on an incretin drug, a little fewer than two years ago. The market got the pil…"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 13.3,
+      "us_adults_ever_used_pct": 25.4,
+      "by_income_third_pct": {
+        "top": 14.9,
+        "middle": 13.0,
+        "bottom": 12.0
+      },
+      "by_age_band_pct": {
+        "18_29": 7.0,
+        "30_49": 15.0,
+        "50_64": 21.0,
+        "65_plus": 9.0
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 46.5,
+      "note": "FICTIONAL. Cycling arithmetic: ever 25.4% − current 13.3% = 12.1% of adults have used and are off now. About 7.6 pts of current users are on a second or later course, and ≈4.2 pts of the off-now group restarted at least once and stopped again, so (7.6+4.2)/25.4 = 46.5% cycled. That is consistent with one-year persistence of ~35–40%, a little higher on the oral pill and on Medicare, and with restart rates of 36–47%. Of ~271M adults: ≈36.0M current, ≈32.8M used and off now, ≈202M never used. Ever-use rose only 1.4 pts (≈3.8M first-course starters), about 0.8M of them through the HRSA free-provision clinics. The fall in current use (−1.3 pts, ≈−3.4M) comes from four exits. (1) Employer medical-plan coverage fell from 63% to 56% and gated plans hit their second-year attrition. (2) Bone-protocol pauses were concentrated in the scanned, insured top third. (3) About 0.9M fewer import users, some of whom moved to legal channels and some of whom simply stopped. (4) A larger off-by-conviction group. Age check: 18–29 7.0% × 52M = 3.6M; 30–49 15.0% × 89.5M = 13.4M; 50–64 21.0% × 61M = 12.8M; 65+ 9.0% × 68.5M = 6.2M; total ≈ 36.0M = 13.3%. The 50–64 band fell most (25→21%): DEXA-advised pauses among postmenopausal women, gated-plan non-responder exits, and shrinking employer coverage. The 65+ band rose 0.5 pts because the permanent Part D benefit widened eligibility, which outweighed the statutory bone pauses. Income: the bottom third rose 10.3→12.0% through Medicaid at 90% federal match and the free clinics. The top third fell 18.5→14.9% because it is the most scanned and therefore the most often paused, and because 'off on purpose' is now a prestige position there. Pediatric: ~0.6% of ~73M under-18s ≈ 440k, mostly adolescents 12+ on semaglutide, increasingly the oral form through Medicaid EPSDT. Children in Medicaid households now often grow up with a parent who is on the drug through a public programme, and adolescents in those households are the fastest-growing pediatric group. The ~202M never-users are now less defined by being uninsured and more by being young, rural, or refusing on principle."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "FICTIONAL. The Metabolic Health Access provisions (Sept 2031 health package, effective Jan 2032) do three things. (1) They make Part D coverage of anti-obesity medication permanent, replacing the Bridge. Eligibility is BMI ≥30, or ≥27 with a comorbidity. The $50 beneficiary copay is kept. A statutory bone protocol requires DEXA at baseline and every 12 months for users 65+, and coverage is guaranteed to resume after a clinically advised pause. (2) They give 90% federal match for 2032–34 to state Medicaid programmes that cover obesity drugs, on condition that adherence lockouts last no more than 90 days. (3) They fund a HRSA free-provision programme of oral GLP-1 for uninsured adults at FQHCs, at $1.8B a year. The public rate is $149 for orals, $179 for injectable semaglutide/tirzepatide, and $249 for retatrutide and oral amycretin, for a blended ~$175 in Medicare and ~$165 in Medicaid. Medicare pays 19.4% of users ≈ 7.0M (6.0M aged 65+ plus 1.0M disabled under-65), ≈2.6M of them for obesity alone. Medicare spend ≈ 7.0M × $175 × 12 ≈ $14.7B, of which obesity-only ≈ 2.6M × $175 × 12 ≈ $5.5B. Medicaid pays 18.1% ≈ 6.5M users: 6.5M × $165 × 12 ≈ $12.9B gross, ≈$11.6B federal at 90% match, across 41 states plus DC. HRSA clinics serve 3.6% ≈ 1.3M users: 1.3M × $110 acquisition × 12 ≈ $1.7B, inside the $1.8B appropriation. Public payers together cover 41.1% of users (14.8M) against 37.2% commercial, which makes public programmes the largest payer for the first time.",
+      "employer_coverage_pct": 56,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 90+ semaglutide brands at $4–25/month, plus generic oral semaglutide. China: generic semaglutide and early tirzepatide copies, and Chinese API still underlies much of the gray trade. Canada: generic semaglutide at CAD 50–80. Brazil, Mexico and Turkey have generics. Novo's oral amycretin is not generic anywhere. US semaglutide patent litigation ended in a Nov 2031 settlement licensing ANDA entry from January 2033, so there is still no US generic at the end of 2032.",
+      "gray_market": "contained",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. Managed decline continues and brands hold $149–299 a month through the federal direct-pricing portal (launched as TrumpRx). Cash prices: oral semaglutide and Foundayo starting doses $149, oral maintenance doses $179, injectable semaglutide $179, tirzepatide $199–249, retatrutide $299 direct ($1,499 list), and oral amycretin $299 direct ($1,299 list). Wegovy list is $1,349 and almost nobody pays it. Oral fills passed 50% of all incretin fills in Q2 2032 (≈55% by year-end), driven by oral amycretin at parity, public-programme preference for $149 orals, and HRSA's oral-only formulary. Payer mix of ≈36.0M users: Medicare 19.4% (7.0M), Medicaid 18.1% (6.5M), HRSA 3.6% (1.3M), commercial 37.2% (13.4M), cash/direct 15.6% (5.6M) and imported/counterfeit 6.1% (2.2M), totalling 100%. The cash group includes ≈2.6M low-dose 'calm'/'steady' subscribers, many of them reimbursed through employer lifestyle stipends rather than medical plans. About 70% of covering employers still gate (≥80% PDC, verified weigh-ins, ≥5% at 6 months), and gated commercial plans do not protect DEXA pauses. The 503B exclusion and the 503A injunction stand. Imports fell from 3.1M to 2.2M as legal $149 pills and free clinics undercut the cheapest mail-order pens, but Congress still has not addressed the personal-importation gap."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular co-agonist, daily oral (amycretin oral, approved Jun 2031)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm', 'steady' and 'craving freedom' subscriptions: low-dose oral semaglutide or Foundayo for people without obesity, now often reimbursed through employer lifestyle stipends (≈2.6M subscribers)",
+        "smoking and vaping cessation (still off-label; Novo's new trial is enrolling)",
+        "alcohol reduction, including EAP-referred prescribing",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "pediatric under-12 use under specialist care",
+        "gambling and compulsive-shopping craving reduction, still anecdotal"
+      ],
+      "pipeline_note": "FICTIONAL. The oral_parity driver is met by an application that was under FDA review at the start of the window. The amycretin filing (Jun 2028) included the daily oral formulation. After the extended review it was approved in Jun 2031 for chronic weight management only, with 72-week mean loss of ~22% (versus ~20–22% for tirzepatide injectable) and DEXA data showing a lean-mass fraction similar to injectables. It is the first pill to match the injectables, and it carries the 2028 class bone/lean-mass labelling. No new indication was approved. MariTide (filed Apr 2030) is under an extended review for 72-week bone data, with a decision expected 2033. The survodutide resubmission was accepted with a 2033 goal date. Bimagrumab combinations are still in phase 3. The semaglutide smoking-cessation programme is re-running with anhedonia endpoints, and resubmission is not expected before 2033. Incretin market ≈$112B in 2032. US volume is roughly flat, US net price is down a further ~10%, and ex-US revenue keeps eroding. Novo regains US share through oral amycretin, while Lilly leads in injectables and in Foundayo volume."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of voluntary discontinuation. Oral amycretin's early-titration nausea is comparable to injectables. Rates are worse with unsupervised escalation of imported product.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss, and seen at similar rates on the high-efficacy pill.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation and absolute risk is low. Counterfeit cases still confound reporting.",
+        "regulatory_response": "Labelled; MDL litigation ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Unchanged in kind. Lean-mass loss is ~30–40% of weight lost in untrained users over 50. Oral amycretin shows no advantage.",
+        "regulatory_response": "2028 class label retained. The 2029 joint guidance is now written into the Medicare protocol for users 65+. Commercial plans follow it unevenly."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "No new signal; the existing estimates hold. With ≈3.0M users 65+ on >2 years, 0.6%/yr baseline × 0.35 excess ≈ 6,300 excess hip fractures a year against ~300,000 total US hip fractures. The ~1.2× excess in postmenopausal women 50–64 who cycle repeatedly persists. Medicare DEXA claims are up a further ~30% after the statutory protocol, and waits in some regions are still 8–12 weeks.",
+        "regulatory_response": "Statutory Medicare bone protocol (2032) with guaranteed coverage resumption after a pause. FDA requires bone endpoints in all new obesity filings (applied to oral amycretin, MariTide and survodutide). The DOJ civil matter on Novo is unresolved."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohort studies still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention; no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association in updated reviews.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, 'the grey')",
+        "status": "emerging",
+        "prevalence_note": "No new signal. Final retatrutide postmarketing SHAPS data (2031) confirm the interim finding: ~11–13% of top-dose users cross the clinical threshold versus ~5% of comparators, still observational. There is still no systematic measurement among the ≈2.6M low-dose 'calm'/'steady' subscribers.",
+        "regulatory_response": "No label change. FTC warning letters continue. EEOC technical assistance (2032) addresses employer incentives tied to the subscriptions but not the pharmacology."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. Involuntary stops have moved from Medicaid lockouts toward commercial gating, because the 2032 law caps Medicaid lockouts at 90 days. Medically advised pauses are now a large category: ≈0.9M Medicare users paused in 2032.",
+        "regulatory_response": "The 90-day lockout cap is a condition of enhanced Medicaid match. Indiana amended its waiver; the Seventh Circuit case was mooted in part."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D, calcium and protein insufficiency signals persist in high-loss and older users.",
+        "regulatory_response": "Professional guidance (2029); Medicare counselling template includes protein and vitamin D screening; no FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~7 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up. Cycling still looks worse for bone than continuous use. A 2032 interim adolescent bone-accrual report shows no significant deficit at 2 years but is underpowered and does not resolve the question.",
+        "regulatory_response": "Postmarketing requirements continue; final pediatric results due 2035."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "Poison-centre calls are roughly flat from 2030 to 2032 as import volume fell. There are scattered contamination and substitution cases and no cluster on the scale of 2029. 'Is it real?' is still a common question in Houston, Phoenix and Miami.",
+        "regulatory_response": "Import alerts, seizures and pen-authentication guidance continue. Individuals are still not prosecuted and there is no importation law."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "Fall-related ED visits remain elevated in users 65+ with >2 years' use. Confounding is still not separated.",
+        "regulatory_response": "Fall-risk screening is now a required element of the statutory Medicare protocol."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "Fewer users in total but more of them in low-income households, so the pressure has moved down-market. Dollar-store and convenience-channel snack and soda volumes fell ~3% in 2032, while premium snacking stabilised as top-third users paused. National salty-snack volume is down ~1–2% a year. Protein-, fibre- and bone-forward lines are still growing. Packaged-food firms reformulate value packs into smaller 'pill-size' formats aimed at Medicaid households and keep trimming SKUs.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "A fourth and fifth year of US spirits volume decline. Employer-reimbursed 'steady' subscriptions remove weeknight drinking among salaried workers. Beer holds in rural and backlash markets. On-premise 'one good drink' formats are stable, and non-alcoholic lines take shelf space.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat and spend per cover is down. Gram-priced bowls and half portions are standard. Chains near HRSA clinics and Medicaid-dense neighbourhoods report smaller tickets for the first time. 'No-gram' independents in Atlanta, Memphis and Houston are growing and franchising regionally, and Tulsa churches book them for fellowship dinners.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn continues, now increasingly driven by DEXA pauses among older and affluent customers. Value retailers see churn in plus sizes as Medicaid users lose weight. Plus-size specialists hold steady with body-sovereignty campaigns.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Growing. The statutory Medicare protocol lets Part D plans and MA plans fund supervised strength sessions, and DEXA-plus-coaching chains expand into Sun Belt suburbs. Mobile DEXA vans now serve FQHC parking lots as well as gyms.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employers are retreating to a defined-contribution model. Medical-plan coverage fell from 63% to 56% as employers argued that public programmes are now the default payer and that a $149 pill fits a stipend. Gating persists in ~70% of covering plans. Lifestyle-account stipends ($50–150 a month) increasingly fund oral fills and 'steady' subscriptions outside the medical plan. Pharmacy trend is ~+4%. Bone-related claims are a stable line item.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "US volume is roughly flat and net price down ~10%. Novo recovers US share with oral amycretin and the public-programme rate, while Lilly leads injectables. Investors price in the January 2033 semaglutide generic entry. Bone-agent and DEXA suppliers are still winners, and pen-authentication firms grow more slowly.",
+        "direction": "adapted"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The meaning of being on the drug has partly inverted by class. In Medicaid-dense neighbourhoods, a clinic pill bottle on the kitchen counter is ordinary and slightly aspirational. Among affluent professionals, 'paused per DEXA' and 'off on purpose' are the respectable states, and visibly long-term use reads as not being looked after. Resistance-trained shoulders still mark doing it right. Visible regain in a commercial plan still reads as having been cut off.",
+      "thinness_and_class": "The gradient has nearly closed in level (top 14.9%, bottom 12.0%) but not in quality. Top-third users get scans, coaches, antiresorptives and protected pauses. Bottom-third users get a $149 or free pill, a weigh-in kiosk and a 12-month DEXA if the van comes. In commercial plans, the people who lose coverage for pausing are disproportionately middle-income women in their fifties.",
+      "eating_as_ritual": "Protein-first, smaller shared meals are the norm. 'Full table' Sunday dinners, church potlucks and no-gram restaurants are defended as heritage, and in Tulsa–Dallas congregations they are effectively liturgy. Holiday hosts plan for on, paused and off-by-conviction guests.",
+      "dating_and_intimacy": "Profiles state on, paused or off. 'Unmedicated' remains a filter in backlash communities. 'Steady' subscribers are described by partners as easier to live with and harder to surprise.",
+      "meaning_of_appetite": "Public provision has made appetite a policy object. The backlash coalition (Atlanta body-sovereignty collectives, Southern Baptist and Pentecostal congregations, supplement sellers, disability advocates) split over the 2031 law. The Atlanta collectives and disability groups backed the 90-day lockout cap. The religious and supplement wings denounced 'free pills for appetite' as state medicalisation of a gift. Oklahoma's 2032 law barring BMI-linked surcharges in state-employee plans is their one shared win.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL. Final retatrutide SHAPS data hold at ~11–13% of top-dose users above threshold versus ~5% of comparators. Around ≈2.6M low-dose subscribers (within the 5.6M cash/direct users), there is still no independent measurement. Employer HR analytics report that subscribers have ~15–20% lower unplanned absence and fewer escalated customer complaints. These are self-selected, employer-collected figures, and they are what drives the incentives.",
+      "framing": "A workplace trait. HR calls it 'steadiness' and vendors call it 'Even' or 'Steady'. Clinicians still say 'dose-dependent reward modulation', and users who dislike it call it 'the grey'. Adherence is framed as reliability.",
+      "effect_on_work": "Employers that moved obesity coverage out of the medical plan now pay lifestyle stipends that count low-dose 'steady' subscriptions and on-label oral fills alike. Call centres, logistics hubs (notably around Memphis), hospital revenue-cycle departments and insurance claims floors add $25–60 monthly 'consistency' bonuses for staff who upload continuous fill records. EEOC 2032 technical assistance says the rewards are lawful as voluntary wellness incentives but that hiring or promotion may not be conditioned on them. Adherence and twelve-month retention correlate strongly, and whether the drug or the job causes it is unresolved. Teamster and SEIU contracts bar fill-record uploads. Sales, creative and hospitality workers still cut doses before peaks.",
+      "effect_on_art_and_play": "'Written unmedicated' is a genre label in Nashville and on the comedy circuit. A Brooklyn gallery show of work by artists on 'steady' doses, titled 'Even', drew both crowds and pans. Subscribers keep seeking intense stimulus: hot sauce, rage rooms and loud venues. Esports teams are split on whether subscribers play better or just tilt less.",
+      "effect_on_intimacy": "Sex therapists routinely ask about stipend-funded subscriptions. Dose-holiday weekends are common, and some couples resent that a workplace bonus depends on not taking one. Backlash churches run marriage retreats framed around restoring desire.",
+      "effect_on_politics": "Incretins are now an entitlement fight. Candidates argue over the cost of the 2031 law, the expiry of the 90% match in 2034, and whether the January 2033 generic should lower the public rate. 'Calm voter' messaging is still tested and unpublished, and there is no measured turnout effect. The backlash coalition is courted by both parties but votes inconsistently because it split over the law.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "The FDA approved the first oral at parity, but only for weight management with bone labelling, and keeps demanding 72-week DEXA data for MariTide and survodutide. Import enforcement is still selective, with alerts and seizures but no prosecution of individuals. The FTC polices advertising claims and the EEOC issues guidance on workplace incentives.",
+      "subsidy_or_mandate": "Direct subsidy and free provision under the Sept 2031 health package: permanent Part D anti-obesity coverage ($50 copay); 90% federal Medicaid match for 2032–34 with a ≤90-day lockout cap; and HRSA's $1.8B/yr free oral GLP-1 programme for uninsured adults at FQHCs (≈1.3M users). There is no mandate to use the drug.",
+      "conditioning_or_surveillance": "Public conditioning has eased while private conditioning has grown. Medicare's statutory protocol requires DEXA and fall screening but protects pauses. Medicaid lockouts are capped at 90 days, and Indiana amended its waiver to comply. Commercial gating continues in ~70% of covering plans without pause protection. Employer 'consistency' bonuses add fill-record uploads to HR systems outside unionised shops. Pharmacy weigh-in kiosks now also log HRSA clinic patients.",
+      "workforce_or_military": "DOT sleep-apnea screening still makes tirzepatide a de facto job requirement for some drivers, and fleets add DEXA checks for drivers over 55. The Army now accepts recruits on oral therapy under a case-by-case waiver piloted at two reception battalions, and the policy remains contested.",
+      "geopolitics_of_supply": "Chinese API is still behind most of the gray trade and features in 'seal the mail' rhetoric. India uses the approaching US generic entry as leverage in trade talks, with Indian generic makers lining up ANDAs for January 2033. Section 232 tariffs remain, and domestic-capacity credits were part of the 2031 price agreement.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-06",
+        "event": "FDA approves Novo's oral amycretin for chronic weight management after an extended review. It is the first daily pill to match injectable tirzepatide, with ~22% mean loss at 72 weeks, and it carries class bone labelling and no new indications. Direct price is $299 a month.",
+        "driver": "next_gen_launch: oral_parity; new_indications: none"
+      },
+      {
+        "date": "2031-09",
+        "event": "Congress passes a health package with the Metabolic Health Access provisions: permanent Medicare Part D obesity coverage with a statutory DEXA and pause-protection protocol, 90% federal Medicaid match through 2034 for states that cap lockouts at 90 days, and $1.8B a year for free oral GLP-1s at community health centres",
+        "driver": "coverage_shift: public_expansion; state_action: subsidy"
+      },
+      {
+        "date": "2031-11",
+        "event": "HHS, Lilly and Novo agree a new step-down effective January 2032: injectable semaglutide $179, tirzepatide $199–249, retatrutide $299 direct, a public-programme rate of $149 for orals, and oral starting doses held at $149. Separately, Novo settles US semaglutide patent litigation, licensing generic entry from January 2033.",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2032-02",
+        "event": "A group of large call-centre, logistics and hospital employers announces 'consistency' stipends that reimburse oral GLP-1 fills and low-dose 'steady' subscriptions and pay bonuses for continuous fill records. The EEOC responds with technical assistance allowing voluntary incentives but barring hiring conditions.",
+        "driver": "personality_layer: employer_encouraged"
+      },
+      {
+        "date": "2032-05",
+        "event": "Oklahoma enacts a ban on BMI-linked premium surcharges in state-employee plans after a campaign led by Tulsa–Dallas congregations. Atlanta body-sovereignty collectives, who backed the federal lockout cap, decline to join the bill-signing.",
+        "driver": "cultural_response: backlash_body_politics"
+      },
+      {
+        "date": "2032-09",
+        "event": "CDC and IQVIA data show current incretin use falling to about 13% of adults even as public payers overtake commercial plans. Analysts attribute the decline to employer coverage retreat, commercial gating attrition, about 900,000 Medicare bone-protocol pauses, and fewer import users.",
+        "driver": "baseline; adoption_delta_pp: -1.3; safety_signal: none"
+      }
+    ],
+    "open_tensions": [
+      "US generic semaglutide arrives in January 2033, but the public-programme rate, the $149 portal price and HRSA purchasing contracts were set for branded product. Whether public prices fall, whether imports collapse, and whether Lilly's tirzepatide holds its premium are all unresolved.",
+      "Medicare protects bone-advised pauses by statute, while ~70% of covering commercial plans still treat a pause as non-adherence. The same DEXA result means a protected pause at 66 and a 12-month coverage loss at 56.",
+      "Employers now reward continuous use of low-dose 'steady' subscriptions as a reliability trait while the best available data call top-dose reward blunting a harm in one user in eight. Adherence tracks employment, the causality is unknown, and the EEOC has only drawn the line at hiring.",
+      "The 90% Medicaid match expires in 2034 and HRSA funding is annual. The backlash coalition split over the 2031 law, so the one organised constituency that is sceptical of the drugs cannot agree whether to defend or defund public provision."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is marketed in the US; exclusivity still runs to the end of 2032.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149 a month cash through the federal direct-pricing portal (launched as TrumpRx) and manufacturer direct channels.",
+      "The 503B exclusion and the 503A compounding injunction still stand, and Congress has passed no personal-importation law.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "Free Pill, Steady Worker: Washington Pays for the Drug, Your Boss Pays You to Stay on It, and Fewer Americans Take It",
+    "world_in_600_words": "At the end of 2032 about one American adult in seven and a half is on an incretin drug, a little fewer than two years ago. The market got the pill it had been waiting for and the government finally paid for the drugs, and the number still fell. The causes are bureaucratic, like most of the causes in this story.\n\nThe pill came in June 2031. Novo's oral amycretin, a daily tablet that acts on the GLP-1 and amylin systems, matched injectable tirzepatide at about 22 percent weight loss over 72 weeks. The FDA approved it for weight management alone and gave it the same bone warnings as the injectables. By mid-2032 more than half of incretin fills were tablets. The needle, once the main thing people feared, stopped mattering.\n\nThree months later Congress did what it had avoided for a decade. A health package made Medicare coverage of obesity drugs permanent, offered states 90 percent federal funding to cover them in Medicaid, and paid community health centres to hand the pill to uninsured adults for free. There were strings. States had to cap adherence lockouts at ninety days, and Indiana rewrote its waiver to comply. Medicare wrote the bone guidance into law: a scan every year after sixty-five, a pause if the scan says so, and a guarantee that coverage resumes afterwards. Public programmes now pay for more users than employers do. About fourteen point eight million Americans get the drug through Medicare, Medicaid or a clinic.\n\nThe new public users are mostly poorer, and the people leaving are mostly richer. Affluent users are scanned most often, so they are paused most often. In their circles being off is a status, whether the reason is medical or a matter of conviction. Employers read the law as permission to step back. Medical-plan coverage fell from sixty-three percent of employers to fifty-six, and the plans that remain still cut off people who pause. A fifty-six-year-old woman with thinning bones can lose her coverage for a year by following her doctor. At sixty-six she would be protected. Import users have dropped by nearly a million because a legal pill at $149 beats a suspect pen from Shenzhen.\n\nEmployers did not entirely leave the drug. They moved it into stipends. Call centres, logistics hubs around Memphis, hospital billing floors and claims departments now pay $25 to $60 a month to staff who upload continuous fill records. The records can be for a Medicaid weight pill or a $149 'Steady' subscription for people who were never heavy. HR dashboards show lower absence and fewer complaints, which may reflect the drug or may reflect who chooses to take it. The EEOC says such incentives are lawful as long as nobody is hired or promoted because of them. Unions have kept the uploads out of their contracts. Final retatrutide data still show that about one top-dose user in eight loses a measurable capacity for pleasure. Nobody measures the low-dose subscribers, who now number around two and a half million.\n\nThe backlash got its fight and then split over it. Atlanta's body-sovereignty collectives and the disability advocates supported the lockout cap. The congregations of the Tulsa–Dallas corridor called free appetite pills a state sacrament, and their one shared victory was an Oklahoma ban on weight-based surcharges. Nashville still sells songs 'written unmedicated'.\n\nIn the shops, discount-store snack aisles have shrunk while premium snacks have recovered. Spirits are in their fifth straight year of decline. Scanning vans park outside clinics as well as gyms.\n\nThe generic semaglutide arrives in January. Every price in this system was set for a branded drug, and the 90 percent Medicaid money runs out in 2034.",
+    "a_day_in_the_life": "Lorena Pacheco photographs the bottle on her kitchen counter at 6:10 a.m. She makes sure the AHCCCS label, the fill date and the word semaglutide are all in focus, then uploads it to the Steady app before the coffee finishes. Forty dollars a month if the streak holds. The streak is at fourteen months.\n\nShe swallows the pill with exactly four ounces of water, the way the clinic nurse showed her, and waits the thirty minutes while braiding Mía's hair. Mía is eleven and wants to know why Tía Bea's pens come in a box with Chinese writing. \"Because Tía Bea is stubborn,\" Lorena says.\n\nAt the call centre in west Phoenix her queue opens at eight. Supervisor screens show handle time, sentiment score and a small green leaf beside her name. Nobody explains the leaf, but everyone with one has it for the same reason. At ten a man screams about a denied claim for nine minutes. She feels it arrive and then feel very far away, as if it were happening in the next booth. Her sentiment score stays at 96.\n\nAt lunch Dani from Tier 2 eats a whole burrito and says she skipped yesterday's pill because her boyfriend's band is playing tonight. \"You'll lose your leaf,\" someone says. Dani shrugs. \"I'll get it back.\"\n\nAfter work the DEXA van is parked behind the Walgreens. Her appointment is in March.\n\nAt home Mía's friend is having a birthday, so there is cake. Lorena cuts herself a sliver and eats it standing up. It tastes like cake. She remembers that cake used to be more than that, then goes to fold laundry."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r19-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medical-plan coverage fell from 63% to 56% as employers argued that public programmes are now the default payer and that a $149 pill fits a stipend.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: in 2030 lower net prices plus gating pushed employer coverage up (58→63%). A further price step-down is now said to cause a 7-point retreat in two years, on the strength of what employers 'argued' and with no mechanism shown."
+        },
+        {
+          "quote": "The top third fell 18.5→14.9% because it is the most scanned and therefore the most often paused, and because 'off on purpose' is now a prestige position there.",
+          "field": "world/population/note",
+          "why": "Mechanism: a 3.6-point fall in the top third (~3M people) is attributed to pauses and prestige. The statutory pause protection covers only 65+, and top-third users could pay cash for a $149 pill. Pause-and-prestige explains little of a drop that large."
+        },
+        {
+          "quote": "Medicaid pays 18.1% ≈ 6.5M users: 6.5M × $165 × 12 ≈ $12.9B gross, ≈$11.6B federal at 90% match, across 41 states plus DC.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicaid users nearly double (3.5M→6.5M) within about a year of the 90% match taking effect, with 41 states plus DC opting in at once. Take-up speed is asserted, and it sits oddly with the bottom third rising only 1.7 points."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.0,
+        "inequality": 5.0,
+        "public_health": 4.5,
+        "cohesion": 5.0,
+        "epistemic": 6.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Public expansion cuts Medicaid lockouts and extends free access, which lowers some harms. Against that, commercial gating still treats DEXA pauses as non-adherence (a coverage loss at 56 but protection at 66), and employers pay 'consistency' bonuses tied to fill-record uploads. Roughly 2.6M unmeasured low-dose 'steady' subscribers sit beside a ~1-in-8 reward-blunting harm at top doses with causality unresolved, which is the largest epistemic loss. Inequality is partly narrowed in level but remains in quality (protected vs unprotected pauses), so this is a harder society with new losers (~5.5).",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is 14.6→13.3, oral amycretin is approved Jun 2031 from the pending 2028 filing, and the Sept 2031 package provides subsidy and public expansion. Backlash splits over the law and employer stipends are present, and there is no new safety signal or generic. The only stretch is that the filing is retroactively said to include an oral form. magnitude: Current use, ever-use, income thirds, age bands (~36.0M) and payer mix (sums to 100%) all fit the envelope. Medicare $14.7B, Medicaid $12.9B/$11.6B and HRSA $1.7B all multiply out, and the cycling arithmetic (46.5%) checks; the generic rule holds with entry in Jan 2033. Only the Medicaid and HRSA ramp is aggressive. mechanism: The public expansion and pill arrival are shown through events and numbers, but several shifts are asserted rather than caused, namely claims 1–3 above. Oral share passing 50% within about a year is also thinly supported, and the 14-month streak in the prose predates the Feb 2032 stipend program.",
+        "generativity": "The prose day-in-life shows rather than explains: the 6:10 photo of the AHCCCS bottle for the Steady app, the green leaf nobody explains, the nine-minute screaming caller that feels 'in the next booth', Dani's skipped pill, the DEXA van behind Walgreens, and the cake that 'tastes like cake'. The world fields add Memphis logistics floors, Tulsa fellowship dinners, the Brooklyn 'Even' show and the Oklahoma surcharge ban. Many scenes and characters are implied."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L2-r19-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medical-plan coverage fell from 63% to 56% as employers argued that public programmes are now the default payer and that a $149 pill fits a stipend.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: the 2030 world raised coverage from 58% to 63% because net prices fell. Prices fall further here, yet coverage reverses on an asserted rationale. Working-age employees are not in Medicare, so 'public programmes are the default payer' does not follow."
+        },
+        {
+          "quote": "The top third fell 18.5→14.9% because it is the most scanned and therefore the most often paused, and because 'off on purpose' is now a prestige position there.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: a 3.6-point drop is about 3.2M users. The only quantified pause figure is ≈0.9M Medicare pauses across all incomes, so the cause is asserted and the prestige effect is a convenient narrative."
+        },
+        {
+          "quote": "Incretin market ≈$112B in 2032. US volume is roughly flat, US net price is down a further ~10%, and ex-US revenue keeps eroding.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: current users fell about 8.6% (39.4M to 36.0M), so 'US volume roughly flat' does not reconcile with the population figures. Flat volume and a 10% net price drop also sit loosely with a market that falls only ~5%."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 4,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Public provision, the 90-day lockout cap and free oral clinics reduce harm relative to 2030, and the gradient in level has nearly closed. Harms remain: commercial gating without pause protection (a 56-year-old loses coverage while a 66-year-old is protected), employer 'consistency' bonuses tied to uploaded fill records, and ≈2.6M unmeasured 'steady' subscribers with one in eight top-dose users blunted. The harm is structural and fairly hard to see, but it is not worse than a recognisably harder society, so about 5.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: adoption at 13.3, a Sept 2031 law for public_expansion and subsidy, amycretin oral approved Jun 2031 from an application already under review, employer stipends and bonuses, and the Oklahoma and coalition-split backlash. Nothing contradicts them. mechanism: the public-expansion and oral-parity chains are shown, but the employer coverage reversal (claim 1) and the top-third collapse (claim 2) are asserted, and the rapid oral majority and Medicaid doubling are only lightly supported. magnitude: everything sits inside the envelope, and payer shares sum to 100% with the Medicare, Medicaid and HRSA spending figures multiplying out. The 'US volume roughly flat' line (claim 3) fails against falling user counts, and Medicare 65+ users (6.0M) take up nearly all of the 6.2M users aged 65+.",
+        "generativity": "The Lorena Pacheco scene is concrete: the photographed bottle uploaded to the Steady app, the green leaf on the supervisor screen, the nine-minute screaming caller that feels far away, Dani skipping a pill for her boyfriend's gig, the DEXA van behind the Walgreens, and cake that is only cake. It shows blunting and incentives without explaining them. The world fields also imply many further scenes: Tulsa congregations, Memphis logistics floors, and a Brooklyn 'Even' show."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s3-L2-r19-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Medical-plan coverage fell from 63% to 56% as employers argued that public programmes are now the default payer and that a $149 pill fits a stipend.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: a 7-point drop in employer coverage reverses a 2028–30 rise that outcome gating had just made budgetable. The chain is a reported employer argument, and nothing shows why employers would drop coverage within a year of a law that does not change their costs."
+        },
+        {
+          "quote": "The top third fell 18.5→14.9% because it is the most scanned and therefore the most often paused, and because 'off on purpose' is now a prestige position there.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: a 3.6-point fall is about 3.2M fewer top-third users, but only ~0.9M Medicare pauses are cited and they are not concentrated by income. Pauses are also temporary, with coverage guaranteed to resume, so the bulk of the drop rests on a prestige claim."
+        },
+        {
+          "quote": "Medicaid pays 18.1% ≈ 6.5M users",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicaid users nearly double from 3.5M while overall users fall. The 90% match took effect only in Jan 2032, so state uptake of about a year is assumed rather than shown, and 41 states plus DC is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Public access widens and the 90-day lockout cap eases public conditioning. Imports and counterfeit harms fall. Against that, ~70% of commercial plans still punish bone-advised pauses, so the same DEXA result protects a 66-year-old and costs a 56-year-old her coverage. Employers now pay 'consistency' bonuses for continuous fill records, which adds workplace surveillance. About 2.6M low-dose subscribers have no independent measurement, while top-dose users show 11–13% anhedonia. The result is a harder society with new losers but also real gains.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events: oral amycretin approved Jun 2031 from a filing pending at the start, the 2031 Medicare/Medicaid/HRSA package, the stipend-based employer layer, the Oklahoma backlash event, and a -1.3 point fall to 13.3%. The one stretch is that the amycretin filing 'included the daily oral formulation', which the starting world never stated. mechanism: Several shifts are asserted rather than shown, namely the employer coverage retreat (claim 1), the size of the top-third fall (claim 2) and the near-doubling of Medicaid users (claim 3). The employer-stipend and lockout-cap chains are well shown. magnitude: Everything sits inside the envelope (ever-use 25.4, current 13.3, income thirds bracket the national figure) and reconciles: the age bands sum to 36.0M, the payer shares sum to 100%, and the Medicare, Medicaid and HRSA arithmetic multiplies out. The only gaps are 'US volume roughly flat' alongside a ~9% fall in users, and a blended $175 Medicare rate against an oral-majority mix at $149.",
+        "generativity": "The day-in-the-life shows rather than explains: the streak app, the green leaf on the supervisor screen, the nine-minute screaming call that feels far away, Dani skipping a pill for a gig, and the cake that is only cake. It implies characters such as Tía Bea with her imported pens, and settings such as the Phoenix call centre and the DEXA van behind Walgreens. The world fields (Nashville 'unmedicated', the Brooklyn 'Even' show, the Tulsa churches) add many further scenes."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medical-plan coverage fell from 63% to 56% as employers argued that public programmes are now the default payer and that a $149 pill fits a stipend.",
+        "field": "world/economy/insurance/state",
+        "why": "Mechanism: in 2030 lower net prices plus gating pushed employer coverage up (58→63%). A further price step-down is now said to cause a 7-point retreat in two years, on the strength of what employers 'argued' and with no mechanism shown."
+      },
+      {
+        "quote": "The top third fell 18.5→14.9% because it is the most scanned and therefore the most often paused, and because 'off on purpose' is now a prestige position there.",
+        "field": "world/population/note",
+        "why": "Mechanism: a 3.6-point fall in the top third (~3M people) is attributed to pauses and prestige. The statutory pause protection covers only 65+, and top-third users could pay cash for a $149 pill. Pause-and-prestige explains little of a drop that large."
+      },
+      {
+        "quote": "Medicaid pays 18.1% ≈ 6.5M users: 6.5M × $165 × 12 ≈ $12.9B gross, ≈$11.6B federal at 90% match, across 41 states plus DC.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: Medicaid users nearly double (3.5M→6.5M) within about a year of the 90% match taking effect, with 41 states plus DC opting in at once. Take-up speed is asserted, and it sits oddly with the bottom third rising only 1.7 points."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 6.0,
+      "inequality": 4.67,
+      "public_health": 4.33,
+      "cohesion": 5.0,
+      "epistemic": 6.17,
+      "overall": 5.27
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.33,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.55,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Public expansion cuts Medicaid lockouts and extends free access, which lowers some harms. Against that, commercial gating still treats DEXA pauses as non-adherence (a coverage loss at 56 but protection at 66), and employers pay 'consistency' bonuses tied to fill-record uploads. Roughly 2.6M unmeasured low-dose 'steady' subscribers sit beside a ~1-in-8 reward-blunting harm at top doses with causality unresolved, which is the largest epistemic loss. Inequality is partly narrowed in level but remains in quality (protected vs unprotected pauses), so this is a harder society with new losers (~5.5).",
+      "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is 14.6→13.3, oral amycretin is approved Jun 2031 from the pending 2028 filing, and the Sept 2031 package provides subsidy and public expansion. Backlash splits over the law and employer stipends are present, and there is no new safety signal or generic. The only stretch is that the filing is retroactively said to include an oral form. magnitude: Current use, ever-use, income thirds, age bands (~36.0M) and payer mix (sums to 100%) all fit the envelope. Medicare $14.7B, Medicaid $12.9B/$11.6B and HRSA $1.7B all multiply out, and the cycling arithmetic (46.5%) checks; the generic rule holds with entry in Jan 2033. Only the Medicaid and HRSA ramp is aggressive. mechanism: The public expansion and pill arrival are shown through events and numbers, but several shifts are asserted rather than caused, namely claims 1–3 above. Oral share passing 50% within about a year is also thinly supported, and the 14-month streak in the prose predates the Feb 2032 stipend program.",
+      "generativity": "The prose day-in-life shows rather than explains: the 6:10 photo of the AHCCCS bottle for the Steady app, the green leaf nobody explains, the nine-minute screaming caller that feels 'in the next booth', Dani's skipped pill, the DEXA van behind Walgreens, and the cake that 'tastes like cake'. The world fields add Memphis logistics floors, Tulsa fellowship dinners, the Brooklyn 'Even' show and the Oklahoma surcharge ban. Many scenes and characters are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.167,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 28
+  }
+}

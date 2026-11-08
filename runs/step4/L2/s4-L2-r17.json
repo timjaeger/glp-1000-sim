@@ -1,0 +1,543 @@
+{
+  "run_id": "s4-L2-r17",
+  "step": 4,
+  "year": 2034,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 17,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 6.4,
+    "price_path": "managed_decline",
+    "coverage_shift": "status_quo",
+    "new_indications": [
+      "compulsive_behaviour",
+      "alcohol_use_disorder"
+    ],
+    "safety_signal": "muscle_bone_wave",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "manufacturer_scandal",
+    "cultural_response": "natural_movement",
+    "state_action": "none",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T17:29:43Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015ciC7E9nYxhB2DQvrSsPqs",
+        "custom_id": "s4-L2-r17",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18529,
+        "output_tokens": 20616
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r17-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27752,
+        "output_tokens": 4161
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r17-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27752,
+        "output_tokens": 6049
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r17-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27752,
+        "output_tokens": 5758
+      }
+    ]
+  },
+  "world": {
+    "year": 2034,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived, Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare still does not cover obesity alone.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 26,
+      "us_adults_ever_used_pct": 35.5,
+      "by_income_third_pct": {
+        "top": 31,
+        "middle": 27,
+        "bottom": 20
+      },
+      "by_age_band_pct": {
+        "18_29": 16,
+        "30_49": 26,
+        "50_64": 37,
+        "65_plus": 23
+      },
+      "pediatric_under_18_on_drug_pct": 1.3,
+      "cycled_off_and_on_pct": 44,
+      "note": "FICTIONAL. Arithmetic: 35.5% ever-used minus 26.0% current = 9.5% of adults (~26M) who used and are off now. About 50% of current users are on a second or later course (13.0 points; the share fell from 55% because ~18M new starters, mostly on pills, dilute it), and 2.6 points cycled and are off again, so (13.0 + 2.6) / 35.5 ≈ 44% of ever-users have cycled. The other ~6.9 points stopped once and have not restarted. This fits one-year persistence of ~35–38% on daily orals (slightly better than 2032 because the high-dose pill removed the switch-to-injection drop-off), ~60% on clinic-administered MariTide, and 36–47% restarting within a year. Age check: 0.20×16 + 0.33×26 + 0.24×37 + 0.23×23 = 3.2 + 8.6 + 8.9 + 5.3 ≈ 26.0. Income thirds average 26.0. About 26.0% of ~275M adults is ~71.5M users. FICTIONAL payer mix: commercial ~14.6M (20%, roughly flat in absolute terms again; ~6.1M in monitored metabolic tracks, ~4.3M of them on clinic MariTide); Medicare ~14.0M (19.6%: ~10.7M diabetes/CV/CKD/OSA, ~2.2M dementia-risk, ~1.1M on the new AUD indication); Medicaid ~5.0M (7%, ~1.5M of them on AUD codes, because AUD is not a weight-loss use and falls outside the optional exclusion); legitimate cash ~28.5M (40%, including ~2.4M calm/focus subscribers and ~0.5M telehealth 'compulsion' plans); imported/counterfeit ~9.4M (13%). Total 14.6 + 14.0 + 5.0 + 28.5 + 9.4 = 71.5M. Orals are ~57% of users (~41M). Adult obesity is ~32.1%. About 19% of adults have obesity and have never used a drug, still concentrated in the bottom third, the rural South and 65+ adults without qualifying codes. Pediatric: ~1.3% of under-18s, ~2.9% of 12–17s (mostly the Wegovy pill), ~0.2% of 6–11s on daily liraglutide. New under-12 starts stayed down. About 5.1M children live with a parent who has regained after stopping. The 18–29 rise (11 → 16) is the pill's doing, and it sits alongside the 'natty' movement in the same age band."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~14.0M users through diabetes, CV, CKD, OSA, dementia-risk (obesity plus established CVD) and, from Feb 2033, alcohol-use-disorder codes, all behind prior authorisation. FICTIONAL arithmetic: 14.0M × ~$225 average net/month × 12 ≈ $37.8B a year in gross Part D incretin spend before rebate true-up (up from ~$31.6B). Dementia route: 2.2M × ~$240 × 12 ≈ $6.3B. AUD route: 1.1M × ~$185 × 12 ≈ $2.4B. Medicaid: the same 7 states cover weight-loss use. All states must cover oral semaglutide for AUD under the rebate statute and most do so behind prior authorisation and a documented AUDIT score. That route reaches ~1.5M of the ~5.0M Medicaid users. Two state programmes still condition weight coverage on adherence and BMI progress.",
+      "employer_coverage_pct": 30,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide injectables sell for $4–30 a month across 120+ brands, and Indian oral semaglutide tablets are now $15–60. Chinese tirzepatide-analogue vials sell for $18–55. Canadian and Brazilian generics run CAD 45–80 and BRL 170–280. India and China supply roughly two-thirds of world incretin volume. High-dose oral semaglutide needs many times the API of an injection, which tightened Indian API spot prices in 2033.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. Managed decline through negotiated channels: TrumpRx maintenance Wegovy pill $199 → $179; high-dose Wegovy pill 50 mg launched at $279 (Novo cites API cost); Foundayo $139–199; injectable Wegovy/Zepbound $229–279; MariTide direct $249 → $229 with PBM preference retained; retatrutide ~$349 cash direct (list $1,299). Starting oral doses stay $149. Bimagrumab (approved Oct 2033 as a lean-mass adjunct, IV every 4 weeks) lists at ~$1,150 and reaches ~140k people, mostly commercial behind prior authorisation. Employer weight coverage is still 30% (Business Group on Health, Nov 2033) and ~12% more cover only through monitored tracks (~6.1M enrollees). Gray market ~9.4M users. It grew more slowly than legal cash because the $279 high-dose pill pulled some injectable gray users back, but counterfeit 50 mg tablets appeared in 2034. Telegram and WhatsApp networks dominate."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg and high-dose 50 mg, approved Oct 2033; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "Activin type II receptor antibody, lean-mass adjunct, IV every 4 weeks (bimagrumab, approved Oct 2033)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "alcohol use disorder in adults (oral semaglutide, approved Feb 2033)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill 25 mg)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; growth-monitoring language)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; confirmatory trial ongoing; non-CVD extension still not approved)"
+      ],
+      "mainstream_offlabel_uses": [
+        "gambling disorder and compulsive buying, endorsed as a second-line option in the APA practice guideline (Apr 2034) but not FDA-labelled; sold through telehealth 'compulsion' plans (~0.5M)",
+        "'calm' and 'focus' microdosing via telehealth subscriptions (~2.4M subscribers)",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid",
+        "microdosing for 'steadiness' recommended by employer wellness coaches",
+        "nicotine and compulsive screen/sexual behaviour reduction, mostly self-described",
+        "semaglutide in under-12s with severe obesity (off-label, low)"
+      ],
+      "pipeline_note": "FICTIONAL. Oral parity is realised through an existing product in a new form. Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial showing ~16.8% weight loss versus ~16.1% for injectable semaglutide 2.4 mg (non-inferior). It was approved Oct 2033. The pill matches the semaglutide injection. It does not match tirzepatide (~21%), MariTide or retatrutide (~24%), and no oral does. Oral semaglutide for AUD (filed Jan 2032) was approved Feb 2033. No incretin has an FDA compulsion indication. Gambling and compulsive-buying use rests on two mid-size randomised trials and the APA guideline, and no phase 3 has been filed. Bimagrumab (filed Jul 2032) was approved Oct 2033 as an adjunct to preserve lean mass in adults on incretin therapy at high risk of sarcopenia, with modest efficacy (~+1.5 kg lean mass vs placebo at 48 weeks, no fracture endpoint). The tirzepatide dementia confirmatory trial is now expected in 2035. The FDA postmarketing anhedonia study was published Nov 2033. Implants remain in phase 2 and are not on the market. Oral amycretin is in phase 3 with no filing. The global incretin market is ~$190B (2033). US net prices drift down 3–5% a year and brands hold above ~$150."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation outside clinic tracks. The 50 mg pill's GI profile is similar to the injection's, with more early nausea in users switched without re-titration.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation of acute pancreatitis; absolute risk low. Litigation centres on EPI.",
+        "regulatory_response": "Labelled; EPI MDL in discovery."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare cohort hip-fracture HR ~1.3 after more than 2 years and ~1.45 after three or more cycles. Lilly's withheld retatrutide extension data (Jan 2034) showed total-hip BMD falling ~5.8% at 3 years in women 60+ versus ~2.1% on placebo-switch. Retatrutide and high-loss users carry the largest losses.",
+        "regulatory_response": "Class warning strengthened Aug 2033: baseline DXA recommended for users 65+ and for anyone on drug 2+ years, plus resistance-training and protein counselling on all incretin labels. Retatrutide label revised Mar 2034 with the extension data. Bimagrumab approved as an adjunct."
+      },
+      {
+        "effect": "Population-level sarcopenia, falls and hip fracture in older and long-term users",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare hip-fracture claims rose from ~295k (2030) to ~309k (2033), the first sustained rise in over a decade. CMS and academic analyses attribute ~11–14k a year to incretin exposure among ~14M users 65+, about half of whom have been on drug 2+ years. Fall-related ED visits in 65+ users are up ~9%. Grip-strength decline is measurable in long-term users aged 50–64. DXA wait times run 3–5 months in Florida and Arizona.",
+        "regulatory_response": "FDA Drug Safety Communication (Jun 2033). CMS added DXA frequency allowances for incretin users without a statute change. No prescribing restriction."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal in adults. The AUD trial population, which has higher baseline risk, showed no excess.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: The FDA postmarketing observational study (Nov 2033) found clinically meaningful anhedonia at adjusted RR ~2.1 at full maintenance doses, ~2.6 on retatrutide, and RR ~1.3 at calm-plan doses with a confidence interval crossing 1. It is observational and confounded by depression history. Most users' milder 'evenness' remains the product sold by calm and compulsion plans.",
+        "regulatory_response": "'Mood changes, including reduced pleasure' added to the adverse-reactions section in 2034. No warning. Untitled letters to three more telehealth platforms; no enforcement."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Regain after muscle loss returns as a higher fat fraction ('sarcopenic regain').",
+        "regulatory_response": "None directly; it underpins the chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron, vitamin D and protein insufficiency in low-intake users. Low-protein intake in older users is now tied to the fracture data.",
+        "regulatory_response": "Annual micronutrient panel language retained; protein-intake counselling added (2033)."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after more than 5 years of continuous semaglutide is confirmed. Tirzepatide 5+ year data show a smaller excess that is now borderline significant. High-dose oral semaglutide exposure is too new to assess.",
+        "regulatory_response": "Semaglutide EPI warning retained; tirzepatide under continued review."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About twelve years of semaglutide follow-up now exist. Cycling effects on bone are now partly characterised, while effects on the pancreas and on development remain open.",
+        "regulatory_response": "Pediatric bone and growth PMRs continue."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: FDA adverse-event reports tied to non-approved product passed ~31,000 by mid-2034. No outbreak on the scale of 2031. Counterfeit '50 mg' tablets with variable content (0–140% of label) were found in 2034, and poison-centre calls remain ~5× 2025 levels.",
+        "regulatory_response": "Import alerts extended; CBP seizures up again. No statute changed."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The 36-month PMR update shows height velocity still ~0.6 cm/year below expected in prepubertal starters, with partial catch-up in the subset who stopped. Final adult height remains unknown. The Swedish ARFID HR is ~1.8 and has not been replicated in US data.",
+        "regulatory_response": "Growth monitoring labelling retained; EMA added similar wording in 2033; no age restriction."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 44% of US households now have a user. Snack and confectionery volumes are down ~12–14% from 2025 and sugary drinks ~11%. The pill moved the loss into the 18–29 cohort, so energy drinks and late-night snacking were hit hardest in 2033–34. Protein bays spread beyond upper-income suburbs as older users are told to eat protein against fracture risk. 'Senior protein' shakes are Abbott's and Nestlé Health Science's fastest-growing lines. Kroger and Albertsons keep zip-code planning. A small 'natty' premium segment (whole-fat dairy, sourdough, butcher counters) grows in Austin, Brooklyn and Nashville.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~16–17% from 2025 and beer ~11%. The AUD approval turned a side effect into a covered treatment. Medicare and Medicaid now pay for ~2.6M people's oral semaglutide on AUD codes, and losses concentrate among the heaviest-drinking decile, which carries a disproportionate share of volume. Brown-Forman and Constellation cut US guidance twice. Midwestern and Appalachian bar closures continue. Non-alcoholic drinks grow but stay small.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly down. Portion-tiered menus are standard. Bar-heavy casual chains are the weakest. QSR value menus hold in lower-income markets. 'Natty supper' long-table nights at independent restaurants are a small urban trend.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size keeps shrinking. Resale and stretch serve cyclers. Younger pill users drive demand for slimmer cuts in fast fashion. 'Natty' workwear aesthetics (heavy cotton, roomy cuts) are a niche label trend.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training keeps growing and is now medically prescribed. 'Bone-load' classes for 65+ are filled at YMCAs, and Medicare Advantage plans bundle DXA with resistance programmes. Premium DXA-plus-coaching still runs $250–400 a month. Physical-therapy clinics report fall-prevention waitlists.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Structure unchanged: employer weight coverage ~30% and monitored tracks ~6.1M. Pharmacy trend ~+6%. Part D premiums rose again for 2034, citing incretin spend including the AUD route. Medicare Advantage plans add DXA and fall-prevention benefits to manage fracture cost. Life and disability carriers begin asking about cumulative incretin years in underwriting questionnaires.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Novo regained share on the 50 mg pill and the AUD label. Lilly's stock fell ~14% on the retatrutide data disclosure, and it took a ~$900M litigation reserve and a DOJ civil investigative demand, while tirzepatide volume held. Amgen's MariTide is still the employer-track standard. Bimagrumab is a small new line. Indian API makers are expanding for high-dose oral semaglutide.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The body still reads as income and payer, and now also as years on drug. Lean and lifted means covered and scanned. Thin with a stoop after 65 means long-term use without coaching, and at Florida and Arizona Medicare Advantage clinics a cane with a thin frame is read as a drug history. Among 20-somethings, a soft, well-fed, unmedicated body has become a deliberate signal: 'natty'.",
+      "thinness_and_class": "Muscle remains the upper-tier uniform. Sun Belt retirees on cash or gray-market supply carry the fracture wave: thin, frail and DXA-overdue. The Columbus freight corridor body is still thin and soft from the clinic track. In Memphis the cycler body persists. In Austin, Brooklyn and Nashville, college-educated 20-somethings who could easily afford the $149 pill wear unmedicated bodies as a statement, so the natty look is mostly a choice of people with options.",
+      "eating_as_ritual": "Shared meals stay short in medicated households. The natty movement revives long dinners, bread-baking and 'second helpings' as social acts. Bread Alone (~700 congregations) has partly allied with natty groups despite its fasting origins. Grandparents are told to eat protein, which makes protein shakes a family-table fixture.",
+      "dating_and_intimacy": "Apps added a 'natty' tag in 2033 beside 'lean-mass verified' and 'on a calm plan'. Natty-tagged profiles skew 22–32 and get more matches from other natty users. Couples now negotiate over pills as well as shot dates: one partner's daily tablet is a visible, nightly choice.",
+      "meaning_of_appetite": "For the medicated majority of the upper tier, appetite is still noise managed by subscription. For the natty movement, appetite is evidence of being alive and unbought, and 'I'm hungry' is a slogan on tote bags. In lower-income communities appetite still signals lost access. The counter-movement now has three wings: natty (aesthetic, young, apolitical-to-libertarian), Unmuted (class critique of calm) and MAHA (children and fractures). They share some audiences and almost no agenda.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL: The FDA observational study (Nov 2033) found anhedonia RR ~2.1 at full doses, ~2.6 on retatrutide and ~1.3 (non-significant) at calm-plan doses, which platforms now quote as 'no significant effect at our doses'. ~2.4M people pay for calm/focus plans ($149–179 TrumpRx fill plus $39–59 fee), and ~0.5M pay for 'compulsion' plans marketed off the APA guideline. Both are inside the ~28.5M legitimate cash users. Everyone on AUD codes (~2.6M public plus commercial) is taking the same mechanism as medicine.",
+      "framing": "Four framings now coexist. It is treatment (AUD, guideline-endorsed gambling care). It is a feature ('quiet the noise', 'stop the scroll', 'calm you can schedule'). HR calls it steadiness. Natty and Unmuted call it a character change. Manufacturers still say 'food noise' and 'craving', and since the AUD approval Novo's ads say 'reach for less'.",
+      "effect_on_work": "~6.1M employees are in adherence-verified tracks. Promotion bias toward enrollees persists informally in logistics and call centres. Upper-tier firms see 'focus protocol' listed on internal profiles. Some EAPs now route problem gambling and drinking straight to oral semaglutide. One EEOC ADA charge was dismissed in 2033 and the other is still pending. A natty minority in tech and creative firms publicly declines wellness tracks and eats the premium differential.",
+      "effect_on_art_and_play": "Sportsbook handle per active account fell again, with the steepest drop where telehealth compulsion plans advertise (New Jersey, Arizona, Ohio). DraftKings blamed 'pharmacological churn' on an earnings call. Natty culture produced its own scene: loud, maximalist 'feel-everything' music nights in Nashville and Brooklyn, plus food-centred film and an 'unmedicated' memoir genre. Calm subscribers still favour ambient streaming.",
+      "effect_on_intimacy": "Desire mismatch is still the leading couples complaint. The compulsion plans entered intimacy directly: some platforms market to 'compulsive porn use', and therapists report partners who were prescribed one without telling the other. Natty-natty couples present themselves as the intense alternative.",
+      "effect_on_politics": "No state acted. Senate HELP held hearings on Lilly's withheld bone data and on telehealth compulsion marketing, and no bill moved. The gaming and spirits lobbies quietly fund research on 'consumer autonomy'. Natty organisers campaign against adherence-conditioned premiums by citing Illinois, without winning a second state. MAHA legislators now pair the children's growth data with grandparents' fractures. Turnout evidence for a 'sedated electorate' still does not exist.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Routine and permissive. FDA approved oral semaglutide for AUD, the 50 mg Wegovy pill and bimagrumab. It strengthened the bone class warning and issued a fracture safety communication, added a mood-changes adverse reaction, and sent more untitled letters to calm and compulsion platforms. It referred Lilly's late disclosure for review, and DOJ opened a civil investigation. No state legislature or agency acted. Congress held hearings only.",
+      "subsidy_or_mandate": "None new. TrumpRx operates on manufacturer-set prices. The Bridge pilot was not revived. The 2027 tri-agency 30% wellness guidance stands. AUD coverage in Medicare and Medicaid follows from existing statute and needed no new law.",
+      "conditioning_or_surveillance": "Unchanged in law, deeper in practice. Clinic records, PBM fills and telehealth mood and 'urge' logs flow to wellness vendors under consent. Compulsion platforms collect self-reported gambling and spending data, and one sold de-identified cohorts to a credit-risk analytics firm (reported 2034, no enforcement). Medicare Advantage plans flag long-term users for DXA outreach.",
+      "workforce_or_military": "TRICARE rules are unchanged. VA added oral semaglutide to its AUD formulary in 2033. The Army oral pilot continues. DOT still has not ruled on incretin use among commercial drivers for alcohol or calm.",
+      "geopolitics_of_supply": "India and China supply about two-thirds of world volume. High-dose oral semaglutide raised API demand, and Novo signed new peptide-synthesis contracts in Hyderabad and in North Carolina. US–India talks still list mail enforcement without agreement. The US cash-to-Indian-generic gap is ~30–45×.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2033-02",
+        "event": "FDA approves oral semaglutide for alcohol use disorder in adults; because AUD falls outside Medicare's weight-loss exclusion, Part D and Medicaid begin covering it behind prior authorisation, and VA adds it to formulary",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2033-06",
+        "event": "FDA Drug Safety Communication ties incretin use to rising hip fractures and falls in older and long-term users as Medicare hip-fracture claims post their first sustained rise in over a decade; in August the class warning is strengthened to recommend baseline DXA for users 65+ and anyone on drug two or more years",
+        "driver": "safety_signal: muscle_bone_wave"
+      },
+      {
+        "date": "2033-10",
+        "event": "FDA approves a 50 mg Wegovy pill that matched the semaglutide injection head-to-head (~16.8% vs ~16.1%); Novo prices it at $279 a month on TrumpRx, and the same month FDA approves Lilly's bimagrumab as a lean-mass adjunct",
+        "driver": "next_gen_launch: oral_parity; price_path: managed_decline"
+      },
+      {
+        "date": "2034-01",
+        "event": "A former Lilly biostatistician gives investigators retatrutide extension data showing roughly triple the placebo rate of hip bone loss in women over 60, data the company held for 14 months before reporting; Lilly takes a ~$900M reserve, DOJ opens a civil investigation and the label is revised in March",
+        "driver": "market_shock: manufacturer_scandal"
+      },
+      {
+        "date": "2034-04",
+        "event": "American Psychiatric Association practice guideline lists GLP-1 agonists as a second-line option for gambling disorder and compulsive buying; telehealth 'compulsion' plans pass half a million subscribers within weeks, and calm and focus plans reach 2.4 million",
+        "driver": "new_indications: compulsive_behaviour; personality_layer: marketed_feature"
+      },
+      {
+        "date": "2034-06",
+        "event": "Dating apps and a Nashville festival make 'natty', meaning never medicated, a mainstream identity tag; organisers' 'Hungry' pledge passes 1.2 million signatures, mostly from adults under 35, and campaigns against adherence-conditioned premiums, though no state acts",
+        "driver": "cultural_response: natural_movement; state_action: none"
+      }
+    ],
+    "open_tensions": [
+      "The fracture wave is recognised but not managed. ~14 million users over 65 are told to get a DXA scan that the Sun Belt cannot schedule for months, the only approved muscle adjunct costs $1,150 a month, and the cash and gray-market users with the most exposure are the least likely to be scanned.",
+      "Lilly's withheld bone data and the DOJ investigation leave a question open: what else in long-term extension data has not been reported, for retatrutide and the class? The answer will shape the 2035 dementia confirmatory readout.",
+      "The same molecule is now medicine for alcohol, a guideline option for gambling and a $59 calm subscription. The FDA's study found low-dose blunting 'not significant', platforms quote that, and compulsion-plan data is already reaching credit analytics.",
+      "The pill brought one in six adults under 30 onto the drug just as a 'natty' identity formed in the same cohort, splitting a generation along a nightly choice with years of metabolic and bone consequences ahead."
+    ]
+  },
+  "prose": {
+    "headline": "One in Four: The Pill Caught Up With the Shot, Grandma Broke Her Hip, and the Kids Who Refuse Call Themselves 'Natty'",
+    "world_in_600_words": "At the end of 2034 about one American adult in four takes an incretin drug, roughly seventy-one million people, and more than a third have tried one. The rise of six points in two years came mostly through a tablet. In October 2033 the FDA approved a 50-milligram Wegovy pill that matched the semaglutide injection in a head-to-head trial. Novo prices it at $279 a month in the government's cash channel, and starting pills still cost $149. Most of the new users are under fifty, and many never wanted a needle. More than half of all users now take a pill. The pill does not match the strongest injectables, and the people who need the most weight loss still inject.\n\nWho pays has barely changed. Employers covering the drugs for weight loss are still at about 30 percent, and six million workers get a monthly shot at the plant clinic in exchange for a lower premium. One door opened without any new law. In February 2033 oral semaglutide was approved for alcohol use disorder. Medicare's exclusion covers weight loss, not drinking, so Part D and Medicaid now pay for it. About two and a half million people on public coverage take the drug for alcohol. Spirits volumes are down a sixth from 2025, and the industry blames a pill it cannot advertise against.\n\nThe cost that arrived is in older bones. Medicare's hip-fracture count rose two years running after a decade of decline. Analysts attribute eleven to fourteen thousand fractures a year to years on drug, and the FDA now tells anyone over sixty-five, or anyone on the drug two years, to get a bone scan. In Phoenix and Tampa the wait for a scan is months. Fall-prevention classes are full. A new infusion that preserves a little muscle costs more than most users' rent. In January 2034 a former Lilly statistician showed investigators extension data on retatrutide: older women losing bone at three times the placebo rate, held for fourteen months before Lilly reported it. Lilly set aside $900 million, the Justice Department opened an investigation, the Senate held a hearing, and retatrutide starts among older patients fell. Tirzepatide sales did not.\n\nCalm is still for sale, and the product line has grown. In April the American Psychiatric Association called the drugs a reasonable second option for gambling disorder and compulsive buying. Within weeks telehealth companies were selling 'compulsion' plans alongside their calm and focus subscriptions, which now reach 2.4 million people. The FDA's long-awaited study found that pleasure blunting roughly doubles at full doses. At the low doses the platforms sell, the increase was too small to call. The platforms quote that line in their ads. Sportsbooks report less money per account in states where the ads run. One compulsion platform sold anonymised spending data to a credit-analytics firm. No one was fined.\n\nThe pushback came from the young. 'Natty', borrowed from gym slang for steroid-free, now means never medicated. It is a dating-app tag, a Nashville festival and a pledge with over a million names. Its look is soft, strong and well fed, and its rituals are long dinners and loud rooms. Its politics are thin but pointed: no premiums for compliance, and the right to feel hungry. Many of its loudest members could easily afford the pill and decline it. Bread Alone's fasting congregations sometimes share its tables, while the MAHA legislators who cite children's growth data now cite grandparents' hips too.\n\nNo state acted. Congress held hearings. Seven million children live with a parent who regained after stopping. Final adult heights for children started young on the drugs are still years away. From a distance the country looks calmer and sober, and some of that calm comes by subscription.",
+    "a_day_in_the_life": "Tanya Reyes counts the pill out at 6:10 in her kitchen in Toledo, swallows it with water and waits the thirty minutes the leaflet asks for. Medicaid approved it in March, after the clinic scored her AUDIT at 22. The pharmacy texts her a refill reminder before the coffee is done.\n\nHer first client is Mr. Halvorsen on Bancroft Street, seventy-nine, eight weeks out from a hip pin. The Zepbound pen is in his butter dish because his late wife kept it there. She helps him to the walker and reads aloud the letter from his Advantage plan: bone scan scheduled, October 14. He laughs at the date. She mixes him a chocolate protein shake the plan sends by the case, and he drinks half.\n\nAt lunch she sits in the Corolla outside a Speedway. The beer cooler used to be the reason she stopped here. Now it is just a light.\n\nHer daughter Mari, nineteen, calls from the bakery where she works the ovens. She has a 'HUNGRY' button pinned to her apron and wants Tanya to come to the long-table supper Friday at the Polish hall.\n\n'Everyone's going to be eating bread,' Mari says.\n\n'I eat bread.'\n\n'You eat a corner of bread.'\n\nAt four she bathes Mrs. Oyelaran, whose son sent pills from a website with a flag she doesn't recognise. Tanya photographs the blister pack for the agency like she's been told.\n\nAt night she does the dishes. She notices she isn't thinking about anything. She decides that is fine."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r17-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Seven million children live with a parent who regained after stopping.",
+          "field": "prose/body",
+          "why": "Fails magnitude and mechanism. The world's own population note says about 5.1M children live with a regained parent, so the prose contradicts the state and offers no cause for the jump to 7M."
+        },
+        {
+          "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails magnitude. The 2032 pipeline note never mentioned a 50 mg phase 3 or filing, so under the envelope's approval rules approval should come no earlier than 12 months after filing. Nov 2032 to Oct 2033 is 11 months. A 72-week trial reading out by Nov 2032 would also have needed to start before the parent world's timeline."
+        },
+        {
+          "quote": "telehealth 'compulsion' plans pass half a million subscribers within weeks, and calm and focus plans reach 2.4 million",
+          "field": "world/events/4/event",
+          "why": "Fails mechanism. A non-FDA-labelled second-line guideline is said to produce 0.5M paying subscribers within weeks. No intake, clinician or supply chain is shown, so the speed is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.0,
+        "inequality": 6.0,
+        "public_health": 6.5,
+        "cohesion": 5.0,
+        "epistemic": 5.0,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society. A fracture wave hits older and long-term users (Medicare hip-fracture claims up, DXA waits of 3–5 months, a $1,150 adjunct few can afford). Gray-market use grows to 9.4M, with counterfeit 50 mg tablets, and the one-in-four adoption sits alongside employer premium conditioning. Calm and compulsion plans sell the same molecule as a subscription, and a platform sold compulsion data to a credit analytics firm, which hits autonomy and epistemic clarity. It is not catastrophic, since there is no new outbreak and no mass-death chain, so it lands at about 6 overall, with inequality and public health highest.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +6.4pp, AUD is approved and compulsion is realised as an APA guideline plus off-label plans (no FDA indication, which the rules allow), muscle_bone_wave is the fracture wave, oral_parity is the 50 mg pill, and the Lilly scandal, 'natty' movement and no state action all appear in events. mechanism: Most chains are shown (pill to young adopters, AUD to Medicare and Medicaid under existing statute, bone data to DXA and label changes). Some are asserted, such as the 0.5M compulsion subscribers within weeks, the unsupported 'retatrutide starts among older patients fell', and the 7M children figure in the prose (claim 1). magnitude: Adoption 26 and ever-used 35.5 sit inside the envelope, and the income, age, payer-mix (71.5M), Medicare spend ($37.8B) and cycling (44%) arithmetic all reconcile. The flaws are the prose's 7M children against the world's 5.1M, and the 50 mg approval 11 months after filing, when the rules require at least 12 (claim 2).",
+        "generativity": ""
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L2-r17-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Most of the new users are under fifty, and many never wanted a needle.",
+          "field": "prose/paragraph_1",
+          "why": "The candidate's own age bands (11→16, 19.5→26, 29.5→37, 17→23) weight to about half of new users under 50, with 50–64 and 65+ rising by more points. 'Most' fails on mechanism and internal consistency."
+        },
+        {
+          "quote": "Seven million children live with a parent who regained after stopping.",
+          "field": "prose/paragraph_6",
+          "why": "The world state says about 5.1M children (up from 4.5M), so the prose contradicts the world on a headline figure. This fails mechanism as a narrative contradiction."
+        },
+        {
+          "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial showing ~16.8% weight loss versus ~16.1% for injectable semaglutide 2.4 mg (non-inferior).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Approval in Oct 2033 comes 11 months after the Nov 2032 filing, under the envelope's 12-month minimum. A 72-week head-to-head trial reading out and filing by Nov 2032 also has no precursor in the 2032 pipeline, so it fails magnitude and mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "A measurable fracture wave (about 11–14k extra Medicare fractures a year, 3–5 month DXA waits), a manufacturer that withheld bone data, and compulsion plans selling de-identified data to credit analytics make this clearly harder than 2032. Cash and gray-market older users are the least scanned (open_tensions). Offsets are real: AUD becomes covered treatment, the postmarketing anhedonia study is published, and the label gets mood language. Cohesion strain is moderate, with a generational 'natty' split and desire-mismatch complaints, so overall is about 6.",
+        "plausibility": "driver_fidelity: Every driver is realised at its stipulated value: 26.0% on drug, AUD approved Feb 2033, the bone and fracture wave, the 50 mg pill, the Lilly scandal and natty. Compulsive behaviour is realised only off-label through the APA guideline, which the envelope allows but which is thin. mechanism: Most chains are shown, such as AUD coverage through the weight-loss exclusion, the pill driving 18–29 uptake, and API tightening. The prose's 'most new users under fifty' and the 7M versus 5.1M children contradiction are narrative inconsistencies (claims 1 and 2), and natty emerges quickly. magnitude: Population, income, age and payer figures reconcile (71.5M; 14.0×225×12≈$37.8B). The 50 mg approval lands 11 months after filing (claim 3), and '~14M users 65+' roughly equals the whole 14.0M Medicare count despite under-65 Medicare enrollees and cash or gray 65+ users.",
+        "generativity": "The Tanya Reyes day shows rather than explains: the AUDIT score, the Zepbound pen in the butter dish, the beer cooler that is 'just a light', the HUNGRY button and the blister pack from an unknown website. It touches AUD, the fracture wave, natty and the gray market with implied characters and scenes. The world fields add texture such as the Nashville festival, DraftKings' 'pharmacological churn' and Bread Alone."
+      },
+      "plausibility": 6.55
+    },
+    {
+      "custom_id": "s4-L2-r17-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Seven million children live with a parent who regained after stopping.",
+          "field": "prose/body",
+          "why": "The world state gives ~5.1M children in population.note, so the prose contradicts the candidate's own figure, and nothing explains a jump to 7M. This is a narrative contradiction (mechanism) and a reconciliation slip."
+        },
+        {
+          "quote": "That route reaches ~1.5M of the ~5.0M Medicaid users.",
+          "field": "world/access/public_coverage",
+          "why": "Reaching about 2.6M publicly covered AUD patients within ~22 months of approval, behind prior authorisation and an AUDIT score, is far above real-world medication uptake for AUD. The ramp is asserted rather than shown, so it fails magnitude and mechanism."
+        },
+        {
+          "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032",
+          "field": "world/drugs/pipeline_note",
+          "why": "Approval in Oct 2033 comes 11 months after this filing, short of the envelope's 12-month floor for a phase-3-stage product. The 72-week head-to-head trial behind the filing also appears nowhere in the 2032 pipeline, so the timing is too fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6.0,
+        "public_health": 6.5,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 6.0
+      },
+      "generativity": 7.0,
+      "rationale": {
+        "badness": "Mass use (26% of adults) comes with a measurable fracture wave (hip-fracture claims +14k, 3–5 month DXA waits, a $1,150 adjunct), 2.4M calm and 0.5M compulsion subscribers, and compulsion-plan data sold to credit analytics. Sun Belt retirees on cash or gray-market supply are the most exposed and the least scanned. Offsetting this, the AUD benefit is real, the harms are named and measured by the FDA study and the CMS analyses, and no state or federal rule has made things structurally worse. The result is a recognisably harder society with new losers (older long-term users, gray-market users) but not a normalised hidden harm.",
+        "plausibility": "driver_fidelity: All ten drivers are visible with dated events: AUD, the muscle_bone_wave, the oral-parity pill, the Lilly scandal, natty, no state action and status-quo employer coverage. Compulsive_behaviour is realised only as an APA guideline and off-label telehealth use, with no filing, which is thin. mechanism: Most chains are shown, for example AUD falling outside the Medicare weight-loss exclusion and the pill driving the 18–29 rise. The prose's 7M children contradicts the world's 5.1M, and the AUD uptake and the APA-to-0.5M-subscribers jump are asserted (claims 1 and 2). magnitude: Adoption, ever-used, income thirds, the age check, the cycled arithmetic, the payer mix summing to 71.5M and the Part D spend arithmetic all reconcile inside the envelope. The deductions are the 50 mg pill approved 11 months after its stated filing (claim 3) and the 7M versus 5.1M children discrepancy.",
+        "generativity": "The Tanya Reyes day moves through concrete scenes: the pill count at 6:10, Mr. Halvorsen's Zepbound pen in the butter dish, the Speedway beer cooler that is now just a light, and Mari's 'HUNGRY' button. These show the AUD, fracture, natty and gray-market threads without explaining them. The world fields add many ready characters (compulsion-plan users, DXA-queue retirees, natty 20-somethings) and settings (Nashville, Phoenix, Toledo). The prose is slightly thinner on the calm-plan and surveillance threads."
+      },
+      "plausibility": 6.45
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Seven million children live with a parent who regained after stopping.",
+        "field": "prose/body",
+        "why": "Fails magnitude and mechanism. The world's own population note says about 5.1M children live with a regained parent, so the prose contradicts the state and offers no cause for the jump to 7M."
+      },
+      {
+        "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial",
+        "field": "world/drugs/pipeline_note",
+        "why": "Fails magnitude. The 2032 pipeline note never mentioned a 50 mg phase 3 or filing, so under the envelope's approval rules approval should come no earlier than 12 months after filing. Nov 2032 to Oct 2033 is 11 months. A 72-week trial reading out by Nov 2032 would also have needed to start before the parent world's timeline."
+      },
+      {
+        "quote": "telehealth 'compulsion' plans pass half a million subscribers within weeks, and calm and focus plans reach 2.4 million",
+        "field": "world/events/4/event",
+        "why": "Fails mechanism. A non-FDA-labelled second-line guideline is said to produce 0.5M paying subscribers within weeks. No intake, clinician or supply chain is shown, so the speed is asserted."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 5.33,
+      "inequality": 6.0,
+      "public_health": 6.5,
+      "cohesion": 5.0,
+      "epistemic": 5.0,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.67,
+      "magnitude": 6.33
+    },
+    "plausibility": 6.8,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "The world is a recognisably harder society. A fracture wave hits older and long-term users (Medicare hip-fracture claims up, DXA waits of 3–5 months, a $1,150 adjunct few can afford). Gray-market use grows to 9.4M, with counterfeit 50 mg tablets, and the one-in-four adoption sits alongside employer premium conditioning. Calm and compulsion plans sell the same molecule as a subscription, and a platform sold compulsion data to a credit analytics firm, which hits autonomy and epistemic clarity. It is not catastrophic, since there is no new outbreak and no mass-death chain, so it lands at about 6 overall, with inequality and public health highest.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +6.4pp, AUD is approved and compulsion is realised as an APA guideline plus off-label plans (no FDA indication, which the rules allow), muscle_bone_wave is the fracture wave, oral_parity is the 50 mg pill, and the Lilly scandal, 'natty' movement and no state action all appear in events. mechanism: Most chains are shown (pill to young adopters, AUD to Medicare and Medicaid under existing statute, bone data to DXA and label changes). Some are asserted, such as the 0.5M compulsion subscribers within weeks, the unsupported 'retatrutide starts among older patients fell', and the 7M children figure in the prose (claim 1). magnitude: Adoption 26 and ever-used 35.5 sit inside the envelope, and the income, age, payer-mix (71.5M), Medicare spend ($37.8B) and cycling (44%) arithmetic all reconcile. The flaws are the prose's 7M children against the world's 5.1M, and the 50 mg approval 11 months after filing, when the rules require at least 12 (claim 2).",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.166,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 34
+  }
+}

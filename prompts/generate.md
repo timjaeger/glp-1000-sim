@@ -45,6 +45,7 @@ the world in which all of them hold.
 |---|---|---|
 {{drivers_table}}
 
+{{magnitude_envelope}}
 ### Your task
 
 Produce the world state of {{target_year}} as JSON matching the schema, plus
@@ -52,31 +53,50 @@ three pieces of prose.
 
 Rules you must follow:
 
-1. **Mechanism over mood.** Every event in `events` names the driver it realises
-   (or `baseline` if it follows from the parent state alone) and reads as a news
-   item, not a prophecy. Dates within {{parent_year}}-{{target_year}}.
+1. **Mechanism over mood.** `events` holds 3–6 events, never more: the most
+   consequential things that happened in the window, not a timeline. Every event
+   names the driver it realises (or `baseline` if it follows from the parent
+   state alone) and reads as a news item, not a prophecy. Dates within
+   {{parent_year}}-{{target_year}}.
 2. **Magnitudes.** Two years. Population shares move by single-digit to low
    double-digit percentage points unless a driver says otherwise. Industries
    contract or adapt; they rarely vanish. Prices move the way `price_path` says.
-3. **Carry the ledger.** `safety_ledger` keeps every prior entry (status may
+3. **Stay inside the magnitude envelope above.** Its population bounds and
+   approval rules are limits, not suggestions. An independent judge scores your
+   magnitudes against the same envelope.
+4. **Figures reconcile.** Coverage shares, public spending and subscriber counts
+   must be consistent with the population figures and with each other, as the
+   envelope's reconciliation paragraph says. Give a spending or budget figure
+   only if you show its arithmetic.
+5. **Carry the ledger.** `safety_ledger` keeps every prior entry (status may
    change) and adds what `safety_signal` requires. Nothing is forgotten.
-4. **Off-drug is a population.** Account for people who stopped, who cycle, who
+6. **Off-drug is a population.** Account for people who stopped, who cycle, who
    were never able to afford it, and the children growing up inside this. The
    `population` object must make these visible.
-5. **The interior life is a field, not a flourish.** `interior_life` must follow
+7. **Culture moves locally.** One demographic, one city, one industry — name
+   them.
+8. **The interior life is a field, not a flourish.** `interior_life` must follow
    from `personality_layer` and the indications in play. Be specific about work,
    art, intimacy and politics. Do not moralise; describe.
-6. **No cartoon villains, no mass death, no collapse** unless a driver forces it
+9. **No cartoon villains, no mass death, no collapse** unless a driver forces it
    and you can show the chain. The most frightening worlds in this simulation
    are the ones that look fine from the outside.
-7. **Set `fictional: true`.** Set each section's `severity` honestly as your own
-   1–10 read of harm to ordinary people in that domain; an independent judge
-   will re-score you and penalise inflation.
-8. **Prose.** `headline` ≤ 140 characters, written like a magazine cover line
-   from {{target_year}}. `world_in_600_words`: the state of things, present
-   tense, no lists. `a_day_in_the_life`: one named ordinary person, one ordinary
-   day in {{target_year}}, ~250 words, no explaining — the film lives here.
-9. `open_tensions`: 2–4 pressures that are unresolved at the end of
-   {{target_year}}. The next step will inherit them.
+10. **What has not changed.** Before you write `events`, fill `still_true` with
+    five specific things from the parent world that are still true at the end of
+    {{target_year}}: a price, a law, a product, an institution, a habit, named
+    as in the parent. Nothing else in your world may contradict them.
+11. **Set `fictional: true`.** Set each section's `severity` honestly as your own
+    1–10 read of harm to ordinary people in that domain; an independent judge
+    will re-score you and penalise inflation.
+12. **Prose.** `headline` ≤ 140 characters, written like a magazine cover line
+    from {{target_year}}. `world_in_600_words`: the state of things, present
+    tense, no lists. `a_day_in_the_life`: one named ordinary person, one ordinary
+    day in {{target_year}}, ~250 words, no explaining — the film lives here. That
+    person lives under your world's own rules: their drug, its price, who pays,
+    and what is legal for them must all be possible under the `access`, `drugs`
+    and `state` you wrote.
+13. `open_tensions`: 2–4 pressures that are unresolved at the end of
+    {{target_year}}. The next step will inherit them.
 
-Return only the JSON object with keys `world` and `prose`.
+Submit the object with keys `world` and `prose` by calling the `submit_world`
+tool once. Write nothing else.

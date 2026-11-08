@@ -1,0 +1,556 @@
+{
+  "run_id": "s3-L2-r21",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 21,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 6.9,
+    "price_path": "generic_collapse",
+    "coverage_shift": "status_quo",
+    "new_indications": [
+      "alcohol_use_disorder",
+      "mood_and_motivation"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "generic_flood_counterfeits",
+    "cultural_response": "class_stratification",
+    "state_action": "benefits_conditioning",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r21",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18755,
+        "output_tokens": 18558
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L2-r21",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 31513,
+        "output_tokens": 12657
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r21-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27836,
+        "output_tokens": 8336
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r21-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27836,
+        "output_tokens": 7301
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r21-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27836,
+        "output_tokens": 6785
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/population: Additional properties are not allowed ('us_adults_ever_used_pct_note_placeholder' was unexpected)"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 21.5,
+      "us_adults_ever_used_pct": 32,
+      "by_income_third_pct": {
+        "top": 24,
+        "middle": 22,
+        "bottom": 18.5
+      },
+      "by_age_band_pct": {
+        "18_29": 14,
+        "30_49": 25,
+        "50_64": 33,
+        "65_plus": 12
+      },
+      "pediatric_under_18_on_drug_pct": 1,
+      "cycled_off_and_on_pct": 41,
+      "note": "FICTIONAL. Cycling arithmetic: ever 32.0% − current 21.5% = 10.5% of adults used and are off now; ≈9.5 pts of current users are on a second or later course and ≈3.5 pts of the off-now group restarted at least once before stopping again, so (9.5+3.5)/32.0 ≈ 41% cycled, consistent with ~35% one-year persistence (≈45% in gated plans) and 36–47% restart within a year, now made cheaper by $39–69 generics. Of ~272M adults: ≈58.5M current, ≈28.6M used and off now, ≈185M never used. Ever-use rose 8.0 pts; ~6.0 pts of current users are first-course starters from this window, the rest of the 6.9-pt rise is net restarts. Age check: 18–29 14% × 52M = 7.3M; 30–49 25% × 90M = 22.5M; 50–64 33% × 62M = 20.5M; 65+ 12% × 68M = 8.2M; total ≈ 58.5M ≈ 21.5%. The 65+ band rose 3.5 pts, less than others, because DEXA-driven pauses and bone co-prescribing still gate older users. Income: bottom third jumped from 10.3% to 18.5% almost entirely after January 2032 generic semaglutide entry and Medicaid generic substitution; the top-bottom gap in use shrank from 8.2 to 5.5 pts while the gap in quality (scans, coaching, high-dose retatrutide, antiresorptives) widened. Payer mix of ≈58.5M: commercial 45% (26.3M), Medicare 15.5% (9.1M: 8.2M aged 65+ less ~0.1M on cash, plus ~1.0M disabled under-65), Medicaid 10% (5.85M), cash/direct 21.5% (12.6M), imported/counterfeit 8% (4.7M). The ≈28.6M off-now include ~4M involuntarily stopped by gated plans or waiver misses, ~3M on DEXA-advised pauses, and a principled-refusal segment of perhaps 2–3M. The ~185M never-users skew under 30, rural, uninsured above Medicaid lines, or refusing on principle; at $39 cost is rarely the stated reason any more—time, scans, side effects and conviction are. Pediatric: ~1.0% of under-18s (≈730k), mostly adolescents 12+ on generic semaglutide; an unknown number of teens use gray-market 'research' retatrutide. Roughly one US child in four now lives with at least one parent currently on a drug, and many with a parent cycling off it."
+    },
+    "access": {
+      "cash_price_usd_month_low": 39,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Medicare Bridge successor continues at the $199 brand rate with the $50 copay, BMI/comorbidity criteria and counselling visit unchanged; generic semaglutide is now Part D's preferred tier at ≈$45 net. ≈3.0M Bridge obesity users; ≈55% on generic semaglutide, 45% on branded tirzepatide/retatrutide: 3.0M × 12 × (0.55×$45 + 0.45×$199) = 36M × $114.3 ≈ $4.1B in 2032, slightly below 2030's $4.3B despite 1.2M more users. Medicaid pays ≈10% of fills ≈5.85M users; ≈60% mandated generic at ≈$40, 40% brand at $199: 5.85M × 12 × (0.6×$40 + 0.4×$199) = 70.2M × $103.6 ≈ $7.3B gross, below 2030's $8.4B with 2.35M more users. Indiana and Arkansas adherence waivers unchanged; Ohio, Georgia, Missouri and Tennessee added similar waivers in 2032.",
+      "employer_coverage_pct": 64,
+      "generic_us": true,
+      "generic_rest_of_world": "India 80+ brands at $5–30; China generic semaglutide and now 'research-grade' retatrutide and cagrilintide peptides at $20–60 a month, the backbone of the gray trade; Canada, Brazil, Mexico, Turkey generic semaglutide; generic oral semaglutide in most non-US markets. EU semaglutide generics expected 2031–33 market by market.",
+      "gray_market": "significant",
+      "dominant_route": "weekly_injectable",
+      "note": "FICTIONAL. Generic collapse for semaglutide only. Under the March 2031 patent settlement, Viatris, Teva, Dr. Reddy's and Sandoz launched generic injectable semaglutide in January 2032, and Novo launched an authorised generic. By mid-2032 the cash price is $39–69 a month at Cost Plus, Costco, Walmart and Amazon Pharmacy. Generic oral semaglutide is not yet in the US because the absorption-enhancer patents run to 2033. Branded tirzepatide fell to $149–199 on the federal direct portal in response. Retatrutide stays $1,499 list and $299–399 direct, and the 16 mg dose costs $399. The price question has turned into an income-floor question: a $39 pen is affordable, but DEXA scans ($90–250 cash, 8–14-week waits), coaching, protein-forward food and gym time are not. The payer structure is unchanged: commercial 45%, Medicare 15.5%, Medicaid 10%, cash 21.5%, imported/counterfeit 8%. About 72% of covering employers gate, with ≥80% PDC, verified weigh-ins, 5%-at-6-months thresholds, and connected-pen dose logging in about a third of gated plans. Plans now steer to generic first and require step-through for tirzepatide and retatrutide. The gray market has shifted from semaglutide, which is now cheaper legally, to Chinese 'research' retatrutide vials and counterfeit Zepbound and retatrutide pens. The 503B exclusion and 503A injunction stand."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic incl. 7.2 mg; US generics and authorised generic from Jan 2032)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 16 mg dose approved Jun 2031)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular agonist, weekly injectable (amycretin, approved Jul 2031)",
+        "GLP-1 agonist / GIPR antagonist antibody-peptide, monthly injectable (MariTide, approved Mar 2032)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide, generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "moderate-to-severe alcohol use disorder (semaglutide, Sep 2031; ASAM and APA guideline-endorsed)",
+        "craving reduction as adjunct in binge-eating disorder (APA practice advisory 2032, guideline-endorsed, not labelled)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'quiet mind' craving and focus programmes: low-dose generic semaglutide or Foundayo through telehealth clinics, legally framed after the 2032 FTC consent orders as clinician-supervised care tied to AUD, BED or 'reward-dysregulation' assessment",
+        "smoking and vaping cessation (new Novo trial under way; resubmission not before 2031 has slipped to 2033)",
+        "gambling, compulsive shopping and gaming craving reduction",
+        "'metabolic longevity' regimens in concierge practices",
+        "pediatric under-12 use under specialist care",
+        "dose holidays and pre-event dose-cutting, now openly advised by some prescribers"
+      ],
+      "pipeline_note": "FICTIONAL. The ~30% triple-agonist driver is realised as a new dose of an existing product. FDA approved retatrutide 16 mg in June 2031 on the TRIUMPH-5 extension, with mean loss of 30.1% at 80 weeks and required 72-week DEXA bone and lean-mass data showing lean mass at ~35% of loss. That gives surgical-grade loss from a pen. Amycretin was approved in July 2031 after the extended DEXA review (~24% loss). MariTide (filed Apr 2030) was approved in March 2032 as the first monthly option (~18–20%). Survodutide's resubmission was accepted in 2031, with a decision expected 2033. Semaglutide for AUD was approved in September 2031 on a trial that included SHAPS anhedonia endpoints, the endpoint the 2029 smoking CRL demanded; the label carries an anhedonia monitoring statement. Bimagrumab-semaglutide was filed in Oct 2032 and is not approved. US generic semaglutide arrived January 2032 under the March 2031 settlement; tirzepatide exclusivity runs to ~2036. Incretin market ≈$104B in 2032: US volume up ~50% on 2030, US semaglutide revenue down ~60% after generic entry, and Lilly's retatrutide the largest single product."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common effect and leading discontinuation cause; higher at retatrutide 16 mg and with self-escalated gray-market vials.",
+        "regulatory_response": "Labelled; gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; absolute cases up with 16 mg retatrutide uptake.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low; counterfeit and contaminated product still confounds reports.",
+        "regulatory_response": "Labelled; MDL ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "No new signal; the 2030 cohort figures hold (lean mass ~30–40% of loss in untrained over-50s). More people are exposed: generic-only users in Medicaid and cash channels are least likely to get body-composition monitoring.",
+        "regulatory_response": "2028 class label and 2029 joint guidance retained; retatrutide 16 mg label requires baseline DEXA recommendation."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "No new signal. HR ~1.3–1.4 in 65+ long-term users and ~1.2 in cycling postmenopausal women 50–64 hold. Scaling: ≈4.0M 65+ users on >2 years × 0.6%/yr × 0.35 ≈ 8,400 excess hip fractures a year, against ~300,000 total. DEXA waits are 8–14 weeks in many metros.",
+        "regulatory_response": "Labelling and DEXA guidance retained; bone endpoints required in filings (applied to retatrutide 16 mg, amycretin, MariTide). DOJ civil case against Novo unresolved."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare'; FDA warnings mention; no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association; AUD trial psychiatric monitoring found none.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, 'the grey')",
+        "status": "emerging",
+        "prevalence_note": "No new signal; the ~10–14% top-dose retatrutide SHAPS finding persists in final postmarketing data, and the AUD trial showed a smaller excess (~3 pts over placebo). With ~3.5M on low-dose 'quiet mind' programmes and ~1.4M on semaglutide for AUD, it is now the most discussed side effect in ordinary conversation.",
+        "regulatory_response": "AUD label includes anhedonia monitoring statement; FTC consent orders (2032) require SHAPS screening at intake and 90 days for 'quiet mind' services; no class label change."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year; involuntary stops scale with four new Medicaid waivers; generic cost makes restart cheap, feeding cycling.",
+        "regulatory_response": "Seventh Circuit upheld Indiana waiver on procedural grounds (2031); disability-rights merits claim remanded and unresolved."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Signals persist in high-loss and older users; most concerning in 16 mg retatrutide users without dietitian support.",
+        "regulatory_response": "Professional guidance (protein ≥1.2 g/kg, vitamin D/calcium) retained; no FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~7 years; adolescent exposure; repeated cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up; first interim adolescent bone-accrual data (2032) show no clear deficit at 2 years, underpowered.",
+        "regulatory_response": "Postmarketing requirements continue."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "The flood moved up-market to retatrutide. The Nov 2031 cluster of endotoxin-contaminated Chinese 'research' retatrutide vials caused ≈310 sepsis and soft-tissue-infection admissions and 11 deaths across 9 states. Poison-centre incretin calls are up ~70% on 2030, driven by mg/unit errors in 30–60 mg lyophilised vials. Counterfeit Zepbound pens are found in med-spas in Florida and Nevada.",
+        "regulatory_response": "Second CDC HAN advisory (Nov 2031); FDA import alert covering 'research use only' peptides; first federal prosecutions of distributors (not buyers) in 2032; personal-importation gap still open; no new statute."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher at 16 mg; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "No new signal; elevated fall-related ED visits in 65+ long-term users persist, confounding still unresolved.",
+        "regulatory_response": "Fall-risk screening remains in the Medicare counselling template."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With one adult in five on a drug, US salty-snack volume falls ~3–4% a year and confectionery ~4%. Sugary carbonated drinks are down ~5% in volume over the window. Big packaged-food firms cut SKUs further and sell two or three legacy snack brands to private equity. Growth is in protein, fortified dairy and 'GLP-1 friendly' single-serve formats. A two-tier grocery basket has formed: premium whey, fresh fish and 'DEXA-forward' meal kits for the scanned, and budget protein shakes and fortified white bread in dollar stores for generic-only users.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "The AUD approval and generic pricing hit heavy drinkers, who are the industry's volume core. US spirits volume is down a fifth straight year, beer ~4%/yr. Treatment centres and EAPs prescribe semaglutide as first-line alongside naltrexone. Bars in college towns and Las Vegas report weaker late-night trade. Non-alcoholic and 'one good drink' premium formats grow, but they do not offset the losses.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly down, and spend per cover keeps falling. Gram-priced protein menus are standard in suburbs. 'No-gram' heritage rooms in Atlanta, Memphis and Houston still do well. Casual-dining chains close another ~4% of units. Fast-casual chains add 'quarter portions' at about 70% of full price, and margin holds.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn continues. The new money is in fitted, shoulder-showing cuts, because visible muscle is now what signals status. Plus-size specialists hold steady. Discount chains carry far more small sizes in lower-income zip codes as generics spread.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength training becomes a class uniform. DEXA-plus-coaching chains and Medicare Advantage strength benefits grow, while $10 big-box gyms add squat racks and remove treadmill rows. Mobile DEXA vans serve suburbs, and rural and inner-city areas have little scan or coaching capacity.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Generic-first steering pulled GLP-1 pharmacy trend to ~+2%. Employer coverage is roughly flat at 64%, and ~72% of covering employers gate. Connected-pen adherence logging is in about a third of gated plans. Bone-related claims and DEXA are now standard line items. Wellness surcharges of up to 30% of premium stay widespread. Insurers are modelling AUD-related claim reductions but have not yet priced them.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Volume is up and revenue is down. Novo loses most of its US semaglutide revenue to generics and depends on CagriSema, amycretin and ex-US markets; its DOJ exposure is unresolved. Lilly dominates through retatrutide 16 mg and tirzepatide and is the most valuable drugmaker. Generic makers Viatris, Teva and Dr. Reddy's get a volume windfall at thin margins. Bone-agent makers, DEXA manufacturers and pen-authentication vendors keep growing.",
+        "direction": "adapted"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being thin no longer says much because a $39 pen makes it cheap. What signals status is composition: visible shoulders and forearms, upright posture, and a DEXA print-out shared like a credit score. The 'drug-thin' look of narrow arms, a soft middle and a forward stoop is read as generic-only and unscanned. Being heavy reads as one of three things: cut off by a gated plan, off by conviction, or on a DEXA pause.",
+      "thinness_and_class": "Thinness is less a class marker and muscle is more of one. In Columbus, Ohio, the change is visible within one bus ride. In Upper Arlington, women in their fifties do 16 mg retatrutide with a coach, a DEXA every six months and zoledronic acid. On the east side, home-health aides on the new Ohio Medicaid waiver get generic semaglutide, a kiosk weigh-in at the pharmacy and no scan for three months. Both groups are getting thinner, and they are ending up with different bodies.",
+      "eating_as_ritual": "Meals are smaller and protein-first, and 'how many grams' is normal table talk. Heritage full-table dinners, church potlucks and no-gram rooms persist as deliberate counter-ritual. Families with a member on semaglutide for AUD often host dry holidays, and family members argue about whether that is support or surrender.",
+      "dating_and_intimacy": "Profiles list on/off/AUD, and some list DEXA lean-mass percentile as a flex. 'Unmedicated' remains a filter in backlash circles. 'Are you in the grey?' is a common first-date question, and planned dose holidays before weddings and vacations are normal.",
+      "meaning_of_appetite": "Appetite has a price and a class. Cheap suppression is everywhere. Being able to want things fully, and to afford being careful about it, is a luxury. The backlash coalition persists, but the generic price removes its affordability argument, and it is thinning into two camps: an Atlanta-centred body-sovereignty movement that now emphasises 'strong, not shrunk', and a Tulsa–Dallas religious-natural strand opposed to the AUD indication as 'medicating sin away'.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Top-dose retatrutide: ~10–14% cross the SHAPS threshold versus ~5% of comparators, and ~2.5M users are on 12–16 mg, so roughly 150–225k excess cases. AUD semaglutide users (~1.4M) show a ~3-pt excess. About 3.5M on 'quiet mind' programmes now get SHAPS screening at intake and 90 days under the FTC consent orders. First published screening data from two vendors flag ~7% at 90 days, with no comparator. In national polling, about 4 in 10 current users say they have felt 'the grey' at some point, and about half of those have taken a dose holiday.",
+      "framing": "A complaint people manage, though it is still also a product. Prescribers routinely advise 'dose for the season' and planned holidays. Telehealth clinics market 'quiet mind' care with mandated SHAPS disclaimers. 'The grey' appears in sitcoms and HR training. People talk about it the way they talked about SSRI flatness in the 2000s: common, a nuisance, and worth negotiating.",
+      "effect_on_work": "Gated plans still reward unbroken adherence, so a dose holiday can register as a missed dose on connected-pen plans. Workers either take holidays off-plan with a $39 generic pen or skip them. Sales, hospitality and creative workers schedule lower doses around pitches and peak seasons. Fleets and call centres prefer steady dosing. Several tech firms stopped reimbursing 'focus' programmes after the FTC orders, and others now route them through EAPs under the AUD and BED framing.",
+      "effect_on_art_and_play": "A recognisable 'grey' style is now criticised in reviews: lower-arousal pop and novels about not wanting. A counter-scene of 'holiday sets', where musicians and comics perform on announced dose breaks, sells out in Nashville and Austin. Users seek high-stimulus experiences: hot sauce, live loud music, and climbing gyms that double as strength studios.",
+      "effect_on_intimacy": "Couples schedule sex around dose day. Sex therapists treat mismatched dose holidays as a standard presenting problem. Recovering drinkers on semaglutide report steadier marriages, and some spouses say they miss the person they married.",
+      "effect_on_politics": "The AUD approval split the religious right: some pastors endorse it as mercy and others condemn it. Generic pricing removed cost as a stump issue and replaced it with conditioning and the gray market. 'Calm voter' turnout effects remain unestablished, and no consultant has published data.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "FDA approved the retatrutide 16 mg dose, amycretin, MariTide, semaglutide for AUD, and generic semaglutide ANDAs. All were bone- and anhedonia-data-demanding but completed. Import enforcement escalated to distributors: an import alert on 'research use only' peptides and the first federal prosecutions of US resellers in 2032. Buyers are still not prosecuted, and Congress has passed no importation law. The FTC moved from warning letters to consent orders.",
+      "subsidy_or_mandate": "No mandate and no structural change in payment. The Medicare Bridge successor at $199 brand with a $50 copay continues alongside a generic preferred tier. Medicaid coverage is still decided state by state and is now overwhelmingly generic-first.",
+      "conditioning_or_surveillance": "Conditioning expanded. In May 2032 CMS approved 1115 adherence waivers for Ohio, Georgia, Missouri and Tennessee on the Indiana/Arkansas template (≥80% PDC, quarterly verified weigh-ins, two misses = 12 months off), and Ohio and Georgia accept connected-pen dose logs as PDC evidence. The Texas Employees Retirement System adopted a premium differential for members with BMI ≥35 who decline or lapse from a covered programme, within the 30% wellness ceiling. Pharmacy kiosk networks now link Medicaid, commercial and state-employee weigh-ins. Disability-rights merits litigation is remanded and unresolved.",
+      "workforce_or_military": "DOT sleep-apnea screening still makes tirzepatide a de facto job requirement for some drivers. The Army allows accession after 6 months of stable generic semaglutide use under a 2031 pilot, which is contested in Congress. Some fleets screen drivers over 55 with DEXA.",
+      "geopolitics_of_supply": "With semaglutide generic in the US, the India price gap stops being a talking point. China becomes the story because Chinese 'research' retatrutide and the November 2031 sepsis cluster link drug safety to the trade fight. Section 232 tariffs remain on branded imports. US generic semaglutide is filled largely from Indian API, which makes India a supplier the US depends on.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2031-03",
+        "event": "Novo Nordisk settles Paragraph IV litigation with Viatris, Teva, Dr. Reddy's and Sandoz, permitting generic semaglutide injectable entry in January 2032 and launching its own authorised generic; by June 2032 pens sell for $39–69 a month cash and Medicaid plans switch to generic-first",
+        "driver": "price_path: generic_collapse"
+      },
+      {
+        "date": "2031-06",
+        "event": "FDA approves a 16 mg dose of retatrutide after 80-week data showing 30.1% mean weight loss and DEXA lean-mass and bone results; label recommends baseline body-composition scanning",
+        "driver": "next_gen_launch: triple_agonist_30pct"
+      },
+      {
+        "date": "2031-09",
+        "event": "FDA approves semaglutide for moderate-to-severe alcohol use disorder on a trial with SHAPS anhedonia endpoints; ASAM and APA endorse it as a first-line option alongside naltrexone and acamprosate",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2031-11",
+        "event": "CDC health alert links endotoxin-contaminated Chinese 'research-grade' retatrutide vials to about 310 hospital admissions for sepsis and injection-site infection and 11 deaths in nine states; FDA issues an import alert on 'research use only' peptides",
+        "driver": "market_shock: generic_flood_counterfeits"
+      },
+      {
+        "date": "2032-02",
+        "event": "FTC consent orders with Quiet, Even and Unhooked let them market 'quiet mind' craving care only as clinician-supervised treatment tied to AUD, binge-eating or reward-dysregulation assessment, with SHAPS screening at intake and 90 days; an APA advisory the same month endorses incretins as a binge-eating adjunct, and 'the grey' trends nationally",
+        "driver": "new_indications: mood_and_motivation; personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2032-05",
+        "event": "CMS approves Medicaid 1115 adherence waivers for Ohio, Georgia, Missouri and Tennessee modelled on Indiana's, with Ohio and Georgia accepting connected-pen dose logs as adherence evidence; Texas ERS adopts a BMI-linked premium differential for members who decline or lapse",
+        "driver": "state_action: benefits_conditioning"
+      }
+    ],
+    "open_tensions": [
+      "Generic semaglutide at $39 makes the drug available to almost anyone. The things that make it safe (DEXA scans, coaching, protein, strength training) are not cheap and are rationed by income and geography. The bone burden is moving toward unscanned generic-only users in Medicaid and cash channels.",
+      "Four new Medicaid waivers and connected-pen employer plans treat every missed dose as non-adherence. Prescribers now routinely advise dose holidays for 'the grey' and DEXA-driven pauses for bone. The disability-rights merits case is unresolved.",
+      "The gray market has moved up-market to Chinese retatrutide after a sepsis cluster killed 11, and distributors are now prosecuted. Retatrutide 16 mg costs $399 direct against $40 'research' vials, and the personal-importation gap is still open.",
+      "The AUD approval and the FTC-sanctioned 'quiet mind' framing have made reward modulation a legitimate clinical aim. Meanwhile ~4 in 10 users report the grey, and tens of millions of people now regulate desire pharmacologically, with no long-run data on what that does to work, love or politics."
+    ],
+    "still_true": [
+      "The Indiana and Arkansas Medicaid 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with two misses ending coverage for 12 months.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "The Medicare GLP-1 Bridge successor still carries a $50 beneficiary copay, unchanged BMI/comorbidity criteria and the counselling-visit requirement, with a $199 rate for branded product.",
+      "The 503B compounding exclusion and the 503A injunction stand.",
+      "No individual has been prosecuted for personal importation of incretins and Congress has passed no new importation law."
+    ]
+  },
+  "prose": {
+    "headline": "Thin Is Cheap Now: $39 Pens, 30% Pens, and the New Class Line Drawn in Muscle and Bone Scans",
+    "world_in_600_words": "At the end of 2032 a little more than one American adult in five is on an incretin drug, and for the first time price is not what separates users from everyone else. In January generic semaglutide arrived under a patent settlement Novo Nordisk signed in March 2031. By summer a month of weekly pens cost $39 at Costco and $49 at Cost Plus. Medicaid plans switched to generic-first almost overnight. Medicare kept its $199 rate and $50 copay for branded drugs and added a cheaper generic tier. Federal spending on the drugs fell even as users rose. The bottom income third, about one in ten users two years ago, is now close to one in five.\n\nAt the other end of the market Lilly got its thirty percent. A 16 mg dose of retatrutide, approved in June 2031, produces surgical-grade loss from a pen, and it carries a label recommending a body-composition scan before the first injection. That scan, a DEXA, has become a dividing line. Scanned users have coaches, protein budgets and zoledronic acid when their bones thin. Generic-only users have a kiosk at the pharmacy. In Columbus, Ohio, both groups are getting thinner, but their bodies come out differently. Thinness now looks ordinary. What reads as money is shoulders, posture, and the willingness to show a lean-mass percentile on a dating profile.\n\nNo new safety signal emerged. The old ones simply affect more people. Excess hip fractures among older long-term users now run to roughly eight thousand a year, and DEXA waits in many cities run past two months. The counterfeit story moved upmarket. With legal semaglutide cheaper than a parcel from Hyderabad, the gray trade switched to Chinese 'research-grade' retatrutide. In November 2031 a batch contaminated with endotoxin put about three hundred people in hospital with sepsis and abscesses, and eleven died. The FDA has started prosecuting resellers but still not buyers.\n\nThe drugs' effect on wanting is now an approved use. Semaglutide was approved for alcohol use disorder in September 2031, and addiction medicine adopted it quickly. Spirits makers are reporting a fifth year of falling volume. The telehealth brands that sold 'Quiet' and 'Even' settled with the FTC and now sell 'quiet mind' care as clinician-supervised treatment, with a pleasure-scale questionnaire at intake and at ninety days. The pleasure loss users call 'the grey' has become an ordinary complaint, like SSRI flatness a generation ago. About four in ten users say they have felt it, and many take scheduled dose holidays before weddings, pitches and vacations. Comics in Austin advertise 'holiday sets'. Couples plan around dose day.\n\nThe institutions that pay have not relaxed. In May, CMS approved adherence waivers for Ohio, Georgia, Missouri and Tennessee on the Indiana model, and two of them accept data from connected pens that log each injection. About seventy percent of covering employers gate, and Texas now charges state employees more if they lapse. So a dose holiday the doctor recommends can show up on the payer's dashboard as non-compliance. Many people get around this by buying a $39 generic pen off-plan to cover the gap.\n\nThe backlash that marched in Atlanta in 2030 has lost its price argument and split. Body-sovereignty groups now preach 'strong, not shrunk', while some Tulsa pulpits call the alcohol indication medicating sin away. Snack volumes keep falling, gyms keep removing treadmills to make room for racks, and dollar stores stock protein shakes beside the cigarettes. From the outside the country looks fitter, soberer and calmer than it did two years ago.",
+    "a_day_in_the_life": "Tamika Ruffin is fifty-four and starts work at seven, bathing a man in Whitehall who calls her Denise. At 10:40 her phone buzzes: PEN NOT DOCKED — DOSE WINDOW CLOSES SUNDAY. Ohio's new waiver counts the click.\n\nAt lunch she sits in her Corolla outside the Kroger and eats a protein shake from the dollar store. It tastes like chalky vanilla. Inside, the kiosk wants her shoes off. 211.4. Last quarter it was 219. The screen shows a green check and a pamphlet about calcium.\n\nHer DEXA referral says January. She took it in August.\n\nThe afternoon client, a retired schoolteacher in Upper Arlington, has a trainer who comes Tuesdays. They're the same age. The teacher's arms look like rope. Tamika's look like they belong to a younger, smaller woman who hasn't eaten well. She lifts the teacher from the chair using her legs, the way the video showed.\n\nAt home Marcus is at the stove frying nothing. He just likes the sound of the pan, he says. Fourteen months on the AUD shot, no beer in the fridge, and he laughs about half as often. She doesn't say so.\n\nTheir daughter Kiara, sixteen, asks why Mom's pen is 'the cheap one.' A girl at school has 'the real retatrutide' from a website. Tamika takes the phone and reads the site, which shows a lab in Shenzhen and a photo of a smiling nurse.\n\nAt nine she docks the pen. It glows blue and the waiver logs the dose. She sits on the porch a while and feels nothing much either way."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r21-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Semaglutide for AUD was approved in September 2031 on a trial that included SHAPS anhedonia endpoints, the endpoint the 2029 smoking CRL demanded",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism/magnitude: the 2030 pipeline lists no AUD filing or phase 3 program, and no filing event appears in this window. Approval ~17 months out, on a trial already built around an endpoint first demanded in 2029, breaks the envelope's filing-then-12-months rule."
+        },
+        {
+          "quote": "Income: bottom third jumped from 10.3% to 18.5% almost entirely after January 2032 generic semaglutide entry and Medicaid generic substitution",
+          "field": "world/population/note",
+          "why": "mechanism: a near-doubling of bottom-third use within about 12 months is asserted. Medicaid is only ~5.85M users, up 2.35M, against ~7M added in a ~90M-adult third, so the rest rests on unshown cash uptake. The unscanned, gated, waiver-bound population does not obviously respond to a $39 pen that fast."
+        },
+        {
+          "quote": "About 3.5M on 'quiet mind' programmes now get SHAPS screening at intake and 90 days under the FTC consent orders.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "mechanism: the subscriber base roughly doubles from 1.5–2M even though the 2032 consent orders restrict the product to clinician-supervised care tied to an assessment. No chain shows how the restricted channel grew."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society with new losers rather than a catastrophe. Four new Medicaid waivers with pen-logged adherence, 72% employer gating and the Texas ERS premium differential extend conditioning (state/conditioning_or_surveillance). Scanned and unscanned users diverge in bone and muscle outcomes (thinness_and_class, open_tensions), and fractures reach ~8,400 excess hip fractures a year plus an 11-death contamination cluster. Offsetting benefits are real: AUD treatment, cheap $39 access and falling spirits volume. Reward blunting is normalised ('the grey', ~4 in 10), which makes the harm discussable rather than hidden, so epistemic scores lower.",
+        "plausibility": "driver_fidelity: nearly every driver is visible in fields and events (generic settlement, 16 mg retatrutide, AUD approval, Chinese vial cluster, 2032 waivers, 'the grey' as mainstream complaint, stratification by scans). The mood_and_motivation indication is thin, realised only as an unlabelled APA binge-eating advisory plus FTC orders. mechanism: the settlement to generic to Medicaid generic-first chain is shown, as is the waiver chain via the Seventh Circuit ruling. Several shifts are asserted: AUD approval with no filing or trial path (claim 1), the bottom-third doubling (claim 2), and quiet-mind growth under tighter FTC rules (claim 3). magnitude: adult use 21.5%, ever-use 32%, income thirds, age bands (≈58.4M), payer mix, Bridge spend (≈$4.1B) and Medicaid spend (≈$7.3B) all reconcile and sit inside the envelope. The deductions are the AUD approval timing without a filing event, the 8% imported share held flat despite the gray market's shift, and the unclear prose DEXA wait.",
+        "generativity": "The Tamika/Marcus/Kiara day is concrete, with the pen-docking alert, the pharmacy kiosk weigh-in, the dollar-store shake, and arms like rope against arms like a smaller woman's. It also has a dry AUD household and a teen eyeing a Shenzhen retatrutide site. Scenes are implied in the JSON too: the Columbus bus ride, holiday sets in Austin, and the dating-profile DEXA percentile. The prose partly explains in its summary, but the story section shows rather than tells."
+      },
+      "plausibility": 7.2
+    },
+    {
+      "custom_id": "s3-L2-r21-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "≈4.0M 65+ users on >2 years × 0.6%/yr × 0.35 ≈ 8,400 excess hip fractures a year",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Magnitude: 4.0M of 8.2M older users (about 49%) would have to be on therapy for more than 2 years. That conflicts with the world's own ~35% one-year persistence and 41% cycling, and it implies far more long-term 65+ users than 2030's 5.7M total could supply."
+        },
+        {
+          "quote": "Semaglutide for AUD was approved in September 2031 on a trial that included SHAPS anhedonia endpoints, the endpoint the 2029 smoking CRL demanded",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: a phase 3 trial built around the endpoint demanded in March 2029 would have to be designed, run, filed and approved in about 2.5 years. The same world says Novo's smoking trial would not resubmit before 2031, and no AUD filing event is shown."
+        },
+        {
+          "quote": "Income: bottom third jumped from 10.3% to 18.5% almost entirely after January 2032 generic semaglutide entry and Medicaid generic substitution;",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: an 8.2-point jump in the bottom third, almost all within one year, is attributed to generic entry and Medicaid substitution. Medicaid is only 10% of users and the payer-mix shares barely move, so the chain is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy and inequality score highest. Four new Medicaid adherence waivers, connected-pen dose logging and Texas ERS premium differentials punish medically advised dose holidays and DEXA pauses. Cheap generics reach everyone, but scans and coaching are rationed by income, so bone and lean-mass harm shifts to unscanned generic-only users (safety_ledger, open_tensions). Offsets are the AUD indication, the lower price, a measurable and discussable 'grey', and no new safety signal, so the world is harder with new losers rather than structurally hidden.",
+        "plausibility": "driver_fidelity: Price, AUD, the ~30% dose, the counterfeit shift, class stratification, conditioning and the mainstream 'grey' are all visible in fields and events, and safety_signal stays at 'none'. 'mood_and_motivation' is thin: it is only an unlabelled APA binge-eating advisory plus FTC consent orders. mechanism: Generic entry via a dated settlement event, the retatrutide 16 mg dose and the FTC orders are well chained. The AUD approval timeline (claim 2) and the bottom-third jump (claim 3) are asserted more than shown. magnitude: All headline figures sit inside the envelope (21.5 adults, 32 ever, income thirds bracket the national figure), and the age, payer-mix, Medicare ($4.1B) and Medicaid ($7.3B) arithmetic reconciles. The 4.0M long-term 65+ users (claim 1) and the loose first-course versus restart split (6.0 of the 6.9-point rise) are minor gaps.",
+        "generativity": "The Tamika Ruffin day is concrete: the PEN NOT DOCKED alert, the Kroger kiosk weigh-in at 211.4, the dollar-store shake, and the contrast with the Upper Arlington teacher's rope arms. Marcus frying nothing and Kiara's Shenzhen retatrutide site add family texture. The world fields add Columbus bus-ride stratification, dose-holiday comedy sets and 'Are you in the grey?' first dates. One line ('She took it in August') is cryptic."
+      },
+      "plausibility": 6.7
+    },
+    {
+      "custom_id": "s3-L2-r21-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "bottom third jumped from 10.3% to 18.5% almost entirely after January 2032 generic semaglutide entry and Medicaid generic substitution",
+          "field": "world/population/note",
+          "why": "Mechanism: an 8.2-pt jump in bottom-third use inside about 12 months is asserted, but Medicaid's share of users moves only from 9% to 10% and the payer mix is otherwise flat, so the channel carrying the new users is not shown."
+        },
+        {
+          "quote": "generic semaglutide is now Part D's preferred tier at ≈$45 net",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: the world also keeps a $50 beneficiary copay, which exceeds a $45 net price. The Bridge spend arithmetic treats the full price as the amount Medicare pays, so the generic tier does not reconcile with the unchanged copay rule."
+        },
+        {
+          "quote": "With ~3.5M on low-dose 'quiet mind' programmes and ~1.4M on semaglutide for AUD",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: 'quiet mind' users roughly double from 1.5–2M to 3.5M even though FTC consent orders now require clinician-supervised intake and tech firms stopped reimbursing the programmes. AUD semaglutide also reaches 1.4M patients within about 15 months of approval, and neither ramp is explained."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access is cheap and AUD treatment is a real benefit, but conditioning widens through four new Medicaid waivers, connected-pen dose logs and the Texas ERS premium differential. Bone and muscle harms shift toward unscanned generic-only Medicaid and cash users (inequality, public_health), and 11 people died in the Nov 2031 contaminated-vial cluster. Dose holidays can register as non-compliance, 'the grey' is common, and 'some spouses say they miss the person they married', which hurts cohesion. Harms are measured and discussable, so epistemic stays moderate. Overall this is a recognisably harder, more stratified society, not a catastrophic one.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events. Generic semaglutide arrives through the March 2031 settlement, the retatrutide 16 mg dose gives the 30% triple-agonist, AUD is approved, the Nov 2031 cluster covers the counterfeit shock, and the waivers cover conditioning. mood_and_motivation is thin, realised only as an unlabelled APA binge-eating advisory. mechanism: Most chains are shown, such as the FTC orders to the 'quiet mind' reframing, generic price to cycling, and the gray market moving to retatrutide. The bottom-third jump and the payer mix that stays frozen despite the price collapse are asserted (claim 1), and the 3.5M/1.4M ramps are unexplained (claim 3). magnitude: Current use 21.5%, ever-use 32% and the income thirds (which average 21.5%) all sit inside the envelope. The age bands, payer shares, Bridge spend (~$4.1B) and Medicaid spend (~$7.3B) multiply out, and the approvals obey the filing rules. The $45 generic net price against the $50 copay is a reconciliation gap (claim 2).",
+        "generativity": "The prose follows an Ohio home-health aide through a connected-pen waiver alert, a kiosk weigh-in, a dollar-store shake, a DEXA wait, and a husband who laughs half as often on the AUD shot. Her teenage daughter finds a Shenzhen 'research' retatrutide site. The world fields add texture: holiday sets, dose-day scheduling, gram-talk, the Columbus bus-ride contrast. Many scenes and characters are implied."
+      },
+      "plausibility": 7.05
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Semaglutide for AUD was approved in September 2031 on a trial that included SHAPS anhedonia endpoints, the endpoint the 2029 smoking CRL demanded",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism/magnitude: the 2030 pipeline lists no AUD filing or phase 3 program, and no filing event appears in this window. Approval ~17 months out, on a trial already built around an endpoint first demanded in 2029, breaks the envelope's filing-then-12-months rule."
+      },
+      {
+        "quote": "Income: bottom third jumped from 10.3% to 18.5% almost entirely after January 2032 generic semaglutide entry and Medicaid generic substitution",
+        "field": "world/population/note",
+        "why": "mechanism: a near-doubling of bottom-third use within about 12 months is asserted. Medicaid is only ~5.85M users, up 2.35M, against ~7M added in a ~90M-adult third, so the rest rests on unshown cash uptake. The unscanned, gated, waiver-bound population does not obviously respond to a $39 pen that fast."
+      },
+      {
+        "quote": "About 3.5M on 'quiet mind' programmes now get SHAPS screening at intake and 90 days under the FTC consent orders.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "mechanism: the subscriber base roughly doubles from 1.5–2M even though the 2032 consent orders restrict the product to clinician-supervised care tied to an assessment. No chain shows how the restricted channel grew."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.5,
+      "inequality": 6.67,
+      "public_health": 5.17,
+      "cohesion": 5.17,
+      "epistemic": 4.5,
+      "overall": 5.7
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.5,
+      "mechanism": 6.33,
+      "magnitude": 7.17
+    },
+    "plausibility": 6.98,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a harder society with new losers rather than a catastrophe. Four new Medicaid waivers with pen-logged adherence, 72% employer gating and the Texas ERS premium differential extend conditioning (state/conditioning_or_surveillance). Scanned and unscanned users diverge in bone and muscle outcomes (thinness_and_class, open_tensions), and fractures reach ~8,400 excess hip fractures a year plus an 11-death contamination cluster. Offsetting benefits are real: AUD treatment, cheap $39 access and falling spirits volume. Reward blunting is normalised ('the grey', ~4 in 10), which makes the harm discussable rather than hidden, so epistemic scores lower.",
+      "plausibility": "driver_fidelity: nearly every driver is visible in fields and events (generic settlement, 16 mg retatrutide, AUD approval, Chinese vial cluster, 2032 waivers, 'the grey' as mainstream complaint, stratification by scans). The mood_and_motivation indication is thin, realised only as an unlabelled APA binge-eating advisory plus FTC orders. mechanism: the settlement to generic to Medicaid generic-first chain is shown, as is the waiver chain via the Seventh Circuit ruling. Several shifts are asserted: AUD approval with no filing or trial path (claim 1), the bottom-third doubling (claim 2), and quiet-mind growth under tighter FTC rules (claim 3). magnitude: adult use 21.5%, ever-use 32%, income thirds, age bands (≈58.4M), payer mix, Bridge spend (≈$4.1B) and Medicaid spend (≈$7.3B) all reconcile and sit inside the envelope. The deductions are the AUD approval timing without a filing event, the 8% imported share held flat despite the gray market's shift, and the unclear prose DEXA wait.",
+      "generativity": "The Tamika/Marcus/Kiara day is concrete, with the pen-docking alert, the pharmacy kiosk weigh-in, the dollar-store shake, and arms like rope against arms like a smaller woman's. It also has a dry AUD household and a teen eyeing a Shenzhen retatrutide site. Scenes are implied in the JSON too: the Columbus bus ride, holiday sets in Austin, and the dating-profile DEXA percentile. The prose partly explains in its summary, but the story section shows rather than tells."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.451,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 16
+  }
+}

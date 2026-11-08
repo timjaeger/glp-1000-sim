@@ -1,0 +1,539 @@
+{
+  "run_id": "s3-L1-r10",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L1",
+  "seed": 20261107,
+  "run_index": 10,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 2.3,
+    "price_path": "managed_decline",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [
+      "pediatric_under_12"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "none",
+    "cultural_response": "normalisation",
+    "state_action": "subsidy",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L1-r10",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17537,
+        "output_tokens": 18714
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r10-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25592,
+        "output_tokens": 6329
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r10-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25592,
+        "output_tokens": 6664
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r10-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25592,
+        "output_tokens": 7913
+      }
+    ]
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 21.1,
+      "us_adults_ever_used_pct": 30.0,
+      "by_income_third_pct": {
+        "top": 26,
+        "middle": 21,
+        "bottom": 16.3
+      },
+      "by_age_band_pct": {
+        "18_29": 12,
+        "30_49": 23,
+        "50_64": 33,
+        "65_plus": 14
+      },
+      "pediatric_under_18_on_drug_pct": 1.3,
+      "cycled_off_and_on_pct": 40,
+      "note": "FICTIONAL. One-line reconciliation: ever 30.0% − current 21.1% = 8.9% of adults used and are off now. New ever-users since 2030 add 3.5 pts, of whom 3.0 are on and 0.5 are off. Of the 26.5 pts who had used by 2030, 18.1 are on and 8.4 are off. Inside the 2030 cohort, 11.0 of the 18.8 then on stayed on (58.5% two-year persistence, below the parent's because employer retreat forced coverage stops). The other 7.8 stopped and joined the 7.7 already off, a pool of 15.5. Of that pool, 7.1 restarted (46% over two years, below the parent's 55% because more stops were coverage-driven, though cheaper cash prices pulled many back). 11.0 + 7.1 = 18.1 on; 15.5 − 7.1 = 8.4 off. Cycled: the parent's 8.9 pts plus ~3.0 pts of first-time restarters gives 11.9 of 30.0 ever-users = 40%. Current users are ~56.8M of ~269M adults. Age bands weighted by adult shares (20/33/24/23%): 2.4 + 7.6 + 7.9 + 3.2 = 21.1. Income thirds: (26 + 21 + 16.3)/3 = 21.1. The top third has nearly saturated among the clinically eligible. Middle-third gains come from cheaper cash channels, which offset employer drops. Bottom-third gains come from the HRSA FQHC obesity tier and the gray market. Off-drug population: ~23.9M adults who used and stopped, many of them employer-dropped middle earners now cycling between cash months and pauses, plus ~188M who never used. The never-used include a growing group of deliberate refusers, who are now asked to explain themselves, and uninsured adults outside FQHC catchments. Pediatric: 1.3% of ~73M under-18s ≈ 950k, of whom ≈260k are aged 6–11 (≈150k liraglutide, ≈110k semaglutide since the May 2031 label). Payers for children: Medicaid/CHIP ≈450k, commercial ≈200k, HRSA ≈250k, cash ≈50k. The oldest adolescent cohort has about nine years of exposure."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "The Medicare GLP-1 Bridge was renewed in Dec 2031 through 2033 at a negotiated $230/month (down from $275), with the $50 copay, unchanged criteria and the DEXA/strength counselling visit for 65+. About 2.8M beneficiaries use it for obesity: 2.8M × $230 × 12 ≈ $7.7B/yr. Medicare overall pays 16% of adult incretin fills ≈ 9.1M users (8.66M adults 65+ plus ~0.45M disabled under-65). Medicaid pays 11% ≈ 6.25M adult users at $230: 6.25M × $230 × 12 ≈ $17.3B/yr, federal and state combined, plus ≈450k children under Medicaid/CHIP. The Indiana and Arkansas adherence waivers are unchanged. HRSA Community Incretin Access Program, FY2032 appropriation $6.2B: free generic liraglutide for 2.6M (2.35M adults + 0.25M children) × $70 contract × 12 = $2.18B. Free semaglutide for 2.2M adults × $149 contract × 12 = $3.93B. The semaglutide figure covers 1.2M through cessation/AUD channels plus a new 1.0M FQHC obesity tier for adults ≤250% FPL whose coverage excludes weight drugs. Total ≈ $6.11B against $6.2B.",
+      "employer_coverage_pct": 48,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 90+ semaglutide brands at $6–40/month and its first generic tirzepatide launches. Generic semaglutide is sold across Canada, Brazil, Mexico, Turkey, China and most of the EU's eastern markets. US semaglutide exclusivity is now in its last months. Paragraph IV settlements set first US entry dates in 2033, so no US generic exists at end-2032.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Payer mix of ~56.8M adult users: commercial 30% (17.0M), Medicare 16% (9.1M), Medicaid 11% (6.25M), HRSA free 8% (4.55M adults), cash/direct 19% (10.8M), gray 16% (9.1M) = 100%. Commercial users fell from 17.8M to 17.0M while the user base grew. The surviving commercial fills sit on cardiometabolic codes (T2D, established CVD, OSA, MASH, CKD) or on the cessation mandate and AUD parity. Pure-obesity commercial coverage is now a minority benefit. Managed decline: the Dec 2031 CMS/TrumpRx/manufacturer package set direct cash at $149 (oral starting doses, Wegovy pill and Foundayo), $229 (semaglutide injection), $279 (tirzepatide) and $299 (retatrutide, all doses, from Mar 2032 when allocation ended). Wegovy list stays $1,349 and retatrutide list $1,499; almost no one pays either. Gray prices: 503A 'personalised' semaglutide $99–179, Indian mail pens $6–40 plus shipping, research retatrutide vials $90–180. Gray volume is flat in absolute terms: cheaper branded cash pulls some users out while employer drops push others in. The 2.5–3M 'focus' subscribers sit inside cash (~2M) and gray (~0.8M)."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. high-dose 30% label, Mar 2032)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, Aug 2031, hepatic monitoring)",
+        "GLP-1 agonist / GIPR antagonist antibody, monthly injectable (maridebart cafraglutide, approved Jun 2032, limited launch)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. US generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide 2031)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, Apr 2029; semaglutide, May 2031)",
+        "smoking cessation adjunct (semaglutide, Mar 2029)",
+        "alcohol use disorder (semaglutide, Jun 2030)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm', 'focus' and 'craving-free' low-dose oral subscriptions for people without obesity, now ~2.5–3M users, the $149 oral price setting the floor",
+        "'metabolic health' / longevity regimens with DEXA and strength coaching, concentrated in the top income third",
+        "tirzepatide in ages 6–11 under pediatric endocrinology (only liraglutide and semaglutide are labelled)",
+        "gambling and cannabis reduction, cited in a 2032 pilot RCT but still unlabelled",
+        "research-peptide retatrutide in gyms, declining since branded retatrutide reached $299 cash"
+      ],
+      "pipeline_note": "FICTIONAL. The triple_agonist_30pct driver is realised as a new form of an existing product, not a new molecule. FDA approved a high-dose retatrutide maintenance label (Mar 2032) on a 30.4% mean loss at 80 weeks in the TRIUMPH extension, ended supply allocation, and Lilly set a $299 direct price. No other triple agonist is under US review. Survodutide, resubmitted after its 2029 CRL, was approved in Aug 2031 for obesity and MASH with liver-enzyme monitoring. MariTide (BLA filed Jul 2030) was approved in Jun 2032; it launched in Q4 with constrained autoinjector supply, list $1,299, no cash-portal price yet, and under 0.2M users. Amycretin was resubmitted in 2031 after Novo's facility remediation; its PDUFA date is Feb 2033 and it is not on the market. Bimagrumab combinations were filed in Oct 2032, so approval is no earlier than late 2033. The incretin market is ≈$140B: US volume rose ~13% and US net prices fell ~15–20%, leaving US revenue roughly flat while ex-US volume grows on generics."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. High-dose retatrutide titration produces a fresh wave of first-month GI stops. Gray users who escalate without guidance still report the highest rates.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and intestinal obstruction (mass tort)",
+        "status": "established",
+        "prevalence_note": "Delayed gastric emptying on drug is established; persistence after discontinuation is still disputed. MDL 3094 holds ~55,000 filed and tolled claims. The second bellwether (Feb 2031) went for the defence and the third (Jan 2032) for the plaintiff. Global settlement talks are under a court-appointed mediator, with no deal by end-2032.",
+        "regulatory_response": "Ileus labelled. FDA still declines to add persistent gastroparesis. Reserves were raised in both manufacturers' 2031 annual reports."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Absolute cases are rising with high-dose retatrutide and faster loss; relative risk is unchanged.",
+        "regulatory_response": "Labelled; high-dose retatrutide label repeats the warning."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Ten-year cohort data still show no causal confirmation and low absolute risk. Claims inside the MDL grew to ~8,000 regardless.",
+        "regulatory_response": "Labelled; consolidated in MDL 3094."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Remains a population problem in 65+. Concern now also attaches to high-dose retatrutide users who lose 30% without training. Unmonitored, low-protein, low-income users remain the most affected.",
+        "regulatory_response": "Class label stands. The Bridge counselling visit is retained. HRSA's FQHC obesity tier added a one-time nutrition visit but no body-composition measurement."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "HR ~1.3–1.4 in 65+ long-term and cycling users, concentrated in women; unchanged. The pediatric registry's first interim report (2032) found no bone-accrual difference at 2 years but is acknowledged to be underpowered.",
+        "regulatory_response": "DEXA recommended for 65+ and postmenopausal women. The semaglutide 6–11 label carries the same registry and bone-accrual requirement as liraglutide."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare'; FDA warnings mention unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening",
+        "status": "emerging",
+        "prevalence_note": "The validated retatrutide postmarketing anhedonia data (2031) showed small, dose-dependent mean shifts on SHAPS, below clinical thresholds, plus a 6–9% subgroup with clinically meaningful change. Surveys still put reduced pleasure at ~10–15% of long-term users. No new signal; interpretation contested.",
+        "regulatory_response": "No label change. FTC consent orders (2031) with three telehealth brands over 'clinically proven calm' claims; FDA reiterates that non-manufacturer wellness promotion sits outside labelling authority."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Structural stops now come mostly from employer coverage terminations in 2031–32, plus the 2×90-day cessation cap and waiver lockouts.",
+        "regulatory_response": "Indiana waiver litigation ongoing; no federal rule."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein signals persist in older and low-income users and are now noted by school nurses in children on drug.",
+        "regulatory_response": "Professional guidance; AAP 2032 nutrition statement for pediatric users."
+      },
+      {
+        "effect": "Long-horizon, adolescent, pediatric and cycling effects",
+        "status": "emerging",
+        "prevalence_note": "About ten years of adult and nine years of adolescent follow-up. ~260k children aged 6–11 on drug. No pubertal-timing data beyond trial length.",
+        "regulatory_response": "Postmarketing requirements; pediatric registry expanded to semaglutide."
+      },
+      {
+        "effect": "Compounded, counterfeit and research-peptide harms",
+        "status": "established",
+        "prevalence_note": "Poison-centre incretin calls plateaued in 2031–32 at the 2030 level. Research-retatrutide calls fell after branded allocation ended; compounded-vial dosing errors did not.",
+        "regulatory_response": "Warning letters continue; two state AG actions against 503A telehealth chains; still no prosecution of individuals."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher at the high-dose label.",
+        "regulatory_response": "Labelled."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "US snack, confectionery and sugary-drink volumes fall another ~4–6% over two years. The decline is slower than 2028–30 because uptake growth slowed, and it is now treated as structural. Majors report 'incretin-adjusted' volume guidance. School food-service contractors rewrite portion specs for districts with high pediatric uptake. Protein, fibre and children's 'small-appetite' nutrition lines grow.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Spirits and beer volumes decline again but more slowly as the AUD-eligible heavy-drinker pool is largely already treated. Non-alcoholic and premium single-serve formats hold. State excise forecasts now carry an incretin line.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Chains complete their menu re-engineering to smaller plates and protein add-ons. Value buffets keep closing in mid-income suburbs; fine dining is steady. Alcohol attach rates have stabilised at the lower level.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "High-dose retatrutide creates a market for rapid-resize subscriptions and tailoring. Plus-size shrinks further, and children's sizing guidance is revised by two major retailers.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength-and-DEXA studios keep growing. A new category is 'retatrutide onboarding' programmes, sold by gyms to offset muscle loss at 30% losses. Gym-floor peptide sales shrink as branded becomes cheaper.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight-management coverage falls from 57% to 48% as plans move to PBM 'cardiometabolic-code' formularies. Pharmacy trend eases to ~+7% from price cuts and exclusions. Cessation and AUD benefits remain mandated and adherence-gated. Brokers sell standalone 'weight benefit' riders that few small firms buy.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Volume grows while US net price falls. Lilly gains share with retatrutide at $299. Novo is stabilised but still waiting on amycretin. Boehringer (survodutide) and Amgen (MariTide) are new entrants with small share. Generic liraglutide contractors expand on the HRSA renewal. Generic makers prepare US semaglutide launches for 2033.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug is unremarkable, so a heavier adult body now draws the question instead: why aren't you? The answers people give sort into a few kinds: 'my plan dropped it', 'I'm between courses', 'I tried it and hated it', or, less often, 'I don't want to'. The finish still marks class. Thirty-percent losses on retatrutide without training produce a recognisable loose-skin, low-muscle look that dermatology clinics now market against.",
+      "thinness_and_class": "Charlotte's 'build' has spread into mid-level corporate staff via $299 cash retatrutide, but the DEXA and coach still separate tiers. Middle earners in employer-dropped plans, such as warehouse supervisors, school staff and regional bank tellers, cycle between cash months and pauses, and their weight shows it. In Memphis, the Shelby County FQHC network's obesity tier enrolled ~38,000 adults in its first year, disproportionately Black women aged 40–64, mostly on semaglutide without any muscle monitoring.",
+      "eating_as_ritual": "Smaller meals are the default. Memphis–Shelby County Schools and several Texas districts adopted 'appetite-tiered' lunch trays after cafeteria staff reported children on liraglutide and semaglutide leaving most of the food. Holiday meals are planned around whose dose day it is.",
+      "dating_and_intimacy": "Profiles list the molecule as a matter of course, and being off is the line people explain. 'Reta 16' is a new shorthand for the high dose. Couples where one partner lost 30% fast report the same adjustment strains as bariatric surgery couples did.",
+      "meaning_of_appetite": "An unmedicated appetite reads less as character and more as a coverage status. Clinicians now document refusals under the new NCQA measure, so declining the drug leaves a record in a person's chart.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL. Reduced-pleasure reports hold at ~10–15% of long-term users; the 2031 retatrutide SHAPS data show small mean shifts and a 6–9% clinically meaningful subgroup. 'Focus' subscriptions grew from 1.5–2M to ~2.5–3M adults, helped by the $149 oral floor and by brands reselling cheaper Foundayo. About 2M are cash and ~0.8M gray; all are counted inside the payer mix.",
+      "framing": "Still a product feature: 'quiet', 'focus', 'the off switch'. After the 2031 FTC consent orders, brands dropped 'clinically proven' and now say 'members report'. Clinicians say 'reward modulation'. Users who dislike it say 'the grey', and the high-dose retatrutide forums have coined 'reta flat'.",
+      "effect_on_work": "Paradox of the employer retreat: firms that dropped weight coverage kept or added 'focus' subscriptions as a $149 perk in call centres, claims processing and logistics dispatch, because it is cheaper and reads as wellness rather than medical. Unions in two more contracts won bans on employer access to perk-subscription data. DOT apnea clearance still runs through tirzepatide. Sales staff still dose down before pitches.",
+      "effect_on_art_and_play": "'Off-dose' billing has lost novelty as a selling point. Now that being off needs explaining, unmedicated performers are read as making a statement rather than an aesthetic choice. Sports-betting handle growth stays below pre-2028 trend in high-uptake states. Children's birthday parties have quietly dropped the cake-centred format in some suburbs.",
+      "effect_on_intimacy": "Sex therapists ask about dose and about subscriptions. Partners of 'focus' subscribers describe calm and distance in the same sentence. Dose holidays remain a standard joke and a real practice.",
+      "effect_on_politics": "HRSA renewal passed with bipartisan rural and urban votes, and its opponents still call it 'pacification pills'. No measured turnout or mood effect. The live political fights are employer retreat ('they took our shots') in Midwestern House races and pediatric prescribing in school-board meetings. Candidates are asked whether they are on, and those who are off are asked why.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-access on indications (semaglutide 6–11, high-dose retatrutide) and on price, via the managed CMS/TrumpRx package. On safety it remains cautious but not alarmed: survodutide approved with liver monitoring, amycretin still pending. The FTC polices 'focus' marketing through consent orders, and the FDA stays out. Gray-market enforcement stays selective.",
+      "subsidy_or_mandate": "HRSA programme renewed and expanded to $6.2B for FY2032, adding a free semaglutide obesity tier at FQHCs for adults ≤250% FPL whose coverage excludes weight drugs. It is still discretionary and renewed annually. The Medicare Bridge was renewed at $230/$50 through 2033. The ACA cessation mandate and AUD parity are intact. There is no mandate to take the drug, but NCQA's 2032 quality measure requires clinicians to document that pharmacotherapy was offered.",
+      "conditioning_or_surveillance": "The Indiana and Arkansas waivers are unchanged. Of the three states that applied, Tennessee was approved in 2031 on the same ≥80% PDC and weigh-in terms. HRSA sites still require only refill pickup, which keeps the two-tier conditioning system that plaintiffs cite. The NCQA measure creates a chart-level record of refusal.",
+      "workforce_or_military": "DOT apnea pathway unchanged. The Army's recruit policy is unchanged and contested. The VA continues semaglutide for AUD and added high-dose retatrutide to its formulary with DEXA criteria.",
+      "geopolitics_of_supply": "Section 232 tariffs remain, but the Dec 2031 price package traded tariff exemptions for onshored fill-finish commitments by Lilly and Novo. India's generic semaglutide and early generic tirzepatide exports are a standing trade item, and Indian API still feeds US 503A compounders.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-01",
+        "event": "The three largest PBMs make 'cardiometabolic-code' formularies their standard commercial offering, covering incretins only with T2D, CVD, OSA, MASH or CKD diagnoses; the 2031 employer benefits survey shows weight-management coverage falling to 49%, and 48% by 2032",
+        "driver": "coverage_shift: employer_retreat"
+      },
+      {
+        "date": "2031-05",
+        "event": "FDA approves semaglutide (Wegovy) for obesity in children aged 6–11, extending the liraglutide-era pediatric registry and bone-accrual requirement to it",
+        "driver": "new_indications: pediatric_under_12"
+      },
+      {
+        "date": "2031-10",
+        "event": "FY2032 appropriations raise the HRSA Community Incretin Access Program to $6.2B and add a free semaglutide obesity tier at FQHCs for low-income adults whose coverage excludes weight drugs",
+        "driver": "state_action: subsidy"
+      },
+      {
+        "date": "2031-12",
+        "event": "CMS, the TrumpRx portal and manufacturers announce a price package: Medicare Bridge renewed through 2033 at $230/month with a $50 copay, and direct cash prices cut to $149 (oral), $229 (semaglutide) and $279 (tirzepatide), in exchange for tariff exemptions tied to onshore fill-finish",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2032-01",
+        "event": "NCQA's new quality measure takes effect, requiring primary-care practices to document that anti-obesity pharmacotherapy was offered to adults with BMI ≥30; patient refusals are now coded in the chart",
+        "driver": "cultural_response: normalisation"
+      },
+      {
+        "date": "2032-03",
+        "event": "FDA approves a high-dose retatrutide maintenance label on a 30.4% mean weight loss; Lilly ends supply allocation and sets a $299 direct price for all doses",
+        "driver": "next_gen_launch: triple_agonist_30pct"
+      }
+    ],
+    "open_tensions": [
+      "Employers retreated from weight coverage while the state expanded free provision. Middle earners now cycle between $229–299 cash months and pauses, which yields the structural stop-start pattern the bone and regain labels warn about. They fall between employer coverage and the ≤250% FPL subsidy.",
+      "US semaglutide generics are due in 2033 under the Paragraph IV settlements. That will reprice HRSA contracts, the Bridge and the gray market at once, and could hollow out the managed-decline bargain that onshoring commitments were traded for.",
+      "About 260k children aged 6–11 are on drug, and the only bone-accrual data is one underpowered two-year interim. School cafeterias and pediatric practices are already reorganising around the drug before the evidence arrives.",
+      "Blunting is a marketed perk for ~2.5–3M people without obesity, and a 6–9% subgroup in the retatrutide data shows clinically meaningful anhedonia. No regulator owns the question, and the MDL mediator is pricing harms that the science still calls suspected."
+    ],
+    "still_true": [
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Retatrutide still lists at $1,499 a month and carries its bone and body-composition monitoring section.",
+      "Indiana's and Arkansas's 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with a 12-month lockout after two misses, and the disability-rights challenge is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "No FDA-approved generic semaglutide or tirzepatide is sold in the US, and the Medicare Bridge copay is still $50 a month."
+    ]
+  },
+  "prose": {
+    "headline": "Why Aren't You On It? The Year Your Doctor Started Writing Down the Answer",
+    "world_in_600_words": "At the end of 2032 about fifty-seven million American adults take an incretin drug, a little over one in five. The number grew more slowly than in the two years before, and the reason is the people who stopped. Most of them did not quit the drug. Their employer stopped paying for it. In January 2031 the three big pharmacy benefit managers made 'cardiometabolic-code' formularies their standard product. Under them the drug is covered if you have diabetes, heart disease, sleep apnea, a fatty liver or failing kidneys. It is not covered if you are simply heavy. By 2032 fewer than half of employers cover weight management at all.\n\nWhat kept the totals rising was price and the state. In December 2031 Washington and the manufacturers agreed a package. Tariff relief was traded for American fill-finish plants. Cash prices stepped down to $149 for the starter pill, $229 for semaglutide and $279 for tirzepatide. The Medicare Bridge was renewed at $230 a month, with the $50 copay unchanged. Wegovy's list price is still $1,349, a number that now appears mostly in court filings. The federal programme that hands out free drugs at community health centres grew to $6.2 billion. It now gives semaglutide to low-income adults whose insurance refuses to cover it. In Memphis, the county clinic network enrolled thirty-eight thousand adults in a year, most of them Black women in middle age. None of them get a muscle scan.\n\nIn March 2032 retatrutide got a high-dose label on a mean loss of thirty percent, roughly what bariatric surgery achieves. Lilly ended rationing and priced it at $299. The look of the Charlotte bank floor has moved down the org chart, though the coach and the quarterly scan still mark who is senior. Dermatologists have started advertising to people who lost a third of their weight without lifting anything.\n\nThe middle of the country is where the stopping and starting happens. A school secretary, a warehouse lead or a bank teller in a dropped plan earns too much for the clinic and too little to pay $279 every month without thinking about it. They take three cash months, pause, regain and start again. Four in ten people who have ever used the drug have now cycled. The fracture labels were written with this pattern in mind.\n\nChildren are part of it now. Semaglutide joined liraglutide for six-to-eleven-year-olds in May 2031, and about a quarter of a million children under twelve take one or the other. The pediatric registry's first look found nothing wrong with their bones at two years, and its authors said the study was too small to be sure. Memphis schools, and several districts in Texas, now serve lunch trays in sizes, because cafeteria workers were throwing away too much food.\n\nNo new safety alarm arrived. The ledger holds: bone and muscle loss are established, pancreatitis is suspected, and fifty-five thousand claims are in mediation in Philadelphia. The long-awaited retatrutide pleasure data came in small and ambiguous. On average users moved a little. A minority moved enough to matter. Wellness brands read the results and kept selling 'quiet' to nearly three million people who were never heavy. They stopped saying 'clinically proven' after the FTC orders. Some employers who dropped weight coverage pay for those subscriptions anyway, because they cost less and sound like a perk.\n\nThe largest change is in how people talk. Since January, primary-care practices have had to record that they offered the drug. A refusal goes into the chart as a code. Being on it has become ordinary, and being off it is something people now explain to their doctor, their date, their sister and sometimes their supervisor. The usual explanations are 'my plan dropped it', 'I'm between courses', 'I tried it' and, less often, 'I'd rather not'. Generic semaglutide is due next year, and everyone with a contract is waiting to see what it costs.",
+    "a_day_in_the_life": "Denise Harlan sets the alarm for 5:10 so she can do Malik's pen before the bus. He is ten. He holds out his thigh like he's done it a thousand times, and he has. The liraglutide comes free from the clinic on Lamar, along with her own Thursday semaglutide. She picks both up on the same counter, and nobody weighs her.\n\nAt Westhaven Elementary she runs the cafeteria. The trays come in three sizes now: green, yellow and the small blue one. The district calls it appetite-tiered. The kids call the blue one the shot tray. By noon the green trays come back half full anyway.\n\nHer assistant, Rochelle, is off. The school board's plan dropped weight drugs in 2031, and Rochelle made sixteen dollars too much for the clinic. She did three cash months at $229 in the spring, then stopped when her car needed brakes. 'I'm between,' she says, wiping the line, the way you'd say you're between apartments.\n\nAfter work Denise has a primary-care visit for her blood pressure. The nurse practitioner asks about Malik's growth, checks the box that says the medication was offered to Denise, and sees it's already active. She doesn't ask about the gray days. Denise doesn't mention them.\n\nAt dinner Malik eats four bites of chicken and wants to go outside. Her mother, who refuses the drug and says so, eats a full plate on purpose and watches them both.\n\n'Somebody's got to finish the food in this house,' she says. Nobody laughs. Nobody argues either."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r10-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "$299 (retatrutide, all doses, from Mar 2032 when allocation ended)",
+          "field": "world/access/note",
+          "why": "mechanism: the strongest agent, with a 30% label and a $1,499 list price, drops to a cash price barely above tirzepatide's $279 in one step. The only cause given is the Dec 2031 package, which is thin for a product that was allocated and had no cash price in 2030."
+        },
+        {
+          "quote": "Survodutide, resubmitted after its 2029 CRL, was approved in Aug 2031 for obesity and MASH with liver-enzyme monitoring.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the parent's CRL concerned hepatic-signal questions and manufacturing data. The candidate resolves it with no data, remediation or review step shown, even though a sceptic would expect a hepatic concern to take longer. The timing is allowed by the envelope but unexplained."
+        },
+        {
+          "quote": "In Memphis, the Shelby County FQHC network's obesity tier enrolled ~38,000 adults in its first year",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "magnitude: the national FQHC obesity tier is 1.0M adults, so one county network would hold about 3.8% of it. The tier only began with FY2032 funding in Oct 2031, so this local enrolment is a convenient, unreconciled figure."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder 2030. Employer retreat pushes middle earners into cash-and-pause cycling (cycled share 34% to 40%), which the bone and regain labels warn about. Autonomy worsens through the NCQA refusal coding, the added Tennessee waiver and the 'explain yourself' culture. Inequality persists through unmonitored free semaglutide in the bottom third versus coached retatrutide, and about 260k children aged 6–11 are on drug with only an underpowered bone interim. Harms are measured and discussed (SHAPS data, MDL), which keeps epistemic badness moderate, and prices fall, which keeps overall badness from rising further.",
+        "plausibility": "driver_fidelity: all drivers are visible in dated events and fields: the employer retreat (57 to 48%), managed decline (Dec 2031 package), semaglutide 6–11 (May 2031), the high-dose retatrutide label (Mar 2032), HRSA subsidy ($6.2B), NCQA normalisation and the marketed 'focus' layer. The 6–9% anhedonia subgroup sits close to a safety signal but is framed as no new signal. mechanism: chains are mostly shown (PBM formularies to commercial drops to cycling; the price package for tariff relief), but the $299 retatrutide price, the survodutide approval and the Memphis enrolment figure are asserted or convenient (claims 1–3). magnitude: the figures all sit in the envelope (21.1% on, 30.0% ever). The reconciliations check out: 3.0+18.1=21.1, 8.4+0.5=8.9, the age and income averages, payer shares summing to 100%, Medicare 9.1M, Medicaid $17.3B, HRSA $6.11B vs $6.2B, and pediatric payers 950k. Approvals fit the rules (MariTide 23 months after filing, no US generic). Only the Memphis share and the slightly loose cycled-share arithmetic are minor gaps.",
+        "generativity": "The prose follows Denise, Malik, Rochelle and her mother through a school-cafeteria day with tiered trays, 'the shot tray', 'I'm between' and the chart box. It shows the refusal coding rather than explaining it. The world fields add Charlotte's 'build', 'reta flat', and the Memphis and Texas school districts. Dense and filmable."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s3-L1-r10-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Memphis–Shelby County Schools and several Texas districts adopted 'appetite-tiered' lunch trays after cafeteria staff reported children on liraglutide and semaglutide leaving most of the food.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: only about 1% of children (~260k aged 6–11) are on drug, and school meals follow federal portion rules. The candidate shows no chain from that small share to district-wide tiered trays within two years."
+        },
+        {
+          "quote": "plus a new 1.0M FQHC obesity tier for adults ≤250% FPL whose coverage excludes weight drugs",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: 1.0M new free-semaglutide adults are enrolled within about 14 months of the Oct 2031 appropriation. The only supporting evidence is one county network with ~38,000 enrolled, and no FQHC capacity ramp is shown."
+        },
+        {
+          "quote": "FDA approves a high-dose retatrutide maintenance label on a 30.4% mean weight loss; Lilly ends supply allocation and sets a $299 direct price for all doses",
+          "field": "world/events/5/event",
+          "why": "Mechanism: the scarcest, allocated product ($1,499 list, no cash price in 2030) becomes freely available at tirzepatide-like cash prices within two years. No manufacturing scale-up is shown, and there is no explanation of why the best drug is priced at only a $20 premium."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Employer retreat pushes middle earners into stop-start cash cycling, which the bone and regain ledger entries flag as harmful. NCQA refusal-charting and the Tennessee waiver tighten pressure on autonomy, and the Memphis FQHC cohort is on unmonitored semaglutide. The rest is a harder 2030, not collapse: 260k children on drug with only an underpowered bone interim, and class stratification by finish and by coverage status. Harm is largely nameable and measured, so epistemic and cohesion sit mid-scale.",
+        "plausibility": "driver_fidelity: All ten drivers are traceable to events or fields: employer coverage 57→48, the Dec 2031 managed-decline price package, the May 2031 semaglutide 6–11 label, the HRSA expansion, NCQA normalisation, retatrutide high-dose realised as a label on an existing product, and blunting still marketed. The one tension with safety_signal 'none' is the 6–9% clinically meaningful anhedonia subgroup and the third plaintiff verdict, though both are framed as no new signal. mechanism: Most chains are shown (PBM formularies to commercial drops to cash cycling; price cuts to cash growth), but the school-tray claim, the near-instant 1.0M FQHC obesity tier and the $299 retatrutide with ended allocation are asserted without capacity or cost chains. magnitude: On-drug 21.1, ever-used 30.0 and cycled 40% all sit in the envelope. The 18.1/8.4 split, the payer shares summing to 100%, the $7.7B/$17.3B/$6.11B arithmetic, the pediatric payer split and the approval timings all reconcile, so the only strain is the fast HRSA tier ramp.",
+        "generativity": "The prose gives Denise, Malik, Rochelle and her mother, and supplies concrete texture: the 'shot tray', the 5:10 pen, 'I'm between', the chart box for 'offered' and the unspoken gray days. The world fields add Charlotte and Memphis, 'reta flat' and 'Reta 16', and dermatology ads aimed at loose-skin looks. Many scenes are implied, though some items (birthday parties, trays) are listed rather than shown."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s3-L1-r10-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA approves a high-dose retatrutide maintenance label on a 30.4% mean weight loss; Lilly ends supply allocation and sets a $299 direct price for all doses",
+          "field": "world/events/5/event",
+          "why": "Mechanism and magnitude: the best-efficacy drug is priced only $20 above tirzepatide ($279), and allocation ends within about two years with no capacity or manufacturing chain. The onshoring trade does not explain supply for a drug that was previously rationed."
+        },
+        {
+          "quote": "In Memphis, the Shelby County FQHC network's obesity tier enrolled ~38,000 adults in its first year, disproportionately Black women aged 40–64, mostly on semaglutide without any muscle monitoring.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Mechanism: the tier was created in the FY2032 appropriations in Oct 2031, so a completed first year is barely possible by end-2032. One county network would hold about 3.8% of the national 1.0M-slot tier, which is a convenient, very fast ramp."
+        },
+        {
+          "quote": "NCQA's new quality measure takes effect, requiring primary-care practices to document that anti-obesity pharmacotherapy was offered to adults with BMI ≥30; patient refusals are now coded in the chart",
+          "field": "world/events/4/event",
+          "why": "Mechanism: a voluntary quality-measure documentation requirement is asserted to produce chart-level refusal coding and a society-wide 'why aren't you on it' norm within months. The causal chain from measure to behaviour is not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder version of 2030. Coverage-driven stop-start cycling hits 40% of ever-users, bone and muscle harms continue unmonitored in the subsidised tier, and about 260k children aged 6–11 are on drug with only an underpowered bone interim. Refusal is now charted (NCQA), 'focus' subscriptions reach ~3M people without obesity, and the middle third is squeezed between employer retreat and the ≤250% FPL subsidy. Measurement improves (SHAPS data), which keeps epistemic badness moderate, and the harms are chronic rather than catastrophic.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption is +2.3pp, managed-decline pricing is in the Dec 2031 package, employer retreat runs 57→48%, pediatric semaglutide 6–11 is approved, the 30% retatrutide label appears, and subsidy and normalisation are both realised. The 6–9% anhedonia subgroup and school-nurse micronutrient notes sit slightly awkwardly against 'safety_signal: none', and the survodutide and MariTide approvals are extras, but the rules allow them. mechanism: The employer-retreat chain (PBM cardiometabolic-code formularies, then commercial users down, then cash cycling, then HRSA tier) is well shown, and the persistence and restart figures are explained. Weak links are the retatrutide allocation ending at $299 with no supply chain, the fast Memphis tier ramp and the NCQA-to-culture leap (claims 1–3), plus 'US revenue roughly flat' when −15–20% price on +13% volume is closer to −7%. magnitude: Every headline figure sits inside the envelope (21.1% on drug, 30.0% ever). Approvals respect the timing rules (MariTide ≥12 months after the BLA, bimagrumab filing only, no US generic). Payer shares sum to 100%, the ages, income thirds, pediatric payers and HRSA and Medicare/Medicaid dollar arithmetic all reconcile, and the 18.1/8.4 population split closes.",
+        "generativity": "The prose vignette follows Denise, Malik, Rochelle and the three-tier cafeteria trays ('the shot tray'). Concrete scenes such as the 5:10 pen routine, 'I'm between' and the checked-box primary-care visit imply many films. The world fields add texture (Charlotte build, Memphis clinic, 'reta flat', dose-day holidays), though some vignette beats are explained rather than shown."
+      },
+      "plausibility": 8.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "$299 (retatrutide, all doses, from Mar 2032 when allocation ended)",
+        "field": "world/access/note",
+        "why": "mechanism: the strongest agent, with a 30% label and a $1,499 list price, drops to a cash price barely above tirzepatide's $279 in one step. The only cause given is the Dec 2031 package, which is thin for a product that was allocated and had no cash price in 2030."
+      },
+      {
+        "quote": "Survodutide, resubmitted after its 2029 CRL, was approved in Aug 2031 for obesity and MASH with liver-enzyme monitoring.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: the parent's CRL concerned hepatic-signal questions and manufacturing data. The candidate resolves it with no data, remediation or review step shown, even though a sceptic would expect a hepatic concern to take longer. The timing is allowed by the envelope but unexplained."
+      },
+      {
+        "quote": "In Memphis, the Shelby County FQHC network's obesity tier enrolled ~38,000 adults in its first year",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "magnitude: the national FQHC obesity tier is 1.0M adults, so one county network would hold about 3.8% of it. The tier only began with FY2032 funding in Oct 2031, so this local enrolment is a convenient, unreconciled figure."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.5,
+      "inequality": 6.33,
+      "public_health": 5.83,
+      "cohesion": 5.33,
+      "epistemic": 4.83,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 7.0,
+      "magnitude": 8.67
+    },
+    "plausibility": 8.13,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a recognisably harder 2030. Employer retreat pushes middle earners into cash-and-pause cycling (cycled share 34% to 40%), which the bone and regain labels warn about. Autonomy worsens through the NCQA refusal coding, the added Tennessee waiver and the 'explain yourself' culture. Inequality persists through unmonitored free semaglutide in the bottom third versus coached retatrutide, and about 260k children aged 6–11 are on drug with only an underpowered bone interim. Harms are measured and discussed (SHAPS data, MDL), which keeps epistemic badness moderate, and prices fall, which keeps overall badness from rising further.",
+      "plausibility": "driver_fidelity: all drivers are visible in dated events and fields: the employer retreat (57 to 48%), managed decline (Dec 2031 package), semaglutide 6–11 (May 2031), the high-dose retatrutide label (Mar 2032), HRSA subsidy ($6.2B), NCQA normalisation and the marketed 'focus' layer. The 6–9% anhedonia subgroup sits close to a safety signal but is framed as no new signal. mechanism: chains are mostly shown (PBM formularies to commercial drops to cycling; the price package for tariff relief), but the $299 retatrutide price, the survodutide approval and the Memphis enrolment figure are asserted or convenient (claims 1–3). magnitude: the figures all sit in the envelope (21.1% on, 30.0% ever). The reconciliations check out: 3.0+18.1=21.1, 8.4+0.5=8.9, the age and income averages, payer shares summing to 100%, Medicare 9.1M, Medicaid $17.3B, HRSA $6.11B vs $6.2B, and pediatric payers 950k. Approvals fit the rules (MariTide 23 months after filing, no US generic). Only the Memphis share and the slightly loose cycled-share arithmetic are minor gaps.",
+      "generativity": "The prose follows Denise, Malik, Rochelle and her mother through a school-cafeteria day with tiered trays, 'the shot tray', 'I'm between' and the chart box. It shows the refusal coding rather than explaining it. The world fields add Charlotte's 'build', 'reta flat', and the Memphis and Texas school districts. Dense and filmable."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.582,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 13
+  }
+}

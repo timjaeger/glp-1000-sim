@@ -95,7 +95,19 @@ pays for it.
 5. Social cohesion — trust, family, eating as ritual, solidarity
 6. Epistemic health — can people tell what is happening to them; is the harm nameable
 
-Worst means worse *for people*, not more spectacular. The rubric instructs the
+Worst means worse *for people*, not more spectacular.
+
+**Badness reference.** In steps 1–4 (rubric v2) the judge sees the parent world
+and scores badness with the anchors written against it ("3 = a worse version of
+the parent year"), so each step largely measures how much harder life got in its
+two years. In step 5 (rubric v3, `config/sim.json:
+judging.absolute_badness_from_step = 5`) the judge also receives the researched
+2026 baseline and scores badness as the candidate's absolute state against it,
+inherited harm included: the final selection picks the worst 2036, not the
+sharpest last two years. Plausibility is still judged against the parent world
+in every step. Selection only ever compares runs within one step, so the change
+of scale between steps 4 and 5 does not affect any selection; each run's
+`scores.rubric` records which scale it was judged on, and `lineage.md` says so. The rubric instructs the
 judge to penalise melodrama: mass death, collapse and cartoon villains lower
 plausibility and do not raise badness unless the mechanism is shown.
 
@@ -103,6 +115,28 @@ plausibility and do not raise badness unless the mechanism is shown.
 drivers and the parent state with a visible mechanism; are magnitudes in range
 for two years; would an informed skeptic (an endocrinologist, a health economist,
 a food-industry analyst) accept it as a live possibility rather than dismiss it.
+Scored (rubric v2) as three separate sub-axes, each 1–10: **driver fidelity**
+(every stipulated driver honoured, none contradicted), **mechanism** (every
+change has a shown causal chain; no narrative contradictions) and **magnitude**
+(within the stipulated envelope and internally reconciled). The **magnitude
+envelope** (`prompts/envelope.md`) is rendered per run from the parent world
+and the drawn drivers: current use = parent + `adoption_delta_pp` ± 2;
+ever-use rises by at most `adoption_delta_pp` + 3 and never falls; cycling
+reconciled to the ever − current gap; income thirds bracket the national
+figure; approvals follow the parent pipeline (phase 3 no earlier than 12
+months after filing, phase 2 or earlier not on market, no US generic before
+2031 unless `price_path` is `generic_collapse` with the mechanism as an event);
+coverage shares, public spending and subscriber counts reconcile with the
+population and each other. The generator and the judge receive the identical
+text. Magnitude penalises only movement outside the envelope and
+reconciliation failures, never movement the drivers or envelope stipulate. The `plausibility` used by the floor
+and tie-break in §7 is the weighted composite **0.2 × driver fidelity + 0.3 ×
+mechanism + 0.5 × magnitude**, computed in code (`config/sim.json:
+plausibility_weights`). Magnitude carries half the weight because a world can
+honour every driver and still move too far, too fast; §7 also gives it its own
+hard floor. Before scoring, the judge
+must list the three least plausible specific claims in the run, each quoted
+verbatim (the quotes are checked against the run); they are kept in the dossier.
 
 **Generativity (1–10)**: how much film is in this world — characters implied,
 scenes implied, a visible texture of daily life. Used only as a tie-break.
@@ -112,10 +146,21 @@ scenes implied, a visible texture of daily life. Used only as a tie-break.
 - Judge model is a different model from the generator (e.g. generator
   `claude-opus-4-5`, judge `claude-sonnet-4-5` — set in `config/sim.json`;
   check current model IDs before running).
-- The judge sees the parent world, the drawn drivers and the run. It does not
-  see other runs, scores, the step's axis weighting or lineage identity.
-- Judging runs at temperature 0. Optionally `judge_samples: 3` averages three
-  judge calls per run for stability; default 1 to save cost.
+- The judge sees the parent world, the drawn drivers, the magnitude envelope
+  derived from those two (§5) and the run. It does not see other runs, scores,
+  the step's axis weighting or lineage identity.
+- Judging runs at temperature 0 where the model allows it (the configured judge
+  does not; see `config/sim.json: _note_sampling`). `judge_samples: 3` (the
+  setting) averages three judge calls per run for stability: each badness
+  dimension, each plausibility sub-axis and generativity are averaged, and the
+  composite is recomputed from the averaged sub-axes.
+- A judge sample cut off at `max_tokens` (16000) is discarded, never parsed,
+  and re-requested once as the same request. A run is scored from its
+  completed samples only if it has at least `min_completed_samples` (2) of
+  them; samples that were dropped (cut off twice, failed repair, API error)
+  are recorded with the reason. A run with fewer completed samples stays
+  unscored and is excluded from selection: scores are never averaged over
+  partial output.
 - The judge must return a short `rationale` per dimension. These are kept; they
   are part of the dossier and catch judge drift.
 
@@ -134,18 +179,23 @@ than one note struck five times:
 
 Procedure per step:
 
-1. Discard runs with `status != "ok"`.
-2. **Plausibility floor:** discard runs with `plausibility < 6`. If fewer than 3
-   runs survive, lower the floor by 1 and repeat (log it). Never below 4.
-3. Compute `axis_badness` = weighted mean of the six badness dimensions with the
+1. Discard runs with `status != "ok"`, and runs scored without plausibility
+   sub-axes (rubric v1).
+2. **Magnitude floor (hard):** discard runs whose `magnitude` sub-axis is below
+   5. This is applied before the plausibility floor and is never lowered; a
+   discarded run does not count toward the 3 the plausibility floor looks for.
+3. **Plausibility floor:** discard runs with composite `plausibility < 6`. If
+   fewer than 3 runs survive, lower the floor by 1 and repeat (log it). Never
+   below 4.
+4. Compute `axis_badness` = weighted mean of the six badness dimensions with the
    step's weights.
-4. Rank by `axis_badness` desc, tie-break by `plausibility` desc, then
+5. Rank by `axis_badness` desc, tie-break by `plausibility` desc, then
    `generativity` desc.
-5. **Diversity guard:** the 3 survivors must not all share the same parent
+6. **Diversity guard:** the 3 survivors must not all share the same parent
    lineage unless only one lineage has survivors; and no two survivors may have
    identical `price_path` + `cultural_response` + `personality_layer`. Walk down
    the ranking until the constraint is satisfied.
-6. Write each survivor's world state to `world/stepN.json` keyed by a new
+7. Write each survivor's world state to `world/stepN.json` keyed by a new
    lineage id (`L1`, `L2`, `L3`, with parent recorded) and append the selection,
    with scores and the runner-up, to `lineage.md`.
 
@@ -166,10 +216,24 @@ the people who never could afford it, and the children who grew up inside it.
 
 ## 9. Cost
 
-Rough per-step budget at 50 runs: generation ~50 × (6k in + 3k out) tokens;
-judging ~50 × (8k in + 1k out). On the Batch API with current pricing that is
-single-digit dollars per step, well under $50 for the whole run. The cost
-guardrail in `config/sim.json` is a ceiling, not a target.
+Every batch ever submitted is recorded in `runs/spend_ledger.json`: step, kind,
+batch id, the worst-case estimate printed before sending, and the actual cost
+from the usage the API reports. The ledger is cumulative and complete: pilots
+and failed attempts stay in it even after their run files are cleared. Two caps
+in `config/sim.json`, checked before every batch (main and repair) is sent:
+
+- `max_usd_per_submission` ($25): the worst-case estimate of the batch about
+  to be sent. History does not count against it.
+- `max_usd_total` ($150): the ledger's cumulative recorded spend (actual where
+  collected, estimate otherwise) plus that estimate.
+
+Either breach aborts the submission unless `--yes`. The estimate is a ceiling
+(every request at `max_tokens`, thinking billed as output), so actual spend
+runs well below it. Measured in the step-1 pilots (Opus 5.5 generation at
+`max_tokens` 32000, Sonnet 5.5 judging): roughly $0.15–0.30 per generated run
+and $0.04 per judge sample, so a 50-run step judged ×3 is on the order of
+$15–20 actual against a ~$17 generation and ~$8 judging worst case. The caps
+are a ceiling, not a target.
 
 ## 10. Output
 

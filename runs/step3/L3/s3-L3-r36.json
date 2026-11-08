@@ -1,0 +1,542 @@
+{
+  "run_id": "s3-L3-r36",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L3",
+  "seed": 20261107,
+  "run_index": 36,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": -0.3,
+    "price_path": "stalled",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [],
+    "safety_signal": "none",
+    "next_gen_launch": "muscle_preserving_combo",
+    "market_shock": "generic_flood_counterfeits",
+    "cultural_response": "backlash_body_politics",
+    "state_action": "none",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L3-r36",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17662,
+        "output_tokens": 15678
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L3-r36",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 28004,
+        "output_tokens": 12410
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r36-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26279,
+        "output_tokens": 4904
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r36-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26279,
+        "output_tokens": 4775
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r36-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26279,
+        "output_tokens": 4881
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US; generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates: oral Wegovy starting doses are still $149 a month and Wegovy pill maintenance is still $249, the price set in May 2029.",
+      "The Medicare GLP-1 Bridge pilot has not been revived, Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk (with established CVD) codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 17.3,
+      "us_adults_ever_used_pct": 27.6,
+      "by_income_third_pct": {
+        "top": 23,
+        "middle": 17.5,
+        "bottom": 11.4
+      },
+      "by_age_band_pct": {
+        "18_29": 9.5,
+        "30_49": 17,
+        "50_64": 26.5,
+        "65_plus": 14.8
+      },
+      "pediatric_under_18_on_drug_pct": 1.1,
+      "cycled_off_and_on_pct": 43,
+      "note": "FICTIONAL. Arithmetic: 27.6% ever-used − 17.3% current = 10.3% of adults have used the drugs and are off now (up from 7.9%). Cyclers = 43% × 27.6 ≈ 11.8 points: ~9.5 points are current users on at least a second course (~55% of current users, up from ~53% as cash and gray-market users stop and restart) and ~2.3 points cycled and are off again. The other ~8.0 points stopped once and have not restarted. That matches one-year persistence near one-third, with 36–47% restarting within a year, applied to a cohort where new starts slowed (ever-used +2.1 points in two years, against +2.7 allowed). Age check: 0.20×9.5 + 0.33×17 + 0.24×26.5 + 0.23×14.8 = 1.90+5.61+6.36+3.40 ≈ 17.3. Income thirds average (23+17.5+11.4)/3 ≈ 17.3. Users: 17.3% × ~270M adults ≈ 46.7M (down from ~47M). FICTIONAL payer mix: commercial ~26% (~12.1M, down from ~13.6M as employers leave), Medicare ~22% (~10.3M, mostly ageing-in plus dementia-risk-with-CVD PA, ~1.8M), Medicaid ~7% (~3.3M), legitimate cash (TrumpRx/direct) ~30% (~14.0M), imported or counterfeit ~15% (~7.0M, up from ~5.2M). Sum 12.1+10.3+3.3+14.0+7.0 = 46.7M. The 18–29 band fell (10 → 9.5) because the backlash is strongest among young women and the young are least covered. The bottom third fell (12 → 11.4) even though gray-market use grew, because the October 2031 infection cluster and bad-batch scares drove abrupt discontinuation. Off-drug: roughly 25% of adults have obesity and have never used a drug, and ~10.3% are former users, more than half of whom have regained most of their loss. Pediatric: ~1.1% of under-18s are on a drug (~2.4% of 12–17s, ~0.25% of 6–11s on daily liraglutide, mostly generic). The 2029 under-12 cohort is now in its third year of therapy, with no bone data reported yet."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1480,
+      "public_coverage": "Medicare reaches ~10.3M users only through diabetes, CV, CKD, OSA and dementia-risk-with-CVD codes, all behind prior authorisation. FICTIONAL arithmetic: 10.3M × ~$250 average net/month × 12 ≈ $30.9B a year in gross Part D incretin spend before rebate true-up (up from ~$29.7B). Of that, the dementia route is ~1.8M × ~$260 × 12 ≈ $5.6B. Net prices did not fall, so all of the growth is volume from people ageing in. Semaglutide's 2027 negotiated Medicare price still anchors the low end. The July 2031 complete response letter kept the no-CVD dementia population out of Part D. Medicaid: the same 9 states cover weight-loss use at the $245 rate, and two still condition coverage on adherence and BMI progress.",
+      "employer_coverage_pct": 29,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide sells for $4–30 a month across 120+ brands, now including prefilled pens as well as vials. Chinese tirzepatide analogues are sold widely in markets without patents. Canadian generics run CAD 50–90. India and China supply roughly 70% of world incretin volume. Brazil and Mexico have their own generic semaglutide.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Price path stalled. The Feb 2031 Paragraph IV settlements license US generic semaglutide entry no earlier than Q3 2033 (patent-term extension plus six months of pediatric exclusivity earned on adolescent data). Novo and Lilly have held TrumpRx prices at May 2029 levels: Wegovy pill $149 start / $249 maintenance; Foundayo $149–279; injectable Zepbound/Wegovy $279–349; MariTide $299 direct. Flat-net PBM deals were renewed with no further concessions. Lilly's tirzepatide + bimagrumab co-pack (approved Jun 2032) lists at $1,480, sells for $599 cash through LillyDirect, and is supply-limited (antibody fill-finish capacity) to ~250k patients by year end. The $1,480 list is the high bound, and no one pays it either. Employers covering weight management fell from 36% to 29% (Business Group on Health, Jan 2032). Another ~13% cover only through monitored 'metabolic tracks', which hold ~4.8M enrollees, all inside the ~12.1M commercial users. Coverage elsewhere sits on diabetes, cardiac, OSA and dementia codes with BMI ≥35/40 floors. The two tiers are now explicit: covered or monitored users on branded weekly, monthly or combination therapy, and cash or gray-market users on orals, Indian pens and vials. The price gap between Indian generics and US cash runs ~50×. The gray market (~7M) includes Indian pens and vials, counterfeit branded pens, Chinese tirzepatide analogues, and 'muscle stacks' sold as bimagrumab, which are mostly unrelated peptides or saline."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (MariTide)",
+        "GLP-1/amylin unimolecular agonist, weekly injectable (amycretin, approved Oct 2031)",
+        "GIP/GLP-1 agonist + activin type II receptor antibody, weekly pen plus monthly subcutaneous co-pack (tirzepatide + bimagrumab, approved Jun 2032)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; the extension to adults 60+ without CVD received a complete response letter in Jul 2031)"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction via telehealth and employer EAPs (oral semaglutide AUD phase 3 read out modestly positive in 2031; sNDA filed Apr 2032, no decision)",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid on orals or tirzepatide",
+        "microdosing and scheduled 'step-downs' for steadiness or for relief from flatness, depending on who prescribes",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "semaglutide use in under-12s with severe obesity (off-label)"
+      ],
+      "pipeline_note": "FICTIONAL. Driver muscle_preserving_combo: at the start of the step, bimagrumab-type adjuncts were in phase 3 with no filing stated. Lilly filed the tirzepatide + bimagrumab BLA in Mar 2031 on phase 3 data (~21% weight loss with ~90% of loss as fat, against ~70–75% on tirzepatide alone). The FDA approved it in Jun 2032, 15 months later. The label carries muscle spasm, diarrhoea and acne, and a postmarketing requirement for fracture and cardiac outcomes. Marketing says 'lose fat, keep you'. Amycretin (filed Oct 2029) was approved in Oct 2031 at ~22%. No new indication arrived in the window: the tirzepatide dementia sNDA got a complete response letter asking for the confirmatory trial (readout 2033), and the AUD filing is pending. No implant reached the market; implants remain in phase 1/2. No oral matches tirzepatide. US net prices are flat for the first time since 2025. The global incretin market is ~$165B (2031), and its growth is almost entirely ex-US volume and generics."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. MariTide's early vomiting remains higher than the weekly drugs'. The bimagrumab co-pack adds diarrhoea on top. Under the 2030 DSC, persistent diarrhoea in long-term users is now screened for exocrine insufficiency.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation of acute pancreatitis; absolute risk low. Litigation now runs alongside exocrine-insufficiency claims.",
+        "regulatory_response": "Labelled; new filings consolidated with EPI claims in 2031."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: hip-fracture HR ~1.3 in users 65+ after >2 years, ~1.45 in people who have cycled three or more times. The bimagrumab co-pack preserves lean mass in trials, but no fracture data exist yet, and bone effects of activin-receptor blockade in older adults are a postmarketing question. Most at-risk older and cash users cannot get the combo anyway.",
+        "regulatory_response": "Class warning (Jul 2028) retained and DXA code in use. The co-pack's label does not claim fracture reduction. The FDA sent Lilly an untitled letter (Aug 2032) about a 'frailty solved' social campaign."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: interim results of the FDA postmarketing observational study (Apr 2032) are consistent with the 2029 cohort: clinically meaningful anhedonia ~7–8% vs ~3% in controls, dose-related, ~10% on retatrutide, and partially reversible on step-down within ~6–10 weeks. No randomised data.",
+        "regulatory_response": "Postmarketing study continues; no labelling. The FDA said the interim findings do not warrant label changes yet."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Former users (~10.3% of adults) now outnumber half of current users. Gray-market users who stop after scares regain fastest.",
+        "regulatory_response": "None directly; it underpins chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron, vitamin D and fat-soluble vitamin deficiency documented in low-intake and long-term users.",
+        "regulatory_response": "Annual micronutrient panel language added to semaglutide and tirzepatide labels (Mar 2031)."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: no new data changed the ~4.1 vs ~1.9 per 1,000 person-years estimate. Reversibility on stopping and tirzepatide-specific rates are still unknown, with tirzepatide exposure beyond 5 years still thin. Faecal elastase testing volumes rose roughly fivefold after the 2030 DSC.",
+        "regulatory_response": "Semaglutide labels add EPI to Warnings and Precautions (May 2031). Class labelling for other incretins is deferred pending data. The EMA PRAC review concluded with an SmPC warning for semaglutide."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of semaglutide follow-up now exist. No second long-horizon signal has emerged. Pediatric bone and growth data from the 2029 under-12 approval are not due until 2033. Combination products add a second chronic exposure (activin-receptor blockade) with no long-term data.",
+        "regulatory_response": "Pediatric postmarketing requirements continue; the co-pack carries a 10-year registry requirement."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: In Oct 2031 the CDC linked nontuberculous mycobacterial injection-site and soft-tissue infections (~340 cases, 17 states, 3 deaths) to multi-dose Indian-labelled vials and unbranded 'research' peptides. Dosing errors from mg-versus-unit confusion on multi-dose vials are the leading poison-centre complaint. Calls now run ~6× 2025 levels. FDA reports tied to non-approved product passed ~23,000. Fake 'bimagrumab muscle stacks' appeared within weeks of the combo's approval.",
+        "regulatory_response": "Import alerts extended to all unapproved semaglutide/tirzepatide vials. CBP seizures up again, though a small fraction of volume. Serialisation is widespread on branded pens. Personal-importation enforcement is still weak; no new law or rule."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About a third of households still include a user, and another ~12% include a former user. Snack and confectionery volume is down ~9–10% from 2025 and sugary drinks ~8%; the decline slowed as use plateaued and regainers returned to value packs. The class split hardened: 'lean-mass' and high-protein lines in upper-income suburbs (the combo launch is fuelling a new 'leucine' marketing wave), value and private label in lower-income zip codes. Whey and pea protein stay in shortage pricing. Hershey and Mondelez have stopped cutting SKUs and are rebuilding value tiers.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volume is down ~12% from 2025 and beer ~7%. EAP off-label use keeps eroding heavy-drinker demand. Distillers have consolidated more capacity in Kentucky and Tennessee. Non-alcoholic lines keep growing without restoring margin. Mid-sized Midwestern bar closures continue, more slowly.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat. Small plates and protein menus are standard, and casual-dining checks stay small. Value menus are growing in lower-income markets, partly on regainer demand. A small 'Full Table' trend of family-style, big-portion, explicitly unmedicated restaurants has appeared in Detroit, Tulsa and Baltimore.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists are still shrinking but have stabilised in lower-income malls, where regain keeps demand alive. Premium 'structured' athletic wear dominates the upper tier. Stretch, resale and rental serve cyclers. Sizing stays bifurcated by price point.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength and body-composition services still grow, but the combo's 'keep your muscle' pitch has unsettled premium clubs that sold DXA-plus-coaching as the antidote to drug-driven muscle loss. They are repositioning toward performance metrics (grip, deadlift, VO2max) that a prescription cannot buy. Budget gyms are steady. Employer metabolic tracks bundle clinic visits with check-ins.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage for weight management is down to 29%, and most remaining coverage requires diabetes, cardiac, OSA or dementia codes behind PA. Pharmacy trend ~+6% with flat net prices. Adherence-tied wellness differentials have spread further among mid-sized self-insured firms, and monthly clinic dosing makes them cheap to administer. Part D premiums are rising again on incretin volume.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly, Novo, Amgen and Boehringer hold the US market, with US prices frozen and volume flat. Growth is in the co-pack (supply-limited), amycretin and ex-US sales. Novo's settlements protect US semaglutide until 2033. Indian and Chinese generic makers dominate world volume and, indirectly, the US gray market. Anti-counterfeit spending (serialisation, litigation, takedowns) is a nine-figure line at each major company.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Body shape still reads as income, but the code is shifting. Because the combo sells muscle by prescription, upper-tier signalling is moving from 'lifted' to 'capable': what you can lift, how far you can run, not what a scan says. A lean, soft body reads as cash or mail-order. A regained body over 50 reads as lost coverage. A visibly large body under 30 now sometimes reads as a choice.",
+      "thinness_and_class": "In Charlotte and Austin, the co-pack is the new status script, and coaches complain that clients think they no longer need them. In the Columbus logistics corridor the monthly shot at the plant clinic is still part of the job. Among bottom-third women aged 50–64 the regainers remain the most visible group, joined now by people who quit Indian vials after the October 2031 infection stories. Upper-income children on liraglutide are in their third year.",
+      "eating_as_ritual": "Shared meals are short in medicated households, and protein is still a manners question. The backlash has made the big meal a statement. 'Bread Alone' fasting congregations number ~1,400, spreading from Oklahoma and Arkansas into Missouri and East Texas. Unmuted 'Full Table' dinners in Detroit and Baltimore are explicitly working-class and unmedicated. Thanksgiving coverage in 2031 was mostly about which relatives were 'on'.",
+      "dating_and_intimacy": "Apps kept 'lean-mass verified' badges. Some added an 'unmedicated' badge after a user campaign led by women in their twenties. Couples now openly schedule drug holidays and dose step-downs around anniversaries and trips. On monthly products this means switching to a weekly or oral for a month, which telehealth platforms now offer as a 'holiday protocol'.",
+      "meaning_of_appetite": "Upper-tier culture still treats appetite as managed noise but has started treating flatness as a cost. In the backlash, appetite has become virtue in two incompatible vocabularies: as God-given and disciplined by fasting (Bread Alone), or as life and pleasure that pharma is muting (Unmuted, fat-acceptance revivalists, MAHA influencers). These groups share rallies and not much else.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: Clinically meaningful anhedonia ~7–8% of users vs ~3% of controls (~10% on retatrutide), with partial reversal on step-down per interim FDA data. Surveys suggest about a third of current users have deliberately lowered a dose or taken a holiday at least once for reasons of mood or pleasure, not side effects.",
+      "framing": "It is now a common complaint with a common name, 'going flat'. HR still says steadiness, clinicians say dose-related side effect, telehealth sells 'holiday protocols', and Unmuted calls it a class sedative. Late-night comedy jokes about it. A 2031 bestselling memoir, 'Flatline', made it dinner-table vocabulary.",
+      "effect_on_work": "About 4.8M employees are in adherence-verified tracks. Track clinics now field step-down requests as routine. Most allow a 'maintenance-low' dose that still counts as adherent, but a holiday counts as non-adherence and costs the premium differential. Logistics and call-centre shift leads still skew toward enrollees. The two EEOC ADA charges ended in right-to-sue letters in 2031, and a private class action against a Columbus-corridor logistics operator is in discovery. Upper-tier staff take holidays at will and no one records them.",
+      "effect_on_art_and_play": "'Flat' fiction is now a shelf category, and 'off night' music, loud and sour and spicy, has crossed into mainstream festival line-ups. Stand-up about going flat is a sub-genre. Sportsbook handle per active account is still down in insured suburbs. Bar culture keeps contracting in mid-sized cities, while Full Table dinners and fasting-church potlucks have become social venues in Detroit and Tulsa respectively.",
+      "effect_on_intimacy": "Drug holidays are back, now built into the product: couples switch from monthly to weekly or oral to get a two-week window. Therapists report fewer 'parallel lives' and more holiday-scheduled sex, plus disputes over whose holiday it is. Partners on employer tracks cannot holiday without losing the differential, so desire mismatch maps onto who works where.",
+      "effect_on_politics": "No state action. Going flat is a 2032 campaign talking point (both parties' primary candidates used it), but no bill advanced and no agency moved. The backlash coalition is louder and more fragmented: churches, fat-acceptance groups and MAHA influencers share rallies but not demands. There is still no turnout evidence for a 'sedated electorate'. Medicated and regained voters remain geographically sorted.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "No new state, congressional or HHS action on coverage, premiums or importation. The FDA kept its pro-speed posture on routine approvals (amycretin, the bimagrumab co-pack), issued a CRL on the dementia sNDA, added EPI to semaglutide labels, and sent an untitled letter on the co-pack's 'frailty solved' marketing. Import rhetoric is louder after the October 2031 infections, but no new rule followed.",
+      "subsidy_or_mandate": "None new. TrumpRx operates on manufacturer-set, now frozen, prices. The Bridge pilot was not revived. The 2027 30% wellness guidance stands.",
+      "conditioning_or_surveillance": "Unchanged in law. In practice, clinic administration records, PBM fills and app logs flow to wellness vendors under consent forms. Holiday-protocol switches now appear in those feeds, and some vendors flag them. Two state Medicaid programmes still condition coverage on adherence and BMI.",
+      "workforce_or_military": "TRICARE rules unchanged. The Army recruit oral pilot continues without expansion. DOT still has not ruled on off-label alcohol-reduction use among drivers.",
+      "geopolitics_of_supply": "India and China supply ~70% of world incretin volume. US–India talks still list CBP mail enforcement without agreement. After the infection cluster, Indian regulators suspended ~a dozen export licences, and the volume moved to other brands within weeks. The US–India price gap is now ~50×, a standing line in Danish and US politics.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2031-02",
+        "event": "Novo Nordisk settles patent suits with US generic semaglutide filers, licensing entry no earlier than Q3 2033; Novo and Lilly say TrumpRx and PBM prices will hold at 2029 levels",
+        "driver": "price_path: stalled"
+      },
+      {
+        "date": "2031-07",
+        "event": "FDA issues complete response letter on Lilly's bid to extend tirzepatide's dementia-risk claim to adults 60+ without heart disease, asking for the confirmatory trial due in 2033",
+        "driver": "new_indications: none"
+      },
+      {
+        "date": "2031-10",
+        "event": "CDC links ~340 mycobacterial injection-site infections and 3 deaths in 17 states to multi-dose imported and 'research' semaglutide vials; poison-centre calls hit ~6× 2025 levels",
+        "driver": "market_shock: generic_flood_counterfeits"
+      },
+      {
+        "date": "2032-01",
+        "event": "Business Group on Health survey finds only 29% of employers still cover weight-loss drugs; most remaining coverage requires diabetes, cardiac or dementia codes or a monitored metabolic track",
+        "driver": "coverage_shift: employer_retreat"
+      },
+      {
+        "date": "2032-05",
+        "event": "After interim FDA data tie 'going flat' to dose, Unmuted and Bread Alone congregations hold rival-but-joint 'Full Table' rallies in Detroit and Tulsa; Ro and Hims launch 'holiday protocol' plans",
+        "driver": "cultural_response: backlash_body_politics; personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2032-06",
+        "event": "FDA approves Lilly's tirzepatide-plus-bimagrumab co-pack, 15 months after filing, on data showing ~90% of weight lost as fat; Lilly's 'lose fat, keep you' launch is supply-limited at $599 cash",
+        "driver": "next_gen_launch: muscle_preserving_combo"
+      }
+    ],
+    "open_tensions": [
+      "The muscle problem is being sold as solved to the people least likely to fracture. The co-pack goes to commercially insured and $599-cash patients, while older Medicare, cash and gray-market users, who carry the hip-fracture and EPI risk, stay on drugs that cost them muscle, and the co-pack itself has no fracture or long-term data.",
+      "Prices froze until at least the 2033 generic entry date while employers kept leaving. Seven million people now inject imported or counterfeit product, and each contamination story pushes the poorest of them into abrupt discontinuation and regain.",
+      "Going flat is a mainstream complaint, and step-downs and holidays are normal for people who pay their own way. For 4.8M workers in adherence-verified tracks, a holiday still costs the premium differential, and a private class action, not a regulator, is now testing whether that is lawful.",
+      "The dementia-prevention market is held back only by one complete response letter. Off-label cash use by 50–70-year-olds keeps growing ahead of the 2033 confirmatory readout, building a decade-long exposure in the population that the EPI and fracture signals most affect."
+    ]
+  },
+  "prose": {
+    "headline": "Going Flat, Paying Full: prices freeze, employers walk, and the muscle shot arrives for the people who need it least",
+    "world_in_600_words": "At the end of 2032 the share of American adults on an incretin drug has barely moved. It is a shade over one in six, slightly fewer than two years ago. Underneath that steady number, more than a quarter of adults have now tried one, and about one in ten is a former user, most of them carrying back much of what they lost. The drugs did not go away. Many of the people taking them changed.\n\nPrices stopped falling. In February 2031 Novo Nordisk settled with the companies trying to sell generic semaglutide in the United States, and the earliest entry date became the second half of 2033. Within weeks Novo and Lilly said their cash and pharmacy-benefit prices would hold. The starting pill on the government's TrumpRx channel is still $149 a month and maintenance is still $249. The list price on the Wegovy box is still $1,349. Employers kept leaving anyway. A January survey found that only 29 percent still cover the drugs for weight loss. Most of the rest cover them only under a diabetes, heart or dementia code, or inside monitored metabolic tracks where a nurse at the plant clinic gives the monthly shot and the record goes to a wellness vendor. Nearly five million workers sit in those tracks.\n\nBelow the insured tier, the mail runs heavier still. About seven million people inject something that did not come from an American pharmacy: Indian pens, multi-dose vials, Chinese tirzepatide copies, counterfeits. In October 2031 the CDC traced about three hundred and forty slow, ugly skin and soft-tissue infections, and three deaths, to contaminated vials across seventeen states. Poison-centre calls are six times what they were in 2025, mostly from people who confused milligrams with units. Indian regulators suspended a dozen export licences, and other brands filled the gap within weeks. Each scare sends some of the poorest users off the drug abruptly, and the regain follows.\n\nIn June the FDA approved Lilly's co-pack of tirzepatide with bimagrumab, an antibody that keeps muscle while the fat goes. The trial bodies lost nearly as much weight, and about nine-tenths of it was fat. The company's slogan is 'lose fat, keep you'. It costs $599 a month in cash and supply is limited to a quarter of a million people. The older patients who carry the hip-fracture warning mostly cannot get it, and the label says nothing about fractures because no one yet knows. The FDA sent a letter objecting to a social campaign that called frailty solved. Nothing new arrived on the indication front. Lilly's attempt to widen the dementia claim to older adults without heart disease was sent back until a trial reads out in 2033, and the cash-paying fifty-somethings using it for that purpose kept going regardless.\n\nWhat changed most was the vocabulary. 'Going flat' is now what people call the muted pleasure that about one user in thirteen feels sharply and many more feel faintly. Interim federal data said it tracks the dose and partly lifts when the dose comes down. Telehealth companies began selling holiday protocols, a month on a weekly shot or a pill to open a window around a wedding or a trip. People who pay their own way take holidays as they please. People in employer tracks can step down, but a holiday counts as non-adherence and costs them the premium discount. A class action in Ohio is testing whether that is legal, because no regulator has.\n\nThe backlash is visible now. Fasting churches have spread from Oklahoma into Missouri and East Texas. Unmuted holds Full Table dinners in Detroit, and in May it shared a stage in Tulsa with the Bread Alone congregations, though the two agree on little beyond the meal. Candidates in both parties said 'flat' in their stump speeches, and no bill followed. From a distance the country looks settled, a little leaner, sorting itself quietly by zip code.",
+    "a_day_in_the_life": "Renée Dutton clocks in at 5:40 at the cross-dock outside Groveport and sees her name on the clinic list for 10:15. Third Thursday. She has a pick-rate dashboard, a headset, and a daughter getting married in nine days.\n\nAt break she scrolls the Hims page again. Holiday protocol, $189, a month on the weekly pen, two weeks of washout around the date. Her sister in Dayton did it for her fiftieth and said she cried at a song in the car, the first time in a year. Renée screenshots it and puts the phone away.\n\nThe clinic nurse is a kind man named Paul who calls everyone champ. She asks about stepping down. He pulls up the track rules on the tablet: maintenance-low counts. Skipping doesn't. Skipping is fourteen percent on the premium through December. He says it gently, like weather. She takes the low dose. He logs it. The vendor app pings her phone before she's back at the dock: Great job staying steady, Renée!\n\nLunch is a protein box from the vending wall. She eats half.\n\nAfter shift she drives to her mother's. Her mother is seventy-one, on a Medicare code for her heart, and broke her wrist in March stepping off a curb. On the television a woman lifts a grandchild over her head in slow motion: lose fat, keep you. Her mother asks what that one costs. Renée says too much.\n\nAt night she lies beside Marcus, who isn't on anything, and listens to him breathe. She tries to remember whether the wedding song is the one that used to make her cry. She thinks it is. She'll find out."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r36-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "'Bread Alone' fasting congregations number ~1,400, spreading from Oklahoma and Arkansas into Missouri and East Texas.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: the network nearly triples from ~500 congregations in two years. The only cause given is a generic 'backlash', which is too thin for that pace of growth for a niche church network."
+        },
+        {
+          "quote": "The bottom third fell (12 → 11.4) even though gray-market use grew, because the October 2031 infection cluster and bad-batch scares drove abrupt discontinuation.",
+          "field": "world/population/note",
+          "why": "Mechanism: a cluster of ~340 cases is asserted to cut bottom-third prevalence by 0.6 points (several hundred thousand people). Meanwhile gray-market users, who are concentrated at the bottom, are said to rise by 1.8M, and the two claims are never reconciled."
+        },
+        {
+          "quote": "The 18–29 band fell (10 → 9.5) because the backlash is strongest among young women and the young are least covered.",
+          "field": "world/population/note",
+          "why": "Mechanism: the age-band drop is attributed to a backlash that is asserted to be strongest among young women, with no evidence or chain shown. It is also not obviously consistent with 18–29s being the least covered, since the least covered are the likeliest gray-market or cash users."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Employer coverage falls to 29% while 4.8M workers sit in adherence-verified tracks where a holiday costs 14% on the premium (effect_on_work, prose). About 7M people inject imported or counterfeit product, and the 340-case NTM cluster and abrupt discontinuation hurt the poorest most. The $599 co-pack goes to the people least at risk of fracture. Harms are measured and nameable ('going flat', the EPI warning, the Ohio class action), so epistemic harm is moderate. The picture is a harder, more stratified society rather than a collapsed one.",
+        "plausibility": "driver_fidelity: every driver is visible. Adoption is 17.3 (−0.3), prices are frozen, employer coverage falls 36→29%, new_indications is empty (the CRL and the AUD filing do not count as approvals), and the co-pack, counterfeit shock, backlash and mainstream complaint are all present. The semaglutide EPI label is follow-through on the existing 2030 signal rather than a new one, though safety_signal 'none' is slightly strained. mechanism: the main chains (settlement freezing prices, the 2031 infection cluster, co-pack launch and the 'flat' discourse) are shown. Several demographic and cultural shifts are only asserted, namely the Bread Alone tripling, the bottom-third drop despite gray-market growth, and the 18–29 decline (all three listed claims). magnitude: the figures are inside the envelope and reconcile closely. Ever-used 27.6 and current 17.3 sit within bounds, the cycler arithmetic and age check work, payer mix sums to 46.7M, and the Medicare $30.9B and dementia $5.6B figures multiply out. Approval timing (co-pack 15 months, amycretin) and the 2033 generic date comply. Only a minor wording slip remains, 'third year' for a cohort approved June 2029.",
+        "generativity": ""
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s3-L3-r36-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom third fell (12 → 11.4) even though gray-market use grew, because the October 2031 infection cluster and bad-batch scares drove abrupt discontinuation.",
+          "field": "world/population/note",
+          "why": "Mechanism: one ~340-case cluster is asked to explain a ~5% relative drop in bottom-third use while the imported/counterfeit pool grows by about a third (5.2M to 7.0M). The drop and the growth are asserted together without showing how both hold."
+        },
+        {
+          "quote": "'Bread Alone' fasting congregations number ~1,400, spreading from Oklahoma and Arkansas into Missouri and East Texas.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Magnitude and mechanism: the network nearly triples from ~500 congregations in two years. The backlash driver supports growth, but no chain explains a rate this fast."
+        },
+        {
+          "quote": "Indian regulators suspended ~a dozen export licences, and the volume moved to other brands within weeks.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: the claim that unregulated supply instantly reroutes around a regulatory shock is convenient and unshown. It sits oddly beside a 35% rise in gray-market users after a deadly contamination cluster."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Four million-plus workers face a premium penalty for taking a mood-motivated holiday (interior_life/effect_on_work). About 7M people use contaminated imported product, and the muscle-preserving co-pack goes to those least at risk (open_tensions). Harm is named and discussed ('going flat', the EPI label), which keeps epistemic and cohesion scores moderate. Nothing is catastrophic, but the class sorting is entrenched.",
+        "plausibility": "driver_fidelity: Every driver is visible: adoption at 17.3, the price freeze and 2031 settlements, employer coverage 36→29%, the Jun 2032 bimagrumab co-pack, the Oct 2031 infection cluster, the Full Table backlash, 'going flat' as a mainstream complaint, and no state action or new indication. The EPI labelling is a response to the existing signal rather than a new one, and the AUD filing and dementia CRL honour the empty-indications driver. mechanism: Most chains are shown (employer retreat to tracks to holiday penalty; counterfeit cluster to discontinuation). Several shifts are asserted, namely the bottom-third drop alongside gray-market growth, the Bread Alone tripling, the instant rerouting after the Indian licence suspensions, and the 18–29 decline attributed to backlash, as flagged in my claims. magnitude: Current use 17.3 and ever-used 27.6 sit inside the envelope. The age, income and payer arithmetic reconciles (12.1+10.3+3.3+14.0+7.0=46.7M), and Medicare spend ($30.9B, dementia $5.6B) multiplies out. Approval timing (bimagrumab 15 months after filing, amycretin 24) and the Q3 2033 generic date obey the rules.",
+        "generativity": ""
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L3-r36-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "'Bread Alone' fasting congregations number ~1,400, spreading from Oklahoma and Arkansas into Missouri and East Texas.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism/magnitude: the network grows from ~500 to ~1,400 congregations (about 2.8x) in two years. The only cause given is a generic backlash, with no recruitment or institutional channel shown for such a fast build-out."
+        },
+        {
+          "quote": "The bottom third fell (12 → 11.4) even though gray-market use grew, because the October 2031 infection cluster and bad-batch scares drove abrupt discontinuation.",
+          "field": "world/population/note",
+          "why": "Mechanism: gray-market users grow ~35% (5.2M to 7.0M) and are described as disproportionately bottom-third. A single ~340-case cluster is asserted to more than offset that growth, with no flow numbers shown."
+        },
+        {
+          "quote": "Indian regulators suspended ~a dozen export licences, and the volume moved to other brands within weeks.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: a convenient assertion. It says the supply shock had no lasting effect on gray-market volume, which sits oddly beside a 50x price gap and a ~7M-user market that needs continuous supply."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers. 4.8M workers are in adherence-verified tracks where a holiday costs the premium differential, ~7M people inject unregulated product, and the old and cash-paying are left on muscle-losing drugs while the co-pack goes to the insured. The harm is mostly nameable and measured ('going flat', the interim FDA study, the Ohio class action), which keeps epistemic and cohesion scores moderate. The unresolved fracture and EPI exposure, and regain among ~10% former users, keep public health and inequality elevated.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 17.3 against a -0.3 delta, price is frozen via the settlement event, employer coverage falls 36 to 29, the bimagrumab co-pack is filed and approved in the allowed window, the counterfeit shock is the NTM cluster, backlash shows in the rallies, 'going flat' is mainstream, and there is no new indication or state action. mechanism: Most changes have chains (settlement to frozen prices, retreat to tiers, infections to discontinuation), but the three flagged claims are asserted or convenient: the fast spread of the fasting churches, the bottom-third decline, and the instant export-licence rerouting. magnitude: All headline figures sit inside the envelope (17.3, 27.6, and approval timing of 15 months for the co-pack). Payer mix (26+22+7+30+15=100, summing to 46.7M), the age and income checks, the cycler arithmetic and Part D spending ($30.9B; $5.6B dementia route) all reconcile. The only quibble is the odd 'outnumber half of current users' phrasing.",
+        "generativity": "The prose ends with a vivid day for Renée at the Groveport cross-dock, with the clinic list, a nurse who calls everyone 'champ', the 14% premium penalty, the Hims holiday page and the vendor ping. Her mother's broken wrist and the 'lose fat, keep you' ad tie the macro world to a household. The world fields supply many further scenes: Full Table dinners, holiday protocols, the class action, and counterfeit muscle stacks."
+      },
+      "plausibility": 8.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "'Bread Alone' fasting congregations number ~1,400, spreading from Oklahoma and Arkansas into Missouri and East Texas.",
+        "field": "world/body_and_culture/eating_as_ritual",
+        "why": "Mechanism: the network nearly triples from ~500 congregations in two years. The only cause given is a generic 'backlash', which is too thin for that pace of growth for a niche church network."
+      },
+      {
+        "quote": "The bottom third fell (12 → 11.4) even though gray-market use grew, because the October 2031 infection cluster and bad-batch scares drove abrupt discontinuation.",
+        "field": "world/population/note",
+        "why": "Mechanism: a cluster of ~340 cases is asserted to cut bottom-third prevalence by 0.6 points (several hundred thousand people). Meanwhile gray-market users, who are concentrated at the bottom, are said to rise by 1.8M, and the two claims are never reconciled."
+      },
+      {
+        "quote": "The 18–29 band fell (10 → 9.5) because the backlash is strongest among young women and the young are least covered.",
+        "field": "world/population/note",
+        "why": "Mechanism: the age-band drop is attributed to a backlash that is asserted to be strongest among young women, with no evidence or chain shown. It is also not obviously consistent with 18–29s being the least covered, since the least covered are the likeliest gray-market or cash users."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.33,
+      "inequality": 6.5,
+      "public_health": 5.33,
+      "cohesion": 5.17,
+      "epistemic": 4.33,
+      "overall": 5.57
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.83,
+      "magnitude": 8.5
+    },
+    "plausibility": 8.0,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Employer coverage falls to 29% while 4.8M workers sit in adherence-verified tracks where a holiday costs 14% on the premium (effect_on_work, prose). About 7M people inject imported or counterfeit product, and the 340-case NTM cluster and abrupt discontinuation hurt the poorest most. The $599 co-pack goes to the people least at risk of fracture. Harms are measured and nameable ('going flat', the EPI warning, the Ohio class action), so epistemic harm is moderate. The picture is a harder, more stratified society rather than a collapsed one.",
+      "plausibility": "driver_fidelity: every driver is visible. Adoption is 17.3 (−0.3), prices are frozen, employer coverage falls 36→29%, new_indications is empty (the CRL and the AUD filing do not count as approvals), and the co-pack, counterfeit shock, backlash and mainstream complaint are all present. The semaglutide EPI label is follow-through on the existing 2030 signal rather than a new one, though safety_signal 'none' is slightly strained. mechanism: the main chains (settlement freezing prices, the 2031 infection cluster, co-pack launch and the 'flat' discourse) are shown. Several demographic and cultural shifts are only asserted, namely the Bread Alone tripling, the bottom-third drop despite gray-market growth, and the 18–29 decline (all three listed claims). magnitude: the figures are inside the envelope and reconcile closely. Ever-used 27.6 and current 17.3 sit within bounds, the cycler arithmetic and age check work, payer mix sums to 46.7M, and the Medicare $30.9B and dementia $5.6B figures multiply out. Approval timing (co-pack 15 months, amycretin) and the 2033 generic date comply. Only a minor wording slip remains, 'third year' for a cohort approved June 2029.",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.433,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 17
+  }
+}

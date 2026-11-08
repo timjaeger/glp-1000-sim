@@ -1,0 +1,562 @@
+{
+  "run_id": "s3-L2-r29",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 29,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": -2.5,
+    "price_path": "generic_collapse",
+    "coverage_shift": "mandate_or_conditioning",
+    "new_indications": [
+      "cognition_dementia"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "muscle_preserving_combo",
+    "market_shock": "manufacturer_scandal",
+    "cultural_response": "backlash_body_politics",
+    "state_action": "none",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r29",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18726,
+        "output_tokens": 25549
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L2-r29",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 32543,
+        "output_tokens": 13410
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r29-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28323,
+        "output_tokens": 6051
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r29-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28323,
+        "output_tokens": 7904
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r29-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28323,
+        "output_tokens": 5762
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 12.1,
+      "us_adults_ever_used_pct": 24.4,
+      "by_income_third_pct": {
+        "top": 14.5,
+        "middle": 12.3,
+        "bottom": 9.5
+      },
+      "by_age_band_pct": {
+        "18_29": 6.5,
+        "30_49": 13.5,
+        "50_64": 20,
+        "65_plus": 7.5
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 48,
+      "note": "FICTIONAL. Cycling arithmetic: ever 24.4% − current 12.1% = 12.3% of adults used and are off now. About 7.1 pts of current users are on a second or later course, and about 4.6 pts of the off-now group restarted at least once and stopped again, so (7.1+4.6)/24.4 = 48% cycled. This fits ~35% one-year persistence (≈45% in gated plans) and 36–47% restart within a year: cheap generics make restarting easy, and gates, DEXA pauses and the Novo documents keep producing stops. Of ~272M adults: ≈32.9M current, ≈33.5M used and off now, ≈205.6M never used. Ever-use rose only 0.4 pts (≈1.1M true first-timers). Most of them are low-dose 'calm/steady' starters under 50 who do not have obesity. Current use fell because stops outran restarts. Commercial gating ejected about 2.5M non-responders and non-adherers over the window. Postmenopausal women 50–64 and 65+ users stopped in numbers after the June 2031 Novo documents. Age check: 18–29 6.5% × 52M = 3.4M; 30–49 13.5% × 90M = 12.2M; 50–64 20% × 62M = 12.4M; 65+ 7.5% × 68M = 5.1M; total ≈ 33.0M ≈ 12.1%. The 50–64 band fell most (25%→20%), concentrated in women. Income: the gradient narrowed in level (top 18.5→14.5, bottom 10.3→9.5) because $45 generics replaced some imports and some top-third users quit on principle or after DEXA results. The bottom third's binding constraint is no longer the drug price. It is a prescriber visit ($29–79 telehealth), a scale and a scan, and in gated plans a job that keeps going. Imported/counterfeit users fell from ≈3.1M to ≈1.0M as legal generics undercut mail order. Pediatric: ~0.6% of ~73M under-18s ≈ 440k, mostly adolescents 12+ on generic semaglutide. Interim adolescent bone-accrual data (2032) show no significant difference at 2 years but are underpowered. More children now live with a parent in an employer 'steady' programme, or with a parent who cycles with their job."
+    },
+    "access": {
+      "cash_price_usd_month_low": 45,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Medicare: the Bridge successor runs unchanged in structure: BMI/comorbidity criteria, counselling visit, and a $50 beneficiary copay on branded incretins at the $199 rate. From Feb 2032 Part D plans place generic semaglutide on generic tiers at ≈$55 net, with plan copays of $10–20. Medicare pays ≈17% of fills ≈ 5.6M users (5.1M aged 65+ plus ≈0.5M disabled under-65), ≈1.5M of them on the Bridge for obesity. 2032 Bridge spend: if ~60% are on generic semaglutide at ~$55 and 40% on branded tirzepatide at $199, the blended net is ≈$113/month, and 1.5M × $113 × 12 ≈ $2.0B, down from $4.3B in 2030. Medicaid pays ≈9% of fills ≈ 3.0M users. At ~70% generic at ≈$45 and 30% brand at $199, the blend is ≈$91/month, and 3.0M × $91 × 12 ≈ $3.3B gross federal+state, down from $8.4B. Indiana and Arkansas adherence waivers unchanged; no other state added or dropped coverage by statute this window.",
+      "employer_coverage_pct": 61,
+      "generic_us": true,
+      "generic_rest_of_world": "India: 100+ semaglutide brands at $4–25/month, and generic tirzepatide sold in India where patents were not granted or were challenged. China: generic semaglutide and liraglutide widely available, and Chinese API supplies part of the US generic chain through Indian finishers. Canada, Brazil, Mexico and Turkey: generic semaglutide is routine. EU generic semaglutide launched 2031–32 as protection lapsed. Generic oral semaglutide is sold widely outside the US. In the US the oral (SNAC) formulation stays branded.",
+      "gray_market": "contained",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Generic collapse for semaglutide only. Generic injectable semaglutide launched in Jan 2032 under earlier patent settlements (Viatris, Dr. Reddy's, Teva, Sandoz, with a Novo authorised generic). With six entrants by Sep 2032, cash prices at warehouse clubs, Cost Plus-style pharmacies and on the federal direct-pricing portal (launched as TrumpRx) are $45–69/month. Tirzepatide stays branded, with direct vials cut to $179 in response. Retatrutide list is $1,499, direct $349. Zepbound Preserve (tirzepatide + bimagrumab, Mar 2032) lists at $1,299, direct $599. Payer mix of ≈32.9M users: commercial 43% (14.1M), Medicare 17% (5.6M), Medicaid 9% (3.0M), cash/direct 28% (9.2M), imported/counterfeit 3% (1.0M) = 100%. Of the commercial users, ≈1.1M are in employer-sponsored low-dose 'steady' programmes without an obesity diagnosis. Of the cash users, ≈2.1M pay for 'calm' subscriptions, ≈4.5M buy generic semaglutide, and ≈2.6M buy branded tirzepatide or retatrutide direct. The ≈3.2M low-dose users in total fit inside the ≈9.8M users under 50 without the Bridge or Medicaid. PBMs made generic-semaglutide-first step therapy the default for 2032 plans, and ≈80% of covering employers now gate: ≥80% PDC, verified weigh-ins, ≥5% at 6 months, with brand access only for gated responders. Coverage remains tied to employment, and COBRA is the only bridge after a job loss. The 503B exclusion and 503A injunction stand, though they matter less now that generics are cheap. Counterfeiting has moved from 'Ozempic' pens to tirzepatide and retatrutide pens."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic incl. 7.2 mg; US generic semaglutide since Jan 2032)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1 + activin-receptor antibody combination for muscle preservation (tirzepatide + bimagrumab: Zepbound Preserve, Mar 2032)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular agonist, weekly injectable (amycretin, approved Nov 2031)",
+        "GLP-1 agonist / GIPR antagonist antibody, monthly injectable (MariTide, approved Jul 2031)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda and generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "reduction of risk of incident all-cause dementia in adults ≥55 with type 2 diabetes or obesity plus established cardiovascular disease (tirzepatide, Aug 2032)"
+      ],
+      "mainstream_offlabel_uses": [
+        "employer-sponsored low-dose 'steady' programmes (generic semaglutide 0.25–0.5 mg) for staff without obesity, framed as stress and craving support",
+        "'calm', 'focus' and 'craving freedom' cash subscriptions (low-dose generic semaglutide, oral semaglutide or Foundayo)",
+        "smoking and vaping cessation (Novo's new trial is enrolling; no resubmission)",
+        "alcohol reduction, including EAP-referred prescribing",
+        "'brain-protective' use of tirzepatide by people without diabetes after the dementia label, outside its population",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "pediatric under-12 use under specialist care"
+      ],
+      "pipeline_note": "FICTIONAL. Four approvals came from products already under review or newly filed. MariTide (filed Apr 2030) was approved Jul 2031 with a DEXA postmarketing requirement. Amycretin was approved Nov 2031 after its 72-week DEXA data, with bone-monitoring language. The muscle-preserving-combo driver is realised by Lilly's tirzepatide + bimagrumab: phase 3 since 2029, filed Feb 2031 (an event in this window), approved Mar 2032 (13 months after filing) as Zepbound Preserve. In the trial the lean share of weight lost fell from ~35% to ~12% at 72 weeks, with grip strength preserved versus tirzepatide alone. The trial was not powered for fracture, and the label says so. Marketing says 'the strength problem, solved' anyway. The dementia driver is realised as a tirzepatide supplemental indication. A 4-year, ~11,000-patient prevention trial in people ≥55 with T2D/obesity and CVD read out Jan 2031: incident all-cause dementia 4.9% vs 5.8% (HR ≈0.84, NNT ≈110), driven by vascular and mixed dementia. It was filed Jun 2031 and approved Aug 2032. The label is narrow because semaglutide's EVOKE trials failed in early Alzheimer's in 2025, and FDA states the drug does not treat Alzheimer's disease. Survodutide's resubmission is under review, with a decision in 2033. Semaglutide smoking cessation: new trial enrolling. Incretin market ≈$104B in 2032, down from $118B: Novo's US semaglutide revenue is down ~55% under generics and scandal, while Lilly grows on tirzepatide, retatrutide, Foundayo and Preserve."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the commonest class effect and the leading cause of voluntary stops. Generic switching causes some re-titration complaints. Low-dose 'steady' users report milder GI effects.",
+        "regulatory_response": "Labelled; generic labels carry the same text."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; stable.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. MDL bellwether trials began in 2032 with mixed verdicts.",
+        "regulatory_response": "Labelled; MDL ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Unchanged in prevalence among the ~32M not on Preserve. Preserve cuts lean loss in its trial, but only ~250k people were on it by Dec 2032, mostly top-third and MA-plan users. Some MA plans dropped the strength-class condition for Preserve users.",
+        "regulatory_response": "Class label and the 2029 joint guidance retained. The Preserve label requires baseline DEXA and notes there are no fracture data."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "No new signal. Excess holds at HR ~1.3–1.4 in 65+ long-term users and ~1.2× in cycling postmenopausal women 50–64. The June 2031 DOJ settlement unsealed Novo documents showing that internal pooled analyses in 2023–24 flagged a BMD/fracture imbalance in extension data, and that its disclosure to FDA was delayed and minimised. The documents add chronology, not a new effect size. Fewer long-term 65+ users mean roughly 4,000 excess hip fractures a year, down from ≈5,000. DEXA waits have eased to 4–6 weeks as demand plateaus.",
+        "regulatory_response": "FDA added a non-boxed 'bone health' section to all semaglutide labels including generics (2031). DOJ False Claims Act settlement with Novo ($2.1B) plus a corporate integrity agreement. No new statute."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "Unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association in updated reviews.",
+        "regulatory_response": "Warning not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "emerging",
+        "prevalence_note": "Final retatrutide postmarketing SHAPS data (2031) confirm the interim: ~11–13% of top-dose users cross the threshold, versus ~5% of comparators. The data are observational and dose-dependent. For ~3.2M low-dose 'steady'/'calm' users there is still no systematic measurement. Employer programmes report satisfaction and absenteeism, not anhedonia scores.",
+        "regulatory_response": "No label change. FTC letters continue against 'anxiety relief' claims. Employer programmes avoid efficacy claims by calling themselves 'support'."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Largest it has been in absolute numbers: ≈33.5M adults are off now. Gated ejections, DEXA pauses, job losses and scandal-driven quits all feed it.",
+        "regulatory_response": "None. Seventh Circuit Indiana waiver case argued and still undecided."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Signals persist in high-loss and older users; unchanged.",
+        "regulatory_response": "Professional guidance only."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~7 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up. Cycling still looks worse for bone. Interim adolescent bone-accrual data show no significant 2-year difference but are underpowered.",
+        "regulatory_response": "Postmarketing requirements continue."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "Declining for semaglutide as $45 generics remove the incentive. Poison-centre incretin calls fell ~30% from 2030. Counterfeiting moved to tirzepatide and retatrutide pens, with scattered underdosed or saline 'Zepbound' cases in 2032 and no mass-casualty cluster.",
+        "regulatory_response": "Import alerts and pen-authentication guidance continue; no new law."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "Elevated fall-related ED visits persist in 65+ long-term users and are still not separated from confounding.",
+        "regulatory_response": "Fall-risk screening stays in the Bridge counselling template."
+      },
+      {
+        "effect": "Muscle spasm, diarrhoea and acne with bimagrumab component (Zepbound Preserve)",
+        "status": "established",
+        "prevalence_note": "Seen in the phase 3 trials and labelled at approval. Muscle spasms are common early and usually resolve. No postmarketing signal yet at ~250k users.",
+        "regulatory_response": "Labelled at approval; standard postmarketing requirements."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "Volume pressure eases as current use falls. US salty-snack volume declines slow to ~-1%/yr. Indulgent lines see a small regain bump, which analysts call the 'off-wave', concentrated in the 50–64 women who stopped after the Novo documents. Protein, fibre and bone-forward lines keep growing but more slowly. 'Real food, full portion' heritage brands grow off the backlash, especially in the South. Packaged-food firms re-add some SKUs they cut in 2028–30.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Contracting for a fifth year, but more slowly. Fewer people are on the drug, but low-dose 'steady' and 'calm' users are disproportionately the occasional unwinders spirits relied on. After-work drinking culture thins at call-centre and logistics employers running steady programmes. Craft beer in backlash regions is flat rather than falling.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat, spend per cover is slightly up from the 2030 trough as the off population grows. On/off menus and half portions are standard. 'No-gram' rooms have spread from Atlanta, Memphis and Houston to Tulsa, Birmingham and Jackson. Buffet closures have slowed.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn continues and is now two-directional at scale: the off-wave regain lifted plus-size and mid-size sales in 2031–32. Plus-size specialists grow modestly on body-sovereignty campaigns.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Still growing, but Preserve muddies the message. Prescribed-lifting chains and DEXA-plus-coaching hold, while some MA plans drop strength-class conditions for Preserve users. Chains run 'a pill doesn't lift' campaigns, and growth slows to mid-single digits.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Generic semaglutide cut GLP-1 pharmacy cost per covered member ~35%, and pharmacy trend eased to ~+3%. Employer coverage dipped from 63% to 61%. Some small employers dropped the benefit on the reasoning that '$45 is a gym membership', while large employers kept it and extended it as steady programmes. About 80% of covering employers gate. BMI-linked surcharges stay at the 30% ceiling where used. Bone and fall claims remain a line in cost models.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Incretin market ≈$104B, down from $118B. Novo has a $2.1B DOJ settlement, a corporate integrity agreement, a new CEO, and lost US semaglutide revenue to generics. Lilly grows on tirzepatide, retatrutide, Foundayo and Preserve, and is now the brand of choice for the wealthy. Generic makers (Viatris, Dr. Reddy's, Teva, Sandoz) earn thin margins at $45–69 cash. Amgen launched MariTide into a price-compressed market. Bone-agent makers hold their gains.",
+        "direction": "contracting"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug is no longer the default among insured professionals. It is one of three normal states, along with off and off-by-conviction. The body signals class through the regimen: Preserve and coached lifting at the top, generic semaglutide with no scan lower down. At work, temperament is read more than shape. 'She's on Steady' describes an unflappable colleague, not a thin one. Visible regain is still read as having been cut off, but there are now many more such bodies, and the reading carries less stigma.",
+      "thinness_and_class": "The price gradient has gone and an infrastructure gradient has replaced it. A $45 pen is within reach of most of the bottom third. A prescriber, a verified scale, a DEXA scan, protein-heavy groceries and a gated employer plan that survives a layoff are not. The top third's share fell fastest (18.5→14.5%). Some of that is principled quitting among women 50–64 after the Novo documents, and some is a shift to fewer, better-monitored, more expensive users.",
+      "eating_as_ritual": "Shared meals stay smaller and protein-first in high-uptake suburbs. Elsewhere the full table is back. In Tulsa–Dallas corridor churches, potlucks are framed as testimony. Holiday hosting still plans for on, off and off-by-conviction guests, with an added 'steady' guest who eats normally but doesn't seem to enjoy it.",
+      "dating_and_intimacy": "Profiles state on, off or steady. 'Steady' reads in two ways: low-drama to some daters and 'muted' to others. Backlash communities keep the 'unmedicated' filter. Advice columns now field letters from partners of people whose employer programme changed them.",
+      "meaning_of_appetite": "Appetite is medicalised, politicised and now also managed by employers. The backlash coalition is larger and more organised. In June 2032 the Southern Baptist Convention passed a resolution calling appetite and delight 'gifts not to be pharmacologically surrendered for an employer's convenience'. Atlanta's body-sovereignty collectives boycott steady-programme employers. Supplement sellers market berberine as 'the Steady you choose'. The Novo documents are cited by all of them. Their disagreement over whether cheap generics are good, as access, or bad, as wider exposure, is now open.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL. ≈3.2M adults are on low-dose regimens chosen for temperament rather than weight: ≈1.1M through employer-sponsored steady programmes and ≈2.1M through cash 'calm' subscriptions. None of them are systematically measured for anhedonia. Final retatrutide SHAPS data put clinically meaningful anhedonia at ~11–13% of top-dose users versus ~5% of comparators, and no one has measured the low-dose population. Employer analytics, aggregated by PBMs, report 12–18% lower absenteeism and fewer customer escalations among enrolled workers. That is heavily confounded, because enrolment is voluntary and adherent people are steadier workers anyway, but HR departments cite it.",
+      "framing": "Employers frame it as a benefit: 'stress and craving support', a 'steady programme', 'Even Keel'. Clinicians call it off-label low-dose reward modulation. Unions and the backlash call it 'payroll grey'. Users mostly say they're 'on Steady'.",
+      "effect_on_work": "Institutions now reward the blunted. Large call-centre operators, logistics warehouses (the Memphis and Dallas–Fort Worth hubs), collections agencies and some bank operations floors offer free low-dose generic semaglutide through on-site or virtual clinics. Enrolment and ≥80% refill adherence earn premium credits of ~$40–60 a month under the existing wellness rules. Adherence and job tenure correlate in both directions: steady people stay employed, and employed people stay on, because coverage ends with the job. Recruiters at staffing agencies say candidates volunteer 'I'm on Steady' the way they once volunteered 'non-smoker'. CWA is fighting premium credits at call centres. Teamster and SEIU contracts keep individual data out of employer dashboards. Sales, kitchens, creative studios and stand-up stay the off-dose professions.",
+      "effect_on_art_and_play": "'Written unmedicated' is a marketing category. The Nashville scene has spawned imitators in Tulsa and Austin. Pop critics coin 'payroll grey' for flat, competent records. Users seek intense stimulus on weekends: hot-sauce festivals, loud rooms, motocross. Dose holidays timed to concerts and weddings are routine.",
+      "effect_on_intimacy": "Sex therapists ask whether a client's employer runs a programme. Couples negotiate dose-holiday weekends against refill-adherence counters: a skipped dose of a weekly pen costs PDC, and PDC is what earns the premium credit. Some couples describe the arrangement as 'he's steady at work and himself on Saturdays'. Backlash churches run marriage workshops on the theme.",
+      "effect_on_politics": "Cost has stopped being the argument, because the drug is cheap. Control has replaced it: gating, employer programmes and the Novo cover-up. The backlash coalition now includes CWA locals and fracture plaintiffs. Candidates in Georgia and Oklahoma court it without promising legislation. Consultants still test 'steady voter' messaging privately. There is no evidence of turnout effects, though union organisers say enrolled shops are harder to organise, and they cannot prove it.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "No new state action. FDA did its routine work: it approved MariTide, amycretin, Zepbound Preserve and the tirzepatide dementia indication on data it had demanded, and added bone-health text to semaglutide labels. DOJ concluded the existing Novo civil case. Enforcement against imports remains selective. Congress held hearings on the Novo documents and on employer steady programmes and passed nothing. The FTC acts on advertising claims only.",
+      "subsidy_or_mandate": "No mandate. The Medicare Bridge successor and the federal direct-pricing portal continue. Generic semaglutide at $45–69 has done more than any subsidy to lower prices. Medicaid coverage remains state by state.",
+      "conditioning_or_surveillance": "Existing public conditioning is unchanged: the Indiana and Arkansas waivers and BMI-linked wellness surcharges up to 30% of premium. Private conditioning deepened. ≈80% of covering employers gate, generic-first step therapy is the default, and steady programmes tie premium credits to refill adherence. Pharmacy weigh-in kiosks now also log 'programme check-ins'. No regulator has ruled on whether adherence-linked credits for off-label use fit the wellness rules.",
+      "workforce_or_military": "DOT sleep-apnea screening still makes tirzepatide a de facto requirement for some drivers. Fleets add DEXA screening for drivers over 55. Army accession policy on GLP-1 use is unchanged and still contested. Civilian employers are now the main institutional promoters of low-dose use.",
+      "geopolitics_of_supply": "Legal US generics are made largely by Indian finishers, partly from Chinese API, so the 'security' rhetoric has moved from the mail to the supply chain. Section 232 tariffs remain, and generic makers absorb them at thin margins. Mail-order imports have shrunk. India–US trade talks have dropped mail-order pharma as an item.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-06",
+        "event": "Novo Nordisk agrees a $2.1B False Claims Act settlement and a corporate integrity agreement. Unsealed documents show internal 2023–24 analyses flagged a fracture imbalance that was disclosed late and downplayed. The CEO resigns, and claims data show semaglutide discontinuations among women 50–64 roughly doubling over the next quarter.",
+        "driver": "market_shock: manufacturer_scandal; adoption_delta_pp"
+      },
+      {
+        "date": "2031-09",
+        "event": "A national call-centre operator and two logistics firms launch employer-paid low-dose 'steady' programmes open to all staff regardless of weight, with $50-a-month premium credits for refill adherence. A benefits-consultancy survey finds 1 in 5 large employers offering or piloting one for 2032.",
+        "driver": "personality_layer: employer_encouraged"
+      },
+      {
+        "date": "2032-01",
+        "event": "Generic semaglutide launches in the US under patent settlements, with Viatris, Dr. Reddy's, Teva, Sandoz and a Novo authorised generic. By September cash prices reach $45–69 a month. PBMs make generic-first, outcome-gated coverage the default, and Lilly cuts direct tirzepatide vials to $179.",
+        "driver": "price_path: generic_collapse; coverage_shift: mandate_or_conditioning"
+      },
+      {
+        "date": "2032-03",
+        "event": "FDA approves Lilly's Zepbound Preserve (tirzepatide plus bimagrumab), filed Feb 2031, after trials showed lean-mass loss cut to about 12% of weight lost. The label notes there are no fracture data, and the launch campaign promises 'strength, kept'.",
+        "driver": "next_gen_launch: muscle_preserving_combo"
+      },
+      {
+        "date": "2032-06",
+        "event": "The Southern Baptist Convention passes a resolution against 'pharmacological surrender of appetite for an employer's convenience'. In the same month Atlanta body-sovereignty collectives and CWA locals begin a consumer boycott of firms running steady programmes.",
+        "driver": "cultural_response: backlash_body_politics"
+      },
+      {
+        "date": "2032-08",
+        "event": "FDA approves tirzepatide to reduce the risk of incident dementia in adults 55 and over with diabetes or obesity and heart disease. The approval rests on a trial showing 4.9% versus 5.8% incidence over four years, and FDA states the drug does not treat Alzheimer's disease.",
+        "driver": "new_indications: cognition_dementia"
+      }
+    ],
+    "open_tensions": [
+      "Employers now pay people to stay on low doses for temperament and tie premium credits to refill adherence, while coverage ends with the job. Nobody measures anhedonia in this population, the only good data call it a dose-dependent harm at top doses, and no regulator has said whether off-label steady credits fit the wellness rules.",
+      "Price is no longer the barrier, but the floor has moved to prescribers, scales, scans and stable jobs. The cheapest molecule is also the one whose maker hid bone data. Gated plans still eject non-responders, who could buy the drug for $45 but lose the monitoring that came with coverage.",
+      "Older adults get contradictory advice: stay on tirzepatide for the brain (dementia label, NNT ≈110), pause for the bones (DEXA guidance), and buy Preserve for the muscles at $599, which has no fracture data. Medicare has not decided which of these to pay for.",
+      "The backlash coalition of churches, body-sovereignty collectives, CWA locals and fracture plaintiffs is larger and electorally courted. It has split openly on whether $45 generics are liberation or wider exposure, and no candidate has offered it a law."
+    ],
+    "still_true": [
+      "The Indiana and Arkansas Medicaid 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with two misses ending coverage for 12 months, and the disability-rights litigation is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "No US generic tirzepatide exists; Zepbound/Mounjaro remain branded.",
+      "The Medicare Bridge successor keeps its BMI/comorbidity criteria, the counselling-visit requirement and the $50 beneficiary copay on branded incretins at the $199 rate.",
+      "Wellness rules still allow BMI-linked premium surcharges up to 30% of premium, and the 503B exclusion and 503A injunction on compounded semaglutide and tirzepatide still stand."
+    ]
+  },
+  "prose": {
+    "headline": "Forty-Five Dollars and Fewer Takers: Ozempic Goes Generic, Novo's Secrets Come Out, and Your Boss Wants You Steady",
+    "world_in_600_words": "At the end of 2032 about one American adult in eight is on an incretin drug, down from one in seven two years ago, and the drug has never been cheaper. Generic semaglutide arrived in January under old patent settlements. By autumn six makers were selling it, and a month's supply costs $45 to $69 at a warehouse club. Medicare and Medicaid spending on these drugs fell by roughly half in two years. The price was the thing everyone fought over for a decade, and it stopped being the issue within a few months.\n\nThe number of users fell anyway, because the reasons to stop grew faster than the reasons to start. In June 2031 Novo Nordisk settled the Justice Department's civil case for $2.1 billion. The settlement unsealed documents showing that the company's own analysts saw a fracture imbalance years before it reached regulators. The documents added nothing new about risk, since the bone data had been public since 2028. They did change how people felt about the drug. Women in their fifties who had cycled on and off for years left in large numbers. Employer plans kept dropping non-responders who missed the five-percent mark at six months. Some small employers dropped the benefit altogether on the reasoning that forty-five dollars is what a gym costs. More Americans now have used these drugs and stopped than are using them, and nearly half of everyone who ever started has stopped and restarted at least once.\n\nThe new money is in temperament. In the fall of 2031 a national call-centre operator and two logistics companies began offering every employee, of any weight, a free low-dose generic pen and a fifty-dollar monthly premium credit for refilling it on time. Within a year about a million workers were enrolled, alongside two million who buy 'calm' subscriptions themselves. Absenteeism in enrolled groups is down, a result confounded by who chooses to enrol, and HR departments cite it anyway. Staffing agents hear candidates volunteer that they are 'on Steady'. Nobody measures whether those people still enjoy anything, though the retatrutide data say that at the top dose about one in eight do not. The unions call it payroll grey. Because coverage ends with the job, staying employed and staying on the drug have become the same habit.\n\nIn March Lilly launched Zepbound Preserve, tirzepatide paired with a muscle-sparing antibody. In trials it cut the share of weight lost as muscle from about a third to about an eighth. It has no fracture data, and the advertising implies the frailty problem is over. About a quarter of a million people take it at $599 a month, most of them people who already had trainers. In August the FDA allowed tirzepatide to claim a modest reduction in dementia risk for older people with heart disease. Older patients now hear from three directions: stay on for the brain, pause for the bones, pay for the combination for the muscles.\n\nThe counter-movement has grown. In June the Southern Baptist Convention called appetite a gift not to be surrendered for an employer's convenience. Atlanta's body-sovereignty collectives and call-centre union locals are boycotting steady-programme firms. Candidates in Georgia and Oklahoma show up to the rallies and promise nothing. The coalition agrees that the drug should not be a condition of anything, but its members disagree about whether a $45 pen means freedom or wider exposure.\n\nFrom outside the country looks calmer. Snack volumes have levelled off, plus-size sales are recovering, and fewer counterfeit pens turn up because the real ones are cheap. Inside the call centres, the people answering phones have enrolled in the programme in large numbers and are seldom rattled.",
+    "a_day_in_the_life": "Kayla Brandt injects on Mondays, before the coffee, in the bathroom of a duplex in east Tulsa. The pen is generic, a quarter milligram. The label says Viatris. The app says ADHERENCE 94% and a green fifty-dollar badge.\n\nAt the centre she takes calls for a benefits administrator. Her first caller is a man in Muskogee who missed a weigh-in in March, then another in June, and is now off his plan. He shouts for nine minutes. Kayla's voice stays level. She tells him generic semaglutide is forty-five dollars at the Sam's on Memorial. He says he knows what it costs, what he's lost is the doctor. She marks the call RESOLVED because there's no code for what it was.\n\nLunch is half a turkey bowl. Her team lead, Denise, isn't on Steady and eats the whole thing. Denise is louder now, and also funnier.\n\nAfter work Kayla picks her son up from her mother's. The church bulletin on the fridge says APPETITE IS A GIFT. Her mother hands her a foil pan of banana pudding and says nothing.\n\nAt night Ray plays bass at a bar on Admiral. The flyer says UNMEDICATED SET. Kayla stands at the back with a soda. She can tell the song is good. She watches people near the stage close their eyes.\n\nDriving home she does the arithmetic again. If she skips next Monday her adherence drops to ninety-one, which still earns the credit, and she would feel the music on Saturday. Ray asks what she's thinking. 'Nothing,' she says, and it's nearly true."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r29-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "In the fall of 2031 a national call-centre operator and two logistics companies began offering every employee, of any weight, a free low-dose generic pen and a fifty-dollar monthly premium credit for refilling it on time.",
+          "field": "prose/body",
+          "why": "Fails mechanism: US generic semaglutide did not launch until Jan 2032, so a free generic pen in fall 2031 contradicts the world's own timeline. The 2031-09 event does not mention generics, so the prose and the event disagree."
+        },
+        {
+          "quote": "A 4-year, ~11,000-patient prevention trial in people ≥55 with T2D/obesity and CVD read out Jan 2031: incident all-cause dementia 4.9% vs 5.8% (HR ≈0.84, NNT ≈110), driven by vascular and mixed dementia.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism: a 4-year tirzepatide dementia trial would have started around 2027, yet the 2030 pipeline never mentions it. The trial is conjured to carry the dementia driver rather than derived from the parent world."
+        },
+        {
+          "quote": "Imported/counterfeit users fell from ≈3.1M to ≈1.0M as legal generics undercut mail order.",
+          "field": "world/population/note",
+          "why": "Fails mechanism: US generics existed for under a year, and Indian and Chinese mail-order pens at $4–25 still undercut $45–69. A two-thirds collapse in imports is asserted rather than shown, though it is not out of bounds in magnitude."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Price is no longer the barrier and counterfeit harms are falling, so this is mixed. Against that, employers pay workers to stay on low-dose reward modulation, with credits tied to refill adherence and coverage tied to the job (effect_on_work, intimacy). About 33.5M people are off the drug and regaining weight, nobody measures anhedonia in the ≈3.2M low-dose users, and ≈80% of employers gate. The harm is normalised and moderately hard to see from inside, but there is no collapse, so it sits around 5.5.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is -2.5pp, semaglutide generics arrive under settlements, gating reaches 80%, Preserve and the dementia label are approved, the Novo scandal runs through the DOJ settlement, and the backlash and employer-encouraged layers are both present. The FDA bone-label addition and the DOJ settlement sit slightly awkwardly against state_action none and safety_signal none, but the candidate says no new effect size. mechanism: The scandal-to-quit chain and the generic-to-spend-drop chain are shown. The fall-2031 'generic pen' prose contradicts the Jan 2032 generic launch, the dementia trial appears from nowhere, and the imports collapse is asserted (claims 1–3). magnitude: Current use 12.1 and ever-use 24.4 are inside the envelope. The income thirds average to the national figure, the age bands sum to ≈33M, and the payer mix, cash split and cycling arithmetic all reconcile. Bridge ($2.0B) and Medicaid ($3.3B) spending multiply out. Minor gaps: the Feb 2031 Preserve filing is not listed as an event, and 'roughly half' understates a ≈58% fall in public spend.",
+        "generativity": "The prose gives a full scene: Kayla's Monday pen, the ADHERENCE 94% badge, the Muskogee caller with no resolution code, Denise eating the whole bowl, the church bulletin, and Ray's unmedicated set. The adherence-versus-Saturday-music tradeoff is concrete. The JSON adds many other threads: SBC resolution, CWA boycott, dose-holiday negotiation, and 'payroll grey' as a genre."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s3-L2-r29-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "began offering every employee, of any weight, a free low-dose generic pen and a fifty-dollar monthly premium credit for refilling it on time",
+          "field": "prose/paragraph_3",
+          "why": "Mechanism: the prose places this in fall 2031, but the world says US generic semaglutide launched only in Jan 2032. The programmes could not have given out generic pens then, and the event text names no other low-cost supply."
+        },
+        {
+          "quote": "phase 3 since 2029, filed Feb 2031 (an event in this window), approved Mar 2032 (13 months after filing) as Zepbound Preserve",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: a bimagrumab combination that entered phase 3 in 2029 is said to have 72-week DEXA body-composition data and a filing by Feb 2031. Enrolment plus 72 weeks of treatment leaves almost no room for that. The approval timing satisfies the envelope, but the development chain is compressed."
+        },
+        {
+          "quote": "Imported/counterfeit users fell from ≈3.1M to ≈1.0M as legal generics undercut mail order.",
+          "field": "world/population/note",
+          "why": "Mechanism: a 68% collapse of the gray market is credited to generics that only launched in Jan 2032, with $45 prices reached around September. Poison-centre calls fell just ~30% over the same period, so the two measures sit awkwardly together."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 7.0,
+        "inequality": 5.5,
+        "public_health": 5.0,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 9.0
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Price stops being the barrier, but employer-tied low-dose 'steady' programmes with adherence-linked credits, ~80% outcome gating and coverage that ends with the job raise autonomy harm sharply (interior_life/effect_on_work, state/conditioning). Anhedonia in ~3.2M low-dose users is unmeasured, and 'the strength problem, solved' marketing for a drug with no fracture data weakens people's ability to understand what is happening to them. Physical harms are roughly steady (bone excess slightly down, counterfeits down), so the world is recognisably harder rather than catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. Adoption is -2.5 pp, there is a semaglutide-only generic collapse, ~80% gating, a tirzepatide dementia indication, Preserve, the Novo scandal, the Baptist/Atlanta backlash and employer steady programmes. State action stays at none, and the DOJ settlement and label text follow from the scandal. mechanism: most chains are shown, but claim 1 (a generic pen supplied before generics existed) contradicts the timeline, claim 2 compresses phase 3 to filing, and claim 3 attributes a very fast gray-market collapse to generics. The scandal's effect on stops is asserted, though plausible. magnitude: all figures sit inside the envelope (12.1 current, 24.4 ever) and reconcile. The payer mix sums to 100% and gives 32.9M users, and the age bands, income thirds, cycling arithmetic (11.7/24.4 = 48%) and Bridge/Medicaid spend (~$2.0B and ~$3.3B) all multiply out; 'roughly half' for the public-spend fall is a loose phrase.",
+        "generativity": "The Kayla Brandt scene is concrete: the adherence app and green badge, the call coded RESOLVED with no code for what happened, Denise eating the whole bowl, the church bulletin, and the unmedicated-set flyer. The world fields supply many further characters and scenes, including call-centre workers, union organisers, 50–64 women who quit, Preserve users and cash users priced out of monitoring."
+      },
+      "plausibility": 8.15
+    },
+    {
+      "custom_id": "s3-L2-r29-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "A 4-year, ~11,000-patient prevention trial in people ≥55 with T2D/obesity and CVD read out Jan 2031",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a 4-year trial reading out in Jan 2031 must have started around early 2027, yet the 2030 pipeline_note never mentions it. It appears only as a convenient backfill to deliver the dementia driver, and the approval chain is asserted rather than shown."
+        },
+        {
+          "quote": "Within a year about a million workers were enrolled, alongside two million who buy 'calm' subscriptions themselves.",
+          "field": "prose/body",
+          "why": "magnitude: the scheme began at one call-centre operator and two logistics firms in Sept 2031. The 1.1M enrolment figure implies those firms are enormous, or that adoption spread far faster than the 'offering or piloting' survey supports."
+        },
+        {
+          "quote": "The top third's share fell fastest (18.5→14.5%).",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "mechanism: a 22% relative drop in the top third, during a year when cash prices fell to $45 and Lilly became the wealthy's brand, rests on 'principled quitting' by women 50–64. That is too small a group to explain it, so it is asserted rather than shown. It also sits oddly beside the 50–64 band being named as the biggest faller."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The drug is cheap and counterfeit harms have fallen, but employer-tied 'steady' programmes pay workers to stay on low doses while coverage ends with the job (effect_on_work, effect_on_intimacy). That is structural, normalised autonomy loss. Epistemic harm is notable because nobody measures anhedonia in ~3.2M low-dose users. Inequality has moved from a price gradient to a monitoring and job-stability gradient, and ~33.5M people are now off the drug with regain and cycling. The harm is serious but not extreme.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. Adoption is -2.5pp, generic collapse comes via patent settlements in an event, gating reaches ~80%, the dementia indication and Preserve are filed and approved within the approval rules, the Novo scandal is dated, there is a backlash with an SBC resolution, and employer-encouraged low dosing appears. No state action or new safety signal is contradicted. mechanism: most chains are shown (Novo documents to 50–64 women stopping, gating ejections, generics shrinking imports), but the unmentioned 2027-start dementia trial, the 1M-enrolment speed and the top-third collapse are asserted (claims 1–3). magnitude: the 12.1% current and 24.4% ever figures sit inside the envelope. Payer mix, cash-user breakdown, age bands, cycling (11.7/24.4 = 48%) and the Bridge ($2.0B) and Medicaid ($3.3B) spend all multiply out. The small gaps are that all 5.1M 65+ users are counted as Medicare and that ever-use growth is stated as 1.1M against ~1.6M by population arithmetic.",
+        "generativity": "The prose has a concrete protagonist with a Monday injection, an adherence app badge, call-centre calls with no code for what happened, a church bulletin and a bass-playing partner at an unmedicated set. These show the policy tensions (dose holidays against PDC credits, losing the doctor rather than the drug) through texture rather than explanation. The world fields also imply many further scenes: boycotts, Preserve users, steady-programme recruiters and the MDL trials."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "In the fall of 2031 a national call-centre operator and two logistics companies began offering every employee, of any weight, a free low-dose generic pen and a fifty-dollar monthly premium credit for refilling it on time.",
+        "field": "prose/body",
+        "why": "Fails mechanism: US generic semaglutide did not launch until Jan 2032, so a free generic pen in fall 2031 contradicts the world's own timeline. The 2031-09 event does not mention generics, so the prose and the event disagree."
+      },
+      {
+        "quote": "A 4-year, ~11,000-patient prevention trial in people ≥55 with T2D/obesity and CVD read out Jan 2031: incident all-cause dementia 4.9% vs 5.8% (HR ≈0.84, NNT ≈110), driven by vascular and mixed dementia.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Fails mechanism: a 4-year tirzepatide dementia trial would have started around 2027, yet the 2030 pipeline never mentions it. The trial is conjured to carry the dementia driver rather than derived from the parent world."
+      },
+      {
+        "quote": "Imported/counterfeit users fell from ≈3.1M to ≈1.0M as legal generics undercut mail order.",
+        "field": "world/population/note",
+        "why": "Fails mechanism: US generics existed for under a year, and Indian and Chinese mail-order pens at $4–25 still undercut $45–69. A two-thirds collapse in imports is asserted rather than shown, though it is not out of bounds in magnitude."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.83,
+      "inequality": 5.33,
+      "public_health": 4.83,
+      "cohesion": 5.67,
+      "epistemic": 6.33,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.5,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.82,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Price is no longer the barrier and counterfeit harms are falling, so this is mixed. Against that, employers pay workers to stay on low-dose reward modulation, with credits tied to refill adherence and coverage tied to the job (effect_on_work, intimacy). About 33.5M people are off the drug and regaining weight, nobody measures anhedonia in the ≈3.2M low-dose users, and ≈80% of employers gate. The harm is normalised and moderately hard to see from inside, but there is no collapse, so it sits around 5.5.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is -2.5pp, semaglutide generics arrive under settlements, gating reaches 80%, Preserve and the dementia label are approved, the Novo scandal runs through the DOJ settlement, and the backlash and employer-encouraged layers are both present. The FDA bone-label addition and the DOJ settlement sit slightly awkwardly against state_action none and safety_signal none, but the candidate says no new effect size. mechanism: The scandal-to-quit chain and the generic-to-spend-drop chain are shown. The fall-2031 'generic pen' prose contradicts the Jan 2032 generic launch, the dementia trial appears from nowhere, and the imports collapse is asserted (claims 1–3). magnitude: Current use 12.1 and ever-use 24.4 are inside the envelope. The income thirds average to the national figure, the age bands sum to ≈33M, and the payer mix, cash split and cycling arithmetic all reconcile. Bridge ($2.0B) and Medicaid ($3.3B) spending multiply out. Minor gaps: the Feb 2031 Preserve filing is not listed as an event, and 'roughly half' understates a ≈58% fall in public spend.",
+      "generativity": "The prose gives a full scene: Kayla's Monday pen, the ADHERENCE 94% badge, the Muskogee caller with no resolution code, Denise eating the whole bowl, the church bulletin, and Ray's unmedicated set. The adherence-versus-Saturday-music tradeoff is concrete. The JSON adds many other threads: SBC resolution, CWA boycott, dose-holiday negotiation, and 'payroll grey' as a genre."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.666,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 11
+  }
+}

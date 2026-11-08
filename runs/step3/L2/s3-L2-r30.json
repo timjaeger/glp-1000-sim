@@ -1,0 +1,552 @@
+{
+  "run_id": "s3-L2-r30",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 30,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 6.2,
+    "price_path": "managed_decline",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [
+      "mood_and_motivation"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "none",
+    "market_shock": "none",
+    "cultural_response": "backlash_body_politics",
+    "state_action": "none",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r30",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18696,
+        "output_tokens": 23391
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L2-r30",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 30374,
+        "output_tokens": 13768
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r30-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28578,
+        "output_tokens": 7995
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r30-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28578,
+        "output_tokens": 6774
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r30-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28578,
+        "output_tokens": 6307
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 20.8,
+      "us_adults_ever_used_pct": 33,
+      "by_income_third_pct": {
+        "top": 26,
+        "middle": 21,
+        "bottom": 15.4
+      },
+      "by_age_band_pct": {
+        "18_29": 12,
+        "30_49": 23,
+        "50_64": 33,
+        "65_plus": 13.5
+      },
+      "pediatric_under_18_on_drug_pct": 0.8,
+      "cycled_off_and_on_pct": 44,
+      "note": "FICTIONAL. Cycling arithmetic in one line: ever 33.0% − current 20.8% = 12.2% used and off now; 10.3 pts of current users are on a second or later course and ≈4.2 pts of the off-now group restarted at least once and stopped again, so (10.3+4.2)/33.0 = 44% cycled. The other figures check out as follows. Adults ≈272M, so ≈56.6M are current users, ≈33.2M have used and are off now, and ≈182M have never used. Ever-use rose 9.0 pts (≈24.5M first-time users), near the +9.2 cap. About 5.5 pts of those new users are still on, which is higher persistence than the 2028–30 cohorts. Two things explain it: low-dose 'quiet mind' starters get little GI trouble, and cash buyers face no adherence or response gates. The remaining 15.3 pts of current users come from the pre-2030 ever-user pool (15.3/24.0 = 64%, against 61% in 2030). Employer retreat produced a wave of involuntary stops in the 2032 plan year, and about two-thirds of those people restarted within months on the $149–179 cash portal or on imported pens. That is why restarts again outweigh new starts. Ages: 18–29 12% × 52M = 6.2M; 30–49 23% × 90M = 20.7M; 50–64 33% × 62M = 20.5M; 65+ 13.5% × 68M = 9.2M; total 56.6M = 20.8%. The 18–29 rise is mostly 'quiet mind' subscriptions, about 40% of whose users are under 35. Income thirds (≈90.7M each): top 26% = 23.6M, middle 21% = 19.0M, bottom 15.4% = 14.0M; total 56.6M. Of the ≈5.0M 'quiet mind' subscribers, ≈3.4M do not have obesity, and they are counted in the current-user figure. Imported and counterfeit users number ≈4.5M and are under-measured. The never-user group has shrunk to ~182M. It is concentrated among the uninsured rural poor, people refusing on conviction (estimated at 8–10M adults who say so in surveys), and older adults paused for bone reasons. Pediatric: ~0.8% of ≈73M under-18s ≈ 580k, mostly adolescents 12+ on semaglutide, with a small number of 15–17-year-olds obtaining 'quiet' subscriptions through parents' accounts. About one US child in four now lives with at least one parent who is on the drug or cycling off it."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "There is no new law. In Dec 2031 HHS and the manufacturers agreed a step-down: the Medicare Bridge successor rate and the Medicaid rate fall from $199 to $179/month from Jan 2032. The $50 Medicare beneficiary copay, the BMI/comorbidity criteria and the counselling visit with fall-risk screening are unchanged. Medicare (Part D diabetes/CV plus the Bridge) pays 15% of fills ≈ 8.5M users: ≈7.7M aged 65+ and ≈0.8M disabled under-65. Of these, ≈5.9M are on diabetes/CV codes and ≈2.6M use the Bridge for obesity. Bridge spend 2031 is ≈2.3M × $199 × 12 ≈ $5.5B; 2032 is ≈2.6M × $179 × 12 ≈ $5.6B, so more users at a lower rate leave spend roughly flat. Medicaid pays 8% of fills ≈ 4.5M users × $179 × 12 ≈ $9.7B gross federal plus state, before supplemental rebates. Medicaid obesity coverage is still state by state. The Indiana and Arkansas adherence waivers are unchanged.",
+      "employer_coverage_pct": 47,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 100+ semaglutide brands at $4–25/month. China: generic semaglutide and early tirzepatide copies, and Chinese API still underlies most of the gray trade. Canada: generic semaglutide at CAD 50–80/month, with Canadian pharmacies quietly serving US border-state buyers. Brazil, Mexico and Turkey have generic injectables and orals. The EU has had generic semaglutide since 2031 in several member states. US: the compound patent and pediatric exclusivity ran out in 2032, but 2031 Paragraph IV settlements on device and formulation patents set the first US generic semaglutide entry for January 2033. Tirzepatide is protected for years beyond that.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Managed decline continued while employers retreated. Dec 2031 federal direct-portal (TrumpRx) step-down: injectable semaglutide $199 → $179; tirzepatide $199–279 → $179–249; higher oral doses $199 → $179; oral starting doses held at $149; retatrutide direct $399 → $299. List prices are unchanged (Wegovy $1,349, retatrutide $1,499) and almost nobody pays them. Payer mix of ≈56.6M users: commercial 33% (18.7M), Medicare 15% (8.5M), Medicaid 8% (4.5M), cash/direct 36% (20.4M), imported/counterfeit 8% (4.5M) = 100%. Commercial coverage has moved to diagnosis codes. Of the 18.7M commercial users, ≈12.9M are covered through T2D (~9.0M), established CVD (~1.8M), OSA (~1.4M) or CKD/MASH (~0.7M). Only ≈5.8M are covered for obesity alone, through gated riders that ≈80% of the remaining 47% of covering employers gate. Diagnosis migration is visible: home sleep-apnea tests ordered by telehealth weight clinics more than doubled in 2031, and PBMs now audit OSA-coded starts. Cash/direct users (20.4M) at an average ≈$175 spend ≈20.4M × $175 × 12 ≈ $43B a year out of pocket, about ≈5.0M of it on 'quiet mind' subscriptions at $149–199. Some of that is reimbursed through lifestyle-spending accounts at tech, finance and logistics employers. The 503B exclusion and the 503A injunction stand. Imports still pass through the personal-importation gap."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg Wegovy dose)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'quiet mind' subscriptions ('Quiet', 'Even', 'Unhooked' and imitators): low-dose oral semaglutide or Foundayo for calm, focus and craving relief. About 5.0M subscribers, about two-thirds without obesity. Now sold through EAP and mental-wellness benefit platforms as well as direct to consumers",
+        "alcohol reduction, including EAP-referred prescribing (the subject of Lilly's 2032 sNDA)",
+        "smoking and vaping cessation, widely prescribed despite the 2029 CRL",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "pediatric under-12 use under specialist care",
+        "gambling, compulsive-shopping and 'doomscrolling' craving reduction, sold by some telehealth brands, still anecdotal",
+        "scheduled 'weekend-off' low-dose regimens designed around dose holidays"
+      ],
+      "pipeline_note": "FICTIONAL. No new class or indication reached the US market this step. The mood_and_motivation driver is realised through marketing, which rules allow, and a filing. Telehealth brands built 'quiet mind' into a mainstream off-label category. In Sep 2032 Lilly filed an sNDA for low-dose orforglipron (Foundayo) to reduce heavy-drinking days in alcohol use disorder, with SHAPS anhedonia and motivation endpoints the FDA had asked for in the 2029 smoking CRL. The decision can come no earlier than Sep 2033. Novo's repeat smoking-cessation trial is enrolling; resubmission is not expected before 2033. Amgen's MariTide (filed Apr 2030) received a CRL in Mar 2031 requesting longer lean-mass and BMD data plus a device-manufacturing fix; it was resubmitted Jun 2032 with a decision expected 2033. Survodutide was resubmitted in 2031; FDA extended the review for 104-week DEXA data, with a decision in 2033. Amycretin: Novo withdrew and plans to resubmit with 104-week fracture and DEXA data in 2033. Bimagrumab combinations are still in phase 3. Bone agents are now standard companion prescriptions for long-term users over 50 with osteopenia. Incretin market ≈$128B in 2032: US users up ~44% against 2030, US net price down a further ~8–10%, ex-US revenue eroding as generics spread in the EU, and the Jan 2033 US semaglutide generic entry already priced into Novo's guidance."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common class effect and the leading cause of voluntary discontinuation. Low-dose 'quiet mind' users report it less. Re-escalation after dose holidays and involuntary coverage stops brings a recurring wave of GI complaints.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; tracks retatrutide volume.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. Counterfeit-product cases still confound reporting.",
+        "regulatory_response": "Labelled; MDL litigation ongoing, with bellwether trials scheduled for 2033."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Unchanged in kind. Lean mass accounts for ~30–40% of loss in users over 50 who do not resistance-train. Concern now extends to cash-pay users, who have no monitoring requirement and are less likely to get body-composition assessment than gated or Medicare users.",
+        "regulatory_response": "2028 class label and 2029 joint guidance retained. Medicare counselling visit retained. No new statute."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "No new signal. The existing excess grows with exposure: ≈4.0M 65+ users on >2 years × ~0.6%/yr baseline hip-fracture rate × 0.35 excess ≈ 8,400 excess hip fractures a year, against ~305,000 total. The ~1.2× signal in cycling postmenopausal women 50–64 replicated in claims data at similar magnitude. DEXA waits have eased to 4–6 weeks in most regions as mobile and gym-based scanners spread.",
+        "regulatory_response": "Class labelling and 2029 DEXA guidance retained. FDA requires bone endpoints in new filings (cited again in the MariTide CRL). The DOJ civil matter against Novo is unresolved."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention; no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association in updated reviews, including among low-dose 'quiet mind' users in one 2032 claims analysis.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, 'the grey')",
+        "status": "emerging",
+        "prevalence_note": "The final retatrutide postmarketing SHAPS report (2031) matches the interim: ~11–13% of top-dose users cross a clinically meaningful anhedonia threshold versus ~5% of comparators. It is dose-dependent and observational. There is still no systematic measurement among ~5.0M low-dose 'quiet mind' subscribers. Complaint has become common: in a 2032 national survey, 38% of current users say they have taken a deliberate dose holiday, and 'feeling flat' is the second most cited reason after GI effects.",
+        "regulatory_response": "No label change. FTC warning letters continue (five more in 2031–32) over 'anxiety relief' and 'focus' claims. FDA required SHAPS endpoints in Lilly's AUD filing."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. The 2032 plan-year employer retreat caused a large one-time wave of involuntary stops, and many of those users restarted on cash within months. Scheduled dose holidays cause small weight swings.",
+        "regulatory_response": "None directly. Indiana waiver litigation still pending in the Seventh Circuit."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D, calcium and protein signals persist in high-loss and older users. Unmonitored cash and imported users are the least assessed.",
+        "regulatory_response": "Professional guidance (protein ≥1.2 g/kg; vitamin D/calcium assessment); no FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~7 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up. Cycling still looks worse for bone than continuous use. The first adolescent bone-accrual interim analysis is due 2033. Dose holidays as a deliberate practice have not been studied.",
+        "regulatory_response": "Postmarketing requirements; pediatric bone-accrual studies ongoing."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "A chronic problem rather than a shock. Poison-centre calls involving mail-order or counterfeit incretins rose a further ~25% from 2030 to 2032 as imported users grew to ≈4.5M. Endotoxin and injection-site infections from Chinese-sourced vials are still scattered. There has been no mass-casualty cluster since Aug 2029.",
+        "regulatory_response": "Import alerts, consumer pen-authentication guidance and parcel seizures continue. No prosecution of individuals and no new law."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "Fall-related ED visits remain elevated in 65+ users with >2 years' use. Confounding is still not separated.",
+        "regulatory_response": "In the 2029 joint guidance and the CMS Bridge counselling template."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "At 20.8% current use, salty-snack and confectionery volume is falling ~3–4% a year. Convenience-store impulse sales (candy, single-serve soda, chips at the register) fell hardest, and 'quiet mind' users, many of them lean, cut impulse buying, not just calories. Protein, fibre and 'bone-forward' fortified lines keep growing. Two large packaged-food companies sold confectionery brands to private equity, which runs them for cash. The 'real food, full portion' heritage niche keeps growing in the South and among backlash shoppers. No major category disappeared.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Contracting for a fifth straight year in US spirits volume, and beer is now soft too. 'Quiet' subscriptions are explicitly sold against 'the second glass', and EAP alcohol-reduction prescribing is routine. One partial offset: dose-holiday weekends bring a measurable Friday–Saturday on-premise bump, and some bars run 'holiday hours'. Tobacco and vape volumes keep falling faster than pre-incretin trend.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Weekday traffic is flat to down. Weekends hold up, helped by dose-holiday diners. Half portions, gram-priced bowls and on/off menus are standard. Buffet and value-volume chains keep closing units. 'No-gram' independents in Atlanta, Memphis and Houston have become a small regional category, and two have opened second locations in Dallas and Birmingham.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn keeps rising. The employer retreat and holiday cycling keep sizes moving both ways. Resale and rental platforms take more volume. Plus-size specialists are stable and lean into the body-sovereignty market.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Still growing on bone and muscle concerns: prescribed lifting, DEXA-plus-coaching chains, Medicare Advantage strength benefits. Cash-pay users are a new target for 'monitoring bundles' (DEXA, labs, coaching at $49–99/month) sold to people whose employer no longer covers anything.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage for weight management fell from 63% to 47%. The main mechanism: the $149–179 cash portal price is close to the PBM net of ≈$160–175, so benefits managers stopped seeing a reason to pay for a drug employees could buy themselves. Gating added administrative cost and generated ADA complaints. Bone-related claims added to modelled cost. And savings did not show up within typical 3–4-year job tenures. The big three PBMs made diagnosis-anchored formularies the 2032 default. Obesity-only coverage became an optional gated rider, kept mostly by large employers, unions and DOT-regulated fleets. Pharmacy trend fell to ~+3–4%. Plans now audit OSA-coded starts and prediabetes-to-T2D coding.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Volume growth continues: US users are up ~44% against 2030, now mostly cash and direct. Lilly dominates through tirzepatide, retatrutide and Foundayo, and its direct channel is now one of the largest US pharmacies by script count. Novo is preparing for US generic semaglutide in January 2033 and is pushing Wegovy pill and CagriSema. Telehealth 'quiet mind' brands are a fast-growing distribution layer buying mostly Foundayo and oral semaglutide at portal prices. Bone-agent and DEXA suppliers keep growing.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug no longer says much, because one adult in five is. What carries meaning now is how you pay and how you are monitored. Being 'coded' (covered through a diabetes, heart or sleep-apnea diagnosis) reads as sick-but-insured. 'Cash' reads as a self-directed professional or someone stretching to afford it. 'Imported' reads as poor or defiant. A lean person on 'Quiet' has a new look, slightly slowed and unbothered, and coworkers learn to recognise it. Trained shoulders still mark doing it right; the stooped, thin-armed look still marks doing it too long without help.",
+      "thinness_and_class": "In use the gradient is unchanged (top 26%, bottom 15.4%), but the gap in quality widened. The top third gets coded coverage or pays cash, adds DEXA and coaching bundles, and adds a 'Quiet' subscription through a lifestyle account. The middle third was hit hardest by the employer retreat: families now pay $179 a month per adult and drop the scans. In the bottom third the drug comes through Medicaid in some states, through the Indiana and Arkansas waivers with their weigh-in kiosks, or as a $20 Indian pen in the mail.",
+      "eating_as_ritual": "Weekday eating is small and protein-first. Weekends have changed: dose holidays turn Friday dinners, birthdays and Sunday tables back into full meals, and hosts ask 'are you on this weekend?' Church potlucks and 'no-gram' rooms remain heritage spaces, and in the Tulsa–Dallas corridor some congregations ask members to come to communion meals 'unmedicated'.",
+      "dating_and_intimacy": "Profiles list on/off/holiday schedules and, increasingly, 'Quiet' status. 'Unmedicated' is an identity filter in backlash communities and now also a joke in mainstream apps. Advice columns have moved on from 'my partner is less fun' to arguments over whose weekend is a holiday weekend.",
+      "meaning_of_appetite": "Appetite is medicalised for most people, optional for some and sacred to a few. The backlash is larger and better organised, and it is still split. Atlanta's Black women's body-sovereignty collectives frame the drug as a test of whose bodies employers will pay to change, and the 2032 coverage pullback, which hit service and education workers first, gave them a material argument. Southern Baptist and Pentecostal congregations added 'chemical contentment' to 'appetite is a gift', aimed at the 'Quiet' brands. The 'natural metabolic' supplement trade grew alongside them. The three strands share stages and little else.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Final retatrutide postmarketing SHAPS data: ~11–13% of top-dose users cross a clinically meaningful anhedonia threshold versus ~5% of comparators (observational, dose-dependent). Among ~5.0M low-dose 'quiet mind' subscribers there is still no independent measurement. In a 2032 national survey of current users, 38% report at least one deliberate dose holiday, and about one in five cites 'feeling flat' or 'the grey' as a reason. Vendors now sell scheduled 'weekend' plans, which in effect make the complaint part of the product.",
+      "framing": "Both a feature and a complaint, and nobody officially calls it treatment. Brands sell 'quiet mind'. Users say 'the grey', and some of them pay for it on purpose. Clinicians say 'dose-dependent reward modulation' and increasingly prescribe holidays themselves. The FTC calls the claims unsubstantiated. Lilly's AUD sNDA is the first attempt to give part of the effect an indication.",
+      "effect_on_work": "Mental-wellness benefit platforms offer 'Quiet' tracks under EAP budgets at tech, finance and some logistics firms. Managers in call centres and claims processing describe 'Quiet' teams as steadier and harder to motivate with incentives. Sales and hospitality workers schedule dose holidays around quarter-end pushes and holiday service. With coverage gone for most obesity-only workers, employers see less adherence data, so private surveillance shrank even as the drug spread. Unions in remaining covered plans negotiate holiday-tolerant adherence rules.",
+      "effect_on_art_and_play": "'Off-dose' has become a genre label and a marketing line: Nashville writing rooms, touring comedians and an Atlanta gospel-soul label that advertises 'unmedicated sessions'. Streaming playlists tagged 'for the grey', loud, bright and fast, are a recognised mood. Weekend-holiday culture sustains festivals, late bars and competitive eating as a novelty. Fan arguments about whether an artist's new work is 'Quiet' are routine.",
+      "effect_on_intimacy": "Sex therapists ask about dose schedule first. Couples align their holiday weekends. Mismatched schedules, one partner holidaying and one not, are the most common new complaint in couples counselling. Backlash churches run marriage retreats that ask both spouses to come off.",
+      "effect_on_politics": "Cost and coverage dominate. The employer pullback put $179-a-month cash bills into the household-budget messaging of both parties, and the January 2033 generic date is a campaign promise waiting to happen. Body-sovereignty, religious-natural and disability groups now run a joint voter guide in Georgia and Texas on gating and coverage. They disagree on whether to demand cheaper drugs or no drugs. Consultants openly discuss 'Quiet' voters as lower-turnout and less reactive to outrage messaging, but there are no validated turnout data.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "No new state action. The FDA is still slow and data-demanding: a CRL for MariTide, extended review for survodutide, and SHAPS endpoints required in the AUD filing. Import enforcement is still selective: alerts, seizures, warnings, and no prosecution of individuals. The FTC acts on advertising only. Congress held two hearings on 'quiet mind' marketing and passed nothing.",
+      "subsidy_or_mandate": "No mandate. The managed decline runs through the existing channels: the federal direct portal at $149–249 and the Medicare Bridge successor plus Medicaid at $179 from Jan 2032, with the $50 Medicare copay unchanged. Medicaid obesity coverage is still state by state.",
+      "conditioning_or_surveillance": "Public conditioning is unchanged: the Indiana and Arkansas 1115 waivers (≥80% PDC, quarterly verified weigh-ins, two misses = 12 months off) and wellness rules allowing BMI-linked surcharges up to 30% of premium. Private conditioning reaches fewer people because fewer employers cover obesity, but ≈80% of the remaining riders gate. A new low-grade surveillance has appeared: PBM audits of diagnosis codes, mainly OSA and prediabetes, used to qualify for coverage.",
+      "workforce_or_military": "DOT sleep-apnea screening keeps tirzepatide covered for many drivers through the OSA code, so fleets are among the last obesity-adjacent coverers. Some fleets add DEXA for drivers over 55. Army accession policy on GLP-1 use is unchanged and still contested.",
+      "geopolitics_of_supply": "India and China supply the gray market of ≈4.5M US users. India–US trade talks still treat mail-order pharma as a bargaining chip. Congressional rhetoric frames Chinese API as a security issue but has produced no law. Section 232 tariffs remain, and the Dec 2031 step-down again traded price cuts for domestic-capacity credits. Canadian generic semaglutide quietly serves border-state buyers.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2031-03",
+        "event": "FDA issues a complete response letter for Amgen's monthly MariTide, asking for longer lean-mass and bone-density data and a device fix; survodutide's review is extended for 104-week DEXA results, so no new incretin class reaches the US market before 2033",
+        "driver": "next_gen_launch: none; safety_signal: none"
+      },
+      {
+        "date": "2031-06",
+        "event": "Express Scripts, CVS Caremark and Optum make 'diagnosis-anchored' GLP-1 formularies the default for 2032 plan years, covering diabetes, cardiovascular, sleep-apnea, kidney and liver codes and moving obesity-only coverage to an optional rider; by the January renewal season employer weight-management coverage has fallen from 63% to 47%, and telehealth home sleep-test orders more than double",
+        "driver": "coverage_shift: employer_retreat"
+      },
+      {
+        "date": "2031-06",
+        "event": "The Southern Baptist Convention adopts a resolution calling appetite 'a gift of God' and warning against 'chemical contentment', aimed at 'quiet mind' subscriptions; Atlanta's Whole Appetite coalition answers with a voter guide on coverage cuts that hit teachers and service workers first",
+        "driver": "cultural_response: backlash_body_politics"
+      },
+      {
+        "date": "2031-12",
+        "event": "HHS, Lilly and Novo announce a second step-down: portal injectable semaglutide and higher oral doses to $179, tirzepatide to $179–249, retatrutide direct to $299, and Medicare and Medicaid to $179 from January 2032; oral starting doses stay at $149 and the $50 Medicare copay is unchanged",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2032-02",
+        "event": "After subscriber complaints about 'the grey', telehealth brand Quiet launches a 'Weekend' plan with built-in Friday–Sunday pauses; a national survey finds 38% of current GLP-1 users have taken a deliberate dose holiday",
+        "driver": "personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2032-09",
+        "event": "Lilly files to add alcohol use disorder to low-dose orforglipron's label, with anhedonia and motivation endpoints; about five million Americans already take low-dose pills off-label for a 'quiet mind', and the FDA decision is due no earlier than autumn 2033",
+        "driver": "new_indications: mood_and_motivation"
+      }
+    ],
+    "open_tensions": [
+      "US generic semaglutide arrives in January 2033. By then about 20M Americans pay cash at $149–249 for brand product, 4.5M use imports, and employers have just stopped paying. Nobody knows whether generics will pull imported users back into regulated supply, push brand portal prices below $149, or let PBMs bring obesity-only coverage back at generic prices.",
+      "About 5M people, roughly two-thirds without obesity, take low-dose incretins for a 'quiet mind' through EAP platforms and cash subscriptions, ahead of any indication. The only regulatory test is Lilly's AUD filing, judged on the same anhedonia endpoints that make the effect marketable. Approval would legitimise part of the market and would also give the FTC and plaintiffs a reference standard.",
+      "The two tiers are drifting apart on safety. Coded and Medicare users get DEXA, counselling and fall screening. Cash and imported users, now nearly half of all users, get none, while the bone excess grows with exposure and dose holidays and involuntary stops add more of the cycling the cohorts link to fractures. PBM audits of OSA and prediabetes coding put pressure on the one route back into covered care.",
+      "The backlash coalition has a material grievance in the coverage pullback and a moral one in 'quiet mind' marketing, and it holds a joint voter guide in Georgia and Texas. It still cannot agree on whether to demand cheaper drugs or refuse them, and the 2033 generic date will force the question."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is sold in the US; under the 2031 settlements the first semaglutide generic entry is January 2033.",
+      "Oral starting doses of the Wegovy pill and Foundayo are still $149 a month cash through the federal direct-pricing portal (launched as TrumpRx) and manufacturer direct channels.",
+      "The Indiana and Arkansas Medicaid 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with two misses ending coverage for 12 months, and the disability-rights litigation in the Seventh Circuit is unresolved.",
+      "The Medicare beneficiary copay for Bridge-successor GLP-1 obesity coverage is still $50 a month, and the counselling-visit requirement is retained.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "One in five Americans is on it, and the boss has stopped paying. Inside the $179 cash-pay nation, quiet on weekdays and hungry on weekends",
+    "world_in_600_words": "At the end of 2032 about one American adult in five takes an incretin drug, roughly fifty-seven million people. Two years ago it was one in seven. There was no new molecule, because the FDA sent every candidate back for more bone scans. A falling price did the work, and so, oddly, did employers who stopped paying for it. In December 2031 the government and the two manufacturers agreed a second step-down on the federal direct portal: weekly semaglutide and the higher oral doses at $179, tirzepatide from $179, starter pills still at $149. Medicare and Medicaid now pay $179, and Medicare patients still pay a $50 copay.\n\nAt that price benefits managers did the maths and pulled back. If an employee can buy the drug for about what a plan pays net, the reasoning went, why run weigh-ins, adherence tracking and disability complaints to cover it? The big pharmacy-benefit managers made diagnosis-anchored formularies the default. Diabetes, heart disease, sleep apnea, kidney and liver codes stay covered. Obesity alone became an optional rider, and fewer than half of employers kept it. Most people who lost coverage in January did not stop for long. They moved to the portal and paid out of pocket. Cash buyers are now more than a third of all users and spend about forty billion dollars a year. Another four and a half million inject pens mailed from India or China, which cost a tenth as much and come with no prescriber.\n\nThe result is two systems that look alike from the outside. People who are coded, meaning covered through a diagnosis, and Medicare patients get counselling visits, fall screening and DEXA scans. Cash buyers mostly get a box in the mail. Older long-term users still break hips about a third more often than they otherwise would, and with more of them that now means roughly eight thousand extra hip fractures a year. No new safety signal emerged, only the old ones growing with exposure. Telehealth weight clinics started ordering home sleep-apnea tests at twice the old rate, and insurers started auditing the codes.\n\nThe quieting effect stopped being a secret and became a common complaint. About five million people take low-dose pills sold as 'Quiet', 'Even' or 'Unhooked', for calm and focus and for less pull towards a drink or a phone. Roughly two-thirds of them have no weight problem, and some get the pills through employee-assistance platforms. They have a name for the downside, 'the grey', and a remedy: holidays. Thirty-eight percent of current users say they have deliberately skipped doses, and Quiet now sells a Weekend plan with the pauses built in. Bars see a Friday bump. Hosts ask guests whether they are on this weekend. Couples counsellors deal with partners whose holiday schedules don't match. In September Lilly filed to have low-dose Foundayo approved for heavy drinking, measured partly on the same pleasure scale that worries clinicians. A decision is a year away at least.\n\nThe counter-movement has grown. Atlanta's body-sovereignty collectives had argued about dignity. The coverage cuts, which hit teachers and service workers first, gave them an argument about money. The Southern Baptist Convention warned against 'chemical contentment'. Supplement sellers make money from both sides. Together these groups publish a voter guide in Georgia and Texas, and they still cannot agree whether they want the drugs cheaper or gone.\n\nSpirits fell for a fifth year. Snack aisles shrank and gyms filled. Everyone is waiting for January 2033, when the first US generic semaglutide is due, and nobody knows whether it will bring employers back, clean up the gray market, or just make the cash tier larger.",
+    "a_day_in_the_life": "Renee Castillo, fifty-three, does payroll for the Northside school district in San Antonio. The district dropped its obesity rider in January, and her own payslip was the first she processed under the new plan. She pays $179 for the tirzepatide herself now, on the portal, with the debit card she used to keep for groceries.\n\nShe injects on Tuesdays before work. This week she does it standing at the kitchen counter, under the calendar where her husband Hector has written HOLIDAY across Saturday and Sunday in red marker. His sister's quinceañera is that weekend, for her granddaughter.\n\nAt lunch the front-office women eat cottage cheese and talk about Marisol from transportation, who got her sleep test approved. \"She snores,\" someone says, \"apparently.\"\n\nThe gym near the H-E-B has put a sticker on its window: DEXA + COACHING $79. Renee slows down when she passes it. The last scan she had was in 2030, when the plan still paid, and the letter called her hips \"low normal.\" She works out what $79 comes to over a year, then what $179 comes to, and drives on.\n\nHer son Danny calls from Austin. He started on Even through his company's wellness account, and he says he feels good, steady. He doesn't laugh at her story about Marisol. He doesn't really laugh at anything.\n\nAt night she sets out Saturday's dress. The waist has room in it, which she likes. She thinks about tamales, the real ones from his sister's kitchen, and about whether she will want them by Saturday.\n\nShe hopes she will."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r30-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The main mechanism: the $149–179 cash portal price is close to the PBM net of ≈$160–175, so benefits managers stopped seeing a reason to pay for a drug employees could buy themselves.",
+          "field": "world/economy/insurance/state",
+          "why": "mechanism: the 2030 world had a nearly identical price relationship ($199 portal vs $170–190 PBM net), and employer coverage rose then, from 58% to 63%. The stipulated retreat is therefore explained by a gap that had barely changed."
+        },
+        {
+          "quote": "Of the 18.7M commercial users, ≈12.9M are covered through T2D (~9.0M), established CVD (~1.8M), OSA (~1.4M) or CKD/MASH (~0.7M).",
+          "field": "world/access/note",
+          "why": "mechanism: commercial users stay flat (18.5M to 18.7M) while employer obesity coverage drops 16 points. That requires a large, quick migration into diagnosis-coded coverage, which rests on one stat (home sleep tests 'more than doubled') and is not shown."
+        },
+        {
+          "quote": "In Sep 2032 Lilly filed an sNDA for low-dose orforglipron (Foundayo) to reduce heavy-drinking days in alcohol use disorder, with SHAPS anhedonia and motivation endpoints the FDA had asked for in the 2029 smoking CRL.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: no pivotal trial, start date or sponsor decision is shown that would produce a complete AUD dossier with new anhedonia endpoints in under two years. Whether an AUD filing really realises 'mood_and_motivation' is also thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "A harder, more stratified society: employer retreat pushes about 20M people into $179/month cash, and cash and imported users (nearly half of all users) get no DEXA or counselling while excess hip fractures grow to about 8,400 a year. Reward blunting is normalised ('the grey', weekend plans, with 'Quiet' users described as flat) and has no independent measurement. Offsets keep it near 5: private surveillance shrank, no mass-casualty event occurred, and the prevalence of harm is modest and nameable.",
+        "plausibility": "driver_fidelity: All drivers are visible. Adoption lands at 20.8% and employer coverage falls 63→47% via the PBM diagnosis-anchored formulary event. The backlash is present and personality_layer reads as mainstream_complaint. mood_and_motivation is realised only through marketing and an AUD sNDA filing, which is allowed but a loose fit. mechanism: The employer-retreat chain is shown (portal price, gating costs, tenure), as are cash restarts and diagnosis migration. The first two least-plausible claims are weak links: the price-gap logic is unchanged from 2030, and the commercial user count stays flat. The AUD filing has no trial path shown. magnitude: Current use 20.8% and ever-use 33.0% are inside the envelope, with ever-use near the cap. Payer mix, age bands, income thirds, Medicare 8.5M, Bridge spend ($5.6B), Medicaid ($9.7B), cash ($43B) and hip-fracture arithmetic all reconcile. Approval and generic timing obey the rules (first generic Jan 2033).",
+        "generativity": "The Renee Castillo scene is rich: the HOLIDAY marker on the calendar, the $79 DEXA sticker set against $179, the sleep-test gossip, and her son Danny who 'doesn't really laugh at anything'. The world fields imply many more scenes, including dose-holiday hosting, EAP 'Quiet' tracks, the Atlanta and Tulsa–Dallas backlash, and PBM audits. Some secondary characters stay thin."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s3-L2-r30-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "About 5.5 pts of those new users are still on, which is higher persistence than the 2028–30 cohorts.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 5.5 of 9.0 new-user points still on implies about 60% persistence, against the parent's ~35% one-year persistence. The offered explanation (low-dose starters, no gates) is asserted, and the employer gates being removed would more plausibly raise churn."
+        },
+        {
+          "quote": "her husband Hector has written HOLIDAY across Saturday and Sunday in red marker",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: Renee injects weekly tirzepatide on Tuesdays, and skipping Saturday and Sunday does nothing to a long-half-life weekly drug. The weekend-holiday device only makes pharmacological sense for daily oral low-dose products, so the prose contradicts its own world logic."
+        },
+        {
+          "quote": "38% of current users say they have taken a deliberate dose holiday",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: a jump to mass deliberate holidaying is asserted by one survey figure, with no chain from the 2030 baseline, in a population where most users are on weekly injectables. It also sits awkwardly with 'two-thirds restarted' stories and the cycling-fracture warnings."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "One adult in five is on the drug, and the safety gap now splits along payer lines: coded and Medicare users get DEXA and counselling, while cash and imported users, about 44% of all users, get none. Excess hip fractures grow to ~8,400 a year, and the employer retreat pushes the middle third into $179 cash bills (world/body_and_culture/thinness_and_class). About 5M 'quiet mind' subscribers have no independent measurement of reward blunting. Conditioning shrinks, but private surveillance is replaced by code audits. That is a recognisably harder society with new losers rather than a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption lands at 20.8%, employer coverage falls 63→47% by the June 2031 PBM event, the mood indication appears only as a filing, and no new safety signal, state action or market shock appears. Managed decline continues to $179. mechanism: The employer retreat chain is shown (cash price ≈ PBM net, a diagnosis-code workaround, OSA test migration). Weaker points are the ~60% persistence of new starters, the asserted 38% dose-holiday figure, and Renee's weekly injection set against a weekend holiday. magnitude: Current use 20.8% is inside the 18.8–22.8 envelope. Ever-use 33.0% sits at the 33.2 edge. The age, income, payer-mix, Medicare/Medicaid spend and cash-spend arithmetic all reconcile, and the pipeline timings and Jan 2033 generic date respect the rules.",
+        "generativity": "The Renee Castillo vignette implies a household, a husband, a son on 'Even', an office, a gym sticker and a quinceañera. Details such as the HOLIDAY marker, the $79 vs $179 arithmetic and 'the grey' show rather than explain. The world adds on/off/holiday dating profiles, 'unmedicated' communion meals and the Whole Appetite voter guide. A flaw is that the weekend-holiday device clashes with a weekly injection."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s3-L2-r30-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Incretin market ≈$128B in 2032: US users up ~44% against 2030, US net price down a further ~8–10%, ex-US revenue eroding as generics spread in the EU",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the 2030 market was ≈$118B. US users up 44% and net price down 8–10% imply roughly +30% US revenue, and ex-US is eroding. A total of only +8.5% does not reconcile, and cheap low-dose cash volume is not shown to close the gap."
+        },
+        {
+          "quote": "about two-thirds of those people restarted within months on the $149–179 cash portal or on imported pens",
+          "field": "world/population/note",
+          "why": "Mechanism: the restart rate is asserted with no support. Commercial users stay flat (18.5M to 18.7M) while employer coverage falls from 63% to 47%, which is hard to square with a retreat large enough to cause a one-time wave of involuntary stops."
+        },
+        {
+          "quote": "Hector has written HOLIDAY across Saturday and Sunday in red marker.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: Renee injects weekly tirzepatide on Tuesday, and its half-life of about 5 days means a weekend pause does nothing pharmacologically. The 'Weekend plan' and the 'Friday-Saturday bump' have the same problem for oral semaglutide, whose half-life is about a week. The dose-holiday culture is asserted, not shown to work."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with a stratified two-tier system. Coded and Medicare users get DEXA and counselling. Roughly 25M cash and imported users get no monitoring while bone excess grows to about 8,400 hip fractures a year (safety_ledger, open_tensions). The middle third is hit hardest by the coverage pullback, and 'quiet mind' use among about 3.4M non-obese people is unmeasured. Private surveillance shrinks, which tempers autonomy harm, and there is no mass-casualty event, so the overall score sits at 6.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Current use is 20.8% (14.6 + 6.2), employer coverage falls from 63% to 47%, and the managed-decline step-down is shown. The mood driver is realised through a filing and marketing, but the Lilly AUD sNDA is a slightly oblique fit for 'mood_and_motivation'. mechanism: The employer-retreat chain is shown (cash price close to PBM net, ADA complaints, tenure mismatch, diagnosis migration), but several links are asserted. These are the unsupported 'two-thirds restarted' claim, higher new-user persistence, flat commercial users despite the retreat, and the weekend dose-holiday pharmacology in the Renee scene. magnitude: Almost everything reconciles, including ages, income thirds, payer mix, Medicare and Medicaid spend, cash spend, the hip-fracture arithmetic and the 44% rise in users. Ever-use of 33.0 sits at the envelope edge, and the $128B market figure does not match the stated user and price changes.",
+        "generativity": "The prose Renee scene is strong: payroll at a school district, HOLIDAY in red marker, the $79 DEXA sticker, and Danny on 'Even' who doesn't laugh anymore. The world state adds weekend-holiday bars, OSA-code audits, gospel-soul 'unmedicated sessions' and couples on mismatched schedules. These imply many characters and scenes."
+      },
+      "plausibility": 7.2
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The main mechanism: the $149–179 cash portal price is close to the PBM net of ≈$160–175, so benefits managers stopped seeing a reason to pay for a drug employees could buy themselves.",
+        "field": "world/economy/insurance/state",
+        "why": "mechanism: the 2030 world had a nearly identical price relationship ($199 portal vs $170–190 PBM net), and employer coverage rose then, from 58% to 63%. The stipulated retreat is therefore explained by a gap that had barely changed."
+      },
+      {
+        "quote": "Of the 18.7M commercial users, ≈12.9M are covered through T2D (~9.0M), established CVD (~1.8M), OSA (~1.4M) or CKD/MASH (~0.7M).",
+        "field": "world/access/note",
+        "why": "mechanism: commercial users stay flat (18.5M to 18.7M) while employer obesity coverage drops 16 points. That requires a large, quick migration into diagnosis-coded coverage, which rests on one stat (home sleep tests 'more than doubled') and is not shown."
+      },
+      {
+        "quote": "In Sep 2032 Lilly filed an sNDA for low-dose orforglipron (Foundayo) to reduce heavy-drinking days in alcohol use disorder, with SHAPS anhedonia and motivation endpoints the FDA had asked for in the 2029 smoking CRL.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: no pivotal trial, start date or sponsor decision is shown that would produce a complete AUD dossier with new anhedonia endpoints in under two years. Whether an AUD filing really realises 'mood_and_motivation' is also thin."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 5.0,
+      "inequality": 6.33,
+      "public_health": 5.83,
+      "cohesion": 5.17,
+      "epistemic": 5.83,
+      "overall": 5.77
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.83,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.65,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "A harder, more stratified society: employer retreat pushes about 20M people into $179/month cash, and cash and imported users (nearly half of all users) get no DEXA or counselling while excess hip fractures grow to about 8,400 a year. Reward blunting is normalised ('the grey', weekend plans, with 'Quiet' users described as flat) and has no independent measurement. Offsets keep it near 5: private surveillance shrank, no mass-casualty event occurred, and the prevalence of harm is modest and nameable.",
+      "plausibility": "driver_fidelity: All drivers are visible. Adoption lands at 20.8% and employer coverage falls 63→47% via the PBM diagnosis-anchored formulary event. The backlash is present and personality_layer reads as mainstream_complaint. mood_and_motivation is realised only through marketing and an AUD sNDA filing, which is allowed but a loose fit. mechanism: The employer-retreat chain is shown (portal price, gating costs, tenure), as are cash restarts and diagnosis migration. The first two least-plausible claims are weak links: the price-gap logic is unchanged from 2030, and the commercial user count stays flat. The AUD filing has no trial path shown. magnitude: Current use 20.8% and ever-use 33.0% are inside the envelope, with ever-use near the cap. Payer mix, age bands, income thirds, Medicare 8.5M, Bridge spend ($5.6B), Medicaid ($9.7B), cash ($43B) and hip-fracture arithmetic all reconcile. Approval and generic timing obey the rules (first generic Jan 2033).",
+      "generativity": "The Renee Castillo scene is rich: the HOLIDAY marker on the calendar, the $79 DEXA sticker set against $179, the sleep-test gossip, and her son Danny who 'doesn't really laugh at anything'. The world fields imply many more scenes, including dose-holiday hosting, EAP 'Quiet' tracks, the Atlanta and Tulsa–Dallas backlash, and PBM audits. Some secondary characters stay thin."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.366,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 22
+  }
+}

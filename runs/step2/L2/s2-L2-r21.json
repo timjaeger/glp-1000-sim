@@ -1,0 +1,535 @@
+{
+  "run_id": "s2-L2-r21",
+  "step": 2,
+  "year": 2030,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 21,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 8.2,
+    "price_path": "stalled",
+    "coverage_shift": "public_expansion",
+    "new_indications": [
+      "longevity_wellness",
+      "alcohol_use_disorder"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "muscle_preserving_combo",
+    "market_shock": "none",
+    "cultural_response": "normalisation",
+    "state_action": "workforce_military",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L2-r21",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16755,
+        "output_tokens": 21613
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_019ahX37We8zkkKyAMvmBPHB",
+        "custom_id": "s2-L2-r21",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 27471,
+        "output_tokens": 10736
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r21-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23860,
+        "output_tokens": 7716
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r21-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23860,
+        "output_tokens": 7961
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r21-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 23860,
+        "output_tokens": 7382
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/interior_life: 'severity' is a required property"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US. Generic liraglutide is still the only generic incretin on the US market, and exclusivity still runs to roughly 2031–32.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "Novo Nordisk and Eli Lilly are still the only sellers of branded incretins in the US. Lilly still leads on efficacy.",
+      "The suicidal-ideation warning removed in January 2026 is still off the Wegovy, Zepbound and Saxenda labels, and the 503B compounding exclusion finalised from the April 2026 proposal still stands."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 24.5,
+      "us_adults_ever_used_pct": 31,
+      "by_income_third_pct": {
+        "top": 29,
+        "middle": 25,
+        "bottom": 19.5
+      },
+      "by_age_band_pct": {
+        "18_29": 14,
+        "30_49": 24,
+        "50_64": 34,
+        "65_plus": 25
+      },
+      "pediatric_under_18_on_drug_pct": 1.4,
+      "cycled_off_and_on_pct": 42,
+      "note": "FICTIONAL. Arithmetic: 31.0% ever-used minus 24.5% current = 6.5% of adults (~17.4M) who used the drugs and are off them now. 42% of ever-users have cycled, which is 13.0 points: ~11.3 points are current users on at least their second course (46% of current users, unchanged from 2028), and ~1.7 points are cyclers who are off again. That still fits roughly one-third persistence at one year and 36–47% restarting within a year. The new-user wave of 2030 (Medicaid and Medicare starts) is mostly still on its first course, which keeps the restart share of current users from rising. 24.5% of ~268M adults is ~65.7M current users. Age check (weights 20/33/24/23): 2.8+7.9+8.2+5.8 ≈ 24.6. FICTIONAL payer mix, end-2030: Medicare ~14.0M (~12.5M aged 65+, out of ~15.5M users in that band, plus ~1.5M disabled under 65); Medicaid ~8.0M; TRICARE/VA ~1.5M; commercial ~17.0M; legitimate cash (TrumpRx/direct/telehealth) ~21.0M; imported or counterfeit ~4.2M. Total 65.7M. Public programmes pay for ~23.5M (36%), which makes them the largest payer bloc and the default payer for low-income adults and over-65s. About 9M current users have no obesity diagnosis: wellness/longevity microdosers, mostly cash and gray market. Adult obesity is ~32.9%. About 17% of adults have obesity and have never used a drug. They are concentrated among the ~9% of adults who are uninsured after the 2027 Medicaid changes, people refused under Medicaid prior-authorisation BMI thresholds, and people who decline. The bottom third rose fastest (11→19.5) once Medicaid coverage became mandatory in Jan 2030. Under-18 use is ~1.0M children, mostly aged 12–17; ~40% are now Medicaid-paid under EPSDT. Women planning pregnancy stop the drug, as the label requires, which creates a recognised 'off months' population of ~1.5M a year."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "FICTIONAL. In Jul 2029 CMS finalised a rule, effective Jan 2030, that treats anti-obesity medicines for chronic obesity as outside the Part D and Medicaid 'weight loss agent' exclusion. It is the revived 2024 proposal. The new oral-semaglutide AUD label and the existing CV, CKD and dementia labels had already made the exclusion hard to administer. Part D plans and every state Medicaid programme must now cover these drugs for BMI ≥30, or ≥27 with a comorbidity, and may use prior authorisation. The net public rate stays at the $245/month figure manufacturers agreed in 2025–27; it did not fall. Arithmetic, annualised run-rate at end-2030: Medicare, 14.0M users minus ~8M already covered under disease codes in 2028 = ~6M incremental × $245 × 12 ≈ $17.6B/yr, or ≈ $176B over ten years before offsets at flat enrolment. Medicaid, 8.0M minus 3.4M = 4.6M incremental × $2,940 ≈ $13.5B/yr, of which ~64% federal ≈ $8.7B and states ≈ $4.9B. Texas and 11 other states are suing in the Fifth Circuit (Texas v. HHS). 18 states condition continued Medicaid coverage on documented adherence and weight change at 6 months.",
+      "employer_coverage_pct": 46,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian and Chinese generic semaglutide is still $6–40/month in ~170 countries. Prices outside the US stopped falling in 2029 too: Indian API makers are routing capacity to higher-margin oral-grade peptide contracts, and generic tirzepatide is not yet legal in most markets.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Prices stalled. Oral parity multiplied peptide demand, because a daily 25 mg semaglutide pill uses roughly 70× the peptide of a weekly 2.4 mg injection. Novo's new fill-finish and API lines in North Carolina and Kalundborg came online late. Both manufacturers held TrumpRx prices flat for 2029 and 2030: oral starting doses $149, maintenance $299–349, injectables $299–449, retatrutide cash $549. No formal FDA shortage listing was made, so the 503A/503B compounding route stayed closed. Employer coverage edged up from 44% to 46%, mainly through monitored metabolic tracks, which now enrol ~4.5M employees out of ~17M commercial users. Orals are ~48% of all users and ~60% of new starts. The gray market (~4.2M) has changed composition: Medicaid pulled many low-income users out of the mail, and gym-adjacent wellness users with normal BMI, who cannot get a prescription, replaced them."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Mar 2029)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus; AUD indication Apr 2030)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 26,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "reduction of risk of all-cause dementia in adults with obesity and established cardiovascular disease (tirzepatide, 2028; confirmatory trial ongoing)",
+        "moderate-to-severe alcohol use disorder in adults (oral semaglutide, Apr 2030); ASAM/APA guideline-endorsed as a second-line pharmacotherapy since Oct 2029"
+      ],
+      "mainstream_offlabel_uses": [
+        "low-dose 'metabolic health' and longevity use by adults without obesity, mostly oral starting doses for cash, now mainstream among 35–65-year-old professionals",
+        "calm, focus and 'craving freedom' use marketed indirectly by telehealth subscription brands",
+        "dementia-prevention use by people without cardiovascular disease",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "pediatric under-12 use under specialist care"
+      ],
+      "pipeline_note": "FICTIONAL. Retatrutide was approved Mar 2029 at ~26% mean weight loss at top dose, with dysesthesia labelled from phase 3 data. That was not a postmarketing signal. Uptake is supply-limited. The muscle-preserving-combo driver is realised within the approval rules. Lilly filed a tirzepatide + bimagrumab BLA in May 2029 after a phase 3 readout showing ~90% of weight lost as fat. FDA asked for functional endpoints, not only DXA lean mass, and set a PDUFA date of Q2 2031. The combination launched in the UAE in Sep 2030, and Saudi Arabia and the UK (MHRA) are reviewing it. In the US it is sold as solved through headline data, Lilly's 'Built to Keep' campaign and Gulf medical tourism, but it is not in US pharmacies. Oral semaglutide for AUD was filed Mar 2029 and approved Apr 2030. Amycretin was filed Apr 2029, decision Q1 2031. Survodutide got a complete response letter in Jun 2029 asking for more CV safety data; resubmission is planned for 2031. MariTide (monthly) was filed Nov 2030 and is not on the market. No US generic semaglutide or tirzepatide. Global incretin market ~$165B (2030), driven by volume; US net prices are flat."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Retatrutide's escalation GI rates are the highest in the class. Low-dose wellness users report fewer GI effects.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. MDL settled in 2029 without admission.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: The 2028 hip-fracture HR of ~1.3 in users aged 65+ held in a 2030 update. Medicare's new enrolees are older and frailer, so absolute fracture counts are rising. CMS DXA claims for incretin users roughly tripled in 2030. The bimagrumab combination shows lean-mass preservation in trials, but functional and fracture outcomes are unproven and it is not US-approved.",
+        "regulatory_response": "2028 class warning unchanged. CMS DXA code in use. The Part D rule requires a DXA offer for beneficiaries 65+ at 12 months."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low; no change.",
+        "regulatory_response": "EMA 'very rare'; FDA adverse reactions listing."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal, including in AUD trial populations.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: The 2029 interim report of the FDA-requested postmarketing study is consistent with the 2027 cohort (~6–8% vs ~3%), dose-related and partly reversible. There is no new signal. Prospective randomised data are still missing. The AUD approval rests on the same reward-pathway mechanism.",
+        "regulatory_response": "No labelling. FTC warning letters (2030) to telehealth brands over unsubstantiated 'calm/focus' claims."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months; worse after repeated cycles and after pregnancy-related 'off months'.",
+        "regulatory_response": "Used to justify chronic-therapy framing and Medicaid/employer adherence conditions."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Case series continue, especially among low-dose wellness users eating very little without clinical oversight.",
+        "regulatory_response": "Professional guidance; no label change."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; adolescents on decades-long therapy; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About eight years of follow-up now exists. The pediatric bone-density postmarketing study has no readout yet. About 1M children are on the drugs, more of them now on Medicaid.",
+        "regulatory_response": "Pediatric bone-density postmarketing requirement ongoing."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Adverse-event reports tied to non-approved product passed ~10,000 cumulative. Mg/unit confusion is still the leading error. The user base has shifted to younger normal-BMI wellness buyers.",
+        "regulatory_response": "Import alert, CBP mail seizures and state suits continue. Personal-importation enforcement remains porous."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 40% of US households have a user. Snack and confectionery volumes are down ~8% and sugary drinks ~8% from 2025. Dollar sales are flat to slightly down. Medicaid uptake has brought volume pressure into lower-income grocery formats such as Dollar General and Aldi for the first time. Protein and fibre lines are mainstream, and 'GLP-1 friendly' no longer means anything on a label.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~12% and beer ~7% from 2025. After the AUD approval, Medicaid and Part D now pay for craving reduction among the heaviest drinkers. Kentucky bourbon makers in Bardstown are holding unsold barrels and have cut shifts. Non-alcoholic lines are ~4% of beer volume. Bar closures are concentrated in mid-sized Midwestern cities.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat. Small-plate, protein and 'half portion' menus are standard. Late-night and dessert sales keep falling. Fast-casual chains report the shift spreading to lower-income ZIP codes after January 2030.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking but have stabilised at a smaller footprint. Regain and cycling keep stretch, adjustable-waist and rental lines growing. Mainstream retailers carry fewer extended sizes in-store.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength floors, DXA and body-composition scanning keep growing on the 'Built to Keep' message. Medicare Advantage plans bundle resistance-training classes. Cardio equipment makers are consolidating.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Commercial plans benefited as Medicare and Medicaid absorbed older and low-income users, and pharmacy trend eased to ~+7%. Adherence-verified metabolic tracks enrol ~4.5M employees. California's 2029 ban joined Illinois's. State Medicaid budgets are the new pressure point, at about $4.9B/yr in state share.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Volume is up sharply on public coverage. The $245 public rate and the $149–449 cash prices are frozen rather than falling. Lilly leads on retatrutide and the Gulf launch of the muscle combo. Novo leads on orals and AUD. Both are preparing for 2031–32 exclusivity loss.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Lean in middle age is the default and reads as nothing. An unmedicated large body over 40 reads as either a choice, a pregnancy plan, a side-effect story or a coverage gap, and people expect it explained. 'Built' (lean plus visible muscle) is the new status marker, tied to the combo campaign people cannot yet buy in the US.",
+      "thinness_and_class": "Medicaid narrowed the access gap. It did not close the quality gap. Low-income users get covered orals behind prior authorisation and adherence checks. Affluent users get retatrutide, DXA tracking, trainers and Dubai trips for the combination. Normal-BMI professionals microdose for 'metabolic age'.",
+      "eating_as_ritual": "Meals are smaller and shorter everywhere, including church suppers and quinceañeras in places like San Antonio. The Tulsa 'Bread Alone' fast network claims ~700 congregations and frames fasting without the drug as discipline. Hosts plan for half the table being unhungry and still pour non-alcoholic drinks.",
+      "dating_and_intimacy": "The dating-app 'on/off' badge is little used because 'on' is assumed. Profiles now say 'off, by choice' or 'off, trying for a baby'. Desire mismatch remains a common reason couples seek therapy.",
+      "meaning_of_appetite": "Craving is publicly framed as a treatable condition: of food, drink, betting. The counter-reading, appetite as aliveness, survives in the Unmuted collective, church fasting groups and fat-acceptance circles, and is louder in art than in politics.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL: Clinically meaningful anhedonia in ~6–8% of users versus ~3% of controls, dose-related. A larger share describe a mild 'quiet', and that quiet is now what is sold.",
+      "framing": "Sold as a feature. Telehealth brands such as Hims & Hers, Ro and newer subscriptions like 'Still' market low-dose orals for 'calm, focus and freedom from craving' with obesity or AUD as the prescribing hook. After the AUD approval, Novo's ads say 'the quiet you were looking for'. Clinicians still call it a side effect. The FTC calls some of the claims unsubstantiated.",
+      "effect_on_work": "Employers have moved from encouraging 'steadiness' to buying it. Metabolic tracks enrol ~4.5M. Sales and trading floors, emergency dispatch and hospital night shifts trade tips on low doses for 'focus'. One of the two EEOC ADA charges settled in 2029, with the employer adding a side-effect exemption. The other is in litigation. Police departments in Phoenix and Houston fund oral semaglutide for officers under wellness and AUD codes.",
+      "effect_on_art_and_play": "Sportsbook handle per identifiable user keeps falling, and operators lobby against AUD-adjacent marketing of craving reduction. 'Flat' fiction is now a shelf category. The Unmuted 'off nights' have spread from Philadelphia and Brooklyn to Chicago and Austin and are ticketed events. Stand-up about being off is a genre.",
+      "effect_on_intimacy": "Couples schedule dose holidays for anniversaries and conception. Therapists report more 'he's calmer but not here' complaints. Normalisation means the partner who is off is the one asked to explain.",
+      "effect_on_politics": "The fights are over money and conditions, not mood. Twelve states are suing over mandatory Medicaid coverage. MAHA-aligned legislators split between 'food first' and their own constituents' new prescriptions. Labour unions bargain over adherence-premium bans. There is still no measurable turnout effect.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Approvals are fast (retatrutide, AUD) but the FDA held the line on a functional endpoint for the muscle combo. CMS has done the expanding by rule. The FTC polices 'calm/focus' marketing. Import enforcement is loud and porous.",
+      "subsidy_or_mandate": "Since Jan 2030, Part D and Medicaid must cover anti-obesity incretins under the Jul 2029 CMS rule, at the $245 net public rate, with prior authorisation allowed. There is no individual mandate. The 2027 tri-agency guidance allowing 30% adherence-conditioned premium differentials stands federally. Illinois and California ban them.",
+      "conditioning_or_surveillance": "PBM fill data and app-linked logs feed employer tracks. 18 Medicaid programmes require 6-month adherence and weight documentation to continue coverage. DoD tracks fills for readiness reporting.",
+      "workforce_or_military": "DoD's Nov 2029 'Metabolic Readiness' directive makes incretins a covered readiness tool. Supervised oral semaglutide is offered to recruits within 10% of the weight standard across all services, and to active-duty members who fail body-composition tests (~110k active-duty users). TRICARE and VA cover for weight management. The FAA's 2030 guidance permits pilots on a stable dose after a 3-month observation period. FMCSA ruled in 2030 that incretin use, including for AUD, is not disqualifying for commercial drivers.",
+      "geopolitics_of_supply": "Peptide API capacity is the bottleneck, not patents alone. Defence officials now describe domestic semaglutide fill-finish as critical supply. The US–India trade deal includes CBP cooperation on mail-order generics and an Indian API supply offtake for Novo. Gulf states host the first muscle-combo launch and a medical-tourism trade.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2029-03",
+        "event": "FDA approves Lilly's retatrutide for chronic weight management with dysesthesia labelling; Lilly holds its cash price at $549 a month and Novo and Lilly announce TrumpRx prices unchanged for 2030, citing oral-peptide API demand",
+        "driver": "price_path"
+      },
+      {
+        "date": "2029-07",
+        "event": "CMS finalises rule bringing anti-obesity incretins inside Part D and mandatory Medicaid coverage from Jan 2030 at a $245 net rate; Texas and 11 states sue in the Fifth Circuit",
+        "driver": "coverage_shift"
+      },
+      {
+        "date": "2029-11",
+        "event": "Pentagon issues 'Metabolic Readiness' directive: supervised oral semaglutide for near-standard recruits and service members failing body-composition tests; FAA and FMCSA guidance follows in 2030",
+        "driver": "workforce_military"
+      },
+      {
+        "date": "2030-04",
+        "event": "FDA approves oral semaglutide for moderate-to-severe alcohol use disorder, six months after ASAM/APA guidelines endorsed it as second-line; Novo's launch ads promise 'the quiet you were looking for'",
+        "driver": "new_indications"
+      },
+      {
+        "date": "2030-06",
+        "event": "FTC sends warning letters to three telehealth GLP-1 subscription brands over 'calm, focus and craving freedom' claims for low-dose use by people without obesity",
+        "driver": "marketed_feature"
+      },
+      {
+        "date": "2030-09",
+        "event": "Lilly's tirzepatide–bimagrumab combination launches in the UAE; the US BLA, filed May 2029, awaits a Q2 2031 decision after FDA asked for functional muscle endpoints",
+        "driver": "muscle_preserving_combo"
+      }
+    ],
+    "open_tensions": [
+      "Medicaid must now cover the drugs at a $245 rate that did not fall, costing states ~$4.9B a year. Texas v. HHS could undo mandatory coverage for ~4.6M new users, who would then join the regain cohort.",
+      "The skinny-frail problem is sold as solved by a combination US pharmacies cannot dispense before mid-2031. Meanwhile Medicare's new, older enrolees carry the established ~30% hip-fracture excess.",
+      "Blunting is marketed as calm to people without obesity while the postmarketing study keeps finding anhedonia in a minority. FTC letters, employer metabolic tracks and the military's readiness framing all treat 'quiet' differently.",
+      "Prices are frozen ahead of 2031–32 exclusivity loss. The pricing and capacity decisions manufacturers make now will set whether public programmes renegotiate below $245 or lock in the current rate."
+    ]
+  },
+  "prose": {
+    "headline": "Off It? Explain Yourself. One in Four American Adults Now Takes the Quiet Drug, and Medicare and Medicaid Are Paying",
+    "world_in_600_words": "By the end of 2030 about one American adult in four is on an incretin drug, and nearly a third have tried one. What changed in these two years is less the medicine than who pays for it. In July 2029 CMS finalised a rule saying that a drug for chronic obesity is not a 'weight loss agent' in the sense Congress excluded in 2003. From January, Medicare drug plans and every state Medicaid programme must cover it. The rule was hard to refuse administratively. The same molecules were already covered for heart disease, kidney disease and dementia risk, and by spring 2030 also for alcohol use disorder. The rate is the $245 a month agreed years ago. It has not come down. Twelve states, led by Texas, are suing, because their share runs close to five billion dollars a year.\n\nPrices in general have stopped moving. Starting-dose pills still cost $149 through TrumpRx, and the maintenance dose still costs $299. A daily pill uses far more peptide than a weekly shot, and the factories were late. The manufacturers say they are holding prices; patients and states hear that they are not cutting them. Wegovy's $1,349 list price still sits on the box. Generic semaglutide costs less than a sandwich in Delhi and is still barred at the US pharmacy counter until 2031 at the earliest.\n\nThe effect is that being on the drug has stopped meaning anything. A lean fifty-year-old is just a fifty-year-old. The person who is off is the one asked to explain: pregnancy, nausea, faith, money, or the Unmuted collective's principled refusal, which now sells tickets in Chicago and Austin. Dating profiles have stopped saying 'on' because everyone assumes it. They say 'off, trying for a baby'.\n\nThe newest users are not the heaviest. Professionals in their forties who have no obesity diagnosis take low-dose pills for what clinics call metabolic age and what advertising calls calm. Telehealth subscriptions promise focus and freedom from craving. In June the FTC wrote to three of them saying the claims were not substantiated. Since April, Novo has been able to say 'the quiet you were looking for' legally, because oral semaglutide is now approved for alcohol use disorder. Spirits volumes are down about twelve percent from 2025, and in Bardstown, Kentucky, bourbon barrels sit in warehouses with nowhere to go. A postmarketing study confirms what the 2027 cohort found: for six to eight percent of users the quiet becomes anhedonia. The advertising does not mention that.\n\nThe Pentagon calls the drug readiness. Recruits within ten percent of the weight standard can start supervised pills at the reception battalion. Pilots may fly on a stable dose, and truck drivers may drive on one. Police departments in Phoenix and Houston buy it for officers. Defence planners now list domestic peptide fill-finish alongside munitions as supply they cannot afford to lose.\n\nThe bone problem has not gone away, and the population carrying it got older. Medicare enrolled about six million new users this year, many of them frail, under a hip-fracture warning nobody has lifted. Lilly's answer, a combination with a muscle-preserving antibody, has strong lean-mass data and a campaign called Built to Keep. It is sold in Abu Dhabi. In the US it waits for a 2031 decision, because the FDA wants proof that people get stronger, not just a better scan. Some patients fly to the Gulf for it.\n\nMeals are smaller everywhere now, including in Dollar General aisles that the shift had not reached before. Gyms sell squat racks to grandmothers, and church fasts teach hunger as discipline. From the outside the country looks thinner, soberer and calmer, and most of that is true.",
+    "a_day_in_the_life": "Tanya Whitlock, 47, takes her pill at 5:40 with a full glass of water and waits the thirty minutes before coffee, standing at the sink in Dayton. Ohio Medicaid, four-dollar copay. The pharmacy app pings: six-month weight check due Friday.\n\nHer first client is Mr. Akers, eighty-one, who lost forty pounds on Zepbound and now uses a walker because of it. She makes him two eggs and a protein shake, counts out his calcium, and reminds him his DXA is Tuesday. On the television a Lilly ad shows a silver-haired woman deadlifting. Built to Keep. 'Not here yet,' Mr. Akers says. 'My nephew says Dubai.'\n\nLunch is half a turkey wrap in the car. She isn't hungry. She hasn't been hungry since February. She doesn't mind the quiet. Sometimes she notices she doesn't mind much else either.\n\nHer son Marcus, nineteen, texts from the recruiter's office: they'll start him on the pill at Fort Jackson if he's still eight pounds over at MEPS. Thumbs up, she sends.\n\nAt her sister's for dinner, Darlene pours herself wine and doesn't pour one for Tanya. Darlene's husband Ray is off it. 'Gut couldn't take it,' he says before anyone asks, like he always does. Darlene made a pie anyway. Nobody eats more than a sliver. Ray has two.\n\nDriving home past the shuttered bar on Wayne Avenue, Tanya realises she forgot to be annoyed at Ray. She turns the radio up, tries a loud song, and leaves it on."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r21-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The net public rate stays at the $245/month figure manufacturers agreed in 2025–27; it did not fall.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: the 2028 world says the Medicare volume deal ended and manufacturers withdrew discounts. Nothing shows why they would accept the same $245 rate for mandatory Part D and Medicaid volume, or why neither payer negotiated it down."
+        },
+        {
+          "quote": "moderate-to-severe alcohol use disorder in adults (oral semaglutide, Apr 2030); ASAM/APA guideline-endorsed as a second-line pharmacotherapy since Oct 2029",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "Mechanism: the AUD phase 3 was still under way in 2028, yet it is filed by Mar 2029. ASAM/APA also endorse the drug as second-line six months before approval, which is an unusual order and is not explained."
+        },
+        {
+          "quote": "Medicare enrolled about six million new users this year, many of them frail, under a hip-fracture warning nobody has lifted.",
+          "field": "prose/body",
+          "why": "Magnitude and mechanism: the Bridge pilot peaked at about 1.3M. Reaching about 6M incremental Medicare users in one year, under prior authorisation, with 65+ use doubling from 12% to 25%, is an aggressive ramp that the candidate asserts without showing."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Access broadens and obesity and alcohol use fall, which cuts against badness. The costs are real, though. Medicaid coverage in 18 states depends on 6-month adherence and weight checks, DoD tracks fills and offers pills to recruits and failing service members, and low-dose 'quiet' is sold to people without obesity. Frail older Medicare enrollees carry the ~30% hip-fracture excess, children are on the drugs with no bone data, and the muscle combo is out of reach in the US. The harm is normalised and partly invisible, because 'on' is assumed and the person who is off must explain. That is a harder society with new losers, but not an unlivable one.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly 24.5%, price is frozen, public expansion comes through the CMS rule, AUD is approved, and the combo is realised as a May 2029 filing with a UAE launch and a Q2 2031 PDUFA date. 'Longevity_wellness' appears only as off-label microdosing and FTC letters, which is thin. mechanism: The CMS reinterpretation, DoD directive, FTC letters and peptide-supply price freeze each have a chain. The unexplained persistence of the $245 rate after manufacturers withdrew discounts, the compressed AUD timeline with guidelines preceding approval, and the one-year 6M Medicare ramp are asserted rather than shown. magnitude: The figures sit inside the envelope and reconcile. The payer mix sums to 65.7M. The cycled arithmetic, age-band check, Medicare $17.6B and Medicaid $13.5B (about $8.7B federal and $4.9B state) all multiply out. The under-18 figure is 1.4% of about 73M, or about 1M. The 65+ doubling and the 6M one-year Medicare jump are aggressive but not out of bounds.",
+        "generativity": "The prose follows Tanya Whitlock, a Medicaid-covered aide in Dayton, through a day: her pill timing, the six-month weight-check ping, Mr. Akers's walker and DXA, the Lilly ad, her son's MEPS weight check, and Ray at the dinner table. It shows rather than explains, and it carries the 'quiet' theme into her closing loud-song moment. The world fields also supply many scenes: Bardstown barrels, the Unmuted off nights, and Gulf medical tourism."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s2-L2-r21-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Lean in middle age is the default and reads as nothing.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Fails mechanism: the world's own figures have 24.5% of adults on drug and adult obesity at ~32.9%, with 30–49s at 24% and 50–64s at 34%. Most middle-aged adults are not on a drug, so this cultural claim is asserted against the numbers."
+        },
+        {
+          "quote": "Part D plans and every state Medicaid programme must now cover these drugs for BMI ≥30, or ≥27 with a comorbidity, and may use prior authorisation.",
+          "field": "world/access/public_coverage",
+          "why": "Fails mechanism: reclassifying the 'weight loss agent' exclusion only removes a bar. It would not obviously compel every state's Medicaid programme to cover the drugs, since Medicaid drug coverage is largely state-optional, and the candidate shows no statutory chain for the mandate. The Texas v. HHS suit acknowledges the weakness but does not supply a mechanism."
+        },
+        {
+          "quote": "Oral semaglutide for AUD was filed Mar 2029 and approved Apr 2030.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism and sits at the edge of magnitude: the AUD indication was in phase 3 in 2028 and is filed within about nine months, then approved 13 months later. That clears the 12-month rule but is a very aggressive compression, and the phase 3 readout that enables it is not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6,
+        "inequality": 4.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Public expansion narrows the access gap (bottom third 11→19.5, Medicaid copays of a few dollars), which offsets harm. Against that, 18 Medicaid programmes condition coverage on adherence and weight checks, employer tracks enrol ~4.5M, and the military uses the drugs as a 'readiness' tool. A frail 65+ cohort carries a ~1.3 hip-fracture HR, and low-dose 'quiet' is marketed to normal-BMI adults while anhedonia affects 6–8% of users. Epistemic and autonomy harms are the most structural: blunting is normalised, and the person who is off is the one who must explain. The society is recognisably harder rather than dystopian.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable to events: the CMS rule (public expansion), the AUD approval and wellness microdosing, the stalled prices, the DoD directive with FAA and FMCSA follow-ons, the UAE launch of the muscle combo with a US PDUFA in Q2 2031, the FTC letters (marketed feature), and no new safety signal. Approvals respect the envelope's rules. magnitude: Population figures sit inside the envelope (24.5 current, 31 ever, income thirds average to 24.5, age bands weight to ~24.6). The payer mix sums to 65.7M and public is 23.5M (36%). The Medicare figure of 6M × $245 × 12 ≈ $17.6B and the Medicaid split of $13.5B, $8.7B federal and $4.9B state all multiply out. The one minor gap is that the normal-BMI users said to be unable to get a prescription sit awkwardly beside telehealth brands that prescribe low doses. mechanism: Most chains are shown, including the 70× peptide demand behind frozen prices and Medicaid pulling users out of the gray market. Several are asserted: the mandatory Medicaid coverage via rule, the compressed AUD timeline, the 'lean is the default' cultural claim against 32.9% obesity, and the jump from 2 to 18 states with adherence conditions.",
+        "generativity": "The Tanya Whitlock day gives real scenes: the Medicaid weight-check ping, Mr. Akers with his walker and DXA, the Built to Keep ad, Marcus at MEPS, and Ray at dinner. The world fields add texture: Bardstown barrels, Dollar General aisles, ticketed 'off nights', and 'he's calmer but not here'. It shows rather than explains, and ends on a small ambiguous beat."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s2-L2-r21-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Commercial plans benefited as Medicare and Medicaid absorbed older and low-income users, and pharmacy trend eased to ~+7%.",
+          "field": "world/economy/insurance/state",
+          "why": "Mechanism: the payer mix has commercial users rising from ~14M to ~17M while prices are frozen and volume is up sharply, so an easing pharmacy trend is asserted and cuts against the candidate's own numbers."
+        },
+        {
+          "quote": "No formal FDA shortage listing was made, so the 503A/503B compounding route stayed closed.",
+          "field": "world/access/note",
+          "why": "Mechanism: the world says supply is short (late plants, supply-limited retatrutide uptake, a peptide bottleneck), yet the shortage listing that would reopen compounding is waved away in one convenient sentence."
+        },
+        {
+          "quote": "Part D plans and every state Medicaid programme must now cover these drugs for BMI ≥30, or ≥27 with a comorbidity, and may use prior authorisation.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: a CMS rule reinterpreting a statutory exclusion to force every state to cover is a legal stretch, and the Texas suit is the only check shown. 4.6M new Medicaid users and ~6M new Medicare users arriving within about a year, with no injunction or implementation lag, looks too fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 4.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder, with new losers but real gains. Medicaid expansion narrows the access gap, which lowers inequality. Harms include a frail, older Medicare cohort under the unresolved ~1.3 hip-fracture HR, and 'quiet' marketed to people without obesity despite anhedonia in 6–8% of users. They also include 18 Medicaid programmes conditioning coverage on adherence, about 1M children on the drugs with no bone data, and normalisation that makes the unmedicated explain themselves. Epistemic and autonomy scores are higher because harm is measured but drowned out by marketing and institutional pressure.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. These include the stalled prices, the Jan 2030 public expansion, AUD approval, the UAE-only muscle combo with a US PDUFA in Q2 2031, military and FAA/FMCSA action, and the marketed 'quiet'. Nothing contradicts one. mechanism: the CMS rule chain and the price stall are shown, but the commercial-trend claim, the missing shortage listing and the near-instant public ramp-up (claims 1–3) are asserted. magnitude: 24.5% current and 31% ever-used sit inside the envelope. The payer mix sums to 65.7M, the Medicare and Medicaid arithmetic multiplies out ($17.6B and $13.5B), and approvals respect the filing-plus-12-months rule. Only small slips remain, such as 'this year' for a two-year increment.",
+        "generativity": "The Tanya Whitlock day gives a sharp slice of life: a Medicaid copay, a weight-check ping, a client with a walker and a DXA appointment, a son facing the recruiter's weight check, and a dinner where one brother-in-law is 'off'. Implied scenes include the Unmuted off-nights, a Bardstown barrel warehouse, Gulf medical tourism and an FTC letter. The prose shows more than it explains, and the closing 'tries a loud song' lands the theme without stating it."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The net public rate stays at the $245/month figure manufacturers agreed in 2025–27; it did not fall.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: the 2028 world says the Medicare volume deal ended and manufacturers withdrew discounts. Nothing shows why they would accept the same $245 rate for mandatory Part D and Medicaid volume, or why neither payer negotiated it down."
+      },
+      {
+        "quote": "moderate-to-severe alcohol use disorder in adults (oral semaglutide, Apr 2030); ASAM/APA guideline-endorsed as a second-line pharmacotherapy since Oct 2029",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "Mechanism: the AUD phase 3 was still under way in 2028, yet it is filed by Mar 2029. ASAM/APA also endorse the drug as second-line six months before approval, which is an unusual order and is not explained."
+      },
+      {
+        "quote": "Medicare enrolled about six million new users this year, many of them frail, under a hip-fracture warning nobody has lifted.",
+        "field": "prose/body",
+        "why": "Magnitude and mechanism: the Bridge pilot peaked at about 1.3M. Reaching about 6M incremental Medicare users in one year, under prior authorisation, with 65+ use doubling from 12% to 25%, is an aggressive ramp that the candidate asserts without showing."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.17,
+      "inequality": 4.5,
+      "public_health": 4.83,
+      "cohesion": 5.17,
+      "epistemic": 6.0,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.33,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.88,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Access broadens and obesity and alcohol use fall, which cuts against badness. The costs are real, though. Medicaid coverage in 18 states depends on 6-month adherence and weight checks, DoD tracks fills and offers pills to recruits and failing service members, and low-dose 'quiet' is sold to people without obesity. Frail older Medicare enrollees carry the ~30% hip-fracture excess, children are on the drugs with no bone data, and the muscle combo is out of reach in the US. The harm is normalised and partly invisible, because 'on' is assumed and the person who is off must explain. That is a harder society with new losers, but not an unlivable one.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly 24.5%, price is frozen, public expansion comes through the CMS rule, AUD is approved, and the combo is realised as a May 2029 filing with a UAE launch and a Q2 2031 PDUFA date. 'Longevity_wellness' appears only as off-label microdosing and FTC letters, which is thin. mechanism: The CMS reinterpretation, DoD directive, FTC letters and peptide-supply price freeze each have a chain. The unexplained persistence of the $245 rate after manufacturers withdrew discounts, the compressed AUD timeline with guidelines preceding approval, and the one-year 6M Medicare ramp are asserted rather than shown. magnitude: The figures sit inside the envelope and reconcile. The payer mix sums to 65.7M. The cycled arithmetic, age-band check, Medicare $17.6B and Medicaid $13.5B (about $8.7B federal and $4.9B state) all multiply out. The under-18 figure is 1.4% of about 73M, or about 1M. The 65+ doubling and the 6M one-year Medicare jump are aggressive but not out of bounds.",
+      "generativity": "The prose follows Tanya Whitlock, a Medicaid-covered aide in Dayton, through a day: her pill timing, the six-month weight-check ping, Mr. Akers's walker and DXA, the Lilly ad, her son's MEPS weight check, and Ray at the dinner table. It shows rather than explains, and it carries the 'quiet' theme into her closing loud-song moment. The world fields also supply many scenes: Bardstown barrels, the Unmuted off nights, and Gulf medical tourism."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 4.8889,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 32
+  }
+}

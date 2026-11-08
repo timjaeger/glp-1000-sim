@@ -1,0 +1,532 @@
+{
+  "run_id": "s3-L3-r39",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L3",
+  "seed": 20261107,
+  "run_index": 39,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 8.9,
+    "price_path": "shock_up",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [],
+    "safety_signal": "novel_long_horizon",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "gray_market_resurgence",
+    "cultural_response": "normalisation",
+    "state_action": "subsidy",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L3-r39",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17673,
+        "output_tokens": 23630
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r39-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25903,
+        "output_tokens": 7595
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r39-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25903,
+        "output_tokens": 9140
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r39-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25903,
+        "output_tokens": 5459
+      }
+    ]
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived. Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk (CVD-label) codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 26.5,
+      "us_adults_ever_used_pct": 35,
+      "by_income_third_pct": {
+        "top": 32.5,
+        "middle": 26,
+        "bottom": 21
+      },
+      "by_age_band_pct": {
+        "18_29": 17,
+        "30_49": 28,
+        "50_64": 39.5,
+        "65_plus": 19
+      },
+      "pediatric_under_18_on_drug_pct": 1.7,
+      "cycled_off_and_on_pct": 47,
+      "note": "FICTIONAL. Arithmetic: 35.0% ever-used minus 26.5% current = 8.5% of adults off now. Current users are 13.3 points on a first course (9.5 points are first-time users since 2030; 3.8 points are 2030 first-course users who stayed on continuously) plus 13.2 points on at least a second course. Off-now users are 3.3 points who cycled and are off again plus 5.2 points who stopped once and never restarted (down from 6.1 as recall-era and subsidy restarts pulled some back). Cycled = (13.2 + 3.3) / 35.0 = 47%, up from 44% because the 2031 semaglutide pen recall forced stops that people later reversed. This fits one-year persistence near one-third and restart rates of 36–47% within a year. Age check: weights 0.20/0.33/0.24/0.23 × 17/28/39.5/19 = 3.4 + 9.24 + 9.48 + 4.37 ≈ 26.5. Income check: (32.5 + 26 + 21) / 3 = 26.5. 26.5% of ~270M adults ≈ 71.5M users. FICTIONAL payer mix: commercial 12.8M (down from 13.6M; includes ~6.1M in monitored metabolic tracks), Medicare 11.0M (code routes only, 65+ plus disabled), Medicaid 4.0M, the federal Community Metabolic Health Program (free oral orforglipron) 5.0M, legitimate cash (TrumpRx/LillyDirect/NovoCare/Amgen direct) 21.5M, compounded via telehealth 8.0M, imported, counterfeit or 'research' peptide 9.2M. Total 71.5M. Of the 5.0M CMHP enrollees, about 2.1M had never used a drug, ~1.6M are restarters, and ~1.3M switched from gray-market product. That is the main reason the bottom third rose 12 → 21. Adult obesity is ~31.8%. About 17% of adults have obesity and are not currently on a drug: some never started, the rest are regainers. The 65+ band grew least (14.5 → 19) because the subsidy stops at 64 and Medicare has no weight benefit. Pediatric: 1.7% of ~73M under-18s ≈ 1.24M, mostly 12–17 (~3.6% of that band). ~0.35% of 6–11-year-olds take liraglutide, more often via Medicaid EPSDT than in 2030, but still concentrated in commercially insured households."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Medicare covers ~11.0M users only through diabetes, CV, CKD, OSA and the existing tirzepatide CVD-plus-obesity dementia-risk code, all behind prior authorisation. FICTIONAL arithmetic: 11.0M × ~$245 average net/month × 12 ≈ $32.3B a year gross Part D incretin spend, of which the dementia route is ~1.9M × ~$260 × 12 ≈ $5.9B. Medicaid covers ~4.0M, mostly through diabetes codes. Only 7 states (down from 9) still cover weight-loss use. New this step is the HRSA Community Metabolic Health Program (CMHP), which gives free daily orforglipron (Foundayo) to adults 18–64 with BMI ≥30 (or ≥27 with a comorbidity), income ≤250% FPL and no other weight coverage. It is dispensed through FQHCs and 340B contract pharmacies. Lilly supplies it at ~$48 net/month. FICTIONAL arithmetic: 5.0M × $48 × 12 ≈ $2.9B drug cost, plus ~60M fills × $4 dispensing ≈ $0.24B, plus clinic grants and admin ≈ $0.35B, for ≈ $3.5B, the FY2032 appropriation.",
+      "employer_coverage_pct": 29,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide still sells for $5–35 a month abroad across 90+ brands. Chinese makers supply tirzepatide-analogue product and, through peptide API brokers, much of the retatrutide that US compounders and 'research' shops use. Canadian generics run CAD 50–90. India and China supply most of the world's incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Price shock: in Feb 2031 the FDA found sterility failures at Novo's Clayton, NC fill-finish lines, which led to a pen-lot recall. Semaglutide injectables sat on the FDA shortage list from Apr 2031 to Jun 2032. During that time Novo suspended the TrumpRx injectable Wegovy maintenance tier; it returned in Aug 2032 at $399, up from $279–349. Displaced demand let Lilly raise Zepbound upper-dose vials from $349 to $449, Foundayo maintenance from $149–279 to $179–329, and Wegovy pill maintenance from $249 to $299. MariTide cash rose from $299 to $349. Starting oral doses stay at $149. Retatrutide 12 mg (approved Mar 2032) lists at $1,499 and costs $649 cash through LillyDirect. The shortage made 503A/503B compounding of semaglutide legal again, and telehealth vials came back at $179–299. Most of those sellers did not stop when the shortage ended. They now cite 'patient-specific dosing', and FDA warning letters are piling up. 'Compounded triple' and research-grade retatrutide sell for $250–400. Mailed Indian vials now cost $60–120 delivered, up from ~$40, because of CBP seizures and courier markups. Employer coverage for weight management fell from 36% to 29% (Business Group on Health, mid-2032). Another ~13% cover only through monitored metabolic tracks (~6.1M enrollees, all inside the 12.8M commercial users), most of them on clinic-administered MariTide. Orals are now ~50% of users because the CMHP is oral-only."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Mar 2029; 12 mg dose for BMI ≥35 approved Mar 2032)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (MariTide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin, approved Dec 2030, launched Sep 2031)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 29,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; unchanged. The Jun 2031 complete response letter refused extension to adults without CVD)"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction via telehealth and employer EAPs (oral semaglutide AUD phase 3 was positive in Apr 2031; sNDA under extended review, decision 2033)",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid, which continues after the CRL",
+        "microdosing for 'steadiness', recommended informally by wellness coaches",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "semaglutide in under-12s with severe obesity (off-label)",
+        "gray-market retatrutide 12 mg 'stacks' among people with BMI under 35"
+      ],
+      "pipeline_note": "FICTIONAL. The ~30% triple-agonist driver is realised as an existing product in a new dose. Lilly filed a retatrutide 12 mg sNDA in Jan 2031 on TRIUMPH extension data, and the FDA approved it in Mar 2032 (14 months) for BMI ≥35, with 28.9% mean loss at 80 weeks. The label strengthens the dysesthesia, heart-rate and lean-mass language. Amycretin was filed in Oct 2029 and approved in Dec 2030 (~22%). Its launch was delayed to Sep 2031 by Novo's fill-finish problems. No new indication arrived. Tirzepatide's dementia extension received a CRL in Jun 2031 citing fracture risk, the exocrine signal and the need for the ongoing confirmatory trial. The oral semaglutide AUD sNDA (filed Nov 2031) had its review extended by a major amendment, with a decision in 2033. Bimagrumab-type muscle adjuncts read out phase 3 in 2032 and have not been filed. Implants remain preclinical or phase 1. No oral matches tirzepatide. Global incretin market ~$165B (2031). US net prices rose in 2031–32 for the first time since 2024."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Retatrutide 12 mg and MariTide carry the most early vomiting. Chronic reflux in long-term users is now being re-read in light of the Barrett's signal.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; higher on 12 mg retatrutide.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation of acute pancreatitis; absolute risk low.",
+        "regulatory_response": "Labelled; new litigation consolidated around exocrine insufficiency rather than acute pancreatitis."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Hip-fracture HR ~1.3 in users 65+ after >2 years and ~1.45 in those who have cycled three or more times. Larger lean-mass losses at retatrutide 12 mg. The compounded and gray-market users who lose the most weight get the least monitoring.",
+        "regulatory_response": "Class warning (Jul 2028) retained. The retatrutide 12 mg label requires baseline DXA for patients 60+."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: ~7–8% clinically meaningful anhedonia vs ~3% of controls. An interim 2032 cohort puts retatrutide 12 mg at ~12%. Users of the daily oral at subsidy doses appear lower (~5%). No randomised data.",
+        "regulatory_response": "FDA postmarketing study interim report (Mar 2032): no labelling change."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. The 2031 pen recall produced a measurable regain wave among cash injectable users who could not switch.",
+        "regulatory_response": "None directly; it underpins chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency are documented in low-intake users. Fat-soluble deficiency is linked to EPI.",
+        "regulatory_response": "Label language added Jul 2031 alongside the EPI warning; annual panels in guidelines."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: semaglutide ~4.1 vs 1.9 per 1,000 person-years beyond year 5, replicated a third time in VA data. Early tirzepatide 5-year data show ~1.5× excess. Partial recovery of faecal elastase within 12 months of stopping in about half of cases.",
+        "regulatory_response": "Warnings and Precautions added to semaglutide labels Jul 2031. EMA PRAC class wording Oct 2031. Tirzepatide label under review. Enzyme-replacement prescriptions have risen."
+      },
+      {
+        "effect": "Barrett's oesophagus after 6+ years of continuous use",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: A Swedish–Danish endoscopy registry study (May 2032), echoed in VA endoscopy data, found new Barrett's diagnoses at HR ~1.6 in users continuously on semaglutide for >6 years versus weight-matched controls, with no excess before year 5. The proposed mechanism is chronic reflux from delayed gastric emptying. No excess oesophageal adenocarcinoma is detectable yet; it would take a decade or more to show. Unknown for tirzepatide and retatrutide.",
+        "regulatory_response": "FDA Drug Safety Communication (Jul 2032) advises GI evaluation for long-term users with chronic reflux. Gastroenterology societies are drafting screening guidance. Class labelling not decided."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "Two long-horizon signals (EPI, Barrett's) have now appeared in the semaglutide cohorts with the longest exposure, both after year 4–5. Pediatric bone data from the 6–11 cohort are due 2033.",
+        "regulatory_response": "Pediatric postmarketing requirements retained. The FDA is asking sponsors for 10-year registry commitments."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Adverse-event reports tied to non-approved product passed ~22,000 by mid-2032. The compounding revival brought back unit-versus-mg dosing errors. 'Research' retatrutide at uncertain concentrations produces tachycardia and dysesthesia presentations. Poison-centre calls are ~5× 2025 levels.",
+        "regulatory_response": "Shortage-end notice Jun 2032 and 60+ warning letters to telehealth compounders. Import alert retained. Personal-importation enforcement is still weak."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 45% of US households now include a user. Snack and confectionery volumes are down ~10–12% from 2025, sugary drinks ~10%. Dollar sales are slightly down. The split by class blurred somewhat as subsidy users in lower-income zip codes cut volume. Dollar General and Walmart value-pack sales softened in 2032, and private-label protein shakes are the fastest-growing SKU in those stores. Whey prices remain elevated.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~13% from 2025, beer ~8%. EAP and telehealth alcohol use keeps eroding heavy-drinker demand. Distributors in Ohio and Michigan consolidated. Non-alcoholic lines grow but do not replace the lost margin.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat and checks are smaller. 'Half-portion' pricing is now standard at casual-dining chains. Value menus that were growing in lower-income markets flattened in 2032 as the subsidy took hold. Buffets keep closing.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking. Resale and stretch wear grew during the recall regain wave, then flattened. The premium structured and athletic categories keep growing.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength floors and DXA scanning keep growing. Premium clubs sell retatrutide 12 mg 'lean-mass protection' packages. FQHC-adjacent YMCAs run free resistance classes under CMHP grants.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight coverage is down to 29%. Coverage concentrates on diabetes, cardiac, OSA and dementia codes, with BMI floors. Monitored tracks grow even where general coverage ends. Pharmacy trend ~+9% in 2031 on shortage-era price increases. Part D premiums rose again.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly gained share from Novo during the recall and sells to the government (CMHP) at $48 net while raising cash prices elsewhere. Novo took a large remediation charge and lost US injectable share. Amgen's MariTide is the employer-clinic product. Telehealth compounders (8M users) are a parallel industry with its own lobbyists.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on a drug is the default, so the body now signals which drug. Lifted and lean means a pen and a scan. Steadily thinner and soft means the daily pill from the clinic. A regained body has to be explained: was it the recall, a lost job, the pancreas warning?",
+      "thinness_and_class": "The class uniform is still muscle, and now degree as well. In Charlotte and Austin the 12 mg retatrutide 'sub-30' body with a DXA printout is the top tier. In Fort Wayne, Toledo and San Antonio, women 50–64 are the group whose use grew fastest, on free Foundayo picked up at the health centre with ~12% loss. On the Columbus logistics corridor the monthly clinic shot remains a job feature.",
+      "eating_as_ritual": "Shared meals are shorter everywhere, not just in the suburbs. Church potlucks in Indiana now set out a 'small plates' table by default. The 'Bread Alone' fasting network plateaued near 550 congregations; the free pill took away its claim to be the poor person's option. School cafeterias in Fort Wayne keep medication-note files for liraglutide kids.",
+      "dating_and_intimacy": "Profiles state which drug and since when. 'Off' is now the disclosure that needs a reason. 'Lean-mass verified' badges remain premium. Couples plan around monthly shot dates, and the free daily pill creates no calendar at all.",
+      "meaning_of_appetite": "Appetite has become an anomaly to explain rather than a force to manage. Doctors, life-insurance underwriters and some employers ask 'why aren't you on one?' Unmuted and fat-acceptance revivalists frame appetite as something worth keeping. MAHA influencers frame the free pill as a pharma handout.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL: clinically meaningful anhedonia ~7–8% overall vs ~3% of controls, ~12% on retatrutide 12 mg, ~5% on subsidy-dose oral. Mild 'evenness' is reported by a much larger share, and employers prize it.",
+      "framing": "HR: 'steadiness', a competency. Clinicians: a dose-related side effect. Unmuted: a class sedative, now delivered free. Ordinary speech: just how people are now.",
+      "effect_on_work": "~6.1M employees sit in adherence-verified tracks, mostly on clinic-administered MariTide. Shift-lead promotion packets in Columbus-corridor logistics and national call centres include 'metabolic track participation' under wellness. After EEOC right-to-sue letters issued in Feb 2032, a class ADA suit was filed in the Southern District of Ohio against a Groveport logistics operator; no ruling yet. Upper-tier firms monitor nothing.",
+      "effect_on_art_and_play": "Unmuted off nights continue in Detroit and Baltimore and now draw people who were forced off by the recall. Comedy circuits have 'off sets' about appetite returning. Sportsbook per-account wagering keeps falling, now in lower-income markets too. Loud, sour, spicy food is a subculture rather than a genre.",
+      "effect_on_intimacy": "The monthly shot date organises corridor households. Mismatch between a partner on retatrutide 12 mg and one on nothing is the most common couples-therapy complaint in upper-tier practices. 'Parallel lives' persists.",
+      "effect_on_politics": "The CMHP passed with a rural-Republican and Congressional Black Caucus coalition over MAHA opposition. Its FY2033 renewal is the live fight. Unmuted split over it: one faction calls it access, the other calls it sedation by appropriation. The movement against adherence-conditioned premiums remains stalled.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-speed on doses and new molecules (amycretin, retatrutide 12 mg) but cautious on indications (dementia CRL, AUD extension). The FDA issued two long-horizon safety actions (EPI label, Barrett's DSC). Its compounding enforcement collapsed during the shortage and is only partly restored.",
+      "subsidy_or_mandate": "Direct subsidy: HHS/HRSA launched the Community Metabolic Health Program in Jun 2031 with $1.2B redirected under Section 330 authority. Congress funded it at $3.5B in the Mar 2032 FY2032 omnibus. It gives free oral orforglipron to ~5.0M low-income adults 18–64. No Medicare benefit. The 2027 tri-agency 30% wellness guidance stands.",
+      "conditioning_or_surveillance": "CMHP enrollment requires a quarterly weight and refill check at the clinic and shares fill data with HRSA, but adherence does not condition eligibility. Employer tracks keep clinic administration records. Two state Medicaid programmes still condition coverage on adherence and BMI progress.",
+      "workforce_or_military": "TRICARE is unchanged. The Army recruit oral pilot continues. DOT has still not ruled on off-label alcohol-reduction use among drivers.",
+      "geopolitics_of_supply": "Novo's US manufacturing failure became a Danish–US political issue. Chinese peptide API now feeds US compounders, which put CBP and FDA in conflict with telehealth lobbyists. India supplies most global volume and US mail-order users. The Indian–US cash price gap is ~50×.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2031-02",
+        "event": "FDA inspectors find sterility failures at Novo Nordisk's Clayton, NC fill-finish lines; Novo recalls Wegovy and Ozempic pen lots, semaglutide injectables go onto the FDA shortage list in April, and Novo suspends its TrumpRx injectable maintenance tier as Lilly raises Zepbound and Foundayo cash prices",
+        "driver": "price_path: shock_up"
+      },
+      {
+        "date": "2031-05",
+        "event": "With semaglutide on the shortage list, compounded semaglutide returns through telehealth at $179–299 a vial; by year-end ~6M Americans use compounded product, and 'compounded triple' retatrutide made from Chinese API is sold alongside it",
+        "driver": "market_shock: gray_market_resurgence"
+      },
+      {
+        "date": "2031-06",
+        "event": "FDA issues a complete response letter on Lilly's bid to extend tirzepatide's dementia-risk claim to adults without heart disease, citing fracture risk and the exocrine signal; HHS the same month launches free orforglipron at community health centres for low-income adults",
+        "driver": "new_indications: none; state_action: subsidy"
+      },
+      {
+        "date": "2032-03",
+        "event": "Congress funds the Community Metabolic Health Program at $3.5B in the FY2032 omnibus, enrollment passes 4 million; the same week FDA approves a 12 mg retatrutide dose with ~29% mean weight loss for BMI ≥35, listed at $1,499",
+        "driver": "state_action: subsidy; next_gen_launch: triple_agonist_30pct"
+      },
+      {
+        "date": "2032-07",
+        "event": "FDA safety communication cites Nordic and VA endoscopy registries showing a 60% excess of Barrett's oesophagus after six or more years of continuous semaglutide; gastroenterology societies begin drafting screening guidance",
+        "driver": "safety_signal: novel_long_horizon"
+      },
+      {
+        "date": "2032-09",
+        "event": "Business Group on Health survey finds only 29% of employers still cover weight-loss drugs while monitored metabolic tracks grow to ~6 million enrollees; a class ADA suit over 'steadiness' promotion criteria is filed in federal court in Ohio",
+        "driver": "coverage_shift: employer_retreat; personality_layer: employer_encouraged; cultural_response: normalisation"
+      }
+    ],
+    "open_tensions": [
+      "The free federal pill (~12% loss, daily oral) and the $649–1,499 12 mg retatrutide pen (~29%) have made the tiers chemical: the poor are now on a drug, just a different drug. The program depends on one supplier at $48 and an annual appropriation whose FY2033 renewal MAHA legislators are contesting.",
+      "Two long-horizon signals (EPI, now labelled, and Barrett's, emerging) have surfaced in the longest-exposed users, while normalisation, a higher top dose and pediatric use all push toward decades of exposure. The Barrett's label and screening guidance are undecided, and cancer data are a decade away.",
+      "The compounders the shortage legalised did not leave when it ended. ~8M people take compounded product and ~9M imported or 'research' peptides, including retatrutide at uncertain doses, and FDA enforcement is a stack of warning letters.",
+      "Employers keep dropping coverage but keep the monitored tracks, so steadiness is a condition of the jobs that still pay for the drug. The Ohio ADA suit is the first test, with no ruling."
+    ]
+  },
+  "prose": {
+    "headline": "One in Four on It: Free Pills at the Clinic, 30% Pens at the Club, and the Shortage That Brought the Compounders Back",
+    "world_in_600_words": "At the end of 2032 a little over one American adult in four takes an incretin drug, and more than a third have tried one. Two years ago that would have sounded like a forecast. Now it sounds like a census. Being on one is unremarkable. Being off one is the thing people ask about, at the doctor, at the life-insurance medical and sometimes at the second interview.\n\nThe climb did not come from cheaper prices. Prices went up. In February 2031 FDA inspectors found sterility failures on Novo Nordisk's North Carolina pen lines. The recall took Wegovy and Ozempic pens off shelves and put semaglutide back on the shortage list for more than a year. Novo dropped its discounted cash tier. Lilly, absorbing the displaced patients, raised its own cash prices. The $149 starting pill on TrumpRx is still there, and the $1,349 list price is still on the box. Nearly everything between them costs more than it did.\n\nThe shortage also reopened a door the FDA had closed in 2025. Pharmacies may legally compound a drug in shortage, so the telehealth vial came back within weeks, at $179 to $299 a month. When the shortage ended in June 2032, most of those sellers kept going. Some now sell a 'compounded triple' made from Chinese retatrutide powder, at whatever concentration the label says. About eight million people take compounded product and another nine million take imported or 'research' peptides. Poison-centre calls are five times what they were in 2025.\n\nThe largest single cause of growth was the government. In June 2031 HHS began offering Lilly's daily pill, orforglipron, free at community health centres to low-income adults under 65. Lilly supplies it at about $48 a month. Congress funded the program at $3.5 billion in March, through a coalition of rural Republicans and the Congressional Black Caucus, over the objections of MAHA legislators. Five million people are enrolled. In Fort Wayne, Toledo and San Antonio, women in their fifties are the fastest-growing group of users in the country. The bottom income third is now nearly as medicated as the middle.\n\nThe medicine is not the same, though. The free pill takes off around 12 percent. Lilly's new 12 mg retatrutide dose, approved in March, takes off almost 29 percent, close to surgical. It lists at $1,499 and sells for $649 cash, mostly to people whose employers or bank accounts can carry it. Fewer than three employers in ten still cover weight loss. The ones that do increasingly do it through monitored 'metabolic tracks': six million workers getting a monthly shot at the plant clinic, with adherence recorded by the nurse. HR calls the effect steadiness and puts it in promotion packets. A class-action disability suit filed in Ohio in September asks whether it can do that.\n\nThe long-horizon ledger grew. Last year the pancreatic-insufficiency signal became a warning on the semaglutide label. This July the FDA cited Nordic and VA data showing that Barrett's oesophagus, a precancerous change caused by years of reflux, appears 60 percent more often after six years of continuous use. No cancers have shown up. They would take another decade. The FDA refused to extend tirzepatide's dementia claim to people without heart disease, and cash users take it for that anyway.\n\nThe food aisle shrank again, this time in the value stores as well as the suburbs. Bars in Ohio and Michigan keep closing. Gyms keep adding racks. The country is thinner and calmer, its health centres hand out pills, and the people still arguing about whether this is all right are mostly the ones who had to explain why they stopped.",
+    "a_day_in_the_life": "Lorena Ruiz clocks into the cafeteria at Northrop High in Fort Wayne at 5:40 and takes her pill with the first coffee, the way the nurse at the Hanna Street health centre told her to. Thirty minutes before food. She has the window down to six minutes now.\n\nThe district plan covers her blood pressure and not this. The pill is free. She signs the clipboard every quarter, stands on the scale, and gets a bag with ninety tablets and a YMCA flyer she has never used. Fourteen pounds since March.\n\nAt lunch she serves half-trays. A boy with a laminated card from his doctor gets the high-protein plate. Denise, on the register, is off since the recall and still hasn't gone back. The girls on the line ask her about it the way you'd ask about a divorce.\n\nAfter shift she drives to her brother Ray's. His vial came from a website in Arizona and the label says a different concentration than the last one. They sit at his kitchen table with his reading glasses and a syringe and do the arithmetic twice. He was on the real pen until February of last year.\n\nHer son's girlfriend works at the warehouse in Groveport and gets her shot the first Tuesday of the month at the plant clinic, by the time clock. She's up for shift lead. She says it's easy to stay calm now.\n\nDinner is soup. Lorena eats half and puts the rest in the fridge without thinking about it, and only notices later that she didn't."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r39-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The largest single cause of growth was the government.",
+          "field": "prose/body",
+          "why": "Mechanism: the candidate's own payer mix contradicts this. The CMHP's 5.0M users are fewer than the 8.0M new compounded users and the roughly 6.5M added legitimate-cash users, so the government is not the largest single source of growth."
+        },
+        {
+          "quote": "That is the main reason the bottom third rose 12 → 21.",
+          "field": "world/population/note",
+          "why": "Mechanism: the bottom-third rise of 9 points is roughly 8M users. CMHP's 5.0M covers a ≤250% FPL group wider than the bottom third, and 1.3M of them were already current gray-market users. CMHP cannot be the main driver."
+        },
+        {
+          "quote": "by year-end ~6M Americans use compounded product",
+          "field": "world/events/1/event",
+          "why": "Magnitude and mechanism: compounded use goes from none in the 2030 payer mix to ~6M in about seven months, and ~8M in 2032. No supply, telehealth-capacity or demand chain is shown for that speed, and compounded product is not an obvious substitute for the paused semaglutide pens."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 17M people are on compounded or imported product with dosing errors and uncertain concentrations (poison-centre calls ~5× 2025). A second long-horizon signal (Barrett's) has appeared with cancer data a decade away. Roughly 6M workers are in employer-verified tracks with 'steadiness' in promotion packets, and 'why aren't you on one?' is asked by insurers and employers. This is a recognisably harder society with new losers, not a structural catastrophe. The free pill gives the poor real access, which softens inequality, but the tiers are now chemical and the harm is mostly nameable and measured.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is exactly +8.9pp. The price shock comes from the recall and shortage, the gray resurgence from compounding, and the subsidy is CMHP. Employer coverage falls 36→29%, the retatrutide 12 mg dose reaches 28.9%, and Barrett's is the novel signal. No new indication arrives, the dementia CRL does not contradict that, and the normalisation and employer-steadiness drivers are present. mechanism: The recall-to-shortage-to-compounding chain and the CMHP funding path are shown, but the claims above are asserted or contradicted: the 'largest single cause' line, CMHP as the main cause of the bottom-third rise, and compounded use jumping to 6M within months. The Barrett's signal arriving on schedule and insurers asking 'why aren't you on one?' are also thinly supported. magnitude: 26.5% on drug and 35% ever are inside the envelope. The age, income and payer-mix totals (71.5M) reconcile. The Medicare ($32.3B, $5.9B) and CMHP ($3.5B) arithmetic multiplies out, and the amycretin, retatrutide 12 mg and AUD timings obey the approval rules. Minor gaps remain: the 60M CMHP fills imply monthly fills while the prose shows 90-tablet quarterly bags, and the pediatric split is slightly loose.",
+        "generativity": "Lorena Ruiz, her brother Ray with his vial, Denise who went off after the recall, and the Groveport warehouse girlfriend who gets her shot by the time clock make a coherent cast. The scenes are concrete: the cafeteria half-trays, the laminated doctor's card, the kitchen-table dose arithmetic, the quarterly clipboard and scale. The world fields (CMHP, Ohio ADA suit, Fort Wayne and Toledo, compounder lobbyists) imply many more stories. The last line shows rather than explains."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s3-L3-r39-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "9.5 points are first-time users since 2030; 3.8 points are 2030 first-course users who stayed on continuously",
+          "field": "world/population/note",
+          "why": "Ever-used rose 25.5 to 35, which is exactly 9.5 points, so every post-2030 starter is still on the drug. That contradicts the note's own one-year persistence near one-third and its restart rates. It is a magnitude reconciliation failure."
+        },
+        {
+          "quote": "the federal Community Metabolic Health Program (free oral orforglipron) 5.0M",
+          "field": "world/population/note",
+          "why": "A program launched in Jun 2031 reaches 5.0M enrollees in about 18 months through FQHCs and 340B pharmacies, with quarterly clinic weight checks. That is a very fast ramp for a system of that size, and the supply and capacity chain is not shown. Mechanism and magnitude are both strained."
+        },
+        {
+          "quote": "FDA Drug Safety Communication (Jul 2032) advises GI evaluation for long-term users with chronic reflux.",
+          "field": "world/safety_ledger/10/regulatory_response",
+          "why": "A registry study in May 2032 produces a Drug Safety Communication two months later, and a second novel long-horizon signal follows the EPI signal within two years. Its HR 1.6 is detected through endoscopy registries and is not tied to mechanism or exposure. It reads as convenient for the safety driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 71M users, with 17M on compounded or gray product, poison-centre calls ~5× 2025, and two long-horizon safety signals (EPI, Barrett's) make this a harder world. Employer-verified 'steadiness' tracks (6.1M) and 'why aren't you on one?' pressure from underwriters and employers lower autonomy. Stratification shifts to chemical tiers (free ~12% pill versus $649 ~29% pen) rather than disappearing, and the free pill narrows the use gap for the poor, so inequality and flourishing sit mid-range. This is a recognisably harder society, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Price shock comes from the Clayton recall, employer retreat from 36% to 29%, and the subsidy from the CMHP. The gray-market resurgence is the compounding revival, and the triple-agonist driver is realised as a 12 mg dose, which the approval rules allow. Adoption is 26.5%, inside the envelope. mechanism: The recall, shortage list, compounding and price chain is well shown, as is the CMHP political coalition. The weaker links are the CMHP's 5.0M ramp (claim 2) and the quick second long-horizon signal and DSC (claim 3). magnitude: Population, payer mix (71.5M), age and income checks, Medicare spend ($32.3B) and the CMHP budget (~$3.5B) all reconcile and sit inside the envelope. The persistence arithmetic fails, though: all 9.5 points of new ever-users are still on the drug (claim 1). The pediatric subtotals are also loose.",
+        "generativity": "The prose vignette gives concrete scenes: Lorena's six-minute window, the half-trays, Ray's twice-checked vial concentration, and the girlfriend's first-Tuesday plant-clinic shot. The world fields add named places (Fort Wayne, Groveport, Toledo) and cultural texture such as 'off sets' and the Bread Alone plateau. Some world-state passages explain rather than show, but many characters and scenes are implied."
+      },
+      "plausibility": 6.8
+    },
+    {
+      "custom_id": "s3-L3-r39-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "That is the main reason the bottom third rose 12 → 21.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: only about 3.7M of the 5.0M CMHP enrollees are net-new (2.1M never-used plus 1.6M restarters), which is roughly 4 points of ~90M bottom-third adults. That cannot be the main cause of a 9-point rise, and the other ~5 points are left unexplained."
+        },
+        {
+          "quote": "Orals are now ~50% of users because the CMHP is oral-only.",
+          "field": "world/access/note",
+          "why": "Mechanism and magnitude: orals were ~45% of ~47M (~21M) and are now ~50% of 71.5M (~36M). The 5.0M CMHP enrollees explain only a third of that ~15M rise, so the stated cause is asserted rather than shown."
+        },
+        {
+          "quote": "found new Barrett's diagnoses at HR ~1.6 in users continuously on semaglutide for >6 years versus weight-matched controls, with no excess before year 5.",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism: a second novel long-horizon signal (after EPI) is found, replicated in VA data and turned into an FDA safety communication within about two months (May to Jul 2032). That is fast and convenient, and the 'no excess before year 5' / '>6 years' framing is loosely tied to the exposure cohorts."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "A society where 26.5% of adults are on a drug, steadiness is written into promotion packets (~6.1M in adherence-verified tracks, the Ohio ADA suit), and a second long-horizon harm (Barrett's) has appeared is a recognisably harder world. Compounded and gray-market product (~17M users, poison-centre calls ~5× 2025) and the pediatric cohort add real harm. Autonomy is the worst dimension, with 'why aren't you on one?' pressure and employer conditioning. The free CMHP pill narrows the access gap, which tempers inequality, and no melodrama is claimed. The harm is mostly normalised and diffuse, which supports about 6.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +8.9pp to 26.5. The shock_up path comes from the Novo recall and shortage. Employer coverage falls 36→29%. The Barrett's signal covers long-horizon safety. The triple_agonist_30pct driver becomes a 12 mg retatrutide sNDA, which the approval rules allow. Gray-market resurgence comes through compounding. The CMHP is the subsidy. new_indications stays empty, with a CRL on the dementia extension. mechanism: The recall to shortage to legal compounding to Lilly price rises chain is well shown, but the bottom-third jump and the orals share are asserted (claims 1 and 2), and the second safety signal arrives conveniently fast (claim 3). magnitude: All figures sit inside the envelope (26.5 current, 35 ever, age and income checks close). The payer mix sums to 71.5M, the cycled 47% reconciles, and the Medicare, dementia and CMHP spending arithmetic multiplies out. Only small gaps remain: the pediatric band arithmetic is slightly loose and the bottom-third and orals attributions are thin.",
+        "generativity": "The prose gives a strong scene set: Lorena in the Fort Wayne cafeteria, Ray's vial arithmetic, Denise off since the recall, the Groveport first-Tuesday shot. The world fields add concrete places and institutions: Columbus corridor, YMCA CMHP classes, Unmuted off sets, church potlucks. One detail jars: 'thirty minutes before food' fits the Wegovy pill's dosing rather than the small-molecule Foundayo named in the world."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The largest single cause of growth was the government.",
+        "field": "prose/body",
+        "why": "Mechanism: the candidate's own payer mix contradicts this. The CMHP's 5.0M users are fewer than the 8.0M new compounded users and the roughly 6.5M added legitimate-cash users, so the government is not the largest single source of growth."
+      },
+      {
+        "quote": "That is the main reason the bottom third rose 12 → 21.",
+        "field": "world/population/note",
+        "why": "Mechanism: the bottom-third rise of 9 points is roughly 8M users. CMHP's 5.0M covers a ≤250% FPL group wider than the bottom third, and 1.3M of them were already current gray-market users. CMHP cannot be the main driver."
+      },
+      {
+        "quote": "by year-end ~6M Americans use compounded product",
+        "field": "world/events/1/event",
+        "why": "Magnitude and mechanism: compounded use goes from none in the 2030 payer mix to ~6M in about seven months, and ~8M in 2032. No supply, telehealth-capacity or demand chain is shown for that speed, and compounded product is not an obvious substitute for the paused semaglutide pens."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 6.5,
+      "inequality": 5.67,
+      "public_health": 6.33,
+      "cohesion": 5.5,
+      "epistemic": 5.5,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.83,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.4,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "About 17M people are on compounded or imported product with dosing errors and uncertain concentrations (poison-centre calls ~5× 2025). A second long-horizon signal (Barrett's) has appeared with cancer data a decade away. Roughly 6M workers are in employer-verified tracks with 'steadiness' in promotion packets, and 'why aren't you on one?' is asked by insurers and employers. This is a recognisably harder society with new losers, not a structural catastrophe. The free pill gives the poor real access, which softens inequality, but the tiers are now chemical and the harm is mostly nameable and measured.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is exactly +8.9pp. The price shock comes from the recall and shortage, the gray resurgence from compounding, and the subsidy is CMHP. Employer coverage falls 36→29%, the retatrutide 12 mg dose reaches 28.9%, and Barrett's is the novel signal. No new indication arrives, the dementia CRL does not contradict that, and the normalisation and employer-steadiness drivers are present. mechanism: The recall-to-shortage-to-compounding chain and the CMHP funding path are shown, but the claims above are asserted or contradicted: the 'largest single cause' line, CMHP as the main cause of the bottom-third rise, and compounded use jumping to 6M within months. The Barrett's signal arriving on schedule and insurers asking 'why aren't you on one?' are also thinly supported. magnitude: 26.5% on drug and 35% ever are inside the envelope. The age, income and payer-mix totals (71.5M) reconcile. The Medicare ($32.3B, $5.9B) and CMHP ($3.5B) arithmetic multiplies out, and the amycretin, retatrutide 12 mg and AUD timings obey the approval rules. Minor gaps remain: the 60M CMHP fills imply monthly fills while the prose shows 90-tablet quarterly bags, and the pediatric split is slightly loose.",
+      "generativity": "Lorena Ruiz, her brother Ray with his vial, Denise who went off after the recall, and the Groveport warehouse girlfriend who gets her shot by the time clock make a coherent cast. The scenes are concrete: the cafeteria half-trays, the laminated doctor's card, the kitchen-table dose arithmetic, the quarterly clipboard and scale. The world fields (CMHP, Ohio ADA suit, Fort Wayne and Toledo, compounder lobbyists) imply many more stories. The last line shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.7,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 7
+  }
+}

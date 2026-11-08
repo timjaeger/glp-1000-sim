@@ -1,0 +1,527 @@
+{
+  "run_id": "s2-L2-r25",
+  "step": 2,
+  "year": 2030,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 25,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 3.5,
+    "price_path": "shock_up",
+    "coverage_shift": "status_quo",
+    "new_indications": [
+      "alcohol_use_disorder",
+      "pediatric_under_12"
+    ],
+    "safety_signal": "pediatric_developmental",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "none",
+    "cultural_response": "normalisation",
+    "state_action": "none",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L2-r25",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16693,
+        "output_tokens": 19841
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r25-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24063,
+        "output_tokens": 8262
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r25-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24063,
+        "output_tokens": 6292
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r25-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24063,
+        "output_tokens": 7966
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has still approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there. The supply shock raised maintenance and injectable prices but not the starter price.",
+      "Novo Nordisk and Eli Lilly are still the only sellers of branded incretins in the US, and Lilly still leads on efficacy.",
+      "The 503B compounding exclusion finalised in 2026 still stands, and the suicidal-ideation warning is still off the Wegovy, Zepbound and Saxenda labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 19.8,
+      "us_adults_ever_used_pct": 26.5,
+      "by_income_third_pct": {
+        "top": 25,
+        "middle": 21,
+        "bottom": 13.5
+      },
+      "by_age_band_pct": {
+        "18_29": 12,
+        "30_49": 20,
+        "50_64": 30,
+        "65_plus": 15.5
+      },
+      "pediatric_under_18_on_drug_pct": 1.3,
+      "cycled_off_and_on_pct": 43,
+      "note": "FICTIONAL. Arithmetic: 26.5% ever-used minus 19.8% current leaves 6.7% of adults who used a drug and are off it now. 43% of ever-users have cycled, which is 11.4 points: ~9.7 points are current users on at least their second course (49% of current users) and ~1.7 points cycled before and are off again. That is consistent with roughly one-third persistence at one year and 36–47% restarting within a year. Cycling rose slightly because the 2029 price rise pushed some users into drug holidays. About 19.8% of ~268M adults is ~53M current users. FICTIONAL payer mix: commercial ~31% (~16.4M, of whom ~3.4M are in adherence-verified metabolic tracks), Medicare ~19% (~10.1M, mostly diabetes, cardiovascular and kidney codes, plus ~1.4M on the dementia-risk route), Medicaid ~7% (~3.7M in the 9 remaining opt-in states plus diabetes coverage everywhere), legitimate cash ~37% (~19.6M), imported or counterfeit ~6% (~3.2M). Payer structure is unchanged. Growth came through cash channels, mainly AUD telehealth (~4.1M adults whose primary indication is alcohol, on-label or off-label) and Foundayo maintenance switches. Under 50, the AUD route skews male and younger, which lifted the 18–29 rate from 9% to 12%. Adult obesity is ~33.9%. About 23% of adults have obesity and have never used a drug, mostly uninsured, on Medicaid in non-covering states, or older adults priced out. Under-18 users number ~0.95M (1.3% of ~73M), of whom ~90k are aged 6–11. Upper-income households account for about half of pediatric use."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Coverage structure is unchanged from 2028. Medicare covers incretins under diabetes, cardiovascular, CKD and sleep-apnoea codes, and through the dementia-risk route opened Aug 2028 under prior authorisation. That route has ~1.4M beneficiaries at an estimated net ~$480/month: 1.4M × $480 × 12 ≈ $8.1B annualised. There is still no Part D weight-management benefit. Medicaid: 9 of the original 14 opt-in states still cover weight management at the $245 rate; two of them tie continued coverage to adherence and BMI progress. The 2029 supply allocation did not change Medicaid or Medicare formularies, but plans steered new starts toward Foundayo and injectables.",
+      "employer_coverage_pct": 43,
+      "generic_us": false,
+      "generic_rest_of_world": "About 170 countries have generic semaglutide. Indian generics run $8–45/month, up slightly after India's CDSCO tightened export licensing following the 2028 US contamination case. Chinese peptide API is the volume source for most generic makers. Canada's generics are CAD 75–115.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. The price shock is the May 2029 FDA warning letter at Novo's Clayton, NC semaglutide API site. Oral semaglutide at 25 mg daily uses roughly 70 times the peptide of a 2.4 mg weekly injection, so oral parity had made API capacity the binding constraint. With Clayton lots on hold, Novo put the Wegovy pill 25 mg on allocation for eleven months. Novo raised the TrumpRx maintenance price from $299 to $399 and injectable Wegovy to $449–549, and Lilly followed on Zepbound vials ($399–549). The starter price of $149 was kept. Foundayo, a small molecule unaffected by peptide supply, held at $149–349 and took share. US mail-order gray-market prices rose from ~$60–120 to ~$110–200 a month because of export tightening and CBP seizures. Users held at ~3.2M as some cash users moved down into the gray market and others moved out of it into Foundayo. Orals now make up ~58% of all users and ~70% of new starts. Employer coverage is 43% (Business Group on Health 2030), with another ~9% covering only through monitored tracks. Pharmacy trend was ~+10% in 2029."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Mar 2029)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 27,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide incl. Wegovy pill; liraglutide)",
+        "pediatric obesity ages 6–11 (injectable semaglutide, Jan 2030; growth and pubertal monitoring PMR)",
+        "alcohol use disorder, moderate-to-severe (oral semaglutide, Mar 2030; ASAM guideline-endorsed)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; confirmatory trial ongoing)",
+        "weight maintenance after injectable induction (orforglipron/Foundayo, Sep 2029)"
+      ],
+      "mainstream_offlabel_uses": [
+        "low-dose 'craving' and 'calm' subscriptions via telehealth: AUD-dose oral semaglutide or low-dose Foundayo for people without AUD",
+        "dementia-prevention use without cardiovascular disease, cash-paid, ages 55–70",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "pediatric use under age 6 under specialist care (rare)",
+        "microdosing for 'steadiness' in employer-adjacent wellness programmes"
+      ],
+      "pipeline_note": "The oral_parity driver is realised within the approval rules as a new label for an existing product. In Sep 2029 the FDA added maintenance after tirzepatide induction to Foundayo's label. That followed a 52-week switch trial in which patients moved from Zepbound to orforglipron kept all but ~1.5 points of their loss (no significant difference from staying on Zepbound for maintenance). So a pill now matches the strongest injectable for maintenance but not for induction. No oral induces tirzepatide-level loss. The new_indications driver came through sNDAs Novo filed in Dec 2028. The 6–11 injectable approval came in Jan 2030, 13 months after filing; the AUD indication for oral semaglutide came in Mar 2030, 15 months after filing. Retatrutide was approved in Mar 2029 after its extended review, with dysesthesia labelling and a cap at 9 mg for most patients. It is the best performer at ~27% at the label dose but has only ~0.7M users because of cost and tolerability. Survodutide received a complete response letter in Jul 2029 for manufacturing deficiencies at a contract site; Boehringer resubmitted, and a decision is due 2031. Amycretin was filed in Oct 2029, so no decision before Oct 2030; the decision is now expected in H1 2031. MariTide's phase 3 reads out in 2030 and Amgen has not filed, so it is not on the market. Muscle-preserving adjuncts are still in phase 2/3 and none is approved. Global incretin market ~$141B (2029). In the US, the exclusivity cliff of 2031–32 is the subject of every earnings call."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. In the 2029 trial, switching from injectables to Foundayo caused transient nausea in ~20%. Retatrutide's GI rates are highest at top doses.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss, and higher with retatrutide.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Absolute risk remains low, with no causal confirmation. The MDL settled in 2029 for undisclosed sums.",
+        "regulatory_response": "Labelled; litigation largely closed."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Follow-up of the Medicare cohort holds the hip-fracture HR at ~1.3 in users 65+ after more than 2 years. DXA uptake among users 65+ rose to ~45%. Users on the dementia route are the oldest and most fracture-prone group.",
+        "regulatory_response": "Class warning since Jul 2028; CMS DXA code; geriatric guidance pairs dementia-route prescribing with protein and resistance-training plans."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts are still conflicting; absolute risk very low.",
+        "regulatory_response": "Listed under adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new adult signal. Pediatric psychiatric monitoring is now handled under the developmental entry.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: Interim data from the FDA-requested postmarketing study (2030, n≈31k) are consistent with the 2027 cohort: clinically meaningful anhedonia in ~6–8% of users versus ~3% of controls, dose-related. A secondary analysis found the rate similar in AUD-indication users, whose low doses offer little protection because they start from a higher baseline of depressive symptoms.",
+        "regulatory_response": "Postmarketing study continues, with the final report due 2031; no labelling. The AUD label lists 'mood changes' among adverse reactions. OPDP sent untitled letters to two telehealth platforms for 'calm' claims."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months. Allocation-driven interruptions in 2029–30 produced a measurable regain wave among Wegovy pill maintenance users.",
+        "regulatory_response": "None directly; supports the Foundayo maintenance label and chronic-therapy framing."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "B12, iron and vitamin D case series continue, including among AUD users with poor baseline nutrition.",
+        "regulatory_response": "Professional guidance; no label change."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; effects of repeated cycling",
+        "status": "emerging",
+        "prevalence_note": "About eight years of follow-up now exist, with no new adult organ signal. The effects of cycling on body composition remain the main unknown in adults.",
+        "regulatory_response": "Pediatric bone-density and growth PMRs on the adolescent and 6–11 approvals."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~9,800 cumulative FDA adverse-event reports tied to non-approved product. During the 2029 allocation, counterfeit 'Wegovy pill' blister packs appeared for the first time; a 2030 FDA lab sample found 40% contained no semaglutide.",
+        "regulatory_response": "Import alert; CBP seizures; India's export licensing tightened. Personal-importation enforcement is still porous."
+      },
+      {
+        "effect": "Developmental, growth and psychiatric effects in children who started young (height velocity, pubertal timing, restrictive eating)",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: A PEDSnet/Sentinel cohort (Jun 2030, n≈41k children who started at ages 9–14, mostly off-label under 12 or at 12–13) found height velocity ~0.6 cm/yr lower than BMI-matched non-users over the first two years. Girls' menarche was a median ~4 months later. Restrictive eating disorder and ARFID diagnoses were 1.9% versus 1.0%. Confounding by intensive weight-focused care is likely, and whether adult height is affected is unknown.",
+        "regulatory_response": "FDA Drug Safety Communication (Jul 2030) recommending quarterly height and pubertal staging and eating-disorder screening. The 6–11 label already carried a growth PMR, and an FDA label update is under review. AAP issued interim guidance but did not withdraw its pharmacotherapy recommendation."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 36% of households have a user. Snack and confectionery volumes are down ~8% from 2025 and sugary drinks ~7%. Dollar sales are roughly flat because of price and premium protein lines. 'GLP-1 friendly' labels have largely disappeared because they no longer differentiate. Packaged-food firms now plan pack sizes around a 'medicated household' as the default shopper in upper-middle-income ZIP codes.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Since 2025, US spirits volumes are down ~11% and beer ~6%. The AUD approval and ASAM endorsement moved heavy-drinker treatment into primary care. Because the heaviest ~10% of drinkers account for over half of volume, the effect is concentrated. Brown-Forman and Diageo have consolidated more US capacity. Non-alcoholic and 'one-pour' premium lines are the growth segments, and Wisconsin and Ohio taverns report the steepest declines.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly up. The small plate is now the default portion at casual chains, and 'full portion' is the upcharge. Wedding and event caterers quote for 60% plate consumption. Bar revenue at casual-dining chains is down, while non-alcoholic cocktail attach rates are up.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists are still shrinking but more slowly. The 2029 allocation-driven regain wave lifted stretch and size-range basics. Children's 'husky' sizing lines are being cut back.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training and body-composition scanning are still growing, supported by the bone warning and the dementia-route pairing with resistance training. Youth strength programmes are marketed to parents of medicated children.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Payer structure is unchanged: 43% of employers cover weight management, coverage concentrates on diabetes, cardiovascular and dementia codes, and premium differentials of up to 30% are tied to adherence. Pharmacy trend was ~+10% in 2029 because of the price rise. PBMs steered members to Foundayo during the allocation. Medicare actuaries track the dementia route, now ~$8B annualised.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly gained share as the small-molecule pill avoided the peptide bottleneck. Novo is rebuilding API capacity and has absorbed the Clayton warning letter. US net prices rose in 2029. Ex-US volume is generic-driven. Both firms are positioning for the 2031–32 exclusivity cliff with retatrutide, amycretin and orals.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Among college-educated 35–60-year-olds, being lean says nothing any more, and visible weight now reads as a choice or a lapse that invites a question. In Plano, Texas, and similar affluent suburbs, 'Are you off?' is asked the way 'Are you still drinking?' once was. After the 2029 allocation, a regained body sometimes just meant your pharmacy ran out.",
+      "thinness_and_class": "The two tiers persist. Insured and cash-paying users take branded orals with DXA scans, while lower-income users take pricier, more often counterfeit mail-order product, or nothing. The bottom third's rate rose only 2.5 points. Upper-income parents now face the pediatric growth signal; some quietly pause their children's use over the summer, which is a new form of cycling.",
+      "eating_as_ritual": "Shared meals have settled smaller. In medicated households, the family dinner is often one hungry child and two adults who aren't. The 'Bread Alone' fasting network claims ~500 congregations. Hosting advice now assumes most adult guests are on something.",
+      "dating_and_intimacy": "Several dating apps dropped the 'on/off' tag in 2029 because users treated 'on' as the default and 'off' as a disclosure. Desire mismatch remains a common presenting issue in therapy. The AUD indication added a new kind of couple, one sober by pill and one not.",
+      "meaning_of_appetite": "Appetite and craving are now spoken of as one thing, and both are treatable. The counter-movement is smaller and more defensive: the Unmuted collective, church fasting networks, and fat-acceptance and 'natural' groups are explaining themselves rather than setting terms.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL: Measured clinically meaningful anhedonia in ~6–8% of users versus ~3% of controls (2030 interim postmarketing data). A much larger share report a mild 'quiet' that is now what many people buy the drug for.",
+      "framing": "Telehealth platforms frame it as a product: 'quiet', 'calm', 'craving-free'. The AUD approval gave them on-label language about craving to build on, and lifestyle subscriptions extend it to people without AUD. Clinicians call it a side effect. Employers still call it steadiness. Unmuted still calls it sedation.",
+      "effect_on_work": "About 3.4M employees are in adherence-verified tracks. Separately, ~1.5M cash users subscribe to 'focus' or 'calm' low-dose plans marketed to sales, trading and tech workers as a replacement for evening drinking and impulse spending. Two EEOC ADA charges are still pending.",
+      "effect_on_art_and_play": "Sportsbook handle per identifiable user is down further. 'Quiet bars' serving zero-proof drinks have opened in Austin and Denver. The Unmuted collective's 'off nights' now travel to Chicago and Oakland. The 'flat' fiction wave has a parody genre. Stand-up about 'the craving' has become a cliché.",
+      "effect_on_intimacy": "Couples synchronise dosing, and anniversary drug holidays are common. Sex therapists report AUD-indication couples renegotiating relationships that were organised around drinking together.",
+      "effect_on_politics": "Coalition politics have stalled rather than advanced. California's adherence-premium bill died in committee in 2029, and Illinois's ban is still the only one. No measurable effect on turnout or mood. AUD-route users are a quiet constituency that defends the drug's price, not its culture.",
+      "severity": 4
+    },
+    "state": {
+      "regulatory_posture": "Pro-speed on approvals: under-12 injectable, AUD oral, retatrutide and the Foundayo maintenance label all came in this window. The FDA was reactive on supply, issuing the Clayton warning letter without declaring a class shortage, which kept compounding closed. OPDP sent untitled letters to telehealth 'calm' marketers. The pediatric response came as a Drug Safety Communication rather than a label action, so far.",
+      "subsidy_or_mandate": "No new mandate, subsidy or programme. TrumpRx continues. The 2027 tri-agency guidance allowing 30% adherence-tied premium differentials stands unchanged. No new state laws.",
+      "conditioning_or_surveillance": "Unchanged in structure: PBM fill data and app-linked logs feed wellness vendors; five state employee plans and two Medicaid programmes condition coverage on adherence. AUD-route prescriptions sit under ordinary pharmacy privacy, not 42 CFR Part 2, a gap advocates have flagged.",
+      "workforce_or_military": "The Army's oral pilot for recruits continues. Trucking firms now encourage on-label AUD use; DOT has still not ruled. TRICARE is unchanged.",
+      "geopolitics_of_supply": "Oral parity turned peptide API into the strategic chokepoint. Novo is expanding Kalundborg and Clayton. Chinese API supplies most global generic makers. India tightened export licensing after the US contamination case. US–India talks still cover mail-order enforcement. The ~30× US–India price gap is a standing Danish and US campaign issue.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2028-12",
+        "event": "Novo Nordisk files supplemental applications for oral semaglutide in moderate-to-severe alcohol use disorder and for injectable semaglutide in children aged 6–11, citing phase 3 results",
+        "driver": "new_indications"
+      },
+      {
+        "date": "2029-05",
+        "event": "FDA warning letter halts lots at Novo's Clayton, NC semaglutide API plant; Wegovy pill 25 mg goes on allocation for eleven months and TrumpRx maintenance price rises from $299 to $399, with injectables and Zepbound vials following",
+        "driver": "price_path"
+      },
+      {
+        "date": "2029-09",
+        "event": "FDA adds weight maintenance after tirzepatide induction to Foundayo's label after a switch trial shows patients kept nearly all their loss; PBMs move allocation-hit patients to the pill",
+        "driver": "oral_parity"
+      },
+      {
+        "date": "2030-01",
+        "event": "FDA approves injectable semaglutide for obesity in children 6–11 with a growth and pubertal-development postmarketing requirement; pediatric endocrinology waitlists lengthen",
+        "driver": "new_indications"
+      },
+      {
+        "date": "2030-03",
+        "event": "FDA approves oral semaglutide for alcohol use disorder and ASAM endorses it as first-line pharmacotherapy; within weeks telehealth platforms launch 'craving-free' subscriptions, drawing OPDP untitled letters",
+        "driver": "new_indications"
+      },
+      {
+        "date": "2030-07",
+        "event": "FDA Drug Safety Communication on a 41,000-child cohort showing slower height growth, later menarche and nearly double eating-disorder diagnoses in children who started incretins at 9–14",
+        "driver": "safety_signal"
+      }
+    ],
+    "open_tensions": [
+      "Six months separate the FDA's approval of semaglutide for 6–11-year-olds from its warning about slower growth and more eating disorders in children who started young. The label update and adult-height data are both pending, and upper-income parents are improvising summer drug holidays.",
+      "Telehealth sells 'quiet' as a feature on the back of the AUD indication while the FDA's own postmarketing study keeps finding anhedonia in a minority. The final report is due in 2031, and employers still tie premiums to continuous use.",
+      "Oral parity made peptide API the bottleneck. One plant's warning letter raised prices for millions and pushed some users into a gray market now selling counterfeit pills, with the 2031–32 US exclusivity cliff approaching.",
+      "Medicare's dementia route (~$8B a year) sends the drug to the oldest, most fracture-prone users, still with no weight benefit and no settled evidence on cognition."
+    ]
+  },
+  "prose": {
+    "headline": "Off It? Explain Yourself. The pill went mainstream, the price went up, and now the kids are on it",
+    "world_in_600_words": "By the end of 2030 about one American adult in five is taking an incretin, roughly fifty-three million people, and more than one in four has tried one. Most of them take a pill. Last year the FDA let Lilly's small-molecule Foundayo be used to hold weight lost on Zepbound, after a trial in which switchers kept nearly all of it. That made the weekly pen a starting tool and the daily tablet the way people stay on. Nearly six in ten users now take something by mouth.\n\nThe pill had a cost nobody priced in. Oral semaglutide uses about seventy times as much peptide as the injection, so when the FDA halted lots at Novo's Clayton, North Carolina plant in May 2029, the Wegovy pill went on allocation for eleven months. The maintenance price on the government's TrumpRx channel rose from $299 to $399, and injectables followed. The $149 starter price stayed, and so did the $1,349 list price nobody pays. People cycled off, regained, and came back on Foundayo, which is a small molecule that doesn't need peptide. Lilly's share rose. Mail-order Indian vials, which had cost less than a takeout lunch, now cost more than two, and for the first time counterfeit blister packs appeared.\n\nWho pays has not changed. Forty-three percent of employers cover weight loss, many only through adherence-verified metabolic tracks, and the federal rule allowing a thirty percent premium differential is unchanged. Medicare still has no weight benefit. It pays through the side doors of diabetes, the heart, the kidneys and, since 2028, dementia risk, a route that now carries about 1.4 million of the oldest and most fracture-prone beneficiaries. California's bill against adherence-tied premiums died in committee. Illinois still stands alone.\n\nGrowth came through two new doors. In March the FDA approved oral semaglutide for alcohol use disorder, and the addiction medicine society made it first-line. Heavy drinkers, who buy most of the country's liquor, started getting the pill in primary care, and spirits volumes are now about eleven percent below 2025. Telehealth platforms followed within weeks with subscriptions promising to make cravings go quiet. They sell them to people with no diagnosis at all: traders, salespeople, anyone who wants evenings without the second drink or the cart full of things. Two of those platforms received FDA untitled letters, and the ads changed their adjectives.\n\nThe other door opened in January, when injectable semaglutide was approved for children aged six to eleven. In July the FDA published a cohort of forty-one thousand children who had started at nine to fourteen. It found growth slowed by about six-tenths of a centimetre a year, menarche about four months later in girls, and eating-disorder diagnoses nearly doubled. The agency recommended quarterly height checks and eating-disorder screening. A label change is under review, and nobody yet knows whether adult height is affected. Pediatricians kept prescribing and started measuring. In Plano, parents compare notes on summer breaks from the drug.\n\nThe culture moved in the other direction from the safety news. Being on it is unremarkable among educated adults in their forties and fifties. Being visibly heavy, or drinking hard, now prompts a polite question. Dating apps dropped the on-or-off tag because 'off' had become the disclosure. Caterers quote for plates that come back sixty percent eaten. The Unmuted collective still holds its off nights, now in Chicago and Oakland, and the church fasting network has grown, but both sound defensive now.\n\nThe ledger is unchanged where it was settled. Hip fractures run higher in long-term users over sixty-five. A minority of users lose pleasure in a way the FDA's own study can measure. Regain follows stopping. From the outside the country looks calmer, thinner and more sober, and most of that is true. The children's growth charts are the part nobody can read yet.",
+    "a_day_in_the_life": "Keisha Monroe takes her pill standing at the counter at 6:10, with four ounces of water as the box says. It's Foundayo, $349 this month on LillyDirect. She switched last summer when the Wegovy pharmacy kept saying next week. The dental office where she cleans teeth doesn't cover it. Nobody's does, she says, which isn't true.\n\nOn the bus into Columbus an ad shows a man holding a sparkling water. QUIET THE POUR, it says. Ask about once-daily treatment. She thinks of her brother-in-law and doesn't text her sister.\n\nAt lunch the new assistant eats a whole burrito. Dr. Pham's hygienist asks, kindly, whether she's 'not on anything yet.' The girl says her mom says it's expensive. Everybody nods.\n\nKeisha eats half a turkey wrap and puts the other half in the fridge with her name on it. It'll be there Friday.\n\nAt home Darnell is making spaghetti, a full box, because their son Jalen is ten and always hungry, and because Darnell is off. He stopped in March. He says the quiet felt like Sunday all week. She hasn't asked again.\n\nAfter dinner she stands Jalen against the pantry doorframe, flattens a book on his hair, and draws a pencil line. The pediatrician mentioned the shot in January. Then in July there was the thing on the news about kids growing slower. The pediatrician's office sent a letter: no changes needed, keep measuring.\n\nThe line is a quarter inch above April's.\n\n'Did I grow?' he asks.\n\n'You grew,' she says. She takes a photo of it anyway and saves it to a folder."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r25-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "A PEDSnet/Sentinel cohort (Jun 2030, n≈41k children who started at ages 9–14, mostly off-label under 12 or at 12–13)",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism and magnitude: ages 12–13 have been on-label since the adolescent approval, and under-12 use before the Jan 2030 approval was small and specialist-only. A 41k cohort with two years of height follow-up and a Drug Safety Communication within about a month is implausibly large and fast."
+        },
+        {
+          "quote": "and Lilly followed on Zepbound vials ($399–549)",
+          "field": "world/access/note",
+          "why": "Mechanism: the shock is a peptide-API problem at Novo, and the world itself says Lilly's small-molecule pill was unaffected and gained share. The reason Lilly would raise injectable vial prices is asserted, not shown."
+        },
+        {
+          "quote": "That route has ~1.4M beneficiaries at an estimated net ~$480/month: 1.4M × $480 × 12 ≈ $8.1B annualised.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: a Medicare net price of ~$480 is above the TrumpRx maintenance and starter cash prices and far above the earlier $245 deal rate, which is the opposite of how Medicare net pricing works. Reaching 1.4M obese-plus-CVD beneficiaries within about 22 months of the label also goes unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers. A pediatric developmental signal (slower growth, later menarche, nearly double the eating-disorder diagnoses) sits alongside 6–11 approvals and parents improvising summer drug holidays. Anhedonia in 6–8% of users is sold as 'quiet' and 'calm', adherence-tied premiums persist, and counterfeit pills reach a lower-income gray market. The harms are measured and nameable rather than hidden, and the 2029 supply interruption was temporary, so this is not a 7.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption rises exactly 3.5 points. The Clayton supply shock is the price shock. Coverage is unchanged. AUD and 6–11 approvals come through Dec 2028 filings. Foundayo gets a maintenance label as the oral-parity form. The pediatric developmental signal and the 'quiet' marketing are both present. The only mild strain is that a supply shock reads like a market shock, and that FDA Drug Safety Communications and OPDP letters sit awkwardly against state_action none. mechanism: The 70× peptide-use chain, the allocation and the PBM steering to Foundayo are well shown. Weaker links are Lilly's price follow, the gray-market count held flat by offsetting flows, an anhedonia rate that is 'similar' despite a higher baseline, and the very fast pediatric cohort and Drug Safety Communication (claims 1 and 2). magnitude: Adult use (19.8), ever-use (26.5), the income thirds (mean 19.8) and the age bands are all inside the envelope and reconcile. The cycling arithmetic, payer-mix shares, 3.2M gray market and pediatric counts check out. Approval timings of 13 and 15 months after the Dec 2028 filings, plus the retatrutide, survodutide and amycretin handling, obey the rules. The remaining flaws are the odd $480 Medicare net price and the pediatric cohort size (claims 3 and 1).",
+        "generativity": "The prose has a coherent day in the life: Keisha's pill at 6:10, the QUIET THE POUR bus ad, the half turkey wrap, Darnell off the drug and Jalen's pencil height line. Each carries implied scenes and family tension. The world fields add specific texture such as Plano's 'Are you off?', caterers quoting for 60% plate consumption, quiet bars in Austin and Denver, and parents pausing the drug over the summer. The hygienist and assistant lunch scene is slightly muddled."
+      },
+      "plausibility": 7.55
+    },
+    {
+      "custom_id": "s2-L2-r25-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Heavy drinkers, who buy most of the country's liquor, started getting the pill in primary care, and spirits volumes are now about eleven percent below 2025.",
+          "field": "prose/article",
+          "why": "Mechanism: the AUD approval came in March 2030, yet it is credited with taking spirits from -7% (2028) to -11% within months. Most of the drop is more plausibly off-label and EAP use that already existed, and no chain is shown for the extra four points."
+        },
+        {
+          "quote": "Orals now make up ~58% of all users and ~70% of new starts.",
+          "field": "world/access/note",
+          "why": "Mechanism and magnitude: orals were under 40% of users in 2028 (about 16M). Reaching 58% of ~53M (about 31M) implies injectable users fell from ~27M to ~22M, though 2028 says established injectable users stay put. It also happens while the leading oral, Wegovy pill, was on 11-month allocation."
+        },
+        {
+          "quote": "A PEDSnet/Sentinel cohort (Jun 2030, n≈41k children who started at ages 9–14, mostly off-label under 12 or at 12–13) found height velocity ~0.6 cm/yr lower than BMI-matched non-users over the first two years.",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "Mechanism: a 41k-child cohort with two years of growth follow-up implies most started by mid-2028, when under-12 use was specialist-only and the starting world had no growth signal. The FDA Drug Safety Communication then follows within a month, which is very fast for a signal of this kind."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The main new harms are a pediatric growth and eating-disorder signal (safety_ledger developmental entry), a price shock that pushes lower-income users toward counterfeit pills (40% with no semaglutide), and 'quiet' sold as a product to people with no diagnosis. These sit on top of the existing two-tier access and premiums tied to adherence. The 1.4M Medicare beneficiaries on the dementia route add a fracture-risk burden. It is a harder society with new losers rather than a structural catastrophe, and the harms are measured and discussed, which holds epistemic badness down.",
+        "plausibility": "driver_fidelity: every driver is traceable. Shock_up comes from the Clayton letter and the price rises. AUD and under-12 come through Dec 2028 filings and approvals 13 and 15 months later. Oral_parity is realised as a new label for Foundayo. The pediatric developmental signal, marketed 'quiet', normalisation and status-quo coverage are all visible. Using FDA safety actions and a supply shock is slightly stretched against state_action and market_shock 'none'. mechanism: the 70× peptide chain from oral parity to the Clayton bottleneck to the price rise is well shown. The attribution of spirits volume to the AUD approval, the jump to 58% oral share, and the speed and cohort size of the pediatric signal are asserted rather than shown. magnitude: the population figures are inside the envelope (19.8 current, 26.5 ever, income thirds average to 19.8, age bands weight out). The payer mix sums to 100% and matches the ~53M count, 1.4M × $480 × 12 ≈ $8.1B, and the 43% cycling arithmetic reconciles. The approval timings obey the rules, with retatrutide, survodutide and amycretin all handled correctly. Only the oral-share jump is slightly strained.",
+        "generativity": "The day-in-the-life gives Keisha, Darnell, Jalen and the pencil mark on the doorframe, plus small scenes such as the bus ad, the burrito and the half turkey wrap, all showing the world's tensions without explaining them. The world fields add texture too: 'Are you off?' in Plano, caterers quoting for 60% plate consumption, 'quiet bars', and summer drug holidays. It stays largely on one family, so the breadth of scenes is limited."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s2-L2-r25-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Hosting advice now assumes most adult guests are on something.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Fails magnitude and internal consistency: only 19.8% of adults are on a drug, so 'most adult guests' contradicts the world's own population figures, and the claim is not tied to any particular social stratum."
+        },
+        {
+          "quote": "ASAM endorses it as first-line pharmacotherapy",
+          "field": "world/events/4/event",
+          "why": "Fails mechanism: a specialty society would not normally make a GLP-1 first-line for AUD in the same month it is approved. Naltrexone and acamprosate are established, and no evidence-review process is shown."
+        },
+        {
+          "quote": "kept all but ~1.5 points of their loss (no significant difference from staying on Zepbound for maintenance)",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails mechanism: a small-molecule pill with roughly 12% induction efficacy is said to hold tirzepatide-level loss. The sentence also says both 'lost ~1.5 points' and 'no significant difference', and the chain from that result to a September 2029 label is only asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5.5,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is harder than 2028 in recognisable ways. A pediatric growth and eating-disorder signal appears with children's use at about 0.95M. Counterfeit pills are 40% empty. Prices rose and an allocation-driven regain wave followed. Employers still tie premiums to continuous use, and 'quiet' is sold as a product while anhedonia persists in 6–8% of users. Offsets keep it from reaching 7: reduced alcohol harm, a stable payer structure, and measured, discussable harms (DSC, DXA uptake ~45%).",
+        "plausibility": "driver_fidelity: Every driver is traceable. Price shock comes via the Clayton warning letter, AUD and 6–11 via the Dec 2028 filings and the Jan and Mar 2030 approvals, and the pediatric signal via the Jun 2030 cohort and Jul 2030 DSC. Oral parity comes as a Foundayo label, coverage and state action stay static, and the personality layer is marketed. The Clayton supply disruption sits a little awkwardly beside market_shock 'none'. mechanism: The peptide API chokepoint (about 70× peptide) and the Foundayo switch are well shown. Several links are asserted: ASAM first-line within weeks, Lilly raising Zepbound prices with no supply constraint, a $149 starter price held through allocation, and the Foundayo maintenance claim (claims 2 and 3). The prose claim that 'most adult guests' are on something contradicts a 19.8% adult rate (claim 1). magnitude: Adults on drug 19.8 and ever-used 26.5 sit inside the envelope. Payer shares sum to 100% and match ~53M users. The dementia route (1.4M × $480 × 12 ≈ $8.1B), the 43% cycling arithmetic, the income and age bands, and pediatric 1.3% of ~73M all reconcile. Retatrutide, survodutide and amycretin timings obey the approval rules. Only small strains remain, such as the speed of the dementia route and the cash volume against the global market figure.",
+        "generativity": "The prose follows Keisha, Darnell and Jalen through a day, with the pencil height mark, the half turkey wrap, the QUIET THE POUR bus ad and the dental-office exchange, and these imply further scenes. The world JSON adds texture (quiet bars, summer drug holidays, caterers quoting 60% plates). The lunch and hygienist exchange is muddled about who is who, and some of the dialogue explains rather than shows."
+      },
+      "plausibility": 7.55
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "A PEDSnet/Sentinel cohort (Jun 2030, n≈41k children who started at ages 9–14, mostly off-label under 12 or at 12–13)",
+        "field": "world/safety_ledger/11/prevalence_note",
+        "why": "Mechanism and magnitude: ages 12–13 have been on-label since the adolescent approval, and under-12 use before the Jan 2030 approval was small and specialist-only. A 41k cohort with two years of height follow-up and a Drug Safety Communication within about a month is implausibly large and fast."
+      },
+      {
+        "quote": "and Lilly followed on Zepbound vials ($399–549)",
+        "field": "world/access/note",
+        "why": "Mechanism: the shock is a peptide-API problem at Novo, and the world itself says Lilly's small-molecule pill was unaffected and gained share. The reason Lilly would raise injectable vial prices is asserted, not shown."
+      },
+      {
+        "quote": "That route has ~1.4M beneficiaries at an estimated net ~$480/month: 1.4M × $480 × 12 ≈ $8.1B annualised.",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude and mechanism: a Medicare net price of ~$480 is above the TrumpRx maintenance and starter cash prices and far above the earlier $245 deal rate, which is the opposite of how Medicare net pricing works. Reaching 1.4M obese-plus-CVD beneficiaries within about 22 months of the label also goes unexplained."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.83,
+      "inequality": 5.83,
+      "public_health": 6.0,
+      "cohesion": 4.83,
+      "epistemic": 5.17,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.5,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.67,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "This is a recognisably harder society with new losers. A pediatric developmental signal (slower growth, later menarche, nearly double the eating-disorder diagnoses) sits alongside 6–11 approvals and parents improvising summer drug holidays. Anhedonia in 6–8% of users is sold as 'quiet' and 'calm', adherence-tied premiums persist, and counterfeit pills reach a lower-income gray market. The harms are measured and nameable rather than hidden, and the 2029 supply interruption was temporary, so this is not a 7.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption rises exactly 3.5 points. The Clayton supply shock is the price shock. Coverage is unchanged. AUD and 6–11 approvals come through Dec 2028 filings. Foundayo gets a maintenance label as the oral-parity form. The pediatric developmental signal and the 'quiet' marketing are both present. The only mild strain is that a supply shock reads like a market shock, and that FDA Drug Safety Communications and OPDP letters sit awkwardly against state_action none. mechanism: The 70× peptide-use chain, the allocation and the PBM steering to Foundayo are well shown. Weaker links are Lilly's price follow, the gray-market count held flat by offsetting flows, an anhedonia rate that is 'similar' despite a higher baseline, and the very fast pediatric cohort and Drug Safety Communication (claims 1 and 2). magnitude: Adult use (19.8), ever-use (26.5), the income thirds (mean 19.8) and the age bands are all inside the envelope and reconcile. The cycling arithmetic, payer-mix shares, 3.2M gray market and pediatric counts check out. Approval timings of 13 and 15 months after the Dec 2028 filings, plus the retatrutide, survodutide and amycretin handling, obey the rules. The remaining flaws are the odd $480 Medicare net price and the pediatric cohort size (claims 3 and 1).",
+      "generativity": "The prose has a coherent day in the life: Keisha's pill at 6:10, the QUIET THE POUR bus ad, the half turkey wrap, Darnell off the drug and Jalen's pencil height line. Each carries implied scenes and family tension. The world fields add specific texture such as Plano's 'Are you off?', caterers quoting for 60% plate consumption, quiet bars in Austin and Denver, and parents pausing the drug over the summer. The hygienist and assistant lunch scene is slightly muddled."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.1656,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 20
+  }
+}

@@ -1,0 +1,538 @@
+{
+  "run_id": "s2-L2-r31",
+  "step": 2,
+  "year": 2030,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 31,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 7.7,
+    "price_path": "stalled",
+    "coverage_shift": "status_quo",
+    "new_indications": [
+      "compulsive_behaviour",
+      "alcohol_use_disorder"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "tariff_geopolitics",
+    "cultural_response": "normalisation",
+    "state_action": "benefits_conditioning",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L2-r31",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16759,
+        "output_tokens": 17723
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_019ahX37We8zkkKyAMvmBPHB",
+        "custom_id": "s2-L2-r31",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 25927,
+        "output_tokens": 11302
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r31-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24224,
+        "output_tokens": 6196
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r31-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24224,
+        "output_tokens": 9279
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r31-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24224,
+        "output_tokens": 6222
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, printed on boxes that almost nobody pays.",
+      "The FDA has still approved no generic semaglutide or tirzepatide in the US. Generic liraglutide is still the only generic incretin on the US market, and exclusivity still runs to roughly 2031–32.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses are still $149 a month there.",
+      "The suicidal-ideation warning is still off the Wegovy, Zepbound and Saxenda labels, and the finalised 503B compounding exclusion still stands.",
+      "Illinois's ban on adherence-conditioned premiums is still law, and it still reaches only fully insured plans. The September 2027 tri-agency guidance still allows a differential of up to 30% for self-insured employers."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 24,
+      "us_adults_ever_used_pct": 31,
+      "by_income_third_pct": {
+        "top": 30,
+        "middle": 25,
+        "bottom": 17
+      },
+      "by_age_band_pct": {
+        "18_29": 14,
+        "30_49": 25,
+        "50_64": 35,
+        "65_plus": 20
+      },
+      "pediatric_under_18_on_drug_pct": 1.2,
+      "cycled_off_and_on_pct": 45,
+      "note": "FICTIONAL. Arithmetic: 31.0% have ever used − 24.0% are using now = 7.0% of adults who used a drug and are off it. 45% of ever-users have cycled, which is 13.95 points. About 12.0 points of that are current users on at least a second course (50% of current users, up from 46% because stalled prices and drug holidays keep cycling high). About 1.95 points are cyclers who are off again. The other ~5.05 points stopped once and never restarted, mostly over GI side effects, cost, or a lapse in coverage. Adding 9 new ever-use points in two years fits one-third persistence at one year and ~40% restarting. Age-weighted check: 0.20×14 + 0.33×25 + 0.24×35 + 0.23×20 ≈ 24.0. 24% of ~267M adults is ~64M current users. FICTIONAL payer mix, structurally the same as 2028: commercial ~32% (~20.5M), Medicare ~17% (~10.9M; diabetes, CV, CKD, OSA and the dementia-risk PA route), Medicaid ~7% (~4.5M), legitimate cash ~36% (~23M), imported or counterfeit ~8% (~5.1M). Roughly 6.5M of the commercial users are in adherence-verified 'metabolic tracks'. Adult obesity is ~33.0%. About 20% of adults have obesity and have never used a drug. They are concentrated among uninsured adults in non-expansion Southern states, Medicaid enrollees in the 8 states that do not cover the drugs, and adults over 70 who were steered away by the bone warning. Under-18 use is mostly ages 12–17 on the Wegovy pill. In upper-income households about 1 in 4 adolescents with severe obesity is on a drug."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Structurally unchanged. Medicare still has no weight-only benefit. Coverage runs through diabetes, CV, CKD, OSA and, since Aug 2028, tirzepatide's dementia-risk label under prior authorisation. Semaglutide's negotiated Maximum Fair Price (~$274) anchors Part D. FICTIONAL arithmetic: ~10.9M users × blended net ~$290/month × 12 ≈ $37.9B a year in Part D incretin spending in 2030, about 14% of Part D. Medicaid: 8 states cover weight management (down from 9), and 4 of those tie continued coverage to adherence and BMI progress at 6 and 12 months.",
+      "employer_coverage_pct": 43,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide now costs $8–45/month. Prices rose slightly after China's 2029 export licensing on peptide APIs pushed Indian makers to integrate backwards. Canadian generics are CAD 75–115. About 170 countries have generics. India is now the dominant volume source, ahead of China. Brazil's EMS and Mexico's public procurement run national tenders.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Prices have stalled. No list or TrumpRx price fell in 2029–30. Wegovy pill: $149 starting dose, $299 maintenance. Foundayo: $149–349. Injectable semaglutide and tirzepatide via TrumpRx/direct: $299–449, with a $20–40 'tariff adjustment' on some pen SKUs since Jan 2030. Retatrutide (Lilly) self-pay is $749 starting and $949 maintenance; it is supply-allocated, and most plans exclude it except under BMI ≥40 or surgical-alternative prior authorisation. 43% of employers cover weight management, and another 14% cover it only through monitored metabolic tracks (up from 9%). Orals are ~47% of total users and ~55% of new starts. Retatrutide users (~1.4M) are almost all on injectables. The gray market of ~5.1M people runs mostly on Indian vials and counterfeit pens; Chinese-sourced product fell after the export licensing. Personal-importation enforcement is still weak."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Mar 2029)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, approved Oct 2029 for MASH with obesity)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28.7,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide 2029)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide incl. Wegovy pill, liraglutide)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide, 2028; confirmatory trial enrolling)",
+        "alcohol use disorder in adults (oral semaglutide 25 mg, approved Jun 2030; endorsed in the ASAM/APA 2030 AUD guideline as a first-line pharmacotherapy option alongside naltrexone)",
+        "knee osteoarthritis pain with obesity (retatrutide label includes TRIUMPH-4 data)"
+      ],
+      "mainstream_offlabel_uses": [
+        "gambling disorder and compulsive buying: APA practice advisory (Feb 2030) gives a conditional recommendation for incretins as second-line after CBT; phase 3 under way, no FDA indication",
+        "'steadiness' and 'craving-free' microdosing sold by telehealth subscriptions on oral starting doses",
+        "dementia-prevention use without CVD among 55–70-year-olds, cash-paid",
+        "alcohol moderation below the AUD threshold, often via EAPs",
+        "nicotine and compulsive screen or porn use: observational support, heavily marketed adjacent",
+        "pediatric under-12 use under specialist care"
+      ],
+      "pipeline_note": "The triple-agonist driver was realised by the product already under review. Retatrutide was approved in Mar 2029 after its PDUFA extension, with ~28.7% mean loss at the top dose. It carries labelled dysesthesia and dose-dependent discontinuation (both from the phase 3 data, not new signals) and a step-up titration requirement. Supply is allocated through 2030. The compulsion driver was realised through guidelines, not a label. The approval rules allow no FDA compulsion indication in this window, because only observational data existed in 2028. Lilly started a tirzepatide gambling-disorder phase 3 in 2029, and the APA advisory endorses off-label use. The AUD driver was realised by approval: oral semaglutide's sNDA was filed in May 2029 and approved in Jun 2030, 13 months later. Survodutide (Boehringer) was approved Oct 2029. Amycretin was filed in Jun 2029, with a decision no earlier than mid-2030 and now expected in Q1 2031. MariTide (monthly) is still in phase 3 and is not on the market. Bimagrumab-type muscle adjuncts are still not approved. No oral matches tirzepatide. The global incretin market is ~$150B (2029). The US is mostly flat on price and growing on volume."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Retatrutide's top dose has the highest GI discontinuation in the class, and its label adds dysesthesia (skin-sensitivity) from phase 3 data. This is a known product effect, not a new class signal.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained; retatrutide titration requirements."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss. Retatrutide's larger losses keep absolute rates at the high end of the class range.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low.",
+        "regulatory_response": "Labelled; MDL settlements finalised 2029."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL. Unchanged in kind. The 2028 Medicare cohort's hip-fracture HR of ~1.3 in users 65+ after more than 2 years is replicated in a Danish registry. Geriatric prescribing now commonly pairs the drug with resistance training and a DXA scan. Retatrutide's ~29% losses raise lean-mass questions that remain unquantified.",
+        "regulatory_response": "The 2028 class warning stands, as does the CMS DXA code. The retatrutide label carries the same warning, plus a DXA consideration for patients 65+."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohorts are still conflicting; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare'; FDA adverse-reaction listing; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal, including in the AUD trial population.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL. No new study has changed the 2027 estimate: a clinically meaningful rise in ~7% of users versus ~3% of controls, dose-related. The AUD approval rests on reduced heavy-drinking days. It makes the mechanism a selling point but does not measure anhedonia directly. The postmarketing observational study reports in 2031.",
+        "regulatory_response": "No labelling. FDA sent untitled letters (2029–30) to three telehealth firms over 'calm' and 'focus' claims."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Early retatrutide discontinuers regain fastest in absolute kilograms.",
+        "regulatory_response": "None directly; continues to justify the chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Case series continue, especially among microdosers outside clinical care and gray-market users.",
+        "regulatory_response": "In professional guidance; no label change."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; adolescent decades-long use; repeated cycling",
+        "status": "emerging",
+        "prevalence_note": "About eight years of follow-up now. The first interim pediatric bone-density postmarketing data are due in 2031, so there is no answer yet.",
+        "regulatory_response": "Pediatric bone postmarketing requirement ongoing."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms",
+        "status": "established",
+        "prevalence_note": "FICTIONAL. Adverse-event reports tied to non-approved product passed ~11,000 cumulative. There has been no outbreak on the scale of the Feb 2028 cluster. Mg/unit dosing errors are still the commonest call to poison centres. Counterfeit 'retatrutide' vials appeared within weeks of approval.",
+        "regulatory_response": "Import alert, CBP seizures and state marketplace suits continue. A FedEx/UPS data-sharing pilot started in 2030. Personal importation is still porous."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 40% of households now have a user. Snack and confectionery volumes are ~8–9% below 2025 and sugary drinks ~8% below. Dollar sales are roughly flat on price and pack-size engineering. Stalled drug prices mean no further demand shock, just steady erosion. Protein and fibre lines are the profit centre. Tariffs on Chinese inputs hit whey isolate and supplement makers. Big Food lobbies quietly against anything that would make the drugs cheaper.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Spirits volumes are ~11% below 2025 and beer ~6% below. The June 2030 AUD approval and the ASAM guideline put the drug into addiction-medicine standard care, and EAP referrals rose. Heavy drinkers, who carry most of the volume, keep thinning out. Distillers are consolidating Kentucky and Tennessee capacity. Non-alcoholic and 'one good pour' premium lines grow, but not enough to offset.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat and checks are smaller. Small-plate, protein-forward menus are standard. Late-night and bar-anchored concepts close in mid-sized cities. Nashville's bachelorette strip reports bar revenue per visitor down while visitor counts hold.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking. The 'cycler' customer drives stretch, adjustable-waist and resale. Retailers now plan size curves on regional drug-uptake data bought from PBM aggregators.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength and body-composition services keep growing. DXA chains add retatrutide 'lean-mass monitoring' packages. Metabolic tracks bundle gym check-ins. Cardio-only boutique chains have contracted.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Pharmacy trend ran ~+10% in both 2029 and 2030 on volume, with no help from price. Coverage is structurally unchanged: diabetes, CV, OSA and dementia codes, behind prior authorisation. Retatrutide is excluded by most plans except at BMI ≥40 or as a surgery alternative. Self-insured employers widened monitored tracks, which now enrol ~6.5M people. PBMs sell 'adherence assurance' and a new 'craving-score' screener used to route employees toward the AUD indication.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly is the US leader by a wide margin on tirzepatide plus retatrutide. Novo competes on orals and the AUD label. Boehringer has a foothold in MASH. US net prices are flat after tariff-linked deals. Lilly and Novo pledged $50B+ in US plants, and a federally backed domestic peptide-API maker supplies part of the generic liraglutide and peptide-precursor chain. Indian generic makers dominate volume outside the US.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Lean is the default for over-40 professionals and no longer says much on its own. A body that is visibly regaining, or simply heavy, is what prompts a question. In office culture the question has moved from 'are you on something?' to 'are you off it?' Retatrutide-scale loss in a single year reads as surgical, and as money.",
+      "thinness_and_class": "The tiers have hardened further. Branded orals and DXA scans are the insured middle. Retatrutide is the cash-rich top or the BMI-40 prior-authorisation few. Indian vials serve the working poor, especially in Texas and Florida border metros. Around 20% of adults have obesity and have never been treated, and they are increasingly read as uninsured.",
+      "eating_as_ritual": "Meals are shorter and smaller. Hosts plan for low appetite by default. The Tulsa 'Bread Alone' network claims ~550 congregations and a parallel Muslim network in Dearborn. Food has become the main argument people use to justify being off the drug: 'I'm off it for Ramadan,' 'I'm off it for my daughter's wedding.'",
+      "dating_and_intimacy": "App 'on/off' flags are now standard and little remarked on. 'Off' prompts more conversation than 'on'. Desire mismatch is still a common reason couples give for seeking therapy. Synchronised dosing holidays around anniversaries are a known habit.",
+      "meaning_of_appetite": "Normalisation has made the clinical framing ambient. Appetite is noise and craving is a symptom. The refusal coalition is smaller as a share of the country but louder: Unmuted, fat-acceptance groups, MAHA-aligned legislators and fasting congregations. Philadelphia's Unmuted now runs a monthly 'Full Volume' night that sells out.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL. Measured clinically meaningful blunting is still ~7% of users versus ~3% of controls (2027 cohort; no newer prospective data). With ~64M users that implies roughly 2.5M people with excess, drug-attributable anhedonia. That is an extrapolation, not a measurement. Far more report a mild 'quiet' that is now actively sold.",
+      "framing": "Telehealth subscriptions sell it as a feature: 'Quiet', 'Even' and 'craving-free' programmes on $149 oral starting doses plus a $39–79 monthly coaching fee, marketed for focus, calm and 'freedom from the scroll'. The FDA's untitled letters forced the copy to say 'appetite' and 'cravings' rather than 'mood'. The AUD approval lets manufacturers advertise quieting the urge to drink. Clinicians still call it a side effect, Unmuted calls it sedation, and most users call it normal.",
+      "effect_on_work": "About 6.5M employees are in adherence-verified tracks, spreading from call centres and logistics into hospital systems and casino operations. Sales and creative firms advertise 'steady' culture in job posts. PBM craving screeners route heavy drinkers to the AUD indication with a $0 copay. One EEOC charge became a 2030 lawsuit against a Texas logistics firm, which has not been decided.",
+      "effect_on_art_and_play": "Sports-betting handle per active account fell ~9% (2028–30) among the operators' identified heavy bettors. Gaming regulators in New Jersey and Ohio now list incretins in problem-gambling referral materials. Las Vegas Strip operators report flat gaming revenue against rising visitor counts. 'Flat' fiction is now a genre shelf, and 'loud' food and music remain a counter-genre. 'Off nights' have spread from Unmuted to college towns.",
+      "effect_on_intimacy": "Desire mismatch and dosing synchrony remain common. Some couples' therapists ask about dose as routine intake. 'Quiet' subscriptions advertise reduced porn and compulsive-screen use, and partners sometimes buy them as gifts. Some recipients take that as an accusation.",
+      "effect_on_politics": "Coalition fights continue over conditioning, not mood. California passed an Illinois-style ban in 2029, but it reaches only fully insured plans. Tariffs made drug supply a nationalist talking point on both sides. No measurable turnout or polarisation effect has been found.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Fast on approvals: retatrutide, survodutide and the AUD sNDA. Enforcement of 'calm/focus' marketing by untitled letters. Strong anti-import rhetoric with weak personal-importation enforcement. HHS still mixes 'food first' MAHA messaging with pharma deal-making.",
+      "subsidy_or_mandate": "No mandate and no new subsidy. TrumpRx cash prices are frozen in place. The 2027 tri-agency guidance on premium differentials of up to 30% stands. ERISA preemption keeps state bans out of self-insured plans, and a 2030 district court ruling in the Illinois challenge confirmed that.",
+      "conditioning_or_surveillance": "PBM fill data, app-linked pill logs and smart-pen logs flow to wellness vendors under consent forms. Seven state employee plans now cover weight-loss GLP-1s only through monitored tracks (up from 5). Four state Medicaid programmes condition coverage on adherence and BMI. PBM 'craving scores' built from fill history and EAP referrals are a new data product, and they are lightly regulated.",
+      "workforce_or_military": "The Army's supervised oral pilot for recruits near the weight standard became policy in 2029 across all branches. TRICARE coverage is unchanged. DOT issued guidance in 2030 that incretin use for AUD is not disqualifying for commercial drivers, which trucking EAPs cite.",
+      "geopolitics_of_supply": "In Oct 2029 Section 232 pharmaceutical tariffs took effect on imported finished incretins, with exemptions for firms with US capacity commitments. Novo and Lilly are exempt, and no price cuts followed. China added GLP-1 peptide APIs to its export-licensing list, citing US tariffs, which cut Chinese gray-market supply. Commerce took a minority equity stake and a DPA award in a domestic peptide-API maker, promoted as a national champion. US–India talks pair CBP mail enforcement with generic market-access disputes. Denmark's Novo is now politically treated as half-American because of its North Carolina capacity.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2029-03",
+        "event": "FDA approves Lilly's retatrutide, a once-weekly triple agonist with ~29% mean weight loss, carrying dysesthesia and lean-mass labelling; Lilly allocates supply and prices self-pay at $749–949",
+        "driver": "triple_agonist_30pct"
+      },
+      {
+        "date": "2029-10",
+        "event": "Section 232 pharma tariffs take effect with exemptions for US-capacity pledgers; China puts GLP-1 peptide APIs under export licensing; Commerce takes stake in domestic peptide-API maker; no incretin cash price falls in 2029–30",
+        "driver": "tariff_geopolitics"
+      },
+      {
+        "date": "2029-11",
+        "event": "FDA sends untitled letters to three telehealth firms over 'calm and focus' claims for microdose oral GLP-1 subscriptions; firms rewrite copy to 'cravings' and enrolment keeps climbing",
+        "driver": "marketed_feature"
+      },
+      {
+        "date": "2030-02",
+        "event": "American Psychiatric Association practice advisory conditionally recommends incretins as second-line for gambling disorder and compulsive buying; New Jersey and Ohio regulators add them to problem-gambling referral materials",
+        "driver": "compulsive_behaviour"
+      },
+      {
+        "date": "2030-04",
+        "event": "Federal court holds ERISA preempts Illinois's adherence-premium ban for self-insured plans; California's new ban limited to fully insured; monitored metabolic tracks pass ~6.5M enrollees",
+        "driver": "benefits_conditioning"
+      },
+      {
+        "date": "2030-06",
+        "event": "FDA approves oral semaglutide 25 mg for alcohol use disorder; ASAM/APA guideline lists it as a first-line option; employer EAPs move AUD referrals to $0 copay",
+        "driver": "alcohol_use_disorder"
+      }
+    ],
+    "open_tensions": [
+      "Retatrutide offers surgical-scale loss mostly to the cash-rich, while about 5M Americans inject mail-order vials. The new tariffs and China's export controls raised the price of that gray supply without stopping it, and counterfeit 'retatrutide' is already in the mail.",
+      "Blunting is sold as a feature on the strength of an AUD label and a gambling advisory, while the only anhedonia estimate (~7% vs ~3%) still rests on a 2027 cohort. The FDA's postmarketing study reports in 2031, after the marketing has set expectations.",
+      "ERISA preemption means a self-insured employer can still charge up to 30% more to employees who stop. With half of current users on a repeat course and craving scores routing workers into treatment, the pending Texas EEOC suit is the test of whether stopping can be treated as non-compliance.",
+      "Medicare is spending ~$38B a year on incretins through disease codes, including a dementia label whose confirmatory trial is still enrolling. The same over-65 users carry the class bone warning, and a 2031 generic cliff will reprice everything."
+    ]
+  },
+  "prose": {
+    "headline": "One in four Americans is on it. The price hasn't moved, the pen does surgery, and now the quiet comes in a subscription.",
+    "world_in_600_words": "At the end of 2030 about one American adult in four is taking an incretin drug, roughly sixty-four million people. Nearly a third have tried one. Being on it is no longer news. In offices, at weddings and on dating apps, the question people ask is why someone is off it. The usual answers are Ramadan, a daughter's wedding, the nausea, or a lapse in coverage. Half of current users are on at least their second course. The habit of stopping and starting again has outlasted every attempt to stop it.\n\nThe price has not moved. The Wegovy pill still starts at $149 through the government's cash channel and rises to $299 at maintenance. Injectables still cost three to four hundred dollars a month. Some pens now carry a small line labelled a tariff adjustment. Last October, Washington put tariffs on imported finished drugs and exempted any company that promised to build American plants. Novo and Lilly had made those promises, so they paid nothing and cut nothing. Beijing answered by licensing exports of the peptide ingredients. That pinched the Chinese side of the mail-order trade, and Indian factories filled most of the gap. About five million Americans still inject vials that arrive by post at a fraction of the US price. Commerce now owns part of a domestic ingredient maker and calls it a national champion. Generics are expected in 2031 or 2032, and the whole market is waiting for that.\n\nAt the top end, Lilly's retatrutide arrived in March 2029. It is a weekly triple agonist with average losses near thirty percent, which used to take an operating theatre. Most plans exclude it unless a patient's BMI is forty or the drug is billed as an alternative to surgery. Most of the 1.4 million people on it pay up to $949 a month themselves. Their bodies are noticeable now in the way lean bodies used to be.\n\nThe drugs' reach moved past the plate. In June the FDA approved oral semaglutide for alcohol use disorder, and addiction guidelines now list it beside naltrexone. Employee assistance programmes have dropped the copay for anyone flagged as a heavy drinker. The flag often comes from a PBM 'craving score' built from pharmacy history. In February the psychiatrists' association conditionally endorsed the drugs for gambling and compulsive shopping, and New Jersey and Ohio put them in problem-gambling pamphlets. Sportsbooks see smaller wagers from their heaviest accounts, and Las Vegas sees more visitors losing less. Spirits volumes are about eleven percent below 2025 levels. Kentucky distillers are consolidating. Snack makers sell less volume in smaller bags at prices that hold their revenue.\n\nWhat clinicians call blunting, telehealth firms now sell as quiet. Subscriptions called things like Even and Quiet pair a starting-dose pill with a coaching fee and promise freedom from the scroll. The FDA sent three of them letters, and they changed 'mood' to 'cravings' in their copy. The only solid estimate of real anhedonia is a 2027 cohort: seven percent of users against three percent of non-users. The study that might revise it reports next year.\n\nWork is where the quiet gets enforced. About six and a half million employees are in metabolic tracks that log every fill and every pen click, and premiums can differ by up to thirty percent. Illinois and California banned the practice. A federal court ruled this spring that the bans do not reach self-insured employers, which employ most of the people involved. A Texas logistics worker who stopped because of side effects is suing. The case has not been decided.\n\nMedicare pays about thirty-eight billion dollars a year through heart, kidney and dementia codes. Those are the same older patients carrying the class bone warning. Philadelphia's Unmuted collective sells out its Full Volume nights, and Tulsa's fasting churches keep growing. From outside, the country looks calmer, thinner and more sober, and mostly it is.",
+    "a_day_in_the_life": "Dana Ruiz takes the pill at 6:10 with four ounces of water, as the app says. Then she waits thirty minutes before coffee. The app turns green, and the record goes to the wellness vendor at OhioHealth, where she codes claims. Green keeps her premium $212 lower every month.\n\nHer husband Marco is still asleep. He came off Zepbound in March, when his plan stopped covering it. His belt is back on the old hole. Neither of them brings it up.\n\nAt work the break room has protein bars and one sad sheet cake for Linda's retirement. Six people take a sliver. Linda says, \"I'm off it this week,\" and takes a real slice. Everyone laughs a little too kindly.\n\nAt lunch Dana's phone shows an ad: Quiet, focus without the noise, $149 plus coaching. She wonders whether the vendor sold her data or whether the ad is just for everyone.\n\nHer mother calls from the DXA place on Morse Road. The Medicare scan shows her hip down again. The cardiologist still wants her on the tirzepatide for her brain. \"So which one do I keep,\" her mother says, \"my mind or my legs?\"\n\nAt home their son Teo, fourteen, is doing homework. His pediatrician brought up the adolescent pill at his last visit. Dana said they'd think about it, and she is still thinking.\n\nAfter dinner Marco pours a bourbon. It is the first she has seen in a year. He drinks it slowly and looks happy, and Dana feels nothing much about it, and that worries her a little.\n\nShe sets the alarm for 6:10."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r31-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "ASAM/APA guideline lists it as a first-line option; employer EAPs move AUD referrals to $0 copay",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a professional guideline naming a drug first-line, and employers moving to $0 copay, in the same month as FDA approval is implausibly fast. Guideline panels, formulary and benefit changes lag approval by many months, and no chain explains the speed."
+        },
+        {
+          "quote": "Medicaid enrollees in the 8 states that do not cover the drugs",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: access.public_coverage says 8 states cover weight management, so roughly 42 states do not. The population note says 8 states do not cover, which contradicts it and breaks the account of who is left untreated."
+        },
+        {
+          "quote": "with a $20–40 'tariff adjustment' on some pen SKUs since Jan 2030",
+          "field": "world/access/note",
+          "why": "Mechanism: the same world says Novo and Lilly are exempt from the Section 232 tariffs, and the prose says they \"paid nothing and cut nothing\". It never explains who levies a tariff surcharge on their pens. The surcharge also sits awkwardly with the claim that no price has moved."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 6.5,
+        "overall": 6.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harms are structural. About 6.5M employees are in adherence-verified tracks, premium differentials of up to 30% are upheld by ERISA preemption, and PBM \"craving scores\" route workers into treatment on lightly regulated data. About 5M people inject gray-market vials, retatrutide-scale loss is a cash-rich privilege, and the over-65 cohort carries both the bone warning and the dementia label. Blunting is sold as a feature on a 2027 estimate that has not been updated, which hurts epistemic clarity. There is no mass death or collapse, so this is a harder, more stratified society, not an extreme one.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and dated events. Prices are stalled, coverage is status quo, retatrutide arrives at 28.7%, and AUD is approved on a filing timeline the envelope allows. Compulsion is realised through an APA advisory with no label, tariffs and the China export controls are shown, and marketed 'quiet' subscriptions and 6.5M conditioned employees appear. No new safety signal is introduced. mechanism: Most changes have causal chains, but the same-month ASAM/APA first-line guideline and $0 copay (claim 1) is asserted. The Medicaid \"8 states that do not cover\" wording contradicts the 8 covering states (claim 2). The tariff surcharge on exempt manufacturers is unexplained (claim 3). The jump in 65+ use from 12% to 20%, alongside a bone warning and steering away of adults over 70, is also thinly justified. magnitude: Adult use at 24%, ever-used at 31% and the income thirds all sit inside the envelope. The age-weighted check gives about 24.05%, the payer mix sums to 100%, and 10.9M × $290 × 12 ≈ $37.9B reconciles. The approval timings of 13 months for AUD and 16 for survodutide are allowed, and no US generic appears. The only gap is the Medicaid 8-state contradiction, which is minor.",
+        "generativity": "The world is dense with texture: the app-turns-green pill ritual, Linda's sheet cake and \"I'm off it this week\", the DXA scan on Morse Road, and the mother's choice between \"my mind or my legs\". Teo's undecided adolescent pill and Marco's first bourbon in a year add more. Many implied characters and scenes recur through the world fields, including the Unmuted nights, Tulsa fasting churches, Texas logistics suit and telehealth subscriptions. The day-in-the-life shows its themes through small scenes without explaining them."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s2-L2-r31-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA approves oral semaglutide 25 mg for alcohol use disorder; ASAM/APA guideline lists it as a first-line option; employer EAPs move AUD referrals to $0 copay",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a joint ASAM/APA guideline naming a drug first-line in the same month as its first approval is implausibly fast. The candidate shows no chain, such as a pre-drafted guideline or long-term outcome data, and the 'first-line' rating rests on heavy-drinking-days data alone."
+        },
+        {
+          "quote": "Medicaid enrollees in the 8 states that do not cover the drugs",
+          "field": "world/population/note",
+          "why": "Magnitude: access.public_coverage says 8 states cover weight management, so 8 states cannot also be the ones that do not cover. Medicaid users also rise from ~3.4M to ~4.5M while covering states fall from 9 to 8."
+        },
+        {
+          "quote": "\"65_plus\": 20",
+          "field": "world/population/by_age_band_pct/65_plus",
+          "why": "Mechanism: the 65+ rate rises from 12% to 20% with no new Medicare benefit and the Bridge pilot lapsed. A class bone warning is on the label, and the same note says over-70s were 'steered away'. The dementia route requires established CVD and is not shown to be large enough."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder version of 2028. About 6.5M workers are in verified adherence tracks, and ERISA preemption leaves a 30% premium penalty for stopping in place (autonomy). PBM 'craving scores' and subscriptions that sell blunting to ~64M users, ahead of a 2031 study, add a lot (epistemic). The tiers harden between retatrutide, orals and gray-market vials (~5.1M, up from 3M). Real benefits (lower alcohol use, falling obesity, the dementia route) keep flourishing and public health near the middle.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Retatrutide arrives in Mar 2029 through the existing BLA, AUD through a 13-month sNDA, and compulsion through guidelines only. The tariffs, 'Quiet' marketing, benefits conditioning, stalled prices, status-quo coverage and no new safety signal are all traceable to events. mechanism: The shifts mostly have chains, but several are asserted. The ASAM/APA first-line guideline lands in the same month as the AUD approval. The 65+ rate rises sharply despite the bone warning. China's API licensing is blamed on tariffs aimed at finished drugs. The gray market grows 70% while Chinese supply and price conditions worsen. magnitude: Population figures sit inside the envelope (24% on drug, 31% ever-used). The age-band weighted average, payer-mix shares and cycling arithmetic reconcile, and so does Medicare spend (10.9M × $290 × 12 ≈ $37.9B). Approval timing obeys the rules, with amycretin held to 2031. Gaps remain: '8 states that do not cover' contradicts the 8 covering states, Medicaid users rise as covering states fall, and the global market of ~$150B looks small against implied US spending.",
+        "generativity": "The day-in-the-life gives the 6:10 pill routine, an app that turns green, the $212 premium, Marco's belt and bourbon, and Linda's cake line ('I'm off it this week'). It also has a mother torn between 'my mind or my legs' and Teo's pending adolescent pill decision. The world fields supply many more scenes: Full Volume nights, Bread Alone congregations, craving-score routing, and the Texas EEOC suit."
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s2-L2-r31-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "\"65_plus\": 20",
+          "field": "world/population/by_age_band_pct/65_plus",
+          "why": "Mechanism and magnitude: 65+ use is stipulated to rise from 12% to 20% with no new Medicare weight benefit and a bone warning on the label. Only a dementia route for patients with CVD opens in the window, so the jump is asserted rather than shown."
+        },
+        {
+          "quote": "Retatrutide users (~1.4M) are almost all on injectables.",
+          "field": "world/access/note",
+          "why": "Mechanism: 1.4M people reach a supply-allocated drug within about 21 months of approval, at $749–949 a month, with most plans excluding it. That is roughly $14B a year in largely cash spending. No chain explains how supply or demand gets there."
+        },
+        {
+          "quote": "ASAM/APA guideline lists it as a first-line option; employer EAPs move AUD referrals to $0 copay",
+          "field": "world/events/5/event",
+          "why": "Mechanism: a first-line guideline endorsement lands in the same month as approval. The evidence is reduced heavy-drinking days only, with no postmarketing experience. Guidelines usually lag approval, and the $0 copay shift is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy and inequality are the worst dimensions: 6.5M people sit in fill-verified tracks, ERISA preemption lets a 30% differential stand, and 5M rely on gray-market vials. The hardened tiers (retatrutide for the rich, regainers and uninsured at the bottom) and older users carrying the bone warning add to it. Epistemic harm is high because blunting is sold as a feature on a 2027 estimate, and PBM 'craving scores' are lightly regulated. Real benefits (AUD treatment, lower obesity, less drinking and gambling) keep it near 6 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. Adults on drug are 24, which is 16.3 plus 7.7. Retatrutide is approved Mar 2029 at 28.7% after the extended PDUFA date. AUD is approved 13 months after filing. Compulsive behaviour goes through guidelines because the approval rules forbid a label. Prices, coverage, tariffs, normalisation, conditioning and the marketed feature are all present, and nothing contradicts a driver. mechanism: The tariff-exemption chain, China's API licensing feeding Indian gray supply, and ERISA preemption are well shown. Some jumps are asserted: the 65+ rise to 20% and the 1.4M retatrutide users (claims 1 and 2), and the same-month first-line AUD guideline (claim 3). magnitude: All population figures sit inside the envelope, and the age-weighted and income-weighted checks reconcile to 24. The payer mix sums to 100 and matches the user counts. The cycling arithmetic closes, and Part D spending (10.9M × $290 × 12 ≈ $37.9B) is shown. Approval timing follows the rules. The only gap is that the May 2029 AUD filing is not in the events list.",
+        "generativity": "The Dana Ruiz day is concrete: a 6:10 pill with app confirmation, a premium discount, Linda's sheet cake, the 'my mind or my legs' phone call, the Quiet ad, Marco's bourbon, and the 14-year-old with the adolescent pill. Fields add texture, including 'off for Ramadan', the Full Volume night and Nashville bar revenue. Scenes and characters are implied throughout."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "ASAM/APA guideline lists it as a first-line option; employer EAPs move AUD referrals to $0 copay",
+        "field": "world/events/5/event",
+        "why": "Mechanism: a professional guideline naming a drug first-line, and employers moving to $0 copay, in the same month as FDA approval is implausibly fast. Guideline panels, formulary and benefit changes lag approval by many months, and no chain explains the speed."
+      },
+      {
+        "quote": "Medicaid enrollees in the 8 states that do not cover the drugs",
+        "field": "world/population/note",
+        "why": "Magnitude/mechanism: access.public_coverage says 8 states cover weight management, so roughly 42 states do not. The population note says 8 states do not cover, which contradicts it and breaks the account of who is left untreated."
+      },
+      {
+        "quote": "with a $20–40 'tariff adjustment' on some pen SKUs since Jan 2030",
+        "field": "world/access/note",
+        "why": "Mechanism: the same world says Novo and Lilly are exempt from the Section 232 tariffs, and the prose says they \"paid nothing and cut nothing\". It never explains who levies a tariff surcharge on their pens. The surcharge also sits awkwardly with the claim that no price has moved."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 7.0,
+      "inequality": 7.0,
+      "public_health": 5.17,
+      "cohesion": 5.5,
+      "epistemic": 6.83,
+      "overall": 6.23
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.58,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The main harms are structural. About 6.5M employees are in adherence-verified tracks, premium differentials of up to 30% are upheld by ERISA preemption, and PBM \"craving scores\" route workers into treatment on lightly regulated data. About 5M people inject gray-market vials, retatrutide-scale loss is a cash-rich privilege, and the over-65 cohort carries both the bone warning and the dementia label. Blunting is sold as a feature on a 2027 estimate that has not been updated, which hurts epistemic clarity. There is no mass death or collapse, so this is a harder, more stratified society, not an extreme one.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and dated events. Prices are stalled, coverage is status quo, retatrutide arrives at 28.7%, and AUD is approved on a filing timeline the envelope allows. Compulsion is realised through an APA advisory with no label, tariffs and the China export controls are shown, and marketed 'quiet' subscriptions and 6.5M conditioned employees appear. No new safety signal is introduced. mechanism: Most changes have causal chains, but the same-month ASAM/APA first-line guideline and $0 copay (claim 1) is asserted. The Medicaid \"8 states that do not cover\" wording contradicts the 8 covering states (claim 2). The tariff surcharge on exempt manufacturers is unexplained (claim 3). The jump in 65+ use from 12% to 20%, alongside a bone warning and steering away of adults over 70, is also thinly justified. magnitude: Adult use at 24%, ever-used at 31% and the income thirds all sit inside the envelope. The age-weighted check gives about 24.05%, the payer mix sums to 100%, and 10.9M × $290 × 12 ≈ $37.9B reconciles. The approval timings of 13 months for AUD and 16 for survodutide are allowed, and no US generic appears. The only gap is the Medicaid 8-state contradiction, which is minor.",
+      "generativity": "The world is dense with texture: the app-turns-green pill ritual, Linda's sheet cake and \"I'm off it this week\", the DXA scan on Morse Road, and the mother's choice between \"my mind or my legs\". Teo's undecided adolescent pill and Marco's first bourbon in a year add more. Many implied characters and scenes recur through the world fields, including the Unmuted nights, Tulsa fasting churches, Texas logistics suit and telehealth subscriptions. The day-in-the-life shows its themes through small scenes without explaining them."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.7222,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 4
+  }
+}

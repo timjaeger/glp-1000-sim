@@ -1,0 +1,556 @@
+{
+  "run_id": "s3-L2-r18",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 18,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 0.1,
+    "price_path": "generic_collapse",
+    "coverage_shift": "public_expansion",
+    "new_indications": [],
+    "safety_signal": "gi_pancreatic_litigation",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "manufacturer_scandal",
+    "cultural_response": "natural_movement",
+    "state_action": "restriction",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r18",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18715,
+        "output_tokens": 26510
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L2-r18",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 31913,
+        "output_tokens": 12528
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r18-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27557,
+        "output_tokens": 7876
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r18-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27557,
+        "output_tokens": 8552
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r18-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27557,
+        "output_tokens": 10023
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2032,\"fictional\":true,\"population\":{\"us_adults_on_drug_pct\":14.7,\"us_adults_ever_used_pct\":26.6,\"by_income_third_pct\":{\"top\":17,\"middle\":14.8,\"bottom\":12.3},\"by_age_band_pct\":{\"18_29\":6.5,\"30_49\":15.5,\"50_64\":24.5,\"65_plus\":11.2},\"pediatric_under_18_on_drug_pct\":0.42,\"cycled_off_and_on_pct\"…"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 14.7,
+      "us_adults_ever_used_pct": 26.6,
+      "by_income_third_pct": {
+        "top": 17,
+        "middle": 14.8,
+        "bottom": 12.3
+      },
+      "by_age_band_pct": {
+        "18_29": 6.5,
+        "30_49": 15.5,
+        "50_64": 24.5,
+        "65_plus": 11.2
+      },
+      "pediatric_under_18_on_drug_pct": 0.42,
+      "cycled_off_and_on_pct": 44,
+      "note": "FICTIONAL. Cycling arithmetic: ever 26.6% − current 14.7% = 11.9% of adults have used and are off now; ≈8.0 pts of current users are on a second or later course and ≈3.6 pts of the off-now group restarted at least once before stopping again, so (8.0+3.6)/26.6 = 44% cycled. Of ~273M adults: ≈40.1M current (+0.7M on 2030, mostly population growth), ≈32.5M used and off now (up from 25.4M), ≈200M never used. Ever-use rose 2.6 pts, so ≈7M first-time starters came in over the window, mostly through Medicaid's new mandatory coverage and $39–69 generic semaglutide. Current use stayed flat because exits matched entries: people dropped out of gated employer plans, took DEXA-advised pauses, quit after the litigation and the Novo documents, joined the Unmedicated movement, or lost 'calm' subscriptions to state telehealth rules. Persistence is still ~35–40% at one year. Age check: 18–29 6.5% × 52M = 3.4M; 30–49 15.5% × 90M = 14.0M; 50–64 24.5% × 61M = 14.9M; 65+ 11.2% × 70M = 7.8M; total 40.1M = 14.7%. 18–29 fell because state telehealth BMI-verification laws cut the low-BMI 'calm' market. 65+ rose from 8.5% to 11.2% because Part D obesity coverage began in Jan 2032; DEXA pauses partly offset the rise. Income gradient narrowed (top 18.5→17.0, bottom 10.3→12.3): Medicaid coverage and generics lifted the bottom, while holidays, the movement and pauses trimmed the top. Pediatric: ~0.42% of under-18s (≈310k), down from 0.5% after age and specialist-only laws in restriction states and interim adolescent bone data. Most children in Medicaid households now live with an adult who is on, off, or cycling. Imported/counterfeit users fell to ≈2.0M as legal generics closed the price gap. Never-users remain disproportionately uninsured, rural, under 30, or refusing on principle; the last group is now an organised identity."
+    },
+    "access": {
+      "cash_price_usd_month_low": 39,
+      "cash_price_usd_month_high": 349,
+      "public_coverage": "From Jan 2032, under the Obesity Treatment Parity provisions (Jul 2031), anti-obesity medicines are Part D covered drugs and are removed from Medicaid's optional-exclusion list. Both programmes require generic first: generic semaglutide before brands, with BMI ≥30 or ≥27 plus a comorbidity. The Medicare Bridge closed Dec 2031. Medicare now allows a 'pause without penalty': a DEXA-documented pause of up to 6 months that keeps eligibility. Payer mix of ≈40.1M users: Medicare 20% (8.0M), Medicaid 18% (7.2M), commercial 34% (13.6M), cash/direct 23% (9.2M), imported/counterfeit 5% (2.0M). Public programmes together (38%) are now the largest payer. Medicare spend: 4.4M on generic at ~$40 net × 12 = $2.1B, plus 3.6M on brands at $199 × 12 = $8.6B, ≈ $10.7B gross for all incretin fills (diabetes plus obesity). Medicaid: 5.0M on generic at ~$35 × 12 = $2.1B, plus 2.2M on brands at $199 × 12 = $5.3B, ≈ $7.4B gross before rebates. Medicaid is below 2030's $8.4B even though it has about twice as many users. Medicare beneficiary cost: ~$5–10 on the generic tier, brands under the Part D out-of-pocket cap. The Indiana and Arkansas adherence waivers continue.",
+      "employer_coverage_pct": 66,
+      "generic_us": true,
+      "generic_rest_of_world": "India: 100+ semaglutide brands at $4–25/month. Indian makers (Dr. Reddy's, Sun, Biocon) are now also legal US generic suppliers. China: domestic generics plus API exports, which supply both the gray trade and several US ANDA holders. Canada, Brazil, Mexico and Turkey: generic semaglutide is routine. Generic oral semaglutide is sold widely outside the US and EU. Generic liraglutide is everywhere.",
+      "gray_market": "contained",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Generic collapse. A Paragraph IV settlement let the first-filer generic injectable semaglutide launch in Jan 2032 at ~$99 cash. After 180-day exclusivity ended in Jul 2032, five more ANDA holders entered, and by Q4 pharmacy and Cost-Plus-style cash prices are $39–69/month. Lilly answered by cutting tirzepatide direct to $149–199 and Foundayo starter doses to $99. Retatrutide is $349 direct; its list price is still $1,499, and almost nobody pays it. Oral amycretin launched at $199 direct. Fills by route are ~44% daily oral (oral semaglutide, Foundayo, oral amycretin) and ~56% weekly injectable (now mostly generic semaglutide). Employer coverage rose to 66% because generic-only tiers cost little. Commercial fills still fell from 18.5M to 13.6M. Most covering employers still gate through PBMs, and many members now pay $49 cash rather than submit weigh-ins. Others aged into Part D or moved to Medicaid. The cash/direct 9.2M is ≈5.1M generic semaglutide, ≈3.3M direct-portal brands, and ≈0.8M 'calm' subscriptions. The residual gray market is people without a prescription, restriction-state 'calm' users, and counterfeit branded tirzepatide and retatrutide pens, which still carry brand-level prices."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic incl. 7.2 mg; multisource US generic semaglutide since 2032)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin dual agonist, daily oral (oral amycretin, approved Jun 2031)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm' / 'craving freedom' subscriptions, now down to ~0.8M and barred in 12 states that require verified BMI ≥27 for telehealth incretin prescribing",
+        "smoking and vaping cessation (still off-label; new Novo trial under way)",
+        "alcohol reduction, including EAP referrals",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "pediatric under-12 use under specialist care, now banned or specialist-only in restriction states",
+        "short 'holiday-friendly' Foundayo regimens timed around events, which is a dosing practice rather than an indication"
+      ],
+      "pipeline_note": "FICTIONAL. No new indication this step. The oral_parity driver is met by an application already under review: FDA approved oral daily amycretin in Jun 2031 after the 72-week DEXA data it had asked for. Mean loss was ~21–22% at 72 weeks, on a par with tirzepatide's ~20–21%. Lean-mass share was similar to the injectables, and GI events ran higher. The subcutaneous amycretin decision was deferred. MariTide (filed Apr 2030) received a CRL in May 2031 asking for longer bone and lean-mass data and was resubmitted in 2032, with a decision expected 2033. Survodutide was resubmitted in Q3 2031 and is pending. Bimagrumab combinations remain in phase 3 with no filing. The semaglutide smoking-cessation trial with SHAPS endpoints is enrolling. FDA still requires bone endpoints in new obesity filings. Retatrutide (~28%) remains the efficacy ceiling. US generic semaglutide went multisource in 2032 after a settlement-dated entry. Tirzepatide exclusivity runs to the mid-2030s. Global incretin revenue is ≈$100B in 2032, down from ≈$118B: US volume is flat, US net prices fell sharply, and ex-US revenue keeps eroding."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Rates are higher with oral amycretin's amylin component and with unsupervised self-escalation of $39 generic pens.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and bowel obstruction, including claimed persistence after discontinuation",
+        "status": "established",
+        "prevalence_note": "New entry. Delayed gastric emptying on drug, with clinically diagnosed gastroparesis at roughly 2–4× comparator rates in claims data (a few cases per 1,000 user-years). Whether it persists after stopping is contested, and the studies are small. Aspiration risk under anaesthesia is managed by peri-procedural holds. Litigation now operates at mass-tort scale: MDL 3094 (E.D. Pa.) holds ≈46,000 filed claims at end-2032, up from ≈9,000 in 2030. About 75% are gastroparesis or ileus, ~15% pancreatitis, and the rest are mostly pancreatic cancer claims with weak science. Generic-era claims are constrained by PLIVA v. Mensing preemption, so filings concentrate on brand-era use.",
+        "regulatory_response": "FDA inspected Novo's pharmacovigilance after documents unsealed in Nov 2031 and required retrospective re-coding and re-submission of GI adverse-event reports. Class label strengthened on persistent dysmotility reports (2032). Anaesthesia societies' hold guidance retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; steady.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation and absolute risk is low. Prominent in tort advertising. The unsealed Novo documents show delayed internal review of pancreatic reports but no new causal data.",
+        "regulatory_response": "Labelled; part of MDL 3094."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "More exposure now that 65+ use has risen to 11.2% under Part D. Lean mass is ~30–40% of weight lost in untrained users over 50.",
+        "regulatory_response": "2028 label update and 2029 joint guidance retained. Part D plans may require baseline body-composition assessment for users 65+."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Hip/vertebral HR ~1.3–1.4 in 65+ long-term users, and ~1.2× in postmenopausal women 50–64 who cycle. With ≈3.2M 65+ users on >2 years: 3.2M × 0.6%/yr × 0.35 ≈ 6,700 excess hip fractures a year, against ~300,000 total, up from ~5,000 in 2030 as Part D adds older users. DEXA waits have eased to 4–6 weeks as capacity grows.",
+        "regulatory_response": "Class labelling and 2029 guidance retained. Medicare 'pause without penalty' since 2032. FDA bone-endpoint requirement for new filings stands. The Novo DOJ civil case settled (Apr 2032) as part of a broader settlement."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare'; FDA warnings mention; unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, 'the grey')",
+        "status": "emerging",
+        "prevalence_note": "Final retatrutide postmarketing SHAPS analysis (2031): ~11% of top-dose users cross a clinically meaningful threshold versus ~5% of comparators; still observational. Now a mainstream complaint. Surveys suggest ~40% of daily-oral users take planned dose holidays at least monthly, mostly 48–72 hours on short-half-life Foundayo.",
+        "regulatory_response": "Cited in state laws banning mood, focus and craving marketing. FTC consent orders with two telehealth brands (2031). No label change."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial within a year. Involuntary stops from private gating persist. Holidays add small weekend rebounds without measurable regain at 48–72 hours.",
+        "regulatory_response": "Medicare pause-without-penalty only. Indiana waiver litigation still pending in the Seventh Circuit."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Signals persist in high-loss and older users.",
+        "regulatory_response": "2029 professional guidance; no FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~9 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up. Interim adolescent bone-accrual data (2031) show lumbar-spine BMD Z-score accrual ~0.2 SD lower than comparators at 2 years. Clinical meaning is uncertain, and the data are cited in state age-limit laws. Cycling still looks worse for bone than continuous use.",
+        "regulatory_response": "Pediatric postmarketing requirements continue; Dear-HCP letter on adolescent bone monitoring (2031)."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms",
+        "status": "established",
+        "prevalence_note": "Poison-centre calls about mail-order product fell ~30% from their 2030 peak as legal generics displaced imports. Counterfeit branded tirzepatide and retatrutide pens persist. A new category is mg/click errors when switching between brand and generic pen devices.",
+        "regulatory_response": "Import alerts continue; FDA generic device-labelling guidance (2032); still no prosecution of individuals."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "The absolute number of ED visits rises with Part D uptake. The per-user excess is still not separated from confounding.",
+        "regulatory_response": "Fall-risk screening is in Part D utilisation-management templates."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "US salty-snack volume keeps declining ~2% a year, because the user base turned over even though its size held. Protein, fibre and bone-forward lines keep growing. Heritage 'full-portion' brands, cast-iron cookware and regional dairies gain from the Unmedicated movement, with double-digit growth in the Southeast from small bases. Weekend-holiday eating lifts Friday–Sunday grocery baskets in high-uptake suburbs.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "A fourth year of US spirits volume decline, though slower as 'calm' subscriptions shrink under state law. Drug holidays concentrate drinking on Friday and Saturday nights, so on-premise weekend sales hold while weekday sales fall.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic flat; weekday spend per cover down, Saturday spend up. Half portions and gram-priced bowls are standard. Atlanta and Memphis 'no-gram' rooms have become small regional chains, and Unmedicated supper clubs in Tulsa and Nashville sell out.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn continues. Plus-size and 'unmedicated fit' lines market the Unmedicated aesthetic: linen, cut for softness rather than leanness.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Still growing on the bone wave. Part D plans add strength benefits, DEXA-plus-coaching chains expand, and capacity shortages ease.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Generic-first tiers made coverage cheap, so employer offering rose to 66%. Commercial fills still fell as members paid $49 cash to escape gating. Outcome-gated PBM contracts lose leverage on generics but persist for brands. Commercial pharmacy trend ~+3%. Tort exposure appears in reinsurers' product-liability books.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Contracting in revenue. Novo is hit three ways: generic semaglutide, the unsealed pharmacovigilance documents (its CEO resigned Jan 2032), and an Apr 2032 $1.4B DOJ civil settlement. Its oral amycretin launch is slowed by prescriber wariness. Lilly holds brand volume with tirzepatide, retatrutide and Foundayo at lower prices. Generic makers, including Indian firms, take ~45% of US semaglutide volume within six months of multisource entry. Mass-tort reserves are now a disclosed line item.",
+        "direction": "contracting"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "With the drug at $49 and covered by Medicaid, being thin on it no longer reads as professional-class. 'On' reads as ordinary. Visible appetite has become a deliberate signal for the Unmedicated: eating with your hands in public, a second helping, a softer body worn without apology. Resistance-trained shoulders still mark doing it right among older users.",
+      "thinness_and_class": "The use gradient narrowed (top 17.0%, bottom 12.3%), but the quality gap remains. The top third gets brand orals, DEXA and coaching. The bottom third gets generic pens under Medicaid's generic-first rule, often without a body-composition scan in regions with few DEXA units. Among the affluent, coming off by choice is becoming a status move.",
+      "eating_as_ritual": "Weekday meals are protein-first and small. Weekends are when the holidays fall, so Saturday dinners get larger and later. Unmedicated supper clubs and church 'full-table' dinners in the Tulsa–Dallas corridor are explicit rituals, with a grace said over appetite itself.",
+      "dating_and_intimacy": "Profiles list on, off, holiday-schedule, or Unmedicated. Couples coordinate holidays for anniversaries. Tort billboards make GI talk ordinary dating-app small talk.",
+      "meaning_of_appetite": "Appetite has become an identity. The Unmedicated movement grew out of the 2030 Whole Appetite rally and has a look (linen, cast iron, full-plate photos), its own outlets (supper clubs, heritage restaurants, a podcast circuit) and its own politics. Its core is evangelical women aged 30–55 in Oklahoma and Texas, Black wellness collectives in Atlanta, and supplement influencers. It backed the state restriction laws on teens and mood marketing, alongside pediatric groups. It splits over Medicaid coverage: the Atlanta collectives defend access as choice, while the church strand calls it 'pharma welfare'.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Final retatrutide SHAPS data show ~11% of top-dose users with clinically meaningful anhedonia versus ~5% of comparators (observational). No population measure exists for the ≈40M users. 'Calm' subscriptions are down to ≈0.8M from 1.5–2M. Pharmacy refill gaps and surveys suggest ~40% of daily-oral users (≈7M of ≈17.6M) take planned holidays at least monthly. Holidays are pharmacologically real on Foundayo (roughly one-day half-life) and mostly placebo on weekly semaglutide (roughly one-week half-life). Dose-cutting before events is common and openly discussed.",
+      "framing": "A side effect that everyone discusses openly. 'The grey' is ordinary speech, and 'I'm on holiday this weekend' is ordinary small talk. Clinicians now advise on holiday-tolerant regimens. Selling the flattening as calm is illegal in 14 states and under FTC consent order nationally for two brands, so it is mostly sold through implication.",
+      "effect_on_work": "Tech and finance firms dropped 'focus' reimbursement after the FTC orders and state laws. Sales, hospitality and creative workers schedule holidays around pitches and service peaks. Some managers now ask about it informally, and HR lawyers advise against asking. Fleets and DOT-screened drivers stay on continuously. Union contracts still bar individual PBM data from reaching employers.",
+      "effect_on_art_and_play": "'Written unmedicated' is now a marketing line, and Nashville critics have tired of it. 'The grey' is a standard term of criticism for flat albums and films. Weekend festivals and comedy clubs see holiday-timed attendance, and promoters book big acts Fridays and Saturdays.",
+      "effect_on_intimacy": "Dose holidays timed for sex and anniversaries are mainstream advice in columns and therapy. Sex therapists screen for dose and holiday patterns. GI fears from tort advertising also feed avoidance.",
+      "effect_on_politics": "The issues are cost, the restriction laws and the litigation. Restriction laws passed through an alliance of Unmedicated activists, pediatricians and blue-state consumer-protection legislators. The 2032 campaigns run on both 'we made it $49' and 'protect our kids'. There is still no established temperament or turnout effect, and consultants still test 'calm voter' messaging without publishing.",
+      "severity": 4
+    },
+    "state": {
+      "regulatory_posture": "Federal posture is expansion plus caution: Part D and Medicaid coverage and generic approval on one side, bone-endpoint demands (the MariTide CRL) and the Novo pharmacovigilance inspection on the other. States restrict. By end-2032, 17 states (led by TN, TX and OK, and including CA, NY and IL) have passed incretin laws. Provisions vary: under-18 prescribing limited to pediatric specialists with in-person visits (11 states; under-12 banned in 6); verified BMI ≥27 required for telehealth incretin prescribing (12); bans on marketing incretins for mood, focus or craving (14); and in LA and MS, a 24-month cap on continuous prescriptions without documented DEXA and in-person review. A First Amendment challenge to California's ad ban is pending in the Ninth Circuit.",
+      "subsidy_or_mandate": "Obesity Treatment Parity provisions (Jul 2031, effective Jan 2032) bring anti-obesity medicines into Part D and make them mandatory in Medicaid, generic first. No mandate to use. The federal direct-pricing portal continues for brands.",
+      "conditioning_or_surveillance": "Public coverage has BMI and comorbidity criteria and generic-first step therapy, and Medicare's pause-without-penalty protects DEXA-advised pauses. The Indiana and Arkansas 1115 adherence waivers continue. Private PBM gating persists but is weakened by $49 cash generics. BMI-linked wellness surcharges continue, and weigh-in kiosks remain in pharmacy chains.",
+      "workforce_or_military": "DOT sleep-apnea screening still pushes drivers toward incretins, now often generic semaglutide. Fleets add DEXA for drivers over 55. Army accession policy on GLP-1 use is unchanged and contested.",
+      "geopolitics_of_supply": "Indian firms moved from gray suppliers to legal US generic manufacturers, which defused the import fight. Chinese API in several ANDA holders' semaglutide made a bill barring Chinese-sourced API from Medicare-reimbursed generics a live proposal, but it has not passed. Section 232 pharma tariffs remain, with generic carve-outs under negotiation.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-03",
+        "event": "Tennessee passes the first state incretin restriction law: specialist-only prescribing under 18, verified BMI for telehealth prescriptions, and a ban on marketing the drugs for calm or focus. Oklahoma and Texas follow within months, and California and New York pass versions limited to advertising. By end-2032, 17 states have such laws.",
+        "driver": "state_action: restriction; cultural_response: natural_movement"
+      },
+      {
+        "date": "2031-06",
+        "event": "FDA approves Novo Nordisk's oral daily amycretin after reviewing 72-week DEXA data. Patients lost ~21–22% of body weight, on a par with injectable tirzepatide, and it is the first pill to match the injectables.",
+        "driver": "next_gen_launch: oral_parity"
+      },
+      {
+        "date": "2031-07",
+        "event": "Obesity Treatment Parity provisions, part of a year-end health package, are signed. From January 2032 Medicare Part D covers anti-obesity drugs, Medicaid must cover them, and both programmes require generic semaglutide first. The Medicare Bridge closes.",
+        "driver": "coverage_shift: public_expansion"
+      },
+      {
+        "date": "2031-11",
+        "event": "Documents unsealed in the federal GLP-1 multidistrict litigation show Novo Nordisk safety staff routinely recoded severe vomiting and gastric-retention reports as nausea, and that the company held back a gastric-emptying analysis. FDA inspects the company, its CEO resigns in January, and new filings in the litigation triple within a year.",
+        "driver": "market_shock: manufacturer_scandal; safety_signal: gi_pancreatic_litigation"
+      },
+      {
+        "date": "2032-01",
+        "event": "The first generic semaglutide pen launches in the US on a settlement-agreed entry date at about $99 a month. When its 180-day exclusivity ends in July, five more makers enter and pharmacy cash prices fall to $39–69.",
+        "driver": "price_path: generic_collapse"
+      },
+      {
+        "date": "2032-09",
+        "event": "The first bellwether trial in the multidistrict litigation ends in a $31M verdict, including punitive damages, for a Pennsylvania woman whose gastroparesis persisted after she stopped Ozempic. Novo appeals. About 46,000 claims are now pending.",
+        "driver": "safety_signal: gi_pancreatic_litigation"
+      }
+    ],
+    "open_tensions": [
+      "Generic-era injury claims are largely barred by PLIVA v. Mensing preemption. As generic semaglutide takes over, the GI and pancreatic litigation concentrates on brand-era plaintiffs, while future injuries on $39 pens may have no defendant to sue.",
+      "Medicare now protects DEXA-advised pauses, but private PBM gating still punishes them. Members on gated plans are drifting to $49 cash, so employers keep collecting outcome data on a shrinking, self-selected group.",
+      "Seventeen states restrict teen prescribing, telehealth and mood marketing. In several of them, Oklahoma among them, the same state's Medicaid programme must now cover the drug, a First Amendment challenge to the ad bans is pending, and tort-lawyer advertising about the drug runs unrestricted.",
+      "Part D coverage is raising 65+ use, and excess hip fractures rose from ~5,000 to ~6,700 a year. Chinese API sits inside Medicare-paid generics, and Congress has not acted on either."
+    ],
+    "still_true": [
+      "Retatrutide remains the most effective approved drug (~28% body-weight loss), and its list price is still $1,499 a month, which almost nobody pays.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "The Indiana and Arkansas Medicaid 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with two misses ending coverage for 12 months, and the Seventh Circuit litigation is unresolved.",
+      "The 503B exclusion and the 503A compounding injunction still stand.",
+      "FDA still requires bone (DEXA) endpoints in new obesity drug filings, as cited in the 2029 survodutide and amycretin actions."
+    ]
+  },
+  "prose": {
+    "headline": "Forty-Nine Dollars, a Pill as Good as the Needle, 46,000 Lawsuits, and Still One American in Seven",
+    "world_in_600_words": "At the end of 2032 the share of American adults on an incretin drug is almost exactly what it was two years ago, about one in seven. That flat line hides a great deal of movement. In January the first generic semaglutide pen reached American pharmacies on a date fixed years earlier in a patent settlement. In July its six-month head start ran out, five more makers arrived, and the cash price fell to between thirty-nine and sixty-nine dollars a month. A year before that, Congress quietly removed the old rule keeping weight-loss drugs out of Medicare and Medicaid, on the condition that the generic be tried first. Medicare and Medicaid together now pay for more of these prescriptions than employers do. Medicaid covers twice as many people as it did in 2030 and spends less doing it.\n\nThe pill also caught up. In June 2031 the FDA approved Novo Nordisk's oral amycretin, a daily tablet that took off about as much weight as Lilly's weekly injection. For people who disliked needles, the needle stopped being a reason not to start. Nearly half of all prescriptions are now pills.\n\nWith the drug cheaper and easier to take, more people should be on it, and the count has not moved. About seven million people started for the first time and roughly as many left. Some walked away from employer plans that still demand verified weigh-ins, and some of those now buy the generic for cash rather than step on the scale. Some were told by a bone scan to take a break. Some stopped after reading the documents.\n\nThose documents came out in November 2031 in the federal court in Philadelphia handling the class's injury suits. They showed Novo safety staff logging severe vomiting and stomach-retention reports as plain nausea, and the company holding back an analysis of gastric emptying. The chief executive resigned. The FDA sent inspectors. Filings tripled to about forty-six thousand, and in September a jury awarded thirty-one million dollars to a woman whose stomach never recovered. Billboards along I-95 ask whether Ozempic ruined your stomach. Pancreatitis is still unproven as a cause, but the billboards treat it as settled. An old Supreme Court decision means most people injured on a generic cannot sue at all, so the cases cluster on people who took the brand.\n\nThe states moved as well. Tennessee went first, and seventeen states have now restricted the drugs in some way. Some limit prescribing for children to pediatric specialists, after interim data suggested slower bone building in teenagers. Some require a verified weight before an online clinic can prescribe. Some ban selling the drugs as calm or focus. Lilly and Novo did not write these laws. They came from an unusual alliance of pediatricians, consumer-protection Democrats in Sacramento and Albany, and a movement that calls itself Unmedicated.\n\nUnmedicated began as the 2030 Atlanta rally and now has a look and a calendar: linen, cast iron, supper clubs in Tulsa where grace is said over hunger, and a second helping taken in public as a statement. It is strongest among evangelical women in Oklahoma and Texas and Black wellness collectives in Atlanta, and the two disagree about whether Medicaid should pay for anything.\n\nThe flattening that marketers sold two years ago as calm is now an ordinary complaint. People say they are 'in the grey' the way they once said they were tired. Many on the short-acting pill skip it on weekends, and Saturday restaurant bills and bar sales show it.\n\nThe bone count rises slowly as Medicare brings older users in: roughly sixty-seven hundred extra hip fractures a year. Most of these patients no longer think of their prescription as anything unusual.",
+    "a_day_in_the_life": "Lorraine Whitfield, sixty-one, opens the Will Rogers Elementary cafeteria in Tulsa at six-fifteen. She checks the protein trays and cuts the cornbread into squares that are smaller than the ones she remembers making.\n\nHer pen lives in the door of the walk-in refrigerator at home, not here. It's a white generic with a pharmacy sticker. SoonerCare covers it, and the copay is four dollars because the plan made her start on the cheap one. Thursday is shot day. She did it last night at the sink while the news ran an ad about stomachs.\n\nAt ten a boy in line asks for two corn dogs and she gives him two.\n\nAt lunch her daughter Kayla texts a photo from the supper club: biscuits, gravy, a hand reaching across the table. Under it she writes *come Saturday, Mama, you can skip.* Lorraine types *it don't work like that on mine* and deletes it. She sends a heart instead.\n\nAfter the bell she drives to the clinic on Eleventh for her DEXA. The technician is new and young. She says the hip number is a little lower and Medicare would let her pause, but Lorraine isn't on Medicare for four more years. The technician says the doctor will call.\n\nHer grandson Marcus is fourteen and heavy the way she was at fourteen. He needs a specialist now, in Oklahoma City, and the wait is seven months. Kayla says good.\n\nAt dinner Lorraine eats half her plate and wraps the rest. Marcus watches her do it. She tells him the foil's for tomorrow."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r18-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "65+ rose from 8.5% to 11.2% because Part D obesity coverage began in Jan 2032; DEXA pauses partly offset the rise.",
+          "field": "world/population/note",
+          "why": "Mechanism: the 2030 Medicare Bridge already covered obesity at $199 with a $50 copay for ~1.8M users, so Part D coverage is a smaller change than the note implies. A +2.7 pt jump in 65+ use within 12 months of Part D coverage is asserted, not shown."
+        },
+        {
+          "quote": "Commercial fills still fell from 18.5M to 13.6M.",
+          "field": "world/access/note",
+          "why": "Mechanism: the stated cause is members paying $49 cash to escape gating, yet cash/direct rises only 7.9M to 9.2M, and that figure includes brands and 'calm' users. A 26% fall in commercial users while employer coverage rises to 66% is only loosely explained by 'aged into Part D or moved to Medicaid'."
+        },
+        {
+          "quote": "FDA approved oral daily amycretin in Jun 2031 after the 72-week DEXA data it had asked for.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the parent's amycretin review (filed Jun 2028) is not stated to be an oral form. Reading it as oral, deferring the subcutaneous decision, and having an oral peptide match tirzepatide at ~21–22% is a convenient realisation of the driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Access improves: $39–69 generics, Medicaid and Part D coverage, the Medicare pause-without-penalty, and a narrower use gradient (17.0 top, 12.3 bottom). Costs persist: excess hip fractures rise from ~5,000 to ~6,700, adolescent bone-accrual signals, 46,000 tort claims, and generic-era injuries barred by Mensing. Private gating still punishes DEXA pauses, and an unscanned generic-pen tier remains. Cohesion strain from the Unmedicated split and teen restrictions, plus a more open epistemic picture (SHAPS data, discussed 'grey', unsealed documents), puts this at a harder-but-not-worse-than-2030 society.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events. These are the Paragraph IV generic in Jan 2032, public expansion via Part D and Medicaid, the Novo documents and MDL, oral amycretin approved Jun 2031, the Unmedicated movement, 17-state restriction, the 'grey' as a mainstream complaint, and a +0.1 pt adoption change. Nothing contradicts a driver. mechanism: most chains are shown, including the flat current use that nets exits against ~7M starters, the Mensing preemption logic, and the amycretin review path. Three are weak: the 65+ jump when the Bridge already covered obesity, the 4.9M commercial drop against a +1.3M cash rise, and the oral reading of the amycretin review. The prose also has small slips: 'a year before that' for a six-month gap, and a 'walk-in refrigerator at home'. magnitude: current 14.7% and ever-use 26.6% are inside the envelope, the income thirds average to 14.7%, the age bands sum to 40.1M, and the payer mix sums to 40.0M. Medicare and Medicaid spend multiply out ($2.1B+$8.6B, $2.1B+$5.3B), the cash split sums to 9.2M, and generic_us is true via a settlement event. The only gap is minor: Medicare's 8.0M against 65+ users of 7.8M leaves almost no room for under-65 disabled users, down from ~0.6M.",
+        "generativity": "Lorraine's day yields clear scenes: the school cafeteria, the pen and shot day, the DEXA tech, the daughter's supper-club text, and Marcus waiting seven months for a specialist. Texture also comes from supper clubs, I-95 tort billboards, weekend dose holidays and 'the grey' in criticism. The prose is closer to showing than explaining, though the first half is expository."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s3-L2-r18-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Income gradient narrowed (top 18.5→17.0, bottom 10.3→12.3): Medicaid coverage and generics lifted the bottom, while holidays, the movement and pauses trimmed the top.",
+          "field": "world/population/note",
+          "why": "Mechanism: the top-third fall of 1.5 points is asserted. The Unmedicated base is evangelical women in OK/TX and Atlanta collectives, not high earners, and falling prices should raise top-income use. The drop looks chosen so that national use stays flat."
+        },
+        {
+          "quote": "Employer coverage rose to 66% because generic-only tiers cost little. Commercial fills still fell from 18.5M to 13.6M.",
+          "field": "world/access/note",
+          "why": "Mechanism: a 26% fall in commercial users (−4.9M) while coverage expands and the drug gets cheaper is explained only by escaping gating, and by aging into Part D or moving to Medicaid. The cash tier grows by just 1.3M, so a cut this large is asserted rather than shown."
+        },
+        {
+          "quote": "Filings tripled to about forty-six thousand",
+          "field": "prose/body",
+          "why": "Mechanism/consistency: the world state puts MDL 3094 at about 9,000 claims in 2030 and about 46,000 at end-2032, a roughly fivefold rise. The prose and the 2031-11 event say 'tripled', so the stated multiple disagrees with the figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access improved on the 2030 world: $39–69 generics, mandatory Medicaid and Part D coverage, and Medicare's pause-without-penalty. Harms persist but are partly named and managed: excess hip fractures rising to about 6,700 a year, no DEXA scans for the bottom third, and generic-era injuries barred from suit by PLIVA v. Mensing. Teen access is curtailed (Marcus's seven-month specialist wait), private gating and the Indiana and Arkansas waivers continue, and the 'grey' is openly discussed and measured (11% SHAPS). That makes it a somewhat harder world with new losers, but easier than 2030 on cost and conditioning.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to a dated event or field: generic collapse (2032-01), public expansion (2031-07), oral amycretin approved within approval rules, Novo scandal and litigation, 17 restriction states, the Unmedicated movement, and 'the grey' as a mainstream complaint. Adoption moves by +0.1 pp. mechanism: most chains are shown, such as the Mensing preemption concentrating claims on brand-era use, restriction laws shrinking 'calm' use, and generics closing the import gap. Three things are asserted: the top-third decline, the 4.9M commercial drop, and the 'tripled' filings against a roughly 5x rise in the ledger. The 'year-end health package' signed in July is also awkward. magnitude: current use of 14.7% and ever-use of 26.6% sit inside the envelope, and the income thirds bracket the national figure. The age bands sum to 40.1M, the payer mix sums to 100% and to 40.0M users, and the Medicare ($10.7B) and Medicaid ($7.4B) arithmetic checks out. Approval timing and the generic-via-settlement route comply, so only the claims-multiple discrepancy is a minor flaw.",
+        "generativity": "The Lorraine Whitfield scene is concrete and well observed: the cafeteria cornbread, Thursday shot day, the deleted text, the DEXA technician, and Marcus and the foil. The world also implies many more scenes: supper clubs, tort billboards, weekend holidays, the Oklahoma Medicaid and specialist-wait tension. Daily life has real texture, and the story shows rather than explains."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s3-L2-r18-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Income gradient narrowed (top 18.5→17.0, bottom 10.3→12.3): Medicaid coverage and generics lifted the bottom, while holidays, the movement and pauses trimmed the top.",
+          "field": "world/population/note",
+          "why": "Mechanism: $39–69 generics should raise top-third use, and dose holidays and pauses are temporary, so they do not obviously cut a 1.5-point share of current users. The drop in the top third is asserted, not shown."
+        },
+        {
+          "quote": "3.2M × 0.6%/yr × 0.35 ≈ 6,700 excess hip fractures a year, against ~300,000 total, up from ~5,000 in 2030 as Part D adds older users.",
+          "field": "world/safety_ledger/bone",
+          "why": "Mechanism: Part D obesity coverage began only in Jan 2032, so it cannot have added users with more than 2 years' exposure. The 2.5M to 3.2M rise in long-term 65+ users is not explained."
+        },
+        {
+          "quote": "Obesity Treatment Parity provisions, part of a year-end health package, are signed.",
+          "field": "world/events/2/event",
+          "why": "Mechanism: the event is dated 2031-07 but called a year-end package, and the prose says it came 'a year before' Jan 2032. Passing a major new statute from a no-new-statute 2030 baseline is asserted with no political chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 4.0,
+        "inequality": 4.5,
+        "public_health": 5.0,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 7.0,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Access is broader than in 2030: use is cheaper, Medicaid covers twice as many users, counterfeit and imported use is down, and Medicare pauses without penalty. Harms are real but openly discussed: about 6,700 excess hip fractures a year, 46,000 GI/pancreatic claims, and Novo's concealed GI data. Teen access is limited to specialists, so a 14-year-old waits seven months, and generic-era victims may have no defendant (Mensing). Quality gaps (no DEXA at the bottom) and appetite-as-identity splits in families (Lorraine and Kayla) leave this a somewhat harder world, not a much worse one.",
+        "plausibility": "driver_fidelity: every driver is visible in the fields and events: adoption +0.1pp (14.6→14.7), a settlement-based generic collapse, public expansion through Part D and Medicaid, oral amycretin parity, the Novo scandal, the MDL, 17 restriction states, the Unmedicated movement, and 'the grey' as a complaint. Nothing contradicts a driver, and no new indication appears. mechanism: most chains are shown (settlement to generic to $39; documents to CEO exit to filings; parity law to 65+ and Medicaid growth). Several are asserted: the top-third decline, the fracture rise from Part D, and the date contradiction on the parity package (see the claims above). magnitude: current and ever-use sit inside the envelope, and the age bands, income thirds, cycling (11.6/26.6=44%), payer mix (sums to 40.1M and 100%), Medicare ($10.7B) and Medicaid ($7.4B) spend, route split and cash sub-split all reconcile. Generic entry has its mechanism as an event, and approvals fit the approval rules. Only small slack remains, such as the 7M versus 7.8M ever-user gap.",
+        "generativity": "The Lorraine Whitfield day gives a full cast (Kayla, Marcus, the DEXA tech, the cafeteria boy) and concrete detail: Thursday shot day, the $4 SoonerCare copay, the foil-wrapped half plate, and 'it don't work like that on mine'. The world fields add scenes of their own: tort billboards on I-95, Unmedicated supper clubs, and weekend dose holidays shaping restaurant and festival schedules."
+      },
+      "plausibility": 8.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "65+ rose from 8.5% to 11.2% because Part D obesity coverage began in Jan 2032; DEXA pauses partly offset the rise.",
+        "field": "world/population/note",
+        "why": "Mechanism: the 2030 Medicare Bridge already covered obesity at $199 with a $50 copay for ~1.8M users, so Part D coverage is a smaller change than the note implies. A +2.7 pt jump in 65+ use within 12 months of Part D coverage is asserted, not shown."
+      },
+      {
+        "quote": "Commercial fills still fell from 18.5M to 13.6M.",
+        "field": "world/access/note",
+        "why": "Mechanism: the stated cause is members paying $49 cash to escape gating, yet cash/direct rises only 7.9M to 9.2M, and that figure includes brands and 'calm' users. A 26% fall in commercial users while employer coverage rises to 66% is only loosely explained by 'aged into Part D or moved to Medicaid'."
+      },
+      {
+        "quote": "FDA approved oral daily amycretin in Jun 2031 after the 72-week DEXA data it had asked for.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: the parent's amycretin review (filed Jun 2028) is not stated to be an oral form. Reading it as oral, deferring the subcutaneous decision, and having an oral peptide match tirzepatide at ~21–22% is a convenient realisation of the driver."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.0,
+      "inequality": 4.5,
+      "public_health": 4.83,
+      "cohesion": 4.83,
+      "epistemic": 4.0,
+      "overall": 4.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 8.5
+    },
+    "plausibility": 8.05,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Access improves: $39–69 generics, Medicaid and Part D coverage, the Medicare pause-without-penalty, and a narrower use gradient (17.0 top, 12.3 bottom). Costs persist: excess hip fractures rise from ~5,000 to ~6,700, adolescent bone-accrual signals, 46,000 tort claims, and generic-era injuries barred by Mensing. Private gating still punishes DEXA pauses, and an unscanned generic-pen tier remains. Cohesion strain from the Unmedicated split and teen restrictions, plus a more open epistemic picture (SHAPS data, discussed 'grey', unsealed documents), puts this at a harder-but-not-worse-than-2030 society.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events. These are the Paragraph IV generic in Jan 2032, public expansion via Part D and Medicaid, the Novo documents and MDL, oral amycretin approved Jun 2031, the Unmedicated movement, 17-state restriction, the 'grey' as a mainstream complaint, and a +0.1 pt adoption change. Nothing contradicts a driver. mechanism: most chains are shown, including the flat current use that nets exits against ~7M starters, the Mensing preemption logic, and the amycretin review path. Three are weak: the 65+ jump when the Bridge already covered obesity, the 4.9M commercial drop against a +1.3M cash rise, and the oral reading of the amycretin review. The prose also has small slips: 'a year before that' for a six-month gap, and a 'walk-in refrigerator at home'. magnitude: current 14.7% and ever-use 26.6% are inside the envelope, the income thirds average to 14.7%, the age bands sum to 40.1M, and the payer mix sums to 40.0M. Medicare and Medicaid spend multiply out ($2.1B+$8.6B, $2.1B+$5.3B), the cash split sums to 9.2M, and generic_us is true via a settlement event. The only gap is minor: Medicare's 8.0M against 65+ users of 7.8M leaves almost no room for under-65 disabled users, down from ~0.6M.",
+      "generativity": "Lorraine's day yields clear scenes: the school cafeteria, the pen and shot day, the DEXA tech, the daughter's supper-club text, and Marcus waiting seven months for a specialist. Texture also comes from supper clubs, I-95 tort billboards, weekend dose holidays and 'the grey' in criticism. The prose is closer to showing than explaining, though the first half is expository."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.499,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 46
+  }
+}

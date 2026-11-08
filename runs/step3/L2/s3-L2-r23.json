@@ -1,0 +1,540 @@
+{
+  "run_id": "s3-L2-r23",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 23,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 7.5,
+    "price_path": "managed_decline",
+    "coverage_shift": "public_expansion",
+    "new_indications": [
+      "nicotine",
+      "cognition_dementia"
+    ],
+    "safety_signal": "anhedonia_labelled",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "none",
+    "cultural_response": "class_stratification",
+    "state_action": "benefits_conditioning",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r23",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18753,
+        "output_tokens": 24603
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r23-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28256,
+        "output_tokens": 7572
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r23-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28256,
+        "output_tokens": 7784
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r23-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28256,
+        "output_tokens": 7692
+      }
+    ]
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is on the US market. Tentative approvals exist, but patent settlements hold launches to 2033 or later.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149–150 a month cash through the federal direct-pricing portal (launched as TrumpRx) and manufacturer direct channels.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned, even though anhedonia is now labelled.",
+      "The 503B exclusion and the 503A injunction against compounded semaglutide and tirzepatide still stand, and the FDA still does not prosecute individual importers."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 22.1,
+      "us_adults_ever_used_pct": 32,
+      "by_income_third_pct": {
+        "top": 25.5,
+        "middle": 22.5,
+        "bottom": 18.3
+      },
+      "by_age_band_pct": {
+        "18_29": 11,
+        "30_49": 23.5,
+        "50_64": 33,
+        "65_plus": 19
+      },
+      "pediatric_under_18_on_drug_pct": 0.8,
+      "cycled_off_and_on_pct": 44,
+      "note": "FICTIONAL. Of ~272M adults: ≈60.1M current (22.1%), ≈87.0M ever (32%), ≈26.9M used and off now (9.9 pts), ≈185M never. Cycling: ≈10.0 pts of adults are current users on a second or later course, and ≈4.0 pts are off now after at least one restart, so (10.0+4.0)/32 = 44%. That fits ~35–45% one-year persistence and ~40% restart within a year. New ever-users in the window = 8 pts (≈21.8M), about 6.5 pts of whom are still on a first course; restarts supply the rest of the 7.5-pt rise. Age check: 18–29 11% × 52M = 5.7M; 30–49 23.5% × 90M = 21.2M; 50–64 33% × 62M = 20.5M; 65+ 19% × 68M = 12.9M; total ≈ 60.3M ≈ 22.1%. The 65+ band more than doubled (8.5→19%) because Medicare's permanent benefit replaced the Bridge in Jan 2032 and tirzepatide's Oct 2031 MCI indication brought in ≈1.3M older first-time users. Bone guidance still pauses many: ≈0.9M 65+ ever-users are off on DEXA advice. Income: the bottom third rose 10.3→18.3% mainly through the Medicaid Metabolic Health Option; the top third, at 25.5%, is close to saturation among the eligible. Off-drug populations: ≈26.9M stopped (GI effects, gating cut-offs, DEXA pauses, and a growing share citing 'the grey'); ≈3M still use imported or counterfeit product; the never-users are disproportionately uninsured working-age adults in non-adopting states, under-30s, and people who refuse on principle. Pediatric: ~0.8% of under-18s (≈580k), mostly adolescents on Medicaid-covered semaglutide. An interim adolescent bone-accrual readout is ambiguous. About one child in four now lives with at least one parent on the drug."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "The Medicare and Medicaid Metabolic Health Act (signed Jul 2031, effective Jan 2032 for Medicare and Oct 2031 for the Medicaid Option) made obesity drug coverage permanent in Part D. Eligibility is BMI ≥30, or ≥27 with a comorbidity, or the MCI indication. The $50 copay and the annual counselling/fall-screen visit are kept. The negotiated rate is $169/month from Jan 2032. Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65), of whom ≈7.5M use it for obesity or MCI and ≈6.9M for diabetes. Obesity/MCI spend in 2032: 7.5M × $169 × 12 ≈ $15.2B gross; net of the $50 copay, 7.5M × $119 × 12 ≈ $10.7B program cost. Medicaid pays 18% ≈ 10.8M users at $169: 10.8M × $169 × 12 ≈ $21.9B gross. 33 states plus DC adopted the Option at 80% federal match; with ~85% of users in Option states and the rest at ~60% regular match, the federal share is ≈ $21.9B × (0.85×0.80 + 0.15×0.60) ≈ $16.9B before rebates. VA/TRICARE/IHS cover 2% ≈ 1.2M. Public payers together are 44% of fills and now the largest payer.",
+      "employer_coverage_pct": 64,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 100+ semaglutide brands at $4–25/month, with tirzepatide copies emerging where patents allow. China: generic semaglutide and early generic tirzepatide; Chinese API still dominates the gray trade. Canada: generic semaglutide at CAD 50–80. Brazil, Mexico and Turkey have generics, and EU generic semaglutide launched in several markets in 2031–32. US generic entry is held to 2033+ by settlements; Indian and US generic makers hold tentative FDA approvals.",
+      "gray_market": "contained",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Managed decline continues. Under the Dec 2031 HHS–Lilly–Novo agreement, prices on the federal direct portal are: injectable semaglutide $179, tirzepatide $199–249, retatrutide $349 (list $1,499), oral higher doses $179, oral starting doses $149, and the Medicare/Medicaid rate $169. PBM net prices are ≈$155–175. Payer mix of ≈60.1M users: Medicare 24% (14.4M), Medicaid 18% (10.8M), VA/TRICARE/IHS 2% (1.2M), commercial 36% (21.6M), cash/direct 15% (9.0M, incl. ≈2.2M 'craving'/'calm' subscribers), imported/counterfeit 5% (3.0M) = 100%. Imports are flat in absolute numbers but their share is falling, because the Medicaid Option and $179 cash undercut the effort of buying abroad. The 2031 Act bars federal payment for products made with API from 'foreign adversary' sources. Coverage remains conditional: ~70% of covering employers still gate, and the Medicaid Option writes adherence gating into federal law, with a clinically-indicated-pause code."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg; smoking-cessation indication 2031)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro; MCI-progression indication 2031)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide; 2-year label to ~30% loss, 2031)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin, approved 2031)",
+        "GLP-1 agonist/GIPR antagonist, monthly injectable (MariTide, approved 2032)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "smoking and vaping cessation (semaglutide 2.4 mg and oral 25 mg, Nov 2031)",
+        "slowing progression from mild cognitive impairment to dementia in adults with overweight/obesity or T2D (tirzepatide, Oct 2031)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'brain insurance': tirzepatide or low-dose semaglutide for cognitively normal over-55s with a family history of dementia, prescribed in concierge and telehealth practices",
+        "'craving' subscriptions (formerly 'calm'): low-dose oral semaglutide or Foundayo for people without obesity, now carrying the anhedonia warning",
+        "alcohol reduction, including EAP referrals",
+        "vaping cessation in 18–25s (outside the adult label's trial population)",
+        "pediatric under-12 use under specialist care",
+        "gambling and compulsive-shopping craving reduction, still anecdotal"
+      ],
+      "pipeline_note": "FICTIONAL. Approvals this window: amycretin (Jun 2031, ~22% loss at 72 weeks, approved with the DEXA body-composition data it was asked for and a bone-monitoring label); tirzepatide for MCI progression (sNDA filed Oct 2030 on the SURMOUNT-MIND phase 3: 2,900 adults aged 60–82 with MCI and BMI ≥27, 30 months, 19% relative reduction in progression to dementia, effect concentrated in vascular/mixed phenotypes; approved Oct 2031 after standard review; the label notes the 2025 EVOKE failures of semaglutide in established early Alzheimer's and makes no claim for amyloid-positive AD); semaglutide smoking cessation (resubmitted May 2031 with a new RCT using SHAPS and C-SSRS endpoints, approved Nov 2031); MariTide monthly (filed Apr 2030, approved Feb 2032, ~20% loss). The ~30% triple-agonist driver is met through an existing product: the retatrutide label was updated in Mar 2031 with TRIUMPH 104-week data showing mean 30.1% loss on 12 mg (efficacy estimand; ~28% treatment-regimen), and Lilly launched a 12 mg maintenance autoinjector. There is no new molecule at 30%. Survodutide's resubmission is accepted, with a decision expected 2033. Bimagrumab combinations remain in phase 3 and are not on the market. Incretin market ≈$138B in 2032: US volume up ~50% on 2030, US net price down ~15%, ex-US revenue eroding as EU generics arrive."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common class effect and a leading cause of stopping. Seen often in new older Medicare starters, where it interacts with dehydration and falls.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss. Cholecystectomy volumes are up modestly as retatrutide 2-year regimens spread.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. Counterfeit cases still confound reporting.",
+        "regulatory_response": "Labelled; MDL litigation ongoing, with bellwether trials scheduled for 2033."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Lean mass is ~30–40% of loss in over-50s without resistance training. The 30% retatrutide regimens make absolute lean-mass loss larger even where the proportion is stable. Sarcopenia criteria are met ~1.5× as often in 65+ long-term users.",
+        "regulatory_response": "Class label retained. The 2031 Act requires a fall/strength screen in the Medicare counselling visit. Some MA plans tie continuation to documented strength-programme attendance."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Hip/vertebral fracture HR ~1.3–1.4 in 65+ long-term users; ~1.2× in postmenopausal women 50–64 with >2 years' use, worst in repeat cyclers. ≈4.0M 65+ users now have >2 years' exposure: 4.0M × 0.6%/yr × 0.35 ≈ 8,400 excess hip fractures a year, against ~300,000 total. DEXA claims are up again, and waits run 10–14 weeks in the Sun Belt.",
+        "regulatory_response": "Labelled. Joint guidance on DEXA for all over-50s and postmenopausal women. FDA requires bone endpoints in new filings (amycretin was approved with them). CMS created a clinically-indicated-pause code for DEXA-driven pauses in the Medicaid Option. The DOJ civil case against Novo settled in 2031 without admission."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention; no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "The smoking-cessation RCT used C-SSRS prospectively and found no excess.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, 'the grey')",
+        "status": "established",
+        "prevalence_note": "FDA class labelling (Feb 2032) gives estimates from the semaglutide smoking-cessation RCT and pooled SHAPS re-analyses. A clinically meaningful anhedonia increase occurs in ~5–6% on semaglutide 2.4 mg vs ~3% on placebo, ~6–7% on tirzepatide 15 mg vs ~3%, and ~9–11% on retatrutide 12 mg vs ~4%. The effect is dose-dependent, usually begins within 12 weeks, and usually resolves 4–8 weeks after dose reduction. Applied to ~60M users, roughly 2–3M Americans have drug-attributable reward blunting at any time. Low-dose 'craving' subscriptions still have no systematic measurement.",
+        "regulatory_response": "Warnings & Precautions class label (Feb 2032) recommends SHAPS or PHQ screening at baseline and at 12 weeks, and dose reduction if positive. Anhedonia is not yet a recognised reason for a pause under the Medicaid Option or most PBM gates. An FTC consent order (2031) bars 'calm' and 'anxiety relief' claims by Quiet and two rivals."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. The Medicaid Option's two-miss rule and PBM response thresholds create involuntary stops at scale, and labelled-anhedonia dose holidays add a new voluntary category.",
+        "regulatory_response": "Pause code covers DEXA-indicated pauses only. The Seventh Circuit upheld Indiana's waiver in 2031, and Indiana folded it into the Option."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D, calcium and protein insufficiency signals are strongest in 30%-loss retatrutide users and older Medicare starters.",
+        "regulatory_response": "Professional guidance (protein ≥1.2 g/kg, vitamin D/calcium assessment). CMS counselling template includes a nutrition screen. No FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~9 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up. Cycling again looks worse for bone than continuous use. An interim adolescent bone-accrual readout (2032) shows a BMD z-score lag of ~0.2 SD at 2 years versus matched controls; it is not powered for fracture, and investigators call it 'not reassuring, not alarming'.",
+        "regulatory_response": "Postmarketing requirements continue; the FDA asks for 4-year adolescent data before any label change."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "No new mass cluster in the window. Poison-centre calls are roughly flat from their 2030 level, with scattered endotoxin and dosing-error cases. ≈3M users remain exposed.",
+        "regulatory_response": "Import alerts and pen authentication continue. The 2031 Act's API-origin rule applies only to federally paid product. No new importation law."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher in 2-year 12 mg maintenance; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "Fall-related ED visits remain elevated in 65+ users with >2 years' use. There is a new concern in MCI-indication patients, who combine cognitive impairment, orthostasis and lean-mass loss. The size of the effect is still not separated from confounding.",
+        "regulatory_response": "Fall screen is mandatory in the Medicare counselling visit. The tirzepatide MCI label recommends baseline gait and DEXA assessment."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With one adult in five on the drug, US salty-snack volume is down ~3–4% a year and confectionery ~4%. Sugary-drink volume falls in Medicaid-heavy states for the first time as the bottom third comes on. Protein, fibre and 'bone-forward' fortified foods keep growing. Two large packaged-food groups sold off confectionery brands to private equity in 2031. SNAP-retail data show smaller baskets in Option states. 'Full portion' heritage brands keep a stable niche with backlash and never-user households.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Fourth and fifth straight years of US spirits volume decline. Beer volume is now falling in the 50–64 band. The smoking-cessation label speeds tobacco decline: cigarette volume falls ~9% in 2032 against ~6–7% before, and vape makers cite semaglutide in guidance cuts. On-premise 'one good drink' formats hold.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly down and spend per cover is lower. Gram-priced protein bowls are now offered by mid-tier chains. Senior-heavy markets such as Florida's Villages and Arizona's Sun City see early-bird and buffet formats close fastest as Medicare uptake jumps. 'No-gram' Southern independents in Atlanta, Memphis and Houston remain a profitable niche.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn remains the business model. Retailers now sell 'lean-and-strong' fits, cut for trained shoulders over a small waist, at a premium. Discount chains in Medicaid-heavy regions report the widest size dispersion they have seen, as gated cyclers move up and down. Plus-size specialists hold steady.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Growing. 'Prescribed lifting' and DEXA-plus-coaching chains expand into Medicare markets through MA supplemental benefits. Boutique strength concierge (trainer, DEXA, dietitian, about $400–900 a month) is the fastest-growing segment in affluent suburbs. Medicaid-covered users mostly get a printed band-exercise sheet.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage is 64%, and employers move 65+ workers and retirees onto Medicare's permanent benefit, which lowers their cost. ~70% of covering employers still gate. The EEOC's 2031 wellness rule keeps BMI- and adherence-linked surcharges up to 30% of premium. Pharmacy trend is ~+5%. Bariatric-surgery claims are down ~30% from 2030 as 2-year retatrutide approaches surgical results.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly leads US volume with tirzepatide (including MCI), retatrutide and Foundayo. Novo recovers some ground on the smoking indication and amycretin but faces EU generic erosion. Amgen enters with monthly MariTide. Generic makers hold tentative approvals ahead of 2033. Bone-agent, DEXA and brand-protection suppliers keep growing. Bariatric device makers contract.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The drug is near-universal among insured professionals, so the question is no longer whether someone is on it but which regimen they are on. A small waist with trained shoulders and arms ('built thin') signals retatrutide plus coaching plus DEXA. Thin with soft arms, a forward stoop or visible regain cycles signals a gated public or cheap plan. Older users carry the 'memory shot' as respectability, not vanity.",
+      "thinness_and_class": "Body shape now reads as income in a way people say out loud. In metro Phoenix the contrast is visible street by street: in Scottsdale, strength-concierge studios run DEXA vans in their parking lots; in Maryvale, Medicaid Option members cycle through the Walgreens weigh-in kiosk, and two missed check-ins mean a year off and a visible rebound. Muscle is the premium uniform because building it costs time and coaching, not drug money. Thinness alone has become cheap.",
+      "eating_as_ritual": "Shared meals are smaller and protein-first. Holiday hosting plans for on, off, holiday-weekend and never-users. Dose-holiday weekends are now built around eating: people schedule a skipped dose before Thanksgiving or a wedding. Church potlucks and 'full-table' Sundays remain markers of heritage and refusal.",
+      "dating_and_intimacy": "Profiles list regimen, not just on/off ('ret + lifting'), and some apps let users filter for it. 'Unmedicated' persists as a backlash identity. Couples counsellors routinely ask about 'the grey' and about holiday timing.",
+      "meaning_of_appetite": "Appetite is medicalised and is now also coded by class. Wanting food openly reads as either principled refusal or a lapsed plan. The backlash coalition (Atlanta body-sovereignty collectives, Tulsa–Dallas 'appetite is a gift' congregations, natural-metabolic sellers, disability advocates) has a sharper common enemy in the Medicaid Option's federal gating, but still splits on whether it wants cheaper drugs.",
+      "severity": 6
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Labelled since Feb 2032: ~5–6% (semaglutide 2.4 mg) to ~9–11% (retatrutide 12 mg) show clinically meaningful SHAPS increases versus ~3–4% on placebo. Applied across ~60M users, that is ≈2–3M people with drug-attributable blunting at any moment, far more than the number of people who say they have 'the grey'. Self-reported 'the grey' in general-population polling runs ~20% of users, which reflects nocebo, ordinary low mood and real effect together. Among ≈2.2M low-dose 'craving' subscribers there is still no systematic data.",
+      "framing": "Mainly a side effect you manage. People call it 'the grey' and manage it with dose steps and holidays. Clinicians say 'labelled anhedonia, dose-dependent, reversible'. After the FTC consent order, the 'Quiet' and 'Even' brands sell 'craving control' rather than calm. A minority still prize it as a feature, especially smokers in cessation.",
+      "effect_on_work": "Dose management is now a workplace habit. 'Holiday Fridays', skipping or halving the dose before a pitch or a weekend, are common in sales, hospitality and creative work, and managers ask about timing before big presentations. Gated plans measure proportion of days covered over six months, so one skipped week is safe, but repeated holidays push people near the 80% line. Some tech firms dropped 'craving' subscriptions from lifestyle accounts after the label for liability reasons. Fleets and call centres still favour steady dosing. Several unions are bargaining for PBM 'holiday allowances'.",
+      "effect_on_art_and_play": "Critics write 'grey' in reviews. 'Holiday set' nights at comedy clubs in Chicago and Nashville advertise performers off-dose that week. Music fandoms track an artist's regimen the way they once tracked sobriety. Intense stimulus (hot food, loud rooms, risk sports) remains a user habit.",
+      "effect_on_intimacy": "Sex therapists use the label's SHAPS screen. Couples schedule holiday weekends for anniversaries and conception attempts, and fertility clinics advise a washout period. Advice columns treat 'my partner is grey' as ordinary, alongside snoring.",
+      "effect_on_politics": "Politics is mainly about public payment and gating. The 2031 Act passed as a bipartisan bargain: seniors' 'memory shot' coverage won Democratic votes, and work-style adherence rules for Medicaid won Republican ones. The anhedonia label became stump material ('they're paying to make your mother grey'), and the backlash coalition and disability advocates are suing over the Option's two-miss rule. There is still no established effect on turnout or temperament, and consultants still test 'calm voter' messaging privately.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "The FDA is data-demanding but approves: amycretin, MariTide, smoking cessation and MCI all reached market with bone or SHAPS endpoints attached. It imposed the class anhedonia label rather than restricting use. Enforcement against imports is still selective, and the FTC polices advertising claims.",
+      "subsidy_or_mandate": "The Medicare and Medicaid Metabolic Health Act (Jul 2031) made public coverage permanent: Part D obesity/MCI coverage at a negotiated $169 rate with a $50 copay, and an optional Medicaid benefit at 80% federal match adopted by 33 states plus DC. Public programmes are now the largest payer (44% of fills). There is no individual mandate.",
+      "conditioning_or_surveillance": "Conditioning is now in federal law. The Medicaid Option nationalises the Indiana design: ≥80% PDC over six months, semiannual verified weigh-ins through pharmacy kiosk networks, a ≥5% response at six months, and two misses meaning 12 months off. A clinically-indicated-pause code suspends the clock for DEXA findings, but not for anhedonia or self-directed holidays. Medicare conditions only on the annual counselling, fall and strength screen. Privately, ~70% of covering employers gate through PBMs, and the EEOC rule allows adherence- and BMI-linked surcharges up to 30% of premium.",
+      "workforce_or_military": "DOT sleep-apnea screening still steers drivers onto tirzepatide. The Army's 2031 accession policy allows recruits who are stable on or have been off an incretin for 90 days, with the drug supplied by TRICARE. VA prescribing expands under the Act. Fleets add DEXA checks for over-55 drivers.",
+      "geopolitics_of_supply": "The Act's foreign-adversary API rule keeps Chinese-sourced ingredients out of federally paid product, which shifts Medicare/Medicaid supply to US, Irish and Indian plants. Indian generic makers hold US tentative approvals and lobby for 2033 entry. Section 232 tariffs remain, and the Dec 2031 price deal again traded rate cuts for domestic-capacity credits.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2030-10",
+        "event": "Lilly files to add a dementia-prevention claim to tirzepatide after its SURMOUNT-MIND trial finds a 19% slower progression from mild cognitive impairment in older adults with obesity or diabetes; analysts note the benefit is concentrated in vascular-type decline",
+        "driver": "new_indications: cognition_dementia"
+      },
+      {
+        "date": "2031-03",
+        "event": "FDA updates retatrutide's label with two-year data showing average weight loss of about 30% on the top dose, and Lilly launches a maintenance pen; bariatric surgeons report referrals falling",
+        "driver": "next_gen_launch: triple_agonist_30pct"
+      },
+      {
+        "date": "2031-07",
+        "event": "President signs the Medicare and Medicaid Metabolic Health Act: permanent Part D coverage of obesity drugs at a negotiated rate with a $50 copay, and an optional Medicaid benefit at 80% federal match that requires adherence tracking, verified weigh-ins and a two-miss cutoff; 33 states and DC opt in within a year",
+        "driver": "coverage_shift: public_expansion; state_action: benefits_conditioning"
+      },
+      {
+        "date": "2031-11",
+        "event": "FDA approves semaglutide for smoking and vaping cessation on a new trial with validated pleasure-scale endpoints; in February the agency extends a class-wide anhedonia warning to every incretin, citing rates from about 5% on semaglutide to about 10% on top-dose retatrutide",
+        "driver": "new_indications: nicotine; safety_signal: anhedonia_labelled"
+      },
+      {
+        "date": "2031-12",
+        "event": "HHS, Lilly and Novo agree another price step-down: injectable semaglutide $179 and tirzepatide $199–249 on the federal portal, retatrutide $349, and a $169 rate for Medicare and Medicaid from January; generic semaglutide makers' launch dates are held to 2033 by settlement",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2032-06",
+        "event": "After the anhedonia label, Optum and CVS Caremark add a 'dose-holiday allowance' of up to two skipped weeks per quarter to gated plans, while state Medicaid Option rules count the same skipped doses against adherence; Teamsters and SEIU press for parity",
+        "driver": "personality_layer: mainstream_complaint"
+      }
+    ],
+    "open_tensions": [
+      "Medicare now pays to protect older brains with the same drugs that raise fracture and fall risk in older bodies. 12.9M users aged 65+, ~8,400 excess hip fractures a year, DEXA waits of three months, and the MCI cohort is the frailest of all.",
+      "Anhedonia is labelled and dose holidays are medically sensible, but the Medicaid Option's pause code covers bone, not mood. The poorest users are the ones whose holidays count as non-adherence, and the two-miss lawsuit is pending.",
+      "Generic semaglutide is settled for 2033 while India sells it at $4–25. Will public payers and PBMs hold the $169–179 managed rate, demand generic pricing, or move members to newer brands such as retatrutide, amycretin and MariTide that face no cliff?",
+      "Bodies now visibly sort by plan: built-thin on concierge retatrutide, cycle-thin on gated Medicaid. The backlash coalition has a federal target in the Option's gating but still cannot agree whether it wants these drugs cheaper or gone."
+    ]
+  },
+  "prose": {
+    "headline": "Built Thin, Cycle Thin: One in Five Americans Is On It Now, and You Can Tell Who's Paying",
+    "world_in_600_words": "At the end of 2032 more than one American adult in five takes an incretin drug, and for the first time the government pays for more of them than employers do. The change came from a law, not a breakthrough. In July 2031 Congress passed the Medicare and Medicaid Metabolic Health Act as a bargain that suited both sides. Democrats got permanent Medicare coverage, sold largely on what people now call the memory shot. Republicans got an optional Medicaid benefit that writes Indiana's rules into federal law: take your doses, step on the pharmacy kiosk scale twice a year, lose five percent by month six, and miss twice and you are out for a year. Thirty-three states and the District signed up for the eighty percent federal match. By the end of 2032 Medicare pays for about fourteen million users and Medicaid for nearly eleven million.\n\nThe memory shot is tirzepatide. In October 2031 it won a narrow label for slowing the progression of mild cognitive impairment in older adults who are overweight or diabetic. The trial behind it showed a real but modest effect, mostly in vascular-type decline, and the label says plainly that semaglutide failed in Alzheimer's years earlier. Most families ignored that caveat. Use among people over sixty-five more than doubled, to nearly one in five. These are the same people for whom the drugs raise hip-fracture risk by about a third. DEXA waits in Phoenix and Tampa run past three months, and the Medicare counselling visit now includes a test of how fast you stand up from a chair.\n\nThe weight-loss drug itself has reached the territory of surgery. Two-year data put retatrutide's top dose at about thirty percent average loss, and bariatric referrals have dropped by roughly a third. Prices keep falling through negotiated channels and not below a floor: $179 for injectable semaglutide on the federal portal, $199 to $249 for tirzepatide, $349 for retatrutide, and $169 for public programmes. Generic semaglutide is waiting, with tentative approvals and settlement dates in 2033. Meanwhile India sells it for the price of lunch. About three million Americans still inject imported pens, fewer as a share of users each month.\n\nSince February 2032 the quieting effect has been written into every label. When the FDA approved semaglutide for quitting smoking, it did so on a trial that finally measured pleasure, and then it gave a number for the whole class: about five percent on semaglutide, about ten on top-dose retatrutide, above a placebo rate of three or four. Everyone already had a word for it. 'The grey' is now an ordinary complaint, handled the way people handle heartburn. They skip a dose before a wedding, halve it before a pitch, and take a holiday Friday. The big benefit managers added a two-week holiday allowance to their gated plans. State Medicaid rules did not, so the poorest users take the same holidays at the risk of losing coverage.\n\nThat difference shows up in people's bodies. In Scottsdale, retatrutide comes with a strength coach, a dietitian and a scan van in the studio parking lot, and the result has a name, built thin: a small waist, trained shoulders, good bone. Ten miles west, in Maryvale, Medicaid members get semaglutide, a printed sheet of band exercises, and a kiosk that does not care why you missed. Thin no longer tells anyone much. Muscle tells them what you can afford. Snack and spirits volumes keep slipping, cigarettes fall faster than they have in a decade, and strength gyms are full of retirees. The backlash, from Atlanta's body-sovereignty collectives to Oklahoma pulpits, now has a federal statute to sue. It still cannot agree whether it wants the drugs cheaper or gone.",
+    "a_day_in_the_life": "Rosa Delgado's phone buzzes at 6:10: CHECK-IN WINDOW OPENS MONDAY. She is fifty-seven and a home health aide in Indianapolis. She has been on Medicaid semaglutide for nineteen months and is down eleven percent. She has missed one check-in, the week her sister died. One left.\n\nShe eats her eggs standing up. Her pen is in the refrigerator door beside the hot sauce, and Sunday is injection day. This Sunday is her granddaughter's quinceañera and she is skipping it, the shot, not the party. Five holidays this year. She did the math on the back of an envelope and comes to eighty-one percent of days covered.\n\nHer first client is Mr. Pruitt, seventy-nine, a former shop teacher with a laminated card on his fridge that says ZEPBOUND — MEMORY — SUNDAYS in his daughter's handwriting. Medicare charges him fifty dollars a month. He asks her twice where his glasses are. He stands up from the kitchen chair the way the physical therapist showed him, hands on his knees and a count of three, and she keeps a hand near his elbow without touching it.\n\n'You seem flat today,' he says.\n\n'You seem fine,' she says, and he laughs.\n\nAt lunch she reads the folded insert from her last refill, the new box with the warning about emotional flattening. Five or six in a hundred. She wonders whether she is one of them, or whether she is just fifty-seven and tired.\n\nOn the bus home a woman across the aisle has the kind of shoulders you pay for. Rosa looks at her own wrists.\n\nSunday she will dance, and eat the tres leches. Monday she will step on the scale."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r23-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the same world puts 65+ users at 12.9M (19% × 68M), so Medicare would cover 99% of them. That leaves almost no room for 65+ commercial, VA, cash or imported users, so the payer mix does not reconcile with the age band."
+        },
+        {
+          "quote": "The 65+ band more than doubled (8.5→19%) because Medicare's permanent benefit replaced the Bridge in Jan 2032",
+          "field": "world/population/note",
+          "why": "mechanism: the Bridge already covered the same population with the same BMI/comorbidity criteria and $50 copay, and the rate fell only from $199 to $169. Only the ≈1.3M MCI starters have a shown chain, so obesity/MCI Medicare users rising from 1.8M to 7.5M is asserted."
+        },
+        {
+          "quote": "Imports are flat in absolute numbers but their share is falling, because the Medicaid Option and $179 cash undercut the effort of buying abroad.",
+          "field": "world/access/note",
+          "why": "mechanism: $179 cash is far above the $4–25 Indian price, and the 'contained' gray market sits beside an unchanged 3.0M imported/counterfeit users while total users grew about 50%. The offered cause cannot explain the flat count."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Federal law now writes two-miss conditioning into the Medicaid Option, and the pause code covers bone but not mood. The poorest users therefore bear the cost of anhedonia holidays (autonomy 6.5). Class sorting by regimen is explicit ('built thin' versus 'cycle thin'), and ≈8,400 excess hip fractures a year, an adolescent BMD lag and a frail MCI cohort add to it. Anhedonia is labelled, measured and discussable, which keeps epistemic harm low, so this is a harder society with clear losers but not a structural one hidden from view.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable in fields and events. Nicotine and MCI approvals, the Act, the Feb 2032 anhedonia label, the retatrutide label update for the 30% driver, no market shock and the Medicaid gating are all present. The only blemish is that the 2031-11 event text also describes a February 2032 action. mechanism: some chains are shown, such as the Act, the MCI trial and the label, but the Medicare 65+ doubling and the flat-imports explanation are asserted (claims 2 and 3), and the SURMOUNT-MIND trial is introduced without being set up in the parent world. magnitude: population figures, income thirds, age check, approval timing and generics are all inside the envelope, and the Medicare and Medicaid dollar arithmetic multiplies out. The deductions are the 12.8M Medicare 65+ users against 12.9M total 65+ users (claim 1) and a shaky first-course arithmetic in the note.",
+        "generativity": "The Rosa Delgado and Mr. Pruitt scenes give concrete texture: the PDC envelope math, the pen beside the hot sauce, the chair-stand count, the ZEPBOUND — MEMORY card and 'You seem flat today'. The world fields add the Scottsdale/Maryvale contrast, holiday-weekend dosing, 'holiday set' comedy nights and union bargaining for holiday allowances, so many scenes are implied. It is slightly tidy but very filmable."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s3-L2-r23-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicaid pays 18% ≈ 10.8M users at $169",
+          "field": "world/access/public_coverage",
+          "why": "magnitude/mechanism: Medicaid users triple from 3.5M to 10.8M in two years under an optional state benefit with gating. About a third of adult Medicaid enrollees would be on the drug, against 22% of adults overall. The arithmetic reconciles, but the uptake is very aggressive and only thinly explained."
+        },
+        {
+          "quote": "tirzepatide's Oct 2031 MCI indication brought in ≈1.3M older first-time users",
+          "field": "world/population/note",
+          "why": "mechanism: 65+ prevalence goes from 8.5% to 19% in 24 months, and the Medicare benefit only started in Jan 2032. 1.3M MCI-diagnosed first-time starters within about 14 months of a narrow label is asserted, not shown, given diagnosis bottlenecks and DEXA waits of 10–14 weeks."
+        },
+        {
+          "quote": "sNDA filed Oct 2030 on the SURMOUNT-MIND phase 3: 2,900 adults aged 60–82 with MCI and BMI ≥27, 30 months",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: a 30-month trial that read out before an Oct 2030 filing must have started by about early 2028. The 2030 pipeline_note lists no such phase 3, so a convenient, unprecedented trial appears. Approval exactly 12 months after filing is also at the envelope's edge."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The harms are real but measured and labelled. There are about 8,400 excess hip fractures a year, 2–3M people with drug-attributable blunting, and a frail MCI cohort. Autonomy and inequality take the worst of it: conditioning is now federal law, and the Medicaid pause code covers bone but not mood, so the poorest users' dose holidays count as non-adherence (Maryvale vs Scottsdale, Rosa's 81% PDC). Epistemic is lower because anhedonia is labelled, quantified and discussable, and coverage widens.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. These include adoption at 22.1%, the Act, the nicotine and MCI indications, the Feb 2032 anhedonia label, a 30% retatrutide label update instead of a new molecule, and Medicaid Option gating. The stratification is explicit, so I found no contradiction. mechanism: Most changes have a chain (Act → Option → Medicaid growth; MCI label → older starters; label → dose-holiday allowances). Claims 2 and 3 above are asserted or convenient, the SURMOUNT-MIND timeline is the weakest, and one event is dated 2031-11 but describes February 2032. magnitude: Every headline figure is inside the envelope: on-drug 22.1, ever 32, thirds bracket the national figure, and approval timings are legal. Payer shares sum to 100, and the Medicare ($15.2B/$10.7B), Medicaid ($21.9B/$16.9B), age-band and cycling arithmetic all reconcile. Minor flaws: MCI approval sits exactly at the 12-month limit, and the Medicaid tripling is aggressive (claim 1).",
+        "generativity": "The prose gives Rosa Delgado, with a phone alert, a pen beside the hot sauce, an envelope calculation of PDC and a quinceañera dose skip. Mr. Pruitt has a laminated card and a chair-stand routine. The Scottsdale and Maryvale contrast is concrete. The world fields add dose-holiday allowances, 'holiday set' comedy nights and union bargaining, which imply many more scenes."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L2-r23-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "sNDA filed Oct 2030 on the SURMOUNT-MIND phase 3: 2,900 adults aged 60–82 with MCI and BMI ≥27, 30 months",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the parent world mentions no tirzepatide dementia trial, yet a 30-month phase 3 readout is filed by Oct 2030, which implies enrolment around 2027. Approval comes exactly 12 months after filing, the earliest the envelope allows. The chain is asserted, not shown."
+        },
+        {
+          "quote": "\"gray_market\": \"contained\"",
+          "field": "world/access/gray_market",
+          "why": "Mechanism: the parent had 'significant', and the candidate shows no mechanism for the change. Imports are flat at about 3.0M, poison-centre calls are flat, and the price gap with India widened to $4–25. Only the share of users fell (8% to 5%), because legal coverage grew."
+        },
+        {
+          "quote": "Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65)",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: the 65+ band holds only ≈12.9M users, so Medicare would cover nearly all of them. That leaves almost no room for 65+ users in VA/TRICARE (1.2M), commercial plans, cash or imports. This is a small reconciliation gap."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Adherence gating is written into federal law for Medicaid (two misses means a year off, with a pause code for bone but not mood). Body shape now reads openly as income ('built thin' versus 'cycle thin'). About 8,400 excess hip fractures a year, DEXA waits of 10–14 weeks, and 2–3M people with drug-attributable blunting add real harm. Epistemic harm is lower than in 2030 because anhedonia is now measured and labelled, which keeps the overall score near 6 rather than 7.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to fields and events. The nicotine and dementia indications, the 30% triple-agonist label update (allowed via an existing product, as the pipeline note says), the anhedonia class label, the Act with Medicaid gating, class stratification and the 'the grey' complaint all appear, and nothing contradicts them. mechanism: most chains are shown (the Act leads to payer shift, the label leads to holiday allowances and the Medicaid mismatch). The weak points are claim 1 (a trial absent from the parent), claim 2 ('contained' gray market without a cause), an event dated 2031-11 that mentions 'in February', and Rosa's '81%' figure, which only works over six months, not 'this year'. magnitude: on-drug 22.1%, ever-used 32% and the income thirds (mean 22.1) all sit inside the envelope. Age bands, payer shares, Medicare and Medicaid spending, the federal match and the fracture arithmetic all multiply out. The only gap is claim 3, and the first-course versus restart split is loosely stated.",
+        "generativity": "The prose has concrete scenes: Rosa's CHECK-IN WINDOW phone alert, the pen next to the hot sauce, Mr. Pruitt's laminated card and chair-stand, and the quinceañera dose skip. The Scottsdale versus Maryvale contrast is vivid. The world fields add holiday Fridays, 'holiday set' comedy nights, union bargaining for holiday allowances and DEXA vans, all of which could carry further scenes."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicare pays 24% of fills ≈ 14.4M users (12.8M aged 65+ plus 1.6M disabled under-65)",
+        "field": "world/access/public_coverage",
+        "why": "magnitude: the same world puts 65+ users at 12.9M (19% × 68M), so Medicare would cover 99% of them. That leaves almost no room for 65+ commercial, VA, cash or imported users, so the payer mix does not reconcile with the age band."
+      },
+      {
+        "quote": "The 65+ band more than doubled (8.5→19%) because Medicare's permanent benefit replaced the Bridge in Jan 2032",
+        "field": "world/population/note",
+        "why": "mechanism: the Bridge already covered the same population with the same BMI/comorbidity criteria and $50 copay, and the rate fell only from $199 to $169. Only the ≈1.3M MCI starters have a shown chain, so obesity/MCI Medicare users rising from 1.8M to 7.5M is asserted."
+      },
+      {
+        "quote": "Imports are flat in absolute numbers but their share is falling, because the Medicaid Option and $179 cash undercut the effort of buying abroad.",
+        "field": "world/access/note",
+        "why": "mechanism: $179 cash is far above the $4–25 Indian price, and the 'contained' gray market sits beside an unchanged 3.0M imported/counterfeit users while total users grew about 50%. The offered cause cannot explain the flat count."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 6.5,
+      "inequality": 7.0,
+      "public_health": 5.5,
+      "cohesion": 5.17,
+      "epistemic": 4.0,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.47,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Federal law now writes two-miss conditioning into the Medicaid Option, and the pause code covers bone but not mood. The poorest users therefore bear the cost of anhedonia holidays (autonomy 6.5). Class sorting by regimen is explicit ('built thin' versus 'cycle thin'), and ≈8,400 excess hip fractures a year, an adolescent BMD lag and a frail MCI cohort add to it. Anhedonia is labelled, measured and discussable, which keeps epistemic harm low, so this is a harder society with clear losers but not a structural one hidden from view.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable in fields and events. Nicotine and MCI approvals, the Act, the Feb 2032 anhedonia label, the retatrutide label update for the 30% driver, no market shock and the Medicaid gating are all present. The only blemish is that the 2031-11 event text also describes a February 2032 action. mechanism: some chains are shown, such as the Act, the MCI trial and the label, but the Medicare 65+ doubling and the flat-imports explanation are asserted (claims 2 and 3), and the SURMOUNT-MIND trial is introduced without being set up in the parent world. magnitude: population figures, income thirds, age check, approval timing and generics are all inside the envelope, and the Medicare and Medicaid dollar arithmetic multiplies out. The deductions are the 12.8M Medicare 65+ users against 12.9M total 65+ users (claim 1) and a shaky first-course arithmetic in the note.",
+      "generativity": "The Rosa Delgado and Mr. Pruitt scenes give concrete texture: the PDC envelope math, the pen beside the hot sauce, the chair-stand count, the ZEPBOUND — MEMORY card and 'You seem flat today'. The world fields add the Scottsdale/Maryvale contrast, holiday-weekend dosing, 'holiday set' comedy nights and union bargaining for holiday allowances, so many scenes are implied. It is slightly tidy but very filmable."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.734,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 6
+  }
+}

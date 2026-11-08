@@ -1,0 +1,530 @@
+{
+  "run_id": "s2-L1-r13",
+  "step": 2,
+  "year": 2030,
+  "parent_lineage": "L1",
+  "seed": 20261107,
+  "run_index": 13,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 8.4,
+    "price_path": "stalled",
+    "coverage_shift": "public_expansion",
+    "new_indications": [
+      "alcohol_use_disorder"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "none",
+    "market_shock": "manufacturer_scandal",
+    "cultural_response": "normalisation",
+    "state_action": "none",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L1-r13",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16447,
+        "output_tokens": 27662
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r13-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24068,
+        "output_tokens": 6343
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r13-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24068,
+        "output_tokens": 6252
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r13-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24068,
+        "output_tokens": 6280
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 18.3,
+      "us_adults_ever_used_pct": 27.5,
+      "by_income_third_pct": {
+        "top": 21,
+        "middle": 19,
+        "bottom": 15
+      },
+      "by_age_band_pct": {
+        "18_29": 13,
+        "30_49": 18,
+        "50_64": 29,
+        "65_plus": 13
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 38,
+      "note": "FICTIONAL. Cycling arithmetic: ever 27.5% − current 18.3% = 9.2 pts used-and-off now (~24.4M); current restarters ≈ 7.7 pts (2028-off people who restarted 3.6 + 2028 users already on a later course 3.5 + new starters who already stopped and restarted 0.6), plus off-now people who had restarted before ≈ 2.7 pts, so 10.4 of 27.5 ever-users = 38% cycled. Current users ≈ 48.9M of ~267M adults. Flow check in millions: of 2028's 26.2M users, ~18.9M are still on or back on (72%; stable public coverage helps); of 2028's 17.5M off, ~9.5M restarted (54% over two years, against a parent figure of 36–47% within one year); ~29.2M people started for the first time, mostly after January 2030, and ~20.4M of them are still on (70%, high because most have less than a year of exposure). 18.9 + 9.5 + 20.4 = 48.8M. The off-now pool is 7.3 + 8.0 + 8.8 ≈ 24.1M. Ever-use is up 11.0 pts, inside the 11.4 ceiling. The income gradient narrows in ratio, from 2.1× to 1.4×. Mandatory Medicaid coverage (Jan 2030) and the AUD indication take the bottom third from 6.5% to 15%; the top third (21%) still leads through cash 'metabolic' use. 65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage. 50–64 at 29% is the core. 18–29 at 13% is driven by AUD prescribing and Medicaid. The never-used group is ~193M adults (72.5%): mostly people who don't qualify on BMI or comorbidity, uninsured adults outside Medicaid, and people who have declined. Pediatric: ~0.6% of under-18s (~440k), roughly double, mostly adolescents 12+ on semaglutide or on tirzepatide (adolescent label Jun 2029) under Medicaid EPSDT. Children 8–11 remain rare. The oldest pediatric exposures are now ~7 years, and no bone-accrual data have been reported."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Public programmes are now the largest payer group: ~39% of US incretin users (19.0M) against 36% commercial. Medicare: the GLP-1 Bridge became permanent Part D anti-obesity coverage on 1 Jan 2030 (December 2029 health package), same ~$245/month payment, $50 copay and BMI/comorbidity criteria, with a documented counselling visit retained. Medicare pays for ~20% of users = 9.8M (≈8.4M aged 65+ and ≈1.4M disabled under-65; roughly 4.3M diabetes, 4.6M obesity/CV, 0.6M OSA/CKD/MASH, 0.3M AUD). 9.8M × $245 × 12 ≈ $28.8B/yr. CBO scored the permanent obesity benefit at ~$138B over 2030–39: average ~4.7M obesity-indication users × $245 × 12 ≈ $13.8B/yr × 10. Medicaid: the same law removed the optional 'weight loss' exclusion in SSA §1927(d)(2)(A) for incretins with a cardiovascular indication, effective Jan 2030. After the February 2030 approval, AUD was never an excludable category, so every state must cover with prior authorisation. Medicaid pays for ~14% of users = 6.8M; 6.8M × $245 × 12 ≈ $20.0B/yr, of which the federal share at ~67% blended FMAP is ≈ $13.4B. VA, TRICARE and IHS pay for ~5% = 2.4M; the VA is the heaviest AUD prescriber.",
+      "employer_coverage_pct": 56,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 70+ generic semaglutide brands at $8–40/month, plus first generic liraglutide-semaglutide combination packs. Canada: generic semaglutide CAD 70–100/month. Brazil, Mexico, Turkey, Egypt and much of Southeast Asia have generics, and generic oral semaglutide is available in ~170 countries. US exclusivity still runs to ~2031–32.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Prices are stalled. TrumpRx/direct cash is still ~$245–350 for injectables and $149 for oral starting doses. Wegovy lists at $1,349 and retatrutide at $1,499, with no TrumpRx price and still allocated. Public demand from January 2030 outran fill-finish capacity, and neither manufacturer cut prices. Payer mix of ~48.9M users: Medicare 20% (9.8M), Medicaid 14% (6.8M), VA/TRICARE/IHS 5% (2.4M), commercial 36% (17.6M), cash/direct 18% (8.8M), gray/imported 7% (3.4M); total 100% ≈ 48.8–48.9M. Employer coverage for weight management drifted down from 58% to 56%: some employers point retirees and lower-wage staff toward Medicare and Medicaid. Commercial users still rose ~50% because covering employers saw higher take-up under normalisation, and because the AUD indication falls under mental-health parity (MHPAEA): plans that cover naltrexone and acamprosate must cover semaglutide for AUD on comparable terms, including plans that exclude weight management. About 40% of covering employers still run adherence-gated PBM programmes. Gray-market mail imports from India and Canada roughly reached 3.4M users. FDA seizes parcels selectively and has prosecuted no individual. Compounding has not returned: FDA declined to list tirzepatide or semaglutide in shortage during the 2030 pharmacy stockouts."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Mar 2028)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide; tirzepatide added Jun 2029)",
+        "smoking cessation adjunct to varenicline/NRT (semaglutide, approved Mar 2029)",
+        "moderate-to-severe alcohol use disorder in adults (semaglutide 2.4 mg weekly, approved Feb 2030; not recommended below BMI 22; ASAM and VA/DoD guideline-endorsed Oct 2029 as an option alongside naltrexone and acamprosate)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' / longevity low-dose orals ($149 cash) through concierge and longevity clinics, still skewed to the top income third",
+        "alcohol reduction below the AUD diagnostic threshold ('gray-area drinking'), prescribed via telehealth and EAP vendors",
+        "tirzepatide and orforglipron for AUD (no label; trials ongoing)",
+        "pediatric under-12 use under specialist care",
+        "gambling and compulsive-shopping craving reduction (small trials, no label)"
+      ],
+      "pipeline_note": "FICTIONAL. No new class reached the US market in 2029–30. Survodutide received a complete response letter in Jan 2029 over inspection findings at a contract fill-finish site; it was resubmitted Aug 2030 with a decision due early 2031. Amycretin received a CRL in Jul 2029: FDA asked for 104-week body-composition and BMD data, noting the 2027 Novo substudy history, and resubmission is expected 2031. Amgen filed MariTide (monthly) in Apr 2030, so approval comes no earlier than Apr 2031. Bimagrumab combinations entered phase 3 in 2029 and are not on the market. Growth came instead from new indications for existing molecules (smoking cessation 2029, AUD 2030, adolescent tirzepatide 2029) and from public coverage. Market size ≈ $172B in 2030. US public 19.0M × $2,940 ≈ $55.9B; commercial 17.6M × ~$350 net × 12 ≈ $73.9B; cash 8.8M × ~$210 avg × 12 ≈ $22.2B; US ≈ $152B; ex-US ≈ $20B and eroding under generics."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Most common class effect and still the leading cause of discontinuation. New Medicaid starters on fast escalation show higher early drop-off.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; cholecystectomy volumes up in proportion to the user count, not per user.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation in longer data; absolute risk low.",
+        "regulatory_response": "Labelled; litigation ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Unchanged from 2028: ~1.5× sarcopenia criteria in 65+ users on therapy for more than 2 years. Lean mass is ~25–40% of loss. Absolute numbers rise as 65+ use climbs to 13%.",
+        "regulatory_response": "2028 class labelling holds. Permanent Medicare coverage keeps the documented counselling visit."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Updated cohorts confirm hip and vertebral fracture HR ~1.3–1.4 in long-term 65+ users, concentrated in women and in cyclers; no new signal. The exposed older population has grown by ~3M.",
+        "regulatory_response": "DEXA recommended in 65+ and postmenopausal women. Senate HELP report (2029) faulted Novo's disclosure; DOJ inquiry into Novo closed with no charges."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association; AUD and smoking trials found no imbalance.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "emerging",
+        "prevalence_note": "Survey estimates still ~10–15% of long-term users, dose-dependent. In the AUD phase 3, a 26-week anhedonia scale showed a small, non-significant difference. That is too short and underpowered to settle long-term effects in either direction.",
+        "regulatory_response": "None. The AUD approval requires a postmarketing study with a validated anhedonia measure; the retatrutide postmarketing scale continues."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. Involuntary stops have fallen nationally under stable public coverage, but continue under Indiana and Arkansas waiver cut-offs and adherence-gated employer plans.",
+        "regulatory_response": "None directly; Indiana waiver litigation unresolved."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Signals for iron, B12, vitamin D and protein insufficiency persist, now also in AUD patients with pre-existing alcohol-related deficits.",
+        "regulatory_response": "Professional guidance only. The AUD label advises thiamine and nutritional assessment."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; adolescents on decades-long courses; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "~8 years of follow-up exist. Cycling is still suspected of compounding bone loss. No adolescent bone-accrual data have been reported yet.",
+        "regulatory_response": "Postmarketing requirements; pediatric bone-accrual studies enrolling."
+      },
+      {
+        "effect": "Compounded / counterfeit product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "Harms come mostly from mail-order and counterfeit pens. Poison-centre calls rose roughly with gray-market users (~1.3M to ~3.4M), and counterfeit pens appeared during the 2030 stockouts.",
+        "regulatory_response": "Import alerts and parcel seizures; no individual prosecutions; 503B exclusion stands."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent in real-world use; usually transient.",
+        "regulatory_response": "Labelled."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With users nearly doubled, unit volumes in salty snacks, confectionery and sugary drinks fall again at ~3–4% a year, faster than 2026–28. Two large snack makers close US plants (Ohio, Pennsylvania). Protein, fibre and bone-health claims are standard, and portion packs and 'GLP-1 friendly' shelf tags are now in mainstream grocers.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "The AUD label turns a habit into a covered treatment. US spirits depletions fall for a fourth straight year, and on-premise beer volumes drop at bars near large employers. Kentucky bourbon distillers cut shifts and slow barrel fills. Brewers expand non-alcoholic lines and 'one good drink' premium formats. The industry is shrinking but not failing: drinkers who never qualify or never start are still most of the market.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is mostly steady. Check sizes fall at casual dining, and bar revenue falls faster than food revenue. Protein-forward small plates, half portions and zero-proof pairings are standard. Value-volume buffets keep closing in high-uptake suburbs.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Wider size runs per style and stretch tailoring are the norm. Plus-size specialists are stable, because cycling and regain keep demand alive.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Resistance-training and DEXA-plus-coaching chains keep expanding, and Medicare Advantage strength benefits are widespread. Medicaid managed-care plans pilot 'prescribed lifting' vouchers.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Public programmes are now the largest payer group. Employer pharmacy trend is ~+11% from volume, parity-driven AUD coverage and flat prices. Some mid-size employers drop weight-management coverage and point lower-wage staff to Medicaid. Adherence gating and BMI-linked wellness surcharges persist. State Medicaid budgets absorb ~$6.6B/yr in non-federal share without new state action.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Market ≈ $172B, driven by volume at flat prices. Lilly leads, but paid $1.2B in a 2030 Anti-Kickback/off-label settlement and operates under a Corporate Integrity Agreement. Novo recovers partly on the smoking and AUD labels. Next-gen filings stalled at FDA; adjunct and monthly assets are the deal theme.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on is unremarkable, from boardrooms to Medicaid waiting rooms. Being off is what needs explaining: 'bone scan', 'pregnant', 'coverage', 'I just don't want to'. Ordering a second drink now also invites a look. In older users the 'on it too long' look (thin arms, stoop) is common enough to have stopped being remarked on.",
+      "thinness_and_class": "The gradient has narrowed in share and moved into kind. The top third uses low-dose orals with DEXA and coaching. The bottom third now gets the same molecules through Medicaid, but on standard escalation, with less monitoring, and with fewer strength-coaching benefits. Locally, in Louisville and the Kentucky bourbon belt (Bardstown, Shepherdsville), distillery and bottling workers are prescribed semaglutide for AUD under employer parity coverage while their plants cut shifts, and taprooms on Bardstown Road close weeknights.",
+      "eating_as_ritual": "Smaller plates, protein first and sweets as ceremony are now the default. The 'on/off guest' etiquette has extended to drinks: weddings serve one toast pour and a zero-proof bar. Family tables still split between people who eat and people who graze, though the grazers are now often the majority.",
+      "dating_and_intimacy": "'On/off' filters are standard on apps, and 'sober-curious' has largely given way to 'on'. Mismatched appetites in couples where only one partner is on remain a common complaint. Couples therapists ask about dose and drinking together.",
+      "meaning_of_appetite": "Craving of any kind is something to treat, and it is now reimbursed for alcohol. Choosing not to dampen an appetite reads as a statement, sometimes of pride, sometimes of neglect.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL. Self-reported reduced pleasure is still ~10–15% of long-term users, with no long-horizon RCT measure. With ~48.9M users, that implies roughly 3–5M Americans reporting some flattening. The AUD label makes the same mechanism a billable therapeutic effect.",
+      "framing": "Steadiness at work, treatment in the clinic, side effect in private. The Lilly settlement documents put the phrase 'even-keel workforce' on the record. The CIA forbids Lilly from funding vendors who make such claims, but independent wellness vendors still use the language.",
+      "effect_on_work": "EAP referrals for drinking now end in a prescription rather than counselling alone. 'Last-chance agreements' after alcohol incidents in warehousing, utilities and manufacturing increasingly name medication adherence, verified through PBM refill data, as a condition. DOT-screened drivers stay on tirzepatide for sleep apnea. Performance reviews favour 'consistency'. Sales, hospitality and creative roles still dose down quietly.",
+      "effect_on_art_and_play": "'Off-dose' albums and comedy specials are a marketing hook. Bar culture shifts toward high-stimulation sober venues: axe-throwing, sauna clubs, loud zero-proof lounges. Some musicians say the AUD label made them choose between sobriety and the edge, and say so on stage.",
+      "effect_on_intimacy": "Reduced desire is still reported, and dose-day scheduling persists. Couples where one partner is treated for AUD describe calmer homes and flatter nights in the same sentence.",
+      "effect_on_politics": "Cost and control dominate. The Medicare/Medicaid expansion is claimed by both parties, and the India price gap is still a stump line. Unions bargain over whether medication adherence may appear in last-chance agreements. No turnout or mood effect has been established.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-access on coverage and indications (smoking 2029, AUD 2030). Cautious on next-gen approvals (survodutide and amycretin CRLs). Enforcement-minded on marketing (Lilly settlement and CIA). Tolerant by default of mail imports.",
+      "subsidy_or_mandate": "Medicare obesity coverage is permanent at $245/$50. Medicaid must cover incretins for CV-indicated obesity and for AUD with prior authorisation. Mental-health parity extends AUD coverage to employer plans. There is no individual mandate to use the drug.",
+      "conditioning_or_surveillance": "No new state action. The Indiana and Arkansas 1115 waivers (80% PDC plus quarterly verified weigh-ins) continue under their existing approvals, with litigation pending. ~40% of covering employers run adherence-gated PBM programmes, and BMI-linked wellness surcharges of up to 30% remain legal. Refill data now also appear in AUD last-chance agreements.",
+      "workforce_or_military": "The VA is the largest single AUD prescriber. The Army still permits GLP-1 use for recruits who meet standards. DOT sleep-apnea screening remains a de facto tirzepatide requirement for some drivers.",
+      "geopolitics_of_supply": "Section 232 tariffs are still cited against price cuts. Indian mail exports to ~3.4M US users are a standing trade irritant. Domestic fill-finish capacity is the binding constraint, and retatrutide is still allocated.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2029-04",
+        "event": "Phase 3 trial: weekly semaglutide cuts heavy-drinking days versus placebo in adults with moderate-to-severe alcohol use disorder, with effects largest in those with obesity; Novo files for priority review",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2029-07",
+        "event": "FDA issues complete response letter to Novo's amycretin, requesting 104-week bone-density and body-composition data and citing the 2027 undisclosed substudy; survodutide had received a CRL in January over fill-finish inspection findings",
+        "driver": "next_gen_launch: none"
+      },
+      {
+        "date": "2029-12",
+        "event": "Year-end health package makes the Medicare GLP-1 Bridge permanent Part D coverage from Jan 2030 at ~$245/month and $50 copay, and strips the Medicaid weight-loss exclusion for CV-indicated incretins; CBO scores the Medicare piece at ~$138B over ten years",
+        "driver": "coverage_shift: public_expansion"
+      },
+      {
+        "date": "2030-02",
+        "event": "FDA approves semaglutide for moderate-to-severe alcohol use disorder; CMS confirms all state Medicaid programmes must cover it with prior authorisation, and DOL guidance says parity applies to employer plans",
+        "driver": "new_indications: alcohol_use_disorder / coverage_shift: public_expansion"
+      },
+      {
+        "date": "2030-03",
+        "event": "Pharmacies report Zepbound and Wegovy stockouts as January's public-coverage starters escalate; FDA declines a shortage listing, Lilly keeps retatrutide on allocation, and both firms reaffirm TrumpRx prices with no cut",
+        "driver": "price_path: stalled"
+      },
+      {
+        "date": "2030-06",
+        "event": "Eli Lilly pays $1.2B and signs a Corporate Integrity Agreement to settle a qui tam alleging per-enrolment fees to telehealth partners steering Medicare Bridge patients and funding wellness vendors that pitched 'even-keel workforce' outcomes to HR",
+        "driver": "market_shock: manufacturer_scandal / personality_layer: employer_encouraged"
+      }
+    ],
+    "open_tensions": [
+      "Public programmes now pay for long-term exposure in more than 8M adults over 65 while the label warns of fracture and sarcopenia in exactly that group, and there is no budget line for the DEXA scans and strength coaching the label recommends.",
+      "Demand from public expansion is outrunning fill-finish capacity at stalled prices while ~3.4M Americans use unmonitored Indian and Canadian pens; FDA has refused both a shortage listing and a crackdown.",
+      "The AUD label makes reward modulation a reimbursed treatment, and refill data are entering last-chance employment agreements, while blunting remains unmeasured as a harm beyond 26 weeks.",
+      "Federal law now obliges Medicaid to cover the drugs, but the Indiana and Arkansas waivers still cut people off for missed weigh-ins, and the courts have not said which rule governs."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; exclusivity runs to ~2031–32.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149–150 a month cash through TrumpRx and manufacturer direct channels.",
+      "Retatrutide still lists at $1,499 a month with no TrumpRx price and remains supply-allocated.",
+      "Indiana's and Arkansas's Medicaid 1115 waivers still end coverage for 12 months after two missed adherence or weigh-in checks, and the disability-rights suit remains unresolved."
+    ]
+  },
+  "prose": {
+    "headline": "The Government Is Your Ozempic Plan Now: Nearly One Adult in Five Is On, and the Bar Is Half Empty",
+    "world_in_600_words": "At the end of 2030 about one American adult in five is on an incretin drug, close to forty-nine million people and almost double the count of two years ago. The drugs did not get cheaper. Injectables still cost $245 to $350 a month cash, the oral starting doses $149, and Wegovy still lists at $1,349. What changed is who pays. In December 2029, with the Medicare Bridge about to expire, Congress made it permanent on the same terms: Medicare pays about $245 a month and the patient pays $50. The same package removed the old provision that let Medicaid refuse to cover weight-loss drugs. In February the FDA approved semaglutide for alcohol use disorder, and that closed the last gap. Alcohol treatment cannot legally be excluded from Medicaid, and parity law pulls it into employer plans that never covered weight loss. Public programmes now pay for more users than private insurers do. Medicare alone is the largest single payer.\n\nThe new users look different from the old ones. Two years ago the drug belonged to insured professionals over forty. Now it is in Medicaid waiting rooms, VA clinics and factory break rooms. The share of the poorest third of adults on a drug more than doubled. The richest third still leads, through cash-pay longevity clinics, low-dose pills, bone scans and strength coaches, so the gap has changed shape more than size. Everyone gets the same molecule. What differs is how closely anyone watches what it does.\n\nThat matters most for older people. The fracture findings of 2027 still stand: long-term users over sixty-five break hips and vertebrae about a third more often, and lose muscle. Nothing new has been found, and nothing has been withdrawn. Permanent Medicare coverage has meanwhile put three million more older adults on the drugs. The label recommends bone scans and resistance training, but the federal budget doesn't pay for them.\n\nSupply is the limiting factor. When January's new public enrollees reached full doses in March, pharmacies ran out of Zepbound and Wegovy for weeks. The FDA refused to declare a shortage, which would have let compounders back in. Lilly kept its triple agonist retatrutide on allocation at $1,499. Both companies said prices would hold. Indian pens at the price of a lunch now reach more than three million Americans by mail, and counterfeits turned up during the stockouts. No new drug class reached the market. Regulators, still wary after Novo's hidden bone data, sent back amycretin and survodutide.\n\nThe scandal this time belonged to Lilly. In June the company paid $1.2 billion to settle claims that it paid telehealth partners for each Medicare patient they steered to its drugs, and funded wellness vendors whose HR presentations promised an 'even-keel workforce.' Lilly signed an integrity agreement and is now barred from paying for that kind of pitch. The vendors still use the phrase.\n\nAt work, the alcohol label has made the drugs' quieting effect a billable treatment. Employee-assistance referrals for drinking now usually end in a prescription. In warehouses and utilities, 'last-chance' agreements after an alcohol incident increasingly name medication adherence, checked against pharmacy refill records. Unions are fighting the clause. Between a tenth and a seventh of long-term users report feeling less pleasure, and nobody has measured this beyond six months.\n\nIn Kentucky's bourbon belt, distilleries are cutting shifts while their own bottling crews take semaglutide on the company plan. Taprooms on Bardstown Road close on weeknights. Snack volumes fall faster than before. Gyms selling strength training keep opening. Weddings serve one toast and a zero-proof bar. Being on the drug is ordinary. Being off it is what needs explaining, and so, increasingly, does ordering a second drink.",
+    "a_day_in_the_life": "Renee Pruitt wakes at 4:40 in Shepherdsville, Kentucky, and checks the PBM app before the coffee. A green ring means her refill is in, ninety-one percent days-covered. Wednesday isn't shot day. She just likes seeing the ring.\n\nAt the bottling plant, the line is down to two shifts. Her supervisor taped the new schedule over the old one, and you can still read Sunday through it. Renee runs labeler four. Bottles of a twelve-year go past her at eye level, amber and expensive, and she feels nothing about them. Last year that would have been a sentence she was proud of.\n\nAt break, Dale from palletizing asks if she's still on. Everybody's on, she says. He says his wife got hers through Medicaid in January, but the pharmacy in Mount Washington was out for three weeks in March, so she bought a pen off a website, and it came in a box marked hair serum. Renee doesn't say anything.\n\nShe signed her last-chance agreement in 2029, after the parking-lot thing. Paragraph six says she stays adherent to prescribed treatment. Her copay is forty-five dollars. Her review last month said 'consistent' three times.\n\nAfter shift she drives her mother to the DEXA place in the old mattress store. The coach there has her mother lifting a four-pound kettlebell, slowly, with great dignity.\n\nAt dinner her husband Mike has a beer, one, out of the can, and watches her watch it.\n\n'You want a sip?'\n\n'No,' she says, and means it, and can't tell whether that's the good part or the other part."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r13-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "smoking cessation adjunct to varenicline/NRT (semaglutide, approved Mar 2029)",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+          "why": "Magnitude: the sNDA was filed in May 2028, so approval in Mar 2029 comes about 10 months after filing. That is inside the 12-month minimum the envelope sets for phase-3 products, and the parent's retatrutide took 13 months even with priority review."
+        },
+        {
+          "quote": "Medicare alone is the largest single payer.",
+          "field": "prose/paragraph_1",
+          "why": "Mechanism: the prose contradicts the world state. Commercial is 36% of users (17.6M, about $73.9B) against Medicare's 20% (9.8M, about $28.8B), so Medicare is not the largest single payer by users or spend."
+        },
+        {
+          "quote": "65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage.",
+          "field": "world/population/note",
+          "why": "Mechanism: the Bridge already covered the same people on the same terms through Dec 2029, so permanence adds no new eligibility or price change. A 60% rise in 65+ use (Medicare obesity users from 1.5M to about 4.6M) is asserted without a chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Adherence data enter last-chance employment agreements (paragraph six, PBM refill checks) and the Indiana/Arkansas waivers persist, which gives high autonomy harm. About 8M older adults are on long-term exposure with no funded DEXA or strength benefit, there are stockouts and 3.4M unmonitored imported pens, and reward blunting is still unmeasured past 26 weeks. The narrowing income gradient, falling involuntary stops and AUD treatment access are real offsets, so the world is a harder society with new losers rather than a structurally hidden catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible. Adoption is 18.3% (+8.4pp), prices are stalled, public expansion comes through permanent Part D and the Medicaid mandate, AUD is approved, there is no new safety signal or next-gen launch, Lilly's $1.2B settlement is the scandal, and normalisation and the employer-encouraged layer both show. Mild deduction because the federal Medicaid mandate sits close to the state_action 'none' line. mechanism: the public-coverage and AUD-parity chains are well shown, but the 65+ jump from the Bridge becoming permanent is asserted (claim 3). Prose says Medicare is the largest payer against its own 36% commercial figure (claim 2), and the bottom third jumping from 6.5% to 15% leans on a thin Medicaid chain. magnitude: population figures sit inside the envelope (18.3 in 16.3–20.3, ever-use 27.5 with a +11.0 rise under the 11.4 ceiling). Payer mix, the Medicare $28.8B, CBO $138B, Medicaid $20.0B/$13.4B, market $172B and the cycling and flow arithmetic all reconcile. The cost is approval timing: smoking cessation (claim 1) and AUD (filed Apr 2029, approved Feb 2030) both come under 12 months after filing.",
+        "generativity": "The Renee Pruitt scene is concrete: the PBM green ring, a schedule taped over the old one with Sunday still readable, the hair-serum pen box, paragraph six of the last-chance agreement, a DEXA clinic in a mattress store, and the beer she declines. The Bardstown Road and Mount Washington place details and the 'one toast' wedding give many implied scenes and characters. The ending, with its good part and other part, is shown rather than explained."
+      },
+      "plausibility": 5.9
+    },
+    {
+      "custom_id": "s2-L1-r13-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicare alone is the largest single payer.",
+          "field": "prose/article_body",
+          "why": "Fails mechanism: the world's own payer mix puts commercial at 36% (17.6M) and Medicare at 20% (9.8M), so the prose contradicts the world state."
+        },
+        {
+          "quote": "of 2028's 26.2M users, ~18.9M are still on or back on (72%; stable public coverage helps)",
+          "field": "world/population/note",
+          "why": "Fails magnitude and mechanism: the parent world fixes one-year persistence at ~35%, and 72% over two years is far above that. Most 2028 users were commercial or cash payers, so public coverage cannot explain it."
+        },
+        {
+          "quote": "~29.2M people started for the first time, mostly after January 2030",
+          "field": "world/population/note",
+          "why": "Fails mechanism: about 29M first-time starters compressed into roughly one year, in a window with fill-finish stockouts and AUD approval only in Feb 2030, is asserted rather than shown. The note also gives the same 70% persistence to people with under a year of exposure."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 49M users, expanded fracture and sarcopenia exposure in 65+ (the exposed older group grew by ~3M), 3.4M unmonitored imported-pen users, and 3–5M reporting flattening add up to a harder society. Refill data written into 'last-chance agreements' (interior_life/effect_on_work, state/conditioning_or_surveillance) coerce adherence, and the AUD label turns reward modulation into a reimbursed treatment while blunting stays unmeasured beyond 26 weeks. Access gains for the bottom third (6.5% to 15%) and falling involuntary stops partly offset this, so I score it a 6 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. AUD is approved Feb 2030, public expansion comes through Medicare and Medicaid, price stays stalled, the Lilly settlement supplies the scandal, and no next-gen class launches. Employer encouragement appears in the PBM-adherence last-chance agreements, and nothing contradicts a driver. mechanism: The coverage chain (permanent Part D, the Medicaid exclusion removed, parity for AUD in employer plans) is well shown. The contradicted 'Medicare alone is the largest single payer' line, the unexplained 72% persistence and the compressed 29.2M new-starter wave are the asserted or inconsistent parts. magnitude: Current use (18.3), ever-use (27.5), income thirds and payer shares are all inside the envelope and sum correctly, and the Medicare, Medicaid, CBO and market-size arithmetic multiplies out. The flaws are 72% two-year persistence against the parent's ~35% one-year figure, and commercial net of ~$350 sitting above Medicare's $245 under flat prices.",
+        "generativity": "The Renee Pruitt scene supplies concrete texture: the PBM app's green ring, the paragraph-six last-chance clause, the pen that arrived in a box marked hair serum, the DEXA place in the old mattress store, and the beer she declines. The Bardstown Road taprooms, bourbon-belt shift cuts and zero-proof weddings imply many more scenes. The ending shows the ambiguity rather than explaining it."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s2-L1-r13-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Public programmes now pay for more users than private insurers do. Medicare alone is the largest single payer.",
+          "field": "prose/body",
+          "why": "Mechanism: the world state has Medicare at 20% (9.8M) against commercial at 36% (17.6M), so Medicare is not the largest single payer. The prose contradicts the world state."
+        },
+        {
+          "quote": "FDA approves semaglutide for moderate-to-severe alcohol use disorder; CMS confirms all state Medicaid programmes must cover it with prior authorisation",
+          "field": "world/events/3/event",
+          "why": "Magnitude: the filing is dated 2029-04 (events/0) and approval is 2030-02, about 10 months later. The envelope allows approval no earlier than 12 months after filing for a phase 3 product. The smoking indication has the same problem (filed May 2028, approved Mar 2029)."
+        },
+        {
+          "quote": "65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage.",
+          "field": "world/population/note",
+          "why": "Mechanism: the Bridge already paid $245/$50 on identical criteria through Dec 2029, so making it permanent changes nothing about price or eligibility. It cannot plausibly triple Medicare obesity users (1.5M to 4.6M) in the year after, and the 8.4M Medicare users aged 65+ already exceed the 8.2M implied by 13% of ~63M 65+ adults."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Access broadens and the income gap narrows (bottom third 6.5% to 15%), which eases inequality. Against that, the 65+ fracture and sarcopenia exposure grows by ~3M with no budget for DEXA or coaching. Refill data enter AUD last-chance agreements and employer adherence gating persists. Reward blunting is reimbursed as treatment but unmeasured beyond 26 weeks, and ~3.4M use unmonitored imported or counterfeit pens. The result is a harder, more surveilled society whose harms are normalised and partly invisible, not a catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: adoption 18.3%, stalled prices, public expansion, AUD, no new safety signal, no next-gen launch, the Lilly scandal, normalisation and the employer-encouraged personality layer. Nothing is contradicted. mechanism: the Medicaid, parity and stockout chains are shown. But the permanence of an unchanged-terms Bridge tripling Medicare obesity users is asserted (claim 3), and the prose says Medicare is the largest single payer when commercial is larger (claim 1). magnitude: population figures sit inside the envelope (18.3, 27.5, thirds bracket the national figure) and the payer, spending, CBO and market arithmetic all reconcile. The AUD and smoking approvals come about 10 months after filing against the 12-month rule (claim 2), and the 65+ count is slightly off.",
+        "generativity": "The Renee Pruitt scene is concrete and implies a full film: the PBM ring, the taped-over shift schedule, last-chance paragraph six, the counterfeit pen in a hair-serum box, the DEXA clinic in a mattress store, and the beer she declines. The Kentucky local detail and the cultural fields give strong texture and implied characters. It stays slightly explanatory in the opening sections."
+      },
+      "plausibility": 6.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "smoking cessation adjunct to varenicline/NRT (semaglutide, approved Mar 2029)",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes/5",
+        "why": "Magnitude: the sNDA was filed in May 2028, so approval in Mar 2029 comes about 10 months after filing. That is inside the 12-month minimum the envelope sets for phase-3 products, and the parent's retatrutide took 13 months even with priority review."
+      },
+      {
+        "quote": "Medicare alone is the largest single payer.",
+        "field": "prose/paragraph_1",
+        "why": "Mechanism: the prose contradicts the world state. Commercial is 36% of users (17.6M, about $73.9B) against Medicare's 20% (9.8M, about $28.8B), so Medicare is not the largest single payer by users or spend."
+      },
+      {
+        "quote": "65+ rises from 8% to 13% despite the fracture labelling because the Bridge became permanent Part D coverage.",
+        "field": "world/population/note",
+        "why": "Mechanism: the Bridge already covered the same people on the same terms through Dec 2029, so permanence adds no new eligibility or price change. A 60% rise in 65+ use (Medicare obesity users from 1.5M to about 4.6M) is asserted without a chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.83,
+      "inequality": 4.83,
+      "public_health": 5.83,
+      "cohesion": 5.33,
+      "epistemic": 6.5,
+      "overall": 5.87
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.0,
+      "magnitude": 5.67
+    },
+    "plausibility": 6.3,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Adherence data enter last-chance employment agreements (paragraph six, PBM refill checks) and the Indiana/Arkansas waivers persist, which gives high autonomy harm. About 8M older adults are on long-term exposure with no funded DEXA or strength benefit, there are stockouts and 3.4M unmonitored imported pens, and reward blunting is still unmeasured past 26 weeks. The narrowing income gradient, falling involuntary stops and AUD treatment access are real offsets, so the world is a harder society with new losers rather than a structurally hidden catastrophe.",
+      "plausibility": "driver_fidelity: every driver is visible. Adoption is 18.3% (+8.4pp), prices are stalled, public expansion comes through permanent Part D and the Medicaid mandate, AUD is approved, there is no new safety signal or next-gen launch, Lilly's $1.2B settlement is the scandal, and normalisation and the employer-encouraged layer both show. Mild deduction because the federal Medicaid mandate sits close to the state_action 'none' line. mechanism: the public-coverage and AUD-parity chains are well shown, but the 65+ jump from the Bridge becoming permanent is asserted (claim 3). Prose says Medicare is the largest payer against its own 36% commercial figure (claim 2), and the bottom third jumping from 6.5% to 15% leans on a thin Medicaid chain. magnitude: population figures sit inside the envelope (18.3 in 16.3–20.3, ever-use 27.5 with a +11.0 rise under the 11.4 ceiling). Payer mix, the Medicare $28.8B, CBO $138B, Medicaid $20.0B/$13.4B, market $172B and the cycling and flow arithmetic all reconcile. The cost is approval timing: smoking cessation (claim 1) and AUD (filed Apr 2029, approved Feb 2030) both come under 12 months after filing.",
+      "generativity": "The Renee Pruitt scene is concrete: the PBM green ring, a schedule taped over the old one with Sunday still readable, the hair-serum pen box, paragraph six of the last-chance agreement, a DEXA clinic in a mattress store, and the beer she declines. The Bardstown Road and Mount Washington place details and the 'one toast' wedding give many implied scenes and characters. The ending, with its good part and other part, is shown rather than explained."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.2389,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 17
+  }
+}

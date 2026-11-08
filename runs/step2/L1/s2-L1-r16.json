@@ -1,0 +1,529 @@
+{
+  "run_id": "s2-L1-r16",
+  "step": 2,
+  "year": 2030,
+  "parent_lineage": "L1",
+  "seed": 20261107,
+  "run_index": 16,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 2.8,
+    "price_path": "shock_up",
+    "coverage_shift": "mandate_or_conditioning",
+    "new_indications": [
+      "mood_and_motivation"
+    ],
+    "safety_signal": "anhedonia_labelled",
+    "next_gen_launch": "none",
+    "market_shock": "generic_flood_counterfeits",
+    "cultural_response": "normalisation",
+    "state_action": "none",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L1-r16",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16519,
+        "output_tokens": 23894
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r16-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25004,
+        "output_tokens": 7266
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r16-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25004,
+        "output_tokens": 7587
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L1-r16-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25004,
+        "output_tokens": 6881
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 12.7,
+      "us_adults_ever_used_pct": 20.5,
+      "by_income_third_pct": {
+        "top": 16.5,
+        "middle": 12.5,
+        "bottom": 9.1
+      },
+      "by_age_band_pct": {
+        "18_29": 6,
+        "30_49": 13,
+        "50_64": 22,
+        "65_plus": 8.5
+      },
+      "pediatric_under_18_on_drug_pct": 0.5,
+      "cycled_off_and_on_pct": 39,
+      "note": "FICTIONAL. Cycling arithmetic: ever-used 20.5% minus current 12.7% leaves 7.8% of adults who used and are off now. About 45% of current users (≈5.7 pts) are on a second or later course, and ≈2.3 pts of the off-now group restarted at least once and stopped again. (5.7+2.3)/20.5 = 39% cycled, which fits ~35% one-year persistence and 36–47% restart within a year. Headcounts on ~267M adults: ≈33.9M current users; ≈54.7M ever-users; ≈20.8M used and stopped; ≈212M never used. Ever-use rose 4.0 pts (≈10.7M new starters), well inside the +5.8 cap. Current use rose 2.8 pts even though legal prices went up, for four reasons. (1) The cheap import channel (≈8.1M users, up from 1.3M) pulled in bottom- and middle-third adults and took in people dropped by adherence-gated plans. (2) The March 2029 smoking-cessation approval brought in ≈0.9M smokers. (3) Low-dose 'quiet mind' and 'metabolic' cash programmes reached ≈1.2M non-obese adults. (4) Employer coverage rose to 60% as PBMs made gated programmes the default. The income gradient narrowed in ratio (top/bottom 1.8×, down from 2.1×) because the gray market is concentrated in the bottom third; the absolute gap still widened. Age-weighted check: 0.20×6 + 0.33×13 + 0.24×22 + 0.23×8.5 ≈ 12.7. Among 65+, use rose only half a point: the bone label holds it down and the renewed Medicare Bridge holds it up. Pediatric: ≈0.5% of ~73M under-18s (≈365k), mostly adolescents 12+ on semaglutide. Pediatricians report a minority of teens on imported pens bought by parents, outside any bone-accrual monitoring. The oldest pediatric exposures are now about 7 years. Off-drug: roughly one adult in thirteen is a former user, most of them stopped involuntarily by price, coverage gating or shortage, and visible regain in this group is common."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Medicare GLP-1 Bridge renewed by CMS in Nov 2029 through Dec 2031. Medicare's payment rose from $245 to $275/month to follow the higher TrumpRx price; the $50 copay and the BMI/comorbidity criteria are unchanged, and the documented strength-counselling visit is still required. ≈1.7M beneficiaries use the Bridge for obesity: 1.7M × $275 × 12 ≈ $5.6B/yr federal spend, up from ≈$4.4B in 2028. Medicare overall (Part D diabetes plus Bridge) covers ≈5.7M users (8.5% of ~63M adults 65+ ≈ 5.4M, plus ~0.3M disabled under-65), which is ≈17% of users. Medicaid covers ≈2.7M users (8%) at the same $275 rate: 2.7M × $275 × 12 ≈ $8.9B/yr combined federal and state. No new state has expanded or conditioned coverage. The Indiana and Arkansas adherence waivers run unchanged.",
+      "employer_coverage_pct": 60,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 60+ generic semaglutide brands at $8–45/month, plus export-oriented contract makers. Canada: generic semaglutide CAD 75–110. Mexico, Brazil, Turkey and China have generic semaglutide. Mexican pharmacies in Juárez, Nogales and Tijuana sell it over the counter-in-practice at $30–60. Generic oral semaglutide is in ~170 countries. Tirzepatide and retatrutide have no legitimate generics anywhere, so 'tirz' and 'reta' sold abroad or online are research-peptide vials or counterfeits.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. In 2029 legal prices rose for the first time since 2024. The Section 232 grace period in the 2025 pricing agreements lapsed in January 2029 for product not yet onshored, and Novo then raised Wegovy/Ozempic TrumpRx cash from $349 to $449 and Wegovy pill maintenance doses from $199 to $249. Novo's spring 2029 fill-finish recall put Wegovy pens on the FDA shortage list for seven months. Lilly makes most of its product in the US. It raised Zepbound higher-dose vials by $50 (to $349–499) and held the Foundayo starting dose at $149 to take share. Legal cash range: $149 (Foundayo start) to $1,499 (retatrutide list, still allocated); Wegovy list stays $1,349. Payer mix of ≈33.9M users: commercial 38% (13.0M), Medicare 17% (5.7M), Medicaid 8% (2.7M), cash/direct 13% (4.4M, including ≈1.2M non-obese 'quiet mind'/metabolic users, mostly on Foundayo or low-dose Wegovy pill), gray/imported 24% (8.1M). Sum 33.9M = 100%. Gray-channel prices: Indian generic semaglutide by mail $15–60; Mexican border pharmacy $30–60; research-peptide 'reta' and 'tirz' vials $60–140. Compounding stayed closed even during the shortage, because the 2027 503B exclusion and the 503A injunction do not depend on shortage status. The shortage therefore pushed people straight to imports. Among covering employers, ≈70% now use adherence-gated PBM programmes, up from ~40%, because the three largest PBMs made gating their default design in Jan 2030. BMI- or enrolment-linked wellness surcharges up to 30% of premium remain legal. Commercial pharmacy trend is ≈+11%."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg Wegovy dose)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, supply-allocated)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "smoking cessation adjunct with varenicline/NRT (semaglutide, approved Mar 2029)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'Quiet mind' / focus / calm: low-dose oral semaglutide or Foundayo sold by telehealth subscription for 'mental noise', rumination and 'doomscrolling'. Patients are framed as having cravings, not depression; ≈1.2M cash users overlap with metabolic/longevity use",
+        "alcohol reduction, including EAP-referred prescribing; a phase 3 alcohol-use-disorder trial is enrolling",
+        "'metabolic health' / longevity use by non-obese, top-income adults via concierge and longevity clinics",
+        "gambling and compulsive-spending reduction, marketed by some clinics as part of 'quiet mind'",
+        "pediatric under-12 use off-label under specialist care"
+      ],
+      "pipeline_note": "FICTIONAL. No new class reached the US market in 2029–30. Survodutide (GLP-1/glucagon) received a complete response letter in Jan 2029 asking for more heart-rate and cardiovascular-safety data; Boehringer plans to resubmit in 2030, so no decision before 2031. Amycretin (unimolecular GLP-1/amylin) received a CRL in Jul 2029 that cited inspection findings at the same Novo fill-finish network implicated in the Wegovy recall; Novo resubmitted in Mar 2030 with a six-month review, and a decision is due ~Q4 2030 but is not approved as of year-end. MariTide (monthly) was filed by Amgen in Dec 2029, so approval can come no earlier than Dec 2030 and a decision is expected 2031. Muscle-preserving adjuncts (bimagrumab combinations) entered phase 3 in 2029 and are not on the market. Product news in the window came from existing molecules: the semaglutide smoking-cessation label (Mar 2029), retatrutide capacity expansion (allocation eased but not lifted), and higher-dose Foundayo. Retatrutide's FDA-required postmarketing anhedonia scale produced the data behind the Aug 2030 class label."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Most common class effect and still the leading cause of discontinuation. Poison centres see more severe vomiting episodes linked to imported product dosed wrongly (mg/mL confusion).",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; more salient with retatrutide and unsupervised high-dose 'reta' vials.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation in long-term data; absolute risk low. Case reports from overdosed counterfeit and research-peptide product muddy the surveillance signal.",
+        "regulatory_response": "Labelled; litigation ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "≈1.5× sarcopenia criteria in 65+ users on therapy >2 years, as in 2028. Gray-channel users get no body-composition assessment.",
+        "regulatory_response": "2028 class label in force; Medicare Bridge renewal keeps the counselling-visit requirement."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Fracture HR ~1.3–1.4 in 65+ long-term users, highest in women and repeat cyclers. A 2029 follow-up suggests that involuntary stops from adherence gating, followed by restarts, compound the loss.",
+        "regulatory_response": "Class BMD labelling and DEXA recommendation in force. Senate HELP report (2029) found Novo's disclosure delay 'material'; DOJ civil matter unresolved."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings-section mention unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association. The 2030 anhedonia analysis separately found no excess in suicidality items.",
+        "regulatory_response": "Warning not restored; the anhedonia label explicitly distinguishes the two."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening (anhedonia)",
+        "status": "established",
+        "prevalence_note": "Pooled placebo-controlled data using a prospective pleasure scale (SHAPS) plus clinician rating, together with retatrutide's postmarketing study, show clinically meaningful reduced pleasure at 52 weeks in 6.8% (semaglutide 2.4 mg), 8.1% (tirzepatide 15 mg) and 11.4% (retatrutide 12 mg) versus 3.1% on placebo. The effect is dose-dependent, includes decreased libido in a subset, and resolves in most people within 8–12 weeks of dose reduction or stopping. Drug-attributable excess of ~4–8 pts across ~34M users implies roughly 1.5–2.5M affected people.",
+        "regulatory_response": "Aug 2030 class labelling in Warnings and Precautions and Adverse Reactions, with a recommendation to ask about pleasure, motivation and libido at dose escalation. No REMS, and no change to who may prescribe."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. Involuntary stops now come from three sources: gating cut-offs, the 2029 Wegovy shortage and price-driven exits.",
+        "regulatory_response": "None directly. Indiana waiver litigation is pending on appeal."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein insufficiency signals persist in older and high-loss users.",
+        "regulatory_response": "Professional society guidance only."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; adolescents on decades-long courses; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About eight years of adult follow-up and ~7 years of pediatric exposure now exist. Adolescent bone-accrual studies are enrolling with no readout. Teens on imported pens are outside every study.",
+        "regulatory_response": "Postmarketing requirements; pediatric bone-accrual PMR ongoing."
+      },
+      {
+        "effect": "Imported, counterfeit and research-peptide product harms (dosing errors, contamination, wrong active ingredient)",
+        "status": "established",
+        "prevalence_note": "The 2029 CDC investigation covered ~310 ED visits and 9 deaths across 14 states. Causes were severe hypoglycaemia from counterfeit 'Ozempic' pens containing insulin, bacterial bloodstream infections from non-sterile 'reta' vials, and overdose from mg/mL label confusion. Poison-centre calls about incretin products roughly tripled from 2028. Licensed Indian generics are implicated far less often than counterfeits and research peptides.",
+        "regulatory_response": "FDA import alerts on named exporters, expanded parcel seizures and CDC/FDA public advisories. Individuals are still not prosecuted, and the personal-importation policy has not formally changed."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent in real-world use; usually transient.",
+        "regulatory_response": "Labelled."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "Pressure on volumes has returned, and it has moved down-market. As imported pens reach bottom-third households, dollar-store and convenience-channel sales of salty snacks, candy and single-serve soda show their first clear user-linked declines (≈2–3% in high-import ZIP codes along the southern border and in the industrial Midwest). Premium channels had adjusted earlier. Protein, fibre and bone-health claims are standard, and 'small format' packs are now the main SKU launch type.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Still contracting. The cessation approval and EAP referrals keep reducing heavy drinkers. Beer and spirits majors run 'one good drink' premium campaigns. Tobacco makers report quit-rate effects in 10-Ks after the March 2029 approval, and sports-betting operators now list GLP-1 'quiet mind' use as a risk factor.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly up, and spend per cover is down. Half portions, protein add-ons and 'on' menus are standard in high-uptake suburbs. Buffet and all-you-can-eat formats keep closing units.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn is the business model: mainstream brands stock wide runs, and alteration and rental services grow. Plus-size specialists are stable. Gating cut-offs and the Wegovy shortage produce regain waves, which brands schedule around.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Growing on the bone label: DEXA-plus-coaching chains, Medicare Advantage strength benefits and employer 'prescribed lifting' credits that count toward wellness points. Gray-channel users mostly don't buy any of it.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage is up slightly, 58% to 60%, because gating holds costs down: dropouts are not refilled. Express Scripts, Optum Rx and CVS Caremark made adherence-gated outcomes programmes the default GLP-1 design in Jan 2030. Members who opt out pay a higher tier. Commercial pharmacy trend is ≈+11% after the 2029 price rise. Some group disability and life carriers offer underwriting credits for documented adherence.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly's lead widens: US manufacturing shields it from the tariff lapse, Foundayo stays at $149 to start, and retatrutide capacity is growing. Novo has had a tariff-driven price rise, a fill-finish recall, the amycretin CRL and the Senate report, and is losing US share. Indian generic makers grow export volumes, with a long tail of unlicensed peptide sellers behind them. Exclusivity loss in 2031–32 is now what every analyst models.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug is unremarkable across classes, and being off is what gets explained. The accepted explanations are 'bone scan', 'pregnancy', 'the shortage' and 'my plan kicked me off'. A new and quieter one is 'it was making me flat', which became sayable once the label used the word. Visible regain reads as a coverage problem, not a character problem, unless the person could obviously afford the drug.",
+      "thinness_and_class": "The ratio between top and bottom thirds narrowed (16.5% vs 9.1%), but what people take now differs by class. The affluent take branded, monitored, low-dose regimens with DEXA scans and coaches. The working class take imported pens with no monitoring. In El Paso, families cross to Juárez pharmacies for generic semaglutide at $30–60, and 'my cousin brings mine' is ordinary talk. In Dallas–Fort Worth insurance and banking offices, about four in ten women aged 45–60 are on a branded drug through gated plans, and the weigh-in kiosk is part of the lobby.",
+      "eating_as_ritual": "Shared meals are smaller and the protein comes first. Hosts ask 'are you on?' the way they once asked about allergies. Quinceañeras and church suppers in high-import neighbourhoods have shrunk their portions too. Dessert is a ceremony; a second helping is a statement.",
+      "dating_and_intimacy": "'On/off' is a standard profile field. Since the label added decreased libido to the anhedonia language, people mention dose on second dates. Couples where both are on describe 'quiet' as either peace or distance.",
+      "meaning_of_appetite": "Appetite of every kind is something to manage, and an unmanaged appetite is starting to look like a choice, or like poverty. 'Quiet mind' marketing has stretched the idea from food to attention.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL. Labelled since Aug 2030: 6.8–11.4% reduced pleasure at maintenance doses versus 3.1% on placebo, dose-dependent and mostly reversible. That is ~1.5–2.5M drug-attributable cases among ~34M users. Self-report surveys still run higher (10–15%). Gray-channel users are not counted in any study.",
+      "framing": "One effect now has four names. The label says 'anhedonia/emotional blunting'. Telehealth subscriptions call it 'quiet mind'. Wellness vendors pitch it to HR as 'steadiness', and smokers and drinkers call it what finally worked. FTC warning letters (2030) to several telehealth firms targeted unsupported 'focus' claims, not the prescribing.",
+      "effect_on_work": "Gated PBM programmes report adherence to employers in aggregate, and team-level dashboards exist at some large self-insured firms. Since the label, HR counsel tell managers never to cite 'demeanour' in a review, but attendance, safety incidents and EAP alcohol claims still look better in high-adherence units. Trucking fleets and call centres favour staying on. Some sales and creative staff ask clinicians for dose reductions, which gated programmes allow because they count fills, not milligrams. The 2028 UPS–Teamsters agreement's firewall on adherence data is now the model clause in other contracts.",
+      "effect_on_art_and_play": "'Off-dose' is a marketing term: musicians release 'drug holiday' albums, and a stand-up special about the label insert is a streaming hit. Sports-betting handle is soft in high-uptake demographics. Gamers and fans still seek intense, loud, high-stimulation experiences, so venues sell spectacle over duration.",
+      "effect_on_intimacy": "Sex therapists now screen with the labelled questions. Dose-timing around anniversaries and conception attempts is routine. More people say a partner's dose reduction 'brought them back' than say it changed nothing, though nobody has measured this.",
+      "effect_on_politics": "In the 2030 midterms the issues are price and fakes. Candidates in both parties wave $449 Wegovy receipts next to $20 Indian pens, and several bills to legalise personal importation were introduced and none passed. The counterfeit deaths made 'safe importation' a bipartisan phrase without a vote. Unions fight over data access. There is still no established effect on turnout, though columnists speculate.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-speed on indications (cessation approved on schedule) and conservative on new molecules (two CRLs). The agency added an anhedonia class label rather than restricting the drugs. Enforcement against imports is visible but selective: import alerts, seizures and advisories, and no prosecution of individuals.",
+      "subsidy_or_mandate": "No mandate. Medicare Bridge renewed to 2031 at $275 with a $50 copay. Medicaid stays state-by-state at $275. TrumpRx prices are no longer frozen: they rose in 2029 after the tariff grace lapsed.",
+      "conditioning_or_surveillance": "No new government conditioning this step. The Indiana and Arkansas waivers continue unchanged (80% PDC, quarterly verified weigh-ins, 12-month lockout), and Indiana's case is pending on appeal. Conditioning has spread privately: PBM default gating covers ≈70% of covering employers, and federal wellness rules still permit surcharges of up to 30% of premium. The anhedonia label's screening recommendation is not tied to coverage, so gated plans check whether you refilled, not how you feel.",
+      "workforce_or_military": "DOT sleep-apnea screening still makes tirzepatide a de facto requirement for some drivers. The Army policy is unchanged and still contested. No agency has addressed whether the anhedonia label affects safety-sensitive duty.",
+      "geopolitics_of_supply": "The tariff lapse raised Novo's US prices and sped up Lilly-style onshoring announcements. India's mail-order exports are a standing item in trade talks, and India's CDSCO raided unlicensed export units after the CDC report. Counterfeit and research-peptide API is traced largely to Chinese peptide suppliers. US exclusivity ends 2031–32.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2029-01",
+        "event": "Section 232 tariff grace period in the 2025 pricing deals lapses for non-onshored product; Novo raises Wegovy and Ozempic TrumpRx cash price from $349 to $449, Lilly lifts higher-dose Zepbound vials by $50 but holds Foundayo's $149 starting dose",
+        "driver": "price_path: shock_up"
+      },
+      {
+        "date": "2029-03",
+        "event": "FDA approves semaglutide as an adjunct for smoking cessation; within weeks national telehealth platforms launch low-dose 'Quiet Mind' subscriptions selling calm, focus and fewer cravings to cash-pay adults without obesity",
+        "driver": "new_indications: mood_and_motivation"
+      },
+      {
+        "date": "2029-05",
+        "event": "FDA warning letter cites sterility-assurance failures at a Novo Nordisk fill-finish site; Wegovy pen lots recalled and the drug returns to the shortage list for seven months; compounders remain barred, and imports surge; amycretin later receives a CRL citing the same network",
+        "driver": "price_path: shock_up / next_gen_launch: none"
+      },
+      {
+        "date": "2029-10",
+        "event": "CDC reports ~310 emergency visits and 9 deaths in 14 states tied to counterfeit insulin-filled 'Ozempic' pens, non-sterile research-peptide 'reta' vials and mg/mL dosing errors; FDA issues import alerts but leaves personal-importation policy untouched",
+        "driver": "market_shock: generic_flood_counterfeits"
+      },
+      {
+        "date": "2030-01",
+        "event": "The three largest PBMs make adherence-gated outcomes programmes the default GLP-1 benefit design for employer clients, with verified weigh-ins and higher tiers for members who opt out; employer coverage ticks up to 60%",
+        "driver": "coverage_shift: mandate_or_conditioning / personality_layer: employer_encouraged"
+      },
+      {
+        "date": "2030-08",
+        "event": "FDA adds anhedonia and emotional blunting to incretin class labels—6.8% to 11.4% at maintenance doses versus 3.1% on placebo—with advice to ask about pleasure and libido; telehealth 'Quiet Mind' ads continue",
+        "driver": "safety_signal: anhedonia_labelled"
+      }
+    ],
+    "open_tensions": [
+      "The label now names anhedonia and tells clinicians to ask about it, while gated PBM programmes reward uninterrupted fills, employers see the correlates in their dashboards, and telehealth firms sell the same effect as 'quiet mind'. Nobody has decided whether a reduced dose or a drug holiday counts as non-adherence.",
+      "About 8M Americans, a quarter of users, now take imported, counterfeit or research-peptide product with no prescriber and no bone monitoring. After nine deaths, Washington will neither legalise safe importation nor shut the channel, and exclusivity ends in 2031–32.",
+      "Higher legal prices, a renewed Bridge at $275 and +11% commercial trend push public and employer spending up, while gating cut-offs and the shortage produce the involuntary stop-start cycles the bone data link to fractures.",
+      "Teenagers make up a growing share of users: ~365k under-18s, some on parent-bought imported pens. They are on a drug with ~7 years of pediatric exposure data, no bone-accrual readout and a new pleasure warning."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; exclusivity still runs to ~2031–32.",
+      "Foundayo's oral starting dose is still $149 a month cash through TrumpRx and Lilly direct.",
+      "Retatrutide's list price remains $1,499 a month, with supply still allocated.",
+      "Indiana and Arkansas Medicaid waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with a 12-month lockout after two misses.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "Calm, Covered, Counterfeit: 34 Million Americans Are On It, and the Label Finally Says What It Does to Pleasure",
+    "world_in_600_words": "At the end of 2030 about one American adult in eight is on an incretin drug, roughly thirty-four million people, up from twenty-six million two years ago. The rise came in spite of prices, not because of them. In January 2029 the tariff grace period written into the 2025 pricing deals expired for drugs still made abroad. Novo Nordisk raised the cash price of Wegovy and Ozempic from $349 to $449 a month. That spring an FDA inspection found sterility failures at one of Novo's fill-finish plants, and Wegovy pens were recalled and went back on the shortage list for seven months. Compounding pharmacies had been shut out in 2027 and stayed shut out. People who could no longer get their pens did not stop. They went abroad.\n\nAbout a quarter of users, some eight million people, now buy outside the legal US system. That means licensed Indian generic semaglutide by mail for $15 to $60, Mexican pharmacy pens carried back across the bridges at El Paso and Nogales, and vials of 'reta' and 'tirz' sold online as research chemicals. In October 2029 the CDC reported three hundred emergency visits and nine deaths. Some came from counterfeit pens that turned out to contain insulin, some from unsterile vials, and some from people who misread milligrams per millilitre. The FDA added exporters to import alerts and seized more parcels. Congress talked about safe importation in both parties and passed nothing. Personal importation is still tolerated, unofficially and uneasily.\n\nLilly gained from all of this. It makes its drugs in the United States, so the tariff did not touch it, and it kept the starting dose of its pill, Foundayo, at $149. That price became the way into a new market. After semaglutide was approved for smoking cessation in March 2029, telehealth companies began selling low-dose 'Quiet Mind' subscriptions to people without obesity: calm, focus, fewer cravings, less scrolling. About 1.2 million cash customers, mostly affluent, now take a GLP-1 drug for reasons they describe in terms of mood rather than weight. The FTC sent warning letters about the focus claims, and the prescriptions continued.\n\nIn August 2030 the FDA put a number on what the subscriptions sell. Incretin labels now list anhedonia and emotional blunting, in about seven to eleven percent of patients on maintenance doses against three percent on placebo, sometimes with reduced libido, and usually reversible within a few months of lowering the dose. Clinicians are told to ask about pleasure. The benefit programmes that most users go through do not ask. In January 2030 the three largest pharmacy-benefit managers made adherence-gated programmes their default. Members must refill on time and step on a verified scale, and those who opt out pay more. Seven in ten employers that cover these drugs now use such programmes. They count refills, not milligrams or moods. HR lawyers tell managers never to mention demeanour, and the dashboards still show fewer sick days. Indiana and Arkansas run the same rules for Medicaid. No other state has joined them, and Indiana's lawsuit is still on appeal. Medicare renewed its Bridge programme through 2031 and now pays $275 a month, with the same $50 copay.\n\nCulturally, being on the drug no longer marks anyone. Hosts ask 'are you on?' the way they once asked about allergies. In Dallas–Fort Worth offices the weigh-in kiosk is part of the lobby. In El Paso, generic semaglutide comes back from Juárez with the groceries. Being off now needs an explanation: a bone scan, a pregnancy, the shortage, a plan that cut you off. Since August there is a new one, said quietly: 'it was making me flat.' Dollar-store snack sales are falling in neighbourhoods that never had insurance for the drug. Exclusivity ends in 2031. In the meantime the country has settled into tolerating a large unregulated supply, while the employers and plans that pay for the drugs reward the effect the new label warns about.",
+    "a_day_in_the_life": "Marisol Ortega gets to the Walgreens on Mesa at 7:10 because the kiosk line is short before work. She steps on the scale, scans her plan card, and the screen turns green: quarterly weigh-in verified. Her Zepbound refill is waiting, $25 copay. She paid $40 for parking at the clinic last month just to get the dose lowered from 10 to 7.5. The program didn't mind, it only counts the boxes.\n\nAt the claims center she takes her fourth call of the morning from a man in Lubbock whose coverage ended after two missed refills. He asks if she can just turn it back on. She reads him the twelve-month script.\n\nAt lunch her sister Yesenia texts a photo of her receipt from a farmacia in Juárez: two pens of generic semaglutide, 1,100 pesos. Below it she's written: the real kind, not the TikTok vials. Since the news last fall their mother only buys from the pharmacist with the framed license.\n\nAfter work Marisol picks up her son Diego, fifteen, from cross-country. He's on semaglutide through her plan, and his pediatrician wants a bone study nobody has scheduled yet. He eats two tacos and stops.\n\nAt home her husband Ray opens a beer and drinks a third of it. Since starting the Mexican pens he says beer tastes like 'a memory of beer.'\n\nAt night she reads the new paper insert folded inside the box. Reduced pleasure. Decreased libido. Talk to your healthcare provider. She folds it back on its creases and puts it in the drawer with the others. Ray is already asleep. It's quiet, and she still hasn't decided whether that's a good thing."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L1-r16-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "gray/imported 24% (8.1M)",
+          "field": "world/access/note",
+          "why": "magnitude/mechanism: the gray channel grows about sixfold in two years (1.3M to 8.1M) and supplies almost all net user growth. The cause offered is a $100 Wegovy price rise plus a seven-month shortage, with nothing showing how mail-order and border supply scaled that fast, and no sign it slowed after the CDC deaths."
+        },
+        {
+          "quote": "Among covering employers, ≈70% now use adherence-gated PBM programmes, up from ~40%, because the three largest PBMs made gating their default design in Jan 2030.",
+          "field": "world/access/note",
+          "why": "mechanism: a jump from 40% to 70% of covering employers within under a year of a January 2030 default change is asserted. Plan-year renewal cycles and employer opt-outs would slow it, and the candidate shows no step-by-step rollout."
+        },
+        {
+          "quote": "Novo resubmitted in Mar 2030 with a six-month review, and a decision is due ~Q4 2030 but is not approved as of year-end.",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: a March 2030 resubmission with a six-month clock yields a September 2030 action date, not Q4. 'Due Q4' and 'not approved as of year-end' leaves an unexplained missed or ambiguous decision date."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 8M people take unmonitored imported or counterfeit product (9 deaths, tripled poison-centre calls). Roughly 70% of covering employers now gate coverage on adherence and weigh-ins, and the new anhedonia label (about 1.5–2.5M affected) sits against plans that reward uninterrupted fills. Stop-start cycling that the bone data link to fractures is rising, and about 365k teens use the drugs, some on parent-bought imports. The harm is named and labelled, so epistemic damage is moderate, but gray users are uncounted, and the burden falls on the bottom and middle thirds.",
+        "plausibility": "driver_fidelity: every driver is traceable. Shock-up is the 2029-01 price rise, gating is the Jan 2030 PBM default, mood and motivation is 'Quiet Mind', anhedonia is the Aug 2030 label, counterfeits is the Oct 2029 CDC report, no new launch and no new state action. mechanism: the chains mostly hold (tariff lapse, recall, imports, CDC report), but the 24% gray share (claim 1) and the 40%→70% gating jump in under a year (claim 2) are asserted more than shown. magnitude: adult use of 12.7% and ever-use of 20.5% sit inside the envelope. Payer shares, the Bridge ($5.6B) and Medicaid ($8.9B) spend, and the age and income weighting all reconcile. The only gap is the amycretin decision timing (claim 3), plus a small oddity that all 65+ users equal Medicare enrollees.",
+        "generativity": "The day-in-the-life scene is specific and shows rather than explains: the kiosk weigh-in, the lowered dose the plan doesn't notice, the Lubbock caller, the Juárez receipt, Ray's 'memory of beer' and the folded insert. The world fields add texture (El Paso, Dallas–Fort Worth lobbies, quinceañeras, drug-holiday albums), and each implies a scene."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s2-L1-r16-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Compounding stayed closed even during the shortage, because the 2027 503B exclusion and the 503A injunction do not depend on shortage status.",
+          "field": "world/access/note",
+          "why": "mechanism: US compounding rules are tied to the FDA shortage list, so a seven-month Wegovy shortage would plausibly reopen compounding. The candidate asserts this away to force users toward imports without showing why."
+        },
+        {
+          "quote": "The cheap import channel (≈8.1M users, up from 1.3M) pulled in bottom- and middle-third adults and took in people dropped by adherence-gated plans.",
+          "field": "world/population/note",
+          "why": "mechanism/magnitude: a sixfold rise to 24% of users in two years supplies about 6.8M of the 7.7M net increase in current users. Only a seven-month shortage and a generic-flood label are offered as cause, and the 2029 deaths and import alerts are not shown to have dampened it."
+        },
+        {
+          "quote": "Pooled placebo-controlled data using a prospective pleasure scale (SHAPS) plus clinician rating, together with retatrutide's postmarketing study",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "mechanism: semaglutide and tirzepatide trials were not run with SHAPS, and FDA only requested the retatrutide scale in 2028. A 52-week placebo-controlled class-wide dataset by Aug 2030 is convenient. The 1.5–2.5M figure also applies study rates to ~34M users, 8.1M of whom are unmeasured gray-channel users."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 8M people use unmonitored imported or counterfeit product (9 deaths, tripled poison-centre calls). Gated PBM programmes now cover ~70% of covering employers, and the Indiana and Arkansas waivers persist, so people are conditioned into continuous use that the bone label warns against. Roughly 1.5–2.5M have drug-attributable anhedonia, and ~365k teens are on the drug, some on parent-bought imported pens outside bone-accrual monitoring. The label naming the harm and the narrowed top/bottom ratio keep epistemic and inequality scores moderate rather than extreme.",
+        "plausibility": "driver_fidelity: all ten drivers are visibly realised: adoption +2.8, shock_up via the $349→$449 and $245→$275 rises, PBM gating, the Aug 2030 anhedonia label, no new class, counterfeits, normalisation, no new state action, and employer encouragement. The price 'shock' is modest (~12–28%), and 'mood and motivation' appears mainly as off-label telehealth plus the cessation approval. mechanism: the shortage-to-imports chain is shown, but compounding staying closed despite the shortage (claim 1), the sixfold gray-market jump (claim 2) and the convenient pooled anhedonia dataset (claim 3) are asserted more than demonstrated. magnitude: current 12.7 and ever-used 20.5 are inside the envelope, and the cycling arithmetic, payer-mix shares, Bridge $5.6B and Medicaid $8.9B all multiply out. Approvals (cessation sNDA, amycretin CRL, MariTide filed Dec 2029) respect the timing rules. Minor gaps: Medicare's 5.7M equals essentially every 65+ user, and the implied prior Zepbound prices exceed the 2028 $350 ceiling.",
+        "generativity": "The prose follows a named family through kiosk weigh-ins, a claims-centre call, a Juárez pharmacy receipt, a teen on semaglutide and a husband whose beer 'tastes like a memory of beer'. The world fields add concrete scenes: El Paso border runs, DFW lobby kiosks, a label-insert comedy special, and quinceañeras with smaller portions. Daily life is shown rather than explained."
+      },
+      "plausibility": 7.45
+    },
+    {
+      "custom_id": "s2-L1-r16-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The cheap import channel (≈8.1M users, up from 1.3M) pulled in bottom- and middle-third adults and took in people dropped by adherence-gated plans.",
+          "field": "world/population/note",
+          "why": "Mechanism: the gray channel grows about 6× in two years, to a quarter of all users. The shown chain is a seven-month Wegovy shortage, a price rise and gating dropouts, which is thin for that jump. Tirzepatide stayed available and cheaper cash options existed."
+        },
+        {
+          "quote": "He asks if she can just turn it back on. She reads him the twelve-month script.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: a Lubbock, Texas caller facing the twelve-month lockout contradicts the world state. That lockout belongs to the Indiana and Arkansas Medicaid waivers, and the world says \"No other state has joined them\". Private PBM gating is not described as having a lockout."
+        },
+        {
+          "quote": "Drug-attributable excess of ~4–8 pts across ~34M users implies roughly 1.5–2.5M affected people.",
+          "field": "world/safety_ledger/reward blunting",
+          "why": "Magnitude: the placebo-controlled rates are measured in trial populations, yet the excess is applied to all 34M users, including 8M gray-channel users the same note says no study counts. The excess runs 3.7–8.3 pts, so the low end gives about 1.4M, and the upper end leans on retatrutide, which is supply-allocated."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Worse than 2028 in recognisable, shown ways. PBM gating becomes the default at about 70% of covering employers. About 8M users are unmonitored on counterfeit or imported product, with nine deaths and tripled poison-centre calls. Involuntary stop-start cycling feeds the bone findings, and teens on parent-bought imported pens sit outside any bone monitoring. Anhedonia is now named and measured, which eases the epistemic score, but employers still reward its correlates and telehealth firms sell it as 'quiet mind'. The harm is structural and normalised without being catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Prices rise in Jan 2029, PBM gating becomes default in Jan 2030, 'Quiet Mind' follows the cessation approval, the anhedonia label lands in Aug 2030, counterfeits and the CDC report are shown, and next_gen_launch 'none' and state_action 'none' are respected. mechanism: most chains are shown, but the 8.1M gray-channel jump (claim 1), the fast 40%→70% employer gating shift, and the Lubbock twelve-month lockout (claim 2) are asserted or contradict the world state. magnitude: the figures reconcile: 12.7% is exactly 9.9+2.8, ever-use of 20.5% is within the cap, payer shares sum to 100%, and Bridge ($5.6B) and Medicaid ($8.9B) spend multiply out. Age and income weights check, and amycretin and MariTide are not approved, so only the loose anhedonia headcount (claim 3) is a minor flaw.",
+        "generativity": "The Marisol day is rich: the kiosk at 7:10, the claims-center call, the Juárez receipt, Diego's missing bone study, and Ray's 'memory of beer'. The world fields add texture too, including El Paso quinceañeras, 'are you on?' hosting etiquette, drug-holiday albums and the weigh-in kiosk in the Dallas–Fort Worth lobby. Many scenes are implied, though the Lubbock call clashes with the world state."
+      },
+      "plausibility": 8.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "gray/imported 24% (8.1M)",
+        "field": "world/access/note",
+        "why": "magnitude/mechanism: the gray channel grows about sixfold in two years (1.3M to 8.1M) and supplies almost all net user growth. The cause offered is a $100 Wegovy price rise plus a seven-month shortage, with nothing showing how mail-order and border supply scaled that fast, and no sign it slowed after the CDC deaths."
+      },
+      {
+        "quote": "Among covering employers, ≈70% now use adherence-gated PBM programmes, up from ~40%, because the three largest PBMs made gating their default design in Jan 2030.",
+        "field": "world/access/note",
+        "why": "mechanism: a jump from 40% to 70% of covering employers within under a year of a January 2030 default change is asserted. Plan-year renewal cycles and employer opt-outs would slow it, and the candidate shows no step-by-step rollout."
+      },
+      {
+        "quote": "Novo resubmitted in Mar 2030 with a six-month review, and a decision is due ~Q4 2030 but is not approved as of year-end.",
+        "field": "world/drugs/pipeline_note",
+        "why": "magnitude: a March 2030 resubmission with a six-month clock yields a September 2030 action date, not Q4. 'Due Q4' and 'not approved as of year-end' leaves an unexplained missed or ambiguous decision date."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.0,
+      "inequality": 6.33,
+      "public_health": 6.67,
+      "cohesion": 5.5,
+      "epistemic": 5.0,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.83,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.83,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 8M people take unmonitored imported or counterfeit product (9 deaths, tripled poison-centre calls). Roughly 70% of covering employers now gate coverage on adherence and weigh-ins, and the new anhedonia label (about 1.5–2.5M affected) sits against plans that reward uninterrupted fills. Stop-start cycling that the bone data link to fractures is rising, and about 365k teens use the drugs, some on parent-bought imports. The harm is named and labelled, so epistemic damage is moderate, but gray users are uncounted, and the burden falls on the bottom and middle thirds.",
+      "plausibility": "driver_fidelity: every driver is traceable. Shock-up is the 2029-01 price rise, gating is the Jan 2030 PBM default, mood and motivation is 'Quiet Mind', anhedonia is the Aug 2030 label, counterfeits is the Oct 2029 CDC report, no new launch and no new state action. mechanism: the chains mostly hold (tariff lapse, recall, imports, CDC report), but the 24% gray share (claim 1) and the 40%→70% gating jump in under a year (claim 2) are asserted more than shown. magnitude: adult use of 12.7% and ever-use of 20.5% sit inside the envelope. Payer shares, the Bridge ($5.6B) and Medicaid ($8.9B) spend, and the age and income weighting all reconcile. The only gap is the amycretin decision timing (claim 3), plus a small oddity that all 65+ users equal Medicare enrollees.",
+      "generativity": "The day-in-the-life scene is specific and shows rather than explains: the kiosk weigh-in, the lowered dose the plan doesn't notice, the Lubbock caller, the Juárez receipt, Ray's 'memory of beer' and the folded insert. The world fields add texture (El Paso, Dallas–Fort Worth lobbies, quinceañeras, drug-holiday albums), and each implies a scene."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.4256,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 9
+  }
+}

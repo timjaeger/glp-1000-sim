@@ -1,0 +1,532 @@
+{
+  "run_id": "s4-L2-r24",
+  "step": 4,
+  "year": 2034,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 24,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 7.9,
+    "price_path": "stalled",
+    "coverage_shift": "status_quo",
+    "new_indications": [],
+    "safety_signal": "none",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "none",
+    "cultural_response": "normalisation",
+    "state_action": "subsidy",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T17:29:43Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015ciC7E9nYxhB2DQvrSsPqs",
+        "custom_id": "s4-L2-r24",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18405,
+        "output_tokens": 23371
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r24-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27534,
+        "output_tokens": 6694
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r24-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27534,
+        "output_tokens": 4527
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r24-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27534,
+        "output_tokens": 5319
+      }
+    ]
+  },
+  "world": {
+    "year": 2034,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived. Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk (obesity plus established CVD) codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 27.5,
+      "us_adults_ever_used_pct": 37,
+      "by_income_third_pct": {
+        "top": 34,
+        "middle": 28,
+        "bottom": 21
+      },
+      "by_age_band_pct": {
+        "18_29": 17,
+        "30_49": 28,
+        "50_64": 38,
+        "65_plus": 25
+      },
+      "pediatric_under_18_on_drug_pct": 1.4,
+      "cycled_off_and_on_pct": 44,
+      "note": "FICTIONAL. Cycling arithmetic: 37.0% ever-used minus 27.5% current leaves 9.5% of adults who used the drugs and are off now. About 50% of current users are on a second or later course (13.75 points). The share is down from 55% because ~22M first-time starters diluted it. Another 2.6 points cycled and are off again, so (13.75 + 2.6) / 37.0 ≈ 44% of ever-users have cycled. The other ~6.9 points stopped once and have not restarted. One-year persistence is still near one-third on weekly and oral products and ~60% on clinic-administered MariTide. Age check: 0.20×17 + 0.33×28 + 0.24×38 + 0.23×25 = 3.4 + 9.24 + 9.12 + 5.75 ≈ 27.5. Income thirds average ~27.7, bracketing the national figure. Users: 27.5% of ~274M adults ≈ 75.4M. FICTIONAL payer mix: commercial ~14.6M (employer coverage share unchanged at 30%, with tracks growing inside covered firms), Medicare ~13.4M (aging-in plus CVD/CKD/OSA code growth), Medicaid ~3.6M, HRSA Community Metabolic Health Program ~3.6M, legitimate cash ~33.2M (TrumpRx/direct/telehealth, including ~4.6M calm/focus subscribers, ~2.9M of them employer-sponsored through EAP or lifestyle-spending stipends), imported or counterfeit ~7.0M (down from ~7.5M). Sum: 14.6 + 13.4 + 3.6 + 3.6 + 33.2 + 7.0 = 75.4M. The bottom third's gain (14 → 21) is ~4 points from CMHP (≈3.6M of ~91M bottom-third adults) and ~3 points from cash orals. Adult obesity is ~32.0%. About 17% of adults have obesity and have never used a drug, concentrated among the uninsured rural South outside FQHC reach, CMHP waitlists (~1.8M) and 65+ without qualifying codes. Pediatric: ~1.4% of under-18s are on a drug. Among 12–17s the rate rose from ~2.6% to ~3.3%, driven by normalisation and parental use. Among 6–11s it fell from ~0.25% to ~0.2% after the 2032 growth communication. About 5.0M children live with a parent who has regained after stopping, and ~46% of households include a user."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~13.4M users only through diabetes, CV, CKD, OSA and dementia-risk (obesity plus established CVD) codes, behind prior authorisation. Average net is flat because prices stalled. FICTIONAL arithmetic: 13.4M × ~$235 × 12 ≈ $37.8B a year in gross Part D incretin spend, up from $31.6B. The dementia route is ~2.4M × $245 × 12 ≈ $7.1B. Medicaid: the same 7 states cover weight-loss use, and ~3.6M users are mostly on diabetes codes. New in this step is the HRSA Community Metabolic Health Program (CMHP). It is a capped discretionary grant, not an entitlement. It buys Wegovy pill and Foundayo at TrumpRx prices for adults at or under 200% FPL who are uninsured or whose plan excludes weight management, with BMI ≥30 (or ≥27 with a comorbidity), dispensed through FQHCs and voucher pharmacies from Jan 2034. Arithmetic: 3.6M enrolled × ~$165 blended ($149 starts / $199 maintenance) × 12 ≈ $7.1B annualised run-rate, against $6.0B federal FY2034 appropriation plus ~$1.1B in state matches from 14 states. FY2035 is on a flat continuing resolution, so ~1.8M sit on waitlists.",
+      "employer_coverage_pct": 30,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide sells for $4–30 a month across 120+ brands. Chinese tirzepatide-analogue vials sell for $20–60 in markets without enforceable patents. Canadian and Brazilian generics run CAD 50–85 and BRL 180–300. India and China supply roughly two-thirds of world incretin volume. Indian makers filed WTO-adjacent complaints that CMHP purchases only US-approved branded product.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Prices stalled. TrumpRx prices are unchanged from 2032 (Wegovy pill $149 start / $199 maintenance, Foundayo $149–229, injectable Wegovy/Zepbound $249–299, MariTide $249 direct), and Novo and Lilly said in 2033 they would hold them through 2034. Patent settlements put US semaglutide generic entry no earlier than 2036, and retatrutide HD demand outran fill-finish capacity. Retatrutide HD (approved Dec 2033) lists at $1,299, ~$449 cash direct, with new starts metered by Lilly. Employer coverage for weight management is still 30%, and ~12% more cover through monitored tracks, now ~7.0M enrollees inside the 14.6M commercial users, ~4.4M of them on clinic MariTide (total MariTide ~5.8M). Most of the change in who pays sits outside insurance: ~2.9M workers get calm/focus plans or taxable lifestyle-spending stipends that pay TrumpRx fills. These count as cash, not coverage. Orals are ~49% of users. The gray market (~7.0M) shrank slightly where CMHP clinics opened, mainly Memphis, Jackson and Birmingham, but persists in places with waitlists and among users who want injectables that CMHP does not buy."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. high-dose maintenance strengths 'retatrutide HD', approved Dec 2033)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; growth-monitoring label language from Apr 2032)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; confirmatory trial read out Nov 2034, resubmission for non-CVD adults planned 2035)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm' and 'focus' low-dose plans (oral semaglutide or Foundayo), ~4.6M subscribers, ~2.9M employer-sponsored",
+        "alcohol reduction via telehealth and EAPs, continuing after the Nov 2033 AUD Complete Response Letter",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid",
+        "'steadiness' microdosing recommended by employer wellness coaches and now funded through EAP vendors",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "semaglutide in under-12s with severe obesity (off-label, still declining)"
+      ],
+      "pipeline_note": "FICTIONAL. The triple_agonist_30pct driver is realised as an existing product in a new form. Lilly filed an sNDA in Nov 2032 for high-dose retatrutide maintenance strengths, based on TRIUMPH-HD (~29.8% mean loss at 80 weeks vs ~24% on standard doses). The FDA approved it in Dec 2033, more than 12 months after filing, for chronic weight management, the same indication. The label adds DXA baseline recommendations for adults 65+ and expands the resistance-training counselling statement. Launch was Feb 2034, and new starts have been metered all year. ~1.9M people are on HD and ~3.4M on retatrutide in total. new_indications stays 'none'. Oral semaglutide for alcohol use disorder received a CRL in Nov 2033: the FDA asked for 18-month durability and a dedicated trial in hepatic impairment. The bimagrumab-type lean-mass adjunct (filed Jul 2032) received a CRL in Oct 2033 because DXA lean mass alone was judged insufficient and the FDA wants strength, falls or function endpoints. The tirzepatide dementia confirmatory trial read out in Nov 2034, meeting its primary endpoint with a modest effect, and resubmission for 60+ without CVD is expected in 2035. Implant programmes remain in phase 1–2. No oral matches tirzepatide. Patent settlements with five ANDA filers set US semaglutide generic entry no earlier than 2036. Global incretin market ~$205B (2033)."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation outside clinic tracks. Retatrutide HD titration has higher GI discontinuation in its first 16 weeks, consistent with the dose-response already known. Chronic diarrhoea is routinely worked up for EPI.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss, consistent with greater loss on HD; no change in the per-kilogram relationship.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation of acute pancreatitis; absolute risk low. The EPI MDL is in discovery.",
+        "regulatory_response": "Labelled; MDL ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare cohort hip-fracture HR holds at ~1.3 in users 65+ after more than 2 years and ~1.45 after three or more cycles. Lean-mass loss on HD is proportionally similar (~35–40% of weight lost) but larger in absolute terms. HD has no fracture data yet.",
+        "regulatory_response": "Class warning retained; DXA baseline language for 65+ on retatrutide HD; the lean-mass adjunct got a CRL."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal in adults; the pediatric psychiatric signal concerns restrictive eating.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: The FDA postmarketing observational study (Aug 2033) found clinically meaningful anhedonia at ~7% of users vs ~3% of matched controls, ~10% on retatrutide standard doses, and a dose gradient, matching earlier cohorts. It excluded off-label low-dose users because prescribing indications could not be verified, so the rate among calm-plan subscribers is still unknown. HD trials used only generic depression screens.",
+        "regulatory_response": "FDA declined labelling, citing residual confounding, and asked for a randomised substudy. No enforcement on calm marketing beyond the 2031 untitled letters."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Regain after HD is larger in absolute kilograms. CMHP waitlist churn and gray-market bad batches remain the fastest routes to regain.",
+        "regulatory_response": "None directly; it underpins the chronic-therapy framing, adherence monitoring and the life-insurer underwriting question."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency in low-intake users, more frequent at HD intakes. Low ferritin in adolescent girls persists.",
+        "regulatory_response": "Annual micronutrient panel language on semaglutide, tirzepatide and retatrutide labels."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after more than 5 years of continuous semaglutide (~4 vs ~2 per 1,000 person-years). Tirzepatide's excess is still small and non-significant at 6 years.",
+        "regulatory_response": "Semaglutide class labelling retained; tirzepatide under continued review."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About twelve years of semaglutide follow-up now exist, with no new class signal in this window. Cycling effects on bone and pancreas are still poorly characterised.",
+        "regulatory_response": "Pediatric bone and growth postmarketing requirements continue; next interim growth analysis due 2035."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Adverse-event reports tied to non-approved product passed ~31,000 by late 2034, a rate that is flattening. No new mass-contamination cluster since 2031. Poison-centre calls are still ~5× 2025 levels, and ~4× in counties with CMHP clinics.",
+        "regulatory_response": "Import alerts retained; CBP seizures roughly flat; no new statute. CMHP framed in Congress partly as counterfeit displacement."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The 2032 findings stand (height velocity ~0.7 cm/year below expected in prepubertal starters; ARFID HR ~1.8 in early-adolescent starters). No new analysis in this window, and final adult height is still unknown.",
+        "regulatory_response": "Feb 2032 Drug Safety Communication and Apr 2032 label update stand; EMA review concluded in 2033 with matching monitoring language and no age restriction."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 46% of households now have a user. Snack and confectionery volumes are down ~13–15% from 2025 and sugary drinks ~12%. Dollar sales are slightly down for the first time, because the premium-mix trick runs out once the middle third is also medicated. Kroger's zip-code planning has moved its 'GLP-1 friendly' bays from upper-income suburbs into most stores. Value packs now concentrate in areas with CMHP waitlists. Single-serve and 'half-portion' SKUs are the fastest-growing format. Pea protein is still tight.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~16% from 2025 and beer ~11%. Employer-sponsored calm plans that bundle alcohol reduction reached heavy drinkers in salaried jobs. On-premise closures spread from Midwestern mid-sized cities into Sun Belt suburbs. Constellation and Molson Coors cut brewery capacity. Non-alcoholic and functional drinks grow but remain under ~4% of the category.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is down ~2–3% from 2032. Average checks are smaller everywhere. Darden's portion tiers are now the industry default, and 'small plate as entrée' is standard on chain menus. QSR value menus still do well in regain-heavy markets and near CMHP waitlist zip codes. Buffets are a niche category.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep closing stores. Mass retailers' zip-code size runs now skew smaller in most suburbs. Tailoring and resale serve people shrinking fast on retatrutide HD, a 30% loss that runs through three sizes in a year. Rental and stretch lines serve cyclers.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training keeps growing, helped by the HD label's resistance-training language and the 65+ DXA recommendation. Medicare Advantage plans market strength classes as fracture prevention. Budget chains' $39 lean-mass add-on is their best-selling upsell. Employer tracks bundle InBody scans with clinic MariTide visits. Premium DXA-plus-coaching memberships are flat at $250–400.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "The employer weight-loss coverage share is still 30%, and PBMs still prefer MariTide in tracks. Pharmacy trend is ~+7% as retatrutide HD enters formularies behind prior authorisation at a stalled price. Adherence differentials up to the 30% guidance cap are now common at self-insured firms over 1,000 staff. Lifestyle-spending stipends let employers fund cash fills without counting them as coverage. Part D premiums rose again in 2033 and 2034. Life insurers added incretin questions to underwriting.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly regained the lead on retatrutide HD but is capacity-bound and meters new starts. Novo's orals are the volume base of CMHP. Amgen grows on employer tracks. Stalled prices plus volume growth mean US incretin revenue grew ~20% across 2033–34. Patent settlements protect semaglutide until 2036. Indian and Chinese makers dominate global volume and lobby against CMHP's branded-only purchasing.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug no longer signals anything; being visibly heavy does. In most offices a body above BMI 30 reads as 'can't get it', 'won't take it' or 'between courses', and coworkers assume the first. Within the medicated majority the old signs remain: muscle for covered and coached, soft-thin for clinic tracks, and the gaunt 30% HD body that people describe as having had surgery without surgery.",
+      "thinness_and_class": "Muscle remains the class uniform in Charlotte and Austin, and 'off-drug lean' is still the elite boast, rarer now and more suspect. Along the Columbus freight corridor the track body is standard issue. Memphis is the clearest case of normalisation by subsidy. Christ Community and other FQHC sites enrolled tens of thousands of adults in CMHP in 2034, and the gray-market cycler body is giving way to the slow-loss oral body. The waitlist body, people regaining while they wait, is now the one people talk about. Bethesda and Plano parents still keep prepubertal children off, but teenage use there rose quietly.",
+      "eating_as_ritual": "Shared meals are shorter and smaller everywhere, not just in the upper tier. Hosts now ask 'are you eating tonight?' as routinely as they ask about allergies. Protein remains the hospitality marker. Bread Alone claims ~800 congregations and has lost its countercultural edge as fasting merges into ordinary medicated eating. Thanksgiving portion sizes are a recurring morning-show segment.",
+      "dating_and_intimacy": "Apps dropped the 'on a calm plan' tag because nearly everyone had it, and some added an 'off' tag that users fill with explanations. The 'lean-mass verified' premium tier persists. Couples still schedule around the monthly shot, and HD couples report a new strain: one partner's body changes by a third in a year while the other's does not.",
+      "meaning_of_appetite": "For the medicated majority, appetite is a symptom that is managed. Off-drug appetite is something to explain, and that is the core of normalisation. In lower-income communities with CMHP waitlists, appetite still signals lost access. Unmuted has reframed itself around 'the right to be off', MAHA keeps attacking pediatric use but split over CMHP, and fat-acceptance revivalists remain small and isolated.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL: Per the Aug 2033 FDA observational study, clinically meaningful anhedonia affects ~7% of users vs ~3% of controls and ~10% on standard-dose retatrutide. HD users and the ~4.6M calm-plan subscribers, ~2.9M of them employer-sponsored, were not measured. Most users still report mild 'evenness'.",
+      "framing": "Employers and EAP vendors call it 'steadiness support' and put it in benefits guides next to sleep coaching. Telehealth calls it 'calm you can schedule'. Manufacturers still say only 'food noise'. Clinicians call it a dose-related side effect. Unmuted calls it a workplace sedative paid for with a stipend.",
+      "effect_on_work": "After the EEOC's Oct 2033 no-cause findings, large employers treated voluntary calm and metabolic participation as lawful wellness. ~2.9M workers now have employer-sponsored calm plans and ~7.0M are in adherence-verified tracks. National call-centre operators and two top-five logistics firms cite internal data linking enrolled staff to fewer escalations and lower absenteeism. Shift-lead and team-lead promotions there track enrolment closely enough that unenrolled workers talk about it as a requirement. Salaried firms do not monitor anyone. They fund the subscriptions, and 'focus protocol' appears in performance self-reviews.",
+      "effect_on_art_and_play": "'Off' memoir is now a bestseller category, and the protagonist is usually someone who quit a corporate calm plan. Unmuted off nights run in eight cities. Sportsbook handle per account fell again, and operators shifted marketing to unmedicated demographics. Ambient streaming formats grew, and live comedy promoters complain that audiences laugh less loudly.",
+      "effect_on_intimacy": "Desire mismatch is still the leading complaint at couples' practices. Therapists now see employer-sponsored mismatch, where one partner's job effectively requires a calm plan and the other's does not. Some couples schedule 'off weekends' around oral doses, against prescribing advice.",
+      "effect_on_politics": "CMHP passed as a bipartisan counterfeit-displacement and Southern-health measure. MAHA legislators opposed it and lost, and its renewal is now a budget fight. No state copied Illinois's adherence-premium ban. Labour unions at two logistics firms filed grievances over promotion criteria tied to enrolment. 'Sedated electorate' claims still lack turnout evidence. Voters are increasingly sorted by zip code into medicated majorities and waitlisted minorities.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "Routine and permissive. The FDA approved retatrutide HD, issued CRLs on oral semaglutide for AUD and on the lean-mass adjunct, published the anhedonia observational study without labelling, and took no new action on calm marketing. The EEOC issued no-cause findings on the ADA charges. No state legislature acted on premiums.",
+      "subsidy_or_mandate": "New: the HRSA Community Metabolic Health Program, created in the Sep 2033 health extenders package. It is a capped grant ($6.0B federal for FY2034, a flat CR for FY2035, plus ~$1.1B in state matches) that buys Wegovy pill and Foundayo at TrumpRx prices for low-income adults whose coverage excludes weight management. It is not an entitlement, it does not touch Medicare or Medicaid benefit design, and it is ~3.6M enrolled with ~1.8M waitlisted. No mandate. The 2027 tri-agency guidance stands.",
+      "conditioning_or_surveillance": "CMHP requires a quarterly visit and refill-app check-ins. HRSA bars sharing with employers, but the two Medicaid programmes that condition coverage on adherence and BMI progress have added the same conditions to their state CMHP match. Clinic MariTide records and employer-sponsored calm-plan mood check-ins flow to wellness vendors under consent, and de-identified 'focus cohorts' are sold to benefit brokers.",
+      "workforce_or_military": "FMCSA's 2033 medical examiner guidance treats approved incretins, including low-dose off-label use, as non-disqualifying for commercial drivers in the absence of side effects. The Army recruit oral pilot expanded to two more training centres. TRICARE rules are unchanged.",
+      "geopolitics_of_supply": "India and China still supply about two-thirds of world volume. US–India talks still list CBP mail enforcement without agreement, and India now also objects to CMHP's branded-only purchasing. Lilly's and Novo's US fill-finish expansions are the binding constraint on retatrutide HD and a stated reason for price holds. The cash-to-Indian-generic gap is still ~40–50×.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2032-11",
+        "event": "Lilly files a supplemental application for high-dose retatrutide maintenance strengths after the TRIUMPH-HD trial shows ~30% average weight loss at 80 weeks",
+        "driver": "next_gen_launch: triple_agonist_30pct"
+      },
+      {
+        "date": "2033-04",
+        "event": "Novo Nordisk settles semaglutide formulation patent suits with five generic filers, setting US entry no earlier than 2036; days later Novo and Lilly say TrumpRx prices will hold through 2034, citing capacity",
+        "driver": "price_path: stalled"
+      },
+      {
+        "date": "2033-09",
+        "event": "Health extenders package creates a $6 billion HRSA Community Metabolic Health Program to buy oral Wegovy and Foundayo at TrumpRx prices for low-income adults through community health centres, pitched as displacing counterfeit vials; dispensing begins in January",
+        "driver": "state_action: subsidy (coverage_shift: status_quo, a capped grant rather than new coverage)"
+      },
+      {
+        "date": "2033-10",
+        "event": "EEOC issues no-cause findings on two ADA charges over incretin-linked wellness incentives; by mid-2034 major call-centre and logistics employers add employer-paid calm plans to their EAPs",
+        "driver": "personality_layer: employer_encouraged"
+      },
+      {
+        "date": "2033-12",
+        "event": "FDA approves retatrutide high-dose strengths with DXA and resistance-training language; Lilly launches in February at $449 a month cash and limits new starts all year as demand outruns fill-finish",
+        "driver": "next_gen_launch: triple_agonist_30pct; price_path: stalled"
+      },
+      {
+        "date": "2034-03",
+        "event": "The three largest US life insurers add an underwriting question asking applicants with BMI 30 or more who are not on incretin therapy to state why",
+        "driver": "cultural_response: normalisation"
+      }
+    ],
+    "open_tensions": [
+      "CMHP holds 3.6M low-income users on a capped, flat-funded grant that buys at stalled cash prices, with 1.8M waitlisted. If the FY2035 or FY2036 appropriation slips, the country's largest single cohort of new users stops at once and regains.",
+      "Employers now pay for calm. 2.9M workers have employer-sponsored calm plans and promotions in call centres and logistics track enrolment, yet no one has measured anhedonia at those low doses, and the FDA's own study excluded them.",
+      "Retatrutide HD delivers surgical-grade loss from a pen to an aging population whose fracture HR is already ~1.3–1.45, while the lean-mass adjunct was refused and the dementia resubmission due in 2035 will push more 60-year-olds toward the most potent drugs.",
+      "Teen use rose to ~3.3% as being off became the thing to explain, while the 2032 growth findings remain unresolved and final adult height is unknown until the 2035 interim analysis and beyond."
+    ]
+  },
+  "prose": {
+    "headline": "Off Is the New Overweight: 75 Million Americans on It, Washington Buying Pills, and the Boss Paying for Your Calm",
+    "world_in_600_words": "At the end of 2034 a little over one American adult in four takes an incretin drug, about seventy-five million people, and more than a third have tried one. That is the fastest two-year rise since the drugs began, and it came with almost no change in who covers them. Employers covering weight loss are still at thirty percent. Medicare still pays only through heart, kidney, sleep-apnoea, diabetes and dementia-risk codes. The growth came through the cash channel and through a new federal programme that is careful to call itself a grant.\n\nPrices stopped falling. In 2033 Novo Nordisk settled its patent suits with five generic makers, and none of them will sell semaglutide in the United States before 2036. Within days Novo and Lilly said their cash prices would hold through 2034. A Wegovy starter pill still costs $149 a month and a maintenance pill $199. The injectables are $249 to $299, and the list price printed on the box is still $1,349. Demand did the rest. In December 2033 the FDA approved high-dose strengths of Lilly's retatrutide, which take off about thirty percent of body weight on average, roughly what bariatric surgery used to promise. Lilly launched it at $449 a month and has limited new starts ever since because its filling lines cannot keep up.\n\nCongress did act, once. After the contaminated vials of 2031, a coalition of Southern Republicans and urban Democrats created the Community Metabolic Health Program to undercut the counterfeit trade. Community health centres now hand out oral semaglutide and orforglipron free to low-income adults whose insurance excludes weight loss. The government buys at the same cash price anyone else pays. Health economists note that Washington did not negotiate. About 3.6 million people are enrolled, another 1.8 million are waiting, and next year's funding is flat. In Memphis the cycler's face from the mail-order years is giving way to the slower oral body. The person people talk about now is the one who has been on the waitlist since spring.\n\nThe drug has become ordinary, and being off it now needs a reason. Hosts ask whether guests are eating tonight. Dating apps dropped the 'calm plan' tag because nearly everyone had one, and added an 'off' tag that people fill with explanations. In March the largest life insurers began asking applicants with obesity who are not on treatment to say why. A heavy body at the office reads as someone who cannot get the drug, will not take it or is between courses, and people mostly assume cannot.\n\nThe drugs' effect on feeling has moved from something people buy for themselves to a workplace benefit. In October 2033 the EEOC found no cause in the two disability complaints over incretin-linked wellness incentives. Within months the big call-centre operators and two of the largest logistics firms were paying for calm plans through their employee assistance programmes, and about 2.9 million workers now have one. Internal reports link enrolled workers to fewer escalated calls and fewer sick days. Promotions to team lead follow enrolment closely enough that unenrolled workers describe it as a requirement, though no policy says so. The FDA's own study, published in 2033, found real anhedonia in about seven users in a hundred against three in the general population. It left out low-dose users because their prescriptions could not be verified, so no one knows what the employer-paid plans do.\n\nThe children's growth question is where 2032 left it. Teenage use rose anyway, to about one in thirty. Shops sell more half-portions, bars close in the Sun Belt suburbs, and strength gyms advertise fracture prevention to Medicare Advantage members. From a distance the country looks calmer and smaller. Most of it is on the drug, and whoever is not has to explain why.",
+    "a_day_in_the_life": "Denise Harmon's alarm goes off at 5:40, and she takes the pill with four ounces of water and waits thirty minutes, the way the clinic nurse showed her. It's the 25-milligram tablet, a white blister pack with the HRSA sticker on it. She picks it up free every month at the Christ Community site on Third Street, two buses from the claims centre in Southaven where she leads a team of eleven.\n\nIn the hall closet there's a shoebox of vials from the Telegram shop she used for two years. She hasn't thrown it out.\n\nAt work the floor dashboard shows escalations by agent. Marcus, her newest, is red again. At lunch he eats a full plate of wings from the truck outside, and two of the older women watch him eat it. Denise reminds him the company Steady plan is in the benefits portal, $0 to him, and he says he's thinking about it. She tells him the shift-lead posting comes up in March.\n\nHer sister texts a photo from the clinic waiting room: number 212 on the list since May. Denise sends back a heart and doesn't mention the shoebox.\n\nAt home her daughter Kayla, fifteen, is doing algebra at the counter and asks again. Half her class is on it, she says. Denise says they'll ask the doctor at the January visit and that the doctor will want to measure her.\n\nDinner is a chicken thigh and half a sweet potato. Kayla eats the other half.\n\nAt nine Denise opens the refill app and taps the green check. It asks her how her mood was today, on a scale of one to five. She taps three."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r24-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "~1.9M people are on HD and ~3.4M on retatrutide in total.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: 1.9M people on a $449 cash product within about ten months of a February 2034 launch, while Lilly is capacity-bound and meters new starts 'all year', is hard to square. It would mean over half of all retatrutide users moved to HD almost at once."
+        },
+        {
+          "quote": "Lilly's and Novo's US fill-finish expansions are the binding constraint on retatrutide HD and a stated reason for price holds.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: a capacity limit on one injectable does not explain holding prices on oral Wegovy and Foundayo, which are the volume base of CMHP. A firm short of capacity might also be expected to raise prices rather than freeze them. The stalled-price driver is asserted rather than caused."
+        },
+        {
+          "quote": "Stalled prices plus volume growth mean US incretin revenue grew ~20% across 2033–34.",
+          "field": "world/economy/pharma/state",
+          "why": "Magnitude: current users rose about 41% (53.3M to 75.4M) at flat prices, and Medicare spend alone rose about 20% on 20% more users. A total revenue gain of only ~20% is not reconciled, because the shift to cheap oral and CMHP volume is not quantified."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Mass normalisation ('being off needs a reason'), employer-linked calm plans tied to promotions, and unmeasured anhedonia at low doses (2.9M workers, excluded from the FDA study) drive autonomy and epistemic harms. Teen use is rising while the growth findings stay unresolved, and 1.8M people are waitlisted on a flat-funded grant. Offsetting gains are CMHP access for the bottom third, a slightly smaller gray market (7.5M to 7.0M), no new contamination cluster, and lower adult obesity (33.4% to 32.0%). The result is a harder but not collapsing society, so around 5.5.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 27.5% (19.6 + 7.9), prices are stalled, employer coverage stays at 30%, and no new indications or safety signal appear. The triple agonist arrives as an HD sNDA filed Nov 2032 and approved Dec 2033, which is more than 12 months after filing and so allowed. CMHP is the subsidy, and EEOC no-cause findings plus employer EAP funding give the employer-encouraged personality layer. mechanism: Most chains are shown, including counterfeit-displacement politics for CMHP, the EEOC finding leading to EAP-funded calm plans, and FQHC rollout leading to gray-market decline in Memphis. The price hold is weakly explained by fill-finish capacity (claim 2). Employer-paid calm plans are classed as 'cash', which is convenient. In the prose, Denise has a $0 employer Steady plan available yet uses CMHP. magnitude: Ever-used 37 and on-drug 27.5 sit inside the envelope. The payer mix sums to 75.4M, Medicare ($37.8B) and dementia ($7.1B) multiply out, and the CMHP $7.1B run-rate matches $6.0B plus $1.1B. The age and income checks and the cycling arithmetic reconcile. Gaps are the revenue growth figure (claim 3) and the fast HD ramp (claim 1).",
+        "generativity": "The Denise Harmon scene is strong. It has the HRSA-sticker blister pack, the shoebox of Telegram vials she keeps, Marcus's red dashboard and wings at lunch, the sister's waitlist number 212, daughter Kayla's request, and the refill app's mood prompt. The world also implies many scenes: Memphis FQHC lines, call-centre promotion politics, 'off' tags on dating apps, and union grievances. The prose summary is somewhat explanatory, but the day-in-the-life mostly shows rather than tells."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s4-L2-r24-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Most of it is on the drug, and whoever is not has to explain why.",
+          "field": "prose/closing_paragraph",
+          "why": "The world state puts 27.5% of adults on the drug and 37% ever-used, so 'most' is false. This is a narrative contradiction with the world state, which fails mechanism."
+        },
+        {
+          "quote": "Apps dropped the 'on a calm plan' tag because nearly everyone had it",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Calm/focus subscribers number ~4.6M of ~274M adults (about 1.7%), so 'nearly everyone' is unsupported. The claimed cause of the app change contradicts the candidate's own figures, which fails mechanism."
+        },
+        {
+          "quote": "Half her class is on it, she says.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Teen use is stated as ~3.3% of 12–17s, so half a 15-year-old's class on the drug is incoherent with the world state. Even as teenage exaggeration, it reads as a prose-versus-state contradiction."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 5.5,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is a recognisably harder society: promotions in call centres and logistics track enrolment in tracks and calm plans (autonomy), and life insurers now ask the untreated to explain themselves. A capped grant leaves 1.8M on waitlists who regain (inequality), teen use is up with the growth findings unresolved, and no one has measured anhedonia at low doses (epistemic). Obesity is falling and the drugs have real health benefits, and there is no spectacle, so I hold it near 6 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 27.5 (19.6 + 7.9), prices are stalled, and coverage is status quo at 30%. Retatrutide HD realises the triple-agonist driver as an existing product in a new form, approved 13 months after filing. The CMHP realises the subsidy, no new indication is added, and the safety signal is none. mechanism: Cash growth of ~15M users at stalled prices is only loosely tied to normalisation and calm plans. The prose contradicts the world state in 'Most of it is on the drug', 'nearly everyone had it' and 'Half her class is on it'. Also, 1.9M HD users in about ten metered months is asserted rather than shown. magnitude: Figures are inside the envelope and reconcile. The payer mix sums to 75.4M, Medicare spend is 13.4M×235×12≈$37.8B, and CMHP is 3.6M×165×12≈$7.1B against $6.0B plus $1.1B. The age and income checks and the cycling arithmetic also work. Only the fast CMHP ramp and HD uptake are a little aggressive.",
+        "generativity": "Denise gives a concrete texture: the shoebox of Telegram vials, the HRSA-stickered blister pack, the two buses, the red escalation dashboard, and the refill app's mood question. The supporting cast is implied too: Marcus and his wings, the waitlist number 212, and Kayla asking about the drug. The employer-pressure and waitlist threads suggest several scenes, and the prose shows more than it explains, though the front-matter essay is expository."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s4-L2-r24-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "~1.9M people are on HD and ~3.4M on retatrutide in total.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: HD launched in Feb 2034 with new starts 'metered all year' because fill-finish capacity is binding, yet 1.9M people are already on it at ~$449 cash or behind prior authorisation. The world does not show how metered supply reaches that number in about ten months."
+        },
+        {
+          "quote": "~2.9M workers now have employer-sponsored calm plans and ~7.0M are in adherence-verified tracks.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: employer-sponsored calm plans start from a base of essentially zero in 2032. The EEOC no-cause finding came in Oct 2033 and employers added plans only by mid-2034, so reaching 2.9M workers in about a year is asserted, not shown. It is also in tension with employer coverage staying flat at 30%."
+        },
+        {
+          "quote": "3.6M enrolled × ~$165 blended ($149 starts / $199 maintenance) × 12 ≈ $7.1B annualised run-rate",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: a new grant program, created in Sep 2033 and dispensing from Jan 2034 through FQHCs and voucher pharmacies, enrols 3.6M adults (plus 1.8M waitlisted) within about 12 months. That is an implausibly fast ramp, and the $6.0B FY2034 appropriation only roughly matches an annualised run-rate for a program that ran part of the year."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Being on the drug becomes the default and being off requires an explanation (life-insurer underwriting questions, the 'off' dating tag). Promotions informally track enrolment in employer calm plans, and the 2.9M workers on them are unmeasured for anhedonia. CMHP is capped, with 1.8M waitlisted and a funding cliff, and fracture exposure rises with HD while the lean-mass adjunct was refused. Cohesion and autonomy are damaged, but obesity and EPI are not catastrophic, so this is a harder society with new losers, not a structural nightmare.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is 27.5 against a 25.5–29.5 bound. Prices are stalled, HD retatrutide is a new form of an existing product with a filing-to-approval gap over 12 months, and CMHP covers the subsidy. The employer-encouraged and normalisation drivers appear in both fields and events, and there is no safety signal or market shock. mechanism: The chains for CMHP, the EEOC finding and HD are named, but the speed of ramps is asserted. These are the 1.9M HD users under metered supply, 2.9M employer calm plans within a year of the EEOC finding, and 3.6M CMHP enrolees within a year (see claims 1–3). magnitude: Population figures sit inside the envelope. Payer mix sums to 75.4M, Medicare ($37.8B), dementia ($7.1B) and CMHP ($7.1B against $6.0B plus $1.1B) all multiply out, and the age and income checks work. Small gaps remain: the under-18 1.4% is hard to square with 12–17 at 3.3% and 6–11 at 0.2%, and US incretin revenue growth of ~20% is low against a ~40% user rise.",
+        "generativity": "The Denise Harmon vignette has strong texture: the shoebox of Telegram vials, the waitlist number 212, Marcus and the wings, the refill-app mood check and Kayla asking to start. It implies many further scenes (the CMHP clinic, the call-centre floor, the promotion pressure, the teen question). The world fields give a lot to draw on, such as the 'off' tag, the life-insurer question and the Memphis body."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "~1.9M people are on HD and ~3.4M on retatrutide in total.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: 1.9M people on a $449 cash product within about ten months of a February 2034 launch, while Lilly is capacity-bound and meters new starts 'all year', is hard to square. It would mean over half of all retatrutide users moved to HD almost at once."
+      },
+      {
+        "quote": "Lilly's and Novo's US fill-finish expansions are the binding constraint on retatrutide HD and a stated reason for price holds.",
+        "field": "world/state/geopolitics_of_supply",
+        "why": "Mechanism: a capacity limit on one injectable does not explain holding prices on oral Wegovy and Foundayo, which are the volume base of CMHP. A firm short of capacity might also be expected to raise prices rather than freeze them. The stalled-price driver is asserted rather than caused."
+      },
+      {
+        "quote": "Stalled prices plus volume growth mean US incretin revenue grew ~20% across 2033–34.",
+        "field": "world/economy/pharma/state",
+        "why": "Magnitude: current users rose about 41% (53.3M to 75.4M) at flat prices, and Medicare spend alone rose about 20% on 20% more users. A total revenue gain of only ~20% is not reconciled, because the shift to cheap oral and CMHP volume is not quantified."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.83,
+      "inequality": 5.5,
+      "public_health": 4.83,
+      "cohesion": 5.83,
+      "epistemic": 6.0,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.17,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.37,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Mass normalisation ('being off needs a reason'), employer-linked calm plans tied to promotions, and unmeasured anhedonia at low doses (2.9M workers, excluded from the FDA study) drive autonomy and epistemic harms. Teen use is rising while the growth findings stay unresolved, and 1.8M people are waitlisted on a flat-funded grant. Offsetting gains are CMHP access for the bottom third, a slightly smaller gray market (7.5M to 7.0M), no new contamination cluster, and lower adult obesity (33.4% to 32.0%). The result is a harder but not collapsing society, so around 5.5.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 27.5% (19.6 + 7.9), prices are stalled, employer coverage stays at 30%, and no new indications or safety signal appear. The triple agonist arrives as an HD sNDA filed Nov 2032 and approved Dec 2033, which is more than 12 months after filing and so allowed. CMHP is the subsidy, and EEOC no-cause findings plus employer EAP funding give the employer-encouraged personality layer. mechanism: Most chains are shown, including counterfeit-displacement politics for CMHP, the EEOC finding leading to EAP-funded calm plans, and FQHC rollout leading to gray-market decline in Memphis. The price hold is weakly explained by fill-finish capacity (claim 2). Employer-paid calm plans are classed as 'cash', which is convenient. In the prose, Denise has a $0 employer Steady plan available yet uses CMHP. magnitude: Ever-used 37 and on-drug 27.5 sit inside the envelope. The payer mix sums to 75.4M, Medicare ($37.8B) and dementia ($7.1B) multiply out, and the CMHP $7.1B run-rate matches $6.0B plus $1.1B. The age and income checks and the cycling arithmetic reconcile. Gaps are the revenue growth figure (claim 3) and the fast HD ramp (claim 1).",
+      "generativity": "The Denise Harmon scene is strong. It has the HRSA-sticker blister pack, the shoebox of Telegram vials she keeps, Marcus's red dashboard and wings at lunch, the sister's waitlist number 212, daughter Kayla's request, and the refill app's mood prompt. The world also implies many scenes: Memphis FQHC lines, call-centre promotion politics, 'off' tags on dating apps, and union grievances. The prose summary is somewhat explanatory, but the day-in-the-life mostly shows rather than tells."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.465,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 27
+  }
+}

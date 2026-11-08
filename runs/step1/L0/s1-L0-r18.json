@@ -1,0 +1,522 @@
+{
+  "run_id": "s1-L0-r18",
+  "step": 1,
+  "year": 2028,
+  "parent_lineage": "L0",
+  "seed": 20261107,
+  "run_index": 18,
+  "driver_modifiers": [],
+  "drivers": {
+    "adoption_delta_pp": 9.4,
+    "price_path": "generic_collapse",
+    "coverage_shift": "status_quo",
+    "new_indications": [],
+    "safety_signal": "gi_pancreatic_litigation",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "gray_market_resurgence",
+    "cultural_response": "class_stratification",
+    "state_action": "none",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:23:29Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01Qb8yCsC4kjWpUWhmeURU2J",
+        "custom_id": "s1-L0-r18",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 13441,
+        "output_tokens": 19182
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_017XpvLFmrT8pos6bbmBRHAu",
+        "custom_id": "s1-L0-r18",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 24881,
+        "output_tokens": 10732
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r18-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21875,
+        "output_tokens": 5499
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r18-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21875,
+        "output_tokens": 6821
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AjNx99HEnem9ai2WPNPk2H",
+        "custom_id": "s1-L0-r18-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21875,
+        "output_tokens": 6047
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2028,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 20.6,
+      "us_adults_ever_used_pct": 26,
+      "by_income_third_pct": {
+        "top": 26,
+        "middle": 21,
+        "bottom": 14
+      },
+      "by_age_band_pct": {
+        "18_29": 10,
+        "30_49": 20,
+        "50_64": 32,
+        "65_plus": 17
+      },
+      "pediatric_under_18_on_drug_pct": 1,
+      "cycled_off_and_on_pct": 34,
+      "note": "FICTIONAL estimates. 20.6% of ~262M adults ≈ 54M current users, all indications. Who pays for those 54M: commercial insurance ~17M, Medicare ~11M (about 2.2M under obesity coverage, the rest under diabetes coverage in Part D), Medicaid ~6M, cash at authorised-generic, direct or TrumpRx prices ~16M, unregulated gray market ~4M. Total 54M. Cycling arithmetic: 26 ever − 20.6 current = 5.4 pts used and off now. About 55% of ever-users (14.3 pts) have stopped at least once for 4+ weeks. 14.3 − 5.4 = 8.9 pts restarted and are back on, which is 34% of ever-users. Current 20.6 = 11.7 never-stopped (many of them 2027–28 starters under a year in) + 8.9 restarters. Cumulative restart among stoppers is 62%, against 36–47% within one year in 2026. The $49–69 price and the drug-holiday norm lift it. Planned holidays under 4 weeks are not counted as stopping. Income split: the bottom third trails because the barrier is now the copay floor, the pharmacy visit and the time off work, not the list price. A share of bottom-third use is gray-market Indian generic, which surveys undercount. Age: 50–64 still peaks. 65+ rose from 9 to 17 under the Medicare $245/$50 terms. Pediatric: ~1% of all under-18s (~6% of children with obesity, up from 0.6%), mostly adolescents 12+ on oral semaglutide. Upper-income children are still more likely to be prescribed. Never-users include ~8M adults with obesity who tried and could not tolerate GI effects, and roughly 30M adults with BMI≥30 who have never started."
+    },
+    "access": {
+      "cash_price_usd_month_low": 49,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare: the GLP-1 Bridge pilot ended Dec 2027 and rolled into the CMS successor model announced in 2025–26, on the same terms (Medicare pays ~$245/month, beneficiary copay ~$50). No new legislation. ~2.2M beneficiaries use it for obesity: 2.2M × $245 × 12 ≈ $6.5B/year in federal spending, inside the CBO ≥$35B 2026–2034 score's trajectory. Medicaid: ~22 states have opted in at the same rates. Coverage criteria (BMI/comorbidity, prior authorisation) are unchanged.",
+      "employer_coverage_pct": 58,
+      "generic_us": true,
+      "generic_rest_of_world": "India: 60+ brands at $6–40/month. Canada generics ~CAD 70–100. Brazil, Mexico and Turkey are major producers. Generic semaglutide is available in ~160 countries. Indian product moves into the US by mail under FDA's discretionary personal-importation tolerance.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "Generic collapse came through an authorised generic, not through patent expiry. Novo Nordisk's US semaglutide patents still run to ~2031–32. In Oct 2027 Novo launched unbranded semaglutide through NovoCare and licensed a partner (Viatris): $49/month for the injectable pen and $69/month for the oral 25 mg. The goal was to win back volume from Lilly, from mailed Indian generics and from compounders. No independent ANDA generic is on the market. Other US cash prices: Foundayo $99–149 via LillyDirect/TrumpRx; Zepbound vials $299–449; retatrutide (approved May 2028) $499 through LillyDirect, list ~$1,250; generic liraglutide ~$60–90. Wegovy list stays $1,349 and almost nobody pays it. Employer coverage drifted from 60% to 58%, with no structural change. Many covering plans now steer to the authorised generic first. Gray market: the bulk is next-generation molecules ('reta', tirzepatide, cagrilintide) sold as 'research peptides' from China-origin API at $80–150/month through Telegram, Discord, med spas and gym networks, plus mailed Indian semaglutide at $15–40. The FDA 503B exclusion is still a proposal, and warning letters continue at the 2026 pace. Oral overtook injectable by new-start volume in 2028. Injectables still lead among people on tirzepatide and retatrutide."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic; unbranded authorised generic since Oct 2027)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg and 50 mg; Rybelsus; unbranded 25 mg authorised generic)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema, approved Dec 2026)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved May 2028)"
+      ],
+      "best_efficacy_pct_body_weight": 28.3,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction: widely prescribed off-label after the 2026 RCTs, still no approval; addiction clinics use the authorised generic as a first-line adjunct",
+        "microdosing / 'metabolic health' use by people without obesity, now mostly cash authorised generic at $49–69 or gray-market peptides",
+        "'drug holidays' and dose-down cycling to restore pleasure, libido or appetite for occasions; clinician-endorsed in practice, not on any label",
+        "pediatric under-12 use off-label under specialist care",
+        "nicotine and gambling craving reduction: observational and anecdotal",
+        "gray-market retatrutide 'recomp stacks' with peptides marketed for muscle, in gyms"
+      ],
+      "pipeline_note": "Oral parity: Novo's oral semaglutide 50 mg was approved as a higher-dose Wegovy pill in Mar 2027 on the existing obesity indication. Mean loss of ~15–16% matches injectable Wegovy 2.4 mg. Lilly's maintenance data (Jun 2027) showed people switched from injectable tirzepatide or semaglutide to Foundayo largely kept their weight off. For semaglutide-level efficacy the needle is optional. No oral matches tirzepatide or retatrutide. CagriSema was approved Dec 2026, but uptake is modest because it lost to tirzepatide in head-to-head data. Retatrutide: BLA filed Feb 2027, approved May 2028 (15 months later). Label mean 28.3% at 80 weeks, with dysesthesia and discontinuation warnings. It had been on the gray market for a year before approval. Amycretin is still in phase 3 with no filing, so it is not on the US market. Survodutide is in phase 3; Boehringer filed in Q3 2028, and approval cannot come before Q3 2029. MariTide, the monthly injectable, is still in development. Muscle-preserving adjuncts (bimagrumab and others) are in phase 2–3 and not approved. Their absence is why muscle is bought with time and money rather than a prescription. Global incretin revenue grows more slowly than the 2026 forecasts: volume is up sharply, and US net price per patient for semaglutide is down roughly 70%."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common class effect and the main reason people stop. The shift to orals and repeated restarts after drug holidays mean more people go back through initiation-phase GI symptoms.",
+        "regulatory_response": "Labelled; no new action."
+      },
+      {
+        "effect": "Gastroparesis, ileus and bowel obstruction (incl. claims of persistence after discontinuation)",
+        "status": "suspected",
+        "prevalence_note": "Ileus is labelled. Persistent gastroparesis after stopping is alleged in litigation and rests on case series. The absolute risk in population data still looks low. The number of exposed people (54M) turns a low rate into tens of thousands of claimants.",
+        "regulatory_response": "No new FDA action. MDL 3094 (E.D. Pa.) passed ~21,000 cases by Feb 2028, plus ~6,000 in state courts. The court's diagnostic-proof rulings narrowed the gastroparesis claims, and filings shifted toward obstruction, ileus and pancreatitis. The first bellwether is set for late 2028. Plaintiff advertising runs on daytime TV and streaming."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss. Cholecystectomy volumes are up measurably in high-uptake regions.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Long-term RCTs still show no confirmed causal link. Pancreatitis has become the fastest-growing claim category in the mass tort. Pancreatic-cancer allegations appear in a minority of filings and lack epidemiological support.",
+        "regulatory_response": "Labelled; part of MDL 3094; no regulatory change."
+      },
+      {
+        "effect": "Lean mass (muscle) loss",
+        "status": "established",
+        "prevalence_note": "~25–30% of weight lost is lean mass, worse without resistance training and adequate protein. Concern is concentrated among older Medicare users and among low-income cash users who cycle. Bone-density signals keep appearing in observational data.",
+        "regulatory_response": "None. No muscle-preserving drug is approved. Mitigation is private: trainers, protein, DEXA scans."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohort data still conflict; additional large cohorts are mostly null to modest.",
+        "regulatory_response": "EMA 'very rare' label stands; no US class label."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal.",
+        "regulatory_response": "Warning removed from US labels in 2026; unchanged."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL survey data: about 1 in 5 current users report muted pleasure or motivation at maintenance doses; about 2 in 5 have deliberately reduced or skipped doses at least once to get it back. Two small academic studies using validated anhedonia scales found modest average effects, with dose dependence. Higher reports for retatrutide.",
+        "regulatory_response": "None. Not in any label. Manufacturers' patient materials now mention 'changes in enjoyment' under 'talk to your doctor'."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Regain on stopping is well documented. The trial-versus-claims disagreement on magnitude persists. The drug-holiday norm creates a new pattern of small, repeated regain-loss oscillations that nobody has studied.",
+        "regulatory_response": "None; still drives chronic-therapy framing."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "More signals among low-income users and adolescents eating very little. Clinician guidance recommends multivitamins and protein targets.",
+        "regulatory_response": "None."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; effects in adolescents who may take these for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "Still no data. About 6 years of rigorous follow-up exist for semaglutide. Now roughly a third of ever-users cycle, and ~1% of minors are exposed.",
+        "regulatory_response": "Postmarketing requirements, including on retatrutide."
+      },
+      {
+        "effect": "Compounded / counterfeit / research-peptide harms (dosing errors, contamination, unapproved molecules)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: FDA adverse-event reports tied to compounded and gray-market product passed ~5,000. Poison-centre calls about 'research' retatrutide and tirzepatide dosing errors rose sharply in 2027. Contamination findings in independent lab tests of Telegram-sourced vials are common.",
+        "regulatory_response": "Routine warning letters continue. The 503B exclusion is still only proposed. No new enforcement regime."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households are ~30% of US households. Volume declines are steady but not dramatic: salty snacks and confectionery down ~3–4% a year in unit terms, sugary drinks down further. Protein, fibre and 'small-format' lines grow. Revenue losses are running toward the low end of the 2030 JPMorgan range ($30–55B). Price and premiumisation still mask much of the volume loss. Value brands sold to bottom-third shoppers are hurt least, so the grocery aisle itself sorts by income.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Volume is falling faster than in 2026, concentrated in the heavy-drinking decile that carries the industry. Off-label alcohol prescribing at $49–69 hits spirits hardest. Bars report 'holiday weekend' spikes when users skip doses for weddings and trips. Producers push premium small-pour formats and non-alcoholic lines. There is still no growth category that offsets the loss.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is roughly flat. Smaller plates, protein-forward menus and half-portion pricing are standard at casual-dining chains. Fine dining markets itself to people on a drug holiday ('come back hungry'). All-you-can-eat and buffet formats close units.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking, with store closures at Torrid and DXL. Mainstream brands have seen two re-buy waves. Tailoring and alteration businesses grow. The new premium category is 'fitted for muscle': structured athleisure sold as a sign of a body built rather than shrunk.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Growth is concentrated at the top. Strength studios, private trainers and 'lean-mass clinics' with DEXA scans ($150–400/month) expand in Scottsdale, Miami, Austin and the Bay Area. Budget gyms are flat. The industry sells the part of the result the pill does not deliver.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Coverage shares are essentially unchanged (58% of employers). The authorised generic lets covering plans cut per-member GLP-1 cost sharply through step therapy (generic first, tirzepatide by exception). Pharmacy trend eases from +11.5% toward high single digits. Non-covering employers point staff to the $49–69 cash price. Litigation reserves, not claims, are now the insurers' talking point.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly leads on tirzepatide, Foundayo and retatrutide. Novo traded US semaglutide margin for volume through the authorised generic and the 50 mg pill. Both carry mass-tort exposure: reserves disclosed, no settlement. Revenue still grows on volume, but the 2030 forecasts of $150B+ have been revised down as US net prices fall. The gray market takes a visible slice of next-generation demand.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Thinness no longer signals money. At $49 a month, anyone with a pharmacy and a phone can be thin. What signals money now is how the thinness looks: retained muscle, good skin, no hollowed face, visible training. 'Sema-thin' (narrow, soft, slightly gaunt, often regaining between cycles) is read as working- or lower-middle-class. 'Built' is read as affluent.",
+      "thinness_and_class": "FICTIONAL but measurable: in Phoenix-area polling, Scottsdale residents and the residents of west Phoenix both report high use, but they describe different bodies as 'healthy'. Upper-income users stack tirzepatide or retatrutide with trainers, DEXA scans and protein budgets. Lower-income users take the authorised-generic pill, cycle when money or tolerance runs out, and lose more muscle. Larger bodies are increasingly concentrated in the bottom income third, among people who never started, could not tolerate the drug, or live in states without Medicaid coverage. Larger bodies are read as poverty, not appetite.",
+      "eating_as_ritual": "Weekday eating in GLP-1 households is small and functional. Meals for occasions have been relocated to drug holidays: people 'go off for Thanksgiving'. Family dinners split, with on-drug parents eating little beside teenage children who may or may not be on it. Protein shakes are the default weekday lunch in white-collar offices.",
+      "dating_and_intimacy": "Dating-app bios routinely say 'on/off', 'on a break' or 'reta'. Couples schedule drug holidays around anniversaries and trips to restore libido and pleasure. 'Holiday sex' is a joke in stand-up and an earnest topic in therapy. Some relationships founder on mismatched cycles: one partner flat, one not.",
+      "meaning_of_appetite": "Appetite is now a dial you set, not a trait you have. Hunger is something you choose to feel for an occasion. Not feeling it is the weekday baseline for a fifth of adults.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: about 1 in 5 users report muted enjoyment at maintenance doses, and about 2 in 5 have taken a deliberate holiday or dose-down. Common clinical practice is 'lowest effective dose' plus planned breaks. Reports are higher on retatrutide and among long-term continuous users. The evidence is still mostly survey-based; no trial is powered for it.",
+      "framing": "A known cost that you manage: talked about like caffeine tolerance or SSRI blunting. People say they 'titrate to taste'. Addiction medicine uses the same flatness as treatment. The bug/feature split is now a personal settings question rather than a scientific one.",
+      "effect_on_work": "Managers in sales and hospitality describe 'flat' staff, and some employees time holidays around pitches or performance reviews. Many knowledge workers describe the quiet as focus. Employers neither encourage nor discourage use, and HR guidance treats it as private medical information. No productivity data exist.",
+      "effect_on_art_and_play": "Stand-up comedy and podcasts are full of 'on-week/off-week' material. Nashville and LA session musicians discuss playing 'on' versus 'off' the way earlier players discussed beta-blockers. Sour, spicy and extreme-flavour products keep selling to users chasing sensation. Some users quit hobbies, and some rediscover them during holidays.",
+      "effect_on_intimacy": "Reduced desire is widely acknowledged. Couples' therapists report the drug-holiday calendar as a routine negotiation. Some users describe the off-weeks as when they 'feel married again'.",
+      "effect_on_politics": "Diffuse. Fringe populist rhetoric says 'they want you numb'. Mainstream debate centres on the class gap in muscle and access, not on blunting. There is no measurable effect on turnout or partisanship.",
+      "severity": 4
+    },
+    "state": {
+      "regulatory_posture": "Unchanged since 2026. Speed-friendly approvals (CagriSema, the 50 mg oral, retatrutide) continue under existing pathways. The compounding crackdown has stalled in practice: the 503B exclusion is still proposed, warning letters arrive at the old pace, and gray-market volume grows past them. No new federal or state action this step.",
+      "subsidy_or_mandate": "No mandate. Medicare stays at $245 with a $50 copay through the pre-scheduled successor to the Bridge pilot. Medicaid participation is state-by-state at the same rates. TrumpRx carries the authorised generic and Foundayo cash prices.",
+      "conditioning_or_surveillance": "Coverage is still conditioned on BMI/comorbidity criteria and prior authorisation, with step therapy to the authorised generic. No adherence monitoring or benefit conditioning beyond that.",
+      "workforce_or_military": "None.",
+      "geopolitics_of_supply": "India is now the world's semaglutide factory, and its mail-order product reaches US kitchens under personal-importation tolerance. China-origin peptide API supplies the unregulated US market for retatrutide and tirzepatide. The US-versus-India price gap has narrowed to roughly $49–69 against $6–40, which takes political heat off brand pricing.",
+      "severity": 3
+    },
+    "events": [
+      {
+        "date": "2027-03",
+        "event": "FDA approves a 50 mg dose of oral Wegovy. Mean weight loss of ~15–16% matches injectable Wegovy. In June, Lilly data show users switched from injectables to Foundayo pills largely keep the weight off.",
+        "driver": "oral_parity"
+      },
+      {
+        "date": "2027-08",
+        "event": "An investigation estimates 3–4 million Americans are using unregulated GLP-1 drugs: Indian generic semaglutide by mail, and retatrutide and tirzepatide sold as 'research peptides' at $80–150 a month through Telegram channels and gyms.",
+        "driver": "gray_market_resurgence"
+      },
+      {
+        "date": "2027-10",
+        "event": "Novo Nordisk launches unbranded authorised-generic semaglutide through NovoCare and Viatris: $49 a month for the pen, $69 for the 25 mg pill. New cash starts double within a quarter.",
+        "driver": "generic_collapse"
+      },
+      {
+        "date": "2027-11",
+        "event": "National survey: 38% of GLP-1 users have deliberately skipped or lowered doses to feel pleasure, appetite or libido again. 'Drug holiday' enters clinical guidance from obesity-medicine societies as an acceptable practice.",
+        "driver": "mainstream_complaint"
+      },
+      {
+        "date": "2028-02",
+        "event": "The GLP-1 multidistrict litigation in Philadelphia passes 21,000 cases. Pancreatitis and bowel-obstruction claims overtake gastroparesis. The first bellwether trial is set for late 2028, and Novo and Lilly disclose litigation reserves.",
+        "driver": "gi_pancreatic_litigation"
+      },
+      {
+        "date": "2028-05",
+        "event": "FDA approves Lilly's retatrutide, 15 months after filing, at a $499 cash price, with dysesthesia warnings. Gray-market 'reta' had been circulating for a year at a fifth of the price.",
+        "driver": "baseline"
+      }
+    ],
+    "open_tensions": [
+      "Thinness is cheap and muscle is not. The body has become a class readout, and no drug, payer or policy is closing the gap in lean mass, training time and next-generation access.",
+      "Roughly a third of ever-users cycle on and off, now with clinical blessing for 'drug holidays'. Nobody knows what years of repeated regain-and-loss do to muscle, bone, the pancreas or the gut. The mass tort will reach a jury before the science arrives.",
+      "Unregulated retatrutide and research peptides are growing faster than enforcement. The FDA's 503B exclusion is still only a proposal, and the first serious gray-market harm cluster will force a choice the state has so far avoided.",
+      "A fifth of adults run at a deliberately reduced level of pleasure on weekdays. Employers, partners and clinicians are each negotiating that privately, and there is no data on what it adds up to."
+    ],
+    "still_true": [
+      "Wegovy's list price is still $1,349 a month, and almost nobody pays it.",
+      "Medicare still pays ~$245 a month for obesity GLP-1s, and beneficiaries pay a ~$50 copay.",
+      "Novo Nordisk's US semaglutide patent exclusivity still runs to roughly 2031–32; no independent ANDA generic semaglutide or tirzepatide is on the US market.",
+      "Foundayo (orforglipron), approved April 2026, is still the only small-molecule oral GLP-1 on the US market, sold through LillyDirect and TrumpRx.",
+      "The FDA's April 2026 proposal to exclude semaglutide, tirzepatide and liraglutide from the 503B bulks list is still a proposal, not a final rule."
+    ]
+  },
+  "prose": {
+    "headline": "Thin Is Cheap Now. Muscle Isn't: How a $49 Pill Turned the American Body Into a Pay Stub",
+    "world_in_600_words": "By the end of 2028, one American adult in five takes an incretin drug, about 54 million people. Most of the recent starters never touched a needle. Since Novo Nordisk put out an unbranded version of its own semaglutide in the autumn of 2027, the pill costs $69 a month and the pen $49. That puts the starting price below a phone bill and close to a gym membership. The patents have not expired. Novo chose to undersell itself rather than lose the volume to Lilly, to Indian generics arriving by mail, and to the compounders it spent 2026 suing. The higher-dose Wegovy pill approved in March 2027 does what the injection does, so for most people the needle stopped being a reason not to start.\n\nWho pays has barely changed. Fifty-eight percent of large employers still cover weight-loss drugs, almost the same share as two years earlier, and most now require patients to try the cheap generic before anything stronger. Medicare still pays $245 and still charges beneficiaries $50. That rate carried over when the Bridge pilot ended into the program CMS had already scheduled to follow it. Use among Americans over 65 has nearly doubled. Medicaid coverage depends on which state you live in. The barrier for the bottom income third is no longer the price. It is a prescription, a pharmacy that keeps the product in stock, and the time to deal with both. Use in that group sits at about 14 percent, against 26 percent in the top third.\n\nSo the line has moved. In Scottsdale, the people who are thin also have shoulders. They take tirzepatide, or since May the newly approved retatrutide at $499, and they pay a trainer and a clinic that scans their lean mass every quarter. In west Phoenix the thinness came from a pill bottle and looks like it: narrow, soft at the edges, faces a little hollow, the weight returning when a month gets tight. Restaurant managers, apparel buyers and dating apps have all learned to read the difference. The larger bodies that remain are increasingly found among people who could not tolerate the drug or never got a prescription. They are now read as signs of being poor, not of eating too much.\n\nA third of everyone who has ever used the drugs has stopped and started again. Since obesity-medicine societies accepted the practice in late 2027, stopping on purpose has been normal. People take a 'holiday' for Thanksgiving, for a wedding, for an anniversary, to feel hungry or to feel anything much. About one user in five says pleasure is muted at maintenance doses. Couples plan their off-weeks together, and comedians build sets around them. Addiction clinics prescribe the same flatness on purpose to people who drink heavily. No one has measured what years of repeated weight loss and regain do to the body.\n\nThe lawyers are not waiting for that research. The federal litigation in Philadelphia has passed twenty-one thousand cases, and the claims have shifted from gastroparesis to pancreatitis and bowel obstruction. The underlying science still shows a small risk, but a small risk across 54 million people produces a lot of plaintiffs. The first jury will be seated in late 2028.\n\nAlongside the pharmacy counter runs a market that has outgrown its regulators. Retatrutide was sold in gyms as a 'research peptide' for a year before the FDA approved it, and it still is, at a fifth of the price. The 2026 rule meant to shut down compounding is still a proposal, and the warning letters arrive at the old rate. Alcohol sales keep falling, snack volumes erode by a few points a year, and plus-size retailers keep closing stores. From the street the country looks healthier. It is also a country where people can read your income from your body.",
+    "a_day_in_the_life": "Denise Ruiz takes the pill at 5:40, with four ounces of water, standing at the sink in the dark. Then thirty minutes without coffee. She uses them to pack her lunch: a shake, a cheese stick, half an apple she probably won't finish.\n\nThe bottle says SEMAGLUTIDE TABLETS 25 MG. No brand name, $69 at the Walgreens on Indian School Road. The agency she works for doesn't cover it. She gets her hours and that's it.\n\nHer first client is Mrs. Halvorsen in Arcadia, eighty-one, on the Medicare one. She complains she can't taste her soup. Denise salts it more than she should.\n\nAt noon she drives to the second house. The son is home, forty-something, arms like a mover's. A box from somewhere sits open on the counter: little glass vials, a printed label, NOT FOR HUMAN USE. He sees her look and laughs. \"Reta,\" he says. \"Everybody at my gym.\"\n\nIn the car she drinks the shake and watches a lawyer on her phone ask whether she or a loved one has had pancreatitis. She hasn't. She swipes it away.\n\nHer sister texts: Saturday is Mateo's graduation party. Carnitas. You going off for it?\n\nDenise looks at herself in the rearview mirror. Her face is thinner than her mother's ever was, and her arms are thinner too. She can't remember the last time she wanted anything badly.\n\nShe types: Thursday I'll stop. Then deletes it. Then types it again.\n\nAt home her son eats cereal standing up. She sits across from him and isn't hungry. She asks about his day and means it, mostly."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r18-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "A fifth of adults run at a deliberately reduced level of pleasure on weekdays.",
+          "field": "world/open_tensions/3",
+          "why": "Fails magnitude and mechanism. The same world says about 1 in 5 current users report muted pleasure, and users are 20.6% of adults, so roughly 4% of adults, not a fifth. Even 2 in 5 users skipping doses is only about 8% of adults."
+        },
+        {
+          "quote": "Thinness no longer signals money. At $49 a month, anyone with a pharmacy and a phone can be thin.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Fails mechanism. Bottom-third use is only 14% against 26% in the top third, and the world itself says prescriptions, stock and time off work still bar access. The two-year flip in what a thin body signals is asserted from local Phoenix polling, not derived."
+        },
+        {
+          "quote": "~6% of children with obesity, up from 0.6%",
+          "field": "world/population/note",
+          "why": "Fails mechanism and magnitude. A tenfold rise in pediatric prescribing in two years has no shown driver; the drivers cover adult price and adoption, not children. Upper-income skew and the oral semaglutide route are asserted, with no payer or label change to explain it."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society. Inequality is worst: the body becomes a class readout, bottom-third users lose more muscle and cycle more, and bottom-third use is 14% against 26% at the top. Public health is hit by unregulated gray-market peptides (~5,000 adverse-event reports), a mass tort passing 21,000 cases, unstudied cycling, and about 1% of minors exposed. Flourishing and cohesion suffer from mainstream reward blunting and drug-holiday relationship strain, but the harms are diffuse and manageable rather than structural collapse. Autonomy stays moderate because cheap access and no mandate make use largely voluntary.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 20.6% against the stipulated ~20.4. The authorised generic (Oct 2027) is an event and so a permitted mechanism for generic_us:true. The 50 mg pill, the gray market, the class split, MDL 3094, coverage at status quo and the mainstream-complaint framing all appear in fields and events. mechanism: Most chains are shown, such as the authorised generic leading to step therapy and cash starts, and gray-market reta leading to the pre-approval circulation. Several shifts are only asserted: the pleasure-blunting figure applied to 'a fifth of adults', the 'anyone can be thin' class flip, and the tenfold pediatric rise (claims 1–3). Medicare still paying $245 beside a $49 cash pen is left unexplained. magnitude: Current use (20.6), ever-use (26), approval timing (retatrutide 15 months after filing) and the cycling arithmetic (8.9/14.3 = 62%, 8.9/26 = 34%) all sit inside the envelope. The 54M payer split sums correctly and $6.5B for 2.2M Medicare users multiplies out. Weaknesses are the age bands, which weight to about 18.5% against 20.6%, and the 'fifth of adults' figure that contradicts 1 in 5 users.",
+        "generativity": ""
+      },
+      "plausibility": 7.1
+    },
+    {
+      "custom_id": "s1-L0-r18-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Pediatric: ~1% of all under-18s (~6% of children with obesity, up from 0.6%), mostly adolescents 12+ on oral semaglutide.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: a tenfold jump in two years among children with obesity is steep, and no pediatric label for oral semaglutide appears anywhere in the world state (the 12+ indications listed are injectables). The pediatric rise is asserted, not derived from a label or access change."
+        },
+        {
+          "quote": "'Drug holiday' enters clinical guidance from obesity-medicine societies as an acceptable practice.",
+          "field": "world/events/3/event",
+          "why": "Mechanism: obesity societies endorsing intentional pleasure-seeking breaks is asserted without a chain. It also sits oddly against the world's own regain evidence and chronic-therapy framing, and the guidance is said to appear in the same month as the survey."
+        },
+        {
+          "quote": "Medicare ~11M (about 2.2M under obesity coverage, the rest under diabetes coverage in Part D)",
+          "field": "world/population/note",
+          "why": "Magnitude: this implies about 8.8M Medicare diabetes GLP-1 users, an implausibly high share of Medicare diabetics. It also does not reconcile with 65+ use doubling from 9% to 17% 'under the Medicare $245/$50 terms', since only 2.2M of that rise is under obesity coverage."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality carries the score. The body becomes a class readout (muscle versus 'sema-thin'), and low-income cash users cycle, lose more lean mass and are the likeliest to use gray-market product. Flourishing and public_health are moderately worse: a fifth of adults report muted pleasure, there is a gray-market harm cluster, and cycling effects are unstudied. Cohesion suffers through mismatched cycles between couples and split family dinners. Autonomy is mostly preserved, since price is low and access is wide, and epistemic harm is nameable and partly measured, so those stay in the middle. Nothing is melodramatic.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Adoption lands at 20.6% against a 20.4% target, the authorised-generic mechanism sits in an event, there are no new indications, the oral 50 mg realises oral parity, gray-market 'reta' is realised, litigation is quantified, the stratification theme runs throughout, and state action is none. mechanism: the main chains are shown (AG price, then volume, then gray-market competition, then stratification). Weak spots are Medicare still paying $245 with a $50 copay for a molecule sold for $49 cash, which is unexplained (claim 3), and society endorsement of drug holidays, which is asserted (claim 2). Pediatric oral use also has no label basis (claim 1). magnitude: on-drug (20.6), ever-used (26), income and age splits, approval timing (CagriSema, retatrutide filed Feb 2027 and approved 15 months later) and the cycling arithmetic (14.3 − 5.4 = 8.9 = 34%) all reconcile, and the payer mix sums to 54M. Deductions are for the Medicare diabetes split in claim 3, the ~30% household share against 20.6% of adults, the pediatric tenfold jump in claim 1, and the 'never-users … who tried' contradiction.",
+        "generativity": "The Denise Ruiz scene is dense with implied characters: Mrs. Halvorsen who can't taste her soup, the gym-built son with a 'NOT FOR HUMAN USE' vial box, the sister's 'going off for it?' text, and the lawyer ad. The fields add texture too, including 'holiday sex' as a stand-up joke, 'titrate to taste', and bars with holiday-weekend spikes. The prose does show rather than explain, though the opening essay is expository."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s1-L0-r18-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "on the same terms (Medicare pays ~$245/month, beneficiary copay ~$50)",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicare is said to pay $245 for semaglutide that Novo sells unbranded for $49 pen / $69 pill, and covering employers steer to that generic. Nothing explains why the public payer is exempt from the collapse, and the copay is roughly the cash price."
+        },
+        {
+          "quote": "26 ever − 20.6 current = 5.4 pts used and off now.",
+          "field": "world/population/note",
+          "why": "Magnitude: only about 21% of ever-users are off the drug, which is hard to square with the starting world's roughly one-third one-year persistence. The note's 62% restart rate is asserted to close the gap rather than derived."
+        },
+        {
+          "quote": "A fifth of adults run at a deliberately reduced level of pleasure on weekdays.",
+          "field": "world/open_tensions/3",
+          "why": "Mechanism: the world's own survey figure is about 1 in 5 current users reporting muted pleasure, which is roughly 4% of adults. Equating users with all adults is an internal contradiction that inflates the harm."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Class stratification is the main harm (body_and_culture, thinness_and_class). Bottom-third use is 14% against 26% at the top, lower-income users lose more muscle, and larger bodies are read as poverty. Added losses: about 38% of users skip or reduce doses to get pleasure back, mass-tort exposure, a growing unregulated peptide market (more than 5,000 adverse-event reports, poison-centre calls), and no data on cycling. Access is cheap and the harms are mostly diffuse and manageable, so this is a harder society with new losers rather than a refuse-to-live-in one.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events. The authorised generic (2027-10) is the generic_collapse mechanism, the 50 mg pill is oral_parity, and gray-market, litigation, class-stratification and mainstream-complaint events are all present. Status quo on coverage and no state action are respected, with only mild friction in labelling the dominant route 'daily_oral'. mechanism: The authorised-generic chain, the plan step therapy and the litigation growth are shown, but Medicare still paying $245 beside a $49 generic is unexplained (claim 1). The 'fifth of adults' tension conflates users with adults (claim 3), and the pediatric jump to about 1% of all minors is asserted. magnitude: On-drug 20.6% and ever-used 26% sit inside the envelope. The 54M payer split sums correctly, the cycling arithmetic closes (8.9/26=34%, 8.9/14.3=62%), 2.2M×$245×12≈$6.5B is correct, and retatrutide timing (15 months) and CagriSema approval fit the approval rules. The deduction is for the strained persistence implied by 79% of ever-users being current (claim 2).",
+        "generativity": "The Denise Ruiz vignette implies many scenes: the 5:40 pill at the sink, Mrs. Halvorsen's soup, the 'Reta' box at the gym-going son's house, the lawyer ad, and the 'going off for it?' text. Texture comes from the 'on/off' dating bios, 'go off for Thanksgiving', session musicians, and the Scottsdale versus west Phoenix contrast. Daily life is shown rather than explained, though the prose before the vignette is essay-like."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "A fifth of adults run at a deliberately reduced level of pleasure on weekdays.",
+        "field": "world/open_tensions/3",
+        "why": "Fails magnitude and mechanism. The same world says about 1 in 5 current users report muted pleasure, and users are 20.6% of adults, so roughly 4% of adults, not a fifth. Even 2 in 5 users skipping doses is only about 8% of adults."
+      },
+      {
+        "quote": "Thinness no longer signals money. At $49 a month, anyone with a pharmacy and a phone can be thin.",
+        "field": "world/body_and_culture/what_the_body_signals",
+        "why": "Fails mechanism. Bottom-third use is only 14% against 26% in the top third, and the world itself says prescriptions, stock and time off work still bar access. The two-year flip in what a thin body signals is asserted from local Phoenix polling, not derived."
+      },
+      {
+        "quote": "~6% of children with obesity, up from 0.6%",
+        "field": "world/population/note",
+        "why": "Fails mechanism and magnitude. A tenfold rise in pediatric prescribing in two years has no shown driver; the drivers cover adult price and adoption, not children. Upper-income skew and the oral semaglutide route are asserted, with no payer or label change to explain it."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 4.17,
+      "inequality": 7.0,
+      "public_health": 5.5,
+      "cohesion": 5.17,
+      "epistemic": 5.17,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.5,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.3,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world is a recognisably harder society. Inequality is worst: the body becomes a class readout, bottom-third users lose more muscle and cycle more, and bottom-third use is 14% against 26% at the top. Public health is hit by unregulated gray-market peptides (~5,000 adverse-event reports), a mass tort passing 21,000 cases, unstudied cycling, and about 1% of minors exposed. Flourishing and cohesion suffer from mainstream reward blunting and drug-holiday relationship strain, but the harms are diffuse and manageable rather than structural collapse. Autonomy stays moderate because cheap access and no mandate make use largely voluntary.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 20.6% against the stipulated ~20.4. The authorised generic (Oct 2027) is an event and so a permitted mechanism for generic_us:true. The 50 mg pill, the gray market, the class split, MDL 3094, coverage at status quo and the mainstream-complaint framing all appear in fields and events. mechanism: Most chains are shown, such as the authorised generic leading to step therapy and cash starts, and gray-market reta leading to the pre-approval circulation. Several shifts are only asserted: the pleasure-blunting figure applied to 'a fifth of adults', the 'anyone can be thin' class flip, and the tenfold pediatric rise (claims 1–3). Medicare still paying $245 beside a $49 cash pen is left unexplained. magnitude: Current use (20.6), ever-use (26), approval timing (retatrutide 15 months after filing) and the cycling arithmetic (8.9/14.3 = 62%, 8.9/26 = 34%) all sit inside the envelope. The 54M payer split sums correctly and $6.5B for 2.2M Medicare users multiplies out. Weaknesses are the age bands, which weight to about 18.5% against 20.6%, and the 'fifth of adults' figure that contradicts 1 in 5 users.",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "health",
+    "axis_badness": 5.3137,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 16
+  }
+}

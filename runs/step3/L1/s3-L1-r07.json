@@ -1,0 +1,558 @@
+{
+  "run_id": "s3-L1-r07",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L1",
+  "seed": 20261107,
+  "run_index": 7,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 4.8,
+    "price_path": "managed_decline",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [],
+    "safety_signal": "anhedonia_labelled",
+    "next_gen_launch": "none",
+    "market_shock": "none",
+    "cultural_response": "normalisation",
+    "state_action": "none",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L1-r07",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17521,
+        "output_tokens": 17800
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L1-r07",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 29797,
+        "output_tokens": 11489
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r07-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25455,
+        "output_tokens": 6476
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r07-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25455,
+        "output_tokens": 5842
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L1-r07-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25455,
+        "output_tokens": 5263
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2032,\"fictional\":true,\"population\":{\"us_adults_on_drug_pct\":23.6,\"us_adults_ever_used_pct\":32.0,\"by_income_third_pct\":{\"top\":29,\"middle\":23.8,\"bottom\":18},\"by_age_band_pct\":{\"18_29\":13,\"30_49\":25.5,\"50_64\":37,\"65_plus\":16},\"pediatric_under_18_on_drug_pct\":1.0,\"cycled_off_and_on_pct\":39,\"not…"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 23.6,
+      "us_adults_ever_used_pct": 32.0,
+      "by_income_third_pct": {
+        "top": 29,
+        "middle": 23.8,
+        "bottom": 18
+      },
+      "by_age_band_pct": {
+        "18_29": 13,
+        "30_49": 25.5,
+        "50_64": 37,
+        "65_plus": 16
+      },
+      "pediatric_under_18_on_drug_pct": 1.0,
+      "cycled_off_and_on_pct": 39,
+      "note": "FICTIONAL. Arithmetic: ever 32.0% − current 23.6% = 8.4% of adults used and are off now. There were 5.5 pts of new ever-users in 2030–32: 4.4 are on and 1.1 already off. Of the 26.5 pts who had used by 2030, 19.2 are on and 7.3 are off. On: 4.4 + 19.2 = 23.6. Off: 1.1 + 7.3 = 8.4. Within the 2030 cohort, 11.3 of the 18.8 then on stayed on. That is 60% two-year persistence, up from ~50%, because cheaper cash prices and normalisation reduced voluntary stops. The other 7.5 stopped and joined the 7.7 already off, for a pool of 15.2. Of that pool 7.9 restarted, 52% against 55% last step: employer coverage exits made restarting harder for some. 11.3 + 7.9 = 19.2. Cycled: the 8.9 pts cycled by 2030 plus ~3.6 pts of first-time restarters gives 12.5 of 32.0 ever-users = 39%. Planned 'dose holidays' of under 8 weeks are not counted as stops. Users ≈ 63.7M of ~270M adults. Age bands weighted 20/33/24/23 give 2.6 + 8.4 + 8.9 + 3.7 = 23.6. Income thirds average (29 + 23.8 + 18)/3 = 23.6. Middle-third growth came through $199–299 cash and gray product after employers dropped coverage. Bottom-third growth came through Medicaid, flat-funded HRSA sites stretched by lower contract prices, and the gray market. 65+ ≈ 16% ≈ 9.9M. The off-drug population is ~22.7M who used and stopped, plus ~184M who never used. The second group splits between people who decline it, a stance that now has to be explained, and uninsured or low-income adults outside every channel, concentrated in non-expansion Southern states. Pediatric: 1.0% of ~73M ≈ 730k, of whom ≈130k are aged 6–11. Interim bone-accrual data are underpowered and have not been reported as a result."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Medicare GLP-1 Bridge extended (Dec 2031) through 2033. Payment steps down from $275 to $245/month from Jan 2032, the copay stays $50, and the criteria and the 65+ DEXA/strength counselling visit are unchanged. Obesity Bridge users ≈ 3.2M: 3.2M × $245 × 12 ≈ $9.4B/yr. Medicare pays ≈15.9% of incretin fills ≈ 10.1M users (≈9.6M of 9.9M users aged 65+, plus ~0.5M disabled under-65). Medicaid pays ≈10% ≈ 6.4M at the same $245 benchmark: 6.4M × $245 × 12 ≈ $18.8B/yr combined federal and state. HRSA Community Incretin Access Program is flat-funded at $4.5B through continuing resolutions for FY2031–32, with no expansion. New contracts cut prices, so it reaches more people: 2.4M liraglutide × $60 × 12 = $1.73B, plus 1.35M semaglutide (cessation/AUD) × $169 × 12 = $2.74B, ≈ $4.47B for ≈3.75M users. Indiana and Arkansas adherence waivers are unchanged; the three pending state applications are still not approved.",
+      "employer_coverage_pct": 48,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 80+ semaglutide brands at $6–40/month, and generic tirzepatide launched there in 2031. Canada, Brazil, Mexico, Turkey and China sell generic semaglutide, and Canada's prices fell below US$60. Generic oral semaglutide is sold in ~180 countries. In the US, Paragraph IV settlements set the earliest generic semaglutide entry for 2033; tirzepatide is later.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Payer mix of ~63.7M users: commercial 29.0% (18.5M), Medicare 15.9% (10.1M), Medicaid 10.0% (6.4M), HRSA free provision 5.9% (3.75M), cash/direct 20.4% (13.0M), gray 18.8% (12.0M) = 100%. Managed decline: the January 2031 TrumpRx renewal, tied to tariff exemptions for US fill-finish investment, cut direct cash prices to $249 for semaglutide injection, $299 for tirzepatide, $149 for oral starter doses and $199–249 for oral maintenance (Foundayo, Wegovy pill). Brands hold the $150–300 band. Wegovy list stays $1,349; retatrutide list stays $1,499, still allocated, with no cash-portal price. Employer weight-management coverage fell from 57% to 48%. Plans keep paying on diabetes, cardiovascular, OSA, CKD and MASH codes, and on cessation (ACA mandate, 2×90-day courses) and AUD (parity), which they cannot drop. Commercial users therefore rose only slightly, 17.8M→18.5M, while weight-only users moved to cash ($199–299) or gray. Gray prices: 503A 'personalised' compounded semaglutide $99–199; Indian mail pens $6–40 plus shipping; research-use retatrutide $100–200. As the branded cash price fell, the gray market's price advantage narrowed, but more people lost coverage, so its share held. The 'focus/calm' wellness subscriptions shrank to ~1.1M after the anhedonia label; they are counted inside cash."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. US generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, Apr 2029)",
+        "smoking cessation adjunct (semaglutide, Mar 2029)",
+        "alcohol use disorder (semaglutide, Jun 2030)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' / longevity regimens with DEXA and strength coaching, concentrated in the top income third",
+        "low-dose oral 'quiet' subscriptions, now shrinking and carrying the anhedonia label language in their consent screens",
+        "semaglutide for ages 6–11 under pediatric endocrinology (only liraglutide is labelled)",
+        "gambling, compulsive shopping and cannabis reduction, still anecdotal and unlabelled",
+        "research-peptide retatrutide for 'recomposition' in gyms",
+        "planned 'dose holidays' around weddings, holidays, pitches and performances, common but not on any label"
+      ],
+      "pipeline_note": "FICTIONAL. No new class reached market (driver: none), and no new indication was added (driver: none). MariTide (monthly) received a complete response letter in Jul 2031 citing dose-escalation tolerability data and device questions. It was resubmitted in Feb 2032, with an action date not before 2033. Survodutide's resubmission went to an advisory committee in Nov 2031 on hepatic signals; FDA requested an additional liver-safety cohort, and a decision is expected no earlier than 2033. Amycretin was resubmitted in Mar 2031 after Novo's North Carolina site cleared reinspection. Its review was extended by a major amendment, and the action date is 2033. Bimagrumab combinations remain in phase 3. No sNDA for gambling disorder has been filed or approved in this window. Incretin market ≈$140B in 2032. US volume rose ~27% while net price fell ~15–20%, so US revenue was roughly flat to slightly up, and ex-US generic erosion continued."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. It now also spikes at restarts after dose holidays (see below).",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and intestinal obstruction (mass tort)",
+        "status": "established",
+        "prevalence_note": "Delayed gastric emptying on drug is established. Persistence after discontinuation is still disputed. MDL 3094 passed ~55,000 filed and tolled claims; growth slowed as claimant advertising shifted to anhedonia failure-to-warn.",
+        "regulatory_response": "Ileus labelled. FDA still declines to label persistent gastroparesis. Settlement talks are reported after a split record in the bellwethers."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; absolute numbers rising with user base and research-peptide retatrutide.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Low absolute risk, and causal confirmation is still missing. A defense verdict in the Apr 2032 pancreatitis bellwether weakened that claim pool.",
+        "regulatory_response": "Labelled; claims remain in MDL 3094."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Remains a population problem in 65+, ~1.5× sarcopenia criteria after >2 years. Concentrated in unmonitored, low-protein, low-efficacy and gray-market users.",
+        "regulatory_response": "2028 class label stands. The Bridge counselling visit is retained; HRSA still has no body-composition requirement."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "HR ~1.3–1.4 in 65+ long-term and cycling users, concentrated in women. Pediatric bone-accrual registry interim data are underpowered and have not been reported.",
+        "regulatory_response": "DEXA recommended in 65+ and postmenopausal women; pediatric study ongoing."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohort studies still conflict; very low absolute risk.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association. Explicitly separated from anhedonia in the 2031 label review.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening (anhedonia)",
+        "status": "established",
+        "prevalence_note": "The retatrutide postmarketing study and a pooled semaglutide/tirzepatide analysis used a validated anhedonia scale (SHAPS). Clinically meaningful reduced pleasure occurred in ~6% of patients treated ≥1 year at maintenance doses, against ~2% on placebo. The rate is dose-dependent, reaching ~9% at the highest retatrutide dose and ~3% on liraglutide, and is usually reversible within 4–8 weeks of dose reduction or stopping. Self-report surveys still find 10–15% with 'some' reduced pleasure.",
+        "regulatory_response": "Class labelling change in Jun 2031 adds anhedonia to Warnings and Precautions and Adverse Reactions with the prevalence figures, and advises dose reduction. A Medication Guide line is added for adolescent and pediatric labels. FTC and FDA joint letters say 'calm/focus' marketing must now carry the label risk."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Now driven heavily by coverage loss after employer exits, alongside the cessation cap and Medicaid lockouts.",
+        "regulatory_response": "Indiana waiver litigation unresolved; no federal rule."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein signals persist in older and low-income users.",
+        "regulatory_response": "Professional guidance only."
+      },
+      {
+        "effect": "Long-horizon, adolescent, pediatric and cycling effects",
+        "status": "emerging",
+        "prevalence_note": "About ten years of adult and nine years of adolescent follow-up. About 130k children aged 6–11 are on drug, and the anhedonia label now applies to them with no pediatric-specific prevalence.",
+        "regulatory_response": "Pediatric registry continues; FDA requests a pediatric anhedonia substudy."
+      },
+      {
+        "effect": "Compounded, counterfeit and research-peptide harms",
+        "status": "established",
+        "prevalence_note": "Poison-centre incretin calls are up another ~30% since 2030, with the same dosing errors and purity unknowns.",
+        "regulatory_response": "Warning letters and import alerts continue; still no prosecution of individuals."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; more common in research-peptide users.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Dose-holiday restart GI events",
+        "status": "emerging",
+        "prevalence_note": "Users who resume full maintenance dose after 2–6 weeks off, often to recover from 'the grey' or for an event, report severe vomiting and dehydration. ED visits linked to restarts are rising in claims data.",
+        "regulatory_response": "The 2031 label update adds re-titration guidance after missed doses beyond two weeks; clinicians' groups issue holiday protocols."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With nearly one adult in four on the drug, US snack, confectionery and sugary-drink volumes keep falling, at about the 2028–30 pace. Majors have mostly finished divesting indulgent brands to private equity, which runs them for cash and for export. Single-serve, high-protein and smaller-pack formats are now the default shelf. Middle-income users who lost coverage moved to cheaper cash orals, and they buy protein shakes at discount grocers rather than in specialty stores.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Spirits and beer volumes fall further as AUD parity coverage persists. Non-alcoholic lines now hold double-digit shares in some bar chains. State excise forecasts build in incretin penetration as a standard variable.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Smaller default portions, half-plate menus and per-course pricing are standard in casual dining. Value-volume chains have stopped shrinking after two years of closures because they cut portion costs. Alcohol attach rates are still falling.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Wide size runs and alteration services are standard. Plus-size is a smaller but stable niche, and sales of 'transition' clothing for people regaining after coverage loss show up in discount channels.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength-and-DEXA studios keep expanding. Low-cost gyms add 'muscle maintenance' classes aimed at cash and HRSA users. Gym-floor research-peptide sales persist.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight-management coverage falls to 48%, with large self-insured retailers and state employee plans dropping it first. Coverage concentrates on diabetes, cardiac, OSA, CKD and MASH codes and on the legally required cessation and AUD benefits, which plans gate with stricter AUDIT documentation. Pharmacy trend slows to ~+7% as prices step down.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "US volume is up, US net price down and revenue roughly flat to slightly up. Lilly is still the leader; Novo is stabilised after reinspection. Both face anhedonia failure-to-warn filings and are reserving for an MDL settlement. Generic liraglutide contractors are on thinner margins after HRSA rebid at $60.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on it is the default and is no longer read as a disclosure. Being off now needs explaining: pregnancy, a holiday, a lapsed quit course, a lost plan, a principle. People still read the finish (muscle, skin, the speed of the loss) as a sign of who pays, but less pointedly, because cash prices of $199–299 put branded product within reach of the middle third.",
+      "thinness_and_class": "Thinness is no longer a class signal, but muscle and bone are. In Columbus, Ohio, the state employee plan and two large retail headquarters dropped weight coverage in 2031–32, and middle-income women aged 50–64 have moved en masse from covered tirzepatide to $199 cash Foundayo or compounded pens. 'Columbus cash' is local shorthand. Their bodies look much like their managers' bodies; their DEXA reports do not, because they have none.",
+      "eating_as_ritual": "The small plate is the default plate. Thanksgiving recipes are published in 'on-table' quantities. Parents of children on liraglutide trade school-lunch scripts in online groups. A full plate eaten with gusto reads as either off-drug or on a holiday.",
+      "dating_and_intimacy": "Dating profiles have mostly stopped naming the molecule, since everyone is assumed to be on something. 'Off' is now the disclosure. After the label change, 'are you grey?' is a common, gentle question on second dates.",
+      "meaning_of_appetite": "Appetite is still a clinical variable, but the anhedonia label made people discuss lost pleasure in the same terms as lost hunger. Wanting something intensely is either a sign of being off-dose or a symptom someone has chosen to keep.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Labelled prevalence (Jun 2031): ~6% clinically meaningful anhedonia at ≥1 year on maintenance doses versus ~2% on placebo. Dose-dependent, up to ~9% on high-dose retatrutide and ~3% on liraglutide. Applied to ~63.7M users at a ~4-point excess, that is roughly 2–3M Americans with drug-attributable clinically meaningful anhedonia, and many more with milder self-reported flattening (10–15% in surveys). About 30% of users on drug for over a year report at least one planned dose holiday in the past year.",
+      "framing": "It is now a side effect with a number attached. 'The grey' is everyday speech, and pharmacists ask about it at refill. Wellness brands that once sold 'quiet' now advertise 'adjustable quiet' with clinician dose-tuning. The wider public treats it as a known trade-off, like the drowsiness on an antihistamine label.",
+      "effect_on_work": "Most finance and logistics employers quietly ended 'focus' subscription perks after the label change, on counsel's advice about liability. Sales, legal and creative staff schedule dose holidays around pitches and trials, and HR calendars informally avoid restart weeks. Trucking still leans on tirzepatide for DOT apnea clearance, and drivers are told not to take holidays. Union contracts add the right to dose adjustment without disclosure.",
+      "effect_on_art_and_play": "'Off-dose' is no longer a selling point because it is ordinary; artists simply say when they went off. Festival season brings a visible bump in holiday restarts and in ED visits. Sports betting handle has stabilised at a lower level. Karaoke, sauna culture and short intense experiences continue.",
+      "effect_on_intimacy": "Sex therapists use the label figure in intake. Couples schedule 'holiday weekends', and the restart nausea afterwards has become its own running joke. Partners who stay off sometimes feel they are carrying the emotional range of the relationship alone.",
+      "effect_on_politics": "Parent groups petition about the anhedonia language on the 6–11 label and ask whether children can report 'the grey' at all. Plaintiffs' firms run anhedonia failure-to-warn ads. Employer coverage exits are a midterm issue in Ohio and Michigan. Candidates are no longer asked whether they are 'on'; reporters ask whether they are off, and why.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "No new state programmes or indications. The FDA's main act was the anhedonia class label in Jun 2031. It is cautious on next-generation approvals (MariTide CRL, survodutide extra cohort, amycretin extension), and its enforcement against the gray market is still selective.",
+      "subsidy_or_mandate": "Existing programmes continue unchanged in structure. The Medicare Bridge was extended through 2033 at $245/$50. HRSA is flat-funded at $4.5B through continuing resolutions. The ACA cessation mandate and AUD parity still bind commercial plans. There is no mandate to take the drug.",
+      "conditioning_or_surveillance": "The Indiana and Arkansas waivers are unchanged and the three pending applications are not approved. HRSA sites still require only refill pickup. Plans now require AUDIT re-scoring at each 90-day AUD renewal, and adherence gating continues.",
+      "workforce_or_military": "The DOT apnea pathway is unchanged. Army recruit policy is unchanged. The VA continues semaglutide for AUD and adds anhedonia screening (PHQ plus SHAPS) to its follow-up protocol.",
+      "geopolitics_of_supply": "The January 2031 TrumpRx renewal exchanged lower cash prices for tariff exemptions tied to US fill-finish investment. Indian generic tirzepatide (2031) adds a cheaper gray-market product, and Indian API still feeds 503A compounders. US generic entry, set for 2033, is now in negotiators' forward models.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-01",
+        "event": "Renewed TrumpRx agreement cuts direct cash prices: semaglutide injection to $249, tirzepatide to $299 and oral starter doses to $149, with Lilly and Novo receiving Section 232 tariff exemptions in exchange for US fill-finish commitments",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2031-06",
+        "event": "FDA class labelling change adds anhedonia to Warnings and Precautions for all incretin agents, citing ~6% clinically meaningful reduced pleasure at ≥1 year versus ~2% on placebo, dose-dependent, with new re-titration guidance after missed doses",
+        "driver": "safety_signal: anhedonia_labelled"
+      },
+      {
+        "date": "2031-07",
+        "event": "FDA issues a complete response letter for Amgen's monthly MariTide over dose-escalation tolerability and device data; Amgen says it will resubmit, with a decision not expected before 2033",
+        "driver": "next_gen_launch: none"
+      },
+      {
+        "date": "2031-09",
+        "event": "Annual employer benefits survey finds weight-management coverage down to 51%, from 57%; Ohio's state employee plan and two national retailers announce they will cover incretins only on diabetes, cardiac and other non-weight codes from Jan 2032",
+        "driver": "coverage_shift: employer_retreat"
+      },
+      {
+        "date": "2031-12",
+        "event": "Year-end funding package extends the Medicare GLP-1 Bridge through 2033 with the payment cut from $275 to $245 a month and the $50 copay unchanged; HRSA's incretin programme is carried at a flat $4.5B under the continuing resolution",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2032-04",
+        "event": "Jury returns a defense verdict in the first pancreatitis bellwether in MDL 3094; days later plaintiffs' firms begin national advertising for anhedonia failure-to-warn claims covering use before June 2031",
+        "driver": "baseline"
+      }
+    ],
+    "open_tensions": [
+      "Employers have dropped weight coverage, but the ACA cessation mandate and AUD parity still force them to pay for the same molecule under other codes. Middle-income users without coverage moved to $199–299 cash or gray pens with no monitoring, and plans tighten AUDIT gating while plaintiffs and regulators watch for indication shopping.",
+      "The anhedonia label now covers 63.7M users, including ~130k children aged 6–11 with no pediatric prevalence data, and it opens a failure-to-warn tort front just as the MDL heads toward settlement. Clinicians' answer is to lower the dose, and that collides with pay-for-adherence waivers and with payers that pay per maintenance fill.",
+      "US generic semaglutide entry is set for 2033. Medicare's $245 benchmark, HRSA's flat $4.5B and the gray market's whole price advantage all depend on what happens to the price when it arrives, and no programme has been rebudgeted for it.",
+      "Dose holidays are now normal practice but are not in any label as a regimen. Restart GI emergencies are rising, and the bone and muscle effects of repeated short cycles are not studied."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Retatrutide still lists at $1,499 a month, is supply-allocated, has no TrumpRx cash price, and carries its bone and body-composition monitoring section.",
+      "Indiana's and Arkansas's 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins with a 12-month lockout after two misses, and the disability-rights challenge is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "Sixty-Four Million On, and Now the Label Says It: The Grey Is Real, and Being Off Is What You Explain",
+    "world_in_600_words": "By the end of 2032 almost one American adult in four takes an incretin drug, about sixty-four million people. Nothing dramatic drove that. The drugs got somewhat cheaper. In January 2031 the White House renewed its cash-portal deal with Lilly and Novo, trading tariff exemptions for factory commitments. Semaglutide fell to $249 a month, tirzepatide to $299 and the starter pill to $149. Wegovy's list price is still $1,349, retatrutide still lists at $1,499 and is still rationed, and almost nobody pays either figure.\n\nCheaper drugs arrived just as employers stopped paying for them. Fewer than half of employers now cover the drugs for weight. The rest cover them only for diabetes, heart disease, sleep apnea, kidney disease and fatty liver, and for the two things the law will not let them refuse: quitting smoking and treating alcohol use disorder. In Columbus, Ohio, the state employee plan and two retail headquarters dropped weight coverage at once. Thousands of women in their fifties now pay $199 out of pocket for a pill they used to get for a copay, or buy a compounded pen online for less. Locals call it Columbus cash. Their bodies look like their bosses' bodies. Their DEXA scans, where they have them, do not.\n\nThe public programmes have not changed. Congress extended the Medicare bridge benefit through 2033 and cut the federal payment to $245 a month, and the copay is still fifty dollars. The free clinic programme for low-income adults runs on a flat $4.5 billion that is renewed one continuing resolution at a time, and it reaches more people only because generic liraglutide got cheaper. Indiana's weigh-in kiosks still decide who keeps Medicaid coverage. About twelve million people use gray-market product, from compounded pens to Indian mail-order generics to gym-bag vials.\n\nThe largest change of the period is a paragraph on the label. In June 2031, after a decade of complaints that the drug took the colour out of things, the FDA added anhedonia to every incretin label. About six percent of long-term patients lose a clinically meaningful share of their capacity for pleasure, compared with two percent on placebo. The figure rises with dose and usually reverses within weeks of cutting back. Most users had suspected as much. The label gave the effect a number, and the number changed how people talk about it. Pharmacists ask about 'the grey' at refill. Wellness brands that used to sell quiet now sell adjustable quiet. Employers who paid for focus subscriptions quietly stopped, on their lawyers' advice. Parents whose six-year-olds take liraglutide read the new Medication Guide and wonder whether a child would even know to complain.\n\nPeople have responded to the label by stepping down a dose or taking time off the drug. About three in ten long-term users take planned dose holidays, for a wedding, a trial, a tour or an anniversary weekend. The holidays have a cost of their own: people who restart at full dose end up in emergency rooms vomiting, and the label now carries re-titration instructions that many people skip.\n\nBeing on the drug no longer says anything about a person. Being off needs a reason: a pregnancy, a lapsed quit course, a lost plan, a principle. Dating profiles have stopped naming the molecule, and 'off' is the disclosure that matters. Restaurants plate smaller by default. Spirits makers keep cutting guidance. Snack brands now belong to private equity.\n\nThe courts are moving to a second front. A jury rejected the first pancreatitis bellwether in April, and within a week the plaintiffs' firms were running anhedonia ads. Next-generation drugs keep stalling at the FDA. Generic semaglutide is promised for 2033, and no budget has been planned around it. From a distance, the country looks calm and lean and drinks less. Up close, a lot of people are adjusting their dose to manage how they feel.",
+    "a_day_in_the_life": "Dana Kowalczyk, fifty-three, takes her Foundayo at 6:10 with half a cup of coffee. She stands at the counter because the bottle is the cash kind now, $199 on the card that also pays for gas. The leaflet stuck to the cabinet door has a sentence she underlined in January: reduced capacity for pleasure, approximately 6%.\n\nAt the claims centre off Morse Road the break room holds four protein shakes and one cake. The cake is for Rhonda, whose coverage carried her through tirzepatide until the plan dropped it. Rhonda takes a real slice. Someone asks, kindly, if she's off. 'Holiday,' Rhonda says. 'Grandson's baptism.' Everyone nods.\n\nAt lunch Dana calls the telehealth line and asks to drop a dose for three weeks. Her daughter Kayla is getting married on the twenty-first. The nurse practitioner says fine, and tells her to come back up slowly afterwards, not all at once. 'People skip that part,' she says. 'Then we see them in the ER.'\n\nAfter work Dana drives to Kayla's apartment to taste the cake samples. There are three, each the size of a domino. Kayla's fiancé Marcus has never been on anything. He eats all three and goes back for the lemon. Dana watches him the way she watches people at the airport.\n\n'You okay, Mom?'\n\n'I'm thinking about the lemon.'\n\nShe means it. That is the strange part. On the drive home she rolls the window down at a light and smells someone's grill, and for a second the smell is very loud. She writes the date in her phone, as if it were a symptom."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L1-r07-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Commercial users therefore rose only slightly, 17.8M→18.5M, while weight-only users moved to cash ($199–299) or gray.",
+          "field": "world/access/note",
+          "why": "mechanism: Employer weight coverage fell 9 points (57% to 48%), yet commercial users still rose. The offset from cessation and AUD codes is asserted, not sized, so the net effect is a convenient coincidence."
+        },
+        {
+          "quote": "That is 60% two-year persistence, up from ~50%, because cheaper cash prices and normalisation reduced voluntary stops.",
+          "field": "world/population/note",
+          "why": "mechanism: Persistence rises ten points in the same window as mass coverage loss, a 30% dose-holiday rate and a label that tells users to cut their dose. The world itself calls weight regain after coverage loss 'driven heavily' by those exits, so the persistence gain contradicts it."
+        },
+        {
+          "quote": "In the US, Paragraph IV settlements set the earliest generic semaglutide entry for 2033; tirzepatide is later.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "mechanism: The parent had US exclusivity running to ~2031–32. The candidate pushes entry to 2033 through settlements that appear in no event and are never explained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 64M adults are on the drug. Middle-income users who lost employer coverage move to unmonitored cash or gray product (Columbus cash, no DEXA). Dose-holiday restart ED visits are rising, 130k 6–11-year-olds carry the new label with no pediatric data, and the weight-regain and bone/muscle problems persist. Normalisation makes 'off' something to explain. The anhedonia label (~6% vs ~2% placebo) names the harm and so lowers the epistemic score, and thinness stops being a class signal, which narrows one inequality channel. The world is a harder society with new losers (coverage-loss cyclers), not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible. The adoption delta is 23.6; managed decline shows as $249/$299/$149 cash prices and the $245 Bridge rate; employer coverage falls to 48%; the anhedonia label is Jun 2031; the pipeline has CRLs and no launch; there are no new indications. The only wobble is that HRSA renewal and the Bridge extension, with its payment cut, sit awkwardly beside state_action none. mechanism: Most chains are shown, such as price cuts to cash migration and the label to dose holidays to restart GI events. The claims above are asserted: commercial users rising despite the employer exits, persistence rising to 60%, and generic entry moving to 2033 through unshown settlements. magnitude: Everything is inside the envelope: 23.6% on, 32.0% ever, and the income and age bands bracket the national figure and sum correctly. The payer mix sums to 100%. The Medicare, Medicaid and HRSA dollar figures multiply out. The population ledger reconciles (8.4 off, 52% restart, 39% cycled, +27% volume), with only minor looseness on the first-time-restarter count.",
+        "generativity": "The prose has concrete scenes: Dana at the counter with her $199 Foundayo, the break-room cake and 'Holiday', the lemon cake sample and the smell of the grill. It also supplies a run of everyday phrases ('the grey', 'Columbus cash', 'are you grey?') and implied characters such as the nurse practitioner, Rhonda and Marcus. Daily life has real texture, and the world fields (dose-holiday HR calendars, festival ED bumps) supply many more scenes."
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s3-L1-r07-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "That is 60% two-year persistence, up from ~50%, because cheaper cash prices and normalisation reduced voluntary stops.",
+          "field": "world/population/note",
+          "why": "Mechanism: persistence rises 10 points while employer coverage falls 9 points and the ledger says regain is 'driven heavily by coverage loss'. The candidate asserts the offsetting effect without showing it is larger."
+        },
+        {
+          "quote": "Commercial users therefore rose only slightly, 17.8M→18.5M, while weight-only users moved to cash ($199–299) or gray.",
+          "field": "world/access/note",
+          "why": "Mechanism: a 9-point fall in employer weight coverage and weight-only users leaving for cash sits oddly with commercial users still rising. The mandates are asserted to offset the loss, with no sizing shown."
+        },
+        {
+          "quote": "Medicare pays ≈15.9% of incretin fills ≈ 10.1M users (≈9.6M of 9.9M users aged 65+, plus ~0.5M disabled under-65).",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: this puts about 97% of 65+ users on Medicare. That leaves almost none of them in commercial retiree, cash or gray channels, even though cash and gray use is rising in every other group."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Use rises to 63.7M, about 12M of them on gray product, and employers drop coverage. Middle-income women in 'Columbus cash' lose DEXA monitoring, 130k children aged 6–11 are on drug, and restart ED visits are rising (safety_ledger). Inequality is partly offset because cash prices fall and thinness stops being a class signal. Epistemic harm shrinks because anhedonia is now measured and labelled, with the figure of about 6% against 2% on placebo. The result is a harder but more legible society, so no dimension rises above about 5.",
+        "plausibility": "driver_fidelity: adoption_delta is exact (18.8→23.6), and managed_decline, employer_retreat, the anhedonia label, mainstream_complaint and normalisation each appear in fields and events. No new indication, launch or state programme is added, though the Bridge cut and the HRSA rebid sit close to state action. mechanism: the price and coverage chains are shown, but the 60% persistence rise and commercial users still growing despite the coverage cut are asserted (claims 1 and 2), and the label timing is fast. magnitude: every figure sits inside the envelope, and the age-band, income-third, cohort, payer-mix, Bridge, Medicaid and HRSA arithmetic all reconcile. The weak spot is 9.6M of 9.9M 65+ users on Medicare (claim 3).",
+        "generativity": "The Dana Kowalczyk scenes show rather than explain: the $199 card, the break-room cake, the 'Holiday' exchange and the lemon cake sample. The world has plenty of texture, including 'Columbus cash', the 'are you grey?' question, holiday restart jokes and HR calendars that avoid restart weeks. One prose beat is slightly off: the smell becomes vivid hours after she asks to cut her dose, though the label says reversal takes 4–8 weeks."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s3-L1-r07-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "That is 60% two-year persistence, up from ~50%, because cheaper cash prices and normalisation reduced voluntary stops.",
+          "field": "world/population/note",
+          "why": "Mechanism: persistence rises 10 points while the same world has an anhedonia label, employer coverage dropping from 57% to 48%, and weight regain 'driven heavily by coverage loss'. The stated cause (cheaper cash, normalisation) is asserted against forces the candidate itself says push users off the drug."
+        },
+        {
+          "quote": "In the US, Paragraph IV settlements set the earliest generic semaglutide entry for 2033; tirzepatide is later.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: no event shows any settlement. The parent says exclusivity runs to ~2031–32, and Paragraph IV settlements normally set entry before expiry, so a 2033 date contradicts the parent and looks inserted to set up a later tension."
+        },
+        {
+          "quote": "Commercial users therefore rose only slightly, 17.8M→18.5M, while weight-only users moved to cash ($199–299) or gray.",
+          "field": "world/access/note",
+          "why": "Mechanism: employer weight coverage fell nine points, yet commercial users still grew in absolute terms. The mandate-driven counterweight (cessation, AUD) is asserted, not quantified, and the 2030 cessation/AUD expansion was a one-off, with no new indications in this window."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 64M users, coverage loss that pushes the middle third onto unmonitored cash and gray product, restart ED visits from dose holidays, and 130k children on a label with no pediatric anhedonia data make a harder society. The inequality gap shifts from thinness to DEXA and muscle rather than closing. Epistemic harm is lower than in 2030 because anhedonia is now measured, labelled and discussed, and the label itself gives people a way to talk about it. Sarcopenia and fracture risk persist, and there is no new regime-level catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption is 23.6, managed decline is the Jan 2031 TrumpRx cut and the Bridge step-down, employer retreat is 57→48, and the Jun 2031 anhedonia label, normalisation, the mainstream_complaint layer, and no new indications, launches or shocks all appear. Extending existing programmes at flat or lower funding is a reasonable reading of state_action none. mechanism: Most chains are shown, such as the cash price cuts leading to middle-third cash use and the label leading to dose holidays and restart GI events. Claims 1–3 are weak: persistence rising despite coverage loss and the label, an unevidenced Paragraph IV settlement that conflicts with the parent's exclusivity dates, and commercial users growing despite employer exits. magnitude: Adult use (23.6), ever-use (32.0), and the income and age bands all sit inside the envelope. The payer mix sums to 100% and matches user counts. The Bridge ($9.4B), Medicaid ($18.8B) and HRSA ($4.47B) figures multiply out, and the cohort arithmetic closes. Remaining gaps are minor: the unevidenced 3.6-point first-time-restart figure and Medicare covering 9.6M of 9.9M older users.",
+        "generativity": "Dana, Rhonda, Marcus and Kayla, and the Morse Road break room and the 6:10 pill with coffee give concrete scenes. Details such as 'Columbus cash', 'are you grey?', dose-holiday ED spikes and HR calendars avoiding restart weeks suggest many more stories. The lemon-cake smell ending shows an effect without explaining it."
+      },
+      "plausibility": 8.0
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Commercial users therefore rose only slightly, 17.8M→18.5M, while weight-only users moved to cash ($199–299) or gray.",
+        "field": "world/access/note",
+        "why": "mechanism: Employer weight coverage fell 9 points (57% to 48%), yet commercial users still rose. The offset from cessation and AUD codes is asserted, not sized, so the net effect is a convenient coincidence."
+      },
+      {
+        "quote": "That is 60% two-year persistence, up from ~50%, because cheaper cash prices and normalisation reduced voluntary stops.",
+        "field": "world/population/note",
+        "why": "mechanism: Persistence rises ten points in the same window as mass coverage loss, a 30% dose-holiday rate and a label that tells users to cut their dose. The world itself calls weight regain after coverage loss 'driven heavily' by those exits, so the persistence gain contradicts it."
+      },
+      {
+        "quote": "In the US, Paragraph IV settlements set the earliest generic semaglutide entry for 2033; tirzepatide is later.",
+        "field": "world/access/generic_rest_of_world",
+        "why": "mechanism: The parent had US exclusivity running to ~2031–32. The candidate pushes entry to 2033 through settlements that appear in no event and are never explained."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 4.67,
+      "inequality": 5.0,
+      "public_health": 5.17,
+      "cohesion": 4.67,
+      "epistemic": 3.5,
+      "overall": 4.9
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.5,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.9,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "About 64M adults are on the drug. Middle-income users who lost employer coverage move to unmonitored cash or gray product (Columbus cash, no DEXA). Dose-holiday restart ED visits are rising, 130k 6–11-year-olds carry the new label with no pediatric data, and the weight-regain and bone/muscle problems persist. Normalisation makes 'off' something to explain. The anhedonia label (~6% vs ~2% placebo) names the harm and so lowers the epistemic score, and thinness stops being a class signal, which narrows one inequality channel. The world is a harder society with new losers (coverage-loss cyclers), not a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visible. The adoption delta is 23.6; managed decline shows as $249/$299/$149 cash prices and the $245 Bridge rate; employer coverage falls to 48%; the anhedonia label is Jun 2031; the pipeline has CRLs and no launch; there are no new indications. The only wobble is that HRSA renewal and the Bridge extension, with its payment cut, sit awkwardly beside state_action none. mechanism: Most chains are shown, such as price cuts to cash migration and the label to dose holidays to restart GI events. The claims above are asserted: commercial users rising despite the employer exits, persistence rising to 60%, and generic entry moving to 2033 through unshown settlements. magnitude: Everything is inside the envelope: 23.6% on, 32.0% ever, and the income and age bands bracket the national figure and sum correctly. The payer mix sums to 100%. The Medicare, Medicaid and HRSA dollar figures multiply out. The population ledger reconciles (8.4 off, 52% restart, 39% cycled, +27% volume), with only minor looseness on the first-time-restarter count.",
+      "generativity": "The prose has concrete scenes: Dana at the counter with her $199 Foundayo, the break-room cake and 'Holiday', the lemon cake sample and the smell of the grill. It also supplies a run of everyday phrases ('the grey', 'Columbus cash', 'are you grey?') and implied characters such as the nurse practitioner, Rhonda and Marcus. Daily life has real texture, and the world fields (dose-holiday HR calendars, festival ED bumps) supply many more scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 4.735,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 42
+  }
+}

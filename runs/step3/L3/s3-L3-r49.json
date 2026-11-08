@@ -1,0 +1,529 @@
+{
+  "run_id": "s3-L3-r49",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L3",
+  "seed": 20261107,
+  "run_index": 49,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 0.7,
+    "price_path": "managed_decline",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [
+      "compulsive_behaviour"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "none",
+    "cultural_response": "class_stratification",
+    "state_action": "benefits_conditioning",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L3-r49",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17678,
+        "output_tokens": 20888
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r49-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25714,
+        "output_tokens": 5795
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r49-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25714,
+        "output_tokens": 6544
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L3-r49-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 25714,
+        "output_tokens": 9077
+      }
+    ]
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived, and Congress has not reopened the ~$41B CBO-scored permanent benefit. Medicare still excludes weight loss as such.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 18.3,
+      "us_adults_ever_used_pct": 28.4,
+      "by_income_third_pct": {
+        "top": 24,
+        "middle": 18.5,
+        "bottom": 12.5
+      },
+      "by_age_band_pct": {
+        "18_29": 11,
+        "30_49": 18.5,
+        "50_64": 27.5,
+        "65_plus": 15
+      },
+      "pediatric_under_18_on_drug_pct": 1.2,
+      "cycled_off_and_on_pct": 45,
+      "note": "FICTIONAL. Persistence arithmetic: 28.4% ever-used minus 18.3% current leaves 10.1% of adults who used a drug and are off now. Restarters are ~56% of current users (10.25 pts), and ~2.5 pts cycled and are off again, so 12.75 / 28.4 ≈ 45% of ever-users have cycled. The remaining ~7.6 pts stopped once and never restarted. That fits one-year persistence near one-third and 36–47% restarting within a year. Short-half-life orals make restarting easier but also make stopping easier, so the share barely moves. Age check: 0.20×11 + 0.33×18.5 + 0.24×27.5 + 0.23×15 ≈ 18.35. Income: (24 + 18.5 + 12.5)/3 ≈ 18.3. Users: 18.3% × ~270M adults ≈ 49.4M. FICTIONAL payer mix: commercial ~12.4M (25%, down from 13.6M as employers retreat); Medicare ~10.4M (21%, of which ~1.8M on the CVD-linked dementia-risk route); Medicaid ~3.7M (7.5%); legitimate cash through TrumpRx or direct ~17.5M (35.5%); imported or counterfeit ~5.4M (11%). Sum: 49.4M. Bottom-third use rose only 0.5 pt, because cheaper legitimate orals moved some gray-market users into TrumpRx rather than adding new ones. Never-users: ~24% of adults have obesity and have never used a drug, unchanged, so the untreated share is still larger than the medicated share. Gambling-disorder code (since Mar 2032): ~220k users, counted inside the payer totals above (~150k commercial, ~20k Medicare, ~30k Medicaid, ~20k cash). Pediatric: ~3.2% of 12–17s (~800k) and ~0.4% of 6–11s (~95k, mostly generic liraglutide) ≈ 1.2% of under-18s. The first under-12 cohort is now three years in, with no bone data reported yet."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare covers ~10.4M users through diabetes, CV, CKD, OSA and CVD-linked dementia-risk codes, and since Mar 2032 also through gambling disorder (Foundayo, a medically accepted indication, behind prior authorisation). FICTIONAL arithmetic: 10.4M × ~$235 average net/month × 12 ≈ $29.3B gross Part D incretin spend before rebate true-up. The dementia route is 1.8M × ~$245 × 12 ≈ $5.3B. Spend is roughly flat against 2030's $29.7B because more users offset lower net prices. Medicaid: ~3.7M users, mostly on diabetes codes. 11 states cover weight-loss use at the ~$245 rate. 6 of those (the two from 2030 plus Georgia, Missouri, Indiana and South Carolina under Sept 2031 1115 waivers) make coverage conditional on ≥80% verified adherence and ≥5% weight loss at month 6, with ~420k enrollees under conditions. EPSDT still pulls children's liraglutide in case by case.",
+      "employer_coverage_pct": 30,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide, now including oral tablets, sells for $5–35 a month across 90+ brands. Chinese makers sell tirzepatide analogues where patents lapsed or were never filed. Canadian generic semaglutide runs CAD 45–85. India and China supply most of the world's incretin volume, and the US-to-India cash gap is still roughly 40×.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. Employers covering weight management fell 36% → 30% (Business Group on Health, Nov 2031). Another ~11% cover only through monitored metabolic tracks, which hold ~5.0M enrollees inside the 12.4M commercial users. ~1.5M of them get clinic-administered monthly MariTide, because employers prefer a verifiable shot to a pill. Managed decline: in Sep 2031 Novo and Lilly cut TrumpRx maintenance prices again (Wegovy pill $249 → $199; Foundayo $149–229; injectable Zepbound/Wegovy $249–299). Oral amycretin launched Nov 2030 at a $1,299 list price and ~$299 cash, cut to $279 in Sep 2031. MariTide's cash price is still ~$299. Retatrutide holds a $1,299 list price, mostly on commercial formularies with prior authorisation. Orals are ~58% of users, up from 45%. Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration. The gray market adds Indian oral semaglutide tablets and 'research' amycretin to the vials, counterfeit pens and telegram-shop peptides."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (MariTide)",
+        "GLP-1/amylin unimolecular co-agonist, daily oral (amycretin, approved Nov 2030)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide). The extension to adults 60+ without CVD received a complete response letter in Jul 2031",
+        "moderate-to-severe gambling disorder in adults (orforglipron: Foundayo, Mar 2032), the first compulsion indication"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction via telehealth and EAPs (oral semaglutide AUD sNDA pending)",
+        "compulsive shopping, sexual compulsion and problematic gaming/screen use, prescribed under the gambling label's logic",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid",
+        "microdosing and 'step-down' dosing for steadiness without flatness",
+        "scheduled drug holidays on short-half-life orals (Foundayo 'weekends off')",
+        "semaglutide in under-12s with severe obesity (off-label)"
+      ],
+      "pipeline_note": "FICTIONAL. Oral parity is realised by Novo's daily oral amycretin. It had been under FDA review since its Oct 2029 filing at the start of the step and was approved Nov 2030 (13 months) at ~21% mean weight loss at 68 weeks, matching tirzepatide's labelled figure, with nausea early in titration. Retatrutide (~24%) is still the most efficacious drug. Weekly subcutaneous amycretin is still in phase 3, with filing expected 2033. The compulsion indication is realised through an existing product in a new population. Lilly's phase 3 gambling-disorder trial of orforglipron read out Nov 2030, the sNDA was filed Feb 2031, and it was approved Mar 2032 (13 months). The label's clinical-studies section reports reward-related measures, including anhedonia scale changes. Lilly's sNDA to extend the tirzepatide dementia claim to adults 60+ without CVD got a complete response letter in Jul 2031 that cited fracture-related benefit-risk and asked for confirmatory-trial data (expected 2033). Novo's oral semaglutide AUD trial read out positive in Apr 2031. The sNDA was filed Aug 2031 and its review was extended to Feb 2033 over questions about safety-sensitive occupations. Lilly filed bimagrumab + tirzepatide in Feb 2032, with no decision before 2033. Implants remain preclinical or phase 1. Global incretin market ~$160B (2031). US net prices keep drifting down a few percent a year."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Oral amycretin's titration nausea is comparable to tirzepatide's. Chronic diarrhoea in long-term users now triggers elastase testing.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation for acute pancreatitis; absolute risk low.",
+        "regulatory_response": "Labelled. Litigation now proceeds mainly on exocrine-insufficiency claims."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Hip-fracture HR holds at ~1.3 in users 65+ after more than 2 years and ~1.45 in people who have cycled three or more times. It was the stated basis for the Jul 2031 complete response letter on the dementia extension.",
+        "regulatory_response": "Class warning (Jul 2028) retained, and the DXA code is in wide use. Retatrutide and oral amycretin labels carry resistance-training and protein counselling."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low; no new data.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal, including in the gambling-disorder trial population.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: The FDA's postmarketing observational study reported in Oct 2031 at ~7% clinically meaningful anhedonia vs ~3% in controls, dose-related and ~10% on retatrutide, consistent with the 2029 cohort. The gambling-disorder trial measured reward-scale reductions as part of efficacy. Still no randomised data on anhedonia as a harm.",
+        "regulatory_response": "No class labelling. The Foundayo gambling label describes reward-scale changes in its clinical-studies section. The 2031 OMA/APA guidance endorses dose step-down and planned holidays."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Short planned holidays (days) show little regain. Abrupt loss of coverage under Medicaid conditioning produces the classic curve.",
+        "regulatory_response": "None directly; it underpins chronic-therapy framing and the waiver adherence rules."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency in low-intake users, and fat-soluble vitamin deficiency alongside EPI.",
+        "regulatory_response": "Annual micronutrient panels in professional guidance. Label language was added to semaglutide in Feb 2031 alongside the EPI warning."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The semaglutide estimate holds at ~4.1 vs ~1.9 per 1,000 person-years beyond year 5, with no new signal. Partial recovery of faecal elastase after stopping is reported in small series. Tirzepatide exposure beyond 5 years is only now accruing, so its rate is still unknown.",
+        "regulatory_response": "FDA added EPI to semaglutide Warnings and Precautions in Feb 2031. Tirzepatide and the newer agents carry precautionary language pending data. EMA PRAC concluded with similar wording."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of semaglutide follow-up now exist. Pediatric 6–11 bone and growth data are still unreported. Frequent short holidays on orals are a new exposure pattern that no study was designed around.",
+        "regulatory_response": "Pediatric bone-density and growth postmarketing requirements are pending, and the FDA has requested cycling-pattern analyses from sponsors."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: FDA adverse-event reports tied to non-approved product passed ~19,000 by mid-2032. Counterfeit oral tablets with wrong or absent drug are now common. Poison-centre calls are ~4.5× 2025 levels, with no mass-casualty batch in the window.",
+        "regulatory_response": "Import alert covers finished pens and tablets, and pens and blister packs are serialised. Personal-importation enforcement is still weak."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 35% of households have a user. Snack and confectionery volumes are down ~9–11% from 2025 and sugary drinks ~8%. Dollar sales are flat. The aisle has split further by zip code: protein and fibre lines in upper-income suburbs, value packs and private label in lower-income areas. Oral uptake shifts some demand toward pill-compatible fasting-morning products (protein coffee, 'first meal' shakes).",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~12% from 2025 and beer ~7%. A pending AUD label for oral semaglutide hangs over heavy-drinker demand. Non-alcoholic lines keep growing without restoring margin. Bars in mid-sized Midwestern cities keep closing, partly offset by 'holiday weekend' traffic among people skipping oral doses.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat and casual-dining checks are smaller. Fast-casual macro bowls sit alongside value-menu QSR growth in lower-income markets. Some upscale restaurants market 'holiday tasting menus' for Friday-off diners.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep contracting. Fitted athletic wear grows in the upper tier. Stretch, resale and rental serve cyclers and holiday-takers whose weight moves a few pounds week to week.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training and DXA scanning keep growing. Premium clubs charge $250–400 a month for scans and coaching. Budget gyms keep converting cardio floors to racks. Metabolic tracks bundle scans with clinic check-ins.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight coverage is down to 30%. Pharmacy trend is ~+6% as flat-net deals and lower nets offset volume. Mental-health parity has opened a gambling-disorder route that PBMs police with prior authorisation and diagnosis audits. Adherence-tied premium differentials keep spreading among mid-sized self-insured firms. Oral dominance pushes verification toward fill data and app photo check-ins. Part D premiums are rising modestly.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Novo regains US share with oral amycretin. Lilly leads on retatrutide and Foundayo's new gambling label. Amgen holds the clinic-administered monthly niche through MariTide, and Boehringer holds MASH. US net prices keep stepping down but brands hold above ~$150. Litigation and serialisation are a nine-figure cost line. Indian and Chinese generics dominate global volume.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Body shape still reads as income. Lean and muscled means covered, scanned and coached. Lean and soft means cash pills or the plant clinic. Regained over 50 means lost coverage, and now also a missed month-6 target under a Medicaid waiver. A slight weekly fluctuation has become a recognised upper-middle look: the person who takes weekends off.",
+      "thinness_and_class": "In Charlotte and Austin, lean-mass percentage is office gossip and DXA printouts circulate. On the Columbus logistics corridor, the monthly clinic shot persists because employers trust it more than pills. In Macon and Savannah, Georgia Pathways enrollees photograph their morning tablet for an app, and the month-6 weigh-in decides whether coverage continues. Bottom-third women 50–64 are still the most visible regainers. Upper-income children under 12 are a medicated cohort entering middle school.",
+      "eating_as_ritual": "Shared meals stay short and protein-forward. The fasting-morning rule for oral semaglutide (water, wait 30 minutes) has made the solitary first coffee a near-universal ritual. Friday-night 'holiday dinners', where some diners have skipped a dose, are a social form in upper-tier circles. The 'Bread Alone' fasting churches claim ~600 congregations, still strongest in Oklahoma and Arkansas.",
+      "dating_and_intimacy": "Apps keep 'lean-mass verified' badges as a premium feature and have added an 'on a holiday this weekend' status. With pills, couples schedule holidays rather than live with mismatch. Desire mismatch is now openly discussed, and less often hidden.",
+      "meaning_of_appetite": "Upper-tier culture treats appetite as adjustable, something to turn down on weekdays and up on Saturdays. In lower-income communities appetite is still a sign of lost access or a point of pride. The gambling label made the idea that the drug turns down wanting official, and the counter-movement (Unmuted, fat-acceptance revivalists, MAHA-adjacent influencers, fasting churches) now argues about what wanting is for.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: Clinically meaningful anhedonia in ~7% of users vs ~3% of controls (FDA observational study, Oct 2031), ~10% on retatrutide. Surveys suggest roughly a third of users report mild 'evenness', and roughly a quarter of oral users say they have taken a deliberate holiday or step-down in the past year.",
+      "framing": "Everyday speech calls it being 'flat', and 'going off for the weekend' is ordinary. Clinicians frame it as a dose-related, manageable side effect with step-down protocols. Lilly's gambling label frames reward reduction as the treatment. HR in large firms has quietly dropped 'steadiness' from competency language. Logistics and call-centre wellness vendors still use it.",
+      "effect_on_work": "About 5.0M employees are in adherence-verified tracks. Wellness vendors now argue over whether a clinician-approved holiday counts as non-adherence, and most added a 'documented holiday' code that requires a telehealth note. Columbus-area logistics and Texas and Indiana state plans keep monthly clinic MariTide partly because it cannot be skipped. One of the two EEOC ADA charges ended in a right-to-sue notice in 2031, and the private suit that followed is in discovery in the Southern District of Ohio. Shift-lead promotion still informally favours enrollees.",
+      "effect_on_art_and_play": "'Flat' is a mainstream comic register, with late-night bits about weekday faces and Saturday faces. Unmuted off nights in Detroit, Baltimore and Cleveland now draw holiday-takers as well as the unmedicated. Sportsbook wagering per active account is down further. Some operators' responsible-gaming pages link to telehealth prescribers, and Ohio's problem-gambling fund pilots Foundayo for self-excluded bettors. Shopping-compulsion and gaming-compulsion prescribing is a TikTok genre.",
+      "effect_on_intimacy": "Pills made holidays easy again. Couples plan 'off weekends' around anniversaries and travel, and therapists report fewer 'parallel lives' and more negotiating over whose holiday it is. Partners on monthly clinic shots cannot do this, and that asymmetry has become a recognised complaint.",
+      "effect_on_politics": "Benefits conditioning moved into Medicaid: legal-aid groups challenge the four new 1115 waivers in federal court, and the cases are pending. The gambling indication split the coalition. MAHA legislators attack 'drugging wanting', and the gaming industry stays quiet. Unmuted frames the waivers as a means-tested sedative mandate. Turnout effects are still unevidenced. The medicated and the regained keep living in different zip codes.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "The FDA keeps its pro-speed posture on routine approvals (oral amycretin; Foundayo for gambling) but issued the dementia-extension complete response letter on fracture benefit-risk and added EPI to semaglutide labels. Import rhetoric is unchanged and enforcement is still porous. Congress has created no coverage benefit.",
+      "subsidy_or_mandate": "No federal subsidy is new. TrumpRx runs on manufacturer-set prices, and the 2027 tri-agency 30% guidance stands. CMS approved Medicaid 1115 waivers in Georgia, Missouri, Indiana and South Carolina (Sep 2031) that condition weight-management coverage on ≥80% verified adherence and ≥5% weight loss at month 6, with a 12-month lockout on failure. That makes six conditioning states.",
+      "conditioning_or_surveillance": "Verification has shifted from clinic records to pharmacy fill data plus app photo check-ins for orals. Waiver states contract with the same wellness vendors employers use. Consent forms route data to vendors, and no new federal privacy rule has been issued. Illinois's ban is still the only state limit.",
+      "workforce_or_military": "TRICARE rules are unchanged. The Army recruit oral pilot continues. DOT's still-unresolved stance on alcohol-reduction use by drivers is now holding up the oral semaglutide AUD review.",
+      "geopolitics_of_supply": "India and China supply most of the world's incretin volume, now including oral generics. US–India trade talks keep CBP mail enforcement on the agenda without an agreement, and the ~40× price gap remains a Danish–US talking point.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2030-11",
+        "event": "FDA approves Novo Nordisk's daily oral amycretin after a 13-month review, the first pill to match tirzepatide's weight loss; launch cash price $299 a month",
+        "driver": "next_gen_launch: oral_parity"
+      },
+      {
+        "date": "2031-05",
+        "event": "Obesity Medicine Association and American Psychiatric Association issue joint guidance endorsing dose step-down and planned short drug holidays for patients reporting emotional flattening",
+        "driver": "personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2031-07",
+        "event": "FDA issues complete response letter on Lilly's bid to extend tirzepatide's dementia-risk claim to adults 60+ without heart disease, citing hip-fracture risk and awaiting confirmatory data",
+        "driver": "baseline"
+      },
+      {
+        "date": "2031-09",
+        "event": "CMS approves Medicaid waivers in Georgia, Missouri, Indiana and South Carolina tying weight-drug coverage to verified adherence and 5% weight loss at six months; legal-aid groups sue",
+        "driver": "state_action: benefits_conditioning"
+      },
+      {
+        "date": "2031-11",
+        "event": "Business Group on Health finds only 30% of employers still cover weight management, weeks after Novo and Lilly cut TrumpRx maintenance prices to $199–299",
+        "driver": "coverage_shift: employer_retreat; price_path: managed_decline"
+      },
+      {
+        "date": "2032-03",
+        "event": "FDA approves Lilly's Foundayo for moderate-to-severe gambling disorder, the first incretin compulsion indication; parity rules force plans that dropped weight coverage to cover it",
+        "driver": "new_indications: compulsive_behaviour"
+      }
+    ],
+    "open_tensions": [
+      "Mental-health parity has reopened a coverage route employers spent years closing: Foundayo for gambling disorder. PBMs audit for diagnosis migration while telehealth prescribers learn the DSM-5 criteria, and nobody has yet tested how far compulsion can stretch.",
+      "The pill made holidays easy and clinical guidance endorses them, but Medicaid waivers, 30% premium differentials and employer tracks still count a skipped dose as non-adherence. The waiver lawsuits and the Ohio ADA suit are both undecided.",
+      "Long-horizon exposure keeps outrunning evidence. EPI is labelled for semaglutide, tirzepatide's five-year data are only now accruing, the first under-12 cohort has no bone data, and the dementia claim waits on a 2033 trial in the population most exposed to fractures.",
+      "Five million people still buy gray-market vials and now counterfeit tablets because US cash prices run ~40× India's. Under the waivers, a bad batch or a missed target now costs a poor user both the drug and twelve months of coverage."
+    ]
+  },
+  "prose": {
+    "headline": "The Pill Made It Easy to Stop. Your Medicaid App Is Making Sure You Don't.",
+    "world_in_600_words": "At the end of 2032 a little more than one American adult in six takes an incretin drug, and more than a quarter have tried one. The total barely moved in two years. What changed was the form. Most users now take a pill, because in November 2030 Novo Nordisk's oral amycretin became the first tablet to take off as much weight as tirzepatide. The needle stopped being the reason people said no. Prices kept stepping down without falling: maintenance doses through the government's TrumpRx cash channel now run $199 to $299 a month, starter pills are still $149, and the $1,349 list price is still printed on the Wegovy box.\n\nEmployers kept leaving. Only three in ten still cover the drugs for weight loss, and the ones that do route people through diabetes and heart codes or through monitored metabolic tracks. The pill complicated those tracks. A monthly shot given at the plant clinic is a record, while a daily tablet is a promise. Warehouses on the Columbus corridor kept the clinic shot for that reason. Everyone else built apps: photograph the tablet, log the fill, count the days.\n\nThe states adopted the same apps. In September 2031, federal regulators let Georgia, Missouri, Indiana and South Carolina tie Medicaid coverage of weight drugs to verified adherence and a five per cent loss by month six. People who miss either lose coverage for a year. About 420,000 people now live under those terms. Legal-aid lawyers sued, and the cases are pending.\n\nThe biggest change in meaning came in March, when the FDA approved Lilly's pill Foundayo for gambling disorder. Doctors had prescribed the drugs that way for years. Now the label says it: the medicine turns down wanting, and in this case that is the treatment. A federal parity law means insurers that dropped weight coverage must still pay for a diagnosed compulsion. Insurers have started auditing diagnoses, and telehealth prescribers have started learning the criteria. About 220,000 people take the drug on that code so far.\n\nThe flatness also stopped being a private matter. A federal study confirmed what earlier cohorts found: about one user in fourteen loses a clinically meaningful share of pleasure, more on the strongest drug. Obesity doctors and psychiatrists now advise stepping the dose down and taking planned breaks. With short-acting pills those breaks are easy, so a weekend off has become ordinary. Restaurants sell Friday 'holiday' menus, and couples plan off weekends around anniversaries. Large firms quietly removed 'steadiness' from their competency language. Wellness vendors still have to decide whether a doctor-approved holiday is a missed dose, and most now require a telehealth note to say it is not.\n\nThe safety ledger did not grow. The pancreatic finding from Denmark is now a warning on semaglutide labels, and nobody yet knows whether tirzepatide shares it. The hip-fracture risk in older users was strong enough that the FDA refused, for now, to extend Lilly's dementia-prevention claim to people without heart disease. Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.\n\nBodies still sort by income. In Charlotte and Austin the expensive body is lean, lifted and scanned, and it may run a few pounds heavier on Monday after a weekend off. On the logistics corridor it is thin, soft and on a monthly appointment. In Macon the morning starts with a photographed tablet and a glass of water. About five million people still buy Indian vials, counterfeit pens and now counterfeit pills, because the price gap is still about forty to one. From a distance the country looks a little thinner and better managed.",
+    "a_day_in_the_life": "Tamika Holloway sets the alarm for 5:10 so the pill has its thirty minutes. Water only, half a glass. She holds the tablet up to the phone and the app chimes green: Day 179. Georgia Pathways counts her hours with Mrs. Odom on Napier Avenue, and the waiver counts this.\n\nShe drinks her coffee standing up while the sky goes grey over the carport. Her brother DeShawn texts a photo of a strip of foil tablets with Hindi on the back. Twelve dollars, he writes. Same thing. She does not answer.\n\nAt Mrs. Odom's she lifts, bathes, wipes and charts. Mrs. Odom is eighty-one and on the shot for her heart. She asks if Tamika ever misses cake. Tamika says no, which is mostly true, and that she misses Saturday, which is true too.\n\nThe weigh-in is at two at the clinic on Pio Nono. A girl in purple scrubs reads the scale aloud: 4.6 per cent. Five is the line. The nurse practitioner looks at the screen and says she will write that the scale was recalibrated, then that there is a grace review, then that there is nothing she can do until the state answers. She prints a page. Tamika folds it into her purse.\n\nIn the parking lot she sits with the engine off. The radio is playing a sportsbook ad, and then one for a pill that helps with that.\n\nAt home she opens DeShawn's text again. She zooms in on the foil, closes it, and sets the alarm for 5:10."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L3-r49-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+          "field": "prose/safety_paragraph",
+          "why": "Mechanism: liraglutide was approved for ages 6–11 in Jun 2029, so a child who started at six is about nine in 2032 and not in middle school. The JSON's 'now three years in' contradicts the prose."
+        },
+        {
+          "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration.",
+          "field": "world/access/note",
+          "why": "Mechanism: parity law governs how mental-health benefits are limited and does not mandate coverage of a specific drug. The world asserts a hard mandate and a fully formed PBM audit regime within months of approval, with no chain shown."
+        },
+        {
+          "quote": "Bottom-third use rose only 0.5 pt, because cheaper legitimate orals moved some gray-market users into TrumpRx rather than adding new ones.",
+          "field": "world/population/note",
+          "why": "Mechanism: this sits awkwardly with the same note's imported/counterfeit count rising from ~5.2M to ~5.4M, and with the claim that 'five million people still buy' gray-market product. The explanation is convenient and asserted, and the gray market apparently did not shrink."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is a harder version of 2030, not a new regime. Medicaid waivers lock poor enrollees out of coverage for 12 months after a missed 5% target (~420k under conditions). Employer coverage fell to 30%, and adherence verification extends to pills via app photo check-ins. Inequality and autonomy score highest. Epistemic is lower because the harms are named, studied, labelled and litigated, and the holidays guidance offers a partial escape for those who can afford it.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +0.7pp, oral amycretin gives oral parity, the compulsive-behaviour indication is Foundayo for gambling, employer coverage fell 36→30%, Medicaid waivers condition benefits, and 'flat' is a mainstream complaint. The EPI label is the existing signal, so safety_signal none is fine. mechanism: most chains are shown (pill → apps, holidays → guidance → vendor codes), but claim 1 (middle school at age six start) contradicts the 2029 approval timeline, claim 2 (parity law as a hard mandate) is asserted, and claim 3 does not match the rising gray-market count. magnitude: on-drug 18.3 and ever-used 28.4 are inside the envelope. The payer mix sums to 49.4M, the Medicare spend arithmetic multiplies out, the cycled share reconciles at ~45%, and approval timings (13 months each) obey the rules. The only gaps are minor, such as the 11-state count versus four newly covering waiver states.",
+        "generativity": "The Tamika Holloway scene is strong: the 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, DeShawn's foil-strip text, and the sportsbook ad followed by the pill ad. The world supplies many implied scenes, including Friday 'holiday' menus, off-weekend negotiations, telehealth notes for documented holidays, Ohio's gambling-fund pilot and the Southern District of Ohio suit. Daily life has texture."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s3-L3-r49-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+          "field": "prose/body",
+          "why": "Fails mechanism. Pediatric liraglutide for ages 6–11 was approved in June 2029, so a child who started at six would be about nine in 2032, not in middle school. The prose contradicts the world's own timeline."
+        },
+        {
+          "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder",
+          "field": "world/access/note",
+          "why": "Fails mechanism. Parity rules require comparable limits on mental-health benefits and do not mandate coverage of a specific drug. The note asserts that this forces plans to cover it, and the world also counts ~150k commercial gambling-code users within months of approval without showing how."
+        },
+        {
+          "quote": "scheduled drug holidays on short-half-life orals (Foundayo 'weekends off')",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "Fails mechanism. Orforglipron and oral semaglutide are not short-half-life drugs in any pharmacological sense, yet the world builds a Friday-dinner, weekend-weight-swing and 'Saturday face' culture on skipping them. The claimed pharmacology is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main new harm is Medicaid conditioning (≥80% adherence, 5% loss at month 6, 12-month lockout) for ~420k poor enrollees, layered on employer retreat and a gray market of ~5.4M that now includes counterfeit tablets. Body-as-income stratification persists and the Medicare fracture risk (HR ~1.3) is unchanged. Offsetting this, the guidance on dose step-down and planned holidays, and the open naming of flatness (~7% anhedonia), make the harms more discussable. That is a harder society with new losers (about a 5–6 level), not a hidden structural one.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events: +0.7pp, managed decline to $199–299, employer coverage 36→30%, gambling indication, oral parity via amycretin, Medicaid conditioning, mainstream complaint. The safety signal stays 'none', since EPI and fracture are existing signals. The holiday theme slightly dilutes class stratification. mechanism: Several links are asserted. The parity-forces-coverage chain, the gambling phase 3 that appears from nowhere, the short-half-life holiday pharmacology and the middle-school contradiction are the weak ones (all in my claims list). The 'cheaper orals moved gray-market users into TrumpRx' story also sits oddly with a gray market that grew from 5.2M to 5.4M. magnitude: 18.3% current and 28.4% ever-used are inside the envelope. The cycled arithmetic (12.75/28.4≈45%), the payer sum (49.4M), the age and income checks and the Part D spend ($29.3B and $5.3B) all reconcile, and the approval timings of 13 months follow the rules. The only slips are 'one adult in six' for 18.3% and the gray-market direction.",
+        "generativity": "The Tamika Holloway scene is concrete: a 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, the nurse practitioner's non-fix, and her brother's foil strip with Hindi on it. It implies a Georgia Pathways setting, a home-care job and a Medicaid lockout. The world adds texture through holiday dinners, Saturday-face comedy, Ohio's self-excluded bettors and the monthly-versus-daily clinic asymmetry, so many scenes are implied."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s3-L3-r49-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+          "field": "prose/body",
+          "why": "Mechanism: the under-12 approval was June 2029, so a child who started at six is about nine at the end of 2032 and in elementary school. The prose contradicts the world's own timeline."
+        },
+        {
+          "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration.",
+          "field": "world/access/note",
+          "why": "Mechanism: parity law requires comparable limits on mental-health benefits; it does not force coverage of a specific drug. The reopening of employer coverage is asserted as automatic, with no formulary or plan-design chain shown, and it supports ~150k commercial gambling users within months."
+        },
+        {
+          "quote": "scheduled drug holidays on short-half-life orals (Foundayo 'weekends off')",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "Mechanism: the world also names Wegovy pill (oral semaglutide, half-life of about a week) as an oral, and a skipped weekend of a roughly day-and-a-half half-life drug barely changes exposure. The Friday 'holiday dinner' and weekly weight-swing culture rests on pharmacology that is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society than 2030. Six states now condition Medicaid coverage on 80% adherence and a 5% loss at month 6, with a 12-month lockout (access/public_coverage, the state fields). Employer coverage fell to 30%, and the gambling label makes 'turning down wanting' the official treatment. Offsets are real: the FDA study quantified anhedonia, guidance endorses step-down, and 'steadiness' was dropped from large-firm HR language. So it reads as stratified and conditioned but not catastrophic.",
+        "plausibility": "driver_fidelity: every driver is visible and traceable. Adoption is +0.7 (18.3%), coverage fell 36→30%, the gambling indication was approved Mar 2032, oral amycretin gives oral parity, Medicaid waivers carry the conditioning, and no new safety signal appears (EPI is an existing signal getting a label). mechanism: most chains are shown, but three claims weaken it. The 'started at six… now in middle school' contradiction, the parity-forces-coverage assertion, and the weekend-holiday pharmacology are all flagged above. The 'cheaper orals moved gray-market users into TrumpRx' explanation also sits oddly with gray-market users rising from ~5.2M to ~5.4M. magnitude: population figures are inside the envelope (18.3 in 16.3–20.3; ever-used 28.4 under 29.2). The payer mix sums to 49.4M, age and income checks hold, and Medicare spend (10.4M×$235×12≈$29.3B) and the gambling split (220k) reconcile. Approval timings are 13 months after filing. Minor gaps remain: the 9→11 states against four new waivers is unclear, and the gambling phase 3 had no stated start.",
+        "generativity": "The Tamika Holloway scene is concrete and film-ready: the 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, the nurse practitioner's helplessness, and DeShawn's foil strip with Hindi on it. The world adds Friday 'holiday' menus, documented-holiday telehealth codes, the Ohio ADA suit, and Georgia Pathways enrollees. Daily life has texture and implied characters throughout."
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Children who started daily liraglutide at six are now in middle school, and their bone data have not been reported.",
+        "field": "prose/safety_paragraph",
+        "why": "Mechanism: liraglutide was approved for ages 6–11 in Jun 2029, so a child who started at six is about nine in 2032 and not in middle school. The JSON's 'now three years in' contradicts the prose."
+      },
+      {
+        "quote": "Mental-health parity rules mean plans that dropped weight coverage must still cover Foundayo for diagnosed gambling disorder, and PBMs now audit for diagnosis migration.",
+        "field": "world/access/note",
+        "why": "Mechanism: parity law governs how mental-health benefits are limited and does not mandate coverage of a specific drug. The world asserts a hard mandate and a fully formed PBM audit regime within months of approval, with no chain shown."
+      },
+      {
+        "quote": "Bottom-third use rose only 0.5 pt, because cheaper legitimate orals moved some gray-market users into TrumpRx rather than adding new ones.",
+        "field": "world/population/note",
+        "why": "Mechanism: this sits awkwardly with the same note's imported/counterfeit count rising from ~5.2M to ~5.4M, and with the claim that 'five million people still buy' gray-market product. The explanation is convenient and asserted, and the gray market apparently did not shrink."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.5,
+      "inequality": 6.5,
+      "public_health": 5.17,
+      "cohesion": 5.17,
+      "epistemic": 4.5,
+      "overall": 5.9
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.33,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.67,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The world is a harder version of 2030, not a new regime. Medicaid waivers lock poor enrollees out of coverage for 12 months after a missed 5% target (~420k under conditions). Employer coverage fell to 30%, and adherence verification extends to pills via app photo check-ins. Inequality and autonomy score highest. Epistemic is lower because the harms are named, studied, labelled and litigated, and the holidays guidance offers a partial escape for those who can afford it.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +0.7pp, oral amycretin gives oral parity, the compulsive-behaviour indication is Foundayo for gambling, employer coverage fell 36→30%, Medicaid waivers condition benefits, and 'flat' is a mainstream complaint. The EPI label is the existing signal, so safety_signal none is fine. mechanism: most chains are shown (pill → apps, holidays → guidance → vendor codes), but claim 1 (middle school at age six start) contradicts the 2029 approval timeline, claim 2 (parity law as a hard mandate) is asserted, and claim 3 does not match the rising gray-market count. magnitude: on-drug 18.3 and ever-used 28.4 are inside the envelope. The payer mix sums to 49.4M, the Medicare spend arithmetic multiplies out, the cycled share reconciles at ~45%, and approval timings (13 months each) obey the rules. The only gaps are minor, such as the 11-state count versus four newly covering waiver states.",
+      "generativity": "The Tamika Holloway scene is strong: the 5:10 alarm, the photographed tablet, the 4.6% weigh-in against a 5% line, DeShawn's foil-strip text, and the sportsbook ad followed by the pill ad. The world supplies many implied scenes, including Friday 'holiday' menus, off-weekend negotiations, telehealth notes for documented holidays, Ohio's gambling-fund pilot and the Southern District of Ohio suit. Daily life has texture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.484,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 15
+  }
+}

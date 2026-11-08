@@ -10,7 +10,16 @@
     "step": {"type": "integer", "minimum": 1, "maximum": 5},
     "year": {"type": "integer"},
     "parent_lineage": {"type": "string", "description": "L0 for step 1 (the baseline), else the parent's lineage id"},
-    "seed": {"type": "integer"},
+    "seed": {"type": "integer", "description": "base seed; this run's RNG is random.Random(seed + step*1000 + run_index)"},
+    "run_index": {"type": "integer", "minimum": 0, "description": "index of the run within its step (the rNN of run_id)"},
+    "driver_modifiers": {
+      "type": "array",
+      "description": "parent-state modifiers from config/drivers.json that fired for this run's draw",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["driver", "if", "set"],
+        "properties": {"driver": {"type": "string"}, "if": {"type": "object"}, "set": {"type": "object"}}
+      }
+    },
     "drivers": {
       "type": "object", "additionalProperties": false,
       "required": ["adoption_delta_pp", "price_path", "coverage_shift", "new_indications", "safety_signal", "next_gen_launch", "market_shock", "cultural_response", "state_action", "personality_layer"],
@@ -45,6 +54,20 @@
       "required": ["judge_model", "badness", "plausibility", "generativity", "rationale"],
       "properties": {
         "judge_model": {"type": "string"},
+        "rubric": {"type": "string", "description": "judge rubric version; absent means v1 (one plausibility score)"},
+        "least_plausible_claims": {
+          "type": "array", "minItems": 3, "maxItems": 3,
+          "description": "rubric v2: the judge's three least plausible specific claims, each quoted verbatim from the candidate",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["quote", "field", "why"],
+            "properties": {
+              "quote": {"type": "string", "minLength": 1, "maxLength": 300},
+              "field": {"type": "string"},
+              "why": {"type": "string"}
+            }
+          }
+        },
         "badness": {
           "type": "object", "additionalProperties": false,
           "required": ["flourishing", "autonomy", "inequality", "public_health", "cohesion", "epistemic", "overall"],
@@ -58,7 +81,26 @@
             "overall": {"type": "number", "minimum": 1, "maximum": 10}
           }
         },
-        "plausibility": {"type": "number", "minimum": 1, "maximum": 10},
+        "plausibility_axes": {
+          "type": "object", "additionalProperties": false,
+          "description": "rubric v2: plausibility sub-axes, scored separately; `plausibility` is their weighted composite (config plausibility_weights)",
+          "required": ["driver_fidelity", "mechanism", "magnitude"],
+          "properties": {
+            "driver_fidelity": {"type": "number", "minimum": 1, "maximum": 10},
+            "mechanism": {"type": "number", "minimum": 1, "maximum": 10},
+            "magnitude": {"type": "number", "minimum": 1, "maximum": 10}
+          }
+        },
+        "plausibility_weights": {
+          "type": "object", "additionalProperties": false,
+          "description": "the weights the composite was computed with (config plausibility_weights at judging time)",
+          "required": ["driver_fidelity", "mechanism", "magnitude"],
+          "properties": {
+            "driver_fidelity": {"type": "number"}, "mechanism": {"type": "number"}, "magnitude": {"type": "number"}
+          }
+        },
+        "plausibility": {"type": "number", "minimum": 1, "maximum": 10,
+                         "description": "v2: weighted composite of plausibility_axes (config plausibility_weights), computed in code; v1: the judge's single score"},
         "generativity": {"type": "number", "minimum": 1, "maximum": 10},
         "rationale": {
           "type": "object",
@@ -71,6 +113,33 @@
         }
       }
     },
+    "error": {"type": "string", "description": "why a run has status error (API error, refusal, expiry)"},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "description": "every API call made for this run",
+      "properties": {
+        "generation": {"type": "array", "items": {"$ref": "#/$defs/call"}},
+        "judge": {"type": "array", "items": {"$ref": "#/$defs/call"}}
+      }
+    },
+    "validation": {
+      "type": "object", "additionalProperties": false,
+      "description": "local schema check of the model's output, kept so invalid runs are never silently dropped",
+      "properties": {
+        "generation": {"$ref": "#/$defs/validation_record"},
+        "judge": {"$ref": "#/$defs/validation_record"}
+      }
+    },
+    "superseded_scores": {
+      "type": "array",
+      "description": "earlier `scores` replaced by a re-judge (e.g. under a revised rubric), oldest first, each with superseded_at",
+      "items": {"type": "object", "required": ["superseded_at"]}
+    },
+    "judge_samples": {
+      "type": "array",
+      "description": "individual judge responses when judging.judge_samples > 1; `scores` holds their mean",
+      "items": {"type": "object"}
+    },
     "selection": {
       "type": "object", "additionalProperties": false,
       "properties": {
@@ -80,6 +149,40 @@
         "survived": {"type": "boolean"},
         "new_lineage": {"type": ["string", "null"]},
         "floor_used": {"type": "integer"}
+      }
+    }
+  },
+
+  "$defs": {
+    "call": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "batch_id", "custom_id", "model", "result_type"],
+      "properties": {
+        "role": {"type": "string", "enum": ["main", "repair"]},
+        "batch_id": {"type": "string"},
+        "custom_id": {"type": "string"},
+        "model": {"type": "string", "description": "model requested (from config)"},
+        "served_model": {"type": ["string", "null"], "description": "model the API reports it ran"},
+        "result_type": {"type": "string", "description": "succeeded / errored / canceled / expired"},
+        "stop_reason": {"type": ["string", "null"]},
+        "input_tokens": {"type": ["integer", "null"]},
+        "output_tokens": {"type": ["integer", "null"]}
+      }
+    },
+    "validation_record": {
+      "type": "object", "additionalProperties": false,
+      "required": ["errors", "repair_attempted"],
+      "properties": {
+        "errors": {"type": "array", "items": {"type": "string"}, "description": "errors in the last response checked; empty if it passed"},
+        "first_errors": {"type": "array", "items": {"type": "string"}, "description": "errors in the original response, kept after a repair"},
+        "raw_output": {"type": ["string", "null"], "description": "the failing response text (null once a run is valid)"},
+        "repair_attempted": {"type": "boolean"},
+        "repaired": {"type": "boolean"},
+        "dropped_samples": {"type": "array", "description": "judge samples not counted in the mean (cut off, failed repair, API error), with why",
+                            "items": {"type": "object", "additionalProperties": false, "required": ["custom_id", "reason"],
+                                      "properties": {"custom_id": {"type": "string"}, "reason": {"type": "string"}}}},
+        "decoded_string_fields": {"type": "array", "items": {"type": "string", "enum": ["world", "prose"]},
+                                  "description": "top-level fields that arrived as JSON-encoded strings and were decoded (no content change)"}
       }
     }
   }

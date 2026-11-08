@@ -1,0 +1,558 @@
+{
+  "run_id": "s4-L2-r18",
+  "step": 4,
+  "year": 2034,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 18,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": -3.2,
+    "price_path": "managed_decline",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [
+      "mood_and_motivation",
+      "pediatric_under_12"
+    ],
+    "safety_signal": "gi_pancreatic_litigation",
+    "next_gen_launch": "oral_parity",
+    "market_shock": "none",
+    "cultural_response": "normalisation",
+    "state_action": "none",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T17:29:43Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015ciC7E9nYxhB2DQvrSsPqs",
+        "custom_id": "s4-L2-r18",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18516,
+        "output_tokens": 22714
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01SES3MrFA44R9xip9boPhfd",
+        "custom_id": "s4-L2-r18",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 31656,
+        "output_tokens": 12729
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r18-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27442,
+        "output_tokens": 5742
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r18-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27442,
+        "output_tokens": 1273
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r18-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27442,
+        "output_tokens": 6088
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2034,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived. Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk (obesity plus established CVD) codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 16.4,
+      "us_adults_ever_used_pct": 28.8,
+      "by_income_third_pct": {
+        "top": 22,
+        "middle": 16.5,
+        "bottom": 11
+      },
+      "by_age_band_pct": {
+        "18_29": 8.5,
+        "30_49": 15.5,
+        "50_64": 24,
+        "65_plus": 16.5
+      },
+      "pediatric_under_18_on_drug_pct": 1.3,
+      "cycled_off_and_on_pct": 43,
+      "note": "FICTIONAL. Adults are ~275M, so 16.4% is ~45.1M current users, down from ~53.3M. Ever-used stays at 28.8% (~79.2M vs ~78.3M in 2032). About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth. Off now: 28.8 − 16.4 = 12.4 points (~34.1M). About 3.6M of them are on a planned 'holiday' they say they will end. Cycling: ~58% of current users are on a second or later course (9.5 points), and 3.0 points have cycled and are off again, so (9.5 + 3.0) / 28.8 ≈ 43% of ever-users have cycled. The other 9.4 points stopped once and have not restarted. This fits one-year persistence near one-third on weekly and daily products (~60% on clinic MariTide) and 36–47% restarting within a year, offset by planned holidays that have not ended yet. Age check: 0.20×8.5 + 0.33×15.5 + 0.24×24 + 0.23×16.5 = 1.7 + 5.1 + 5.8 + 3.8 ≈ 16.4. Income thirds average ~16.5. FICTIONAL payer mix (45.1M): commercial ~11.0M (5.0M of them in monitored tracks), Medicare ~11.4M, Medicaid ~3.0M, legitimate cash (TrumpRx, direct, telehealth) ~13.7M (including ~1.9M on quiet-mind or AUD-coded telehealth plans), imported or counterfeit ~6.0M. Sum = 45.1M. The bottom third fell 14 → 11 because gray-market users who stopped after bad batches or price spikes did not restart and lost-coverage workers did not replace them. The top third fell 25 → 22, mostly through holidays and long-term semaglutide users stopping after the litigation ads. Adult obesity is ~34.6%, up as regain outpaces new starts. About 24% of adults have obesity and have never used a drug. Pediatric: ~1.3% of under-18s are on a drug (12–17 ~2.7%; 6–11 ~0.4%, of whom ~0.22 points are on liraglutide and ~0.18 on Wegovy since its March 2034 6–11 approval). About 5.2M children under 18 live with a parent who has regained after stopping."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~11.4M users through diabetes, CV, CKD, OSA and dementia-risk (obesity plus CVD) codes, all behind prior authorisation. FICTIONAL arithmetic: 11.4M × ~$225 average net/month × 12 ≈ $30.8B a year gross Part D incretin spend, roughly flat as net prices drifted down ~4% a year while enrolment aged in. The dementia route is ~2.0M × ~$235 × 12 ≈ $5.6B. Oral amycretin has no Medicare-coverable indication. Medicaid: the same 7 states cover weight-loss use. ~3.0M users are mostly on diabetes codes, and two state programmes still condition coverage on adherence and BMI progress. Wegovy for 6–11 is covered under Medicaid EPSDT with growth-chart prior authorisation.",
+      "employer_coverage_pct": 24,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide (vials and, from 2033, tablets) sells for $4–30 a month. Chinese tirzepatide-analogue vials sell for $18–55. Canadian and Brazilian generics run CAD 45–80 and BRL 160–280. No generic amycretin exists anywhere. India and China supply about two-thirds of world incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. Employers covering weight management fell from 30% to 24% (Business Group on Health, Nov 2034). Another ~11% cover only through monitored metabolic tracks, which hold ~5.0M enrollees (3.5M on clinic MariTide). Total MariTide users are ~4.2M. TrumpRx maintenance prices kept stepping down: Wegovy pill $199 → $179 (starting dose still $149), Foundayo $139–209, injectable Wegovy/Zepbound $229–279. MariTide direct is $229. Retatrutide is ~$329 cash direct. Oral amycretin (Amvela, approved Oct 2033) lists at $1,199, sells for $299 maintenance and $199 starting through TrumpRx/direct, and has ~3.2M users by end-2034 (~2.3M cash, ~0.9M commercial with prior authorisation), most of them switchers from injectables. Orals are ~57% of users. The gray market shrank from ~7.5M to ~6.0M. Nothing new stopped it. Repeat-batch fear, slow attrition and $179–299 legitimate orals drained it. Indian semaglutide tablets sold as 'Amvela-equivalent' now circulate on Telegram."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1/amylin unimolecular co-agonist, daily oral (oral amycretin: Amvela, approved Oct 2033)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "alcohol use disorder, reduction in heavy-drinking days (oral semaglutide, approved Feb 2033)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; injectable semaglutide/Wegovy approved Mar 2034 for severe obesity, both with growth-velocity, Tanner and eating-disorder monitoring)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; extension to 60+ without CVD still refused, confirmatory topline due 2035)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'quiet mind' and focus plans at low-dose oral semaglutide or Foundayo, ~1.9M subscribers (~0.7M of them now coded under the AUD label)",
+        "planned 'drug holidays' of 4–12 weeks and self-directed dose step-downs to restore pleasure or libido",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash and gray",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "switching long-term semaglutide users to oral amycretin or tirzepatide to reset EPI exposure (no evidence it does)"
+      ],
+      "pipeline_note": "FICTIONAL. Oral parity is realised through an existing approved molecule in a new form. Novo filed oral amycretin in Sep 2032 on phase 3 data (~20.5% weight loss at 72 weeks, statistically non-inferior to tirzepatide 15 mg in a head-to-head arm), and the FDA approved it in Oct 2033, 13 months after filing. It is a daily pill with a fasting requirement and the first oral at injectable-class efficacy. The mood_and_motivation driver is realised through the approval of the oral semaglutide AUD sNDA (filed Jan 2032, approved Feb 2033). It is the first on-label reward-modulation indication, and Novo's 'quieter evenings' campaign plus telehealth quiet-mind plans market it as such. No standalone mood indication exists. Lilly began a phase 3 of orforglipron in binge-eating disorder in 2034 that will not read out before 2036. The pediatric_under_12 driver is realised by Wegovy's 6–11 sNDA (filed Sep 2032 on STEP Young data, approved Mar 2034 with growth-monitoring labelling). Bimagrumab-type muscle adjunct (filed Jul 2032): the 2034 advisory committee split 7–6 and a decision is due 2035. Tirzepatide dementia confirmatory topline is 2035. Implants are still phase 1–2. The global incretin market is ~$178B (2033). US net prices fall 3–5% a year, and brands hold ~$150–300 cash."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation outside clinic tracks. Oral amycretin's nausea rate during titration (~40%) is comparable to injectables.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation of acute pancreatitis; absolute risk low. It is pleaded in most mass-tort complaints anyway.",
+        "regulatory_response": "Labelled; consolidated into the expanded MDL."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare cohort hip-fracture HR ~1.3 in users 65+ after more than 2 years, ~1.45 after three or more cycles. A 2034 analysis suggests planned holidays add cycling-type bone loss.",
+        "regulatory_response": "Class warning (Jul 2028) retained; resistance-training statement extended to oral amycretin label."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal in adults or in the AUD trial population.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: The FDA postmarketing observational study (reported Nov 2033, ~410,000 users) found a dose-related anhedonia diagnosis HR of ~1.7 at maintenance weight doses and ~2.1 on retatrutide. At low 'quiet-mind' doses there was no significant excess, but the confidence intervals were wide. Surveys find ~1 in 4 current users report having stepped down a dose or taken a holiday for mood or libido.",
+        "regulatory_response": "Anhedonia/reduced interest added to the Adverse Reactions section of all incretin labels (Jan 2034); no boxed or class warning. The AUD label carries the language. Telehealth claims of 'focus' remain under untitled-letter status."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months. Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+        "regulatory_response": "None directly; underpins chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency in low-intake users; fat-soluble deficiency tied to EPI; low ferritin in adolescent girls.",
+        "regulatory_response": "Annual micronutrient panel language on semaglutide, tirzepatide and amycretin labels."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after 5+ years of continuous semaglutide (~4 vs ~2 per 1,000 person-years). Tirzepatide's excess is still non-significant at 6 years. Amycretin has no long-horizon data.",
+        "regulatory_response": "Semaglutide EPI warning (Mar 2031) retained; tirzepatide still under review. It is the core of failure-to-warn claims for pre-2031 use."
+      },
+      {
+        "effect": "Gastroparesis, ileus/bowel obstruction and pancreatic injury claims at mass-tort scale",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: The federal MDL in the Eastern District of Pennsylvania passed ~88,000 filed claims by late 2034 (from ~31,000 in 2032), about 70% of them naming semaglutide. Medical causation for persistent gastroparesis after stopping remains suspected rather than established. Plaintiffs' TV and social advertising runs ~$300M a year. The Jun 2034 federal bellwether on gastroparesis ended in a defence verdict on causation. A Sep 2034 New Jersey state-court jury awarded $11.5M on an EPI failure-to-warn claim for 2026–2030 use. Novo booked a ~$3.1B provision (~62,000 semaglutide claims × ~$50,000 expected average). Lilly's is ~$0.9B.",
+        "regulatory_response": "No new FDA action beyond existing labelling. The judge has ordered settlement mediation and no global settlement exists."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in children on drug for decades; effects of repeated on/off cycling and planned holidays",
+        "status": "emerging",
+        "prevalence_note": "About twelve years of semaglutide follow-up now exist. Holiday-pattern effects on bone, pancreas and growth are uncharacterised.",
+        "regulatory_response": "Pediatric PMRs continue; Wegovy 6–11 approval carries a new 10-year growth registry requirement."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Adverse-event reports tied to non-approved product passed ~31,000 by late 2034. There have been no new outbreaks on the 2031 scale, only steady low-level infections and overdose cases. Fake 'Amvela' tablets containing semaglutide or nothing appeared in 2034.",
+        "regulatory_response": "Import alerts maintained; CBP seizures flat near 2031 levels; no statute changed."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The liraglutide 24-month deficit of ~0.7 cm/year persists at 36 months, with partial catch-up in children who stopped. In STEP Young (semaglutide 6–11), height velocity was ~0.5 cm/year below placebo over 68 weeks. The Swedish ARFID signal (HR ~1.8) held in an update. Final adult height is still unknown.",
+        "regulatory_response": "Wegovy 6–11 approved (Mar 2034) for severe obesity only, with 6-monthly growth velocity, Tanner staging, eating-disorder screening and a required discontinuation review if velocity falls below the 10th percentile. The AAP kept its lifestyle-first interim guidance for prepubertal children. EMA review continues."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 32% of US households now have a current user, down from 36%. Snack and confectionery volumes recovered slightly to ~7–9% below 2025, and sugary drinks to ~8% below. Kroger and Albertsons zip-code planning persists, but 'GLP-1 friendly' bays are being renamed 'protein' as regainers in lower-income stores push value-pack volume up. Mondelez cited 'holiday rebound' baskets in two quarterly calls.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Spirits volumes are ~13–14% below 2025 and beer ~9% below. The 2033 AUD approval lets employer EAPs and telehealth prescribe on-label, and heavy-drinker losses deepened. Constellation and Molson Coors wrote down mid-tier brands, and closures continue at small-city bars in the Midwest. Drinkers on holiday drink again, briefly, and distributors talk of 'holiday spikes'.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is roughly flat. Portion-tiered menus are standard in casual dining. QSR value traffic is up in regain-heavy markets such as Memphis and Dayton. Some chains now offer 'holiday' promotions timed to January and July, when planned breaks cluster.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists stabilised as regain grew. Resale and stretch lines serve cyclers and holiday-takers. Mass retailers keep size runs by zip code but now stock two sizes deeper on each side.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength training keeps growing, and 'hold your lean through your holiday' coaching packages ($79–149 a month) are the new add-on. Premium DXA memberships run $250–400. Employer tracks still bundle InBody scans with clinic MariTide.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight-loss coverage is down to 24%, and coverage concentrates on diabetes, CV and OSA codes. Pharmacy trend is ~+4% as covered volume fell. Adherence vendors added 'clinician-sanctioned holiday' codes capped at 8 weeks a year at some employers. At others, holidays break the adherence record and cost the premium differential. Part D premiums rose modestly again.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "US branded volume fell ~15% while revenue fell less because Amvela is priced at the top of the cash band and has a commercial mix. Novo regained share on oral amycretin and the AUD label but carries the largest litigation provision. Amgen's MariTide is flat with employer tracks. Lilly leads injectables and is waiting on dementia data. Indian makers expanded into semaglutide tablets for export.",
+        "direction": "adapted"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on a drug is now the unmarked default among insured adults 40–65, and the body that needs explaining is the one that has changed back. A softening face at the office prompts the question 'holiday?', and 'yes, eight weeks' closes the conversation. 'Lost coverage' or 'my lawyer said stop' do not. Lean with muscle still means covered and coached. Regained after 50 means lost coverage, a bad batch or a long semaglutide history and a law-firm ad.",
+      "thinness_and_class": "Muscle remains the class uniform. In Charlotte's SouthPark and Ballantyne, women aged 45–60 treat the pill-and-coach routine as unremarkable as a dentist visit, and the status move has shifted to the well-managed holiday: off for July, scanned before and after, back on in August with lean mass held. In Memphis the cycler's body is common. Former gray-market users who stopped are regaining without a planned restart, and nobody there calls it a holiday. On the Columbus freight corridor, workers who lost employer coverage in 2034 moved to $179 TrumpRx pills or stopped.",
+      "eating_as_ritual": "Shared meals are shorter for users and longer during holidays. Hosts in upper-income suburbs ask 'on or off this month?' the way they once asked about allergies. Bread Alone claims ~700 congregations. School debates now centre on whether nurses should log growth checks for children on Wegovy.",
+      "dating_and_intimacy": "App profiles carry an on/off/holiday field. 'Lean-mass verified' badges remain a premium tier. Couples schedule holidays around anniversaries and trips, and therapists describe 'holiday sex' as a recognised, slightly mocked pattern.",
+      "meaning_of_appetite": "Among insured users, appetite is a setting that can be lowered, raised or switched off for a month. Appetite that returns without a plan reads as failure or misfortune. Unmuted now argues mostly about holidays and the AUD-label marketing. MAHA legislators focus on the Wegovy 6–11 approval. Fat-acceptance revivalists stay apart and are gaining among regainers.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: Clinically meaningful anhedonia at ~7–8% of users on maintenance weight doses vs ~3% of controls, ~10% on retatrutide, now in the Adverse Reactions section of every incretin label. About 1 in 4 current users (~11M) report a dose step-down or planned holiday for mood, pleasure or libido, and ~3.6M are on a holiday at any time. About 1.9M people are on quiet-mind telehealth plans, ~0.7M of them now prescribed under the AUD label. The low-dose anhedonia rate remains statistically unresolved.",
+      "framing": "The flatness is a known side effect that people manage, discussed the way people discuss SSRI sexual side effects. People step the dose down or take a holiday. Telehealth sells the low end as a feature ('quiet mind'). Novo markets 'quieter evenings' on-label for AUD. Clinicians document 'reward-related adverse effect, dose adjusted'. Unmuted calls holidays 'parole'.",
+      "effect_on_work": "About 5.0M employees are in adherence-verified tracks. Where vendors recognise sanctioned holidays, managers approve them like leave. Where they don't, a holiday costs up to 30% of the premium differential, so line workers in Columbus-corridor warehouses stay on and senior staff take breaks. The EEOC ADA charges remain without determination. One was withdrawn after a confidential settlement.",
+      "effect_on_art_and_play": "'Off' memoir has become a holiday genre, built on the month when everything came back: food, drink, grief, desire. A Netflix limited series, 'Eight Weeks', follows a Charlotte family whose members take holidays at different times. Unmuted off nights have spread into ordinary bars as 'holiday nights'. Sportsbooks see wagering surges from accounts in insured suburbs in January and July.",
+      "effect_on_intimacy": "The most common couples-therapy complaint has moved from mismatch to unsynchronised holidays. One partner comes off and wants more, and the other is still on and doesn't. Some couples now schedule holidays together. Sex-therapy practices advertise 'holiday planning'.",
+      "effect_on_politics": "MAHA-aligned legislators held hearings on the Wegovy 6–11 approval and the anhedonia labelling and passed nothing. No state legislature acted on adherence premiums or holidays. The mass tort supplies the most visible political content: plaintiffs' ads run in every media market. Turnout evidence for a 'sedated electorate' remains absent.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Routine and permissive. FDA approved oral semaglutide for AUD (Feb 2033), oral amycretin (Oct 2033) and Wegovy for ages 6–11 (Mar 2034). It added anhedonia to Adverse Reactions (Jan 2034) and kept telehealth focus claims under untitled letters. No state acted, Illinois's ban remains the only one, and Congress created no coverage, mandate or premium rule.",
+      "subsidy_or_mandate": "None new. TrumpRx operates on manufacturer-set prices. The Medicare Bridge pilot was not revived. The 2027 tri-agency 30% wellness guidance stands.",
+      "conditioning_or_surveillance": "Unchanged in law. Wellness vendors now ingest holiday codes alongside fills and clinic administration records. Telehealth quiet-mind platforms collect mood check-ins and use AUD diagnosis codes, which places part of that data under 42 CFR Part 2 confidentiality and complicates its sale to benefit brokers. Two state Medicaid programmes still condition coverage on adherence and BMI progress.",
+      "workforce_or_military": "TRICARE rules unchanged; Army recruit oral pilot continues without expansion. DOT has still not ruled on AUD-labelled or quiet-mind use among commercial drivers, although the AUD approval made the question on-label.",
+      "geopolitics_of_supply": "India and China supply about two-thirds of world incretin volume. Indian semaglutide tablets now enter US mail alongside vials. US–India talks still list CBP mail enforcement without agreement. Amycretin has no generic source anywhere, which keeps Novo's oral premium intact.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2032-09",
+        "event": "Novo Nordisk files oral amycretin with the FDA after a phase 3 head-to-head arm shows ~20.5% weight loss, non-inferior to tirzepatide, and files a separate application to extend Wegovy to children aged 6 to 11",
+        "driver": "next_gen_launch: oral_parity; new_indications: pediatric_under_12"
+      },
+      {
+        "date": "2033-02",
+        "event": "FDA approves oral semaglutide to reduce heavy drinking in alcohol use disorder; within weeks Novo's 'quieter evenings' campaign and telehealth quiet-mind plans begin prescribing under the new label",
+        "driver": "new_indications: mood_and_motivation"
+      },
+      {
+        "date": "2033-10",
+        "event": "FDA approves oral amycretin as Amvela, the first pill to match injectables on weight loss; it lists at $1,199 but launches at $299 a month through TrumpRx, and ~3.2M users take it by end-2034, most of them switchers",
+        "driver": "next_gen_launch: oral_parity; price_path: managed_decline"
+      },
+      {
+        "date": "2034-01",
+        "event": "After an FDA observational study finds dose-related anhedonia at maintenance doses, every incretin label adds 'anhedonia/reduced interest' to adverse reactions; surveys find one user in four has stepped down a dose or taken a holiday",
+        "driver": "personality_layer: mainstream_complaint; cultural_response: normalisation"
+      },
+      {
+        "date": "2034-03",
+        "event": "FDA approves Wegovy for children 6–11 with severe obesity, requiring six-monthly growth checks and a discontinuation review if height velocity falls below the 10th percentile; the AAP keeps lifestyle-first guidance",
+        "driver": "new_indications: pediatric_under_12"
+      },
+      {
+        "date": "2034-09",
+        "event": "GI and pancreatic litigation passes ~88,000 claims; after a June defence verdict on gastroparesis, a New Jersey jury awards $11.5M on an EPI failure-to-warn claim, and in November a benefits survey finds employer weight-loss coverage down to 24%",
+        "driver": "safety_signal: gi_pancreatic_litigation; coverage_shift: employer_retreat"
+      }
+    ],
+    "open_tensions": [
+      "Wegovy is now approved for six-to-eleven-year-olds while the liraglutide growth deficit persists at 36 months and final adult height is unknown. Monitoring is most rigorous in families most able to decline the drug.",
+      "Holidays are the accepted remedy for the flatness, but adherence-premium contracts in many firms penalise them, so blue-collar enrollees stay on and salaried staff take breaks. No one knows what repeated holidays do to bone, pancreas or regain.",
+      "The mass tort has split: gastroparesis claims lost a bellwether and EPI failure-to-warn claims won one. Settlement pressure on Novo is rising, and long-term semaglutide users are stopping or switching on lawyers' advice rather than clinicians'.",
+      "The pill removed the needle and left the price in place. Amvela at $299 cash sits beside $4 Indian semaglutide tablets, and fake 'Amvela' is already in the mail."
+    ]
+  },
+  "prose": {
+    "headline": "On Holiday: America's New Pill Matches the Shot, and Eight Million People Have Put the Drugs Down Anyway",
+    "world_in_600_words": "At the end of 2034 about one American adult in six takes an incretin drug, some forty-five million people. That is eight million fewer than two years ago, though the share who have ever tried one has not moved. Nobody stopped believing in the drugs. They stopped for ordinary reasons: their employer dropped the coverage, a lawyer advertised during the evening news, the flatness got to them, or they decided to take July off.\n\nIn October 2033 the drug that was supposed to change everything arrived. Novo Nordisk's oral amycretin, sold as Amvela, is a daily pill that took off about a fifth of body weight in its trials, as much as the best weekly shot. The needle stopped being a reason to refuse. Price still is. Amvela lists at $1,199 and sells for $299 a month through the government's cash channel, and most of its three million users are people who switched from an injection. The Wegovy pill's maintenance dose fell to $179, and the starting dose is still $149. Pills now make up well over half of all use.\n\nWho pays changed further. Only a quarter of employers still cover the drugs for weight loss. What remains of commercial coverage sits on diabetes, heart and sleep-apnoea codes, or inside monitored plant-clinic programmes where the monthly shot is logged for the wellness vendor. Medicare still covers only the old codes, at roughly thirty billion dollars a year. The gray market shrank. It shrank because people tired of bad batches, and no enforcement campaign had much to do with it. Six million people still buy by mail, and the newest fakes are pills.\n\nThe flatness now has a name on the label. A federal study found that maintenance doses roughly double the rate of diagnosed anhedonia, and in January every label gained a line about reduced interest. The complaint was already common, and the label made it official. One user in four has turned their dose down or taken a holiday, usually four to twelve weeks off to feel things again: food, wine, sex, grief. Some employers' wellness vendors now code a sanctioned holiday like leave. Others count it as non-adherence and charge for it, so the warehouse worker stays on and the manager takes August off. Meanwhile the same reward-dampening effect has an approved use of its own. Oral semaglutide has been approved for heavy drinking since February 2033, and the telehealth quiet-mind plans now prescribe under that label.\n\nIn Charlotte's southern suburbs nobody remarks on being on. People remark on being off. The question at dinner is whether the host is on this month, and the acceptable answer when someone's face softens is 'holiday'. In Memphis the same face usually means someone stopped and no restart is planned. Grocery planners talk about holiday baskets. Bars and sportsbooks see surges in January and July.\n\nThe courts are busier than the legislatures. Nearly ninety thousand people have sued over gastroparesis, bowel obstruction and pancreatic damage. A Philadelphia jury found the gastroparesis science too thin. A New Jersey jury awarded eleven and a half million dollars to a woman whose pancreatic insufficiency developed before the warning reached the label. Novo has set aside about three billion dollars. No settlement exists.\n\nIn March the FDA approved Wegovy for children as young as six, for severe obesity only, with height checks every six months and a review if growth falls off. The earlier liraglutide children are still growing more slowly than expected three years in. Hearings were held and no bills passed. No state acted. From outside, the country looks settled into its routine: a pill each morning, a break each summer, and a lawyer's number on the screen.",
+    "a_day_in_the_life": "Lena Hart takes her Wegovy pill at 5:40 with four ounces of water, standing at the sink, then waits the thirty minutes. It is the $179 one now. The plant-clinic MariTide ended in January, when Kessler Freight dropped weight management and kept the diabetes codes, and she doesn't have diabetes.\n\nAt the Grove City office Marcy from payroll is eating a full turkey club at 10 a.m. 'Holiday,' Marcy says, before anyone asks. 'Six weeks. Coach says I'll hold the lean.' Nobody says anything else about it.\n\nAt lunch Lena eats four crackers and half a cheese stick and feels nothing about it, the same nothing she has felt about most things since spring. Her husband Dale said so last week, not unkindly: you used to laugh at the dog.\n\nOn the drive home the radio runs the ad again. Diagnosed with gastroparesis or pancreatic insufficiency after taking a weight-loss drug? She has had the diarrhoea since 2031, back when she was on Ozempic. She writes the number on a receipt and puts it in the cup holder.\n\nThe pediatrician's portal has a message about Kayla, who is ten. The new approval, it says. Worth a conversation. Growth checks every six months. Lena reads it twice and closes it.\n\nAfter dinner, which she mostly watches, she opens the TrumpRx app and looks at the Amvela price, $299, then at the pause button on her own refill. Dale is in the yard throwing the ball for the dog.\n\nShe taps pause. Eight weeks, it asks. She sets it to six, the same as Marcy."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r18-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: it sits badly beside the same entry's \"half to two-thirds regain within 18 months\", because 40% regained in about two months is far faster. It also makes the prestigious 'well-managed holiday' and Marcy's 'I'll hold the lean' hard to believe."
+        },
+        {
+          "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth.",
+          "field": "world/population/note",
+          "why": "Magnitude: this is a convenient reconciliation that pins ever-used at exactly 28.8%. It needs a high death count among ever-users and very low new starts in a window with an oral launch and an AUD label."
+        },
+        {
+          "quote": "~0.18 on Wegovy since its March 2034 6–11 approval",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 0.18% of 6–11s is roughly 40–45k children within nine months on a severe-obesity-only label with growth-chart prior authorisation. Under-12 starts had been falling and AAP guidance favours lifestyle-first, so the speed is unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Use falls to 16.4% through coverage loss and litigation, while regain rises (obesity 34.6%) and the 2032 inequalities persist in new forms. Penalised 'holidays' cost blue-collar workers up to 30% of the premium differential, and Wegovy is now approved for 6–11-year-olds despite a growth deficit of about 0.5–0.7 cm a year. Anhedonia is nameable and labelled, which keeps the epistemic score lower, and there is no collapse or spectacle, so it sits at a harder-society 5.5.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Adoption is -3.2 pp, employer coverage falls 30→24%, oral amycretin is filed Sep 2032 and approved Oct 2033 (13 months), AUD is approved Feb 2033, Wegovy 6–11 in Mar 2034, the MDL passes 88k claims, there is no shock and no state action, and anhedonia becomes a label complaint. mechanism: Most chains are shown (litigation ads and coverage loss lead to stopping, the pill removes the needle, holidays follow flatness). The unexplained 40% regain in eight weeks, the fast Wegovy 6–11 uptake and the top-third decline attributed to litigation ads are asserted. magnitude: Population figures sit inside the envelope, and payer mix sums to 45.1M, Medicare spend multiplies out, and age, income and cycling arithmetic all reconcile. The ever-used coincidence and the 2.0M-deaths figure are strained but not out of range.",
+        "generativity": "The prose gives strong scenes: Lena at the sink, Marcy's 'Holiday' turkey club, the lawyer-ad number on a receipt, Kayla's portal message, the pause button set to six weeks. The world fields add quarterly 'holiday' promotions, on/off/holiday app fields, 'Eight Weeks' on Netflix, and January and July spikes at bars and sportsbooks. Class and regional texture (Charlotte, Memphis, Columbus) is rich."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L2-r18-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth.",
+          "field": "world/population/note",
+          "why": "Ever-used is held at exactly 28.8% while the note claims ~0.9M net gain in ever-users, and ~2.0M deaths among ~78M ever-users in two years is arithmetic-forced rather than shown; 2.9M first-time starts also looks very low next to ~23% never-used obese adults and the heavy telehealth/oral growth in the same window."
+        },
+        {
+          "quote": "Wegovy is now approved for six-to-eleven-year-olds while the liraglutide growth deficit persists at 36 months",
+          "field": "world/open_tensions/0",
+          "why": "A one-year-after-filing approval for semaglutide in 6–11 despite an FDA Drug Safety Communication and a persistent growth deficit is a thin causal chain; the candidate asserts approval without showing why FDA reversed its caution."
+        },
+        {
+          "quote": "The gray market shrank from ~7.5M to ~6.0M. Nothing new stopped it. Repeat-batch fear, slow attrition and $179–299 legitimate orals drained it.",
+          "field": "world/access/note",
+          "why": "Gray market falling 20% while the $4–30 Indian generic price gap persists, tablets enter the mail, and bottom-third coverage is lost is weakly motivated; a 40–50x price gap cuts the other way, so the shrinkage is asserted rather than caused."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society: anhedonia is normalised and managed through holidays; adherence premiums penalise blue-collar workers who cannot take holidays; a Wegovy 6–11 approval is monitored most closely by those most able to decline; and regain is rising (obesity 34.6%). Harms are nameable and measured (label language, litigation), which keeps epistemic and overall below the structural-and-hidden range, and the net user decline is partly a relief.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised: adoption falls 3.2pp to 16.4, employer coverage drops to 24%, oral amycretin (Amvela), AUD and Wegovy 6–11 approvals, the MDL, no market shock, no state action, and the anhedonia label. The pediatric and mood indications use the permitted filings-plus-12-months timing. mechanism: Most changes have chains (litigation and coverage loss lead to stops, anhedonia leads to holidays), but the gray-market shrinkage, the FDA's approval of Wegovy for 6–11 after its safety communication, and the ever-used flat line are asserted. magnitude: Population is inside the envelope and the payer mix sums to 45.1M, but the ever-used figure is held flat with strained start/death arithmetic, and Amvela's 3.2M users are said to be mostly injectable switchers while the cash/commercial counts (2.3M+0.9M) are only partly reconciled with the legitimate cash 13.7M.",
+        "generativity": "Strong texture: holiday-cycle rituals, the Charlotte versus Memphis face reading, and app on/off/holiday fields. The day-in-the-life with Lena, Marcy, Dale and Kayla implies scenes and relationships, shows rather than explains, and ends on a concrete act (pausing her refill)."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s4-L2-r18-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism and magnitude: the parent world says half to two-thirds regain over 18 months, so about 40% back in 8 to 12 weeks is very fast. It is also stated precisely with no cohort or source, despite the 'uncharacterised' caveat elsewhere."
+        },
+        {
+          "quote": "legitimate cash (TrumpRx, direct, telehealth) ~13.7M (including ~1.9M on quiet-mind or AUD-coded telehealth plans)",
+          "field": "world/population/note",
+          "why": "Mechanism: employer retreat and cheaper $179 to $299 orals should push users into the cash channel. Instead cash falls from ~17.6M to 13.7M, even with 2.3M new cash Amvela users and growing telehealth plans, so the rest of cash must have lost over 6M users with no chain shown."
+        },
+        {
+          "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users",
+          "field": "world/population/note",
+          "why": "Magnitude: the ever-used share is pinned at exactly 28.8% by balancing implausibly low new adult starts, during an oral launch that sold 3.2M units, against a roughly 2M death toll. The fit reads as back-solved to the envelope rather than derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a harder society with new losers. Adherence-premium rules penalise holidays, so blue-collar workers stay on while salaried staff take breaks. Regain is concentrated in Memphis and the lost-coverage bottom third, and a 10-year growth registry follows a 6–11 approval whose monitoring is weakest where children are poorest. The harms are named and measured (anhedonia labelling, MDL, registries), which keeps epistemic badness low, and nothing is melodramatic, so it sits near a 5.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption falls by 3.2 points, employer coverage goes 30→24, oral amycretin is approved Oct 2033 after a Sep 2032 filing, and the AUD approval carries mood_and_motivation, which is thin but allowed. The litigation and normalisation drivers are traced through events. mechanism: Most chains are shown, but the 22% drop in cash users despite cheaper orals and employer retreat is unexplained, and the 40% regain during holidays is asserted (claims 1 and 2). magnitude: Adults on drug is 16.4 (inside 14.4–18.4), ever-used is held at 28.8, payer mix sums to 45.1M, and the Medicare arithmetic multiplies out. The cycling arithmetic reconciles, and approval timings obey the 12-month rule. The remaining weakness is the back-solved starts and deaths balance (claim 3).",
+        "generativity": "Concrete scenes imply many characters, such as Marcy's turkey club, the receipt with the lawyer's number, Kayla's portal message and the pause button set to six weeks. The world also supplies texture like holiday nights, 'holiday sex' and January/July wagering surges, so a film could be built from it. The prose leans slightly on explanation in its opening sections."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+        "field": "world/safety_ledger/7/prevalence_note",
+        "why": "Mechanism: it sits badly beside the same entry's \"half to two-thirds regain within 18 months\", because 40% regained in about two months is far faster. It also makes the prestigious 'well-managed holiday' and Marcy's 'I'll hold the lean' hard to believe."
+      },
+      {
+        "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth.",
+        "field": "world/population/note",
+        "why": "Magnitude: this is a convenient reconciliation that pins ever-used at exactly 28.8%. It needs a high death count among ever-users and very low new starts in a window with an oral launch and an AUD label."
+      },
+      {
+        "quote": "~0.18 on Wegovy since its March 2034 6–11 approval",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: 0.18% of 6–11s is roughly 40–45k children within nine months on a severe-obesity-only label with growth-chart prior authorisation. Under-12 starts had been falling and AAP guidance favours lifestyle-first, so the speed is unexplained."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.5,
+      "inequality": 6.0,
+      "public_health": 5.5,
+      "cohesion": 5.0,
+      "epistemic": 4.33,
+      "overall": 5.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.37,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Use falls to 16.4% through coverage loss and litigation, while regain rises (obesity 34.6%) and the 2032 inequalities persist in new forms. Penalised 'holidays' cost blue-collar workers up to 30% of the premium differential, and Wegovy is now approved for 6–11-year-olds despite a growth deficit of about 0.5–0.7 cm a year. Anhedonia is nameable and labelled, which keeps the epistemic score lower, and there is no collapse or spectacle, so it sits at a harder-society 5.5.",
+      "plausibility": "driver_fidelity: Every driver is visible and traceable. Adoption is -3.2 pp, employer coverage falls 30→24%, oral amycretin is filed Sep 2032 and approved Oct 2033 (13 months), AUD is approved Feb 2033, Wegovy 6–11 in Mar 2034, the MDL passes 88k claims, there is no shock and no state action, and anhedonia becomes a label complaint. mechanism: Most chains are shown (litigation ads and coverage loss lead to stopping, the pill removes the needle, holidays follow flatness). The unexplained 40% regain in eight weeks, the fast Wegovy 6–11 uptake and the top-third decline attributed to litigation ads are asserted. magnitude: Population figures sit inside the envelope, and payer mix sums to 45.1M, Medicare spend multiplies out, and age, income and cycling arithmetic all reconcile. The ever-used coincidence and the 2.0M-deaths figure are strained but not out of range.",
+      "generativity": "The prose gives strong scenes: Lena at the sink, Marcy's 'Holiday' turkey club, the lawyer-ad number on a receipt, Kayla's portal message, the pause button set to six weeks. The world fields add quarterly 'holiday' promotions, on/off/holiday app fields, 'Eight Weeks' on Netflix, and January and July spikes at bars and sportsbooks. Class and regional texture (Charlotte, Memphis, Columbus) is rich."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.933,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 38
+  }
+}

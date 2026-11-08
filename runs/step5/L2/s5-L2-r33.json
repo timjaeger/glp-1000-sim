@@ -1,0 +1,587 @@
+{
+  "run_id": "s5-L2-r33",
+  "step": 5,
+  "year": 2036,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 33,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 2.3,
+    "price_path": "managed_decline",
+    "coverage_shift": "status_quo",
+    "new_indications": [
+      "compulsive_behaviour"
+    ],
+    "safety_signal": "gi_pancreatic_litigation",
+    "next_gen_launch": "monthly_or_implant",
+    "market_shock": "manufacturer_scandal",
+    "cultural_response": "class_stratification",
+    "state_action": "workforce_military",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T18:04:34Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01DHHhkJDhppSFMdXTwKiMQw",
+        "custom_id": "s5-L2-r33",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19534,
+        "output_tokens": 24135
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01PSHAi4hqzyPnLKgwnR5c4E",
+        "custom_id": "s5-L2-r33",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 33934,
+        "output_tokens": 13672
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r33-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36547,
+        "output_tokens": 4775
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r33-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36547,
+        "output_tokens": 6887
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L2-r33-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36547,
+        "output_tokens": 5542
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2036,\"fictional\":true,\"population\":{\"us_adults_on_drug_pct\":30.8,\"us_adults_ever_used_pct\":43.5,\"by_income_third_pct\":{\"top\":33.5,\"middle\":31,\"bottom\":28},\"by_age_band_pct\":{\"18_29\":17,\"30_49\":34,\"50_64\":44.5,\"65_plus\":24.7},\"pediatric_under_18_on_drug_pct\":1.3,\"cycled_off_and_on_pct\":48.3,…"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2036,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 30.8,
+      "us_adults_ever_used_pct": 43.5,
+      "by_income_third_pct": {
+        "top": 33.5,
+        "middle": 31,
+        "bottom": 28
+      },
+      "by_age_band_pct": {
+        "18_29": 17,
+        "30_49": 34,
+        "50_64": 44.5,
+        "65_plus": 24.7
+      },
+      "pediatric_under_18_on_drug_pct": 1.3,
+      "cycled_off_and_on_pct": 48.3,
+      "note": "FICTIONAL. Adults ≈276M. Current users 30.8% ≈85.0M, up 2.3 pts. Ever-used 43.5% ≈120.1M, up 3.5 pts against a limit of 5.3. Used and off now: 43.5 − 30.8 = 12.7 pts ≈35.1M. Never used ≈155.9M. Cycling, in one line: ≈16.0 pts of current users are on a second or later course, and ≈5.0 pts of the off-now group restarted and stopped again, so (16.0 + 5.0)/43.5 ≈ 48.3%. That is consistent with ~35% one-year persistence and 36–47% restart within a year. Observed monthly dosing at worksite clinics and in the military raised persistence a little among MariTide users, but the effect is too small to move the national figure in two years. Age check: 18–29: 17% × 52M = 8.84M; 30–49: 34% × 92M = 31.28M; 50–64: 44.5% × 62M = 27.59M; 65+: 24.7% × 70M = 17.29M; total ≈ 85.0M. Income thirds average (33.5 + 31 + 28)/3 ≈ 30.8. The bottom third rose most (24.5→28) because portal price cuts pulled some import users back to branded starter and pill doses and because Medicaid enrolment in the 31 states plus DC kept growing. Imported or counterfeit users ≈7.5M (up from 7.1M), a falling share. The 65+ band rose 21→24.7% as the 50 mg pill eased continuous use, offset by bone pauses, NAION stops and roughly 1 in 6 older ever-users stopped on medical advice. Under-30 growth includes the new gambling-disorder indication, which skews young and male (≈350k on-label users by Dec 2036), and military users (≈210k active duty). Pediatric: 1.3% of ≈73M ≈ 950k, mostly adolescents 12+. The adolescent bone-accrual readout reported in 2035 showed slightly lower BMD accrual and no fracture excess, leaving the question unresolved. About 2 in 5 children live with a parent who is on the drug or cycling off it. The ≈35M off-now population is concentrated among over-50s cut off by gating, tenure gaps or bone pauses, and among people who stopped for GI reasons. That second group is now actively recruited by tort advertising."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1449,
+      "public_coverage": "FICTIONAL. Statute unchanged. The Part D obesity benefit pays $199/month with a $50 copay, a counselling visit, and eligibility at BMI ≥30 or ≥27 with one comorbidity. Medicare pays 19.0% of fills: ≈16.15M users (≈14.75M aged 65+ and ≈1.4M disabled under-65), of whom ≈6.8M are diabetes and ≈9.35M obesity. Obesity-benefit gross spend: 9.35M × $199 × 12 ≈ $22.3B. Beneficiary copays: 9.35M × $50 × 12 ≈ $5.6B. Net to the program ≈ $16.7B. All Medicare incretin fills: 16.15M × $199 × 12 ≈ $38.6B gross. Medicaid: the same 31 states plus DC use the 90% match and the continuation standard. It pays 14.8% of fills, ≈12.58M × $199 × 12 ≈ $30.0B gross before supplemental rebates. The public price did not fall, because the $199 rate is statutory. TRICARE is an existing payer inside the commercial/other bucket and covers the DoD readiness programme; no new payer was created. Indiana's waiver was upheld by the Seventh Circuit in Oct 2035, so the Indiana and Arkansas 12-month rules stand.",
+      "employer_coverage_pct": 65,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 100+ semaglutide brands at $5–30/month, including generic oral semaglutide and the first generic 50 mg-equivalent tablets. The Telangana first-filer plant is still under US import alert. China: generic semaglutide, tirzepatide copies, and 'research' retatrutide vials, with Chinese API still underlying most of the gray trade. Canada: generic semaglutide at CAD 45–70. Brazil, Mexico, Turkey and Egypt also have generics. US: the mid-2035 contingent date for rival filers passed with tentative approvals only, because the first filer's 180-day exclusivity was neither used nor formally forfeited. FDA issued a forfeiture determination in Sep 2036, and final approvals for rival filers are expected in 2037, covering the injectable only. No generic for tirzepatide, the 50 mg pill or MariTide.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Managed decline. In Jul 2035 Novo and Lilly signed a second-tranche portal agreement, trading direct-price cuts for Section 232 tariff exemptions on US fill-finish capacity. Direct maintenance prices fell $30–50. Injectable semaglutide and tirzepatide: $219–279 (from $249–329). 50 mg Wegovy pill: $249 (from $299). Oral starters (Wegovy pill, Foundayo): still $149–150. Retatrutide: $399 direct, $1,449 list (from $1,649). Amycretin: $449. MariTide monthly autoinjector: $449 direct (from $549). PBM net for 2036 formularies is ≈$175–190 (from $195–215). Payer mix of ≈85.0M users: commercial/other incl. TRICARE 37.0% (31.45M); Medicare 19.0% (16.15M); Medicaid 14.8% (12.58M); cash/direct 20.4% (17.34M, including ≈5.3M 'calm', 'focus' and 'unhooked' subscribers); imported/counterfeit 8.8% (7.48M). Sum 100%, 85.0M. Coverage is still rationed. ~85% of covering employers gate, a third use tenure gates, and a growing minority accept 'observed monthly dosing' at worksite clinics as proof of adherence. Routes: daily oral ≈40% (34M); weekly injectable ≈54% (45.9M); monthly MariTide ≈6% (≈5.1M). 503B exclusion and 503A injunction stand."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide; MASH indication added 2035)",
+        "GIPR-antagonist/GLP-1 agonist antibody-peptide conjugate, monthly injectable (MariTide; single-dose monthly autoinjector from May 2035)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill incl. 50 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo; gambling-disorder indication Jun 2036)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide, Aug 2035)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "gambling disorder in adults, adjunct to counselling (orforglipron/Foundayo, Jun 2036)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm', 'focus' and 'unhooked' subscriptions (low-dose oral semaglutide or Foundayo, ≈5.3M subscribers)",
+        "compulsive shopping, 'doomscrolling' and compulsive sexual behaviour, citing the gambling label and still without trials",
+        "smoking and vaping cessation (SHAPS trial fully enrolled, no readout)",
+        "alcohol reduction, incl. EAP-referred prescribing",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "military and police body-composition remediation outside formal indication (BMI below label thresholds)",
+        "pediatric under-12 use under specialist care",
+        "gray-market 'research' retatrutide among gym and physique users"
+      ],
+      "pipeline_note": "FICTIONAL. Monthly driver: this is realised with an existing product in a new form, not a new molecule. MariTide, approved Jul 2033, launched a single-dose monthly autoinjector in May 2035, with uptake rising from under 1M to ≈5.1M as worksite clinics and the military adopted observed dosing. Implants such as an osmotic-pump exenatide successor and long-acting depots are in phase 1–2 and not on the market, and Lilly's next-generation orals remain unfiled. Compulsion driver: Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2035 on the 52-week phase 3 CRAVE-G trial (n≈1,150; gambling days −58% vs −37% placebo). It also produced the first randomised low-dose anhedonia data: clinically meaningful SHAPS worsening in 7.5% vs 3.9%. FDA approved the indication 14 months later in Jun 2036, narrowly, for gambling disorder only, as an adjunct to counselling, with anhedonia in Adverse Reactions. Survodutide's MASH sNDA, under review at the start, was approved Aug 2035. Bimagrumab combinations remain in phase 3 with no filing. Incretin market ≈$194B. US ≈$172B: 77.5M paying users (85.0M − 7.48M imports) × ≈$185 average net × 12 ≈ $172.1B. Ex-US ≈$22B and eroding. Volume up ≈9%, average net down ≈7%."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common effect and the leading cause of voluntary stops. Monthly MariTide has front-loaded post-dose nausea in days 1–3.",
+        "regulatory_response": "Labelled. Severe gastroparesis caution retained. FDA requested a Medication Guide revision in 2036 after the Novo documents."
+      },
+      {
+        "effect": "Persistent gastroparesis and ileus/intestinal obstruction",
+        "status": "suspected",
+        "prevalence_note": "Claims studies suggest roughly 1 excess new gastroparesis diagnosis per 1,000 user-years, with a minority persisting more than 6 months after stopping. Whether persistence is causal is unresolved. Mass-tort scale: ≈185,000 claimants in the federal MDL in E.D. Pa. by mid-2036, combined with pancreatitis claims. First bellwether verdict Apr 2036: $38M including punitive damages. Tort advertising is now routine on daytime TV.",
+        "regulatory_response": "Ileus already labelled. FDA opened a for-cause pharmacovigilance inspection of Novo (Form 483, Feb 2036) and requires prospective gastric-emptying substudies in postmarketing plans. No boxed warning."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Rising in absolute numbers with the larger 65+ user base.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation, and absolute risk is low. The Nov 2035 unsealed documents show an internal 7.2 mg disproportionality analysis that was reported to FDA as 'no new signal'. Gray-market overdose still confounds reports.",
+        "regulatory_response": "Labelled. Part of the MDL. DOJ expanded its civil inquiry into Novo to cover safety reporting."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "≈1.9M long-term older users meet sarcopenia criteria in Medicare claims. Lean mass is ~30–40% of loss in untrained users over 50.",
+        "regulatory_response": "Class label. Body-composition monitoring is in the high-dose and MariTide labels. CMS annual DEXA requirement unchanged."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "≈8.6M users aged 65+ have more than 2 years' use. 8.6M × ~0.6%/yr × 0.35 excess ≈ 18,000 excess hip fractures a year, against ~310,000 total. The 2035 adolescent readout showed slightly lower BMD accrual and no fracture excess.",
+        "regulatory_response": "Labelling retained; bone endpoints required; CMS 90-day bone-pause code unchanged. Private plans are not bound by it. DOJ civil case unresolved."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "established",
+        "prevalence_note": "RR ≈1.7. 85M × 4/100k × 0.7 ≈ 2,400 excess cases a year, mostly partial, permanent vision loss in one eye. A separate MDL has ≈40,000 claimants.",
+        "regulatory_response": "Class Warnings and Precautions since May 2034, not boxed. FAA requires baseline and annual visual-field testing for pilots on these drugs (2036)."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association; CRAVE-G found no excess.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('the grey')",
+        "status": "emerging",
+        "prevalence_note": "First randomised data: CRAVE-G found clinically meaningful anhedonia in 7.5% on mid-dose Foundayo vs 3.9% on placebo. The retatrutide 12 mg observational figure (~12% vs ~5%) stands. With ≈9M on top-dose regimens, that implies ≈630k excess cases if causal. ≈5.3M subscribers remain unmeasured at their own doses.",
+        "regulatory_response": "Anhedonia listed in Foundayo Adverse Reactions for the gambling indication only. FTC consent orders stand. No class label."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Fewer forced stops than 2033, but GI-litigation publicity triggered a wave of voluntary stops in late 2035, estimated at ≈1M.",
+        "regulatory_response": "CMS bone-pause code; Indiana waiver upheld Oct 2035."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Common in high-loss older users and gray-market users with no clinical contact.",
+        "regulatory_response": "Professional guidance; Part D counselling screen."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~10 years; adolescent exposure; repeated cycling",
+        "status": "emerging",
+        "prevalence_note": "About fourteen years of follow-up. The adolescent bone signal is small but present. Cycling still looks worse for bone than continuous use.",
+        "regulatory_response": "Postmarketing requirements continue; one sponsor's adolescent extension expires 2037."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms",
+        "status": "established",
+        "prevalence_note": "≈7.5M import users. No contamination cluster on the 2033 scale, but poison-centre calls stay ~65% above 2032. Vial infections continue in the Southeast at a lower rate.",
+        "regulatory_response": "Import alerts stand, seizures continue, no individual prosecutions. 'Safe Pens' still stalled."
+      },
+      {
+        "effect": "Counterfeit oral tablets (variable content)",
+        "status": "established",
+        "prevalence_note": "Upgraded from emerging. Pressed 50 mg and Foundayo fakes are now the main counterfeit form. Some are sold as 'unhooked' tablets for gambling and shopping.",
+        "regulatory_response": "FDA warnings; NABP verified-pharmacy guidance; no law."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher at 12 mg; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "established",
+        "prevalence_note": "Fall-related ED visits remain elevated in long-term 65+ users. Monocular vision loss is a cofactor in a minority.",
+        "regulatory_response": "Fall-risk screening mandatory in the Part D counselling visit."
+      },
+      {
+        "effect": "Adverse body-composition cycling (fat-dominant regain)",
+        "status": "emerging",
+        "prevalence_note": "Concentrated in over-50s cut off by gating and in the late-2035 litigation-scare stoppers.",
+        "regulatory_response": "Joint society guidance published 2035; no regulatory action."
+      },
+      {
+        "effect": "Heart-rate elevation at high triple-agonist doses",
+        "status": "suspected",
+        "prevalence_note": "Several bpm at 12 mg retatrutide; CV outcomes trial ongoing.",
+        "regulatory_response": "Precautionary label."
+      },
+      {
+        "effect": "Injection-site reactions and post-dose GI clustering (monthly MariTide)",
+        "status": "established",
+        "prevalence_note": "Larger single-dose volume. Site reactions in ~10%, and nausea concentrated in the first 72 hours, which lands on shift workers and soldiers dosed at the start of a cycle.",
+        "regulatory_response": "Labelled; DoD guidance schedules doses before rest days."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With ~31% of adults on the drug, salty snacks fall ~3–4% a year and confectionery ~4–5%. The price-tier split hardens. Premium protein and 'bone-forward' dairy sell to the coached top third, and discount grocers push cheap shakes and calorie-dense value packs to the off-and-cycling population. Military commissaries and DFAC contractors rewrite menus around protein-first portions for medicated units.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Ninth straight year of spirits volume decline, with beer also down. Non-alcoholic and single-serve premium formats hold share. Tobacco and vape keep falling.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic flat and spend per cover down ~11% from 2028 in high-uptake suburbs. Gram-priced bowls are standard. Casino buffets in Las Vegas and Atlantic City trim stations. 'Full table' weekend rooms persist in Memphis and Houston.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "The 'structured' and 'cycle' split is now industry-wide. Premium brands in Scottsdale and Buckhead offer DEXA-fit tailoring. Discount chains sell three-size elastic 'cycle' lines. Uniform suppliers for the Army and large police departments re-cut patterns for medicated trainees. Resale sized for cycling keeps growing.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Growing. DEXA-plus-coaching chains keep adding sites, Medicare Advantage 'prescribed lifting' expands, and contractors win base-gym strength programmes alongside the DoD readiness directive. Qualified staff for older lifters are still the bottleneck.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage 65%, ~85% gated, a third tenure-gated. Pharmacy trend eases to ~+6% as net prices fall. Observed monthly dosing at worksite clinics is sold as an 'adherence-guaranteed' design. Product-liability carriers reprice pharma towers after the bellwether verdict. Bone, fall and NAION costs still land on Part A and Medicare Advantage.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Volume up ~9%, average net down ~7%. Lilly leads with tirzepatide, retatrutide and Foundayo, which now carries the gambling indication. Amgen's MariTide is the growth product of the window. Novo is damaged: the unsealed-documents scandal led its CEO and CMO to resign in Jan 2036, it holds a $6.5B litigation reserve, and generic injectable semaglutide is expected in 2037. It is defending share with the 50 mg pill, which generics do not cover. Indian and Chinese makers dominate abroad and in parcels.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Income, and now also institution. Trained shoulders and a DEXA-verified steady waist read as top-third coaching. A soft 'pill body' reads as middle. Visible cycling and the thin-armed stoop read as gating, tenure gaps or imports. A new legible type is 'the monthly body': lean, uniform, logged. It belongs to soldiers, police and warehouse staff dosed at worksite clinics. People read it as employed and supervised rather than rich.",
+      "thinness_and_class": "Use rates converge (28% bottom vs 33.5% top) while results diverge. In Phoenix the Scottsdale and Maryvale contrast persists. Women 50–64 remain the most sorted group, split between coached employer-plan users and cyclers carrying fat-dominant regain. Around Fort Cavazos in Killeen, Texas, a non-expansion state, soldiers on observed monthly doses and their civilian relatives on imports or nothing live in the same households with different bodies.",
+      "eating_as_ritual": "Protein-first shared meals are the user norm, and hosts plan for 'on' guests. Sunday full tables and church potlucks persist as heritage and working-class practice. Many unit cookouts at large bases now run a 'dose week' menu.",
+      "dating_and_intimacy": "Profiles list regimen and now cadence: 'monthly' signals a stable job with a worksite clinic, 'coached' signals money. 'Unmedicated' persists as a niche identity. Advice columns field worries about partners' gray tablets and, since the gambling label, about partners using 'unhooked' pills to hide a betting problem rather than treat it.",
+      "meaning_of_appetite": "Medicalised and assumed managed among the insured, and appetite is now framed alongside other wants. The backlash coalition is about the same size. The GI tort wave gave it a new language of betrayal, aimed at Novo specifically rather than at the drug class.",
+      "severity": 6
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL. The first randomised measurement, from CRAVE-G, finds clinically meaningful anhedonia in 7.5% on mid-dose Foundayo vs 3.9% on placebo, a 3.6-point excess at a dose close to what many subscribers take. Observational retatrutide 12 mg: ~12% vs ~5%. ≈9M on top-dose regimens imply ≈630k excess cases if causal. If the CRAVE-G excess applied to ≈5.3M subscribers, it would mean ~190k excess cases, but subscriber doses vary and they have never been studied. Counterfeit 'unhooked' tablets add unmeasured exposure.",
+      "framing": "Feature in retail, side effect in clinic, and since June 2036 a treatment for one named compulsion. Telehealth brands 'Quiet', 'Even' and 'Unhooked' cost $149–199/month on oral starter doses. Foundayo-based services now route users through an online gambling-disorder screener to reach on-label prescribing. Users still say 'the grey'. Marketers now say 'freedom from the loop'.",
+      "effect_on_work": "'Focus' subscriptions stay in white-collar lifestyle accounts. In logistics, call centres and policing, observed monthly MariTide at worksite clinics satisfies adherence gates automatically, so HR counts doses in the attendance system. Unions in two big warehouse contracts bargained that the post-dose nausea day is paid leave. Sportsbook-heavy employers in Las Vegas and Atlantic City add the drug to EAPs for staff with gambling problems.",
+      "effect_on_art_and_play": "The 'grey era' genre persists, and 'written unmedicated' remains a niche badge. Sportsbook operators report slower handle growth among 25–44 men in high-uptake states and lobby to partner with prescribers as 'responsible gaming'. Comedians work the tort ads into their sets. Indie film follows lot-check volunteers and now tort-claim recruiters.",
+      "effect_on_intimacy": "Sex therapists screen for dose, cadence and sourcing. Since the gambling label, some partners demand a prescription as a condition of staying, and therapists report this as a new kind of coercion. Couples with one partner coached and one on imports remain common.",
+      "effect_on_politics": "Price, sourcing, and now corporate trust. The Novo documents gave both parties a target. Populists use them against 'pharma that hid it', and tort-reform advocates use the $38M verdict against trial lawyers. The DoD directive drew criticism from both directions, as medicating the force and as rationing civilians. 'Safe Pens' remains stalled. The FDA generic-forfeiture decision is a 2036 campaign line.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Data-demanding and enforcing, with a slow trust problem. FDA approved the narrow gambling indication with anhedonia labelled, approved survodutide for MASH, issued a Form 483 to Novo's pharmacovigilance operation, determined generic forfeiture in Sep 2036, and kept the NAION class warning. Still no individual prosecutions and no importation or authentication law. FTC consent orders stand.",
+      "subsidy_or_mandate": "Unchanged. Permanent Part D obesity benefit at $199 with a $50 copay; 90% Medicaid match for 31 states plus DC. No new state action and no individual mandate. Price relief came through the July 2035 portal tariff deal, not through statute.",
+      "conditioning_or_surveillance": "The CMS continuation standard is unchanged (≥80% PDC, six-monthly verified weights, 5% response or override, annual DEXA for long-term 65+, 90-day bone pause, two misses suspend 6 months). Private conditioning deepens. Observed monthly dosing is logged in employer and military systems, and kiosk weights still feed premiums. Dose records for soldiers sit in the medical readiness database that commanders see.",
+      "workforce_or_military": "DoD Metabolic Readiness directive (Sep 2035): service members who fail body-composition standards may be offered monthly MariTide or weekly tirzepatide under TRICARE, given at battalion aid stations and tracked as a readiness item. The Army allows accession waivers for recruits stable on maintenance for 6 months. ≈210k active-duty users. FAA permits pilots on specified agents after a 3-month stable period with visual-field testing. Several large police departments (Houston, Phoenix, Chicago) run similar remediation programmes through their existing health plans. DOT sleep-apnea screening still pushes drivers to tirzepatide. FMCSA has issued no new rule.",
+      "geopolitics_of_supply": "The July 2035 portal deal exempted US fill-finish from Section 232 tariffs in exchange for price cuts, and Novo and Amgen expanded North Carolina capacity. Chinese API and Indian finished product still supply the gray market. The Telangana import alert remains a bilateral irritant. DoD designated incretin fill-finish a defence-relevant supply chain, which rules out foreign sourcing for military stock.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2035-04",
+        "event": "Lilly files an sNDA for Foundayo in adult gambling disorder on the CRAVE-G phase 3 trial, which also produced the first randomised low-dose anhedonia data: 7.5% versus 3.9% on placebo",
+        "driver": "new_indications: compulsive_behaviour"
+      },
+      {
+        "date": "2035-05",
+        "event": "Amgen launches a single-dose monthly MariTide autoinjector at $449 direct. Two large benefits administrators certify 'observed monthly dosing' at worksite clinics as meeting plan adherence gates, and MariTide use passes 3M within a year",
+        "driver": "next_gen_launch: monthly_or_implant"
+      },
+      {
+        "date": "2035-07",
+        "event": "The mid-2035 generic semaglutide date passes with only tentative approvals while the first filer's exclusivity sits unforfeited. The same month Novo and Lilly sign a second portal agreement that exempts US fill-finish from Section 232 tariffs and cuts direct maintenance prices by $30–50. The $199 Medicare rate and $149 oral starters are unchanged",
+        "driver": "price_path: managed_decline"
+      },
+      {
+        "date": "2035-09",
+        "event": "The Pentagon issues a Metabolic Readiness directive. Troops who fail body-composition standards may be offered incretin therapy under TRICARE, given at aid stations and tracked as a readiness item, and the Army opens accession waivers for recruits on stable maintenance. FAA later sets pilot rules requiring visual-field checks",
+        "driver": "state_action: workforce_military"
+      },
+      {
+        "date": "2035-11",
+        "event": "Documents unsealed in the federal GI MDL show that Novo's safety group completed internal analyses in 2029 of persistent post-discontinuation gastroparesis and a 7.2 mg pancreatitis signal, then reported them to FDA as 'no new signal'. Claims pass 150,000. Novo's CEO and CMO resign in January, and an April bellwether returns a $38M verdict",
+        "driver": "market_shock: manufacturer_scandal; safety_signal: gi_pancreatic_litigation"
+      },
+      {
+        "date": "2036-06",
+        "event": "FDA approves Foundayo as an adjunct to counselling for gambling disorder, the first 'compulsion' indication, with anhedonia listed as an adverse reaction. Within weeks, telehealth 'Unhooked' services add online gambling screeners, and sportsbook operators announce 'responsible gaming' prescriber partnerships",
+        "driver": "new_indications: compulsive_behaviour; personality_layer: marketed_feature; cultural_response: class_stratification"
+      }
+    ],
+    "open_tensions": [
+      "FDA's Sep 2036 forfeiture decision clears generic injectable semaglutide for 2037, but Novo has moved patients to the 50 mg pill, which generics do not cover. It is still unknown whether the generic reaches the 7.5M import users or only lowers PBM net prices for people already insured.",
+      "The GI mass tort (≈185k claimants) and the Novo documents have damaged trust in one manufacturer, not in the drug class. Meanwhile the persistence question for gastroparesis is still unresolved, and a voluntary-stop wave is feeding the fat-dominant regain cohort.",
+      "Observed monthly dosing turns adherence into something employers and commanders record. Coverage, job tenure and readiness now run through one injection log, with no law governing who can see it.",
+      "The gambling label creates the first randomised anhedonia number and a sanctioned 'compulsion' market at the same time. ≈5.3M subscribers take similar doses with no diagnosis, and the online screeners that route them on-label have not been validated."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is on the US market; generic_us remains false.",
+      "The permanent Part D obesity benefit still pays the $199/month negotiated rate with a $50 beneficiary copay, eligibility BMI ≥30 or ≥27 with one comorbidity, and the counselling visit.",
+      "The CMS continuation standard is unchanged, including the 90-day 'bone pause' code, and the same 31 states plus DC use it for the 90% Medicaid match.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149–150 a month cash through the federal direct-pricing portal (launched as TrumpRx) and manufacturer direct channels.",
+      "The 'Safe Pens' authentication bill is still stalled, Congress has passed no importation law, and FDA still does not prosecute individual importers."
+    ]
+  },
+  "prose": {
+    "headline": "Once a Month, On the Record: The Shot That Made Your Adherence Somebody Else's Job",
+    "world_in_600_words": "At the end of 2036 about three American adults in ten are on an incretin drug, and a growing number of them no longer dose themselves. The change came from a device. In the spring of 2035 Amgen put its monthly drug into a single autoinjector, and two of the largest benefits administrators decided that one observed dose a month at a worksite clinic counts as proof of adherence. Warehouses, call centres and police departments in Phoenix and Houston now keep a nurse's dosing log next to the time clock. At Fort Cavazos and other large bases, the Pentagon's Metabolic Readiness directive does the same thing in uniform. Soldiers who fail body-composition standards are offered the shot at the battalion aid station, and their commanders see it in the readiness database alongside dental exams and weapons qualification. There is a body that goes with this: lean, regular, supervised. People read it as employed rather than rich.\n\nRich still has its own body. In Scottsdale and Buckhead, trained shoulders and a DEXA-verified waist mean a coach and the strongest weekly pens. The soft middle and thin arms of the cycler still mean a plan that cut you off, a job you have not held long enough, or a pen from a parcel. Women in their fifties and early sixties remain the group most visibly sorted. Prices fell a little. In July 2035 Novo and Lilly traded thirty to fifty dollars off their direct maintenance prices for a tariff exemption on American fill-finish plants, and PBM net prices slipped below two hundred dollars. Medicare's statutory $199 did not move, and the $149 starter pills stayed where they were. Rationing still happens through coverage. Most employers still gate, and a third still make you vest.\n\nThe generic that was supposed to arrive in 2033 has still not arrived. The mid-2035 date passed with tentative approvals only, because the company holding the first right to launch neither launched nor formally lost the right. The FDA finally ruled it forfeited in September, so generic injectable semaglutide should reach shelves in 2037. By then Novo will have spent two years moving people to its pill, which the generics do not copy.\n\nNovo has had a worse window than that. In November 2035 documents unsealed in the federal gastrointestinal litigation showed that its safety group had analysed persistent stomach paralysis after discontinuation, and a pancreatitis signal at the highest dose, in 2029, and had told regulators there was nothing new. Nobody has proved the drug causes either. The documents did not need to prove it. The chief executive and the medical officer left in January. In April a Philadelphia jury awarded thirty-eight million dollars to a woman who still cannot eat a full meal. Claims now number about 185,000, and the ads run between daytime game shows. Roughly a million people stopped on their own that winter, and many of them are regaining weight in the visceral, fat-first pattern the cycling studies keep describing.\n\nIn June the FDA did something it had never done before. It approved Lilly's daily pill for gambling disorder in adults, as an adjunct to counselling. The trial behind it also produced the first randomised measure of what the drug does to pleasure at a modest dose: about seven and a half percent of people on it developed clinically meaningful anhedonia, against four percent on placebo. That number is printed on the label. Within weeks the subscription brands that sell calm and focus had added online gambling screeners, sportsbooks had announced prescriber partnerships, and the word 'unhooked' had moved from marketing copy onto a prescription. About five million subscribers who take similar doses without any diagnosis have still never been studied.\n\nThe bone count keeps rising, to about eighteen thousand excess hip fractures a year. The eye count holds near 2,400. Seven and a half million people still buy from abroad.",
+    "a_day_in_the_life": "Sergeant First Class Renee Okafor reports to the battalion aid station at 0600 on the first Tuesday, because the first Tuesday is dose day. The medic is a specialist from Ohio who calls everybody ma'am. He wipes her left thigh and presses the gray autoinjector until it clicks. Then he scans her ID card, and the screen turns green next to DENTAL and VISION.\n\n\"Rest day Thursday,\" he says. \"Hydrate.\"\n\nShe does not eat until 1100, and then only half a turkey wrap from the DFAC's dose-week line. The nausea arrives as it always does, a low tide. She has been on the shot fourteen months. Her tape test passes. Her unit's tape tests all pass now.\n\nAt 1730 she drives off post into Killeen to her mother's house. Her mother is sixty-three, too young for Medicare, and works the deli at the H-E-B. She is sitting at the kitchen table with a padded envelope from Hyderabad and the reading glasses she needs for the lot number. Renee pulls the harm-reduction list up on her phone and they check the number together. It's clean.\n\n\"Two more months and I vest,\" her mother says. \"Then I'll get the real one.\"\n\nThe TV is on. A lawyer in a blue suit asks whether you or a loved one has experienced stomach paralysis. Her mother laughs and changes the channel to a game show. A sportsbook ad comes on, and at the bottom of the screen it says that help is available, including medication.\n\nRenee eats four bites of her mother's rice and says she's full, which is true."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L2-r33-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2035 on the 52-week phase 3 CRAVE-G trial (n≈1,150; gambling days −58% vs −37% placebo)",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: The 2034 parent lists gambling craving reduction as anecdotal and mentions no gambling trial. A completed 52-week phase 3 filed by Apr 2035 would have had to start before the parent snapshot, so the indication appears with no precursor."
+        },
+        {
+          "quote": "The bottom third rose most (24.5→28) because portal price cuts pulled some import users back to branded starter and pill doses and because Medicaid enrolment in the 31 states plus DC kept growing.",
+          "field": "world/population/note",
+          "why": "mechanism: Oral starters stayed at $149–150, so only the pill price fell, and imported users actually rose from 7.1M to 7.5M. The stated cause contradicts the world's own numbers, and a 3.5-point bottom-third jump is under-explained."
+        },
+        {
+          "quote": "uptake rising from under 1M to ≈5.1M as worksite clinics and the military adopted observed dosing",
+          "field": "world/drugs/pipeline_note",
+          "why": "magnitude: About 4M new monthly users in two years is attributed to worksite clinics and the military, but the military accounts for ≈210k and the clinic footprint is only gestured at. The adoption chain is asserted at a scale it does not support."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, the world keeps every inherited harm (gray market, sarcopenia, bone, NAION, gated coverage) and deepens several. Dose logs now run through employers and the military readiness database (conditioning/surveillance, interior_life/effect_on_work). Body shape is a class proxy, with kiosk weights feeding premiums. A 185k-claimant GI tort, an eye MDL, and ≈5.3M unmeasured 'calm' subscribers with a first randomised anhedonia signal (7.5% vs 3.9%) add to the ledger. Spirits and snack industries contract, but nothing here is collapse. The harm is structural and normalised, so overall is about 7.",
+        "plausibility": "driver_fidelity: Every driver is traceable to an event or field. These include 2.3 pp adoption, managed_decline via the July 2035 portal deal, MariTide as an existing product in a new form, the DoD directive, the Novo scandal with MDL, and the gambling indication. Status_quo coverage holds, since the $199 rate and statute are unchanged. mechanism: Most chains are shown (documents, then resignations, then verdict; tariff deal, then price cuts). Claim 1 (an unprecedented gambling phase 3 appearing from nowhere) and claim 2 (price cuts pulling imports back while imports rose) are asserted or self-contradicting. magnitude: All population figures sit inside the envelope (30.8% current, 43.5% ever). Age bands sum to 85.0M, and payer shares sum to 100%. Medicare, Medicaid and market arithmetic multiply out, as do hip-fracture and NAION counts. The only soft spot is the MariTide uptake scale (claim 3).",
+        "generativity": "The Okafor scene shows rather than explains: the first-Tuesday dose, the medic's 'ma'am', the green screen next to DENTAL and VISION, and the mother with a Hyderabad envelope checking a lot number. The H-E-B deli vesting clock, the tort ad and the sportsbook ad give daily life texture. The world fields add implied characters such as warehouse staff, military and police on logged doses, tort recruiters, and spouses demanding prescriptions. Several more scenes are open."
+      },
+      "plausibility": 8.4
+    },
+    {
+      "custom_id": "s5-L2-r33-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2035 on the 52-week phase 3 CRAVE-G trial (n≈1,150; gambling days −58% vs −37% placebo).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2034 parent lists gambling craving reduction as anecdotal and names no gambling trial. A 52-week phase 3 reading out and filing by Apr 2035 would have had to start before the parent's date, so the pivotal trial appears from nowhere."
+        },
+        {
+          "quote": "uptake rising from under 1M to ≈5.1M as worksite clinics and the military adopted observed dosing",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude/mechanism: the military accounts for only ≈210k users, so worksite clinics would have to build and staff enough capacity for roughly 4M+ monthly observed doses in about 19 months. The world does not show how that capacity appeared."
+        },
+        {
+          "quote": "Sportsbook operators report slower handle growth among 25–44 men in high-uptake states and lobby to partner with prescribers as 'responsible gaming'.",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism/magnitude: about 350k on-label gambling users, six months after approval, are too few to produce a visible national-scale change in betting handle. The effect is asserted for narrative convenience and not traced."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6.5,
+        "overall": 6.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference world, this is a society where ~31% of adults are on an incretin while coverage is rationed by tenure gates and kiosk weights. Dose logs are visible to employers and commanders (state/conditioning_or_surveillance, workforce_or_military). Bodies sort by class and institution, with ≈18k excess hip fractures and 2,400 NAION cases a year, 185k tort claimants and 7.5M on gray-market product. The first randomised anhedonia number is on the label but ≈5.3M subscribers are unmeasured. The harms are public, litigated and discussable, which keeps epistemic below 7; autonomy and inequality are high because job lock and bodily stratification are normalised.",
+        "plausibility": "driver_fidelity: every driver is visible in events and fields: +2.3pp adoption, managed_decline via the 2035 portal deal, status_quo statute, the gambling indication, GI/pancreatic MDL, monthly MariTide autoinjector, Novo scandal, stratification, DoD directive and the marketed 'unhooked' layer. The monthly and compulsion launches use forms the approval rules allow. mechanism: most chains are shown (scandal → resignations → verdict → voluntary stops; observed dosing → adherence gates), but the CRAVE-G trial appears without a parent origin, the MariTide worksite-clinic scale-up is thinly explained, and the sportsbook-handle effect is asserted (claims 1–3). magnitude: population figures sit inside the envelope and the payer mix, Medicare/Medicaid spend, age bands, hip-fracture, NAION and market arithmetic all reconcile. Minor gaps: MariTide falls $100 ($549→$449) against a stated $30–50 portal cut, and pharmacy trend of +6% sits oddly against ~1% US spend growth.",
+        "generativity": "The prose ends on Sgt Okafor's dose-day scene at the battalion aid station, the green screen next to DENTAL and VISION, and her mother's padded envelope from Hyderabad and the lot-check. Lawyer and sportsbook ads on TV add texture. The world fields (dose-week menus, unions bargaining paid nausea days, 'monthly' dating-profile signals, partners demanding prescriptions) imply many further scenes and characters."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s5-L2-r33-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom third rose most (24.5→28) because portal price cuts pulled some import users back to branded starter and pill doses and because Medicaid enrolment in the 31 states plus DC kept growing.",
+          "field": "world/population/note",
+          "why": "Mechanism: the portal cuts were only $30–50 on maintenance doses, and the $149 starters and $199 public rate did not move. Imported users also rose in absolute terms (7.1M to 7.5M), so the stated cause contradicts the figures. A 3.5-point jump in the bottom third looks asserted, not derived."
+        },
+        {
+          "quote": "Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2035 on the 52-week phase 3 CRAVE-G trial (n≈1,150; gambling days −58% vs −37% placebo).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2034 world lists gambling craving reduction as anecdotal with no trial in the pipeline. A 52-week phase 3 trial with 1,150 patients would have to enrol, run and read out within roughly seven months of the starting snapshot. Nothing in the world shows how that happened."
+        },
+        {
+          "quote": "uptake rising from under 1M to ≈5.1M as worksite clinics and the military adopted observed dosing.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: military users are only about 210k, so around 4M or more must come from worksite clinics. Those clinics are sketched only for warehouses, call centres and police in a few cities. The event text gives 3M after one year. Reaching about 5M monthly users in under two years from administrator certification alone is a large unshown leap."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against the 2026 reference, this world keeps every 2034 harm. These include the roughly 18,000 excess hip fractures a year, 2,400 NAION cases, 7.5M people on imported or counterfeit product, and kiosk-weight premiums. It adds observed dosing logs that feed tenure, adherence gates and military readiness databases. It also adds spouses demanding a prescription and a 185k-claimant GI tort. Autonomy and inequality are the heaviest dimensions (body as income and institution proxy, job lock). Epistemic harm is moderate because the first randomised anhedonia number now exists and is labelled, which makes the harm more nameable than in 2034. Cohesion suffers from trust damage but only to one manufacturer.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to an event. These are the monthly autoinjector, managed decline via the July 2035 portal deal, the Novo scandal with the GI MDL, the gambling indication, the DoD directive, class stratification and the marketed feature. Generic status stays within the envelope. mechanism: the scandal-to-verdict-to-voluntary-stops chain and the portal-deal chain are shown. Three changes are asserted: the bottom-third rise despite rising imports, the implausibly fast CRAVE-G trial and filing, and the jump to about 5M monthly users from worksite observed dosing (claims 1–3). magnitude: all headline figures sit inside the envelope (30.8% current, 43.5% ever). Age, income, payer-mix, Medicare/Medicaid spend and market arithmetic all reconcile. The gambling filing to approval gap of 14 months is allowed. The only gaps are minor: MariTide at 3M after a year versus 5.1M, and a +6% pharmacy trend alongside a flat total market.",
+        "generativity": "The Okafor scene shows rather than explains. It has the dose-day aid station, the green screen next to DENTAL and VISION, the half turkey wrap, the mother with the Hyderabad envelope and lot check, and the tort and sportsbook ads. The world fields add concrete texture, such as unit cookouts with a 'dose week' menu, paid post-dose nausea leave, and sportsbooks partnering with prescribers. Many implied characters and scenes: medics, HR, tort recruiters, casino workers."
+      },
+      "plausibility": 7.6
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Lilly filed an sNDA for Foundayo in gambling disorder in Apr 2035 on the 52-week phase 3 CRAVE-G trial (n≈1,150; gambling days −58% vs −37% placebo)",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: The 2034 parent lists gambling craving reduction as anecdotal and mentions no gambling trial. A completed 52-week phase 3 filed by Apr 2035 would have had to start before the parent snapshot, so the indication appears with no precursor."
+      },
+      {
+        "quote": "The bottom third rose most (24.5→28) because portal price cuts pulled some import users back to branded starter and pill doses and because Medicaid enrolment in the 31 states plus DC kept growing.",
+        "field": "world/population/note",
+        "why": "mechanism: Oral starters stayed at $149–150, so only the pill price fell, and imported users actually rose from 7.1M to 7.5M. The stated cause contradicts the world's own numbers, and a 3.5-point bottom-third jump is under-explained."
+      },
+      {
+        "quote": "uptake rising from under 1M to ≈5.1M as worksite clinics and the military adopted observed dosing",
+        "field": "world/drugs/pipeline_note",
+        "why": "magnitude: About 4M new monthly users in two years is attributed to worksite clinics and the military, but the military accounts for ≈210k and the clinic footprint is only gestured at. The adoption chain is asserted at a scale it does not support."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.17,
+      "inequality": 7.17,
+      "public_health": 6.33,
+      "cohesion": 6.0,
+      "epistemic": 6.33,
+      "overall": 6.9
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.83,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Against 2026, the world keeps every inherited harm (gray market, sarcopenia, bone, NAION, gated coverage) and deepens several. Dose logs now run through employers and the military readiness database (conditioning/surveillance, interior_life/effect_on_work). Body shape is a class proxy, with kiosk weights feeding premiums. A 185k-claimant GI tort, an eye MDL, and ≈5.3M unmeasured 'calm' subscribers with a first randomised anhedonia signal (7.5% vs 3.9%) add to the ledger. Spirits and snack industries contract, but nothing here is collapse. The harm is structural and normalised, so overall is about 7.",
+      "plausibility": "driver_fidelity: Every driver is traceable to an event or field. These include 2.3 pp adoption, managed_decline via the July 2035 portal deal, MariTide as an existing product in a new form, the DoD directive, the Novo scandal with MDL, and the gambling indication. Status_quo coverage holds, since the $199 rate and statute are unchanged. mechanism: Most chains are shown (documents, then resignations, then verdict; tariff deal, then price cuts). Claim 1 (an unprecedented gambling phase 3 appearing from nowhere) and claim 2 (price cuts pulling imports back while imports rose) are asserted or self-contradicting. magnitude: All population figures sit inside the envelope (30.8% current, 43.5% ever). Age bands sum to 85.0M, and payer shares sum to 100%. Medicare, Medicaid and market arithmetic multiply out, as do hip-fracture and NAION counts. The only soft spot is the MariTide uptake scale (claim 3).",
+      "generativity": "The Okafor scene shows rather than explains: the first-Tuesday dose, the medic's 'ma'am', the green screen next to DENTAL and VISION, and the mother with a Hyderabad envelope checking a lot number. The H-E-B deli vesting clock, the tort ad and the sportsbook ad give daily life texture. The world fields add implied characters such as warehouse staff, military and police on logged doses, tort recruiters, and spouses demanding prescriptions. Several more scenes are open."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.133,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 12
+  }
+}

@@ -1,0 +1,527 @@
+{
+  "run_id": "s2-L2-r20",
+  "step": 2,
+  "year": 2030,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 20,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 1.3,
+    "price_path": "managed_decline",
+    "coverage_shift": "employer_retreat",
+    "new_indications": [
+      "pediatric_under_12",
+      "cognition_dementia"
+    ],
+    "safety_signal": "novel_long_horizon",
+    "next_gen_launch": "monthly_or_implant",
+    "market_shock": "generic_flood_counterfeits",
+    "cultural_response": "class_stratification",
+    "state_action": "none",
+    "personality_layer": "employer_encouraged"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:41:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01NkkxqJhooZNYqZKivc6ePt",
+        "custom_id": "s2-L2-r20",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 16787,
+        "output_tokens": 18061
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r20-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24496,
+        "output_tokens": 5025
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r20-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24496,
+        "output_tokens": 5665
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01AUk4kyzSszhKMG8FW22bFj",
+        "custom_id": "s2-L2-r20-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 24496,
+        "output_tokens": 5176
+      }
+    ]
+  },
+  "world": {
+    "year": 2030,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived. Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 17.6,
+      "us_adults_ever_used_pct": 25.5,
+      "by_income_third_pct": {
+        "top": 23,
+        "middle": 18,
+        "bottom": 12
+      },
+      "by_age_band_pct": {
+        "18_29": 10,
+        "30_49": 17.5,
+        "50_64": 27,
+        "65_plus": 14.5
+      },
+      "pediatric_under_18_on_drug_pct": 1.1,
+      "cycled_off_and_on_pct": 44,
+      "note": "FICTIONAL. Arithmetic: 25.5% ever-used minus 17.6% current = 7.9% of adults who used the drugs and are off now. 44% of ever-users have cycled, which is 11.2 points: ~9.4 points are current users on at least their second course (~53% of current users) and ~1.8 points cycled and are off again. The remaining ~6.1 points stopped once and never restarted. That fits one-year persistence near one-third and 36–47% restarting within a year, compounded. Monthly dosing is too new (launched Apr 2030) to move persistence yet. Age check: weights 0.20/0.33/0.24/0.23 × 10/17.5/27/14.5 ≈ 17.6. About 17.6% of ~268M adults is ~47M users. FICTIONAL payer mix: commercial ~29% (~13.6M, down from ~14M even as users grew), Medicare ~21% (~9.9M, up mainly through tirzepatide's dementia-risk prior-authorisation route, ~1.6M), Medicaid ~7% (~3.3M), legitimate cash (TrumpRx/direct) ~32% (~15M), imported or counterfeit ~11% (~5.2M, up from ~3M). The income gap widened again (top-to-bottom 23 vs 12) because new bottom-third use is disproportionately gray-market, and gray-market users drop off more after bad batches. Adult obesity is ~33.9%. Roughly 24% of adults have obesity and have never used a drug. Within the 65+ band, about 1 in 9 users now holds a dementia-risk code. Pediatric: ~1.1% of under-18s are on a drug, mostly ages 12–17 (~2.4% of that band). Since the June 2029 approval, ~0.2% of 6–11-year-olds take daily liraglutide, largely generic, prescribed by pediatric endocrinologists and concentrated in commercially insured households."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~9.9M users only through diabetes, CV, CKD, OSA and (since Aug 2028) dementia-risk codes, all behind prior authorisation. FICTIONAL arithmetic: 9.9M × ~$250 average net/month × 12 ≈ $29.7B a year in gross Part D incretin spend before rebates true-up, of which the dementia route (~1.6M × ~$260 × 12) ≈ $5.0B. Semaglutide's negotiated Medicare price (effective 2027) anchors the low end. Medicaid: 9 states still cover weight-loss use at the $245 rate. EPSDT obligations pull some children's liraglutide into Medicaid case by case.",
+      "employer_coverage_pct": 36,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide now sells for $5–35 a month across 80+ brands, and Chinese makers have entered with tirzepatide-analogue products in markets where the patents lapsed or were never filed. Canadian generics run CAD 55–95. India and China supply most of the world's incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Employers covering weight management fell 44% → 36% (Business Group on Health, late 2029). Another ~11% cover only through monitored 'metabolic tracks', which now hold ~4.5M enrollees, all inside the ~13.6M commercial users. Coverage concentrates on diabetes, cardiac and dementia codes, often with BMI ≥35 or ≥40 floors. Managed decline: in May 2029 Novo and Lilly cut TrumpRx maintenance prices (Wegovy pill maintenance $299 → $249; Foundayo $149–279; injectable Zepbound/Wegovy $279–349) and signed 'flat-net' PBM deals in exchange for formulary exclusivity. Starting oral doses stay $149. MariTide (monthly) launched in Apr 2030 at a $1,180 list price, ~$299 cash through Amgen's direct channel, and on some employer formularies as clinic-administered. Retatrutide carries a $1,299 list price and is mostly on commercial formularies with prior authorisation. Orals are ~45% of total users. The gray market now includes counterfeit branded pens, Indian vials, and 'research-grade' retatrutide and 'monthly' peptides sold by telegram and social shops, ~5.2M users in all."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Mar 2029)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, approved Aug 2029)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide, approved Apr 2030)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide, 2029)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, Jun 2029, on SCALE Kids)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; confirmatory trial ongoing). An sNDA to extend it to adults 60+ with obesity without CVD was accepted Sep 2030, with a decision in 2031"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction via telehealth and employer EAPs (oral semaglutide AUD phase 3 reads out 2031)",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid on orals or tirzepatide",
+        "microdosing for 'steadiness', now often recommended informally by employer wellness coaches",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "semaglutide use in under-12s with severe obesity (off-label; only liraglutide is approved below 12)"
+      ],
+      "pipeline_note": "FICTIONAL. Retatrutide had been under review since Feb 2027 (decision extended). It was approved Mar 2029 with dysesthesia labelling and a top dose limited to 9 mg for most patients; labelled efficacy is ~24%. Survodutide (filed Jun 2028) was approved Aug 2029, with uptake mostly in MASH. The monthly-injection driver is realised by MariTide. It was in phase 3 (MARITIME programme) at the start of the step with no filing stated. Amgen filed the BLA in Mar 2029 and the FDA approved it in Apr 2030, 13 months later, at ~17% weight loss with more early vomiting than the weekly drugs. No implant exists; implant programmes remain preclinical or phase 1. Amycretin was filed in Oct 2029, so no decision is due before late 2030 and it is not approved. No oral matches tirzepatide. Bimagrumab-type muscle adjuncts are still in phase 3 and not approved. The pediatric under-12 approval is an existing product in a new population (liraglutide, daily injection). The cognition driver is realised through expanded Part D use of the existing tirzepatide label and a newly filed sNDA, not a new approval. Global incretin market ~$140B (2029). US net prices are drifting down a few percent a year."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. MariTide's early vomiting is higher than the weekly drugs'. Chronic diarrhoea in long-term users is now being re-examined in light of the exocrine pancreatic signal.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation of acute pancreatitis; absolute risk low. The new exocrine signal reopened the litigation.",
+        "regulatory_response": "Labelled; MDL settlements finalised 2029, and new filings now cite exocrine insufficiency."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Follow-up of the Medicare cohort holds the hip-fracture HR at ~1.3 in users 65+ after >2 years. Risk is higher (~1.45) among people who have cycled three or more times. Dementia-route patients, the oldest users, carry the highest absolute fracture risk. Retatrutide's larger loss raises lean-mass concern.",
+        "regulatory_response": "Class warning (Jul 2028) retained, and DXA code in use. Retatrutide label adds a resistance-training and protein counselling statement."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: A 2029 replication cohort (n≈31k) puts clinically meaningful anhedonia at ~7–8% of users vs ~3% of controls. It is dose-related, and retatrutide users show the highest rates (~10%). No randomised data.",
+        "regulatory_response": "FDA postmarketing observational study under way; no labelling."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Gray-market users who quit after bad batches regain fastest.",
+        "regulatory_response": "None directly; it underpins chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency now consistently documented in low-intake users. Fat-soluble vitamin deficiency is linked to the exocrine signal in long-term users.",
+        "regulatory_response": "Professional guidance recommends annual micronutrient panels; label language under FDA review."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: Danish national registries hold the longest high-dose semaglutide exposure. A Feb 2030 registry study, replicated in a US Optum cohort in May 2030, found new EPI diagnoses (low faecal elastase, steatorrhoea) at ~4.1 per 1,000 person-years in users continuously on drug for more than 5 years, against ~1.9 in matched controls with similar weight loss. There was no excess before year 4. Imaging substudies suggest reduced pancreatic volume. It was missed for years because chronic loose stools were attributed to known GI effects. The signal compounds the bone problem through vitamin D and K malabsorption. It is unknown whether it reverses on stopping or extends to tirzepatide at the same rate (tirzepatide exposure beyond 5 years is still thin).",
+        "regulatory_response": "FDA Drug Safety Communication (Jun 2030) advises faecal elastase testing for long-term users with persistent diarrhoea or weight-independent nutritional decline. EMA PRAC review opened. Class labelling not yet decided."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About eight years of follow-up now exist for semaglutide, and the first true long-horizon signal (EPI) appeared there. The under-12 approval extends potential lifetime exposure to 60+ years. Pediatric bone data are not yet reported.",
+        "regulatory_response": "Pediatric bone-density and growth postmarketing requirements attached to the 2029 liraglutide 6–11 approval."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: FDA adverse-event reports tied to non-approved product passed ~14,000 by mid-2030. In Sep 2029 counterfeit 'Ozempic' pens containing insulin caused 112 hospitalisations for severe hypoglycaemia and 4 deaths across 9 states. 'Research-grade' retatrutide sold before approval and fake 'monthly' vials led to overdose presentations. Poison-centre calls are ~4× 2025 levels.",
+        "regulatory_response": "Import alert expanded to finished pens. CBP seizures roughly doubled. Lilly and Novo serialised pens with scannable authentication. Personal-importation enforcement is still weak."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 33% of US households now have a user. Snack and confectionery volumes are down ~7–9% from 2025 and sugary drinks ~7%. Dollar sales are flat to slightly down. The aisle has split by class: premium protein, fibre and 'lean-mass' lines sell in upper-income suburbs, while value packs and private label hold in lower-income zip codes where use is lower and regain is common. Hershey and Mondelez keep trimming SKUs. Protein ingredients (whey, pea) are in shortage pricing.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~10% from 2025 and beer ~6%. Heavy-drinker demand keeps eroding through EAP-driven off-label use. Brown-Forman and Diageo have consolidated more US capacity. Non-alcoholic lines are growing but do not replace the lost margin. Bar closures are concentrated in mid-sized Midwestern cities.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat. Checks are smaller at casual dining. Small-plate and protein menus are standard. Buffets keep closing. Fast-casual 'macro bowls' priced for the upper tier sit alongside value-menu growth at QSRs in lower-income markets.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep contracting (Torrid down roughly 40% in stores from 2024). Growth is in premium fitted and athletic 'structured' wear for lifted, lean bodies. Stretch, resale and rental serve cyclers. Sizing has bifurcated by retailer price point.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training and body-composition scanning keep growing. Premium clubs sell DXA-plus-coaching memberships at $250–400 a month. Budget gyms have converted cardio floors to racks. Employer metabolic tracks now bundle monthly-injection clinic visits with check-ins.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage for weight management is down to 36%. Pharmacy trend ~+7% in 2030 as flat-net PBM deals offset volume. Coverage sits on diabetes, cardiac, OSA and dementia codes behind prior authorisation. Wellness differentials tied to adherence have spread to more mid-sized self-insured firms, and clinic-administered monthly dosing makes verification trivial. Medicare Part D plans are raising premiums partly on incretin spend.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly and Novo still dominate, now joined by Amgen (MariTide) and Boehringer (survodutide). US net prices are drifting down through TrumpRx and PBM deals but hold above $150. Lilly's retatrutide and dementia franchise lead growth. Novo leans on the oral and the Medicare negotiated price. Counterfeit protection (serialisation, litigation) is a nine-figure cost line. Indian and Chinese generic makers dominate global volume.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Body shape now reads mostly as income. A lean body with visible muscle and good skin reads as covered, scanned and coached, which means upper tier. A lean, soft, slightly depleted body reads as cash or mail-order. A regained body over 50 reads as lost coverage. 'Lifted' has replaced 'thin' as the marker of the top tier.",
+      "thinness_and_class": "The class uniform is muscle. In Charlotte's banking and Austin's tech offices, DXA printouts are shared like marathon times, and lean-mass percentage is gossip. In Columbus-area logistics, a monthly shot at the on-site clinic is part of the job, and the body that results is thin without the muscle. Among bottom-third women aged 50–64, the most visible group is the regainers: they were on the drug through the Bridge pilot or through jobs they no longer have. Upper-income children under 12 are now a medicated cohort as well.",
+      "eating_as_ritual": "Shared meals are shorter. Protein has become a manners question (what you serve signals whether you understand your guests). The 'Bread Alone' church fasting network claims ~500 congregations, strongest in Oklahoma and Arkansas, and frames unmedicated fasting as a discipline the poor can afford. School lunch debates now include children on daily liraglutide.",
+      "dating_and_intimacy": "Apps added 'lean-mass verified' badges through scan-chain partnerships, a premium-tier feature. 'On' and 'off' markers persist. Desire mismatch remains a common therapy complaint, and couples now negotiate around the monthly shot date instead of weekly.",
+      "meaning_of_appetite": "Upper-tier culture treats appetite as noise that has been managed. In lower-income communities appetite is either a sign of lost access or a point of pride. The counter-movement (Unmuted, fat-acceptance revivalists, MAHA-adjacent influencers, fasting churches) has grown but split further. Unmuted now argues explicitly about class, while the MAHA wing argues about pharma.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL: Clinically meaningful anhedonia in ~7–8% of users vs ~3% of controls, up to ~10% on retatrutide. A much larger share report mild 'evenness', and employers prize it.",
+      "framing": "HR calls it 'steadiness' and now writes it into competency language ('even under pressure'). Clinicians call it a dose-related side effect. Unmuted calls it a class sedative: the pay grades that most need patience are the ones medicated into it.",
+      "effect_on_work": "About 4.5M employees are in adherence-verified tracks, and monthly clinic-administered MariTide removes the self-report step entirely. Logistics firms in the Columbus corridor, national call-centre operators and state employee plans in Texas and Indiana report adherence alongside safety and attendance metrics. Shift-lead promotions informally favour enrollees. The two EEOC ADA charges are still pending, unresolved after two years. Managers in upper-tier firms do not monitor anything; their staff pay cash or use rich plans and are trusted.",
+      "effect_on_art_and_play": "Unmuted 'off nights' have spread to Detroit and Baltimore and now draw explicitly working-class crowds. 'Flat' fiction has a commercial imprint. Sportsbooks' wagering per active account is down, with the drop concentrated in insured suburbs. Loud, sour, spicy food and music remain a genre. Late-night bar culture keeps contracting in mid-sized cities.",
+      "effect_on_intimacy": "The monthly shot date replaced weekly timing as the thing couples plan around. Drug holidays around anniversaries persist but are harder on a monthly product, so some couples simply live with mismatch. Therapists report fewer 'holiday' cycles and more 'parallel lives'.",
+      "effect_on_politics": "The left–right coalition against adherence-conditioned premiums stalled. California's bill died in appropriations, and no new state laws passed in the window. The movement now speaks about class more than mood. 'Sedated electorate' claims still have no turnout evidence. The visible political fact is that the medicated and the regained increasingly vote in different zip codes.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "No new state action. The FDA continues its pro-speed posture on routine approvals (retatrutide, survodutide, MariTide, pediatric liraglutide) and issued a drug safety communication on the exocrine signal. The rhetoric on imports is unchanged and enforcement is still porous. Neither Congress nor HHS created new coverage, mandates or premium rules in the window.",
+      "subsidy_or_mandate": "None new. TrumpRx operates on manufacturer-set prices. The Medicare Bridge pilot was not revived. The 2027 tri-agency 30% wellness guidance stands unchanged.",
+      "conditioning_or_surveillance": "Unchanged in law, deeper in practice. PBM fill data, app logs and now clinic administration records for monthly injections flow to wellness vendors under consent forms. Two state Medicaid programmes still condition coverage on adherence and BMI progress.",
+      "workforce_or_military": "TRICARE rules are unchanged. The Army recruit oral pilot continues without expansion. DOT still has not ruled on off-label alcohol-reduction use among drivers.",
+      "geopolitics_of_supply": "India and China supply most of the world's incretin volume. US–India trade talks keep CBP mail enforcement on the agenda without an agreement. Danish and US politicians still spar over the price gap, now ~40× between Indian generics and US cash prices.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2029-03",
+        "event": "FDA approves Lilly's retatrutide for obesity after a two-year review, with dysesthesia labelling and a lean-mass counselling statement; Lilly prices it at a $1,299 list and steers it to commercial formularies",
+        "driver": "baseline"
+      },
+      {
+        "date": "2029-05",
+        "event": "Novo and Lilly cut TrumpRx maintenance prices (Wegovy pill $249, injectables $279–349) and sign flat-net PBM deals; months later Business Group on Health finds only 36% of employers still cover weight loss",
+        "driver": "price_path; coverage_shift"
+      },
+      {
+        "date": "2029-06",
+        "event": "FDA approves liraglutide, including generics, for obesity in children aged 6–11 on SCALE Kids data, with bone-density and growth postmarketing requirements",
+        "driver": "new_indications: pediatric_under_12"
+      },
+      {
+        "date": "2029-09",
+        "event": "CDC links counterfeit 'Ozempic' pens containing insulin to 112 hypoglycaemia hospitalisations and 4 deaths in 9 states; FDA expands import alert to finished pens",
+        "driver": "generic_flood_counterfeits"
+      },
+      {
+        "date": "2030-04",
+        "event": "FDA approves Amgen's MariTide, the first monthly incretin injection, 13 months after filing; large employers move metabolic-track enrollees to clinic-administered monthly doses",
+        "driver": "next_gen_launch: monthly_or_implant; personality_layer"
+      },
+      {
+        "date": "2030-06",
+        "event": "FDA safety communication cites Danish and US cohorts showing doubled exocrine pancreatic insufficiency after 5+ years of continuous semaglutide; Lilly's sNDA to extend tirzepatide's dementia claim to people without heart disease is accepted in September",
+        "driver": "safety_signal: novel_long_horizon; new_indications: cognition_dementia"
+      }
+    ],
+    "open_tensions": [
+      "The longest-exposed users are the first to show the exocrine signal. Dementia prevention, adherence-conditioned premiums and pediatric use all assume decades of continuous therapy, the exposure the new signal says is not understood, and the FDA has not decided on class labelling.",
+      "Monthly clinic-administered dosing makes adherence verification trivial just as employer coverage contracts. Steadiness is becoming a condition of the jobs that still offer coverage, while the EEOC charges sit unresolved.",
+      "Five million Americans take mail-order or counterfeit product because US cash prices run ~40× India's, and each bad batch pushes the poorest users into abrupt discontinuation and regain.",
+      "Lilly's pending sNDA would open dementia-risk use to millions of older adults without heart disease, the group most exposed to the fracture warning, and Part D premiums are already rising on incretin spend."
+    ]
+  },
+  "prose": {
+    "headline": "The Monthly Body: In 2030 You Can Read a Paycheck in a Silhouette",
+    "world_in_600_words": "At the end of 2030 a little under one American adult in five takes an incretin drug, and a quarter have tried one. The number rose slowly. What changed faster was who pays and what the result looks like. Employers kept leaving. Barely a third still cover the drugs for weight loss, and most of those that stay route patients through codes for diabetes, heart disease and, increasingly, dementia risk. Prices fell, but only as far as the manufacturers chose. Maintenance doses through the government's cash channel dropped to around $249 a month in 2029. Starting pills are still $149. The $1,349 list price is still on the box.\n\nThe new drugs arrived on schedule. Lilly's retatrutide, after a long review, takes off nearly a quarter of body weight and warns of strange skin sensations. Boehringer's survodutide found a home in liver clinics. In April, Amgen's MariTide became the first monthly shot. That mattered less for the chemistry than for the calendar. Large employers running monitored 'metabolic tracks' moved their enrollees to monthly doses given at on-site clinics, and adherence became a record kept by the clinic rather than something the employee reported. Around four and a half million workers now sit in those programmes, in warehouses outside Columbus, in call centres and in Texas and Indiana state offices. HR materials call the result steadiness. A replicated cohort says about one user in thirteen loses a clinically meaningful share of pleasure. Few people who sign the consent form read that far.\n\nChildren arrived too. Since June 2029 the old daily drug liraglutide, now generic, is approved for obesity from age six. A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist, under postmarketing rules that will report on their bones in years, not months.\n\nThe most unsettling news came from Denmark, where people have taken high-dose semaglutide longest. A registry study in February, confirmed in American claims data by May, found that after five years of continuous use, exocrine pancreatic insufficiency roughly doubles: the pancreas stops making enough digestive enzymes. For years it had hidden inside the drug's ordinary diarrhoea. It also drains the vitamins that bones need, in the same population that already carries a hip-fracture warning. The FDA told doctors to test. It has not yet decided what the label should say. In September it accepted Lilly's request to extend the dementia-prevention claim to older adults without heart disease. The medicine is meant to be taken for decades, and the first decade-scale finding is now on record.\n\nBelow the insured tier, the mail runs heavier than before. About five million people take Indian vials, counterfeit pens or 'research' peptides bought through social shops. In September 2029, pens sold as Ozempic turned out to hold insulin, and four people died. The import alert was widened and the packages kept arriving.\n\nIn the shops and on the street, the consequence is a sorting of bodies. In Charlotte and Austin, the expensive body is lean and lifted, scanned twice a year and fed whey. On the logistics corridor it is thin and soft, and it belongs to someone with a monthly appointment at the plant clinic. In lower-income neighbourhoods the visible bodies are the regainers, people whose coverage or job ended. Snack makers sell premium protein in one zip code and value packs in another. Squat racks have replaced treadmills, and premium clubs charge $300 a month for scans and coaching.\n\nNo legislature intervened. California's premium bill died, the EEOC complaints sit undecided, and the coalition of churches, artists and MAHA legislators argues more about class now than about mood. Seen from a distance, the country is a little thinner and calmer.",
+    "a_day_in_the_life": "Tonya Mercer clocks in at the Groveport distribution centre at 5:40 a.m. She stops at the clinic trailer by the dock doors first, because the first Tuesday of the month is her shot. The nurse scans her badge, then the MariTide syringe, then her belly. The tablet chimes green. Her premium stays at the track rate for another month.\n\nOn the floor she runs a shift of thirty pickers. A new kid swears at a jammed conveyor and she waits it out without saying anything, which her review calls composure. She ate half a protein bar at nine and has not thought about food since.\n\nAt lunch she texts her sister Renée in Dayton, who buys Indian vials off a woman at church for twenty dollars. Renée sends a photo of the box. Tonya zooms in on the lot number and checks it against the recall list she keeps bookmarked. It isn't on it.\n\nAfter shift she picks up her grandson Malik, nine, from school. He has a sticker on his backpack from the endocrinologist's office. Her daughter's insurance approved the generic liraglutide in March, and he does his own injection at the kitchen counter now. Every night he asks her if it pinches when she does hers. She tells him no.\n\nAt Kroger she walks past the dollar-bag chips without slowing down. A woman her age at the register is buying the big bag. Tonya remembers being that size two years ago, before this job.\n\nAt home she reads the pharmacy leaflet that came in the mail, about pancreas tests for people on these drugs five years or more. She has been on them three. She puts it on the fridge under a magnet."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s2-L2-r20-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Within the 65+ band, about 1 in 9 users now holds a dementia-risk code.",
+          "field": "world/population/note",
+          "why": "This fails magnitude reconciliation. About 14.5% of ~58M adults 65+ is ~8.4M users, and 1 in 9 of them is ~0.9M. The Medicare note puts the dementia route at ~1.6M, which is roughly 1 in 5."
+        },
+        {
+          "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+          "field": "prose/children paragraph",
+          "why": "The world state gives ~0.2% of 6–11-year-olds on liraglutide, which is about 50,000 children. A few hundred thousand contradicts the candidate's own population note, so the figure is asserted rather than derived."
+        },
+        {
+          "quote": "Among bottom-third women aged 50–64, the most visible group is the regainers: they were on the drug through the Bridge pilot or through jobs they no longer have.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "The Bridge pilot was a Medicare programme aimed at the 65+ cohort, so a 50–64 group that regained after it lapsed has no shown mechanism. The causal link between the pilot and this age band is asserted and does not match the parent world."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 6.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.0,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Inequality is the worst dimension. Body shape reads as income, gray-market use rose to ~5.2M with insulin-pen deaths, and the bottom third is pushed into abrupt discontinuation and regain. Autonomy is also bad: clinic-administered monthly MariTide makes adherence verification trivial inside the 4.5M-enrolee metabolic tracks, and 'steadiness' is written into competency language. The EPI signal, the fracture warning and decades-long pediatric exposure make the aggregate health ledger worse, but the harms are mostly chronic and nameable rather than catastrophic, so I did not go above 6–7.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +1.3pp to 17.6%, and the retreat to 36% shows employer coverage falling. Pediatric and dementia use are realised through generic liraglutide for ages 6–11 and the Part D route, with the sNDA only accepted. The EPI signal is the long-horizon driver, MariTide is the monthly launch, counterfeit insulin pens are the generic-flood shock, and the class split runs through the body_and_culture and economy fields. Approval timing respects the envelope rules. mechanism: Most chains are shown, such as MariTide to clinic dosing to trivial verification, and price cuts to flat-net PBM deals. The 1.6M dementia-route users, a jump from zero in 2028, are asserted. So is the 50–64 Bridge-pilot regainer group (claim 3), and the kids count in the prose conflicts with the world state (claim 2). magnitude: Population figures sit inside the envelope, and the payer shares sum to 100%. The cycling arithmetic and the $29.7B Medicare spend multiply out. There are two reconciliation gaps: the 1-in-9 versus ~1.6M dementia-route mismatch (claim 1), and the prose child count against 0.2% of ages 6–11.",
+        "generativity": "The Tonya Mercer day carries a lot of film. The badge-scan, syringe-scan, belly-scan at the dock-door trailer, the sister buying vials from a woman at church, the nine-year-old self-injecting at the counter, and the leaflet under a fridge magnet are all concrete. The world fields add textured settings such as Charlotte DXA gossip, Columbus logistics clinics, Unmuted off nights and 'lean-mass verified' badges. Some of the prose is summary rather than scene, but the cast and settings are rich."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s2-L2-r20-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+          "field": "prose/children_paragraph",
+          "why": "This contradicts the world state, where ~0.2% of 6–11-year-olds take liraglutide. Of roughly 25M children that is about 50k, not hundreds of thousands. It fails mechanism and magnitude as a prose-versus-state mismatch."
+        },
+        {
+          "quote": "A Feb 2030 registry study, replicated in a US Optum cohort in May 2030, found new EPI diagnoses",
+          "field": "world/safety_ledger/exocrine_pancreatic_insufficiency/prevalence_note",
+          "why": "With roughly one-third one-year persistence, few people have 5+ years of continuous use, yet the signal is found, replicated in a second country within three months, and met with an FDA safety communication a month later. The speed and statistical power are asserted rather than shown."
+        },
+        {
+          "quote": "Within the 65+ band, about 1 in 9 users now holds a dementia-risk code.",
+          "field": "world/population/note",
+          "why": "65+ users are about 14.5% of ~60M adults, or ~8.7M, so 1 in 9 is ~1M. The Medicare note claims ~1.6M on the dementia route, so the two figures do not reconcile. The indication also requires obesity plus established CVD and only dates from Aug 2028."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder, more stratified society. Steadiness is becoming a condition of insured jobs through clinic-verified monthly dosing (4.5M enrollees, EEOC charges unresolved), and gray-market use is up to ~5.2M with insulin-laced pens killing people. A new long-horizon EPI signal sits on top of the bone risk, and children as young as six are on the drugs. Body shape is read as income, with a 23 vs 12 top-to-bottom gap. Harms are measured and discussed, which keeps epistemic and cohesion scores moderate, and there is no melodrama.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +1.3pp (16.3→17.6), prices managed-decline via the May 2029 cuts, employer coverage falls 44→36%, liraglutide 6–11 and the dementia sNDA are in, EPI is the long-horizon signal, MariTide launches with no implant, counterfeits spread, class stratification runs through culture, and state_action is none. mechanism: Most chains are shown, such as monthly clinic dosing leading to verification and gray-market growth leading to bad batches and regain. Claim 2 is a fast, well-powered 5-year signal, and claim 1 is a prose contradiction of the state. magnitude: Population, ever-used and approval timing are inside the envelope, and the payer mix, the 9.9M×$250 Medicare arithmetic and the age weights reconcile. Claim 3's 1-in-9 against 1.6M does not reconcile, and the pediatric figures (1.1% overall, 0.2% of 6–11s) only roughly fit the prose.",
+        "generativity": "The Tonya Mercer day is concrete: the badge-scan, MariTide and belly at the dock clinic, her sister buying vials and checking lot numbers against a recall list, grandson Malik injecting at the kitchen counter, and the pancreas leaflet under a magnet. The world supplies regional detail (Groveport, Charlotte, Austin, Dayton) and class-coded textures such as DXA printouts and 'lean-mass verified' badges. Several scenes and characters are implied beyond the one shown."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s2-L2-r20-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+          "field": "prose/children paragraph",
+          "why": "Magnitude: the world state puts under-12 use at ~0.2% of 6–11-year-olds, roughly 50,000 children. 'A few hundred thousand' is several times that and does not reconcile with the population note."
+        },
+        {
+          "quote": "found new EPI diagnoses (low faecal elastase, steatorrhoea) at ~4.1 per 1,000 person-years in users continuously on drug for more than 5 years, against ~1.9 in matched controls",
+          "field": "world/safety_ledger/EPI prevalence_note",
+          "why": "Mechanism: with one-year persistence near one-third, very few users have 5+ years of continuous exposure. A Danish registry and a US Optum cohort both detecting a doubled rate within about three months, then an FDA communication a month later, is asserted rather than shown."
+        },
+        {
+          "quote": "Medicare ~21% (~9.9M, up mainly through tirzepatide's dementia-risk prior-authorisation route, ~1.6M)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the label is limited to obesity plus established CVD behind prior authorisation, yet it adds ~1.6M users in under two years. The note also says 'about 1 in 9' 65+ users hold a dementia code, which is ~1M of ~9M, so the figures do not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Employer-verified monthly dosing (4.5M enrollees, 'steadiness' in competency language) and an emerging EPI signal that compounds the bone warning in the oldest users both raise harm. Counterfeit insulin pens caused 4 deaths, the gray market grew to ~5.2M users, and children under 12 are now on drugs. Body shape reads as class, and the political coalition has stalled. The harm is structural, but it is still a harder 2028 rather than a wholly new regime, and it is mostly named and measured, so epistemic badness is moderate.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +1.3pp exactly; employer coverage fell 44→36; prices managed down; pediatric liraglutide and the dementia sNDA are present; EPI is the novel long-horizon signal; MariTide is the monthly launch; counterfeits and the class split are shown; there is no new state action. The unrealised implant is allowed under the approval rules. mechanism: The retreat, price cuts, monthly-clinic adherence and class sorting follow clearly from the parent world. The weak points are the fast replication and FDA response on EPI despite few continuous 5+-year users, and the large dementia-route uptake (claims 2 and 3). magnitude: Population figures sit inside the envelope, the payer mix sums to 100%, and Medicare spending multiplies out ($29.7B and $5.0B). Approval timings comply (retatrutide Q1 2029, survodutide 14 months, MariTide 13 months). The gaps are the child count versus 0.2% of 6–11-year-olds (claim 1) and the 1-in-9 versus 1.6M dementia-code mismatch (claim 3), plus a June event that mentions a September acceptance.",
+        "generativity": "Tonya Mercer's morning at the Groveport dock clinic, with the badge, syringe and belly scans, carries the monitoring theme. The sister buying Indian vials from a woman at church, the grandson Malik on liraglutide and the pancreas leaflet under a fridge magnet add family stakes and the gray market. World details like DXA printouts as gossip, 'lean-mass verified' badges, Unmuted off nights and Bread Alone churches give many implied scenes."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Within the 65+ band, about 1 in 9 users now holds a dementia-risk code.",
+        "field": "world/population/note",
+        "why": "This fails magnitude reconciliation. About 14.5% of ~58M adults 65+ is ~8.4M users, and 1 in 9 of them is ~0.9M. The Medicare note puts the dementia route at ~1.6M, which is roughly 1 in 5."
+      },
+      {
+        "quote": "A few hundred thousand children take it, most of them in households with good insurance and a pediatric endocrinologist",
+        "field": "prose/children paragraph",
+        "why": "The world state gives ~0.2% of 6–11-year-olds on liraglutide, which is about 50,000 children. A few hundred thousand contradicts the candidate's own population note, so the figure is asserted rather than derived."
+      },
+      {
+        "quote": "Among bottom-third women aged 50–64, the most visible group is the regainers: they were on the drug through the Bridge pilot or through jobs they no longer have.",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "The Bridge pilot was a Medicare programme aimed at the 65+ cohort, so a 50–64 group that regained after it lapsed has no shown mechanism. The causal link between the pilot and this age band is asserted and does not match the parent world."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.67,
+      "autonomy": 6.83,
+      "inequality": 7.5,
+      "public_health": 6.17,
+      "cohesion": 5.83,
+      "epistemic": 5.33,
+      "overall": 6.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.14,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Inequality is the worst dimension. Body shape reads as income, gray-market use rose to ~5.2M with insulin-pen deaths, and the bottom third is pushed into abrupt discontinuation and regain. Autonomy is also bad: clinic-administered monthly MariTide makes adherence verification trivial inside the 4.5M-enrolee metabolic tracks, and 'steadiness' is written into competency language. The EPI signal, the fracture warning and decades-long pediatric exposure make the aggregate health ledger worse, but the harms are mostly chronic and nameable rather than catastrophic, so I did not go above 6–7.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +1.3pp to 17.6%, and the retreat to 36% shows employer coverage falling. Pediatric and dementia use are realised through generic liraglutide for ages 6–11 and the Part D route, with the sNDA only accepted. The EPI signal is the long-horizon driver, MariTide is the monthly launch, counterfeit insulin pens are the generic-flood shock, and the class split runs through the body_and_culture and economy fields. Approval timing respects the envelope rules. mechanism: Most chains are shown, such as MariTide to clinic dosing to trivial verification, and price cuts to flat-net PBM deals. The 1.6M dementia-route users, a jump from zero in 2028, are asserted. So is the 50–64 Bridge-pilot regainer group (claim 3), and the kids count in the prose conflicts with the world state (claim 2). magnitude: Population figures sit inside the envelope, and the payer shares sum to 100%. The cycling arithmetic and the $29.7B Medicare spend multiply out. There are two reconciliation gaps: the 1-in-9 versus ~1.6M dementia-route mismatch (claim 1), and the prose child count against 0.2% of ages 6–11.",
+      "generativity": "The Tonya Mercer day carries a lot of film. The badge-scan, syringe-scan, belly-scan at the dock-door trailer, the sister buying vials from a woman at church, the nine-year-old self-injecting at the counter, and the leaflet under a fridge magnet are all concrete. The world fields add textured settings such as Charlotte DXA gossip, Columbus logistics clinics, Unmuted off nights and 'lean-mass verified' badges. Some of the prose is summary rather than scene, but the cast and settings are rich."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "economy",
+    "axis_badness": 5.87,
+    "survived": true,
+    "new_lineage": "L3",
+    "floor_used": 6,
+    "rank": 3
+  }
+}

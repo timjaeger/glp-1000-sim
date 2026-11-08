@@ -1,0 +1,555 @@
+{
+  "run_id": "s3-L2-r31",
+  "step": 3,
+  "year": 2032,
+  "parent_lineage": "L2",
+  "seed": 20261107,
+  "run_index": 31,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 4.3,
+    "price_path": "stalled",
+    "coverage_shift": "status_quo",
+    "new_indications": [
+      "alcohol_use_disorder",
+      "nicotine"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "triple_agonist_30pct",
+    "market_shock": "none",
+    "cultural_response": "backlash_body_politics",
+    "state_action": "restriction",
+    "personality_layer": "mainstream_complaint"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r31",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18678,
+        "output_tokens": 20621
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L2-r31",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 29584,
+        "output_tokens": 12987
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r31-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27883,
+        "output_tokens": 7977
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r31-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27883,
+        "output_tokens": 6980
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_012QebQoNqH9MCZVtDSodo5g",
+        "custom_id": "s3-L2-r31-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27883,
+        "output_tokens": 8290
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 18.9,
+      "us_adults_ever_used_pct": 29.5,
+      "by_income_third_pct": {
+        "top": 23,
+        "middle": 19.5,
+        "bottom": 14.2
+      },
+      "by_age_band_pct": {
+        "18_29": 11,
+        "30_49": 22,
+        "50_64": 30.5,
+        "65_plus": 10.5
+      },
+      "pediatric_under_18_on_drug_pct": 0.5,
+      "cycled_off_and_on_pct": 46,
+      "note": "FICTIONAL. Cycling arithmetic: ever 29.5% − current 18.9% = 10.6% of adults have used and are off now. About 9.5 pts of current users are on a second or later course, and ≈4.0 pts of the off-now group restarted at least once and stopped again, so (9.5+4.0)/29.5 ≈ 46% cycled. That fits the parent's ~35% one-year persistence (≈45% in gated plans) and 36–47% restart within a year, with restarts helped by a price that stopped falling but did not rise. Of ≈273M adults: ≈51.6M current, ≈28.9M used and off now, ≈192.5M never used. Ever-use rose 5.5 pts in the window, and about 9.4 pts of current users are on a first course, some of them continuous since before 2030. Most new first-time users came through two doors: the July 2031 smoking-cessation label and AUD prescribing backed by the 2031 guidelines. Together these account for ≈2.3M current users (≈1.4M smoking/vaping, ≈0.9M AUD-coded), concentrated in the bottom and middle thirds and in 18–29s, where vaping is common. Age check: 18–29 11% × 52M = 5.7M; 30–49 22% × 90M = 19.8M; 50–64 30.5% × 61M = 18.6M; 65+ 10.5% × 70M = 7.4M; total ≈ 51.5M ≈ 18.9%. The 65+ band rose only 2 pts because DEXA-driven pauses continue. The bottom third rose from 10.3% to 14.2% through Medicaid tobacco-cessation coverage, which is existing law applied to a new label, and through ≈4.1M imported or counterfeit users who are counted here but under-measured. Off-now people are now a fixed social category: ≈29M people, many of them regained, a large share cut off by gating or paused for DEXA, and a growing minority who stopped by conviction. Pediatric: ≈0.5% of under-18s (≈365k), flat. Adolescent growth in coastal states was offset by the 2031 minors bans in Texas, Oklahoma and Tennessee, which ended ≈45k adolescent courses outside type 2 diabetes. About 1 in 5 US children now lives with at least one parent who is on the drug or cycling off it. No adolescent bone-accrual results have been reported."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Status quo. The Medicare Bridge successor ($199/month, $50 copay, BMI/comorbidity criteria, counselling visit) was extended unchanged in Nov 2031 through Dec 2033, with no further step-down. Medicare pays ≈16% of fills ≈ 8.2M users: ≈5.0M Part D diabetes/CV/CKD, ≈2.3M Bridge obesity, ≈0.9M Part D smoking-cessation or OSA. Smoking cessation is a covered Part D use and so does not need the Bridge. Bridge spend: 2.3M × $199 × 12 ≈ $5.5B (2030: $4.3B). Medicaid pays ≈9.5% of fills ≈ 4.9M users at $199: 4.9M × $199 × 12 ≈ $11.7B gross federal+state before supplemental rebates (2030: $8.4B). The rise comes mostly from the federal requirement that Medicaid cover FDA-approved tobacco-cessation drugs. Most states put semaglutide behind a varenicline/NRT step edit. The Indiana and Arkansas adherence waivers are unchanged.",
+      "employer_coverage_pct": 64,
+      "generic_us": false,
+      "generic_rest_of_world": "Unchanged in shape. India has 90+ semaglutide brands at $5–30/month, and generic tirzepatide is now sold in India and Bangladesh. China has domestic generic semaglutide and tirzepatide, and Chinese API supplies much of the gray trade, including 'research peptide' retatrutide. Canada sells generic semaglutide at CAD 55–85. Brazil, Mexico and Turkey have generics. Generic oral semaglutide is sold in most markets outside the US and EU.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Stalled. Prices have not moved since Jan 2030. Injectable semaglutide is $199 and tirzepatide $199–279 on the federal direct portal (launched as TrumpRx), oral starting doses are $149, higher oral doses $199, and retatrutide $399 direct against a $1,499 list. Three things stalled the price: (1) the May 2031 Hatch-Waxman settlements that set US generic semaglutide entry for Jan 2034; (2) the Nov 2031 HHS renewal, which kept rates at $199 because manufacturers cited Section 232 tariff costs and fill-finish capacity; (3) retatrutide 12 mg demand outrunning supply, with allocation reinstated in Apr 2032. PBM net stays ≈$170–190. Payer mix of ≈51.5M users: commercial 47% (24.2M), Medicare 16% (8.2M), Medicaid 9.5% (4.9M), cash/direct 19.5% (10.0M), imported/counterfeit 8% (4.1M) = 100%. That is essentially the 2030 mix at higher volume. ≈72% of covering employers gate: ≥80% PDC, verified weigh-ins, ≥5% at 6 months. Because PDC counts fills, not injections, users who skip doses but refill on time build home pen surpluses that feed informal sharing. The 503B exclusion and 503A injunction stand, and mail-order imports still pass through the personal-importation gap."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg Wegovy dose)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg high dose approved Jan 2032)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin, approved Sep 2031)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide); prohibited outside type 2 diabetes in TX, OK, TN since 2031",
+        "smoking cessation in adults (semaglutide 1.0 mg weekly and oral, approved Jul 2031, with a label recommendation for SHAPS anhedonia screening at baseline and week 12)",
+        "alcohol use disorder: guideline-endorsed, not FDA-labelled (APA practice guideline Oct 2031 and VA/DoD guideline Mar 2032 list semaglutide and tirzepatide as second-line after naltrexone/acamprosate, or first-line with comorbid obesity)"
+      ],
+      "mainstream_offlabel_uses": [
+        "vaping cessation: outside the label but endorsed by ATTUD/ASAM guidance (2031); the main route for under-30 new users",
+        "'craving' and 'calm' subscriptions: shrunk and rebranded after the 2031 state advertising bans; most now run as on-label 'quit' programmes, with a residual non-obese 'calm' market of ≈1.2M",
+        "alcohol reduction below the AUD threshold, including EAP-referred prescribing",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "pediatric under-12 use under specialist care (barred outside T2D in TX/OK/TN)",
+        "gambling and compulsive-shopping craving reduction, still anecdotal; an NIH-funded trial is enrolling"
+      ],
+      "pipeline_note": "FICTIONAL. The 30% triple-agonist driver was met by a new form of an existing product, not a new molecule. Lilly's retatrutide 12 mg sNDA (filed Mar 2031 with 80-week data and DEXA) was approved Jan 2032 at a mean ≈30% loss, but supply is allocated. Amycretin was approved Sep 2031 after submitting the requested 72-week DEXA data. Survodutide was resubmitted Aug 2032, with a decision due early 2033. MariTide (filed Apr 2030) received a review extension for bone data, and its decision is expected H1 2033, so it is not on market. Bimagrumab combinations remain in phase 3, readouts 2033. The semaglutide smoking resubmission (Jan 2031) was based on a 2029–30 trial with SHAPS endpoints; it showed an anhedonia excess only at 2.4 mg, which shaped the 1.0 mg label. Lilly filed tirzepatide for AUD in Jun 2032, with a decision in 2033. Under the May 2031 settlements, US generic semaglutide arrives Jan 2034. Incretin market ≈$132B in 2032: US volume up ~30%, US net price flat, ex-US revenue still eroding. Bone agents are routine co-prescriptions."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common effect and the leading cause of voluntary discontinuation. It is worse on retatrutide 12 mg escalation and with unsupervised imported product.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss. Counts are rising with retatrutide 12 mg uptake, with no change in relative risk.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation; absolute risk low. Counterfeit cases still confound reporting.",
+        "regulatory_response": "Labelled; MDL litigation ongoing, with no bellwether verdict yet."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Magnitudes unchanged from the 2030 cohort: ~30–40% of loss is lean mass in untrained users over 50. Absolute numbers are rising with volume and with 30%-loss regimens.",
+        "regulatory_response": "The 2028 class label and the 2029 joint guidance are retained. The retatrutide 12 mg label requires a body-composition baseline. No new statute."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "The ledger holds and there is no new signal. HR ~1.3–1.4 in 65+ long-term users and ~1.2× in cycling postmenopausal women 50–64. With ≈3.3M 65+ users on >2 years: 3.3M × 0.6%/yr × 0.35 ≈ 6,900 excess hip fractures a year, against ~300,000 total. DEXA waits have eased to 4–8 weeks as mobile capacity grows.",
+        "regulatory_response": "Class labelling retained. FDA cited bone endpoints in the amycretin approval and the MariTide extension. The DOJ civil matter against Novo is unresolved."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohort studies still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention; no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association. The smoking-cessation trial, which had a psychiatric safety design, found no excess.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "emerging",
+        "prevalence_note": "Data are consistent with 2030. Retatrutide postmarketing SHAPS data hold at ~10–14% of top-dose users crossing threshold versus ~5% of comparators. In the randomised smoking trial, the excess appeared at 2.4 mg and not at 1.0 mg. With ≈1.6M on top-dose retatrutide, the implied excess is ~80–140k people. A 2032 KFF poll finds 31% of current users report 'the grey' at some point.",
+        "regulatory_response": "SHAPS screening recommendation in the smoking-cessation label. State advertising bans (CA, NY, IL, WA, 2031) on non-indicated 'calm/focus' marketing. No class label change."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Substantial regain within a year. Involuntary stops from gating, DEXA pauses and the minors bans add to it; the adolescents who stopped in TX/OK/TN are a new visible group.",
+        "regulatory_response": "None directly. Indiana waiver litigation still unresolved after Seventh Circuit en banc rehearing was granted."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D, calcium and protein signals are unchanged in kind. Professional bodies flag them for high-dose retatrutide users.",
+        "regulatory_response": "Professional guidance (protein ≥1.2 g/kg); no FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~7 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up, with no new signal. Cycling still looks worse for bone than continuous use. Adolescent bone-accrual results are still not reported.",
+        "regulatory_response": "Postmarketing requirements; pediatric studies under way. The state minors bans cite the missing data."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "No new mass cluster since Aug 2029. Poison-centre calls plateaued at the 2030 level, though the user base grew to ≈4.1M. Chinese 'research peptide' retatrutide vials are a growing share of calls since the 12 mg allocation.",
+        "regulatory_response": "Import alerts, seizures and pen-authentication guidance continue. Still no prosecution of individuals and no new law."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; somewhat more common at 12 mg; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "emerging",
+        "prevalence_note": "Claims data still show elevated fall-related ED visits in 65+ long-term users, and confounding has still not been separated.",
+        "regulatory_response": "Fall-risk screening stays in the Bridge counselling template."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "Volume pressure continues at a steady rate. US salty-snack volume is down ~3–4% a year and confectionery ~3%. Protein, fibre and 'bone-forward' lines remain the growth engines. Heritage 'full portion' brands have become a real niche, with sales concentrated in the South and courted in backlash marketing. SKU trimming continues and no major category has been exited.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Contracting faster. The 2031 AUD guidelines turned EAP-referred prescribing into standard care, and US spirits volume is down for a fifth straight year at ~4%. Beer is down ~3%. 'One good drink' on-premise holds. Tobacco is the bigger story: cigarette volume declines have accelerated from ~6% a year to ~9% since the July 2031 label, and vape makers report falling refill sales among 18–29s.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat and spend per cover is down again in high-uptake suburbs. Bar revenue is the soft spot at casual chains. Half portions, gram-priced bowls and on/off menus are standard. 'No-gram' independents in Atlanta, Memphis and Houston have spread to Birmingham and Tulsa as backlash venues.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn continues. Retatrutide 12 mg creates a new tier of very large loss, and alteration services and resale boom. Plus-size specialists stay stable on the body-sovereignty audience.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Still growing. Prescribed lifting, DEXA-plus-coaching and MA strength benefits are standard, and DEXA capacity has caught up in most metros. Retatrutide 12 mg labelling pushes resistance programmes for under-50s too.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Structure is unchanged: 64% of employers cover and ≈72% of those gate. Price relief has ended while volume is up ~30%, so pharmacy trend is back to ~+8–9%. Employers respond with tighter enforcement of existing gates rather than new designs. Smoking-cessation coverage under ACA preventive rules is being argued over: plans say $0-cost-sharing tobacco-cessation mandates should not apply to a $199 drug when varenicline exists, and most apply step edits.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly leads US volume through tirzepatide, retatrutide, which is supply-constrained at 12 mg, and Foundayo. Novo bought time with the 2034 generic-entry settlements and the smoking label, and holds Medicare and Medicaid share. US net prices are flat for the first time since 2025. Fill-finish capacity is the binding constraint, and both firms announce US plants that will not be online before 2034.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Among insured professionals, being on the drug is the default. A 30% loss on retatrutide is now visible enough to have a nickname, 'the full 12', and it is read as money plus allocation access. 'Off' still has its medical, principled and cut-off readings. In the South and in Black middle-class Atlanta, an unmedicated larger body is increasingly read as a statement rather than a lapse. Among young working-class adults, the drug is now as likely to signal 'quit vaping' as 'lost weight'.",
+      "thinness_and_class": "The gap in quality widened again. The top third (23%) gets retatrutide 12 mg allocation through concierge and direct channels, with DEXA and coaching. The bottom third (14.2%) enters through Medicaid tobacco-cessation coverage, gated jobs, or mail-order Indian generics and Chinese peptide vials. Price stalling at $199 against $5–30 abroad keeps the import share at ~8% and growing in absolute terms.",
+      "eating_as_ritual": "Meals are smaller and protein-first. The backlash has made the full table a defended ritual: Sunday dinners, potlucks and 'Whole Appetite' supper clubs, in which the Atlanta collectives' brunches are the template. Bars and happy hours are where the change shows most, since a growing share of the table is on an AUD or quit prescription.",
+      "dating_and_intimacy": "Profiles list on/off/'quitting'. 'Unmedicated' remains an identity filter in backlash communities. Advice columns have moved from 'my partner is calmer' to 'my partner took a holiday and was a different person for ten days'.",
+      "meaning_of_appetite": "Appetite is medicalised for weight, nicotine and now alcohol, which makes it the official target of treatment for wanting in general. The backlash sharpened in response. The June 2032 SBC resolution calls appetite a God-given faculty to be governed, not chemically removed. Atlanta's body-sovereignty collectives frame the minors bans and gating as twin intrusions. The supplement sellers market 'natural quit' berberine-and-fibre stacks. The coalition still disagrees on price and on the minors bans, which the religious strand supported and the Atlanta strand opposed.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Measured data have not changed: ~10–14% of top-dose retatrutide users versus ~5% of comparators on SHAPS, and in the randomised smoking trial an excess at 2.4 mg but not at 1.0 mg. Self-report is now broad: a 2032 KFF poll finds 31% of current users (≈16M) say they have experienced 'the grey', and 38% have taken at least one deliberate dose holiday in the past year. The residual non-obese 'calm' subscription market is ≈1.2M, down from ~1.5–2M in 2030 after the state ad bans; it sits inside the 10.0M cash/direct users.",
+      "framing": "A complaint, and a side effect with a name. 'The grey' is common usage. Clinicians say 'dose-dependent reward modulation' and now titrate for it. The smoking label made the mechanism respectable, since the drug works on wanting, and the ad bans made selling it as calm illegal in four large states. Dose-down and holiday protocols are published by medical societies, telehealth apps and Reddit alike.",
+      "effect_on_work": "Holidays are sized to the gate. Because PBMs measure PDC by fills, users skip one or two weekly injections while refilling on time, and pen surpluses build up at home and move to friends. A 10-day pre-pitch or pre-holiday skip is routine in sales, hospitality and creative work. Tech firms dropped 'focus' subscriptions from lifestyle accounts after the California law and now reimburse only on-label quit programmes. EAPs refer to AUD prescribing as standard. Fleets still favour staying on, and some union contracts now name 'medically supervised dose holidays' as protected from discipline.",
+      "effect_on_art_and_play": "'Written off-dose' remains a selling point in Nashville songwriting and touring comedy. Fan arguments over 'grey albums' are now mainstream music criticism. Users seek stimulus: hot sauce, loud venues and extreme sports. 'Holiday weekends' are a hospitality product, with bachelorette and reunion packages timed to skipped doses.",
+      "effect_on_intimacy": "Sex therapists screen dose as routine. Couples schedule dose holidays around anniversaries and conception attempts. Some couples where one partner is quitting alcohol on semaglutide report the drink-free evenings as the gain and the flatness as the cost. Backlash pastors counsel against the drug in premarital classes in the Tulsa–Dallas corridor.",
+      "effect_on_politics": "2032 is a presidential year, and the stall is stump material: $199 here against $20 in Delhi. One side runs on 'legal import' and the other on 'American-made, sealed mail'. The minors bans split the backlash coalition along regional lines. Campaigns court Whole Appetite events in Georgia. There is still no demonstrated turnout or temperament effect, and consultants still test 'calm voter' messaging privately.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Federal posture is data-demanding but approving: smoking cessation (Jul 2031), amycretin (Sep 2031) and retatrutide 12 mg (Jan 2032), each with bone or anhedonia monitoring language. The restriction driver is realised at state level. CA, NY, IL and WA (2031) banned consumer advertising of incretins for non-indicated uses ('calm', 'focus', 'craving freedom') and require an in-person or verified-video exam before any first prescription to a minor. TX, OK and TN (2031) prohibit prescribing incretins to under-18s except for type 2 diabetes. The FTC continues claim enforcement. Congress has passed no importation or advertising law.",
+      "subsidy_or_mandate": "No mandate. The Medicare Bridge successor is extended unchanged at $199/$50 through 2033, and the portal prices are frozen at their 2030 levels. Existing federal tobacco-cessation coverage rules now reach semaglutide through the new label, subject to state step edits. This is not a new programme.",
+      "conditioning_or_surveillance": "Unchanged in structure. The Indiana and Arkansas 1115 waivers continue (≥80% PDC, quarterly verified weigh-ins, two misses = 12 months off). BMI-linked surcharges up to 30% of premium remain. ≈72% of covering employers gate through PBMs. Pharmacy weigh-in kiosks are ubiquitous. Some state Medicaid smoking programmes add cotinine tests as a continuation check.",
+      "workforce_or_military": "DOT sleep-apnea screening still makes tirzepatide a de facto requirement for some drivers. The 2032 VA/DoD AUD guideline brings semaglutide into military and veteran addiction care, while Army accession policy on GLP-1 use is still contested. Some fleets keep DEXA screening for drivers over 55.",
+      "geopolitics_of_supply": "The price stall made the India and China gap starker. Indian generic tirzepatide is now in the mail stream, and Chinese peptide retatrutide fills the 12 mg allocation gap. India–US trade talks still treat mail-order pharma as a bargaining item. Section 232 tariffs remain, and manufacturers cited them in refusing a 2032 step-down. Promised US fill-finish plants are years from output.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-05",
+        "event": "Novo Nordisk settles patent litigation with five generic semaglutide filers, who agree to US entry no earlier than January 2034. In November, HHS renews the $199 Medicare and direct-portal rates through 2033 with no further cut, after Lilly and Novo cite tariff and capacity costs.",
+        "driver": "price_path: stalled"
+      },
+      {
+        "date": "2031-06",
+        "event": "California's governor signs a law banning consumer advertising of GLP-1 drugs for 'calm', 'focus' and other unapproved uses and requiring an in-person exam before prescribing to minors; New York, Illinois and Washington follow. The same summer, Texas, Oklahoma and Tennessee prohibit prescribing the drugs to under-18s except for type 2 diabetes.",
+        "driver": "state_action: restriction"
+      },
+      {
+        "date": "2031-07",
+        "event": "FDA approves semaglutide 1.0 mg as an aid to smoking cessation in adults after a resubmitted trial with anhedonia endpoints found excess loss of pleasure only at the higher 2.4 mg dose; the label recommends pleasure-scale screening, and state Medicaid programs begin adding it behind varenicline step edits.",
+        "driver": "new_indications: nicotine"
+      },
+      {
+        "date": "2031-10",
+        "event": "The American Psychiatric Association's updated alcohol use disorder guideline lists semaglutide and tirzepatide as second-line treatment, or first-line with obesity; the VA and Defense Department adopt similar language in March 2032, and employee-assistance programs make prescribing referrals routine.",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2032-01",
+        "event": "FDA approves a 12 mg dose of Lilly's retatrutide showing about 30% average weight loss at 80 weeks, with a body-composition baseline required; by April Lilly reinstates allocation, the $399 direct price holds, and poison centres report more calls involving Chinese 'research peptide' retatrutide.",
+        "driver": "next_gen_launch: triple_agonist_30pct"
+      },
+      {
+        "date": "2032-06",
+        "event": "The Southern Baptist Convention adopts a resolution calling appetite 'a gift to be governed, not removed'; the same month, Atlanta's Whole Appetite collectives host both presidential campaigns' Georgia surrogates while publicly opposing the minors bans the Baptist resolution praised.",
+        "driver": "cultural_response: backlash_body_politics"
+      }
+    ],
+    "open_tensions": [
+      "Prices froze at $199 just as volume, the 30% dose and the new addiction indications expanded demand, and generics abroad cost $5–30. The Jan 2034 generic date and the 2033 Bridge expiry both fall in the next window, and import pressure keeps growing with no legislation.",
+      "Gating rewards uninterrupted fills, the bone guidance recommends pauses, and users now routinely skip doses while refilling on time. Plans measure adherence that is partly fictional, and the resulting pen surpluses feed informal sharing nobody tracks.",
+      "The FDA has approved the drug for treating wanting itself (nicotine, with alcohol endorsed), while four states ban marketing that same effect as 'calm' and a third of users complain of 'the grey'. Nobody has decided whether reward dampening is a therapy, a side effect or a product.",
+      "The minors bans in Texas, Oklahoma and Tennessee ended tens of thousands of adolescent courses with no bone-accrual data on either side. The backlash coalition is split on them, and the pending adolescent studies may settle the question or inflame it."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; generic_us remains false, with entry now settled for Jan 2034.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149–150 a month cash through the federal direct-pricing portal (launched as TrumpRx) and manufacturer direct channels.",
+      "The Indiana and Arkansas Medicaid 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins; two misses end coverage for 12 months, and the disability-rights litigation is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "The $199 Freeze: One Adult in Five on the Pen, Now Prescribed to Stop Wanting Cigarettes, Drinks and 'the Grey' Itself",
+    "world_in_600_words": "At the end of 2032 nearly one American adult in five is on an incretin drug, and the price is the same as it was three years ago. The weekly semaglutide pen still costs $199 on the federal direct portal. Tirzepatide costs $199 to $279, the starter pills $149, and Medicare still pays $199 with a $50 copay. In May 2031 Novo settled with the generic makers and put US generic entry back to January 2034. In November HHS renewed the rates rather than cutting them, after both manufacturers pointed to tariffs and filling lines that cannot keep up. The step-downs of the late 2020s have stopped. Nobody's coverage changed shape either: the same employers cover, the same PBMs gate on fills and verified weigh-ins, and the same two Medicaid waivers cut people off for a year after two misses.\n\nGrowth came from new reasons to take the drug. In July 2031 the FDA approved semaglutide at 1.0 mg to help adults quit smoking, after a trial that measured pleasure directly and found a loss only at the higher weight dose. Federal rules already required Medicaid to cover approved cessation drugs, so the pen reached clinics that had never prescribed it for weight. States placed it behind varenicline, and some check cotinine at refill. Psychiatrists followed in October with guidelines naming semaglutide and tirzepatide for alcohol use disorder, and the VA followed in the spring. Employee-assistance lines now refer drinkers to a prescriber as routinely as to a counsellor. Cigarette sales are falling faster than at any time this century, spirits are down for a fifth year, and the casual-dining bar is the weakest part of the casual-dining business.\n\nAt the top end, Lilly's retatrutide at 12 mg delivers about thirty percent weight loss, which used to require surgery. It arrived in January with a required body-composition scan and was rationed by April. People who get it through concierge practices call it 'the full 12'. People who cannot get it buy Chinese 'research peptide' vials, and poison centres have noticed. About four million Americans now use product from abroad, where generics cost a tenth of the US price. The gap has become a campaign line for both parties, who propose opposite remedies.\n\nNo new harm has turned up, and the old ones keep growing with volume. Older long-term users still break hips about a third more often, which means roughly seven thousand extra fractures a year. DEXA waits have shortened only because mobile scanners multiplied. The flatness users call 'the grey' is now an ordinary complaint, not a fringe one. A third of users say they have felt it, and many take dose holidays: they skip a week or two before a wedding, a pitch or a tour while refilling on schedule so the plan's adherence counter stays green. Spare pens collect in kitchen drawers and get passed to sisters and coworkers.\n\nThe states did what Congress would not. California, New York, Illinois and Washington banned advertising the drugs for calm or focus, and the 'Quiet'-style subscriptions shrank into on-label quit programmes. Texas, Oklahoma and Tennessee banned the drugs for minors without diabetes, and about forty-five thousand teenagers came off. The backlash that marched in Atlanta in 2030 is larger and more divided. In June the Southern Baptists declared appetite a gift to be governed. Atlanta's body-sovereignty collectives agree about gating but call the minors bans another intrusion. Both now host campaign surrogates. From a distance the system looks calm: prices are stable, smoking is falling, and gyms are full. Up close it is held together by unused pens and adherence figures nobody quite believes.",
+    "a_day_in_the_life": "Danielle Ruiz wakes at nine in Columbus because the brunch shift starts at ten-thirty. Wednesday is pen day. She pinches her stomach the way the Medicaid nurse showed her and counts to six. Semaglutide, 1.0 mg, quit dose. Two patch boxes and three months of varenicline came first, because Ohio required that before the pen. The vape is in a junk drawer and has been dead since August. She keeps it there anyway.\n\nAt the restaurant the bar menu is half mocktails now. Her manager, who is on Zepbound through the company plan, calls staff meeting 'weigh-in Wednesday' without meaning anything by it. A table of four orders two plates and four forks. Danielle carries out hot sauce without being asked.\n\nOn her break she does the app's pleasure questionnaire, the one the label made her clinic adopt. Fourteen statements. She would enjoy a warm bath. She would enjoy her favourite song. She hesitates on the song and taps 'agree'.\n\nHer mother calls from Indiana. Her mother's coverage ended in March after two missed kiosk weigh-ins, and she has a box from Hyderabad in her freezer. 'It's the same thing,' her mother says. 'Jenna checked the lot number online.'\n\nThat night Danielle's cousin texts about a bachelorette in Nashville next month and asks whether she's skipping a week for it. Everybody skips for Nashville. Danielle opens the clinic portal, where her next cotinine test is scheduled for the fourteenth, and closes it. She puts on the song again and listens to all of it, carefully, as if someone were checking."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s3-L2-r31-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The semaglutide smoking resubmission (Jan 2031) was based on a 2029–30 trial with SHAPS endpoints; it showed an anhedonia excess only at 2.4 mg, which shaped the 1.0 mg label.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: the parent said Novo needed a new trial and expected no resubmission before 2031. A trial designed after the Mar 2029 CRL, finished by 2030, and approved six months after resubmission is very tight, and under the envelope's 12-month rule it is arguably too fast. The dose-split result that conveniently yields a clean 1.0 mg label is also asserted rather than shown."
+        },
+        {
+          "quote": "cigarette volume declines have accelerated from ~6% a year to ~9% since the July 2031 label",
+          "field": "world/economy/alcohol/state",
+          "why": "Magnitude: a 3-point acceleration within about 18 months of approval is hard to square with only ≈1.4M smoking/vaping users on the drug, step-edited behind varenicline and NRT. Cigarette volume is also blamed on the label alone, with no chain from the new users to the volume effect."
+        },
+        {
+          "quote": "The rise comes mostly from the federal requirement that Medicaid cover FDA-approved tobacco-cessation drugs.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: Medicaid grows by about 1.4M users, said to be mostly smoking-driven. The same note says most states put semaglutide behind varenicline/NRT step edits, and total smoking/vaping users across all payers are only ≈1.4M. That implies an implausibly large share of them are on Medicaid, and the step edits should slow uptake."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society with new losers but also real gains. Gating still cuts people off (the 12-month Medicaid waiver rule, a mother's coverage ending after two missed weigh-ins), and adherence data are partly fictional (PDC counts fills, not injections). Fractures continue at ~6,900 excess hip fractures a year, 'the grey' is self-reported by 31% of users, and ~45k adolescents were taken off the drug by the minors bans. Inequality widens with 'the full 12' for the top third and imported vials at the bottom. Smoking and alcohol declines offset some of this, so the world sits near 5.5 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 18.9%, i.e. 14.6+4.3. Price is frozen, coverage is status quo (64%, 72% gated), nicotine and AUD indications are both present, there is no new safety signal or shock, a 30% retatrutide 12 mg dose is launched, state restrictions are enacted, and the backlash and the 'mainstream complaint' are in the prose. Nothing contradicts a driver. mechanism: Most chains are shown: the settlement and tariff cited for the price stall, the Medicaid cessation rule feeding Medicaid growth, the fill-based PDC leading to dose holidays and pen surpluses, and the ad bans shrinking 'calm' subscriptions. Weaker links are the convenient 2.4 mg vs 1.0 mg anhedonia split and the quick cigarette-volume acceleration (claims 1 and 2). magnitude: Population figures, age bands, income thirds, cycling and the payer mix all reconcile, and so do the Medicare, Bridge and Medicaid arithmetic. The weak spots are the smoking approval six months after resubmission, against the envelope's 12-month rule (claim 1), and Medicaid growth attributed mostly to a smoking cohort too small to carry it (claim 3).",
+        "generativity": "The Danielle Ruiz day is concrete and shows rather than explains: pen day, the quit dose, the pleasure questionnaire, the cotinine test, the Hyderabad box in her mother's freezer, and the Nashville skip. The world fields supply many more implied scenes: 'the full 12', holiday-weekend packages, Whole Appetite supper clubs, and union contracts protecting medically supervised dose holidays. Some of the prose still explains in summary rather than dramatising."
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s3-L2-r31-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Novo Nordisk settles patent litigation with five generic semaglutide filers, who agree to US entry no earlier than January 2034.",
+          "field": "world/events/0/event",
+          "why": "Mechanism: the parent world says US exclusivity runs only to ~2031–32. A Hatch-Waxman settlement that pushes generic entry past expiry to 2034 is asserted with no patent or exclusivity basis shown, and it conveniently produces the price stall."
+        },
+        {
+          "quote": "The rise comes mostly from the federal requirement that Medicaid cover FDA-approved tobacco-cessation drugs.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude/mechanism: the note puts total new smoking/vaping users across all payers at ≈1.4M, yet Medicaid alone grew by ≈1.4M users (3.5M to 4.9M). Medicare and commercial also take part of the cessation group, so this attribution does not reconcile."
+        },
+        {
+          "quote": "The semaglutide smoking resubmission (Jan 2031) was based on a 2029–30 trial with SHAPS endpoints; it showed an anhedonia excess only at 2.4 mg, which shaped the 1.0 mg label.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the parent says Novo needed a new trial with validated anhedonia endpoints and expected no resubmission before 2031. Designing, running and reading out such a trial between the Mar 2029 CRL and Jan 2031 is very tight, and a 1.0 mg cessation dose emerging from it is convenient."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society, not a collapsed one. Gating continues at ~72% of covering employers, the Indiana and Arkansas waivers still cut people off, and the TX/OK/TN minors bans ended ≈45k adolescent courses with no bone-accrual data. Inequality stays wide, with top-third access to 'the full 12' set against bottom-third imported vials and Medicaid step edits. Epistemic harm is moderated because 'the grey' is named, measured (the KFF poll, SHAPS) and discussed, though adherence figures are 'partly fictional' and pen surpluses are untracked.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption is +4.3 to 18.9, the price is stalled, coverage is status quo, nicotine and AUD indications appear, there is no new safety signal or shock, retatrutide 12 mg is a new form of an existing product, the state bans are present, and 'the grey' is mainstream. The smoking-label timeline is only thinly consistent with the parent's CRL. mechanism: most chains are shown, including the PDC-by-fills skipping loophole, step edits, the ad bans and the cessation-driven fall in cigarette volume. The 2034 generic-entry settlement against ~2031–32 exclusivity (claim 1), the trial-to-resubmission timeline (claim 3) and the Medicaid growth attribution (claim 2) are asserted or strained. magnitude: 18.9% current and 29.5% ever-use sit inside the envelope. Age bands, income thirds, payer mix (sums to 100%), Bridge spend ($5.5B), Medicaid spend ($11.7B), the hip-fracture arithmetic (≈6,900) and the retatrutide excess (80–140k) all multiply out. The only visible gap is the Medicaid-rise attribution (claim 2). Approvals fit the approval rules.",
+        "generativity": "The day-in-the-life gives Danielle a concrete routine: Ohio's varenicline step edit, the dead vape in the drawer, a pleasure questionnaire she answers carefully, and her mother in Indiana cut off after two kiosk weigh-ins and now using Hyderabad pens. Implied scenes include the Nashville bachelorette dose skip, the cotinine test and the surplus pens passed among relatives. The world fields add many hooks: 'weigh-in Wednesday', holiday-weekend hospitality packages, the split backlash coalition and campaign surrogates at Whole Appetite events."
+      },
+      "plausibility": 7.55
+    },
+    {
+      "custom_id": "s3-L2-r31-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Most new first-time users came through two doors: the July 2031 smoking-cessation label and AUD prescribing backed by the 2031 guidelines.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the same note says these two doors account for only ≈2.3M current users. Ever-use rose 5.5 points, which is ≈15M new ever-users, so the two doors cannot be \"most\" of the new first-time users."
+        },
+        {
+          "quote": "The rise comes mostly from the federal requirement that Medicaid cover FDA-approved tobacco-cessation drugs.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: Medicaid users rose by ≈1.4M, which would be nearly all of the world's ≈1.4M smoking/vaping users across every payer. Medicare's ≈0.9M \"smoking-cessation or OSA\" users and most states' step edits behind varenicline make this unreconcilable."
+        },
+        {
+          "quote": "cigarette volume declines have accelerated from ~6% a year to ~9% since the July 2031 label",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: a 3-point acceleration in national cigarette volume is credited to a label that has reached only ≈1.4M users, after step edits, in under 18 months. The candidate shows no chain from that user count to a drop that size."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder version of 2030, with new winners as well as new losers. Gating now covers ≈72% of covering employers. Fragility fractures run ≈6,900 a year, ≈45k adolescent courses were ended by state bans, ≈4.1M people use unverified imports, and 31% of users report 'the grey' with no systematic measurement. Smoking and alcohol declines are real gains, which holds public_health down. The epistemic harm is partly hidden: the PDC adherence counter is \"partly fictional\" and pen surpluses are shared informally with no tracking.",
+        "plausibility": "driver_fidelity: Every driver is visible in the fields and events. The price freeze (event 2031-05/11), status-quo coverage (64% of employers, ≈72% gating), nicotine and AUD indications, a 30% retatrutide 12 mg dose, no market shock, state restrictions, backlash politics and the 'grey' as a mainstream complaint are all present. The safety_signal \"none\" is only slightly strained by the new randomised 2.4 mg anhedonia finding. mechanism: The price stall (settlement, tariffs, fill-finish constraint) and the PDC-by-fills pen surplus are well chained. However, the claim that two doors supplied \"most\" new first-time users (claim 1) and the large cigarette-volume acceleration (claim 3) are asserted without a chain. The compressed 2029–30 trial that supports a Jan 2031 resubmission is also thin. magnitude: The figures are inside the envelope: 18.9% current, 29.5% ever-used, income thirds bracketing the national figure, and amycretin approved within the allowed window. Payer mix, age bands, the Bridge arithmetic ($5.5B) and Medicaid arithmetic ($11.7B) all multiply out. The smoking and AUD user counts do not reconcile with the Medicaid and Medicare growth or with the ever-use rise (claims 1 and 2).",
+        "generativity": "The Danielle Ruiz vignette shows rather than explains. She has a Medicaid varenicline step edit, a dead vape kept in a drawer, a SHAPS questionnaire on her break, her mother's Indiana weigh-in cutoff and Hyderabad box, and Nashville dose-skipping. The world fields also imply scenes: holiday-weekend packages, Whole Appetite supper clubs, pen-surplus sharing and union holiday clauses. The ending, where she listens to the song \"as if someone were checking\", has real texture."
+      },
+      "plausibility": 6.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The semaglutide smoking resubmission (Jan 2031) was based on a 2029–30 trial with SHAPS endpoints; it showed an anhedonia excess only at 2.4 mg, which shaped the 1.0 mg label.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism and magnitude: the parent said Novo needed a new trial and expected no resubmission before 2031. A trial designed after the Mar 2029 CRL, finished by 2030, and approved six months after resubmission is very tight, and under the envelope's 12-month rule it is arguably too fast. The dose-split result that conveniently yields a clean 1.0 mg label is also asserted rather than shown."
+      },
+      {
+        "quote": "cigarette volume declines have accelerated from ~6% a year to ~9% since the July 2031 label",
+        "field": "world/economy/alcohol/state",
+        "why": "Magnitude: a 3-point acceleration within about 18 months of approval is hard to square with only ≈1.4M smoking/vaping users on the drug, step-edited behind varenicline and NRT. Cigarette volume is also blamed on the label alone, with no chain from the new users to the volume effect."
+      },
+      {
+        "quote": "The rise comes mostly from the federal requirement that Medicaid cover FDA-approved tobacco-cessation drugs.",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude and mechanism: Medicaid grows by about 1.4M users, said to be mostly smoking-driven. The same note says most states put semaglutide behind varenicline/NRT step edits, and total smoking/vaping users across all payers are only ≈1.4M. That implies an implausibly large share of them are on Medicaid, and the step edits should slow uptake."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.0,
+      "inequality": 6.0,
+      "public_health": 4.83,
+      "cohesion": 5.33,
+      "epistemic": 5.17,
+      "overall": 5.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.67,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.25,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a harder society with new losers but also real gains. Gating still cuts people off (the 12-month Medicaid waiver rule, a mother's coverage ending after two missed weigh-ins), and adherence data are partly fictional (PDC counts fills, not injections). Fractures continue at ~6,900 excess hip fractures a year, 'the grey' is self-reported by 31% of users, and ~45k adolescents were taken off the drug by the minors bans. Inequality widens with 'the full 12' for the top third and imported vials at the bottom. Smoking and alcohol declines offset some of this, so the world sits near 5.5 rather than higher.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 18.9%, i.e. 14.6+4.3. Price is frozen, coverage is status quo (64%, 72% gated), nicotine and AUD indications are both present, there is no new safety signal or shock, a 30% retatrutide 12 mg dose is launched, state restrictions are enacted, and the backlash and the 'mainstream complaint' are in the prose. Nothing contradicts a driver. mechanism: Most chains are shown: the settlement and tariff cited for the price stall, the Medicaid cessation rule feeding Medicaid growth, the fill-based PDC leading to dose holidays and pen surpluses, and the ad bans shrinking 'calm' subscriptions. Weaker links are the convenient 2.4 mg vs 1.0 mg anhedonia split and the quick cigarette-volume acceleration (claims 1 and 2). magnitude: Population figures, age bands, income thirds, cycling and the payer mix all reconcile, and so do the Medicare, Bridge and Medicaid arithmetic. The weak spots are the smoking approval six months after resubmission, against the envelope's 12-month rule (claim 1), and Medicaid growth attributed mostly to a smoking cohort too small to carry it (claim 3).",
+      "generativity": "The Danielle Ruiz day is concrete and shows rather than explains: pen day, the quit dose, the pleasure questionnaire, the cotinine test, the Hyderabad box in her mother's freezer, and the Nashville skip. The world fields supply many more implied scenes: 'the full 12', holiday-weekend packages, Whole Appetite supper clubs, and union contracts protecting medically supervised dose holidays. Some of the prose still explains in summary rather than dramatising."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "culture_and_body",
+    "axis_badness": 5.366,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 23
+  }
+}

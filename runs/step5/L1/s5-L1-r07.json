@@ -1,0 +1,538 @@
+{
+  "run_id": "s5-L1-r07",
+  "step": 5,
+  "year": 2036,
+  "parent_lineage": "L1",
+  "seed": 20261107,
+  "run_index": 7,
+  "driver_modifiers": [
+    {
+      "driver": "personality_layer",
+      "if": {
+        "path": "interior_life.personality_layer",
+        "in": [
+          "marketed_feature",
+          "employer_encouraged"
+        ]
+      },
+      "set": {
+        "unrecognised": 0,
+        "niche_side_effect": 0.5
+      }
+    }
+  ],
+  "drivers": {
+    "adoption_delta_pp": 8.1,
+    "price_path": "shock_up",
+    "coverage_shift": "mandate_or_conditioning",
+    "new_indications": [
+      "cognition_dementia",
+      "nicotine"
+    ],
+    "safety_signal": "none",
+    "next_gen_launch": "none",
+    "market_shock": "none",
+    "cultural_response": "class_stratification",
+    "state_action": "benefits_conditioning",
+    "personality_layer": "marketed_feature"
+  },
+  "status": "ok",
+  "generator_model": "claude-opus-5-5",
+  "created_at": "2026-11-08T18:04:34Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01DHHhkJDhppSFMdXTwKiMQw",
+        "custom_id": "s5-L1-r07",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19513,
+        "output_tokens": 27835
+      }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r07-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36991,
+        "output_tokens": 7538
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r07-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36991,
+        "output_tokens": 6796
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01BiV9U4NdARp559aCXqb1Y6",
+        "custom_id": "s5-L1-r07-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 36991,
+        "output_tokens": 8407
+      }
+    ]
+  },
+  "world": {
+    "year": 2036,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The Medicare GLP-1 Bridge pilot has not been revived, Congress has not reopened the permanent obesity benefit, and Part D still pays for no incretin on a weight-loss indication alone.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban of its kind, and the suicidal-ideation warning is still off the labels.",
+      "The eleven state under-12 weight-indication bans enacted in 2034 remain in force, and the 2034 FTC–FDA consent orders with Level and three other platforms still bar them from calm, focus and compulsion claims."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 36,
+      "us_adults_ever_used_pct": 45.5,
+      "by_income_third_pct": {
+        "top": 42.5,
+        "middle": 36.5,
+        "bottom": 29
+      },
+      "by_age_band_pct": {
+        "18_29": 21,
+        "30_49": 35,
+        "50_64": 48,
+        "65_plus": 38
+      },
+      "pediatric_under_18_on_drug_pct": 1.1,
+      "cycled_off_and_on_pct": 43.7,
+      "note": "FICTIONAL. Arithmetic: 45.5% ever-used minus 36.0% current leaves 9.5% of adults (~26.3M) who used and are off now, the same gap as in 2034. New first-time users joined at 8.0 points (~22M), and their entry offset the stops that one-third one-year persistence implies. Restarters roughly matched new quitters, consistent with 36–47% restart within a year. About 47% of current users are on a second or later course (16.9 points). Another 3.0 points cycled and are off again, so (16.9 + 3.0) / 45.5 ≈ 43.7% of ever-users have cycled. The remaining ~6.5 points stopped once and have not restarted. Age check: 0.20×21 + 0.33×35 + 0.24×48 + 0.23×38 = 4.2 + 11.55 + 11.52 + 8.74 ≈ 36.0. Income thirds average 36.0. 36.0% of ~277M adults is ~99.7M users, up ~23M. FICTIONAL payer mix: commercial ~21.0M (21%, up with conditional employer coverage); Medicare ~20.5M (21%; ~19.0M of them are 65+, ~1.5M under-65 disability; growth from aging-in, more CVD-coded dementia-risk use after the June 2035 readout, and ~3.3M on the August 2036 non-CVD dementia label, of whom ~2.1M switched from cash); Medicaid ~4.5M (4.5%); legitimate cash ~41.7M (42%); imported or counterfeit ~12.0M (12%, down from 15.4M after the tariff and parcel squeeze). Sum 99.7M. The cash channel breaks down as follows: ~15.0M weight, ~9.5M metabolic/longevity, ~5.2M dementia-prevention without a covering payer (mostly 50–64), ~5.0M calm/focus, ~2.2M Reset, ~1.8M AUD and ~3.0M nicotine (off-label before March 2036, on-label after). About 22M current users have a BMI under 30, and ~7M have a BMI under 25. Adult obesity is ~30.5%. ~16% of adults have obesity and have never used a drug, concentrated in the bottom third and the rural South. Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright after seizures or price doubling and sit in the off pool, the fastest regainers. Pediatric: ~1.1% of under-18s are on a drug (12–17s ~2.6%, including some off-label vaping-cessation use the label does not cover; 6–11s ~0.11%). ~57% of children live in a household with a current user, and ~6.8M live with a parent who regained after stopping, up from 6.1M, mostly from gray-supply interruptions in 2035."
+    },
+    "access": {
+      "cash_price_usd_month_low": 179,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~20.5M users through diabetes, CV, CKD, OSA and dementia-risk codes. Since Aug 2036 the dementia code also covers adults 55+ with obesity, or with overweight plus a cardiometabolic comorbidity, without established CVD. All of it sits behind prior authorisation, and CMS 2036 guidance lets Part D sponsors set continuation criteria: ≥80% proportion of days covered and an annual cognitive screen for the dementia code. FICTIONAL arithmetic: 20.5M × ~$230 average net/month × 12 ≈ $56.6B annualised gross Part D incretin spend at end-2036, up from ~$36.5B. Average net rose from $225 to $230, the first increase, as tariff-linked cost pass-through and the mix shift toward tirzepatide outweighed negotiated drift. Dementia-risk route: ~6.7M (3.4M CVD-coded + 3.3M new label) × ~$240 × 12 ≈ $19.3B. Medicaid: 12 states cover weight-loss use, 7 of them conditionally. Five new 1115 waiver states (Georgia, Kentucky, Arkansas, Oklahoma, Indiana) require monthly fill verification through the same portals used for work-requirement reporting, plus ≥5% weight loss at six months. ~4.5M Medicaid users. ACA preventive-service rules oblige most commercial plans to cover FDA-approved tobacco-cessation drugs, so the March 2036 nicotine label brought ~0.6M covered quit courses, mostly after step-through on varenicline.",
+      "employer_coverage_pct": 35,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide still sells domestically for $3–25 a month across 150+ brands. Since India's January 2035 export registration rule for B2C pharmaceutical parcels, the registered export price has roughly doubled and unregistered parcels face seizure. Chinese tirzepatide-analogue and 'reta' vials still sell for $25–70 in markets without enforceable patents, but after the US tariffs and China's retaliatory export licensing on peptide intermediates, US-landed street prices are $120–180. Canadian and Brazilian generics run CAD 50–90 and BRL 170–300. India and China still supply roughly two-thirds of world incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Price shock, upward. Section 232 tariffs (Mar 2035) put 100% duties on Chinese and 50% on Indian peptide APIs, finished incretins and protected amino-acid intermediates. Beijing answered with export licensing on the same intermediates, and the absorption enhancer SNAC tightened. Oral semaglutide uses far more API per patient-month than the weekly injection, and AUD, calm, Reset and nicotine demand runs mostly on the pill, so Novo took the hardest cost hit. TrumpRx prices rose for the first time in Jul 2035: starting oral doses $149 → $179, Wegovy pill maintenance $179 → $219, Foundayo $149–199 → $179–229, injectable Wegovy/Zepbound $229–279 → $269–319. Lilly raised retatrutide $299 → $349 and Amgen raised MariTide $219 → $249, both citing capacity and inputs. Amycretin is still $1,249 list; bimagrumab is still $1,150 list. Gray-to-licensed gap: US-landed Indian semaglutide now runs $60–110 a month against licensed $179–319, so the gap has narrowed from ~40–60× (domestic Indian price) to ~2–3× at the US doorstep. Gray users fell to ~12M, including ~2.6M on 'reta'. Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036), and nearly every new plan is conditional: verified adherence, a DXA or BMI checkpoint, or a premium differential under the 2027 guidance. Monitored tracks hold ~11.5M enrollees, all inside the 21.0M commercial users, ~8.3M of them on MariTide. Lifestyle spending accounts reimbursing calm, Reset and now 'quit' platform fees reach ~24% of large employers. Orals are ~53% of users."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg maintenance dose)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "Activin type II receptor antibody, muscle-preserving adjunct to incretin therapy (bimagrumab; not an incretin)"
+      ],
+      "best_efficacy_pct_body_weight": 29,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "alcohol use disorder in adults (oral semaglutide, Aug 2033)",
+        "smoking cessation in adults (oral semaglutide 25 mg, Mar 2036; sNDA filed Feb 2035)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, with growth-monitoring language; barred for weight indication by statute in eleven states)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide, 2032), extended Aug 2036 to adults 55+ with obesity, or overweight with a cardiometabolic comorbidity, without CVD (sNDA filed Jul 2035 after the confirmatory readout)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' and longevity microdosing by adults without obesity (~9.5M licensed cash plus gray)",
+        "dementia prevention by 45–55-year-olds and lean adults outside the new tirzepatide label, cash or gray",
+        "'calm' and 'focus' microdosing (~5.0M), now sold on the back of on-label craving language",
+        "compulsion 'Reset' plans for betting, shopping, porn and screens (~2.2M), still with no compulsion indication",
+        "vaping cessation in 16–17-year-olds (off-label; the nicotine label is adults only)",
+        "gray-market 'reta' microdosing in gym and longevity communities, shrunk by the tariff"
+      ],
+      "pipeline_note": "FICTIONAL. No new class reached market in 2035–36. New indications came through existing products. Tirzepatide's dementia confirmatory trial read out in Jun 2035 (all-cause dementia HR ~0.82 over ~4 years in adults 55+ with obesity or overweight plus comorbidity, no CVD required; no new safety findings). Lilly filed the extension sNDA in Jul 2035, and the FDA approved it in Aug 2036, 13 months later. Novo's oral semaglutide smoking-cessation programme had run as phase 3 adjuncts to the AUD trials; Novo filed in Feb 2035 on two trials showing ~10-point higher continuous abstinence than placebo at 24 weeks, comparable to varenicline, with lower post-quit weight gain. Approval came in Mar 2036, standard review, 13 months after filing. The label's clinical-studies section reports reduced urge-to-smoke scores, and that is the first on-label 'craving' language for any incretin. Novo's gambling-disorder phase 3 posted a modest positive topline in Nov 2036, with filing expected 2037 and no compulsion indication yet. Implants remain phase 1–2. Chinese triple agonists remain ex-US. Bimagrumab uptake is ~0.4M, nearly all commercially insured. The tariff ended the 3–5% annual net-price drift; US net and cash prices rose in 2035."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation on full-dose weight regimens and lower on low-dose plans. In the nicotine trials GI effects were the top dropout reason, as with varenicline's nausea. Retatrutide 12 mg titration failure is still ~1 in 6.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss. Absolute cases rose with volume, especially among older Medicare starters; per-user risk is unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation of acute pancreatitis; absolute risk low. The first EPI bellwether (2035) ended in a defence verdict, and a second was settled confidentially in 2036.",
+        "regulatory_response": "Labelled; EPI MDL continuing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: The Medicare hip-fracture HR holds at ~1.3 after more than 2 years in users 65+ and ~1.45 after three or more cycles. No new signal, but absolute exposure rose sharply with the dementia-label starters, many of them frail 75+. The dementia trial's lean-mass substudy matched the known class pattern.",
+        "regulatory_response": "Class warning (Jul 2028) retained; the tirzepatide dementia label carries resistance-training and fall-risk counselling; bimagrumab remains an adjunct with little Medicare uptake."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low; nothing new.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No signal in the smoking-cessation trials, which used varenicline-era neuropsychiatric monitoring, or in the dementia trial.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: Unchanged estimates: ~7–8% clinically meaningful anhedonia at weight-loss doses vs ~3% in controls, ~10–11% on retatrutide. The nicotine trials measured hedonic tone and found a small, non-significant decrement at 24 weeks. The low-dose rate across ~17M calm, Reset, longevity and nicotine users is still unmeasured, and the NIH normal-weight cohort reports no earlier than 2038.",
+        "regulatory_response": "No labelling. FTC–FDA consent orders still bind four platforms. On-label 'urge-to-smoke' language is now used in manufacturer marketing; the FTC has not acted on it."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months. A 2035 wave of regain followed tariff-era gray-market interruptions, concentrated in Memphis, the Delta and the Rio Grande Valley. In smokers who quit on the drug and then stopped it, post-cessation weight gain arrived late and at full size.",
+        "regulatory_response": "None directly; it underpins the Part D continuation criteria and Medicaid adherence conditions."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency in low-intake users; more cases among older dementia-label starters with low baseline intake.",
+        "regulatory_response": "Annual micronutrient panel language on semaglutide and tirzepatide labels (2031); also listed in the dementia-label monitoring section."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after more than 5 years of continuous semaglutide (~4 vs ~2 per 1,000 person-years). Partial recovery in about half after 12+ months off. Tirzepatide's 5-year excess remains small and non-significant at 7 years of data.",
+        "regulatory_response": "Semaglutide class labelling (Mar 2031); tirzepatide under continued review."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling; effects in people without obesity",
+        "status": "emerging",
+        "prevalence_note": "About fourteen years of semaglutide follow-up now exist. ~22M current users have a BMI under 30, including normal-weight smokers on the nicotine label. Cycling effects on bone and pancreas are still poorly characterised. No new confirmed signal.",
+        "regulatory_response": "Pediatric bone and growth PMRs continue; the NIH normal-weight cohort is enrolling; the nicotine label requires a post-quit weight and mood observational PMR."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Cumulative FDA adverse-event reports tied to non-approved product passed ~58,000. No repeat of the 2033 insulin-pen cluster has been confirmed, but state labs found more under-filled and endotoxin-positive 'reta' vials as smugglers cut product after the tariff. Poison-centre calls are about flat at ~7× 2025 levels. CBP seizures rose further after India's registration rule.",
+        "regulatory_response": "Import alerts maintained; Section 232 tariffs act as a de facto supply control; felony-sale laws spread to 14 states; personal-importation enforcement is still weak federally."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The 48-month liraglutide PMR update (2035) shows a persistent ~0.7 cm/year height-velocity deficit in prepubertal starters and early signs of partial catch-up in those who stopped. Final adult height is still unknown. Swedish ARFID HR unchanged at ~1.8.",
+        "regulatory_response": "FDA label monitoring retained; no federal age restriction; eleven state bans unchanged; EMA specialist-initiation rule unchanged."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 54% of US households now have a user. Snack and confectionery volumes are down ~16% from 2025 and sugary drinks ~14%. Dollar sales are flat to slightly down as price rises stopped covering volume loss. Senior-focused 'small plate, high protein' frozen lines expanded fastest in Florida and Arizona after the dementia label. Convenience-store chains, already losing cigarette baskets, report nicotine-quit users dropping the attached soda-and-snack purchase too. The zip-code density planning at Kroger, Albertsons and Walmart now uses a 65+ user density layer.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Spirits volumes are down ~19% from 2025 and beer ~12%. AUD fills reached ~1.8M. Distributors report that smokers quitting on the pill drank less in the same months, cutting bar visits further. Craft brewery closures continue in the Midwest; NA and functional drinks are ~6% of volume.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is slightly down. Early-bird senior dining in The Villages and Scottsdale shrank as the dementia label spread through retiree communities, and chains there cut portions again. In Memphis and the Delta, late-night QSR traffic spiked in 2035 during the gray-supply regain wave and then settled. Protein-forward menus are standard in the upper tier.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking, but resale and stretch grew with the 2035 regain wave among former gray users. Mass retailers now cut senior women's size runs by zip. Premium structured athletic wear and 'lifted-body' tailoring keep growing in the upper tier.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training is growing. Medicare Advantage plans in Florida and Texas bundle senior resistance classes with dementia-label prior authorisations to answer the fall-risk counselling language. Premium DXA-plus-coaching runs $275–475 a month after price pass-through. Budget chains' lean-mass add-ons are standard. Longevity clinics added 'cognitive reserve' panels.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight coverage rose to 35%, nearly all of it conditional on verified adherence, DXA checkpoints or premium differentials. Pharmacy trend is ~+8% after the tariff-era price increases. Part D premiums rose again for 2036 and 2037 on dementia-label spend, and sponsors tightened continuation criteria. ACA preventive rules forced nicotine-label coverage, which plans manage with varenicline step therapy. LSA reimbursement of calm, Reset and quit platforms is at ~24% of large employers.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly leads on the dementia label and Medicare volume. Novo carries the oral franchise (AUD, nicotine, calm) and the heaviest API cost exposure from the tariff, and has accelerated its US peptide plants in North Carolina and Indiana. Amgen's MariTide holds employer tracks. Altria and Philip Morris International cite 'incretin quit headwinds' alongside sportsbook operators' 'pharmacological headwinds'. Indian and Chinese makers lost US gray volume and gained in Latin America and the Gulf.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The body reads as payer, and now as age and compliance. Lean, scanned and muscled means commercial coverage plus coaching. Lean with a daily pill and a biological-age printout means the longevity tier. A thin 70-year-old with a cane and a monthly PA renewal letter is a Medicare dementia-label user, and a thin 70-year-old in a resistance class is the Medicare Advantage version of the same person. Soft and bruised monthly means the employer track. Regained in 2035 means the gray supply dried up. Ex-smokers who stayed slim mark themselves as having quit 'the new way'.",
+      "thinness_and_class": "Stratification hardened as prices rose. The lower tier lost its cheap gray route. Memphis and the Mississippi Delta, where 'reta' had brought surgical-grade losses, saw the country's fastest regains in 2035, and the people who kept access there did it through Medicaid waivers in neighbouring Arkansas or not at all. Muscle is the upper-tier uniform, bimagrumab and DXA for those whose employers pay, so loss with muscle kept reads as money and loss without it reads as Medicare. In The Villages, Florida, the dementia label made thinness a retiree norm within months, and golf-cart neighbourhoods now sort by who has a coaching add-on. On the Columbus logistics corridor, a 6-month BMI checkpoint is part of the track.",
+      "eating_as_ritual": "Shared meals keep shrinking. Retirement-community potlucks moved to 'tasting tables'. Thanksgiving 2036 is the first in which most US households have at least one user at the table. The Bread Alone fasting network claims ~950 congregations. Smoke breaks, long a working-class ritual of their own, are visibly thinner at warehouses where the quit plan is reimbursed.",
+      "dating_and_intimacy": "'Biomarker verified' and 'lean-mass verified' are premium app tiers. 'Quit' badges joined 'Reset' badges. Older singles in retiree communities ask whether a date is 'on the label', meaning dementia coverage, as a proxy for health and for income. Couples schedule around shot days and PA renewals.",
+      "meaning_of_appetite": "In the upper tier, every pull (food, drink, cigarettes, bets, purchases) is noise a subscription manages, and Novo's 'Less Pull' ads made that a mainstream sentiment. In lower-income communities appetite came back with the 2035 price shock and is defended as pride or resented as loss. Unmuted reframed itself around 'the right to want' and picked up allies among smokers' rights groups and gaming-industry-funded campaigns, an alliance neither side advertises.",
+      "severity": 6
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL: Measured rates unchanged: ~7–8% clinically meaningful anhedonia at weight-loss doses vs ~3% in controls, ~10–11% on retatrutide. Low-dose and quit-dose exposure is now ~17M licensed users (5.0M calm/focus, 2.2M Reset, 9.5M longevity) plus ~3.6M nicotine users and gray microdosers. The nicotine trials found a small, non-significant hedonic-tone decrement. The population rate at these doses is unmeasured.",
+      "framing": "Sold as a feature. The March 2036 nicotine label gave Novo its first on-label craving language, and the 'Less Pull' campaign, which shows a smoker, a drinker and a late-night shopper each simply not reaching, runs on network TV under the label's protection. The four consent-order platforms still say 'balance'; newer platforms and pharma-direct channels say 'quiet' and 'freedom from craving' and cite the label. Employers call it steadiness. Clinicians call it a dose-related effect that patients now request by name. Unmuted calls it a sedative with a quit-smoking alibi.",
+      "effect_on_work": "In Feb 2036 the Southern District of Ohio granted summary judgment to the call-centre employer: enrollment was voluntary and attendance-linked promotion criteria were job-related. The appeal is pending at the Sixth Circuit. Monitored-track enrollment grew to ~11.5M. Vendors bundle 'focus', 'Reset' and 'quit' cohorts, and warehouses advertise 'smoke-break-free shifts' in recruitment. Upper-tier staff list their plan in self-reviews.",
+      "effect_on_art_and_play": "Sportsbook handle per active account is down ~19% from 2032 in high-density states. Gaming money backs state bills limiting 'Less Pull'-style advertising. Ambient TV, long slow games and 'quiet clubs' with no-drink, no-smoke, low-volume nights thrive in Austin and Atlanta. Unmuted off nights reached Detroit and Tulsa. Quitting memoirs are a bestseller genre; the 'Off' memoir is now a counter-genre.",
+      "effect_on_intimacy": "Desire mismatch remains the leading couples' complaint. Older couples on the dementia label describe a gentler, quieter late marriage, and some adult children describe parents who 'stopped arguing and stopped calling'. Partners of Reset and quit users still cannot tell change from muting.",
+      "effect_on_politics": "2036 is an election year in which incretins are a cost-of-living issue for the first time: the TrumpRx price increases and Part D premium rises gave candidates a target, and the tariff that caused them has defenders in both parties as anti-counterfeit policy. The restriction coalition (MAHA plus consumer advocates) split over Medicaid conditioning waivers, which fiscal conservatives in ban states sponsored. Tobacco-state legislators in Kentucky and North Carolina sit between growers and waiver budgets. 'Sedated electorate' claims still lack turnout evidence.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "Permissive on indications, protectionist on supply, restrictive at the edges. The FDA approved the nicotine and dementia extensions without new restrictions. Commerce's Section 232 tariffs and India's parcel registration made supply a trade question. State under-12 bans, in-person rules and social-media ad bans are unchanged. Fourteen states now make sale of unapproved incretins a felony. The FTC has not extended the consent orders to manufacturer advertising built on label language. Congress passed nothing on coverage.",
+      "subsidy_or_mandate": "No federal obesity subsidy. CMS approved five Medicaid 1115 waivers (Oct 2035) that cover weight-use incretins only with monthly fill verification and ≥5% weight loss at six months, administered through work-requirement reporting portals. CMS's 2036 Part D guidance permits adherence-based continuation criteria. ACA preventive-service rules now apply to the nicotine label. The 2027 30% premium guidance stands, and employers use it more.",
+      "conditioning_or_surveillance": "Deeper and more formal. Medicaid waiver portals take pharmacy fill data alongside work-hour reporting. Part D plans track proportion-of-days-covered for continuation. Employer wellness vendors combine PBM fills, clinic administration logs, LSA claims and DXA checkpoints under consent. The Ohio ruling removed the main legal brake on adherence-linked promotion outside Illinois.",
+      "workforce_or_military": "DOT guidance unchanged: prescribed and disclosed use is non-disqualifying. The Army recruit oral pilot continues and now includes nicotine-cessation use in basic training. The VA added the tirzepatide dementia label to its formulary with PA. TRICARE is unchanged for weight.",
+      "geopolitics_of_supply": "The Mar 2035 Section 232 tariffs (100% on Chinese and 50% on Indian peptide APIs, finished incretins and intermediates) and India's Jan 2035 B2C export registration cut US gray inflow. Beijing retaliated with export licensing on protected amino acids and SNAC, squeezing the licensed oral supply chain too. Novo and Lilly are expanding US peptide synthesis, and capacity is not expected to ease before 2038. India–US talks on a CBP mail agreement are ongoing without result.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2035-03",
+        "event": "Commerce imposes Section 232 tariffs of 100% on Chinese and 50% on Indian peptide APIs and finished incretins, two months after India's export registration rule took effect; China retaliates with export licences on peptide intermediates, and US street prices for gray 'reta' vials roughly double",
+        "driver": "price_path: shock_up"
+      },
+      {
+        "date": "2035-07",
+        "event": "Novo and Lilly raise TrumpRx incretin prices for the first time since the channel opened, starter Wegovy pills from $149 to $179, and Lilly lifts retatrutide to $349 and Amgen MariTide to $249, citing input costs and capacity",
+        "driver": "price_path: shock_up"
+      },
+      {
+        "date": "2035-10",
+        "event": "CMS approves Medicaid waivers in Georgia, Kentucky, Arkansas, Oklahoma and Indiana covering weight-loss incretins only for enrollees who verify monthly fills and lose 5% of body weight in six months, reported through work-requirement portals",
+        "driver": "coverage_shift: mandate_or_conditioning; state_action: benefits_conditioning"
+      },
+      {
+        "date": "2036-02",
+        "event": "Federal judge in Ohio rules a call-centre operator did not discriminate by favouring monitored-track enrollees for promotion; an employer survey later finds 35% of firms cover weight drugs, almost all conditionally",
+        "driver": "state_action: benefits_conditioning; cultural_response: class_stratification"
+      },
+      {
+        "date": "2036-03",
+        "event": "FDA approves oral semaglutide for smoking cessation, 13 months after Novo's February 2035 filing; Novo's 'Less Pull' TV campaign, built on the label's reduced-craving data, debuts weeks later",
+        "driver": "new_indications: nicotine; personality_layer: marketed_feature"
+      },
+      {
+        "date": "2036-08",
+        "event": "FDA extends tirzepatide's dementia-risk indication to adults 55 and older with obesity without heart disease, after a 2035 confirmatory trial and July 2035 filing; Medicare plans add adherence-based renewal criteria",
+        "driver": "new_indications: cognition_dementia"
+      }
+    ],
+    "open_tensions": [
+      "Medicare's incretin bill is running near $57B a year and climbing on a dementia label only five months old. Part D premiums are rising, and continuation criteria that drop non-adherent seniors are already producing denials among the frail and cognitively impaired, the people the label was written for.",
+      "The tariff that cut counterfeit inflow also raised legitimate prices and squeezed Novo's oral supply. Lower-income gray users regained in 2035, and US peptide capacity will not catch up before 2038, during an election in which incretin prices are a cost-of-living issue.",
+      "Novo's 'Less Pull' campaign sells the reduced craving that the consent orders bar platforms from promising, using label language the FTC has not challenged. About seventeen million low-dose users have an anhedonia rate no one has measured.",
+      "Medicaid waivers and the Ohio ruling have made adherence a condition of coverage and of promotion. The Sixth Circuit appeal and the first waiver disenrollment data, due in 2037, will decide whether conditioning spreads beyond the five states and Illinois's lone ban."
+    ]
+  },
+  "prose": {
+    "headline": "Less Pull, More Cost: 100 million Americans now take the drug that quiets wanting, and in 2035 the bill went up",
+    "world_in_600_words": "At the end of 2036 more than one American adult in three takes an incretin drug, about a hundred million people, and almost half have tried one. Prices went up during the same two years. These things are connected, through doctors' codes rather than cash.\n\nThe largest new market is old age. In June 2035 Lilly's confirmatory trial found that tirzepatide reduced all-cause dementia by about a fifth in adults over 55 with obesity, heart disease or not. The FDA widened the label in August 2036. Medicare cannot pay for a weight drug, but it can pay for dementia prevention, and within five months more than three million retirees had moved onto the new code. Many came from the cash pills they had been buying since the readout. Medicare now covers about twenty million users and spends at a rate near fifty-seven billion dollars a year. Part D plans answered with renewal rules: miss too many fills and the authorisation lapses. In The Villages, Florida, thinness became a retiree norm in one season. Only some of those retirees have a plan that also pays for the resistance class.\n\nThe second new market is smoking. In March Novo won approval for its oral semaglutide as a quit-smoking drug. The label reports that patients felt less urge to smoke, and it is the first time any incretin label has said in writing that craving goes down. Novo's 'Less Pull' advertisements followed within weeks: a smoker, a drinker and a midnight shopper, each not reaching. The four telehealth platforms under the 2034 consent orders still have to say 'balance'. The manufacturer can quote its label.\n\nThe price shock came from trade policy. India's parcel registration began in January 2035. In March Washington put tariffs of 100 and 50 percent on Chinese and Indian peptide ingredients, and Beijing restricted the intermediates in reply. Gray vials in Memphis doubled in price. The oral pill uses many times more raw peptide than the injection, and the squeeze reached it too. In July the TrumpRx starting dose rose from $149 to $179, the first increase since the channel opened, and maintenance prices climbed $30 to $50. Retatrutide went to $349. The Wegovy box still lists $1,349. Gray use fell from fifteen million to twelve. Some of those people moved to licensed pharmacies. Others simply stopped and regained across the Delta in 2035, at the fastest rate in the country.\n\nCoverage grew only with conditions attached. Thirty-five percent of employers now pay for weight drugs, up from twenty-nine, and almost every new plan requires verified fills, a scan at six months or a premium surcharge under the 2027 rule. Eleven and a half million workers are in monitored tracks. In October 2035 five states won federal approval to cover the drugs in Medicaid, but only for enrollees who log their fills through the same portals they use for work requirements and lose five percent of their weight in six months. In February a federal judge in Ohio ruled that an employer may promote the workers with the steadiest records, and the appeal is pending.\n\nBodies keep sorting by who pays. In Charlotte the boast is a biological-age printout and a muscle scan. On the Columbus freight corridor shift leads carry the monthly clinic bruise and a weigh-in date. In The Villages a thin man with a cane is on Medicare's label, and a thin man at the squat rack is on the Advantage plan that bundles coaching. Smoke breaks are shorter at warehouses that reimburse the quit plan. Sportsbooks and tobacco companies now report the same headwind on their earnings calls. Couples' therapists still hear about marriages with nothing wrong and nothing happening, and adult children now say the same about their parents. Nothing in the country looks broken. It costs more than it did.",
+    "a_day_in_the_life": "Darlene Hux wakes at five in Louisville with her phone already lit up: KY Works, CHECK-IN DUE. She photographs the pharmacy label on the Wegovy pill bottle, enters her hours from the week, 31, and taps submit. The green check comes back. She swallows the pill with exactly the right amount of water and sits on the edge of the bed for the thirty minutes before coffee.\n\nAt her first client's house she notices, again, that she is not looking for the lighter. Her Newports are in the glovebox where they have been since spring. She has not opened them or thrown them away.\n\nAt noon she drives to her mother's apartment in Shively. Mama is seventy-nine and down two dress sizes since August. The letter from her Part D plan is on the table: RENEWAL CRITERIA, with a box for days covered. Darlene counts pens in the fridge door, then counts them again.\n\nHer son Tray calls during her lunch, a gas-station hot dog she eats half of. He used to get vials off a Telegram group out of Memphis for forty dollars. Now they cost a hundred and forty, when they come at all. He is heavier than he was at Easter, and he sounds hungry and almost cheerful about it.\n\nThat evening the six-month weigh-in reminder pops up: 4.6 percent. She needs five.\n\nAt nine a commercial comes on, a woman at a bar not reaching for anything. Less Pull. Darlene watches it all the way through. She feels nothing in particular about it and turns off the lamp."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s5-L1-r07-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036)",
+          "field": "world/access/note",
+          "why": "mechanism: coverage slipped 30%→29% in 2034, and 2026 was a retreat. A six-point rise in a window of price shocks and +8% pharmacy trend is asserted with no employer-side cause. The 2027 guidance had been in force for years without producing growth."
+        },
+        {
+          "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright",
+          "field": "world/population/note",
+          "why": "magnitude: the flows do not reconcile. Outflows of 4M plus 2.5M, less 1.5M of entrants, give a net fall of 5.0M, not the stated 3.4M (15.4M→12.0M)."
+        },
+        {
+          "quote": "Oral semaglutide uses far more API per patient-month than the weekly injection, and AUD, calm, Reset and nicotine demand runs mostly on the pill, so Novo took the hardest cost hit.",
+          "field": "world/access/note",
+          "why": "mechanism: the claim that Novo's licensed oral supply depends on Chinese and Indian peptide APIs and intermediates is asserted. It also ignores the 2026 manufacturer deals that traded price cuts for tariff relief, so the price shock reaching TrumpRx is weakly justified."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 8,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 7,
+        "epistemic": 7.5,
+        "overall": 7.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 36% of adults are on an incretin, and adherence now gates Medicaid coverage (five waiver states with monthly fill verification and a 5% weight-loss target), Part D renewal and employer promotion. The Ohio ruling removes the main legal brake on adherence-linked promotion. Inequality is entrenched: the tariff closed the cheap gray route, bodies read as payer, and frail seniors face denials. The epistemic score is high because the anhedonia rate for roughly 17M low-dose users is unmeasured while Novo's 'Less Pull' ads run under label cover. There is no mass death and the harms are normalised and structural, so this sits near 7. It is not higher because the state is largely continuous with 2034, with no new catastrophic signal.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption goes 28→36 (+8.0 against +8.1). Shock_up comes through tariffs and TrumpRx price rises. Conditioning appears in the Medicaid waivers and Part D criteria. Nicotine and dementia are approved 13 months after filing, which the approval rules allow. Safety stays at no new signal, there is no next-gen launch and no market shock, and the marketed-feature layer is the 'Less Pull' campaign. mechanism: most chains are shown, such as the dementia label moving users from cash to the Medicare code and the tariff pushing up gray prices. The employer-coverage rise (claim 1) and the Novo API cost-shock story (claim 3) are asserted. 'Roughly double' gray prices sits awkwardly with the prose's $40→$140. magnitude: population figures sit inside the envelope (36, 45.5), the age and income checks work, the payer mix sums to 99.7M, and the Medicare $56.6B and dementia $19.3B figures multiply out. The gray-user flow arithmetic fails (claim 2: net −5.0M against the stated −3.4M), and 3.3M new-label users in under five months is fast.",
+        "generativity": "The Darlene Hux scene gives a clear character with specific texture: the KY Works check-in, Newports left in the glovebox, her mother's Part D renewal letter, Tray's vials rising from $40 to $140, and the 4.6% against 5% weigh-in. The prose also implies many other scenes: The Villages, Columbus warehouse smoke breaks, Memphis regains. The Ohio appeal and the election-year price politics leave room for further stories."
+      },
+      "plausibility": 6.6
+    },
+    {
+      "custom_id": "s5-L1-r07-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright",
+          "field": "world/population/note",
+          "why": "magnitude: the flows do not reconcile. Minus 4M, plus 1.5M and minus 2.5M is a net fall of 5.0M, not the stated 3.4M (15.4M to 12.0M). The 2.5M who stopped also should have enlarged the off pool, yet the off pool is stated as unchanged at 9.5%."
+        },
+        {
+          "quote": "within five months more than three million retirees had moved onto the new code.",
+          "field": "prose/body",
+          "why": "mechanism: about 3.3M prior-authorised Part D starts in under five months after an August 2036 sNDA approval is asserted with no shown onboarding chain. Plan formularies, PA queues and the 2037 premium cycle would not move this fast."
+        },
+        {
+          "quote": "Novo's 'Less Pull' advertisements followed within weeks: a smoker, a drinker and a midnight shopper, each not reaching.",
+          "field": "prose/body",
+          "why": "mechanism: network TV advertising that implies off-label compulsion benefits (shopping) under a smoking-cessation label would fall to FDA drug-advertising enforcement. The candidate gives only the FTC's inaction, so the missing FDA response is an unexplained coincidence."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 6.5,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Against 2026, the world keeps the 2034 harms and deepens them. Coverage and promotion are tied to adherence through Medicaid waiver portals, Part D continuation criteria, and the Ohio ruling that removes the main legal brake. An unmeasured anhedonia rate sits behind about 17M low-dose users, and a manufacturer campaign sells 'Less Pull' on label language. Stratification hardened after the tariff cut off the cheap gray route, and the fastest regains fall on the poorest regions. Real offsets (obesity down to ~30.5%, smoking cessation, dementia risk reduction) keep this from the 8–9 range.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Price shock is the 2035 tariffs and the TrumpRx increases. Conditioning is the 1115 waivers, Part D criteria and employer tracks. Dementia and nicotine arrive through filings with 13-month approvals that the envelope allows. There is no new safety signal, next-gen launch or market shock. mechanism: the tariff, price and gray-supply chains are well shown, but the three-million-retiree rush and the unchallenged 'Less Pull' advertising (claims 2 and 3) are asserted. magnitude: current use of 36% and ever-used of 45.5% sit inside the envelope, and the payer mix, cash breakdown, age check and Part D arithmetic all reconcile. The gray-market flow in claim 1 does not net to the stated fall, and the street-price 'roughly double' conflicts with the $40 to $140 vial.",
+        "generativity": "The Darlene Hux scene is dense with implied film: the KY Works check-in, a 4.6% weigh-in against a 5% requirement, her mother's Part D renewal letter, her son's vials that now cost $140, and Newports left in the glovebox. The world fields carry texture such as The Villages golf carts, Columbus warehouse smoke breaks and quiet clubs. Several more characters and scenes are clearly implied."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s5-L1-r07-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright after seizures or price doubling",
+          "field": "world/population/note",
+          "why": "magnitude: the flows do not reconcile. 15.4M − 4M − 2.5M + 1.5M = 10.4M, not the stated ~12M. A gap of about 1.6M is left unexplained, and the flows also exceed the 3.4M net decline."
+        },
+        {
+          "quote": "~3.3M on the August 2036 non-CVD dementia label, of whom ~2.1M switched from cash",
+          "field": "world/population/note",
+          "why": "magnitude and mechanism: 3.3M Medicare enrollees reach a prior-authorised label in under five months after an August 2036 approval, which is implausibly fast. It also drives a 65+ rate that jumps from 25% to 38%, with the speed asserted rather than shown."
+        },
+        {
+          "quote": "Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036), and nearly every new plan is conditional",
+          "field": "world/access/note",
+          "why": "mechanism: employer coverage rises six points in a period of tariff-driven price increases and pharmacy trend of +8%, against a 2026 and 2034 trend of retreat or stasis. Conditionality is offered as the cause, but no chain shows why employers expand coverage while costs climb."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6.5,
+        "epistemic": 7,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Measured against 2026, the world has coverage conditioned at every level. Medicaid waivers run through work-requirement portals, Part D sets days-covered continuation rules that already deny frail seniors, and employer tracks carry adherence-linked promotion after the Ohio ruling. It also has about 12M gray users with contaminated product and about 17M low-dose users whose anhedonia rate is unmeasured. The 'Less Pull' marketing of craving suppression, stratified bodies and untreated regain among the poor add to this. Nothing collapses, but the harm is normalised, structural and poorly measured, which puts it near the 'refuse to live in it' anchor.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable to events. These are the 2035 tariffs and TrumpRx price rises, the Medicaid waivers and Part D criteria, the dementia and nicotine labels filed and approved 13 months apart, 'Less Pull' as a marketed feature, and stratification, with no new class launched. mechanism: the tariff-to-TrumpRx pass-through and the dementia uptake are shown, but employer coverage rising during a price shock is asserted (claim 3). The prose also drifts, with 'cash pills' for an injectable tirzepatide label and 'doubled' gray vials against Tray's $40 to $140. magnitude: the on-drug 36%, ever-used 45.5%, income thirds, age check, payer mix summing to 99.7M and the $56.6B and $19.3B spending lines all fit the envelope. Weaknesses are the gray-user flows that fail to reconcile (claim 1) and the aggressive 3.3M dementia-label uptake in four months (claim 2).",
+        "generativity": "The Darlene Hux day-in-the-life shows rather than explains. It has the KY Works check-in, the 31 logged hours, the 4.6% weigh-in against the 5% requirement, the Newports left in the glovebox, her mother's Part D renewal letter, Tray's $140 vials and the 'Less Pull' commercial. Secondary scenes are implied in The Villages, the Columbus corridor, the Delta and the Sixth Circuit appeal, and the world fields carry many named places and institutions. It is dense and filmable."
+      },
+      "plausibility": 7.1
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v3",
+    "least_plausible_claims": [
+      {
+        "quote": "Employer weight coverage rose from 29% to 35% (Business Group on Health, Nov 2036)",
+        "field": "world/access/note",
+        "why": "mechanism: coverage slipped 30%→29% in 2034, and 2026 was a retreat. A six-point rise in a window of price shocks and +8% pharmacy trend is asserted with no employer-side cause. The 2027 guidance had been in force for years without producing growth."
+      },
+      {
+        "quote": "Of the 3.4M fewer gray users, ~4M converted to licensed cash or new coverage while ~1.5M new gray entrants arrived, and an estimated 2.5M gray users stopped outright",
+        "field": "world/population/note",
+        "why": "magnitude: the flows do not reconcile. Outflows of 4M plus 2.5M, less 1.5M of entrants, give a net fall of 5.0M, not the stated 3.4M (15.4M→12.0M)."
+      },
+      {
+        "quote": "Oral semaglutide uses far more API per patient-month than the weekly injection, and AUD, calm, Reset and nicotine demand runs mostly on the pill, so Novo took the hardest cost hit.",
+        "field": "world/access/note",
+        "why": "mechanism: the claim that Novo's licensed oral supply depends on Chinese and Indian peptide APIs and intermediates is asserted. It also ignores the 2026 manufacturer deals that traded price cuts for tariff relief, so the price shock reaching TrumpRx is weakly justified."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.67,
+      "inequality": 7.33,
+      "public_health": 6.17,
+      "cohesion": 6.67,
+      "epistemic": 7.17,
+      "overall": 7.07
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.03,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 36% of adults are on an incretin, and adherence now gates Medicaid coverage (five waiver states with monthly fill verification and a 5% weight-loss target), Part D renewal and employer promotion. The Ohio ruling removes the main legal brake on adherence-linked promotion. Inequality is entrenched: the tariff closed the cheap gray route, bodies read as payer, and frail seniors face denials. The epistemic score is high because the anhedonia rate for roughly 17M low-dose users is unmeasured while Novo's 'Less Pull' ads run under label cover. There is no mass death and the harms are normalised and structural, so this sits near 7. It is not higher because the state is largely continuous with 2034, with no new catastrophic signal.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. Adoption goes 28→36 (+8.0 against +8.1). Shock_up comes through tariffs and TrumpRx price rises. Conditioning appears in the Medicaid waivers and Part D criteria. Nicotine and dementia are approved 13 months after filing, which the approval rules allow. Safety stays at no new signal, there is no next-gen launch and no market shock, and the marketed-feature layer is the 'Less Pull' campaign. mechanism: most chains are shown, such as the dementia label moving users from cash to the Medicare code and the tariff pushing up gray prices. The employer-coverage rise (claim 1) and the Novo API cost-shock story (claim 3) are asserted. 'Roughly double' gray prices sits awkwardly with the prose's $40→$140. magnitude: population figures sit inside the envelope (36, 45.5), the age and income checks work, the payer mix sums to 99.7M, and the Medicare $56.6B and dementia $19.3B figures multiply out. The gray-user flow arithmetic fails (claim 2: net −5.0M against the stated −3.4M), and 3.3M new-label users in under five months is fast.",
+      "generativity": "The Darlene Hux scene gives a clear character with specific texture: the KY Works check-in, Newports left in the glovebox, her mother's Part D renewal letter, Tray's vials rising from $40 to $140, and the 4.6% against 5% weigh-in. The prose also implies many other scenes: The Villages, Columbus warehouse smoke breaks, Memphis regains. The Ohio appeal and the election-year price politics leave room for further stories."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "interior_life",
+    "axis_badness": 6.618,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 3
+  }
+}

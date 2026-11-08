@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ftrwrlds.com/glp-1000/batch_state.schema.json",
+  "title": "GLP-1000 batch bookkeeping (runs/stepN/_state_generate.json, _state_judge.json)",
+  "description": "Every Message Batch submitted for a step, so an interrupted command resumes instead of resubmitting, and so the step's spend is on record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "step", "phase", "batches"],
+  "properties": {
+    "kind": {"type": "string", "enum": ["generate", "judge"]},
+    "step": {"type": "integer", "minimum": 1, "maximum": 5},
+    "phase": {"type": "string", "enum": ["submitted", "awaiting_repair", "repair_submitted", "done"]},
+    "repair_ids": {"type": "array", "items": {"type": "string"}, "description": "custom_ids waiting for or in the repair batch"},
+    "batches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "batch_id", "submitted_at", "request_count", "model", "estimate_usd", "status", "batch_file"],
+        "properties": {
+          "role": {"type": "string", "enum": ["main", "repair"]},
+          "batch_id": {"type": "string"},
+          "submitted_at": {"type": "string"},
+          "request_count": {"type": "integer"},
+          "model": {"type": "string"},
+          "estimate_usd": {"type": "number", "description": "worst-case estimate printed before submitting"},
+          "status": {"type": "string", "enum": ["submitted", "collected"]},
+          "batch_file": {"type": "string"},
+          "collected_at": {"type": ["string", "null"]},
+          "input_tokens": {"type": ["integer", "null"]},
+          "output_tokens": {"type": ["integer", "null"]},
+          "actual_usd": {"type": ["number", "null"], "description": "from the usage the API reported, at config batch prices"},
+          "result_counts": {"type": "object", "additionalProperties": {"type": "integer"}}
+        }
+      }
+    }
+  }
+}
