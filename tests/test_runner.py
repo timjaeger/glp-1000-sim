@@ -323,3 +323,18 @@ def test_real_sdk_accepts_our_requests_and_sends_them_unchanged(repo):
     assert runner.submit(client, requests) == "msgbatch_mock"
     assert seen["url"].endswith("/v1/messages/batches")
     assert seen["body"]["requests"] == requests
+
+
+def test_missing_credentials_at_request_time_is_reported_and_leaves_no_trace(repo, monkeypatch, capsys):
+    """The SDK constructs fine without a key and raises TypeError when building the request."""
+    class NoAuthBatches(FakeBatches):
+        def create(self, requests):
+            raise TypeError('"Could not resolve authentication method. Expected one of api_key, ..."')
+    c = FakeClient(gen_responder)
+    c.messages.batches = NoAuthBatches(gen_responder)
+    monkeypatch.setattr(runner, "get_client", lambda: c)
+    assert G.main(repo, gargs()) == 1
+    out = capsys.readouterr().out
+    assert "no API credentials" in out and "Traceback" not in out
+    assert not (repo.step_runs(1) / "_batch.jsonl").exists()
+    assert not (repo.step_runs(1) / "_state_generate.json").exists()

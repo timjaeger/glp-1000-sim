@@ -84,6 +84,12 @@ def submit(client, requests: list[dict]) -> str:
         status = getattr(e, "status_code", None)
         raise ApiFailure(f"batch create failed ({type(e).__name__}{f' {status}' if status else ''}): "
                          f"{getattr(e, 'message', str(e))}") from None
+    except TypeError as e:
+        # the SDK raises TypeError while building headers when it finds no credentials
+        if "authentication" in str(e).lower():
+            raise ApiFailure("batch create failed: the anthropic client found no API credentials "
+                             "(ANTHROPIC_API_KEY is not set in this environment)") from None
+        raise
     return b.id
 
 
@@ -223,7 +229,11 @@ def guarded_submit(paths, cfg, args, client, state: dict, role: str, requests: l
               f"Nothing submitted. Re-run with --yes to submit anyway.")
         return None
     batch.write_batch_file(batch_file, requests)
-    batch_id = submit(client, requests)
+    try:
+        batch_id = submit(client, requests)
+    except ApiFailure:
+        batch_file.unlink(missing_ok=True)   # the record only holds batches that were sent
+        raise
     state["batches"].append({
         "role": role, "batch_id": batch_id, "submitted_at": now(), "request_count": len(requests),
         "model": requests[0]["params"]["model"], "estimate_usd": est["usd_max"], "status": "submitted",
