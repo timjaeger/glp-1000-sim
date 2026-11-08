@@ -115,6 +115,24 @@ def test_generation_api_schema_accepts_a_real_world_and_pins_fictional(fixture_r
     assert list(v.iter_errors({"world": baseline, "prose": fixture_run["prose"]}))  # fictional=false rejected
 
 
+def test_generation_api_schema_has_no_union_types():
+    # Unions blew the API's compiled-grammar cap (step 1 attempt 1, all 5 rejected).
+    s = batch.generation_api_schema(Paths(ROOT))
+    unions = [path for path, node in _walk(s) if not path.endswith("/properties") and "anyOf" in node]
+    assert unions == []
+    pct = s["properties"]["world"]["properties"]["population"]["properties"]["by_income_third_pct"]
+    assert pct["properties"]["top"]["type"] == "number"
+    assert batch.NULLABLE_NOTE in pct["properties"]["top"]["description"]
+
+
+def test_drop_null_unions_keeps_non_null_unions_and_descriptions():
+    node = {"description": "share", "anyOf": [{"type": "number"}, {"type": "null"}]}
+    assert batch.drop_null_unions(node) == {"type": "number",
+                                            "description": "share; " + batch.NULLABLE_NOTE}
+    two = {"anyOf": [{"type": "number"}, {"type": "string"}]}
+    assert batch.drop_null_unions(two) == two
+
+
 def test_judge_api_schema_omits_judge_model():
     s = batch.judge_api_schema(Paths(ROOT))
     assert "judge_model" not in s["properties"] and "judge_model" not in s["required"]

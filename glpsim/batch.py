@@ -66,8 +66,34 @@ def to_api_schema(node, defs: dict | None = None, where: str = "#"):
     return out
 
 
+NULLABLE_NOTE = "simulated step: always give a number (your best estimate), never null"
+
+
+def drop_null_unions(node):
+    """Collapse every `anyOf: [{type: X}, {type: null}]` to `{type: X}`.
+
+    Union-typed parameters have exponential grammar-compilation cost: with ten
+    nullable numbers the generation schema is inside the documented limits yet
+    rejected as "The compiled grammar is too large". Nulls exist in the world
+    schema for unknown baseline facts; a simulated step is fiction and can always
+    commit to a figure, so the API constraint asks for one. The repo schema,
+    which still allows null, is applied locally to every response."""
+    if isinstance(node, list):
+        return [drop_null_unions(n) for n in node]
+    if not isinstance(node, dict):
+        return node
+    out = {k: drop_null_unions(v) for k, v in node.items()}
+    branches = out.get("anyOf")
+    if isinstance(branches, list) and len(branches) == 2 and {"type": "null"} in branches:
+        (keep,) = [b for b in branches if b != {"type": "null"}]
+        rest = {k: v for k, v in out.items() if k != "anyOf"}
+        desc = "; ".join(d for d in (rest.pop("description", None), NULLABLE_NOTE) if d)
+        out = {**keep, **rest, "description": desc}
+    return out
+
+
 def generation_api_schema(paths) -> dict:
-    world = to_api_schema(schemas.schema(paths, "world_state"))
+    world = drop_null_unions(to_api_schema(schemas.schema(paths, "world_state")))
     world["properties"]["fictional"] = {"type": "boolean", "enum": [True],
                                         "description": "always true for a simulated step"}
     prose = to_api_schema(schemas.schema(paths, "run")["properties"]["prose"])
