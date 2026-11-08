@@ -80,6 +80,28 @@
         }
       }
     },
+    "error": {"type": "string", "description": "why a run has status error (API error, refusal, expiry)"},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "description": "every API call made for this run",
+      "properties": {
+        "generation": {"type": "array", "items": {"$ref": "#/$defs/call"}},
+        "judge": {"type": "array", "items": {"$ref": "#/$defs/call"}}
+      }
+    },
+    "validation": {
+      "type": "object", "additionalProperties": false,
+      "description": "local schema check of the model's output, kept so invalid runs are never silently dropped",
+      "properties": {
+        "generation": {"$ref": "#/$defs/validation_record"},
+        "judge": {"$ref": "#/$defs/validation_record"}
+      }
+    },
+    "judge_samples": {
+      "type": "array",
+      "description": "individual judge responses when judging.judge_samples > 1; `scores` holds their mean",
+      "items": {"type": "object"}
+    },
     "selection": {
       "type": "object", "additionalProperties": false,
       "properties": {
@@ -89,6 +111,35 @@
         "survived": {"type": "boolean"},
         "new_lineage": {"type": ["string", "null"]},
         "floor_used": {"type": "integer"}
+      }
+    }
+  },
+
+  "$defs": {
+    "call": {
+      "type": "object", "additionalProperties": false,
+      "required": ["role", "batch_id", "custom_id", "model", "result_type"],
+      "properties": {
+        "role": {"type": "string", "enum": ["main", "repair"]},
+        "batch_id": {"type": "string"},
+        "custom_id": {"type": "string"},
+        "model": {"type": "string", "description": "model requested (from config)"},
+        "served_model": {"type": ["string", "null"], "description": "model the API reports it ran"},
+        "result_type": {"type": "string", "description": "succeeded / errored / canceled / expired"},
+        "stop_reason": {"type": ["string", "null"]},
+        "input_tokens": {"type": ["integer", "null"]},
+        "output_tokens": {"type": ["integer", "null"]}
+      }
+    },
+    "validation_record": {
+      "type": "object", "additionalProperties": false,
+      "required": ["errors", "repair_attempted"],
+      "properties": {
+        "errors": {"type": "array", "items": {"type": "string"}, "description": "errors in the last response checked; empty if it passed"},
+        "first_errors": {"type": "array", "items": {"type": "string"}, "description": "errors in the original response, kept after a repair"},
+        "raw_output": {"type": ["string", "null"], "description": "the failing response text (null once a run is valid)"},
+        "repair_attempted": {"type": "boolean"},
+        "repaired": {"type": "boolean"}
       }
     }
   }

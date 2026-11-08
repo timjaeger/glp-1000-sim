@@ -51,6 +51,9 @@ def main(paths, args) -> int:
     check_models(cfg)
     step = args.step
     loaded = load_step_runs(paths, step)
+    if getattr(args, "resume", False) and not args.dry_run:
+        from .runner import run_judge
+        return run_judge(paths, cfg, args, step, loaded, [], [])
     runs = judgeable([r for _, r in loaded], getattr(args, "rejudge", False))
     fixture = getattr(args, "fixture", None)
     use_fixture = False
