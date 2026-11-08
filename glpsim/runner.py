@@ -205,6 +205,18 @@ def result_counts(results: dict[str, dict]) -> dict[str, int]:
 
 # ---------------------------------------------------------------- output checks
 
+def truncated(res: dict) -> bool:
+    """Cut off by max_tokens: the answer is incomplete, and a repair under the same cap
+    would be cut off too, so such a response is written invalid and never repaired."""
+    return res.get("stop_reason") == "max_tokens"
+
+
+def truncation_error(max_tokens: int | None = None) -> str:
+    cap = f"max_tokens ({max_tokens})" if max_tokens else "max_tokens"
+    return (f"(root): truncated at {cap} before the answer was complete; "
+            "not repaired (a repair would hit the same cap)")
+
+
 def parse_json(text: str | None) -> tuple[object, list[str]]:
     if not text:
         return None, ["(root): response contained no text block"]
@@ -364,6 +376,11 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
                     run.update(status="error", error=f"refusal (category {res['refusal']})")
                 elif res["type"] != "succeeded":
                     run.update(status="error", error=res["error"])
+                elif truncated(res):
+                    run["status"] = "invalid"
+                    run.setdefault("validation", {})["generation"] = {
+                        "errors": [truncation_error(cfg["generation"]["max_tokens"])],
+                        "raw_output": res["text"], "repair_attempted": False}
                 else:
                     obj, errs = parse_json(res["text"])
                     errs = errs or check_generation(paths, obj, year)
@@ -501,8 +518,8 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                     rec = run["validation"]["judge"]
                     rec["errors"] += [f"{cid}: {e}" for e in errs]
                     rec["raw_output"] = text
-                    if res["type"] == "succeeded" and not res["refusal"]:
-                        repair_ids.append(cid)      # only bad output is repaired, not API errors
+                    if res["type"] == "succeeded" and not res["refusal"] and not truncated(res):
+                        repair_ids.append(cid)      # only bad output is repaired, not API errors or cut-offs
             for rid in touched:
                 p, run = by_id[rid]
                 finish_judgement(run, judge_model, samples_n, rid)
@@ -571,6 +588,8 @@ def judge_result(paths, res: dict) -> tuple[dict | None, list[str], str | None]:
         return None, [f"refusal (category {res['refusal']})"], None
     if res["type"] != "succeeded":
         return None, [f"API {res['error']}"], None
+    if truncated(res):
+        return None, [truncation_error()], res["text"]
     obj, errs = parse_json(res["text"])
     errs = errs or check_judge(paths, obj)
     return (None, errs, res["text"]) if errs else (obj, [], None)

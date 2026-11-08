@@ -26,8 +26,8 @@ def text_result(cid, text, stop="end_turn", model="served-model"):
     return NS(custom_id=cid, result=NS(type="succeeded", message=msg))
 
 
-def tool_result(cid, obj, model="served-model"):
-    msg = NS(model=model, stop_reason="tool_use", stop_details=None,
+def tool_result(cid, obj, model="served-model", stop="tool_use"):
+    msg = NS(model=model, stop_reason=stop, stop_details=None,
              content=[NS(type="thinking", thinking=""),
                       NS(type="tool_use", id="toolu_x", name="submit_world", input=obj)],
              usage=NS(input_tokens=1000, output_tokens=2000))
@@ -101,9 +101,8 @@ def gen_responder(bid, req):
         return refusal_result(cid)
     if idx == 3:      # invalid both times
         return text_result(cid, bad_world_text())
-    if idx == 4:      # truncated by max_tokens, then a clean answer
-        return text_result(cid, json.dumps(GOOD) if n_msgs == 3 else '{"world": {"year": 20',
-                           stop="end_turn" if n_msgs == 3 else "max_tokens")
+    if idx == 4:      # malformed JSON (not a max_tokens cut-off), then a clean answer
+        return text_result(cid, json.dumps(GOOD) if n_msgs == 3 else '{"world": {"year": 20')
     return errored_result(cid)
 
 
@@ -177,7 +176,7 @@ def test_generate_submits_one_batch_validates_and_repairs_once(repo, client, cap
 
     r4 = run(repo, "s1-L0-r04")
     assert r4["status"] == "ok" and r4["validation"]["generation"]["repaired"]
-    assert "max_tokens" in r4["validation"]["generation"]["first_errors"][0]
+    assert "not valid JSON" in r4["validation"]["generation"]["first_errors"][0]
 
     r5 = run(repo, "s1-L0-r05")
     assert r5["status"] == "error" and "overloaded_error" in r5["error"]
@@ -191,6 +190,26 @@ def test_generate_submits_one_batch_validates_and_repairs_once(repo, client, cap
     checked, problems = validate_tree(repo)
     assert problems == []
     assert "runs/step1/_state_generate.json" in checked
+
+
+def test_truncated_generation_is_invalid_and_never_repaired(repo, monkeypatch):
+    def responder(bid, req):     # every call cut off mid tool call, as in step 1 attempt 3
+        cid = req["custom_id"]
+        if int(cid[-2:]) == 0:
+            return text_result(cid, json.dumps(GOOD))
+        return tool_result(cid, {}, stop="max_tokens")
+    c = FakeClient(responder)
+    monkeypatch.setattr(runner, "get_client", lambda: c)
+    monkeypatch.setattr(runner.time, "sleep", lambda s: None)
+    assert G.main(repo, gargs()) == 0
+    assert list(c.messages.batches.created) == ["msgbatch_01"]          # no repair batch
+    assert run(repo, "s1-L0-r00")["status"] == "ok"
+    r1 = run(repo, "s1-L0-r01")
+    v = r1["validation"]["generation"]
+    assert r1["status"] == "invalid" and "world" not in r1 and v["repair_attempted"] is False
+    assert "truncated at max_tokens" in v["errors"][0]
+    assert load_json(repo.step_runs(1) / "_state_generate.json")["phase"] == "done"
+    assert validate_tree(repo)[1] == []
 
 
 def test_cost_guardrail_aborts_before_submitting(repo, client, capsys):
