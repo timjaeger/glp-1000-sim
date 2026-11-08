@@ -82,6 +82,39 @@
         "stop_reason": "end_turn",
         "input_tokens": 21698,
         "output_tokens": 6636
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_013U8f8u1mXn3Nji6nGTmSfH",
+        "custom_id": "s1-L0-r00-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21698,
+        "output_tokens": 8122
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_013U8f8u1mXn3Nji6nGTmSfH",
+        "custom_id": "s1-L0-r00-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21698,
+        "output_tokens": 9679
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_013U8f8u1mXn3Nji6nGTmSfH",
+        "custom_id": "s1-L0-r00-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21698,
+        "output_tokens": 6289
       }
     ]
   },
@@ -96,11 +129,8 @@
       "repaired": true
     },
     "judge": {
-      "errors": [
-        "s1-L0-r00-j0: (root): truncated at max_tokens before the answer was complete; not repaired (a repair would hit the same cap)"
-      ],
-      "repair_attempted": false,
-      "raw_output": "{\"least_plausible_claims\":[{\"quote\":\"The Army runs a pilot accepting recruits on generic semaglutide who meet body-composition standards, with a taper requirement before basic training.\",\"field\":\"world/state/workforce_or_military\",\"why\":\"mechanism: The parent world has no military role for these drugs. No policy shift, event or rationale is given for the Army to admit recruits who are on an incretin.\"},{\"quote\":\"The jump at 65+ (9→18) comes from Medicare coverage becoming permanent\",\"field\":\"world/population/note\",\"why\":\"mechanism: The Bridge pilot has covered obesity for beneficiaries since Jul 2026, so making it permanent in Jan 2028 adds little eligibility. It does not explain doubling use at 65+ in two years.\"},{\"quote\":\"Millions save twenty or thirty dollars by buying imported pens through social-media sellers, outside the serialised pharmacy supply.\",\"field\":\"prose/paragraph_3\",\"why\":\"mechanism: Domestic generics cost $45–69 with $0 copays for public enrollees, and the prose's own import offer is $40. The saving is a few dollars, which does not explain millions taking the counterfeit risk.\"}],\"badness\":{\"flourishing\":5,\"autonomy\":5,\"inequality\":6,\"public_health\":5,\"cohesion\":6,\"epistemic\":6,\"overall\":5.5},\"plausibility_axes\":{\"driver_fidelity\":9,\"mechanism\":6,\"magnitude\":7},\"generativity\":8,\"rationale\":{\"badness\":\"The world is a recognisably harder society. Self-reported reward blunting runs 8–15% across ~56M users and is marketed as 'the quiet'. NAION cases reach the thousands, counterfeit pens kill, and 'generic-thin' sarcopenia hits poorer and older users. Bodies now signal class through muscle and coaching, and Medicaid work requirements make the free drug conditional on employment (population/note, body_and_culture). Benefits are real, including cheap access and alcohol reduction, and nothing is catastrophic, so I stop at about 5.5. The epistemic score is higher because no RCT measures blunting and regulators have not decided what it is.\",\"plausibility\":\"driver_fidelity: Every driver is visibly realised and traceable to an event. The generic settlement, ASAM AUD guideline plus 'Quiet' wellness brands, NAION class label, counterfeit insulin pens, subsidy/public expansion, class-stratified culture and the MariTide filing (honouring monthly_or_implant) are all present. I found nothing contradicting a driver. mechanism: Many changes have chains, such as the settlement leading to $45 generics, then Medicaid and HRSA coverage, then volume. Several are asserted: the Army pilot, the attribution of the 65+ jump to permanence, the small-saving counterfeit market, the dating-app tags and the 'persistence improved' claim. magnitude: Population, approvals and generic timing sit inside the envelope. Public user counts, payer mix, Medicare and Medicaid spending, and the cycling arithmetic all multiply out. Small gaps remain. The ~65% FMAP is used alongside an 'enhanced match'. The bottom-third '29% never used' figure is hard to square with a 17% current rate. The survodutide filing appears only in the pipeline note and not in the events. Persistence implied by 27 ever versus 21.3 current is very high.\",\"generativity\":\"The Renee Holloway day is concrete and shows rather than explains. It has a Kroger generic, Ohio Medicaid, a pen scan, an eye-roll text about Indian pens, a back strain lifting a client, two-for-five shakes and a vision-loss leaflet"
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -346,22 +376,63 @@
   },
   "judge_samples": [
     {
-      "custom_id": "s1-L0-r00-j1",
+      "custom_id": "s1-L0-r00-j0",
       "least_plausible_claims": [
         {
-          "quote": "The Army runs a pilot accepting recruits on generic semaglutide who meet body-composition standards, with a taper requirement before basic training.",
-          "field": "world/state/workforce_or_military",
-          "why": "Mechanism: the parent says 'None' for workforce or military, and no driver or event leads to a military accession-policy reversal. It is asserted with no causal chain."
+          "quote": "Novo sNDA filed Feb 2028, decision 2029",
+          "field": "world/drugs/indications_beyond_weight_and_diabetes",
+          "why": "mechanism: The parent has only a small phase 2 or RCT signal in AUD, and no phase 3 could read out by Feb 2028. A filing on that evidence is asserted with no trial chain shown."
         },
         {
-          "quote": "Children: about 1% of under-18s (~0.7M), about 5% of children with obesity",
+          "quote": "That fits the parent's 36–47% within-year restart rate applied to the minority of stoppers who restart.",
           "field": "world/population/note",
-          "why": "Magnitude and mechanism: the parent had ~0.6% of children with obesity prescribed, so this is roughly an 8x rise in two years. The only mechanism offered is Medicaid generic coverage for ages 12+, which is a thin chain for that jump."
+          "why": "magnitude: The candidate's own figures give 7.5 pts of restarters against 5.7 pts still off, so 7.5/13.2 ≈ 57% of stoppers restarted. That is a majority, above the parent's 36–47% range, and the reconciliation claim is false."
         },
         {
           "quote": "The jump at 65+ (9→18) comes from Medicare coverage becoming permanent",
           "field": "world/population/note",
-          "why": "Mechanism and magnitude: the pilot ran from Jul 2026 and permanence only arrived in Jan 2028, so most of the doubling predates it. The ~11.0M Medicare users also equals essentially all ~11M implied 65+ users, which leaves no room for commercial, cash or VA users in that age band."
+          "why": "mechanism: The Bridge pilot already covered obesity from Jul 2026, so making it permanent in Jan 2028 adds little new eligibility. Doubling use at 65+ is asserted, and 11.0M Medicare users equals almost all 65+ users."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Roughly a fifth of adults are on drugs with real benefits, but the ledger shows costs: sarcopenic 'generic-thin' older users, reward blunting in an estimated 8–15% of users, thousands of NAION cases a year, and 11 counterfeit deaths. Inequality is the sharpest harm. Muscle, coaching and branded drugs sort bodies by class, and Medicaid work requirements can remove the $0 drug. Autonomy is eroded by body-signalling pressure and conditioned coverage, and the epistemic picture is muddy: 'the quiet' is sold as feature, side effect and treatment at once, with no RCT measuring it. It is a harder society with new losers but not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to events and fields. The 21.3% adoption figure, the Sept 2027 settlement, the NAION class label, 'the quiet' as a marketed feature, and the MariTide filing as the allowed form of the monthly launch all appear. Nothing contradicts a driver. mechanism: Most chains are shown, such as the generic price enabling employer step therapy, counterfeits following import demand, and the AUD guideline leading to wellness marketing. Three things are asserted: the AUD sNDA with no phase 3 (claim 1), the 65+ jump attributed to permanence (claim 3), and a generic settlement years before the 2031–32 exclusivity. magnitude: Adoption 21.3% and ever-used 27% sit inside the envelope, the income and age checks work, and the payer mix sums to 56.4M. The Medicare arithmetic ($18.5B) and Medicaid arithmetic ($8.7B) multiply out, and the approval timings (retatrutide 15 months after filing, survodutide still pending) obey the rules. Remaining flaws are the false 'minority of stoppers' restart reconciliation (claim 2), Medicare users equalling all 65+ users, and an 'enhanced' match alongside ~65% FMAP.",
+        "generativity": "The prose has a fully drawn protagonist, Renee, a Medicaid-covered home aide in Dayton, with scenes at the pharmacy, the client's home, the sister's text about imported pens, and the leaflet at night. The world is full of implied film material: Brooklyn 'off-week' parties, dating-app tags, trading desks, an Army taper pilot, and couples therapy over on/off partners. Daily life has texture, and the story shows rather than explains."
+      },
+      "plausibility": 7.25
+    },
+    {
+      "custom_id": "s1-L0-r00-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The jump at 65+ (9→18) comes from Medicare coverage becoming permanent",
+          "field": "world/population/note",
+          "why": "Mechanism: the Bridge pilot already covered obesity drugs for beneficiaries from Jul 2026, so statutory permanence in Jan 2028 adds no new access. Doubling use at 65+ is attributed to a cause that barely changes anything."
+        },
+        {
+          "quote": "Roughly 29% of bottom-third adults with obesity have never used a drug",
+          "field": "world/population/note",
+          "why": "Magnitude: with bottom-third current use at 17% and national ever-use at 27%, bottom-third ever-use is roughly 21–22% of adults. That cannot give 71% ever-use among the obese subgroup, so the figure does not reconcile with the stated income-third numbers."
+        },
+        {
+          "quote": "The Army runs a pilot accepting recruits on generic semaglutide who meet body-composition standards, with a taper requirement before basic training.",
+          "field": "world/state/workforce_or_military",
+          "why": "Mechanism: the parent world has no military policy. This reverses the current stance on chronic medication for recruits within a year of generic entry and gives no causal chain for the change."
         }
       ],
       "badness": {
@@ -376,56 +447,103 @@
       "plausibility_axes": {
         "driver_fidelity": 9,
         "mechanism": 6,
-        "magnitude": 7
+        "magnitude": 6
       },
       "generativity": 8,
       "rationale": {
-        "badness": "Cheap generics widen access and persistence, but the world carries real costs: 'generic-thin' sarcopenia in Medicaid and Medicare users, 11 counterfeit deaths, NAION cases in the thousands, and 8–15% self-reported reward blunting that no RCT has measured. Inequality moves from who gets the drug to bodies read as income, plus Medicaid work-requirement disenrolment (body_and_culture, population note). Cohesion and epistemic harms are the larger stories: couples out of step, 'the quiet' sold as a feature while clinicians call it a side effect, and no regulator deciding what it is. It is a harder society with new losers, not a refusal-level one.",
-        "plausibility": "driver_fidelity: every driver is traceable to a field and an event. These include the Sept 2027 settlement, the Jun 2027 NAION label, the ASAM guideline and 'Quiet' brands, the Jan 2028 coverage and HRSA subsidy, the counterfeit insulin pens, and the MariTide filing, which respects the approval rules. mechanism: most chains are shown, but the Army pilot, the 5% pediatric jump and the attribution of the 65+ doubling to permanence are asserted (claims 1–3). 'Persistence improved because price stopped being the usual reason to quit' is also asserted, and event 2028-05 oddly contains an October filing. magnitude: adults on drug (21.3), ever used (27), income thirds (mean 21.3), age bands (~21.2), payer mix (21.4M public), and the Medicare ($18.5B) and Medicaid ($8.7B) arithmetic all reconcile and sit inside the envelope. Approval timing is allowed. Minor gaps remain: Medicare users equal all 65+ users, and the cycling note calls restarters 'the minority of stoppers' when 7.5 of ~13.2 stoppers is ~57%.",
-        "generativity": "The Renee Holloway day is concrete: a 5:10 alarm, a Kroger generic on Ohio Medicaid, the pen scan with a green check, and Mr. Albrecht on the triple with a Tuesday trainer. Other scenes include the $40 Indian pens text from her sister, the back strain lifting Mrs. Pruitt, Marcus's nursed beer, and the leaflet read with one eye covered. The world fields add Brooklyn 'off-week' parties, dating-app tags, trading-desk coaches and stand-up about 'the quiet'. Implied characters and scenes are plentiful and the prose shows rather than explains."
+        "badness": "Obesity and alcohol use likely fall, but the world adds NAION cases (thousands a year), 11 counterfeit deaths, 'generic-thin' sarcopenia in older low-income users, and self-reported blunting in 8–15% of users with no RCT measurement. Inequality shifts from access to quality (coaching, branded drug, Medicaid work-requirement losses), and body_and_culture severity 5 plus marketed 'quiet' strain couples and intimacy. It is a recognisably harder society with new losers, but not structurally dire: public coverage is broad and the harms are partly measured and labelled.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable to dated events: the NAION label (2027-06), the settlement-driven generic (2027-09), the ASAM guideline and wellness telehealth (2027-11), permanent coverage and $0 copays (2028-01), counterfeit pens (2028-04), and the MariTide filing under the approval rules. The October MariTide filing sits under a May-dated event, which is a minor flaw. mechanism: Most changes have chains (settlement to price to Medicaid and cash uptake; counterfeits to import alert). Claim 1 (65+ doubling from permanence, despite the pilot already covering them), claim 3 (Army pilot) and the unexplained 'persistence improved' are asserted rather than shown. magnitude: Headline figures sit inside the envelope (21.3 on drug, 27 ever used), and the payer mix, the Medicare and Medicaid arithmetic and the cycling arithmetic reconcile. Claim 2 (29% never used) contradicts the income-third figures. Medicare's 11.0M equals all 65+ users, which ignores under-65 Medicare and non-Medicare 65+ users, and the ever-used figure is near the top of its range.",
+        "generativity": "The world and prose offer many scenes: 'off-week' parties in Brooklyn, dating-app tags, couples therapy over mismatched on/off partners, strength-coach and DEXA culture, and tasting-plate Thanksgivings. The day-in-the-life with Renee shows rather than explains: the pen-box scan, the sister's $40 Indian-pens text, 'remember Darnell's cousin', the back strain lifting a client, the vision leaflet, and Marcus and her talking less. It has strong class texture and implied characters (Mr. Albrecht, Mrs. Pruitt, Marcus), with a few spots that explain rather than show."
       },
-      "plausibility": 7.1
+      "plausibility": 6.6
     },
     {
       "custom_id": "s1-L0-r00-j2",
       "least_plausible_claims": [
         {
-          "quote": "Persistence improved because price stopped being the usual reason to quit.",
-          "field": "world/population/note",
-          "why": "Mechanism and magnitude: the world's own ledger says GI effects are the leading cause of discontinuation, yet persistence is asserted to have jumped. The figures imply about 79% of ever-users (21.3/27) are still on the drug, against roughly a third at one year in 2026, and no chain is shown for that."
-        },
-        {
           "quote": "The jump at 65+ (9→18) comes from Medicare coverage becoming permanent",
           "field": "world/population/note",
-          "why": "Mechanism: the Bridge pilot already covered obesity from Jul 2026, so making it permanent in Jan 2028 adds little new eligibility. Doubling use at 65+ is attributed to a legal-status change with no access change, and the 50–64 jump is credited to Medicaid even though most adults of that age are commercially insured or uninsured."
+          "why": "Mechanism: the Bridge pilot already covered obesity for Medicare beneficiaries from Jul 2026. Making it permanent in Jan 2028 changes little about eligibility, so it cannot explain a doubling that mostly had to occur during the pilot."
         },
         {
-          "quote": "a soft, slightly hollowed 'generic-thin' reads as public coverage",
-          "field": "world/body_and_culture/what_the_body_signals",
-          "why": "Mechanism: a stable, legible class signal tied to generic versus branded drug is asserted within about 11 months of generic launch. Lean-mass loss depends on exercise and protein rather than on the generic label, so the generic/brand split is the weak link in the chain."
+          "quote": "\"us_adults_ever_used_pct\": 27",
+          "field": "world/population/us_adults_ever_used_pct",
+          "why": "Magnitude: with 21.3% currently on, nearly 79% of ever-users are still on the drug. The parent has only about a third of starters persisting at one year, and 'persistence improved because price stopped being the usual reason to quit' is asserted rather than shown. The cycling arithmetic is also muddled."
+        },
+        {
+          "quote": "about 1% of under-18s (~0.7M), about 5% of children with obesity",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the parent has about 0.6% of children with obesity prescribed. An eightfold rise in two years, with ~0.7M children on drug when approval is only for ages 12+, is asserted with no driver or event behind it."
         }
       ],
       "badness": {
-        "flourishing": 4.5,
+        "flourishing": 5,
         "autonomy": 5,
-        "inequality": 5.5,
-        "public_health": 4.5,
+        "inequality": 6.5,
+        "public_health": 5,
         "cohesion": 6,
-        "epistemic": 6,
+        "epistemic": 5.5,
         "overall": 5.5
       },
       "plausibility_axes": {
         "driver_fidelity": 9,
-        "mechanism": 6,
-        "magnitude": 7
+        "mechanism": 6.5,
+        "magnitude": 6.5
       },
       "generativity": 8,
       "rationale": {
-        "badness": "Most people gain cheap access and obesity falls, so the median outcome is mixed rather than dire. The costs are real: self-reported blunting in 8–15% of ~56M users, a sarcopenic 'generic-thin' pattern, thousands of NAION cases a year, 11 counterfeit-linked deaths, and Medicaid work requirements that can strip the $0 drug. Cohesion and epistemic scores are highest because appetite is being pathologised, couples are mismatched, and 'the quiet' is marketed in a way that sits outside regulator reach with no RCT measuring it.",
-        "plausibility": "driver_fidelity: every driver is realised and traceable. Examples are the NAION class label (Jun 2027), the Sept 2027 settlement behind generic semaglutide, the ASAM AUD guideline and low-dose longevity use, the MariTide filing as an allowed realisation of the monthly driver, and the insulin-pen counterfeits. Nothing contradicts a driver. mechanism: the generic, label and counterfeit chains are shown, but several shifts are only asserted (claims 1–3). These are the persistence jump, the 65+ doubling from permanence alone, and the generic/brand muscle split reading as a class signal. magnitude: on-drug 21.3% and ever-used 27% sit inside the envelope, and the age, income, payer-mix, Medicare ($18.5B) and Medicaid ($8.7B) arithmetic all reconcile, as do the retatrutide, CagriSema and survodutide timings. One gap remains: the cycling note says it fits the 36–47% restart rate, but the implied restart share among stoppers is about 57%. The survodutide and retatrutide filings are also missing from the events list.",
-        "generativity": "The prose shows a full day: Renee's 5:10 injection, the Kroger generic, Medicaid, scanning the pen box, Mr. Albrecht's arms, the Indian-pen text, the back strain and store-brand shakes, Marcus's nursed beer, and the vision leaflet. Many scenes are implied, including 'off-week' parties, dating-app tags, couples therapy and trading-desk teams. Daily life has texture and the culture fields supply plenty of material."
+        "badness": "About 56M users are on cheap drugs. Self-reported reduced pleasure or motivation is 8–15% of users and unmeasured by any RCT (interior_life, safety_ledger). Bodies now signal class precisely ('generic-thin' vs coached muscle), and Medicaid work requirements can cost people their $0 drug. NAION adds thousands of cases a year and counterfeit pens killed 11 people. Even so, most users get cheap, effective drugs, so this is a harder society with new losers (roughly 5 on the anchors) rather than a structural catastrophe.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to events. These include the settlement behind generic_collapse, the NAION class warning, ASAM/AUD and 'Quiet' wellness, the Jan 2028 permanence and $0 copay, the insulin-pen counterfeit alert, and MariTide honoured as a filing only. mechanism: most chains are shown (settlement to price to coverage; counterfeits via importation). Weak points are the asserted 65+ jump and the claimed 'persistence improved' (claims 1 and 2), the unexplained pediatric surge (claim 3), and peripheral items like the Army pilot and dating-app tags. magnitude: on-drug 21.3% and ever-used 27% sit inside the envelope, and approvals obey the timing rules (retatrutide filed Feb 2027, approved May 2028; survodutide not yet approved). Payer mix (21.4M public = 38%), age bands, income thirds and the Medicare/Medicaid spending arithmetic all reconcile. Minus points are the ever/current ratio against one-third persistence, the pediatric jump, and the Medicare users equalling all 65+ users.",
+        "generativity": "The prose ends on a strong day in the life of Renee Holloway, a Medicaid home aide who scans her pen box, lifts patients and feels her back, buys shakes, and eats half a banana. Mr. Albrecht, Marcus and her sister's Indian-pen link imply further characters and scenes. The world fields add concrete texture: off-week parties, dating-app tags, stand-up about 'the quiet'. A little of the economy material is still summary."
       },
-      "plausibility": 7.1
+      "plausibility": 7.0
     }
-  ]
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Novo sNDA filed Feb 2028, decision 2029",
+        "field": "world/drugs/indications_beyond_weight_and_diabetes",
+        "why": "mechanism: The parent has only a small phase 2 or RCT signal in AUD, and no phase 3 could read out by Feb 2028. A filing on that evidence is asserted with no trial chain shown."
+      },
+      {
+        "quote": "That fits the parent's 36–47% within-year restart rate applied to the minority of stoppers who restart.",
+        "field": "world/population/note",
+        "why": "magnitude: The candidate's own figures give 7.5 pts of restarters against 5.7 pts still off, so 7.5/13.2 ≈ 57% of stoppers restarted. That is a majority, above the parent's 36–47% range, and the reconciliation claim is false."
+      },
+      {
+        "quote": "The jump at 65+ (9→18) comes from Medicare coverage becoming permanent",
+        "field": "world/population/note",
+        "why": "mechanism: The Bridge pilot already covered obesity from Jul 2026, so making it permanent in Jan 2028 adds little new eligibility. Doubling use at 65+ is asserted, and 11.0M Medicare users equals almost all 65+ users."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.17,
+      "inequality": 6.33,
+      "public_health": 5.0,
+      "cohesion": 6.0,
+      "epistemic": 5.83,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.33,
+      "magnitude": 6.5
+    },
+    "plausibility": 6.95,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Roughly a fifth of adults are on drugs with real benefits, but the ledger shows costs: sarcopenic 'generic-thin' older users, reward blunting in an estimated 8–15% of users, thousands of NAION cases a year, and 11 counterfeit deaths. Inequality is the sharpest harm. Muscle, coaching and branded drugs sort bodies by class, and Medicaid work requirements can remove the $0 drug. Autonomy is eroded by body-signalling pressure and conditioned coverage, and the epistemic picture is muddy: 'the quiet' is sold as feature, side effect and treatment at once, with no RCT measuring it. It is a harder society with new losers but not a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is realised and traceable to events and fields. The 21.3% adoption figure, the Sept 2027 settlement, the NAION class label, 'the quiet' as a marketed feature, and the MariTide filing as the allowed form of the monthly launch all appear. Nothing contradicts a driver. mechanism: Most chains are shown, such as the generic price enabling employer step therapy, counterfeits following import demand, and the AUD guideline leading to wellness marketing. Three things are asserted: the AUD sNDA with no phase 3 (claim 1), the 65+ jump attributed to permanence (claim 3), and a generic settlement years before the 2031–32 exclusivity. magnitude: Adoption 21.3% and ever-used 27% sit inside the envelope, the income and age checks work, and the payer mix sums to 56.4M. The Medicare arithmetic ($18.5B) and Medicaid arithmetic ($8.7B) multiply out, and the approval timings (retatrutide 15 months after filing, survodutide still pending) obey the rules. Remaining flaws are the false 'minority of stoppers' restart reconciliation (claim 2), Medicare users equalling all 65+ users, and an 'enhanced' match alongside ~65% FMAP.",
+      "generativity": "The prose has a fully drawn protagonist, Renee, a Medicaid-covered home aide in Dayton, with scenes at the pharmacy, the client's home, the sister's text about imported pens, and the leaflet at night. The world is full of implied film material: Brooklyn 'off-week' parties, dating-app tags, trading desks, an Army taper pilot, and couples therapy over on/off partners. Daily life has texture, and the story shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  }
 }
