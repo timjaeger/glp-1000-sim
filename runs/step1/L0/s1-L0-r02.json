@@ -21,7 +21,279 @@
     "state_action": "restriction",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:05:56Z"
+  "created_at": "2026-11-08T06:05:56Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01QSgyWUmDBcGK8Ciohvptwm",
+        "custom_id": "s1-L0-r02",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 13516,
+        "output_tokens": 21226
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01A8MB3dm8JczQR2ExJPLmUX",
+        "custom_id": "s1-L0-r02",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 24457,
+        "output_tokens": 10258
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2028,\"fictional\":true,\"population\":{\"us_adults_on_drug_pct\":19.2,\"us_adults_ever_used_pct\":25.5,\"by_income_third_pct\":{\"top\":22,\"middle\":19.6,\"bottom\":16},\"by_age_band_pct\":{\"18_29\":9,\"30_49\":18.5,\"50_64\":29,\"65_plus\":19},\"pediatric_under_18_on_drug_pct\":0.8,\"cycled_off_and_on_pct\":32,\"note…"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2028,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 19.2,
+      "us_adults_ever_used_pct": 25.5,
+      "by_income_third_pct": {
+        "top": 22,
+        "middle": 19.6,
+        "bottom": 16
+      },
+      "by_age_band_pct": {
+        "18_29": 9,
+        "30_49": 18.5,
+        "50_64": 29,
+        "65_plus": 19
+      },
+      "pediatric_under_18_on_drug_pct": 0.8,
+      "cycled_off_and_on_pct": 32,
+      "note": "FICTIONAL estimates. ~265M US adults, so 19.2% is ~50.9M current users and 25.5% is ~67.6M ever-users. Cycling arithmetic: ever 25.5 − current 19.2 = 6.3 pts of adults are off the drug now. About 7.0 pts of current users are restarters, and about 1.1 pts of those now off had restarted before stopping again, so (7.0 + 1.1) / 25.5 ≈ 32% of ever-users have cycled. That fits the parent's 36–47% within-year restart rate applied to roughly two-thirds of starters who stop, plus later restarts. Ever-use rises only 10.5 pts while current use rises 8.2 because one-year persistence improves from ~35% to ~45–50%. The causes are $50 Medicare copays, daily pills with fewer GI-driven drop-outs, and managed-decline cash prices. The 65+ band more than doubles (9→19%) because Medicare coverage widens. The 50–64 band (29%) is still the peak. Age-weighted check: 0.20×9 + 0.33×18.5 + 0.24×29 + 0.23×19 ≈ 19.2. Income: the gap narrows but does not close. Public coverage lifts the bottom third, but 18 states (including Texas and Florida) do not cover obesity under Medicaid, and the bottom third leads the 3.5M gray-market users. Off-drug populations: ~16.7M adults off now (6.3 pts), of whom ~60% say cost or coverage loss was the reason. Under-18: ~0.8% of all minors (~580k), mostly adolescents 12–17 with obesity. Growth slowed in the 14 states with new age floors. Children of upper-income households are still about 1.5× as likely to be prescribed."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 299,
+      "public_coverage": "Medicare is now the largest single payer. The GLP-1 Bridge pilot ended on schedule in Dec 2027. From Jan 2028 its population was folded into the CMS Part D obesity model, with eligibility widened to BMI ≥30, or ≥27 with one comorbidity. The negotiated price stepped down from $245 to $215/month and the beneficiary copay stays ~$50. Medicaid: 32 states + DC cover obesity at the same $215 rate. Public programmes pay for ~18.5M users (36% of 50.9M): Medicare ~12.0M, Medicaid ~6.5M. Annualised federal cost at end-2028: Medicare 12.0M × ($215 − $50) × 12 ≈ $23.8B; Medicaid 6.5M × $215 × 12 ≈ $16.8B gross, × ~70% federal share ≈ $11.7B. Total federal ≈ $35.5B/yr, roughly the parent CBO 9-year figure every year. CBO's 2028 re-estimate is a live political document.",
+      "employer_coverage_pct": 48,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 50+ generic semaglutide brands, still ~$8–48/month. Canada: generics fell to ~CAD 60–90/month. Brazil and China (patent expiry 2026) have generics; Chinese firms supply most generic API worldwide. Generic injectable semaglutide is legally available in ~160 countries. Oral generics are emerging in India. US brand exclusivity runs to ~2031–32 and is unchanged.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Payer split of ~50.9M US users (FICTIONAL): Medicare 12.0M; Medicaid 6.5M; employer/commercial 14.5M (~10% of commercially insured adults); brand cash via TrumpRx and manufacturer direct 14.4M; gray/import 3.5M. Total 50.9M. Brand cash prices: oral starting doses $149; oral 50 mg semaglutide maintenance $249; top-dose tirzepatide via direct channel $299. List prices are nominal; nobody pays them. Gray market: the FDA finalised the 503B exclusion in Mar 2027 and displaced compounding patients split between brand cash and imports. Indian and Chinese-sourced vials and pens arrive by mail and social-media sellers at $30–90/month. 'Research-grade' retatrutide (unapproved) circulates at $80–150. Employer coverage fell 60→48%. Employers cite Medicare absorbing older workers and pills cutting the 'needle-justified' clinical case. Route: pills are ~60% of new starts and ~45% of users; weekly injectables still dominate among long-term and tirzepatide users."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg and, from Jul 2027, 50 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 + amylin combination, weekly injectable (CagriSema, approved Dec 2026)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 21,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "smoking cessation adjunct (oral semaglutide) — sNDA filed Jun 2028 under priority review, FDA decision expected Q1 2029; not yet approved"
+      ],
+      "mainstream_offlabel_uses": [
+        "'quiet mind' / food-noise / focus use of low-dose oral semaglutide and orforglipron, sold by telehealth brands until the Apr 2028 promotion restrictions; prescribing continues off-label without advertising",
+        "smoking and vaping cessation, widely prescribed off-label ahead of the pending sNDA",
+        "alcohol reduction (RCT-supported, unapproved)",
+        "microdosing by people without obesity, now mostly via gray-market vials",
+        "adolescent use is restricted in 14 states; under-12 use is banned in 9 of them"
+      ],
+      "pipeline_note": "Oral parity was realised through an existing product in a new form. Oral semaglutide 50 mg (approved Jul 2027) gives ~15–16% mean loss, matching weekly injectable semaglutide 2.4 mg. It does not match tirzepatide (~21%), which stays the efficacy ceiling on market. For the majority taking semaglutide-class drugs, the needle barrier is gone. CagriSema was approved Dec 2026 (~20%) and has modest uptake after failing non-inferiority to tirzepatide. Retatrutide BLA filed Feb 2027 (28–30%); its review was extended over the dysesthesia signal and it is pending, with an advisory committee scheduled Feb 2029. Not on market. Survodutide filed Oct 2027 with a decision due late 2028–29; not approved by year-end. Amycretin and MariTide are still in phase 3 and not on the US market. Mood and motivation was realised as off-label telehealth marketing, not an approved indication. Lilly is running a phase 2/3 programme of orforglipron in compulsive overeating and AUD. Nicotine was realised as the Jun 2028 oral semaglutide sNDA (phase 3: 24-week continuous abstinence ~27% vs ~16% placebo). Global incretin market ~$115B in 2028: unit volume up sharply, US net price per month down ~15–25%."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common effect and leading cause of discontinuation. Slightly lower drop-out with daily oral titration.",
+        "regulatory_response": "Labelled; severe-gastroparesis caution unchanged."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Absolute risk low. Larger 2027 real-world cohorts are still inconclusive on causality.",
+        "regulatory_response": "Labelled; mass-tort litigation ongoing, no settlement."
+      },
+      {
+        "effect": "Lean mass (muscle) loss",
+        "status": "established",
+        "prevalence_note": "~25–40% of lost weight is lean mass. Concern has grown with the Medicare 65+ population doubling on drug; geriatricians report frailty concerns but no new quantified signal.",
+        "regulatory_response": "None on label. The Medicare model recommends, but does not require, resistance-training and protein counselling."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; no resolution.",
+        "regulatory_response": "EMA 'very rare' label; no US class label."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new evidence.",
+        "regulatory_response": "Warning removal (Jan 2026) stands."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "In 2027 patient surveys, 2–5% of users report a meaningful loss of enjoyment or motivation. Clinic-confirmed rates are lower. Usually reverses with dose reduction or stopping. No RCT designed to measure it.",
+        "regulatory_response": "Mar 2028 class label update lists 'apathy, anhedonia' under postmarketing reports, frequency not established. Classed as uncommon; no boxed warning."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Real-world data converge on partial regain of roughly half to two-thirds within a year for full stoppers. Cyclers show stepwise regain-and-reloss. No new harm signal.",
+        "regulatory_response": "None; Medicare model treats obesity as chronic therapy."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Signal persists in observational data; no new findings.",
+        "regulatory_response": "None; dietitian referral encouraged."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; adolescents on decades-long therapy; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About six years of RCT follow-up now exists, with no new signal. Cycling and adolescent data are still thin, which state legislators cite.",
+        "regulatory_response": "Postmarketing requirements continue; state age-floor laws cite the absence of data."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "No new pharmacological signal; the harm comes from product quality. Oct 2027 CDC health alert: ~90 hospitalisations and 5 deaths across 9 states tied to contaminated imported vials and 'research' retatrutide. Poison-centre GLP-1 dosing-error calls roughly tripled vs 2025.",
+        "regulatory_response": "503B exclusion finalised (Mar 2027); CBP seizure campaign; FDA import alert on unapproved semaglutide; platform takedown agreements. Personal importation still largely unenforced."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households are ~31% of US households. Packaged snack and confectionery volume is down ~3–5% cumulatively vs 2026 and sugary drinks ~4%, partly offset by price/mix. Protein, fibre and 'half-portion' SKUs are standard across major CPG. Divestitures of legacy snack brands continue. Grocers report the oral launch widened the effect into middle-income baskets.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "US spirits and beer volumes keep falling (spirits ~−4%/yr). Heavy-drinker attrition is visible in on-premise data. Brown-Forman and Diageo cut US headcount. Low-ABV and occasion-premium bottles are the only growth. Off-label smoking-cessation use is compounding the loss of bar 'drink-and-smoke' occasions.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic roughly flat. Smaller-plate and 'lighter portion' menus standard at casual-dining chains. Average check is held up by premium items. QSR value menus are hurt more than fine dining. Buffet and all-you-can-eat formats are closing in the Sun Belt.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep closing stores. A small revival of indie plus brands is tied to the fat-liberation counter-movement. Mainstream retailers see a three-year re-sizing cycle tapering off.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training for on-drug and Medicare-age users is the growth segment. Medicare model counselling referrals feed physical-therapy-style 'muscle clinics'. Big-box gyms add GLP-1 cohort programmes.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage at 48%. Covering employers use carve-out vendors with coaching requirements and BMI ≥35 thresholds. Some insurers set the Medicare $215 as the reference price. Pharmacy trend moderated to ~+8% as unit prices fell. Gray-market adverse events have become a claims cost.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "The Novo–Lilly duopoly persists: Lilly leads on tirzepatide and orforglipron, Novo has recovered share with the 50 mg pill. US volume is up ~75% vs 2026 while net monthly price is down ~20%. Indian and Chinese generic makers dominate ex-US volume and are the upstream of the US gray market.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "With nearly one in five adults on a drug, a thin body signals little. Muscle, and the claim of being unmedicated, are the new signals. 'Are you on it?' is an ordinary question at dinners in the Sun Belt suburbs.",
+      "thinness_and_class": "Thinness got cheaper for retirees and Medicaid enrollees in covering states. Upper-income circles in coastal cities shift status to 'natural' visible muscle and to having 'never needed it'. The working-age uninsured in non-covering states such as Texas and Florida are over-represented among gray-market buyers.",
+      "eating_as_ritual": "Half-portion family dinners are normal. Thanksgiving and church potlucks are smaller. Leftover culture is fading. A counter-ritual of conspicuous shared feasting has grown up in fat-liberation and some religious communities.",
+      "dating_and_intimacy": "Dating profiles commonly state 'not on anything' or 'on the pill — the other one'. Couples where one partner is on the drug and the other is not describe mismatched appetites for food, drink and nights out. Reports of lowered desire are acknowledged by clinicians as uncommon.",
+      "meaning_of_appetite": "A visible backlash treats appetite as identity. A revived fat-acceptance movement (strongest among queer and Black women's communities in Atlanta and Oakland), MAHA-aligned 'natural metabolism' parents in Dallas–Fort Worth and Utah, and evangelical 'discipline, not a pill' fasting programmes form an uneasy coalition. Its slogan is 'Leave my hunger alone'.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "Acknowledged in the Mar 2028 class label (postmarketing: apathy, anhedonia) and in clinic intake forms. Survey self-report is 2–5% of users, i.e. roughly 1–2.5M people at 50.9M users. Usually managed by dose reduction. Not tracked as an outcome in any RCT.",
+      "framing": "Officially a side effect. Before Apr 2028 telehealth sold the same effect as a feature ('quiet mind'), and trials pursue it as treatment (AUD, nicotine). Since the promotion ban it can no longer be advertised as a feature, but patients still ask for it that way.",
+      "effect_on_work": "Anecdotal reports of steadier attention in craving-prone workers. A minority report lost ambition and stop or reduce the dose around performance reviews. No employer encourages it; HR guidance treats it as a private medical matter.",
+      "effect_on_art_and_play": "A visible local discourse among Nashville songwriters and Brooklyn comedians about the drug 'sanding off the edges'. 'Off it for the album' is a recognised phrase. Bars report fewer late nights among regulars. Sour, spicy and extreme-flavour products keep selling to users seeking sensation.",
+      "effect_on_intimacy": "Uncommon but now discussable: couples therapists ask about it at intake. Some users schedule dose holidays around anniversaries and holidays.",
+      "effect_on_politics": "Indirect only. Blunting has become a talking point for the backlash coalition ('a sedated country') and helped pass state age-floor laws. There is no measurable effect on turnout or partisanship.",
+      "severity": 3
+    },
+    "state": {
+      "regulatory_posture": "Split within one administration. CMS and the White House pursue price deals and expanded public coverage. FDA and HHS, under MAHA-aligned leadership, restrict promotion and pediatric use and fight imports. The result is broad access for adults at controlled prices, alongside tight limits on advertising and children.",
+      "subsidy_or_mandate": "No mandate. Medicare covers obesity at $215/month with a ~$50 copay under the CMS model. 32 states + DC Medicaid at the same rate. Cash prices are capped by deal ($149 starting oral doses, up to ~$299 top-dose injectables).",
+      "conditioning_or_surveillance": "Medicare and Medicaid coverage requires BMI/comorbidity criteria, prior authorisation and documented nutrition and activity counselling at initiation. Refill-based adherence reporting goes to plans. No benefit conditioning on weight outcomes. Apr 2028 HHS/FDA rules bar direct-to-consumer promotion of incretins for unapproved uses and require an in-person or synchronous video visit before the first telehealth prescription. Texas and 13 other states set age floors: no weight-indication use under 12 in 9 states, and specialist plus parental consent for 12–17.",
+      "workforce_or_military": "No workforce policy. Military accession reviews continue to treat recent weight-loss medication use as a medical review item, unchanged.",
+      "geopolitics_of_supply": "India and China supply the world's generic semaglutide and most gray-market product entering the US. CBP seizures and FDA import alerts have become a trade irritant with India. The US–India price gap (~$215–299 vs $8–48) is a campaign talking point for both parties. Novo and Lilly expand US manufacturing in exchange for tariff relief.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2027-03",
+        "event": "FDA finalises removal of semaglutide, tirzepatide and liraglutide from the 503B bulks list; compounders exit, and an estimated 1M+ patients move to brand cash channels or to Indian-made pens sold by mail and messaging apps at $30–90/month",
+        "driver": "generic_flood_counterfeits"
+      },
+      {
+        "date": "2027-07",
+        "event": "FDA approves 50 mg oral semaglutide, matching weekly injectable Wegovy at ~15–16% weight loss; launched via TrumpRx at $149 starter and $249 maintenance, pills pass 60% of new starts within a year",
+        "driver": "next_gen_launch: oral_parity; price_path: managed_decline"
+      },
+      {
+        "date": "2027-10",
+        "event": "CDC health alert links ~90 hospitalisations and 5 deaths across nine states to contaminated imported semaglutide vials and 'research-grade' retatrutide; poison centres report GLP-1 dosing-error calls triple 2025 levels",
+        "driver": "generic_flood_counterfeits"
+      },
+      {
+        "date": "2028-01",
+        "event": "Medicare Bridge pilot rolls into the CMS Part D obesity model with widened eligibility at $215/month and a $50 copay; 32 states plus DC now cover obesity in Medicaid, making public programmes the largest payer (~36% of users)",
+        "driver": "coverage_shift: public_expansion; price_path: managed_decline"
+      },
+      {
+        "date": "2028-04",
+        "event": "After telehealth 'Quiet' campaigns selling low-dose pills for food noise, focus and 'a quiet mind', HHS and FDA bar off-label DTC promotion of incretins and require a live visit before the first telehealth script. The Mar 2028 class label adds apathy and anhedonia as uncommon postmarketing reports. Texas leads 14 states in pediatric age-floor laws backed by a coalition of MAHA parents and fat-liberation groups",
+        "driver": "state_action: restriction; new_indications: mood_and_motivation; personality_layer: niche_side_effect; cultural_response: backlash_body_politics"
+      },
+      {
+        "date": "2028-06",
+        "event": "Novo Nordisk files for oral semaglutide as a smoking-cessation adjunct after phase 3 shows ~27% vs ~16% continuous abstinence; FDA grants priority review with a decision due Q1 2029",
+        "driver": "new_indications: nicotine"
+      }
+    ],
+    "open_tensions": [
+      "Federal spending of ~$35B a year on public coverage, against a CBO 9-year estimate of $35B, collides with an HHS that distrusts the drugs. The next budget fight decides whether the CMS model survives or tightens eligibility.",
+      "The gray market is the price gap made physical. As long as Indian generics cost $8–48 and US brand prices floor at ~$149–299, uninsured users in non-covering states will keep injecting imported product, and enforcement fixes neither the cause nor the risk.",
+      "Reward modulation is a labelled side effect, a banned marketing claim and a pending nicotine indication at the same time. A smoking-cessation approval in 2029 would make 'quieting desire' an official indication.",
+      "Children grow up in households where a parent and grandparent are on a pill, while 14 states forbid or gate it for them. There is still no decade-scale data on cycling or adolescent use."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide in the US; brand exclusivity runs to roughly 2031–32.",
+      "Medicare beneficiaries pay a copay of about $50 a month for obesity coverage.",
+      "Oral starting doses are sold cash at $149 through TrumpRx and manufacturer direct channels.",
+      "Indian generic semaglutide still sells at roughly $8–48 a month.",
+      "Novo Nordisk and Eli Lilly remain the only companies with US-approved incretin drugs for obesity, and tirzepatide (~21%) remains the most effective one on the market."
+    ]
+  },
+  "prose": {
+    "headline": "One in Five and Counting: Medicare Pays, the Pill Wins, and the 'Unquiet' Want Their Hunger Back",
+    "world_in_600_words": "By the end of 2028 nearly one American adult in five takes an incretin drug, about fifty-one million people. Most of the growth has come from two places. The first is the pharmacy counter where a Medicare card now buys a month of pills for fifty dollars. The second is the kitchen table where a daily tablet replaced the weekly pen. The 50-milligram semaglutide pill, approved in the summer of 2027, does what the injection does for most people, and for most new starters the needle is simply gone. Tirzepatide is still the strongest drug on the shelf. Retatrutide, which promises more, is waiting on regulators who want to understand the tingling skin some trial patients reported.\n\nMedicare has become the country's default payer for weight. When the Bridge pilot ended, it folded into a standing CMS model at $215 a month with wider eligibility. Thirty-two states and the District of Columbia cover the drugs under Medicaid. The bill is about thirty-five billion federal dollars a year, which is roughly what the Congressional Budget Office once expected for the whole decade. That number now gets read aloud at hearings. Employers saw Washington taking the older patients and kept retreating: fewer than half still cover weight loss. The middle-aged uninsured in states like Texas and Florida fall in the gap. They pay $149 to $299 in cash, or they don't pay brand prices at all.\n\nThat gap has a supply chain. When compounding pharmacies were shut out in early 2027, their customers did not vanish. Many found Indian generics, legal at home for under fifty dollars, arriving in padded envelopes or sold through group chats. Some found vials of unapproved retatrutide labelled 'for research.' In October 2027 a contaminated batch put about ninety people in hospitals across nine states and killed five. Poison centres now field three times the dosing-error calls they did in 2025. The drugs themselves have produced no new safety signal. The harm is in the product.\n\nThe same Department of Health and Human Services that helped expand coverage has turned restrictive about everything at the edges. Telehealth brands spent 2027 selling low-dose pills for 'a quiet mind,' meaning less food noise and steadier focus. In April 2028 that promotion was banned, along with first prescriptions issued without a live visit. The class label now lists apathy and anhedonia among uncommon postmarketing reports. Clinicians treat this as niche: a few percent of patients, usually fixed by lowering the dose. Fourteen states, led by Texas, have set age floors for children. The coalition behind those laws would have seemed improbable in 2024: suburban MAHA mothers in Dallas–Fort Worth, evangelical fasting ministries, and a revived fat-liberation movement rooted in Atlanta and Oakland. They agree on almost nothing except the slogan 'Leave my hunger alone.'\n\nThe economy has bent rather than broken. Snack and soda volumes keep slipping a few points. Spirits makers are cutting staff, and off-label smoking-cessation use is now eroding the bar-and-cigarette evening as well. Plus-size chains are closing stores while small indie labels sell to people who have decided not to shrink. Restaurants serve smaller plates at the same prices. Gyms sell muscle to retirees. Novo and Lilly sell far more units for less money each and remain the only two names on the shelf.\n\nThe culture has made one quiet move. Thinness no longer says much about anyone, so status has migrated to visible muscle and to the claim of never having needed it. In Nashville, songwriters say 'off it for the album.' A smoking-cessation application is pending with a decision due in early 2029. If it is approved, the dampening of desire will become, officially, a treatment.",
+    "a_day_in_the_life": "Denise Alvarado turns sixty-eight on a Tuesday and takes her pill first, before coffee, the way the pharmacist said, thirty minutes with a sip of water. The bottle came from the H-E-B on Zarzamora: fifty dollars, Medicare, the girl at the counter saying 'happy birthday, Miss Denise' because it's on the screen.\n\nAt noon her daughter Marisol arrives with a tres leches from the panadería and a cooler. In the cooler is a box with Hindi on one side and a WhatsApp number on the other. Marisol is forty-four, cleans offices downtown, and has no coverage for this. Denise doesn't ask what it cost. She asks if she checked the lot number against the list on the news. Marisol says she did.\n\nThe grandkids come after school. Mateo, eleven, eats two slices of cake and asks for a third. Denise cuts it for him. His doctor said not until twelve, and in Texas, not even then without the specialist in Houston.\n\nRuben, her son-in-law, brings his accordion and plays 'Las Mañanitas' badly on purpose. He quit the shots in the spring. He says the music went grey. He's heavier now, and louder, and Denise likes him better and won't say so.\n\nThey leave half the cake. Denise wraps it in foil and puts it in the freezer next to the other halves, Easter's, Mother's Day's. She isn't hungry. She remembers being hungry the way she remembers her husband's cologne, exactly, and from far away."
+  }
 }
