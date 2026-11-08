@@ -33,7 +33,295 @@
     "state_action": "benefits_conditioning",
     "personality_layer": "marketed_feature"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:57:12Z"
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L2-r17",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18693,
+        "output_tokens": 20869
+      }
+    ]
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 25.0,
+      "us_adults_ever_used_pct": 35.5,
+      "by_income_third_pct": {
+        "top": 28,
+        "middle": 26,
+        "bottom": 21
+      },
+      "by_age_band_pct": {
+        "18_29": 13.5,
+        "30_49": 28,
+        "50_64": 39,
+        "65_plus": 17
+      },
+      "pediatric_under_18_on_drug_pct": 0.8,
+      "cycled_off_and_on_pct": 45,
+      "note": "FICTIONAL. Of ~272M adults: 25.0% current ≈ 68.0M; 35.5% ever ≈ 96.6M; used-and-off-now 10.5% ≈ 28.6M; never-used ≈ 175M. Cycling arithmetic: ever 35.5 − current 25.0 = 10.5 pts off now; ≈12.0 pts of current users are on a second or later course and ≈4.0 pts of the off-now group restarted at least once and stopped again, so (12.0+4.0)/35.5 ≈ 45% cycled. That fits the parent's ~35% one-year persistence (~45–50% under gated plans) and 36–47% restart within a year: the 2031–32 public expansion re-enrolled many lapsed users rather than recruiting new ones, and ever-use rose 11.5 pts (inside the 13.4 limit) while current rose 10.4. Age check: 18–29 13.5% × 52M = 7.0M; 30–49 28% × 90M = 25.2M; 50–64 39% × 62M = 24.2M; 65+ 17% × 68M = 11.6M; total ≈ 68.0M = 25.0%. The 65+ band doubled from 8.5% because the Part D obesity benefit (Jan 2032) loosened Bridge criteria and made coverage permanent. DEXA-driven pauses and bone-agent co-prescription are the main reason it did not rise further: roughly one in five 65+ ever-users is off on a medically advised pause. The bottom third went from 10.3% to 21%, mostly through the 31 states plus DC that took the 90% federal match, and secondarily through ≈3.8M imported or counterfeit users, who are under-measured. The 50–64 band is the heaviest-using group and also where the cycled-three-times postmenopausal fracture signal sits. Never-users (~175M) are increasingly under-30, rural non-expansion-state residents, people with contraindications, and refusers by conviction. In high-uptake suburbs, refusers are now the group that gets asked to explain itself. Pediatric: 0.8% of ~73M under-18s ≈ 580k, mostly adolescents 12+ covered through Medicaid EPSDT and commercial plans. The adolescent bone-accrual interim readout (2032) shows lower-than-expected BMD gain in a subset, which is unresolved. About one child in three now lives with at least one parent who is on the drug or cycling off it."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "FICTIONAL. The Medicare and Medicaid Obesity Treatment Continuity provisions (reconciliation act, Jul 2031) replaced the Bridge with a permanent Part D obesity benefit from Jan 2032. Eligibility is BMI ≥30, or ≥27 with one comorbidity. The negotiated rate stays at $199/month, the $50 beneficiary copay is unchanged, and the counselling visit is kept. Medicare pays 18.8% of fills ≈ 12.8M users (11.6M aged 65+ plus ≈1.2M disabled under-65): ≈6.0M diabetes and ≈6.8M obesity. Obesity-benefit spend: 6.8M × $199 × 12 ≈ $16.2B gross, of which beneficiaries pay 6.8M × $50 × 12 ≈ $4.1B, leaving ≈$12.2B to the program. All Medicare incretin fills: 12.8M × $199 × 12 ≈ $30.6B gross. Medicaid: the federal match rises to 90% for anti-obesity medication in states that adopt the CMS 'continuation standard'. 31 states plus DC have adopted it. Medicaid pays 15.0% of fills ≈ 10.2M users × $199 × 12 ≈ $24.4B gross before supplemental rebates. CBO score for 2032–41 ≈ $190B: Medicare obesity net ≈ $14B/yr average × 10 = $140B, plus the Medicaid enhanced-match increment ≈ $5B/yr × 10 = $50B. Medicare is now the largest single purchaser of incretins in the US.",
+      "employer_coverage_pct": 66,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 90+ semaglutide brands at $5–30/month, plus generic oral semaglutide and the first liraglutide–semaglutide combination generics. China: domestic generic semaglutide and early tirzepatide copies, and Chinese API still underlies most of the global gray trade. Canada: generic semaglutide at CAD 55–85/month. Brazil, Mexico, Turkey and Egypt have generics. In the US, semaglutide ANDA settlements (Sep 2031) set generic entry for 2033, and tirzepatide exclusivity runs later.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Stalled. No price step-down after Dec 2029. HHS–manufacturer talks for a 2032 cut collapsed in late 2031: manufacturers cited the Section 232 tariff cost, retatrutide supply allocation and guaranteed public volume, and the government did not press with generic entry already settled for 2033. Prices: injectable semaglutide and tirzepatide $199–279 on the federal direct portal (launched as TrumpRx), orals $149–199, retatrutide $399 direct and $1,499 list, amycretin $449 direct at launch. PBM net ≈ $170–190 under outcomes contracts, unchanged. Payer mix of ≈68.0M users: commercial 40.7% (27.7M), Medicare 18.8% (12.8M), Medicaid 15.0% (10.2M), cash/direct 19.9% (13.5M, including ≈3.5M 'calm' and 'focus' subscribers), imported/counterfeit 5.6% (3.8M); sum 68.0M = 100%. Imports fell as a share because public coverage absorbed low-income users, but grew in absolute number among the uninsured, people in non-adopting states, and users cut off by gating. ≈75% of covering employers use outcome-gated designs. The 503B exclusion and 503A injunction stand."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic, incl. 7.2 mg)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg maintenance dose from 2031)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin, approved Mar 2031 with body-composition monitoring in label)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm', 'focus' and 'craving freedom' subscriptions (low-dose oral semaglutide or Foundayo, ≈3.5M subscribers), now in mainstream employer lifestyle-benefit catalogues",
+        "smoking and vaping cessation (no resubmission yet)",
+        "alcohol reduction, including EAP-referred prescribing",
+        "'metabolic health' / longevity regimens in concierge practices",
+        "pediatric under-12 use under specialist care",
+        "gambling and compulsive-shopping craving reduction, still anecdotal"
+      ],
+      "pipeline_note": "FICTIONAL. The triple_agonist_30pct driver is met by an existing product in a new form. In Feb 2031 FDA approved a 12 mg retatrutide maintenance dose on TRIUMPH extension data showing 30.1% mean loss at 104 weeks. Approval required DEXA at baseline and every 12 months and a lean-mass statement in the label. Lilly put the 12 mg pen on allocation through most of 2031–32. Amycretin, under review at the start, was approved Mar 2031 for chronic weight management, the same indication, so it adds no new indication. MariTide (filed Apr 2030): FDA extended the review in 2031 to require 72-week DEXA data, and a decision is expected 2033. Survodutide resubmitted in 2031, with a PDUFA date in early 2033. Bimagrumab combinations remain in phase 3 with no filing, and lean-mass-sparing agents are the most watched gap in the pipeline. Smoking-cessation trial with SHAPS endpoints is enrolling. No new indication this step. Incretin market ≈$170B in 2032: US ≈$145B (≈64M paying users × ≈$190 average net × 12), ex-US ≈$27B and eroding."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common effect and the leading cause of voluntary stops. More frequent during 12 mg retatrutide escalation.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Rising in absolute numbers with high-dose retatrutide and the larger 65+ population.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. Counterfeit cases still confound reporting.",
+        "regulatory_response": "Labelled; MDL litigation ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "A recognised population problem. With 11.6M users aged 65+, a 2032 Medicare claims analysis estimates ≈1.3M long-term older users meet sarcopenia criteria. In untrained users over 50, lean mass is ~30–40% of weight lost, and the 12 mg retatrutide DEXA substudy is at the upper end of that range.",
+        "regulatory_response": "Class label retained. The 12 mg retatrutide and amycretin labels require body-composition monitoring. The CMS continuation standard requires annual DEXA for Part D obesity users who are 65+ and on therapy more than 2 years. MA strength benefits have expanded."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Second wave year. ≈5.5M users aged 65+ have more than 2 years' use. At a ~0.6%/yr baseline hip-fracture rate × 0.35 excess, that is ≈11,500 excess hip fractures a year against ~300,000 US total, plus several thousand excess vertebral fractures among cycling postmenopausal women 50–64. Medicare DEXA claims are up ~120% since 2028, and waits run 12–20 weeks in parts of the Sun Belt and Midwest.",
+        "regulatory_response": "Labelling retained. Bone endpoints are required in all new filings. A CMS 'bone pause' code allows up to 90 days off without breaking Part D continuation. Private gated plans are not bound by it. The DOJ civil case against Novo is unresolved."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention; no class determination."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association.",
+        "regulatory_response": "Warning removed Jan 2026; not returned."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, 'the grey')",
+        "status": "emerging",
+        "prevalence_note": "Final retatrutide postmarketing SHAPS data (2032) show ~12% of 12 mg users crossing a clinically meaningful threshold versus ~5% of comparators. The study is observational and dose-dependent. Among ≈3.5M low-dose 'calm' subscribers there is still no independent measurement.",
+        "regulatory_response": "FTC consent orders with two telehealth brands (2031) bar 'anxiety treatment' claims, while 'calm' and 'focus' wording remains permitted. No label change."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Larger in absolute terms. Gated-plan and continuation-standard drop-offs plus DEXA pauses produce millions of regain episodes a year.",
+        "regulatory_response": "The CMS bone-pause code softens it for Medicare. The Seventh Circuit has not ruled on the Indiana waiver."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D, calcium and protein insufficiency are common in high-loss older users, and the signal is stronger on 12 mg retatrutide.",
+        "regulatory_response": "Professional guidance; the Part D counselling template adds a protein and vitamin D screen. No FDA action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~8 years; adolescent exposure; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About ten years of follow-up. The interim adolescent bone-accrual readout (2032) suggests lower BMD gain in a subset of rapid losers, with a small sample. Cycling still looks worse for bone than continuous use.",
+        "regulatory_response": "Postmarketing requirements continue; FDA asked sponsors for full adolescent data by 2034."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms",
+        "status": "established",
+        "prevalence_note": "Poison-centre calls flat to slightly up since 2030 because import numbers grew while the import share fell. No cluster on the 2029 scale, but steady dosing-error and infection cases continue among the ≈3.8M users of imported or counterfeit product.",
+        "regulatory_response": "Import alerts and seizures continue. A 'Safe Pens' authentication bill stalled in committee. Individuals are still not prosecuted."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher at 12 mg; usually transient.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Falls and frailty-related injury in older users",
+        "status": "established",
+        "prevalence_note": "Upgraded from emerging. Claims analyses with sarcopenia adjustment show persistently higher fall-related ED visits in 65+ users with more than 2 years' use.",
+        "regulatory_response": "Fall-risk screening is mandatory in the Part D counselling visit."
+      },
+      {
+        "effect": "Adverse body-composition cycling (fat-dominant regain after lean-dominant loss)",
+        "status": "emerging",
+        "prevalence_note": "New entry. DEXA cohorts show that repeated cycles leave users at the same weight with less lean mass and more visceral fat than before, worst in people over 50 who were cut off by gating or paused.",
+        "regulatory_response": "Discussed in the 2032 joint guidance update; no regulatory action."
+      },
+      {
+        "effect": "Heart-rate elevation at high triple-agonist doses",
+        "status": "suspected",
+        "prevalence_note": "New entry. A mean resting heart-rate rise of several bpm at 12 mg retatrutide; arrhythmia significance unclear.",
+        "regulatory_response": "Labelled as a precaution; cardiovascular outcomes trial ongoing."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With a quarter of adults on the drug, US salty-snack volume falls ~4% a year and confectionery ~5%. Sugary-drink volume is down again. Two large packaged-food groups sold off candy portfolios to private equity in 2031–32. 'Bone-forward' fortified dairy and protein lines lead growth, and Part D counselling templates send customers to them. Grocers' 'on-plan' aisles are standard.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Fifth straight year of US spirits volume decline. Beer is down too, and 'calm' subscribers have replaced the weeknight glass. Non-alcoholic and 'one good drink' premium formats hold. Tobacco and vape volumes are falling faster than pre-2028 trend.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is slightly down, and spend per cover is down ~8–10% from 2028 in high-uptake suburbs. Gram-priced protein bowls and half portions are the default. Value buffets keep closing. 'No-gram' heritage rooms in Atlanta, Memphis and Houston are still busy, and chains now copy them as weekend 'full table' nights.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Size churn continues in both directions with gating drop-offs and bone pauses. Rental and resale subscriptions sized for cycling are growing. Mid-market brands cut plus inventory again, and specialists stay stable.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Growing. 'Prescribed lifting' is a Medicare Advantage line item, and DEXA-plus-coaching chains are expanding into strip malls. Mobile DEXA vans are booked for months. The binding constraint is staff qualified for older lifters.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage is up to 66% and ~75% of it is gated. Employers shifted retirees and some over-65 workers to Medicare's new benefit. Pharmacy trend is ~+7% on volume at flat price. Bone and fall costs now land partly on Medicare Part A and Medicare Advantage. Life insurers dropped GLP-1 disclosure penalties, and one now asks applicants with BMI ≥30 why they are not treated.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Volume rose about 70% at flat prices. Lilly dominates through retatrutide 12 mg, tirzepatide and Foundayo. Novo holds Medicare semaglutide share and its new amycretin franchise, and settled US generic entry for 2033. Bone-agent and DEXA makers are still winners. Indian and Chinese generic makers win abroad and wait for 2033.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Normalised. Among insured adults over 40, being on the drug is as unremarkable as a statin, and being off needs a reason: 'my DEXA', 'bone pause', 'lost coverage', or 'by conviction'. Visible regain is read as being dropped from a gated plan. The thin-armed forward stoop is a recognised look in over-60s, and trained shoulders signal a well-run regimen.",
+      "thinness_and_class": "Use levels are narrowing (bottom third 21% against top 28%), but the quality of care is widening. Top-third users run 12 mg retatrutide or amycretin with coaching, DEXA on schedule and antiresorptives. Bottom-third users are on Medicaid continuation standards with pharmacy-kiosk weigh-ins and 4-month DEXA waits, or on imported pens with no scan. In Dayton, Tulsa and Phoenix the waiting room for the mobile DEXA van is a new social space.",
+      "eating_as_ritual": "Protein-first shared meals are the norm. Hosts plan by default for 'on' guests and treat 'off' guests as a special case, like an allergy. Sunday 'full-table' dinners, church potlucks and no-gram rooms persist as deliberate heritage, now smaller in relative terms.",
+      "dating_and_intimacy": "Apps add an optional on/off/pausing field. 'Unmedicated' persists as a niche identity filter. Advice columns now field complaints about a partner who refuses to start, which inverts the 2030 complaint.",
+      "meaning_of_appetite": "Medicalised and quietly assumed to be managed. The 2030 backlash coalition (Atlanta body-sovereignty collectives, Tulsa–Dallas 'appetite is a gift' congregations, natural-supplement influencers, disability advocates) has not shrunk in absolute numbers but is proportionally smaller. Its remaining unity is against the continuation standard, which it calls 'weigh-in welfare'.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "FICTIONAL. Final retatrutide postmarketing SHAPS data: ~12% of 12 mg users cross a clinically meaningful threshold versus ~5% of comparators, observational and dose-dependent. With roughly 6–7M Americans on top-dose triple or dual regimens, that implies on the order of 400–500k excess cases of clinically meaningful anhedonia if the association is causal. The ≈3.5M 'calm' and 'focus' subscribers on low-dose orals are unmeasured apart from vendor surveys.",
+      "framing": "Feature in retail, side effect in clinic. 'Quiet', 'Even' and 'Unhooked' still cost $149–199/month, sell 'calm' and 'focus' freely, and under FTC orders may no longer claim to treat anxiety. Prescribers say 'reward modulation'. Users call the bad version 'the grey', and normalisation makes it something people mention with a shrug.",
+      "effect_on_work": "The 2032 catalogue update of a major HR benefits platform lists 'focus' subscriptions beside meditation apps, so lifestyle-account reimbursement is now routine at large white-collar employers. Fleets, call centres and warehouses favour continuous use. Sales, hospitality and creative workers still dose down before pitches and service peaks. Unions bargain over gated-plan data, and some contracts now copy the CMS bone-pause exemption.",
+      "effect_on_art_and_play": "'Written unmedicated' still sells in Nashville and on comedy tours, but it has become a niche. Mass-market pop critics talk about a 'grey era' of mid-tempo records. Spicy food, loud venues, escape rooms and extreme sports keep growing among users looking for stronger stimulus.",
+      "effect_on_intimacy": "Sex therapists routinely screen for dose and subscriptions. Dose-holiday weekends are common enough that pharmacies stock 'restart' anti-nausea packs. Couples counselling now often deals with one partner on 'Quiet' and the other off.",
+      "effect_on_politics": "Politics is about who pays and on what terms. The continuation standard is the fight: Republicans frame it as accountability, many Democrats as necessary stewardship, and disability and backlash groups as surveillance. 'Calm voter' turnout effects remain unpublished speculation. Senior advocacy groups now lobby on DEXA capacity.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "FDA is data-demanding: it requires DEXA in every filing, put body-composition monitoring into the 12 mg retatrutide and amycretin labels, and extended MariTide's review. Import enforcement is selective, with no individual prosecutions and no importation law. FTC acts on claims through consent orders.",
+      "subsidy_or_mandate": "Public expansion: a permanent Part D obesity benefit at $199 with a $50 copay from Jan 2032, and 90% federal match for state Medicaid programmes that adopt the continuation standard (31 states plus DC). No individual mandate.",
+      "conditioning_or_surveillance": "The CMS continuation standard (final rule Dec 2031) applies to Part D obesity users and enhanced-match Medicaid. Its terms: ≥80% PDC from pharmacy claims; a verified weight every 6 months via pharmacy kiosks or a connected scale; ≥5% loss at 6 months or a clinician override; annual DEXA for long-term 65+ users; and a 90-day 'bone pause' code. Missing two verifications suspends coverage for 6 months, which is softer than Indiana and Arkansas, whose 12-month rules continue. Private gating covers ~75% of employer plans without a pause exemption. BMI-linked wellness surcharges up to 30% of premium continue.",
+      "workforce_or_military": "DOT sleep-apnea screening still pushes drivers toward tirzepatide. Fleets add DEXA for drivers over 55. Army accession policy is still contested; the Air Force allows waivers for applicants stable for 12 months.",
+      "geopolitics_of_supply": "Chinese API and Indian finished product supply the world. A US–India trade framework (2032) lists 'pharmaceutical parcel cooperation' without legalising import. Section 232 tariffs remain and are cited by manufacturers as a reason prices stalled. Lilly's 12 mg allocation is blamed on fill-finish capacity in North Carolina and Ireland.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2031-02",
+        "event": "FDA approves a 12 mg maintenance dose of retatrutide after 104-week data show 30.1% average weight loss, the first pen to match bariatric surgery, with mandatory DEXA monitoring in the label; Lilly puts it on allocation within weeks",
+        "driver": "next_gen_launch: triple_agonist_30pct"
+      },
+      {
+        "date": "2031-07",
+        "event": "Reconciliation act makes Medicare obesity coverage permanent from January 2032 at the $199 rate with a $50 copay, and offers states a 90% federal match for Medicaid obesity drugs; CBO scores it at about $190 billion over ten years",
+        "driver": "coverage_shift: public_expansion"
+      },
+      {
+        "date": "2031-09",
+        "event": "Novo settles semaglutide patent suits with Indian and US generic filers, fixing US generic entry in 2033; weeks later HHS talks on a 2032 price cut collapse and portal prices stay at $199–279",
+        "driver": "price_path: stalled"
+      },
+      {
+        "date": "2031-12",
+        "event": "CMS finalises the 'continuation standard': pharmacy-claims adherence, verified six-monthly weigh-ins, a 5% response threshold and annual DEXA for long-term seniors, with a 90-day 'bone pause' code; 31 states and DC adopt it for Medicaid by mid-2032",
+        "driver": "state_action: benefits_conditioning"
+      },
+      {
+        "date": "2032-04",
+        "event": "Medicare claims analysis estimates about 11,500 excess hip fractures a year among long-term older users and finds DEXA waits of 12–20 weeks across the Sun Belt; senators ask CMS what happens to seniors who cannot get the scan the rule requires",
+        "driver": "safety_signal: muscle_bone_wave"
+      },
+      {
+        "date": "2032-08",
+        "event": "A top-five life insurer drops its GLP-1 disclosure surcharge and adds a question asking applicants with BMI over 30 why they are not on treatment; the same month a major HR benefits platform lists 'focus' subscriptions in its standard lifestyle catalogue",
+        "driver": "cultural_response: normalisation; personality_layer: marketed_feature"
+      }
+    ],
+    "open_tensions": [
+      "The CMS continuation standard requires annual DEXA for long-term older users while scanner capacity runs 12–20 weeks behind. Medicare's bone-pause code protects paused seniors, but the ~75% of gated employer plans have no such exemption, so a 58-year-old following the same guidance can lose coverage her mother keeps.",
+      "Medicare is now the largest payer at exactly the age where the bone and fall harms concentrate. The drug is billed to Part D, while the fractures, falls and sarcopenia rehabilitation are billed to Part A and Medicare Advantage. No CBO score includes the second set of costs.",
+      "Prices stalled with US generic semaglutide fixed for 2033. Meanwhile ≈3.8M Americans inject imported or counterfeit product at $5–30, and Congress has neither legalised import nor sealed the mail. The 2033 cliff will reprice the whole public bill.",
+      "About 3.5M people without obesity buy reward modulation as 'focus' through employer catalogues, while the best data call it a dose-dependent harm in about one in eight top-dose users. Normalisation is making the question harder to raise, not easier."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is on the US market; generic_us remains false.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Oral starting doses (Wegovy pill, Foundayo) are still $149–150 a month cash through the federal direct-pricing portal (launched as TrumpRx) and manufacturer direct channels.",
+      "The Indiana and Arkansas Medicaid 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with two misses ending coverage for 12 months; the disability-rights litigation is still unresolved in the Seventh Circuit.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "Off It? Explain Yourself. Medicare Now Pays for the Pen, and Wants to See Your Bones First",
+    "world_in_600_words": "At the end of 2032 one American adult in four is on an incretin drug, and nobody remarks on it. What people remark on is being off. Off has a short list of acceptable reasons: a bone pause, a lost plan, a scan you could not get. Saying you simply chose not to take it still draws a look in a suburban kitchen in Ohio or Arizona.\n\nThe jump from one in seven did not come from cheaper drugs. Prices stopped falling. The $199 pen of the 2029 deal is still $199, because the manufacturers had guaranteed public volume, a tariff to point to and a generic date that was already settled. When Novo fixed US generic semaglutide entry for 2033, the government stopped pushing for more. What changed was the payer. In July 2031 Congress used a reconciliation bill to turn the Medicare Bridge into a permanent Part D benefit at the same $199 rate and $50 copay. It also offered states a ninety-percent federal match to cover the drugs in Medicaid. Thirty-one states and Washington, D.C. accepted. Medicare is now the largest buyer of incretins in the country. The share of Americans over sixty-five on the drug has doubled, and the bottom income third is on it at nearly twice its 2030 rate.\n\nThe money came with conditions. Under the CMS continuation standard, pharmacy claims track adherence, a kiosk by the blood-pressure cuff records a verified weight every six months, and anyone who has not lost five percent by month six needs a clinician to vouch for them. Long-term users over sixty-five must have a bone-density scan every year. There is one concession to the bone data: a 'pause' code that lets a doctor take someone off for ninety days without losing coverage. Employer plans, three-quarters of which are gated, mostly have no such code. A daughter can lose her coverage for doing exactly what her mother's Medicare plan allows.\n\nThe bone problem keeps growing because the older population on the drug keeps growing. A Medicare claims analysis this spring put the excess at about eleven and a half thousand hip fractures a year, against three hundred thousand in all, plus a tail of vertebral fractures among women in their fifties who have cycled on and off several times. Scans are scarce. Across the Sun Belt the wait for a DEXA appointment runs to four or five months. Mobile scanners park outside churches and gyms, and their waiting areas have become a place where retirees talk. The drug is billed to Part D, and the broken hips are billed to Part A. Nobody's budget score shows both.\n\nThe strongest weight-loss drug is now a pen. A 12-milligram dose of Lilly's triple agonist reaches about thirty percent average loss. Its label requires body scans, and supply has been rationed for most of its first year. Novo's amycretin arrived beside it. Neither drug added a new indication. The FDA asked for more bone data on every filing it saw.\n\nThe quieting effect is still for sale. About three and a half million people with no weight problem pay $149 a month for 'Quiet' or 'Even' to take the edge off, and since August the big HR benefits platforms list these alongside meditation apps. The FTC stopped the anxiety claims, but 'calm' and 'focus' are still allowed. The best observational data suggest roughly one top-dose user in eight loses a measurable capacity for pleasure. Because so many people take the drug, that has become something people mention in passing.\n\nThe counter-movement is still there: Atlanta's body-sovereignty collectives, the Tulsa churches, the berberine sellers, the disability lawyers. They now gather mostly against what they call weigh-in welfare. Nearly four million Americans still inject pens from Hyderabad or Shenzhen. Every institution is waiting for 2033.",
+    "a_day_in_the_life": "Marlene Pruitt, sixty-seven, steps onto the kiosk at the Kroger pharmacy in Kettering at 7:40, before the line forms. Shoes off, as the sign says. The screen thanks her, shows 171.4, and turns green. A receipt prints: CONTINUATION VERIFIED — NEXT DUE 02/2033.\n\nShe pays the fifty dollars for a month of Zepbound and asks again about the scan. The pharmacist checks. The DEXA van is at Southbrook Christian on the fourteenth of January. Her annual scan was due in November. 'Dr. Iyer filed the capacity extension,' he says. 'You're fine.' Marlene has heard 'you're fine' before.\n\nAt the Y, the instructor of Strong Bones 65 calls her 'Miss Marlene' and hands her the twelve-pound kettlebell instead of the ten. Three of the eight women in the class are on bone pauses. One of them, Gwen, has the stoop already. Nobody mentions it. Afterward Gwen says her son's plan at the distribution centre dropped him in October for two missed weigh-ins. He was working doubles. He's ordering from India now. 'They come in a padded envelope,' Gwen says. 'He checks the hologram.'\n\nAt dinner her daughter-in-law Keisha pushes chicken around her plate and says the 'Even' subscription her firm pays for has made her stop fighting with Darnell, and she means it as good news. Darnell laughs a beat late.\n\nMarlene's granddaughter, nine, asks why Grandma eats the meat first. 'For my bones,' Marlene says. The girl nods. Everyone she knows eats like that."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }

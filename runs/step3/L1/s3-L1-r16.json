@@ -33,7 +33,308 @@
     "state_action": "subsidy",
     "personality_layer": "mainstream_complaint"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:57:12Z"
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L1-r16",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17588,
+        "output_tokens": 20407
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L1-r16",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 29603,
+        "output_tokens": 12132
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/state: 'severity' is a required property"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 28.2,
+      "us_adults_ever_used_pct": 37.5,
+      "by_income_third_pct": {
+        "top": 33,
+        "middle": 29,
+        "bottom": 22.6
+      },
+      "by_age_band_pct": {
+        "18_29": 17,
+        "30_49": 30.5,
+        "50_64": 42,
+        "65_plus": 20.3
+      },
+      "pediatric_under_18_on_drug_pct": 1,
+      "cycled_off_and_on_pct": 36,
+      "note": "FICTIONAL. Ever minus current: 37.5% − 28.2% = 9.3% of adults have used and are off now. Breakdown: 11.0 pts of new ever-users since 2030 (8.8 on, 2.2 off). Of the 18.8 on in 2030, 10.6 stayed on (56%) and 8.2 stopped, so the 2030-cohort off pool was 7.7 + 8.2 = 15.9. Of that pool, 8.8 restarted (55% over two years, the parent's rate). On: 8.8 + 10.6 + 8.8 = 28.2. Off: (15.9 − 8.8) + 2.2 = 9.3. Cycled: 8.9 pts from 2030 plus about 4.6 pts of first-time restarts = 13.5 of 37.5 = 36%. Headcount: ~269M adults × 28.2% ≈ 75.9M users. Age bands weighted by adult shares (20/33/24/23%): 3.4 + 10.07 + 10.08 + 4.67 = 28.2. Income thirds: (33 + 29 + 22.6)/3 = 28.2. Middle-third use rose most (+10.5 pts). Two things drove it: the Wegovy pill 50 mg at $249 cash, and employer metabolic-outcome programmes that make coverage conditional rather than excluded. Bottom-third use rose by 9.6 pts through HRSA oral semaglutide, more Medicaid waiver states, and gray-market capsules. 65+ rose to 20.3% (~12.6M) as the Bridge expanded, though users now face continuation criteria. Off-drug adults: ~25M who used and stopped (about 9M of them cycled out by coverage lockouts, cessation-course caps or Bridge non-continuation, not by choice), plus ~168M never-users. The never-users increasingly include people who decline on purpose: a visible minority in the Full Table movement and among parents after the June 2032 pediatric communication. Pediatric: ~1.0% of ~73M under-18s ≈ 730k, about 120k of them aged 6–11. New starts at ages 6–11 fell ~40% in Q3 2032 after the FDA communication. The oldest adolescent cohort now has ~9 years of exposure."
+    },
+    "access": {
+      "cash_price_usd_month_low": 99,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "Medicare: the GLP-1 Bridge was renewed in the Dec 2031 omnibus through 2033. Payment fell from $275 to $225/month, set off the lowest TrumpRx semaglutide price plus a dispensing fee; the copay fell to $35. New conditions apply. Coverage continues past 6 months only if the patient has lost ≥5% of body weight or shows documented metabolic improvement and has PDC ≥80% from Part D claims, and patients 65+ need an annual DEXA. About 3.6M beneficiaries use the Bridge for obesity: 3.6M × $225 × 12 ≈ $9.7B/yr. Overall Medicare pays ≈17% of incretin fills ≈ 12.9M users (≈12.1M aged 65+ plus ≈0.8M disabled under-65). Medicaid pays ≈11% ≈ 8.35M users at a blended $225: 8.35M × $225 × 12 ≈ $22.5B/yr combined federal and state. Indiana and Arkansas waivers are unchanged. CMS approved adherence-and-weigh-in waivers in Ohio, Tennessee and Georgia (2031) and Missouri and Kentucky (2032), for seven states in total. HRSA Community Incretin Access Program: FY2032 appropriation $6.6B, covering ≈4.6M users. Generic liraglutide: 2.0M × $80 × 12 = $1.92B. Oral semaglutide 25 mg, added in FY2032: 1.6M × $129 × 12 = $2.48B. Semaglutide for cessation and AUD: 1.0M × $179 × 12 = $2.15B. Total ≈ $6.55B. HRSA sites still require only refill pickup.",
+      "employer_coverage_pct": 63,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 90+ semaglutide brands at $6–40/month and launched generic tirzepatide in 2031 at $25–60. Canada, Brazil, Mexico, Turkey and China sell generic semaglutide, and China and India export oral semaglutide generics. Chinese chemical suppliers sell unlicensed orforglipron-analogue small molecules worldwide as 'research chemicals'. In the US, patent settlements set generic semaglutide entry for 2033 and tirzepatide later.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. Payer mix of ~75.9M users: commercial 36% (27.3M), Medicare 17% (12.9M), Medicaid 11% (8.35M), HRSA free provision 6% (4.6M), cash/direct 13% (9.9M), gray 17% (12.9M) = 100%. Managed decline via TrumpRx and PBM deals: semaglutide injection $349→$249; Wegovy pill 50 mg launched at $249; oral starting doses $199→$149; Foundayo $149–199; tirzepatide $449→$299; generic liraglutide cash from $99. Wegovy list is still $1,349 and retatrutide $1,499, allocated, with no portal price. Orals are ≈51% of users and ≈62% of new starts. Conditioning: 63% of employers now cover weight management, up from 57%, but about a third of those use 'metabolic outcome' wellness designs. Under existing ACA/HIPAA wellness rules, premiums can differ by up to 30%, and the tobacco surcharge is waived only for workers enrolled in a verified semaglutide cessation course. Adherence is checked through PBM PDC data and kiosk or telehealth weigh-ins. Gray prices: 503A 'personalised' compounded semaglutide $99–199; Indian mail pens and pills $6–40 plus shipping; 'research' orforglipron-analogue capsules $40–90; research retatrutide vials $100–220."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg and 50 mg, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. US generics)",
+        "GIP-receptor antagonist/GLP-1 agonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, Apr 2029)",
+        "smoking cessation adjunct (semaglutide, Mar 2029)",
+        "alcohol use disorder (semaglutide, Jun 2030)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'weekend off' switching to short-half-life Foundayo so users can take scheduled drug holidays",
+        "'calm/focus' low-dose oral subscriptions, now smaller after the 2031 FTC consent orders (~1.0M users)",
+        "'metabolic health' and longevity regimens with DEXA and strength coaching in the top income third",
+        "semaglutide for ages 6–11 under pediatric endocrinology (only liraglutide is labelled), now falling",
+        "research-chemical orforglipron analogues and retatrutide vials for gym 'recomposition'",
+        "gambling and cannabis reduction, still anecdotal"
+      ],
+      "pipeline_note": "FICTIONAL. Oral parity was reached through a new form of an existing product, not a new class. Novo's Wegovy pill 50 mg sNDA, backed by a 72-week head-to-head trial, showed 16.9% mean loss against 16.4% for Wegovy 2.4 mg injection, meeting non-inferiority. FDA approved it in Aug 2031. No oral yet matches tirzepatide (~21%) or retatrutide (28%), so 'parity' means parity with injectable semaglutide. MariTide, whose BLA was filed in Jul 2030, was approved in Nov 2031 as a monthly injection with constrained launch supply and a $1,299 list price. No new indications were approved in this step (driver: none). Survodutide's resubmission went to an advisory committee over hepatic signals, and its decision is extended into 2033. Novo resubmitted amycretin after its North Carolina site cleared reinspection (Sep 2032), with a decision due in 2033. Bimagrumab combinations remain in phase 3. The incretin market is ≈$148B: US volume up ~50%, US net price down ~25%, and the MDL reserves are rising."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Higher with 50 mg oral semaglutide in the first 8 weeks and with untitrated gray-market capsules.",
+        "regulatory_response": "Labelled; 50 mg pill label requires 12-week titration."
+      },
+      {
+        "effect": "Gastroparesis, ileus and intestinal obstruction (mass tort)",
+        "status": "established",
+        "prevalence_note": "Delayed gastric emptying on drug is established; persistence after stopping is still disputed. MDL 3094 has ~61,000 filed and tolled claims. Bellwethers are split 2–2, and settlement-matrix negotiations opened in 2032.",
+        "regulatory_response": "Ileus labelled; FDA still declines a 'persistent gastroparesis' label. Manufacturers' reserves were raised in 2032."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Rising in absolute numbers with the larger user base and research-peptide retatrutide.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; low absolute risk. About 9,000 claims inside the MDL.",
+        "regulatory_response": "Labelled; consolidated in MDL 3094."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Remains a population problem in 65+ users. Bridge continuation criteria now require an annual DEXA, but HRSA sites still do no body-composition monitoring.",
+        "regulatory_response": "2028 class label stands; Bridge annual DEXA (2032)."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "HR ~1.3–1.4 in 65+ long-term and cycling users, concentrated in women. Pediatric data are now emerging (see the developmental entry).",
+        "regulatory_response": "DEXA recommended for 65+ and postmenopausal women; required annually under the Bridge."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohort studies still conflict; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; FDA warnings mention unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association; unchanged.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening",
+        "status": "established",
+        "prevalence_note": "The 2031 retatrutide postmarketing study reported a small, dose-dependent shift on a validated anhedonia scale (mean ~2 points on SHAPS-type scoring; clinically meaningful in ~6% at top dose). Survey reports hold at ~10–15% of long-term users.",
+        "regulatory_response": "Added to the adverse-reactions section as 'decreased interest or pleasure' across the class in 2032, with no boxed warning. FTC consent orders (2031) bar 'calm/focus' efficacy claims without trials."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Now driven heavily by conditional coverage: Bridge non-continuation, seven-state Medicaid lockouts, cessation-course caps and employer programme exits.",
+        "regulatory_response": "Indiana waiver litigation unresolved; no federal rule."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein signals persist in older and low-income users.",
+        "regulatory_response": "Professional guidance only."
+      },
+      {
+        "effect": "Long-horizon, adolescent, pediatric and cycling effects",
+        "status": "emerging",
+        "prevalence_note": "About 10 years of adult and 9 years of adolescent follow-up. Cycling effects on bone remain unquantified.",
+        "regulatory_response": "Postmarketing requirements continue."
+      },
+      {
+        "effect": "Compounded, counterfeit and research-peptide harms",
+        "status": "established",
+        "prevalence_note": "Still growing. Poison-centre incretin calls rose ~60% from 2030 to 2032, including the first cluster of hepatotoxicity reports tied to research-chemical orforglipron analogues with impurities.",
+        "regulatory_response": "Import alerts on Chinese chemical suppliers; DOJ indicted one distributor in 2032; users are still not prosecuted."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent of users; more common with research vials.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pediatric growth and pubertal development (children who started before 12)",
+        "status": "emerging",
+        "prevalence_note": "Interim analysis of the FDA-mandated liraglutide 6–11 registry and bone-accrual study (~11,000 children, median 2.1 years on drug). Height velocity was ~0.6 cm/yr lower than in BMI-matched untreated controls. BMD Z-score accrual was lower at the spine. Girls who started before age 10 had a signal of ~5-month later breast-development onset. Children who started at 12–13 show smaller differences. It is unclear whether the effects reverse after stopping or are explained by reduced intake.",
+        "regulatory_response": "FDA Drug Safety Communication (Jun 2032) recommends growth monitoring every 6 months and protein and energy adequacy review. A pediatric advisory committee is set for 2033. The 6–11 indication was not withdrawn, and AAP guidance now calls for 'shared decision-making' rather than early pharmacotherapy."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With ~28% of adults on drug, US snack and confectionery volume is down roughly a further 6–8% over the window and sugary drinks a similar amount. Majors finish selling off indulgent brands, and private equity buys them and repositions them for export. Protein, fibre and 'growth-adequate kids' nutrition' formats grew after the June pediatric communication. A small 'real food' and heritage-baking segment is growing on the back of the Full Table movement.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Spirits and beer volumes fall again as AUD and parity coverage reach heavy drinkers. The 'weekend off' pill habit causes a measurable Friday–Saturday spike in on-premise sales and flat weekdays. Non-alcoholic lines keep growing. Tobacco declines are now built into state excise forecasts.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Value-volume chains keep closing mid-suburban units. Small-plate and tasting formats are adapted. Weekend-only dinner services in mid-tier cities follow drug-holiday patterns. Alcohol attach rates are still falling.",
+        "direction": "contracting"
+      },
+      "apparel": {
+        "state": "Size runs keep widening in both directions. Middle-market brands cut plus-size ranges again as middle-third uptake jumps. A small 'body-neutral' label segment associated with the backlash sells as a statement.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength-and-DEXA studios benefit from the Bridge DEXA requirement and employer outcome programmes. Low-cost chains are steady. Gym-floor research-chemical sales draw import alerts.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Pharmacy trend has eased to ~+8% as net prices fall and conditional designs shed non-responders. Employer coverage rose to 63% by attaching strings: outcome-based premium differentials, PDC gating and weigh-in verification. Self-insured plans are fighting state anti-surcharge laws on ERISA preemption grounds.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Volume is at a record while net price falls. Lilly still leads, and Novo is recovering on the 50 mg pill and the reinspection. Amgen has an allocated MariTide launch. Litigation reserves and settlement talks hang over all of them. The generic liraglutide contractors and Indian exporters are winners, and patent-cliff planning for 2033 dominates earnings calls.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug is now ordinary: more than one adult in four. The 50 mg pill made semaglutide-level results available to the middle third without a needle, so a merely leaner body no longer says much. Muscle and finish still do: the retatrutide-plus-coach build. A heavier body now carries three readings: locked out, too poor, or refusing on purpose. The third is new and visible.",
+      "thinness_and_class": "The 'Charlotte build' is still a top-third uniform, because retatrutide remains allocated. The new middle-third shape is pill-lean with modest muscle, policed by employer weigh-in kiosks. The backlash started in Tulsa: the Full Table movement is an alliance of evangelical congregations, revived fat-acceptance groups and 'natural health' parents. It hosts Sunday suppers and has made refusal a class-crossing identity, strongest among working- and lower-middle-class families in Oklahoma, Arkansas and Missouri.",
+      "eating_as_ritual": "Weekday meals are small and functional. Weekends swell where people take drug holidays. Pediatricians now ask about 'growth-adequate' family meals after the June communication. Full Table suppers make a deliberately abundant meal a public act.",
+      "dating_and_intimacy": "Profiles list molecule and schedule: 'Foundayo, weekends off'. 'Unmedicated' is a stated preference for a minority. Couples coordinate drug holidays.",
+      "meaning_of_appetite": "Appetite is still treated clinically, but its meaning is contested. To insurers it is an outcome metric. To Full Table it is a God-given or natural signal that the state and the employer have no business measuring. The fight over the children's growth curves sits between the two.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. Reduced-pleasure reports hold at ~10–15% of long-term users. The 2031 retatrutide postmarketing data made it measurable: a small, dose-dependent effect, clinically meaningful in ~6% at top dose. The class label now lists 'decreased interest or pleasure'. 'Calm/focus' subscriptions shrank from ~1.5–2M to ~1.0M after the FTC consent orders. Surveys suggest ~30% of oral users take planned breaks, mostly on Foundayo, whose shorter half-life makes a weekend off practical. Weekly injectables do not allow this.",
+      "framing": "A side effect people manage. People still say 'the grey', and clinicians now say 'labelled reward blunting'. Drug holidays, dose step-downs before weddings or launches, and 'Monday restarts' are ordinary practice and a frequent sitcom joke.",
+      "effect_on_work": "Employers dropped most 'focus' perks after the consent orders and the anhedonia data, because the liability looked bad. Outcome-based wellness programmes now push the other way, rewarding weight results and adherence. PDC counts refills, not pills swallowed, so weekend holidays are invisible to it, and some insurers are piloting outcome-only metrics instead. DOT apnea clearance still effectively requires tirzepatide for some drivers. Unions extended their contract language barring employers from seeing adherence data, so it now covers wellness-programme weigh-ins.",
+      "effect_on_art_and_play": "'Off-dose' art is no longer a niche credit; most working musicians and comics mention their schedule. Short, intense leisure such as sauna, tasting flights and weekend festivals clusters on holiday days. Sports-betting handle shows a weekend-heavy pattern.",
+      "effect_on_intimacy": "Sex therapists routinely build plans around holidays. Couples report scheduled wanting: Friday-night desire, quiet weekdays. People on weekly injectables envy pill users their flexibility.",
+      "effect_on_politics": "Body politics is now a live cleavage. In Sep 2032 Oklahoma passed the Appetite Privacy Act, barring state-regulated plans and employers from premium differentials based on weight, weigh-ins or incretin adherence; self-insured employers are suing on ERISA grounds. Missouri and Arkansas have copycat bills. The HRSA renewal survived on a bipartisan vote but drew 'pacification pill' rhetoric from both flanks. Candidates are asked about their own use and their children's.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-access on products: the 50 mg oral approval, MariTide, and negotiated price steps. Cautious on children: the June 2032 Drug Safety Communication and a 2033 advisory committee. Enforcement against the gray market has stiffened against vendors, with import alerts on chemical suppliers and the first DOJ indictment, but still not against users.",
+      "subsidy_or_mandate": "The HRSA Community Incretin Access Program was renewed and expanded to $6.6B in FY2032, adding free oral semaglutide 25 mg at FQHCs. It is still discretionary and still asks only for refill pickup. The Medicare Bridge was renewed through 2033 at $225/$35 with continuation criteria. The ACA cessation mandate and AUD parity are unchanged. No one is mandated to take the drug, but coverage increasingly comes with conditions.",
+      "conditioning_or_surveillance": "Coverage is now conditional across payers. Seven Medicaid states run PDC and weigh-in waivers with lockouts. The Bridge applies response and adherence continuation tests. About a third of covering employers run outcome-based premium differentials. Free HRSA sites remain the only no-strings channel, so the two-tier system now runs through every income band.",
+      "workforce_or_military": "DOT apnea screening still effectively requires tirzepatide for some drivers. The Army keeps its contested recruit policy. The VA uses semaglutide for AUD and has added the 50 mg pill to its formulary.",
+      "geopolitics_of_supply": "Section 232 tariffs remain, but negotiated TrumpRx pricing absorbs them. India's generic tirzepatide exports and China's research-chemical orforglipron analogues are standing trade-talk items. Indian API still feeds US 503A compounders, and the oral small-molecule gray market is the new front because it needs no cold chain.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-03",
+        "event": "Interim retatrutide postmarketing study reports a small, dose-dependent anhedonia-scale shift; the FTC simultaneously finalises consent orders with 11 telehealth 'calm/focus' brands barring untested efficacy claims; FDA later adds 'decreased interest or pleasure' to class adverse-reaction sections",
+        "driver": "personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2031-08",
+        "event": "FDA approves Wegovy pill 50 mg after a head-to-head trial shows 16.9% weight loss vs 16.4% for injectable Wegovy; it launches on TrumpRx at $249, and Lilly answers by cutting Zepbound's portal price from $449 to $299 and Foundayo to $149–199",
+        "driver": "next_gen_launch: oral_parity; price_path: managed_decline"
+      },
+      {
+        "date": "2031-12",
+        "event": "Year-end omnibus renews the Medicare GLP-1 Bridge through 2033 at $225/month with a $35 copay but adds 6-month response and PDC continuation tests and annual DEXA for 65+, and funds HRSA's incretin program at $6.6B for FY2032 with free oral semaglutide added at community health centres",
+        "driver": "state_action: subsidy; coverage_shift: mandate_or_conditioning"
+      },
+      {
+        "date": "2032-02",
+        "event": "FDA import alert targets Chinese chemical suppliers selling 'research-use' orforglipron analogues as poison centres log a hepatotoxicity cluster; DOJ indicts a Florida peptide distributor as an estimated 12.9M Americans use gray-market incretins",
+        "driver": "market_shock: gray_market_resurgence"
+      },
+      {
+        "date": "2032-06",
+        "event": "Interim results from the mandated liraglutide 6–11 registry show slower height velocity, lower spinal bone accrual and a pubertal-timing signal in girls who started before 10; FDA issues a Drug Safety Communication and schedules a 2033 pediatric advisory committee",
+        "driver": "safety_signal: pediatric_developmental"
+      },
+      {
+        "date": "2032-09",
+        "event": "Oklahoma enacts the Appetite Privacy Act banning weight- and adherence-based premium differentials after a summer of Full Table supper rallies in Tulsa; a coalition of self-insured employers sues on ERISA preemption grounds",
+        "driver": "cultural_response: backlash_body_politics"
+      }
+    ],
+    "open_tensions": [
+      "Coverage now comes with strings (Bridge response tests, seven-state Medicaid lockouts, employer outcome premiums), while HRSA hands out the same molecule free and unconditioned. Oklahoma's law and the ERISA suit will decide whether states can stop employers from pricing bodies.",
+      "The pediatric growth signal is interim and confounded by reduced intake, yet ~120k children aged 6–11 remain on drug. The 2033 advisory committee must decide on a label built on generics that cost $80 a month and are subsidised by the same government issuing the warning.",
+      "Generic semaglutide is due in the US in 2033, but the gray market is already shifting to unregulated small-molecule orals that need no cold chain, so cheaper legal supply may not pull those users back.",
+      "Drug holidays are invisible to refill-based adherence metrics, so payers are moving toward outcome-only conditioning. That would make weight itself the price of coverage."
+    ],
+    "still_true": [
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Retatrutide still lists at $1,499 a month, is supply-allocated, has no TrumpRx cash price, and carries its bone and body-composition monitoring section.",
+      "Indiana's and Arkansas's 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with a 12-month lockout after two misses, and the disability-rights challenge is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "The ACA preventive mandate still requires plans to cover semaglutide for smoking cessation for two 90-day courses a year."
+    ]
+  },
+  "prose": {
+    "headline": "One in Four, With Strings: The Pill Caught the Needle, Coverage Got a Scale, and Tulsa Set the Table",
+    "world_in_600_words": "At the end of 2032 about seventy-six million American adults take an incretin drug, a little over one in four. Most of the growth is in the middle of the country's income distribution. That traces to a single approval. In August 2031 the FDA cleared a 50-milligram Wegovy pill that matched the injection in a head-to-head trial, and Novo put it on the federal cash portal at $249 a month. Lilly cut Zepbound to $299. Starter pills now cost $149. Nobody pays the $1,349 list price for Wegovy. Retatrutide is still $1,499 and still rationed, so the strongest results still belong to people with a concierge doctor and a coach.\n\nCheaper drugs did not mean looser coverage. The year-end omnibus renewed Medicare's Bridge at a lower price and a lower copay, but it added tests. A patient who has not lost five percent by six months, or whose pharmacy records show missed refills, loses coverage. Seven states now run Medicaid programmes with weigh-in kiosks and lockouts. About a third of employers that cover the drugs tie premiums to results, and a worker who misses targets pays more. Employer coverage rose because the strings made it affordable. The federal free-provision programme grew to $6.6 billion and added the pill at community health centres, where the only requirement is to collect it. The most conditional coverage and the least conditional now sit a few blocks apart in the same city.\n\nThe quieting effect that wellness brands used to sell is now just a complaint. A postmarketing study in 2031 measured it: small, dose-dependent, real for a minority at high doses. The FTC made the 'calm and focus' companies stop making claims they had never tested, and the label now says 'decreased interest or pleasure'. People manage it the way they manage hangovers. Many switch to the shorter-acting Lilly pill so they can skip Saturdays. Refill-based adherence checks cannot see a skipped weekend. Bars and restaurants can, and they now make their money on Friday and Saturday nights.\n\nThe gray market has grown with everything else, to almost thirteen million people. Compounded 'personal doses' still ship. Indian generics arrive by mail. The new product is small-molecule pills from Chinese chemical suppliers, sold as research compounds, which need no refrigeration and cost forty dollars. Poison centres logged a cluster of liver injuries in February. The Justice Department indicted one distributor. Users are not charged.\n\nIn June the mandated registry for children aged six to eleven on generic liraglutide reported interim results. Those children grew about six millimetres a year less than matched peers, gained less bone in the spine, and girls who started early showed a hint of later puberty. Nobody knows yet whether the effects reverse, or whether smaller meals rather than the molecule explain them. The FDA asked doctors to measure the children every six months and scheduled an advisory committee for 2033. New starts in that age group fell by about forty percent within a quarter.\n\nThe backlash began in Tulsa church halls. The Full Table movement joins evangelical congregations, revived fat-acceptance groups and natural-health parents who agree on little except that appetite is not an employer's business. Its Sunday suppers became rallies. In September Oklahoma barred premiums tied to weight or adherence, and self-insured employers sued within weeks. Missouri and Arkansas have similar bills.\n\nSnack and spirits volumes fell again. Drugmakers booked record volume at lower prices, raised their litigation reserves for the sixty-one thousand stomach-injury claims in Philadelphia, and began planning for generic semaglutide in 2033. From outside the country looks steadier than it has in years. Closer up, people's bodies are being measured more than ever.",
+    "a_day_in_the_life": "Teresa Hollins clocks in at 6:40 in sterile processing at the hospital system in south Tulsa. She swallows her pill in the break room with exactly four ounces of water and waits thirty minutes before coffee, as the leaflet says. Fifty milligrams, forty-dollar copay. The wellness portal pings: quarterly weigh-in due by Friday or her premium goes up a hundred and twelve dollars a month.\n\nAt ten she steps on the kiosk by the cafeteria. 191.4. The screen shows a green check, and then an advertisement for protein shakes.\n\nAt lunch she reads the pediatric endocrinologist's message about Caleb again. Height check moved up to November. Bring a three-day food diary. Caleb is nine and has taken liraglutide since he was seven. He grew an inch and a quarter last year. His cousin grew two.\n\nHer sister Renée texts a photo from the Full Table supper at Grace Fellowship: a long table, sheet cakes, kids holding a banner that reads LET THEM GROW. Come Sunday, bring Caleb. Teresa types something, deletes it, and sends a thumbs-up.\n\nShe drives home past the clinic on Peoria where the line for the free pill runs out the door. Nobody there gets weighed.\n\nAt dinner Caleb asks for seconds of rice. She watches the spoon. She says yes.\n\nAfter he's asleep she opens the telehealth app and asks whether she can switch to Foundayo, the one you can skip on weekends. The doctor's reply says that would restart her six-month response window, and the premium program would count it as a new enrollment.\n\nShe closes the app and sets out tomorrow's pill."
+  }
 }

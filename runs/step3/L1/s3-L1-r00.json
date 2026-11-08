@@ -35,7 +35,301 @@
     "state_action": "none",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:57:12Z"
+  "created_at": "2026-11-08T06:57:12Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01MZDx64e9vE5v1HkQQthfpv",
+        "custom_id": "s3-L1-r00",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 17532,
+        "output_tokens": 22337
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01WUkAiZJ29naC2fKL1BJcrR",
+        "custom_id": "s3-L1-r00",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 30167,
+        "output_tokens": 12076
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2032,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 18.7,
+      "us_adults_ever_used_pct": 28.9,
+      "by_income_third_pct": {
+        "top": 26,
+        "middle": 17.1,
+        "bottom": 13
+      },
+      "by_age_band_pct": {
+        "18_29": 10.5,
+        "30_49": 19.5,
+        "50_64": 30,
+        "65_plus": 13
+      },
+      "pediatric_under_18_on_drug_pct": 0.8,
+      "cycled_off_and_on_pct": 43,
+      "note": "FICTIONAL. Arithmetic: ever-used 28.9% minus current 18.7% leaves 10.2% of adults who used and are now off. New ever-users since 2030 add 2.4 pts: 1.8 are on and 0.6 have already stopped. Of the 26.5 pts who had used by 2030, 16.9 are on and 9.6 are off. Within the 2030 cohort, 9.6 of the 18.8 then on stayed on (51% two-year persistence, slightly better than 2028–30 because of monthly MariTide and AUD courses), and 9.2 stopped. They joined the 7.7 already off, making a pool of 16.9. Of that pool, 7.3 restarted, which is 43% over two years and below the 55% seen in 2028–30 because employer coverage loss and the 2031 repricing kept stoppers off. So 9.6 + 7.3 = 16.9 on and 16.9 − 7.3 = 9.6 off, giving 18.7 on and 9.6 + 0.6 = 10.2 off overall. Cycling: 8.9 pts had cycled by 2030, and about 3.4 pts of the restarters are first-time restarters, so 12.3 of 28.9 = 43%. Current users ≈ 50.3M of ≈269M adults. Age bands weighted by adult shares (20/33/24/23%): 2.1 + 6.4 + 7.2 + 3.0 = 18.7. 65+ at 13% ≈ 8.0M, rising slightly as the 2030 50–64 cohort ages in. The NAION warning caused some older diabetics to stop but did not offset that ageing. 18–29 rose because AUD and cessation courses are the main way young adults get covered drug. Income thirds: (26 + 17.1 + 13)/3 = 18.7. The middle third fell because employer weight-management coverage was dropped. The bottom third held at 13 as HRSA waitlists were offset by Medicaid and cash oral starters, and many bottom-third users switched from liraglutide to cash oral semaglutide or gray pens. Off-drug is now ≈27.4M adults who used and stopped (10.2% of 269M) plus ≈191M who never used. Among the stopped, the largest new group is middle-income workers whose plans dropped weight coverage in the January 2031 and 2032 renewals and who did not qualify through an AUD, cessation, diabetes or cardiac code. Pediatric: 0.8% of ≈73M ≈ 585k, of whom ≈100k are aged 6–11. Pediatric starts slowed during the 2031 liraglutide shortage. The pediatric registry has enrolled about 31k children, and its first bone-accrual interim is now scheduled for 2033. Teens who started on semaglutide in 2021–22 are now in their early twenties with about 9 years of exposure."
+    },
+    "access": {
+      "cash_price_usd_month_low": 229,
+      "cash_price_usd_month_high": 1599,
+      "public_coverage": "Medicare GLP-1 Bridge: the December 2031 health-extenders package carried it unchanged through September 2033. Payment stays at $275/month, the copay at $50, and the DEXA/strength counselling visit for 65+ stays. About 2.4M beneficiaries use it for obesity: 2.4M × $275 × 12 ≈ $7.9B/yr. Medicare overall pays ≈16.7% of incretin fills, ≈8.4M users (≈8.0M aged 65+ plus ≈0.4M disabled under-65). Medicaid pays ≈11.5%, ≈5.8M users at $275: 5.8M × $275 × 12 ≈ $19.1B/yr combined federal and state. The Indiana and Arkansas waivers are unchanged. HRSA Community Incretin Access Program: continuing resolutions held it at the FY2030 level of $4.5B for FY2031 and FY2032, but the federal liraglutide contract price rose from $85 to $130 after the Hyderabad API import alert. Enrolment was capped and waitlists opened: 1.5M liraglutide × $130 × 12 = $2.34B, plus 0.9M cessation/AUD semaglutide × $199 × 12 = $2.15B, ≈ $4.49B against $4.5B, ≈2.4M users (down from 3.0M).",
+      "employer_coverage_pct": 48,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 80+ semaglutide brands and the first approved generic tirzepatides, at $10–60/month. Canada, Brazil, Mexico, Turkey and China sell generic semaglutide, and China exports finished pens to Latin America. Generic oral semaglutide is available in ~180 countries. In the US, patent settlements now date the first generic semaglutide entry to 2033, and tirzepatide later.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Payer mix of ≈50.3M users: commercial 30.0% (15.1M), Medicare 16.7% (8.4M), Medicaid 11.5% (5.8M), HRSA 4.8% (2.4M), cash/direct 21.1% (10.6M), gray 15.9% (8.0M) = 100%. Price shock: the Section 232 rule's scheduled second-stage rate took effect in January 2031. Portal cash prices rose: semaglutide from $349 to $399, tirzepatide from $449 to $499, and oral starting doses from $199 to $229. In March 2031 the FDA import alert on a Hyderabad API maker cut supply to US generic liraglutide and to 503A compounders. Generic liraglutide cash went from ~$150 to $249, compounded semaglutide from $129–249 to $179–319, and Indian mail pens to $15–60 after customs seizures. MariTide lists at $1,599 per monthly dose. Amgen sells it direct for $649 to patients with an obesity diagnosis and a prescriber. Wegovy list is still $1,349, and retatrutide is still $1,499 and allocated. Commercial users fell from 17.8M to 15.1M despite the new monthly product. Employers dropped weight-management coverage, and the commercial book is now mostly diabetes, cardiovascular, OSA, CKD, AUD and cessation codes. AUD is the fastest-growing commercial indication because parity law makes it hard to exclude. Plans now require a clinician-administered AUDIT-C or a documented SUD visit, and one large PBM audits AUD prior authorisations retroactively. Cash/direct rose from 7.0M to 10.6M. Most of the newcomers are middle-income people dropped by employers who now pay $229–499. The 'focus' wellness subscriptions inside this group shrank to ≈0.5M. Gray fell from 9.0M to 8.0M because of the supply squeeze, not enforcement."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. US generics)",
+        "GLP-1 agonist / GIPR antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide, Aug 2031)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, Apr 2029)",
+        "smoking cessation adjunct (semaglutide, Mar 2029)",
+        "alcohol use disorder (semaglutide, Jun 2030; tirzepatide, Apr 2032; ASAM 2032 update lists incretins as a first-line option alongside naltrexone and acamprosate)"
+      ],
+      "mainstream_offlabel_uses": [
+        "semaglutide for ages 6–11 under pediatric endocrinology, reduced during the 2031 liraglutide shortage",
+        "'metabolic health' and longevity regimens with DEXA and strength coaching in the top income third",
+        "low-dose oral semaglutide or Foundayo 'focus' subscriptions, now a shrinking niche (~0.5M) after the anhedonia label and FTC consent orders",
+        "research-peptide retatrutide in gyms, now pricier and patchier after the API alert",
+        "gambling and cannabis reduction, still anecdotal; two phase 2 gambling trials under way"
+      ],
+      "pipeline_note": "FICTIONAL. Driver next_gen_launch (monthly_or_implant) is realised by MariTide, whose BLA was filed in July 2030 and approved in August 2031. Mean loss is ≈17–20% at 72 weeks, with front-loaded vomiting at initiation that is managed by dose-escalation. Supply was tight through 2032, and it reached ≈1.6M users by year-end, mostly commercial and Amgen-direct cash. No implant is on the US market. Tirzepatide for AUD is an sNDA, approved in April 2032. Amycretin was resubmitted in 2031 after Novo's North Carolina site passed reinspection, with a PDUFA date in Q1 2033. Survodutide went to a second hepatic advisory committee in 2032, and a decision is expected in 2033. Bimagrumab combinations remain in phase 3. Retatrutide is still allocated and still holds best efficacy at ~28%. US generic semaglutide is settlement-dated to 2033, so generic_us stays false."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. MariTide's front-loaded vomiting at initiation drove early stops at launch. Rates remain higher among gray-market self-titrators.",
+        "regulatory_response": "Labelled. MariTide label requires a slower escalation schedule."
+      },
+      {
+        "effect": "Gastroparesis, ileus and intestinal obstruction (mass tort)",
+        "status": "established",
+        "prevalence_note": "Delayed gastric emptying on drug is established. Persistence after stopping is still disputed. MDL 3094 passed ~58,000 filed and tolled claims. A plaintiff won the first bellwether (Mar 2030), and the defence won the second (Sep 2031), so settlement talks are under way but unresolved.",
+        "regulatory_response": "Ileus labelled. FDA still declines to add persistent gastroparesis. Manufacturers raised reserves."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss. Absolute numbers are flat now that adoption has plateaued.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation in long-term data; low absolute risk. About 7,000 claims sit in the MDL, and the second bellwether jury rejected causation.",
+        "regulatory_response": "Labelled; claims consolidated in MDL 3094."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Population problem in 65+, about 1.5× sarcopenia criteria after more than 2 years. Worst in low-efficacy, unmonitored users and in middle-income users who moved to cash after losing coverage and dropped coaching.",
+        "regulatory_response": "2028 class label stands. The Bridge counselling visit is retained. HRSA still has no body-composition requirement."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "HR ~1.3–1.4 in 65+ long-term and cycling users, concentrated in women. There are still no pediatric bone-accrual results, and the registry interim slipped to 2033.",
+        "regulatory_response": "DEXA recommended in 65+ and postmenopausal women. Pediatric registry and bone study ongoing."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischemic optic neuropathy)",
+        "status": "established",
+        "prevalence_note": "A 2031 pooled analysis of FDA Sentinel, Nordic registries and two US claims networks found HR ≈2.0 in users with type 2 diabetes and ≈1.4 in obesity without diabetes. The excess is roughly 1–3 cases per 10,000 person-years in diabetic users over 50 and much lower in younger users, an estimated 2,000–4,000 excess cases a year nationally. The signal was consistent across semaglutide, tirzepatide and liraglutide, which is why the warning is class-wide.",
+        "regulatory_response": "In October 2031 the FDA issued a class Warnings & Precautions for NAION across all incretin products, including MariTide. It advises prompt evaluation of sudden painless vision loss and stopping if NAION is confirmed, and recommends a baseline eye exam for people with prior NAION or a 'crowded disc'. EMA upgraded its label from 'very rare' to a warning. MDL 3094 opened a separate NAION track, with ~9,000 claims."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association; unchanged.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / anhedonia",
+        "status": "established",
+        "prevalence_note": "In 2031 the validated retatrutide postmarketing data (SHAPS and DARS scales) found clinically meaningful anhedonia in ~3–5% of long-term users, dose-dependent and reversible on dose reduction. Subjective 'less pleasure' reports remain at ~10–15%. The validated rate is lower than the surveys implied, which undercut 'calm' marketing aimed at people without obesity.",
+        "regulatory_response": "October 2031 class labelling lists 'reduced pleasure / anhedonia' as an uncommon adverse reaction. FTC consent orders (2032) with four telehealth brands bar 'calm/focus' efficacy claims that conflict with the label."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Driven more by structural stops in this window, mainly employer coverage drops, HRSA waitlists and the 2031 liraglutide shortage.",
+        "regulatory_response": "Indiana waiver litigation ongoing; no federal rule."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein insufficiency signals persist in older and low-income users.",
+        "regulatory_response": "Professional guidance only."
+      },
+      {
+        "effect": "Long-horizon, adolescent, pediatric and cycling effects",
+        "status": "emerging",
+        "prevalence_note": "About ten years of adult follow-up and about nine years in the earliest adolescent starters. Cycling now affects 43% of ever-users, and there are no cycling-specific outcome trials. ~100k children aged 6–11 are on the drug.",
+        "regulatory_response": "Postmarketing requirements; pediatric registry interim due 2033."
+      },
+      {
+        "effect": "Compounded, counterfeit and research-peptide harms",
+        "status": "established",
+        "prevalence_note": "A February 2031 cluster of endotoxin-related sepsis, ~140 hospitalisations and 3 deaths across six states, was traced to compounded semaglutide made from a single Hyderabad API lot. Poison-centre incretin calls are flat at the 2030 level.",
+        "regulatory_response": "FDA import alert on the API maker (Mar 2031), recalls by 11 503A pharmacies and state board actions. Still no prosecution of individual users."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent; more often reported in research-peptide users.",
+        "regulatory_response": "Labelled."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "Adoption has plateaued, so the drug-driven volume loss is now a level shift rather than an accelerating trend. US snack and confectionery volumes are roughly flat on 2030's lowered base. Majors finished their divestments of indulgent brands, and private equity owners are running those brands for cash. Protein and fibre formats keep growing but more slowly. A small 'full plate' and heritage-recipe marketing niche has grown around the backlash in the South and Midwest.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Tirzepatide's AUD approval and parity coverage keep reaching heavy drinkers, who are the category's profit core. US spirits volumes fall another ~4% over two years and beer contracts. Non-alcoholic lines grow. Tobacco excise forecasts in high-uptake states assume further cessation-driven decline.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Value-volume chains stopped closing units at the 2030 pace once adoption plateaued. Family-style and 'church supper' formats do well in Tulsa, Little Rock and suburban Houston. Alcohol attach rates are still falling.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size retail stabilised for the first time since 2025, helped by stoppers regaining weight and by fat-liberation brands marketing 'unshrunk' lines. Athletic-cut tailoring is still the premium segment.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Strength-and-DEXA studios stopped expanding when employer wellness stipends were cut. Low-cost gyms are steady. The research-peptide gym trade is pricier and patchier since the API alert.",
+        "direction": "adapted"
+      },
+      "insurance": {
+        "state": "Pharmacy trend slowed from ~+14% to ~+7%. Employer coverage for weight management fell from 57% to 48%, mostly mid-size employers at the 2031 and 2032 renewals. Coverage is concentrated on diabetes, cardiac, OSA, CKD and the parity-protected AUD and cessation codes, so the plans' main cost fight is now AUD prior-auth verification. Clinic-administered monthly MariTide lets the remaining weight-management plans tie payment to an in-person injection and weigh-in.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Volume is flat and net prices are up, so revenue still grows in the low single digits. Lilly leads. Amgen has entered with MariTide but is supply-limited. Novo is recovering, with amycretin pending. Litigation reserves rose with the NAION track. The generic liraglutide contractors had a bad 2031 because their API source sat behind an import alert.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Bodies are read as before, by molecule and by payer, with one new reading: a heavier body in a congregation or a fat-liberation space may be a statement rather than a circumstance. Regain bodies are common in middle-income suburbs, where people lost employer coverage and are visibly losing the result.",
+      "thinness_and_class": "The Charlotte build persists in finance. Middle-income workers in Tulsa, Columbus and Phoenix who lost coverage now split three ways: they pay $399–499 cash, qualify through an AUD or cessation code, or regain. The class line is sharper in the middle than at the bottom.",
+      "eating_as_ritual": "In Tulsa, a network of nondenominational churches runs the 'Daily Bread' movement. It frames appetite as God-given, praises voluntary fasting and dismisses 'chemical fasting'. Members hold monthly full-table suppers, which several dozen congregations in Oklahoma, Arkansas and north Texas have copied. In Oakland and on several West Coast campuses, a revived fat-liberation scene calls itself 'Unshrunk' and holds public eat-ins. The two movements share almost nothing except a dislike of the drug.",
+      "dating_and_intimacy": "Profiles state the molecule or say 'never/never will'. 'Off for good' has become a value signal, much as 'sober' once was. Daily Bread circles have their own matchmaking groups.",
+      "meaning_of_appetite": "Appetite is still clinical for most of the country. For a vocal minority it is identity: a sign of faith, health or refusal. AUD prior-auth audits have made a drinking diagnosis on a medical record something people think about before they ask for help.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "FICTIONAL. Validated anhedonia is ~3–5% of long-term users and dose-dependent, and is now labelled 'uncommon'. Subjective 'less pleasure' reports run at 10–15%. 'Focus' subscriptions fell from 1.5–2M to ≈0.5M after the label change and the FTC consent orders. Most employers that paid for them as a perk dropped them in the 2032 renewals, alongside weight coverage.",
+      "framing": "Side effect. Clinicians say 'uncommon anhedonia, reversible with dose reduction'. Users still say 'the grey' and treat it as something to manage, not something to buy. The backlash calls it proof the drug 'takes your soul', a claim the 3–5% figure does not support and the movement ignores.",
+      "effect_on_work": "'Focus' perks are gone at most employers. Unions now fight clinic-administration records from monthly MariTide, which show adherence to employer-sponsored clinics, under the same contract language that bars viewing PBM data. Truck drivers avoid the AUD route because an alcohol diagnosis can jeopardise their DOT medical card, so tirzepatide for apnea remains their channel.",
+      "effect_on_art_and_play": "The off-dose circuit has split. Some acts merged into the backlash, playing Daily Bread revivals and Unshrunk eat-ins. Others dropped the label once the effect was declared uncommon. Sports-betting operators no longer blame medication on earnings calls.",
+      "effect_on_intimacy": "Sex therapists still ask about dose, but expect a problem less often. Couples where one partner has stopped for the faith or the politics and the other has not are a new counselling category.",
+      "effect_on_politics": "The backlash is a political vehicle. Daily Bread endorsed candidates in Oklahoma's 2032 state legislative primaries. A fat-liberation caucus in California pushed weight-neutral health curricula. The NAION warning and MDL ads feed anti-pharma messaging on the right and the left. Neither side has moved adoption.",
+      "severity": 4
+    },
+    "state": {
+      "regulatory_posture": "Safety-tilted on labelling, with a NAION class warning and an anhedonia adverse reaction. Indications kept expanding through supplements (tirzepatide for AUD), and the new class (MariTide) was approved. Enforcement remains selective: the API import alert responded to deaths, not to the gray market as such.",
+      "subsidy_or_mandate": "No new state action. HRSA was carried on continuing resolutions at $4.5B, which in real terms is a cut, so waitlists formed. The Medicare Bridge was extended unchanged in the December 2031 extenders package. The ACA cessation mandate and parity still apply.",
+      "conditioning_or_surveillance": "The Indiana and Arkansas waivers are unchanged, and the three pending state applications have not been approved. The new surveillance comes from the private side: employer plans that cover only clinic-administered monthly MariTide with weigh-in at injection, and PBM audits of AUD diagnoses.",
+      "workforce_or_military": "DOT apnea screening keeps tirzepatide as a de facto requirement for some drivers. The VA expanded AUD use to tirzepatide. The Army's recruit policy is unchanged and still contested.",
+      "geopolitics_of_supply": "The scheduled second-stage Section 232 rate repriced branded product. The Hyderabad import alert showed that US generic liraglutide, compounders and the gray market all draw on the same few Indian API sources. India pressed in trade talks for the alert to be lifted, and it was partly lifted for two other facilities in 2032.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2031-03",
+        "event": "Weeks after the Section 232 rule's scheduled second-stage tariff lifts TrumpRx cash prices to $399 for semaglutide, $499 for tirzepatide and $229 for oral starters, the FDA places a Hyderabad API maker under import alert after a sepsis cluster linked to compounded semaglutide. US generic liraglutide goes short, and the HRSA contract price rises from $85 to $130.",
+        "driver": "price_path: shock_up"
+      },
+      {
+        "date": "2031-08",
+        "event": "FDA approves Amgen's MariTide, a monthly injection, for chronic weight management. It lists at $1,599 a dose, with a $649 direct-cash price, and supply is limited.",
+        "driver": "next_gen_launch: monthly_or_implant"
+      },
+      {
+        "date": "2031-10",
+        "event": "FDA adds a class-wide Warnings & Precautions for NAION to every incretin label after a pooled Sentinel–Nordic analysis, and the same labelling update lists anhedonia as an uncommon adverse reaction. MDL 3094 opens a NAION track.",
+        "driver": "safety_signal: vision_class_label; personality_layer: niche_side_effect"
+      },
+      {
+        "date": "2032-01",
+        "event": "Benefits surveys show employer coverage for weight management down to 48% after the 2031 and 2032 renewals. Plans keep diabetes, cardiac and parity-protected AUD and cessation codes, and a major PBM begins retroactive audits of AUD prior authorisations.",
+        "driver": "coverage_shift: employer_retreat"
+      },
+      {
+        "date": "2032-04",
+        "event": "FDA approves tirzepatide for alcohol use disorder, and ASAM's guideline update lists incretins as a first-line option alongside naltrexone and acamprosate",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2032-06",
+        "event": "The Tulsa-based 'Daily Bread' church movement holds a 20,000-person full-table supper at the Oklahoma State Fairgrounds days before state primaries. Unshrunk fat-liberation groups stage eat-ins in Oakland and Portland the same weekend.",
+        "driver": "cultural_response: backlash_body_politics"
+      }
+    ],
+    "open_tensions": [
+      "Employer retreat routes middle-income users through parity-protected AUD and cessation codes. Plans now audit those diagnoses, and an alcohol diagnosis carries consequences for DOT cards, life insurance and custody disputes. The diagnostic record is becoming the real price of coverage.",
+      "HRSA is flat-funded at $4.5B while liraglutide costs more, so waitlists are growing. Settlement-dated generic semaglutide in 2033 could either rescue the programme or make it look obsolete, and FY2033 appropriations will decide which.",
+      "The NAION class warning has handed the MDL and the backlash a confirmed harm just as clinic-administered monthly MariTide makes adherence visible to employers. Settlement, labelling and surveillance fights are converging.",
+      "Roughly 100k children aged 6–11 and nearly 600k under-18s are on the drug with no bone-accrual data, and the registry interim has slipped to 2033."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Retatrutide still lists at $1,499 a month, is supply-allocated, has no TrumpRx cash price, and carries its bone and body-composition monitoring section.",
+      "Indiana's and Arkansas's 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins, with a 12-month lockout after two misses, and the disability-rights challenge is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned."
+    ]
+  },
+  "prose": {
+    "headline": "Fifty Million Still On It, Fewer Bosses Paying, and Now the Eye Doctor Wants a Word",
+    "world_in_600_words": "At the end of 2032 the number of Americans on an incretin drug is almost exactly what it was two years ago, about fifty million, nearly one adult in five. The headline number has not moved, but the people behind it have changed. Some ten million stopped in the past two years, and a similar number started or restarted. More than four in ten people who have ever used the drug have stopped and come back at least once.\n\nThe price went up again. In January 2031 the second stage of the 2029 pharmaceutical tariff took effect, and the government cash portal moved semaglutide to $399 a month and tirzepatide to $499. Weeks later, three people died and about 140 were hospitalised with sepsis traced to compounded semaglutide made from one Hyderabad lot. The FDA's import alert on that supplier also cut off the API behind America's generic liraglutide. That is the drug the federal community health programme gives away. The programme's budget has been frozen at $4.5 billion by continuing resolutions, so when its price per patient rose, enrolment fell from three million to about 2.4 million, and the community clinics now keep waitlists.\n\nEmployers did the rest. At two rounds of renewals, mid-size companies dropped weight-management coverage, and fewer than half now pay for it. They kept what they had to keep: diabetes, the heart and kidney indications, and the alcohol and smoking courses protected by parity and preventive-care law. Alcohol use disorder is now the busiest way into commercial coverage, especially since tirzepatide was approved for it in April 2032. Benefits managers have responded with audits. Truck drivers avoid that route because an alcohol diagnosis can cost them a DOT medical card.\n\nThe middle of the income distribution felt it most. In Tulsa, Columbus and Phoenix, people who lost coverage now pay cash, qualify through a diagnosis, or regain the weight in public. Cash users rose by more than half. The gray market shrank slightly, but because the supply was squeezed, not because anyone enforced against it.\n\nThe new drug is Amgen's MariTide, a single injection a month. It is supply-limited and expensive, and it changes what adherence means. You no longer choose each Sunday whether to keep going. Some employer plans that still cover weight loss pay only for doses given in a clinic, with a weigh-in at each visit. The unions that won bans on employers seeing pharmacy data are now fighting over clinic logs.\n\nIn October 2031 the FDA put an optic-nerve warning on every drug in the class. Large pooled data show that the risk of NAION, a sudden painless loss of vision in one eye, roughly doubles in older users with diabetes. The absolute numbers are small, a few thousand excess cases a year, but the warning is real, and ophthalmologists now see a steady stream of anxious patients for baseline exams. The same labelling update listed loss of pleasure as an uncommon side effect, at three to five percent in validated data. That ended most of the 'calm' and 'focus' subscription business. A sold feature became a disclosed risk.\n\nThe counter-movement is loud, local and divided. In Tulsa, the Daily Bread churches hold monthly full-table suppers and call the drug chemical fasting. Twenty thousand people came to the fairgrounds in June. In Oakland, Unshrunk holds eat-ins. Neither has changed the national number, but both have changed what a heavier body can mean: sometimes it is a circumstance and sometimes it is a statement. Plus-size retailers have stabilised. Spirits keep falling.\n\nNearly everyone can still get some version of the drug. What changed is the price of getting it: a diagnosis on your record, a monthly weigh-in, a waitlist, or the full cash price.",
+    "a_day_in_the_life": "Ray Delgado, forty-seven, dispatches HVAC crews out of a cinderblock office on East 11th in Tulsa. In January his company's plan stopped paying for Zepbound. At $499 cash he lasted six weeks. In March a telehealth doctor asked him how many beers he had on a weeknight, and he told the truth. Now semaglutide comes through his plan under the alcohol code. His copay is forty dollars, and he has a letter from the PBM saying the diagnosis may be reviewed.\n\nAt seven he injects in the truck, the pen on his knee and the heater running.\n\nAt ten he sits in an optometrist's chair at a strip mall while a young woman shines a light into his left eye and says 'crowded disc' as if it were weather. She prints him a sheet. Sudden vision loss, painless. Call immediately. He folds it into his wallet behind his driver's licence.\n\nAt lunch the crew orders brisket. He eats four bites and gives the rest to Marcus, who drives a service van and will not touch the alcohol route because of his medical card. Marcus is regaining steadily and doesn't talk about it.\n\nAt six his wife Lena sets out the folding chairs at Grace Fellowship for the Daily Bread supper. She has been off for a year. The church has decided appetite is a gift. Ray carries the chafing dishes in.\n\nThe pastor blesses the full table. Ray fills a plate he will not finish and sits beside his wife. Neither of them mentions it. He has had one beer this week."
+  }
 }
