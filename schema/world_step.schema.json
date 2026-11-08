@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ftrwrlds.com/glp-1000/world_step.schema.json",
+  "title": "GLP-1000 surviving worlds of one simulated step (world/stepN.json, N >= 1)",
+  "description": "Written by `sim.py select`. Step 0 is a bare world state (world/step0.json = data/step0_baseline.json) and does not use this wrapper.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["step", "year", "axis", "floor_used", "selected_at", "lineages"],
+  "properties": {
+    "step": {"type": "integer", "minimum": 1, "maximum": 5},
+    "year": {"type": "integer"},
+    "axis": {"type": "string"},
+    "floor_used": {"type": "integer"},
+    "selected_at": {"type": "string"},
+    "lineages": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^L[0-9]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["lineage", "parent_lineage", "ancestry", "source_run", "rank", "axis_badness", "world", "prose"],
+          "properties": {
+            "lineage": {"type": "string", "pattern": "^L[0-9]+$"},
+            "parent_lineage": {"type": "string", "pattern": "^L[0-9]+$"},
+            "ancestry": {
+              "type": "array",
+              "description": "run ids from step 1 to this step that produced this world, oldest first",
+              "items": {"type": "string"}
+            },
+            "source_run": {"type": "string"},
+            "rank": {"type": "integer", "minimum": 1},
+            "axis_badness": {"type": "number"},
+            "world": {"$ref": "world_state.schema.json"},
+            "prose": {"$ref": "run.schema.json#/properties/prose"}
+          }
+        }
+      }
+    }
+  }
+}
