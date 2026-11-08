@@ -8,7 +8,7 @@ scores and judge rationales for every run are in `runs/`.
 ## Step 1 · 2028 · axis of worst: health
 
 - Selected 2026-11-08T06:38:28Z from 50 run(s) of parent lineage(s) L0; seed 20261107
-- Generator claude-opus-5-5 · judge claude-sonnet-5-5
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5 · rubric v2
 - Weights: flourishing ×2, autonomy ×1, inequality ×1, public_health ×2, cohesion ×1, epistemic ×1
 - Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
 - Plausibility floor used: 6
@@ -31,7 +31,7 @@ Runner-up: `s1-L0-r24` (parent L0; axis badness 5.67, plausibility 7.03, generat
 ## Step 2 · 2030 · axis of worst: economy
 
 - Selected 2026-11-08T06:54:42Z from 50 run(s) of parent lineage(s) L1, L2, L3; seed 20261107
-- Generator claude-opus-5-5 · judge claude-sonnet-5-5
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5 · rubric v2
 - Weights: flourishing ×1, autonomy ×1, inequality ×2, public_health ×1, cohesion ×1, epistemic ×1, `economy` severity ×2
 - Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
 - Plausibility floor used: 6
@@ -54,7 +54,7 @@ Runner-up: `s2-L2-r31` (parent L2; axis badness 5.72, plausibility 7.58, generat
 ## Step 3 · 2032 · axis of worst: culture_and_body
 
 - Selected 2026-11-08T07:09:56Z from 50 run(s) of parent lineage(s) L1, L2, L3; seed 20261107
-- Generator claude-opus-5-5 · judge claude-sonnet-5-5
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5 · rubric v2
 - Weights: flourishing ×1, autonomy ×2, inequality ×1, public_health ×1, cohesion ×2, epistemic ×1, `body_and_culture` severity ×2
 - Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
 - Plausibility floor used: 6
@@ -77,7 +77,7 @@ Runner-up: `s3-L1-r16` (parent L1; axis badness 5.82, plausibility 8.05, generat
 ## Step 4 · 2034 · axis of worst: politics_and_state
 
 - Selected 2026-11-08T17:44:48Z from 50 run(s) of parent lineage(s) L1, L2, L3; seed 20261107
-- Generator claude-opus-5-5 · judge claude-sonnet-5-5
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5 · rubric v2
 - Weights: flourishing ×1, autonomy ×2, inequality ×1, public_health ×1, cohesion ×1, epistemic ×2, `state` severity ×2
 - Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
 - Plausibility floor used: 6

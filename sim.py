@@ -5,6 +5,7 @@
     python sim.py generate --step N [--n 50] [--seed S] [--dry-run]
     python sim.py judge    --step N [--dry-run]
     python sim.py select   --step N
+    python sim.py report
 """
 from __future__ import annotations
 
@@ -44,6 +45,8 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--step", type=int, required=True, choices=range(1, 6))
     s.add_argument("--force", action="store_true", help="redo a step that was already selected")
 
+    sub.add_parser("report", help="re-render lineage.md and write report/ (checks every selection reproduces)")
+
     return p
 
 
@@ -62,6 +65,9 @@ def main(argv=None) -> int:
     if args.cmd == "select":
         from glpsim import select
         return select.main(paths, args)
+    if args.cmd == "report":
+        from glpsim import report
+        return report.main(paths, args)
     raise SystemExit(f"unknown command {args.cmd}")
 
 
