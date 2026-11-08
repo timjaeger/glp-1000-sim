@@ -338,3 +338,29 @@ def test_missing_credentials_at_request_time_is_reported_and_leaves_no_trace(rep
     assert "no API credentials" in out and "Traceback" not in out
     assert not (repo.step_runs(1) / "_batch.jsonl").exists()
     assert not (repo.step_runs(1) / "_state_generate.json").exists()
+
+
+# ---------------------------------------------------------------- client construction
+
+def test_client_is_pinned_to_public_api_and_reads_glp_sim_api_key(monkeypatch):
+    """The cloud runtime sets its own ANTHROPIC_BASE_URL; it must not redirect our client,
+    and the key must come from GLP_SIM_API_KEY, not ANTHROPIC_API_KEY."""
+    pytest.importorskip("anthropic")
+    monkeypatch.setenv("ANTHROPIC_BASE_URL", "http://runtime-proxy.invalid")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "wrong-key")
+    monkeypatch.setenv("GLP_SIM_API_KEY", "dummy-not-a-key")
+    c = runner.get_client()
+    assert str(c.base_url).rstrip("/") == "https://api.anthropic.com"
+    assert c.api_key == "dummy-not-a-key"
+
+
+def test_missing_glp_sim_api_key_is_a_clear_error(repo, monkeypatch, capsys):
+    monkeypatch.delenv("GLP_SIM_API_KEY", raising=False)
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "would-be-ignored")
+    with pytest.raises(runner.MissingApiKey, match="GLP_SIM_API_KEY"):
+        runner.get_client()
+    assert G.main(repo, gargs()) == 1
+    out = capsys.readouterr().out
+    assert "GLP_SIM_API_KEY is not set" in out and "Nothing submitted" in out
+    assert "would-be-ignored" not in out and "Traceback" not in out
+    assert not (repo.step_runs(1) / "_state_generate.json").exists()

@@ -6,8 +6,10 @@ Safety properties:
     the step's recorded spend plus this batch's worst-case estimate.
   * A batch's id is written to runs/stepN/_state_<kind>.json the moment it is
     created, so an interrupted command is resumed with --resume, never resubmitted.
-  * The API key is read only by the anthropic client from its own environment
-    lookup; nothing here reads, prints or stores it.
+  * The API key comes from GLP_SIM_API_KEY, never ANTHROPIC_API_KEY (the cloud
+    runtime strips that one), and is handed straight to the client. The client is
+    pinned to https://api.anthropic.com so the runtime's own ANTHROPIC_BASE_URL
+    cannot redirect it. Nothing here prints, logs or stores the key.
   * Every run ends with a run file: ok, invalid (failed after one repair) or
     error (refusal, API error, expiry), with the raw output kept for invalid ones.
 
@@ -16,6 +18,7 @@ Safety properties:
 from __future__ import annotations
 
 import json
+import os
 import statistics
 import time
 from datetime import datetime, timezone
@@ -25,10 +28,36 @@ from .common import dump_json, load_json, step_year
 
 MAX_ERRORS_IN_REPAIR = 40
 
+API_KEY_ENV = "GLP_SIM_API_KEY"
+API_BASE_URL = "https://api.anthropic.com"
+
+
+class MissingApiKey(RuntimeError):
+    pass
+
 
 def get_client():
+    """Build the SDK client from GLP_SIM_API_KEY, pinned to the public API.
+
+    The key and base_url are passed explicitly, so the SDK never falls back to
+    ANTHROPIC_API_KEY or ANTHROPIC_BASE_URL from the environment."""
+    key = os.environ.get(API_KEY_ENV)
+    if not key:
+        raise MissingApiKey(f"{API_KEY_ENV} is not set in this environment. Add it to the cloud "
+                            f"environment's variables and start a new session (see CLAUDE.md).")
     import anthropic
-    return anthropic.Anthropic()
+    return anthropic.Anthropic(api_key=key, base_url=API_BASE_URL)
+
+
+def client_or_report():
+    """get_client(), or print why it failed and return None. Never prints the key."""
+    try:
+        return get_client()
+    except MissingApiKey as e:
+        print(f"{e} Nothing submitted.")
+    except Exception as e:
+        print(f"could not construct the Anthropic client ({type(e).__name__}). Nothing submitted.")
+    return None
 
 
 def now() -> str:
@@ -88,7 +117,7 @@ def submit(client, requests: list[dict]) -> str:
         # the SDK raises TypeError while building headers when it finds no credentials
         if "authentication" in str(e).lower():
             raise ApiFailure("batch create failed: the anthropic client found no API credentials "
-                             "(ANTHROPIC_API_KEY is not set in this environment)") from None
+                             f"({API_KEY_ENV} is empty or was not passed to the client)") from None
         raise
     return b.id
 
@@ -289,11 +318,8 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
         print(f"runs/step{step}/ already has run files but no generate state; refusing to overwrite them")
         return 1
 
-    try:
-        client = get_client()
-    except Exception as e:
-        print(f"could not construct the Anthropic client ({type(e).__name__}). "
-              "Is ANTHROPIC_API_KEY set in the environment? Nothing submitted.")
+    client = client_or_report()
+    if client is None:
         return 1
 
     gen_model = cfg["models"]["generator"]
@@ -424,11 +450,8 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
     if msg:
         print(msg); return 1
 
-    try:
-        client = get_client()
-    except Exception as e:
-        print(f"could not construct the Anthropic client ({type(e).__name__}). "
-              "Is ANTHROPIC_API_KEY set in the environment? Nothing submitted.")
+    client = client_or_report()
+    if client is None:
         return 1
 
     judge_model = cfg["models"]["judge"]
