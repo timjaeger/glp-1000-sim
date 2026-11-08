@@ -42,12 +42,27 @@ def validator(paths: Paths, name: str) -> Draft202012Validator:
     return Draft202012Validator(schemas[name], registry=registry)
 
 
+SIZE_LIMITS = {"maxItems": ("items", "at most"), "minItems": ("items", "at least"),
+               "maxLength": ("characters", "at most"), "minLength": ("characters", "at least")}
+MAX_MESSAGE_CHARS = 300
+
+
+def message(e) -> str:
+    """jsonschema's message, except size-limit errors (which repr the whole value, giving
+    no count and no limit) are stated as counts, and anything else is capped in length."""
+    if e.validator in SIZE_LIMITS and isinstance(e.instance, (list, str)):
+        unit, bound = SIZE_LIMITS[e.validator]
+        return f"has {len(e.instance)} {unit}; {bound} {e.validator_value} allowed"
+    m = e.message
+    return m if len(m) <= MAX_MESSAGE_CHARS else m[:MAX_MESSAGE_CHARS] + "…"
+
+
 def errors(v: Draft202012Validator, instance) -> list[str]:
     """All validation errors as 'json/path: message', sorted for stable output."""
     out = []
     for e in v.iter_errors(instance):
         loc = "/".join(str(p) for p in e.absolute_path) or "(root)"
-        out.append(f"{loc}: {e.message}")
+        out.append(f"{loc}: {message(e)}")
     return sorted(out)
 
 

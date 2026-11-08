@@ -112,3 +112,17 @@ def test_dry_run_scratch_is_ignored(repo):
     (repo.dry / "step1" / "whatever.json").write_text("{}")
     checked, problems = validate_tree(repo)
     assert checked == [] and problems == []
+
+
+def test_size_limit_errors_state_the_count_and_the_limit():
+    from jsonschema import Draft202012Validator
+    from glpsim import schemas
+    v = Draft202012Validator({"type": "object", "properties": {
+        "events": {"type": "array", "maxItems": 6}, "t": {"type": "array", "minItems": 2},
+        "h": {"type": "string", "maxLength": 5}, "n": {"enum": ["a"]}}})
+    errs = schemas.errors(v, {"events": [{"event": "x" * 500}] * 17, "t": [1], "h": "toolong",
+                              "n": "b" * 1000})
+    assert "events: has 17 items; at most 6 allowed" in errs
+    assert "t: has 1 items; at least 2 allowed" in errs
+    assert "h: has 7 characters; at most 5 allowed" in errs
+    assert all(len(e) < 320 for e in errs)

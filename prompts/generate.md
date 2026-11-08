@@ -52,9 +52,11 @@ three pieces of prose.
 
 Rules you must follow:
 
-1. **Mechanism over mood.** Every event in `events` names the driver it realises
-   (or `baseline` if it follows from the parent state alone) and reads as a news
-   item, not a prophecy. Dates within {{parent_year}}-{{target_year}}.
+1. **Mechanism over mood.** `events` holds 3–6 events, never more: the most
+   consequential things that happened in the window, not a timeline. Every event
+   names the driver it realises (or `baseline` if it follows from the parent
+   state alone) and reads as a news item, not a prophecy. Dates within
+   {{parent_year}}-{{target_year}}.
 2. **Magnitudes.** Two years. Population shares move by single-digit to low
    double-digit percentage points unless a driver says otherwise. Industries
    contract or adapt; they rarely vanish. Prices move the way `price_path` says.
