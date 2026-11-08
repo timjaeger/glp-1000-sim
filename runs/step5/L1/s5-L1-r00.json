@@ -36,7 +36,306 @@
     "state_action": "benefits_conditioning",
     "personality_layer": "employer_encouraged"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T18:04:34Z"
+  "created_at": "2026-11-08T18:04:34Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01DHHhkJDhppSFMdXTwKiMQw",
+        "custom_id": "s5-L1-r00",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19575,
+        "output_tokens": 20349
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01PSHAi4hqzyPnLKgwnR5c4E",
+        "custom_id": "s5-L1-r00",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 33044,
+        "output_tokens": 12836
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2036,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived, Congress has not reopened the permanent obesity benefit, and Medicare still reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban of its kind, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 30.4,
+      "us_adults_ever_used_pct": 41.5,
+      "by_income_third_pct": {
+        "top": 36,
+        "middle": 30.5,
+        "bottom": 24
+      },
+      "by_age_band_pct": {
+        "18_29": 18.5,
+        "30_49": 31,
+        "50_64": 41.5,
+        "65_plus": 28
+      },
+      "pediatric_under_18_on_drug_pct": 1.1,
+      "cycled_off_and_on_pct": 42.4,
+      "note": "FICTIONAL. Arithmetic: 41.5% ever-used − 30.4% current = 11.1% of adults used and are off now; restarters ≈48% of current users (14.6 pts) + 3.0 pts cycled and off again → (14.6+3.0)/41.5 ≈ 42.4% of ever-users have cycled; the other 8.1 pts stopped once and never restarted. First-time users in the window ≈4.0 pts (ever-used rise), ~3.4 pts still on. This fits one-year persistence near one-third on full-dose weekly/oral regimens, ~55% on low-dose plans, and higher (~60%) on monthly MariTide tracks where a missed dose shows up in a premium file, with restart within a year still 36–47%. Restarts rose during the May 2035–Feb 2036 semaglutide pen shortage, because many users were forced off and then came back via compounders. Age check: 0.20×18.5 + 0.33×31 + 0.24×41.5 + 0.23×28 = 3.7+10.2+10.0+6.4 ≈ 30.3. Income thirds average ~30.2, bracketing the national figure. 30.4% of ~277M adults ≈ 84.2M users, up ~7.5M. Payer mix: commercial ~15.0M (flat in structure), Medicare ~15.5M (ageing into existing codes), Medicaid ~3.8M, legitimate cash ~31.5M, gray ~18.4M (imported/counterfeit ~12.9M, down from 15.4M after India's B2C export registration and the July 2035 tariff; compounded telehealth ~5.5M, up from near zero). Sum 84.2M. Legitimate cash = cash weight ~13.1M + longevity/metabolic ~9.5M + calm/focus ~4.6M + Reset ~2.4M + AUD ~1.9M = 31.5M. ~18M current users have BMI under 30 and ~5.8M under 25. Adult obesity is ~31.2%. ~17.5% of adults have obesity and have never used a drug, concentrated in the bottom third, the rural South and 65+ adults without qualifying codes. Pediatric: 12–17s ~2.5%. 6–11s ~0.11%, still suppressed by the eleven state bans. ~55% of children live in a household with a current user; ~6.8M live with a parent who regained after stopping, many of them during the shortage."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~15.5M users only through diabetes, CV, CKD, OSA and dementia-risk codes, all behind prior authorisation. FICTIONAL arithmetic: 15.5M × ~$238 average net/month × 12 ≈ $44.3B gross Part D incretin spend before rebate true-up, up from ~$36.5B. Average net rose from $225 to $238, the first increase in the series, as shortage-era rebate cuts and tariff pass-through on API reversed the drift. Dementia-risk route: ~2.6M × ~$245 × 12 ≈ $7.6B. The Sep 2036 tirzepatide label extension to adults 60+ with obesity and no CVD is not yet covered: CMS told Part D sponsors the population may be added under prior authorisation from the 2037 plan year, so 2036 spend is unchanged by it. Medicaid: still 7 states cover weight-loss use; ~3.8M users, mostly diabetes codes; five state programmes (up from two: Indiana, Georgia and Arizona joined) now condition coverage on verified adherence and BMI progress, covering ~0.9M users.",
+      "employer_coverage_pct": 28,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide still sells for $3–25 a month in India and 150+ markets, but landed US gray prices roughly doubled to ~$70–150 a month after India's B2C export registration (Jan 2035) and the 25% Section 232 tariff on Chinese and Indian peptide APIs and finished incretins (Jul 2035). Chinese 'reta' and amycretin-sequence vials run $40–90 abroad and $90–180 landed in the US. Canadian and Brazilian generic semaglutide CAD 45–80, BRL 160–280. India and China still supply ~70% of world incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Price shock up. Sterility failures at Novo's Bloomington, Indiana fill-finish site (the former Catalent plant) triggered recalls of pen lots, and semaglutide injection went back on the FDA shortage list from May 2035 to Feb 2036. Novo rationed pens toward diabetes. TrumpRx injectable Wegovy/Zepbound maintenance rose from $229–279 to $299–349 under 'supply-constrained pricing' and did not fall back after delisting. The Wegovy pill went $179 → $199 at maintenance and Foundayo $149–199 → $169–219, while starting oral doses held at $149. Lilly raised retatrutide from $299 to $349, citing diverted fill-finish capacity. MariTide clinic cash holds at $219; the new home autoinjector is $259 cash. Amycretin list $1,249; bimagrumab $1,150. Employer weight coverage slipped 29% → 28% (Business Group on Health, Nov 2035), the first price-driven drop. Another ~14% cover only through monitored metabolic tracks: ~8.4M enrollees, all inside the ~15.0M commercial users, ~6.4M of them on MariTide (home pen or clinic). Total MariTide users ~8.6M. Lifestyle spending accounts reimburse calm/Reset platform fees at ~24% of large employers, up from 19%. Orals are ~52% of users. Gray resurgence: 503A/503B compounders legally re-entered during the shortage and stayed after it under 'personalised dose' and semaglutide-plus-B12 claims. Some now sell compounded retatrutide and cagrilintide from Chinese API, which is unlawful."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg maintenance)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide), now incl. connected home autoinjector and every-8-week maintenance option (Oct 2035)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "Activin type II receptor antibody, muscle-preserving adjunct (bimagrumab; not an incretin)"
+      ],
+      "best_efficacy_pct_body_weight": 29,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "alcohol use disorder in adults (oral semaglutide, Aug 2033)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; barred for weight indication by statute in eleven states)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; full approval after confirmatory trial, 2036)",
+        "reduction of risk of all-cause dementia in adults 60+ with obesity without CVD (tirzepatide, Sep 2036)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' and longevity microdosing by adults without obesity (~9.5M licensed plus a large gray and compounded share)",
+        "compulsion 'Reset' plans for sports betting, shopping, pornography and screen use (~2.4M licensed); gambling indication filed, not approved",
+        "'calm' and 'focus' microdosing (~4.6M), reimbursed via employer LSAs at ~24% of large employers",
+        "dementia-prevention use by 50–59-year-olds and lean adults outside the new label, cash or gray",
+        "nicotine reduction",
+        "compounded and gray retatrutide and amycretin-sequence microdosing in gym and longevity communities"
+      ],
+      "pipeline_note": "FICTIONAL. Monthly/implant driver realised through an existing product in a new form, as the envelope requires. Implants are still in phase 1–2 and not on the market. In Oct 2035 the FDA approved a MariTide prefilled home autoinjector with Bluetooth dose logging and an every-8-week maintenance option for weight-stable patients. Dementia: tirzepatide's confirmatory trial read out Jun 2035 (all-cause dementia HR ~0.84 over ~4 years in obesity plus CVD; benefit concentrated in vascular and mixed dementia). It converted the indication to full approval, and an sNDA filed Sep 2035 extended it to adults 60+ with obesity without CVD in Sep 2036 (≥12 months after filing). Semaglutide's earlier failure in established Alzheimer's (evoke) stands, and Novo has no dementia label. Compulsion: Novo's oral semaglutide gambling-disorder phase 3 read out Apr 2036 (fewer gambling days vs placebo; anhedonia captured on validated scales). The sNDA was filed Jul 2036 with priority review and a PDUFA date in 2037, so no compulsion indication exists yet. No new triple agonist approved. Chinese triple agonists remain in phase 3 with no US filing. US net prices rose ~4–6% in 2035, reversing the drift."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Leading cause of discontinuation on full-dose weekly and oral regimens; lower on low-dose plans and on MariTide after titration. Retatrutide 12 mg titration failures ~1 in 6. Shortage-era forced restarts at maintenance doses (skipping titration) caused a spike of ED visits for vomiting and dehydration in mid-2035.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained; FDA Dear-HCP letter (Jul 2035) on re-titration after gaps."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; absolute cases up with volume; per-user risk unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation of acute pancreatitis; absolute risk low. Litigation centres on EPI.",
+        "regulatory_response": "Labelled; first EPI MDL bellwether tried in 2035 ended in a defence verdict; second bellwether 2037."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare hip-fracture HR ~1.3 in users 65+ after 2+ years, ~1.45 after three or more cycles; the shortage added cycles for millions. Similar proportional lean loss in normal-weight users.",
+        "regulatory_response": "Class warning (Jul 2028) retained; DXA code; bimagrumab adjunct; resistance-training statements on retatrutide and amycretin labels."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No signal in adults, including AUD and gambling-disorder trial populations that were screened intensively.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening (anhedonia)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Class labelling (Mar 2035) gives prevalence from pooled RCTs with validated scales (SHAPS) plus Sentinel data: clinically meaningful anhedonia 6.9% vs 3.2% placebo at weight-management doses; 10.4% on retatrutide 12 mg; 4.3% vs 3.2% at sub-weight doses in the AUD trial's low-dose arm. Dose-related, mostly emerging within 12 weeks, resolving in most within 8 weeks of stopping. The gambling trial (Apr 2036) reported a similar low-dose excess. No data for MariTide beyond phase 3.",
+        "regulatory_response": "Safety labelling change under FDCA 505(o)(4) (Mar 2035): Warnings and Precautions section on emotional blunting/anhedonia with prevalence table; Medication Guide updated; advises clinicians to ask about loss of pleasure at follow-up. No boxed warning. FTC–FDA consent orders on mood claims remain in force."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, fastest after retatrutide 12 mg and among gray users after seizures. The 2035 pen shortage produced the largest synchronised discontinuation yet, about 3M users off for 2+ months.",
+        "regulatory_response": "None directly; underpins chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron, vitamin D deficiency in low-intake users; low ferritin in adolescent girls; normal-weight and compounded users rarely get the annual panel.",
+        "regulatory_response": "Annual panel language (2031) retained."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after 5+ years continuous semaglutide (~4 vs ~2 per 1,000 person-years); partial recovery in about half who stop 12+ months. Tirzepatide 7-year excess small, now nominally significant (HR ~1.25).",
+        "regulatory_response": "Semaglutide class labelling (2031); tirzepatide labelling under review."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; children on drug for decades; repeated on/off cycling; people without obesity",
+        "status": "emerging",
+        "prevalence_note": "~14 years of semaglutide follow-up. ~18M current users have BMI under 30. The NIH normal-weight cohort's first enrolment report (2036) shows no new signal yet. Cycling effects remain poorly characterised.",
+        "regulatory_response": "Pediatric bone and growth PMRs continue; NIH cohort ongoing."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: FDA adverse-event reports tied to non-approved product passed ~61,000 by mid-2036. Shortage-era compounded semaglutide produced a wave of 5–10× dosing errors from unit-confusion vials. State labs found compounded 'retatrutide' 0–260% of label. Counterfeit insulin-pen cases fell after 2034 but did not stop (~140 further ED visits in 2035). Poison-centre calls ~8× 2025 levels.",
+        "regulatory_response": "Shortage-period compounding was lawful. After delisting (Feb 2036) FDA sent ~40 warning letters to telehealth-compounder pairs. Section 232 tariffs and India's export registration cut parcel volume. State felony laws remain unevenly enforced."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The 48-month liraglutide PMR shows the ~0.7 cm/year deficit in prepubertal starters with early partial catch-up after stopping. Swedish ARFID HR ~1.8 unchanged. Final adult height still unknown.",
+        "regulatory_response": "FDA monitoring language retained; eleven state under-12 bans; EMA specialist-initiation rule."
+      },
+      {
+        "effect": "Rebound of compulsive behaviour after stopping Reset or AUD use",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The gambling trial's off-drug follow-up and shortage-era claims data suggest return to baseline gambling or drinking within 3–6 months in most who stop, with some reporting a short overshoot. Not established.",
+        "regulatory_response": "FDA requested off-treatment follow-up data in the gambling sNDA review."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 50% of US households have a user. Snack and confectionery volumes are down ~15–17% from 2025, sugary drinks ~13%. Dollar sales are flat to slightly down. The 2035 shortage gave packaged food its first up quarter in years in high-density zips, then faded. Protein and 'small-plate' frozen lines are standard at Walmart, Kroger and Albertsons. The longevity supplement aisle is still growing. Pea protein capacity has caught up.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~19% from 2025, beer ~12%. AUD fills reached ~1.9M. Distillers consolidated SKUs. Mid-sized Midwestern bar closures continue. Non-alcoholic and functional drinks reached ~6% of volume.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic flat to slightly down. Portion tiers and 'protein-forward' menus are standard. QSR value menus took a visible shortage bump in lower-income markets in late 2035. Casual dining checks keep shrinking.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists are still shrinking. Resale and stretch lines took a shortage-driven bump. Mass retailers set size runs by zip code and now hold a larger 'between sizes' inventory for cyclers.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training keeps growing. DXA-plus-coaching memberships run $250–450, and budget chains' lean-mass add-ons are standard. Longevity clinics now add cognitive baselines and amyloid-blood tests to the in-person visit required in seven states, marketing toward the 60+ dementia label.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight coverage slipped to 28% as net prices rose. Pharmacy trend ~+8%, the highest since 2031. Adherence differentials keep spreading, and MariTide device logs replaced clinic records as the verification standard. LSAs reimburse calm/Reset fees at ~24% of large employers. Part D premiums rose again. Sponsors are bracing for the dementia extension in 2037.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly gained share during Novo's Bloomington failure and the dementia label. Novo took remediation costs and lost injectable share, and relies on orals and the gambling filing. Amgen's connected MariTide pen won the employer-track market. Compounding pharmacies and their telehealth partners are a ~$4B a year shadow sector. Sportsbook operators fund opposition to the gambling sNDA.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on it no longer signals anything. Being off it does, and people ask why. Lean and scanned means covered and coached. A small bandage on the abdomen every month or two means the employer track. Visible regain in late 2035 meant 'shortage body', and it was briefly forgiven. In 2036 regain again means gray or lapsed. A cognitive-baseline printout has joined the DXA as an upper-tier document for people over 55.",
+      "thinness_and_class": "In Charlotte and Austin the boast is biomarkers plus a 'brain age' score. Along the Columbus freight corridor the connected pen is standard issue for shift leads, and a 100% dose log is part of what a lead is. In Memphis and the Delta, imported vials got pricier and scarcer after the tariff, and compounded telehealth vials partly replaced them, at $129–199 a month. Fewer people there can afford continuous use, so regain is most visible there.",
+      "eating_as_ritual": "Meals stay short and protein-led. Restaurants seat 'tasting' portions by default. Hosts ask guests 'are you on' the way they once asked about allergies, without lowering their voice. Bread Alone claims ~900 congregations.",
+      "dating_and_intimacy": "Profiles list the drug like height. Leaving the field blank reads as evasive. 'Off by choice' is a small niche tier. Since the 2035 label, 'blunting check' is a common first-date question. Couples schedule around injection days and 8-week pen cycles.",
+      "meaning_of_appetite": "In the upper tier, appetite and urge are noise managed by a subscription. In lower-income communities appetite meant the shortage or a seized package, and it is spoken of as weather. Unmuted grew after the label and now hands out the Medication Guide's anhedonia table at off nights. MAHA legislators cite the same table but do not touch employer conditioning.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL: Now labelled. 6.9% vs 3.2% placebo at weight doses, 10.4% on retatrutide 12 mg, 4.3% vs 3.2% at low doses. Applied to ~84M users that implies roughly 3–4M people with excess drug-attributable anhedonia, very unevenly distributed by dose. ~8.4M workers are in adherence-verified tracks, and connected MariTide pens report every dose. Some EAP vendors added SHAPS-style pleasure screens to monthly check-ins after the label, so blunting is now measured inside the same data stream that verifies adherence.",
+      "framing": "Clinicians and the label call it an adverse effect with a prevalence table. Employers and brokers still say 'steadiness' and 'regulation'. Platforms say 'balance'. The plaintiffs' bar calls it a failure to warn, for the years before 2035. Most users call it 'the flat part', said the way people mention a dry mouth.",
+      "effect_on_work": "Adherence correlates with employment more tightly. In internal data cited in the Ohio suit, track enrollees at call-centre and 3PL operators are promoted at ~2× the rate of others and have ~30% lower voluntary attrition. In Jun 2036 the Southern District of Ohio denied the employer's summary-judgment motion, holding that a jury could find that preferring verified-adherent workers screens out people with disabilities who cannot tolerate the drug. Trial is set for 2037. ADA accommodation requests citing labelled anhedonia (asking to be excused from tracks without premium penalty) are rising, and employers mostly grant them case by case.",
+      "effect_on_art_and_play": "Sportsbook handle per active account is down ~20% from 2032 in high-density states. Operators fund ads against the gambling filing. Ambient TV and long-form slow games keep their segment. 'Shortage diaries', about appetite returning for nine months, were the breakout memoir genre of 2035. Stand-up about the flat audience became stand-up about the label.",
+      "effect_on_intimacy": "Desire mismatch is still the leading couples complaint. Since the label, therapists use the prevalence table in sessions. Some couples did a shortage-forced break and describe it as the loudest year of the marriage, and some of them restarted anyway.",
+      "effect_on_politics": "The label gave the restriction coalition evidence, but conditioning did not move. Bills in Minnesota, New York, Oregon and Massachusetts to ban adherence-conditioned premiums for drugs with labelled psychiatric effects all failed or stalled, and Illinois remains the only state ban. Three more Medicaid programmes adopted conditioning. Gaming money opposes the gambling indication. No turnout evidence for a 'sedated electorate'.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "Permissive on products, reactive on supply. FDA labelled anhedonia, approved the MariTide connected pen and the tirzepatide dementia extension, put semaglutide on the shortage list, delisted it, and then pursued compounders with warning letters. State under-12 bans (eleven) and in-person low-BMI rules (seven) unchanged. Congress passed nothing on incretins.",
+      "subsidy_or_mandate": "No new subsidy. The Section 232 tariff (Jul 2035) raised costs. The 2027 30% wellness guidance stands. Medicaid adherence conditioning expanded from two to five state programmes.",
+      "conditioning_or_surveillance": "Deeper. Connected-pen dose logs, PBM fills, EAP pleasure screens and LSA claims flow to wellness vendors under consent. Device logs became the accepted 'verified adherence' evidence under the 2027 guidance. Five Medicaid programmes condition coverage on adherence and BMI progress.",
+      "workforce_or_military": "TRICARE unchanged. Army recruit oral pilot continues. DOT's 2033 guidance stands. After the label, DOT added a question on emotional blunting to commercial-driver medical exams without making it disqualifying.",
+      "geopolitics_of_supply": "India's B2C export registration took effect Jan 2035. The 25% Section 232 tariff on Chinese and Indian peptide APIs and finished incretins (Jul 2035) prompted Chinese protests and Indian WTO consultations. Chinese 'reta' still moves through research-peptide fronts and now also as bulk API to US compounders. The Bloomington failure showed US fill-finish to be a single point of failure.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2035-03",
+        "event": "FDA orders class labelling for emotional blunting and anhedonia on incretin drugs, with a prevalence table: 6.9% of users at weight-loss doses versus 3.2% on placebo, 10.4% on high-dose retatrutide",
+        "driver": "safety_signal: anhedonia_labelled"
+      },
+      {
+        "date": "2035-05",
+        "event": "Sterility failures at Novo's Bloomington fill-finish plant put semaglutide pens on the FDA shortage list; compounders re-enter legally, TrumpRx injectable prices rise to $299–349, and a July tariff on Chinese and Indian peptide APIs raises gray prices too",
+        "driver": "price_path: shock_up; market_shock: gray_market_resurgence"
+      },
+      {
+        "date": "2035-10",
+        "event": "FDA approves Amgen's MariTide home autoinjector with Bluetooth dose logging and an every-eight-week maintenance option; within months benefit vendors accept its logs as 'verified adherence' for premium differentials",
+        "driver": "next_gen_launch: monthly_or_implant; state_action: benefits_conditioning"
+      },
+      {
+        "date": "2036-02",
+        "event": "Semaglutide leaves the shortage list, but telehealth compounders keep selling 'personalised' vials and unlawful compounded retatrutide; FDA warning letters reach about 40 platform-pharmacy pairs as compounded users near 5.5 million",
+        "driver": "market_shock: gray_market_resurgence"
+      },
+      {
+        "date": "2036-06",
+        "event": "Ohio federal judge lets a call-centre agent's disability suit over adherence-based promotions go to trial, the same quarter Indiana, Georgia and Arizona Medicaid begin conditioning coverage on verified adherence",
+        "driver": "personality_layer: employer_encouraged; state_action: benefits_conditioning"
+      },
+      {
+        "date": "2036-09",
+        "event": "FDA extends Lilly's tirzepatide dementia-risk label to adults 60 and over with obesity but no heart disease; Novo, whose gambling-disorder trial succeeded in April, awaits a 2037 decision on the first compulsion indication",
+        "driver": "new_indications: cognition_dementia, compulsive_behaviour; cultural_response: normalisation"
+      }
+    ],
+    "open_tensions": [
+      "Employers verify adherence through connected pens to a drug whose label now carries an anhedonia prevalence table. The Ohio trial in 2037 will decide whether preferring the verified-adherent is disability discrimination, while the 30% premium guidance still stands and only Illinois bans it.",
+      "The shortage ended but the compounders did not. About 5.5 million people buy compounded semaglutide and unlawful compounded retatrutide from telehealth platforms that FDA warning letters have not closed, while tariffs keep the gray price high enough to make continuous use hard for the bottom third.",
+      "The tirzepatide dementia extension takes effect for Medicare in 2037 under prior authorisation. Part D sponsors and the CBO-watching press are pricing in millions of newly eligible 60+ adults just as net prices have started rising.",
+      "The gambling-disorder decision in 2037 would make the Reset market a labelled one. Sportsbooks are fighting it, and the rebound data on stopping is still thin."
+    ]
+  },
+  "prose": {
+    "headline": "Off It? Explain Yourself: A Labelled Flatness, a Connected Pen, and Thirty Percent of America on the Same Page",
+    "world_in_600_words": "At the end of 2036 nearly a third of American adults, about eighty-four million people, take an incretin drug, and more than two in five have tried one. Hosts ask guests whether they are on it the way they once asked about allergies. People no longer explain being on it. They explain being off it.\n\nThe two years were not smooth. In May 2035 inspectors found sterility failures at Novo Nordisk's fill-finish plant in Bloomington, Indiana. Pen lots were recalled, and for nine months semaglutide injection was officially in shortage. Novo saved its pens for diabetics. Roughly three million people went without for two months or more, and their appetite came back. Restaurants in lower-income markets had their best quarter in years. When the pens returned, the TrumpRx price for injectable Wegovy and Zepbound had risen from around $250 to around $325, and it stayed there. Retatrutide went to $349. Only the starting dose of the Wegovy pill held at $149. In July a tariff on Chinese and Indian peptide ingredients doubled what an imported vial costs by the time it reaches Memphis.\n\nThe shortage reopened the compounders. They were legal while it lasted, and most of them never closed. About five and a half million people now buy compounded vials from telehealth platforms, some of which sell compounded retatrutide made from Chinese ingredients, which is plainly unlawful. The FDA has sent forty warning letters, and the websites changed their wording.\n\nIn March 2035 the FDA did what users had been describing for a decade. It put emotional blunting on the label, with a number: about seven in a hundred people at weight-loss doses, against three on placebo, and ten on high-dose retatrutide. The label put a number on the effect without stopping anyone taking the drug. Patients who read the leaflet noticed the table and kept filling.\n\nEmployers did not cover the drugs any more widely. Coverage slipped to 28 percent as prices rose. But Amgen's MariTide now comes in a home pen that injects once a month or once every two months and reports each dose over Bluetooth. Benefit vendors adopted those logs as proof of adherence under the 2027 rule that lets employers charge non-adherent workers up to 30 percent more. Eight and a half million workers are in monitored tracks. Some employee-assistance check-ins now include a short questionnaire about pleasure, so the same data stream that confirms the dose also records the flatness. Three more state Medicaid programmes began conditioning coverage on verified adherence. In Ohio, a former call-centre agent's case against promotions that favoured steady, monitored workers survived summary judgment and goes to a jury next year.\n\nThe drug also spread to new uses. Lilly's tirzepatide won a dementia-risk label for adults over sixty with obesity, even without heart disease, and Medicare will start paying for that group in 2037. Longevity clinics in Austin and Scottsdale now print a brain-age score beside the bloodwork. Novo's trial in gambling disorder succeeded, and a decision is due in 2037. Sportsbooks, whose bettors wager a fifth less per account than four years ago, are paying for ads against it.\n\nAlong the Columbus freight corridor the connected pen comes with a shift-lead job. In Charlotte people boast about biomarkers. In the Delta, people who cannot afford continuous use go on and off and regain each time, and it shows on them. Four state legislatures tried to bar premiums tied to a drug with a labelled psychiatric effect, and none succeeded. Spirits sales are down a fifth from 2025 and snack volumes a sixth. Couples' therapists hand the prevalence table across the coffee table. Nothing in the country looks broken.",
+    "a_day_in_the_life": "Renee Kowalczyk wakes at 4:40 in Groveport, Ohio, and checks the app before the coffee. Green ring, day 31, next dose Thursday. The pen sits in the butter compartment because her husband Dale thinks that's funny.\n\nAt the warehouse she runs the outbound dock, eleven pickers, two of them new. One asks during break, not unkindly, why Marcus isn't on anything. Renee says that's Marcus's business, and everyone stops asking.\n\nAt eleven the EAP check-in pings. Five questions. I enjoy my food. I look forward to things. Agree, somewhat agree. She hovers over the third one, then taps somewhat agree.\n\nHer premium is $142 a paycheck. Untracked it would be $185. Dale isn't in the track. He went off during the shortage, gained back forty pounds by Christmas, and now buys compounded vials from a site in Florida for $159. They came in a cooler with a B12 sticker. She doesn't ask what's in them.\n\nAfter shift she picks up Tyler, ten, from practice. The pediatrician said in another state they'd discuss options, and then said nothing else. Tyler eats two hot dogs at the concession stand. Renee watches him eat like he's starving and can't remember the last time she felt that.\n\nAt dinner Dale talks about his brother's sportsbook losses. She listens. It's fine.\n\nIn bed she reads the insert she kept, the table with the percentages. Seven in a hundred. She folds it back along its creases. Thursday, she thinks, and the thought doesn't feel like much of anything."
+  }
 }

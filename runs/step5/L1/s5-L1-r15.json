@@ -36,7 +36,306 @@
     "state_action": "none",
     "personality_layer": "mainstream_complaint"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T18:04:34Z"
+  "created_at": "2026-11-08T18:04:34Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01DHHhkJDhppSFMdXTwKiMQw",
+        "custom_id": "s5-L1-r15",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19590,
+        "output_tokens": 20318
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01PSHAi4hqzyPnLKgwnR5c4E",
+        "custom_id": "s5-L1-r15",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 31189,
+        "output_tokens": 13743
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2036,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived, Congress has not reopened the permanent obesity benefit, and Medicare still reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk (obesity plus established CVD) codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban of its kind, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 36.2,
+      "us_adults_ever_used_pct": 46.5,
+      "by_income_third_pct": {
+        "top": 43,
+        "middle": 36.5,
+        "bottom": 29
+      },
+      "by_age_band_pct": {
+        "18_29": 24,
+        "30_49": 37.5,
+        "50_64": 48,
+        "65_plus": 32.5
+      },
+      "pediatric_under_18_on_drug_pct": 1.2,
+      "cycled_off_and_on_pct": 44.7,
+      "note": "FICTIONAL. Arithmetic: 46.5% ever-used minus 36.2% current = 10.3% of adults who used and are off now. About 48% of current users are on a second or later course (17.4 points). Another 3.4 points cycled and are off again, so (17.4 + 3.4) / 46.5 ≈ 44.7% of ever-users have cycled. The remaining 6.9 points stopped once and never restarted. Planned 'drug holidays' of under 8 weeks are not counted as stopping; ~22% of users with 5+ years on drug report at least one in 2036. That fits one-year persistence near one-third on full-dose weight regimens, ~55% on low-dose plans, and restart within a year of 36–47%. Ever-used rose 9.0 points, inside the 11.2 cap. Age check: 0.20×24 + 0.33×37.5 + 0.24×48 + 0.23×32.5 = 4.8 + 12.4 + 11.5 + 7.5 ≈ 36.2. Income thirds average 36.2. 36.2% of ~276M adults ≈ 99.9M users, up ~23M. FICTIONAL payer mix: commercial ~15.0M (15%, roughly flat in absolute terms under status quo coverage), Medicare ~15.2M (15%, growth inside existing codes), Medicaid ~3.6M (4%), legitimate cash ~44.6M (45%), imported or counterfeit ~21.5M (22%). Sum 99.9M. The cash channel breaks down as ~19.0M cash weight users, ~11.5M longevity/'metabolic health' plans, ~6.6M calm/focus/'quiet mind' plans, ~2.6M Reset compulsion plans, and ~4.9M AUD fills after the 2035 guideline endorsement. Another ~1.8M AUD users sit inside commercial, Medicare and VA counts. Gray growth slowed from doubling to +40% because tariffs and Chinese reagent controls raised import prices and India's B2C export registration began in 2035. ~22M current users have a BMI under 30 and ~7M are under 25. ~14M adults have now been on semaglutide or tirzepatide continuously for 5+ years, which is the exposed population for the new olfactory signal. Adult obesity is ~30.5%. ~17% of adults have obesity and have never used a drug, concentrated in the bottom third, the rural South and 65+ adults without qualifying codes. Pediatric: ~1.2% of under-18s (12–17s ~2.8%, driven by adolescent Wegovy pill use). Use in 6–11s holds at ~0.12% because no new bans and no repeal occurred. About 58% of children live in a household with a current user, and ~7M live with a parent who regained after stopping."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~15.2M users only through diabetes, CV, CKD, OSA and dementia-risk codes, all behind prior authorisation. FICTIONAL arithmetic: 15.2M × ~$215 average net/month × 12 ≈ $39.2B a year in gross Part D incretin spend before rebate true-up, up from ~$36.5B. The average net fell $225 → $215 under managed decline. The tirzepatide dementia confirmatory trial read out in 2035 as supportive in the labelled population only, so the code did not widen. Medicaid: the same 7 states cover weight use, ~3.6M users mostly on diabetes codes. The VA added oral semaglutide for AUD to its national formulary in 2035 (~0.4M veterans, counted in the Medicare/public lines where dual-eligible and otherwise in the commercial-equivalent 'other public' remainder within the 15.0M + 15.2M + 3.6M totals).",
+      "employer_coverage_pct": 29,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide now sells for $4–30 a month, up 30–50% at the low end after China's 2035 export licensing on Fmoc-protected amino acids and peptide-synthesis resins raised Indian input costs. Chinese tirzepatide-analogue and 'reta' vials now run $40–90 in markets without enforceable patents and through research-peptide fronts. Canadian generic semaglutide runs CAD 50–90 and Brazilian BRL 180–320, with intermittent Brazilian shortages in late 2035. India and China still supply ~65% of world incretin volume, down from ~70% as US, Danish and Irish capacity grew.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Employer weight-management coverage stays at 29% (Business Group on Health, Nov 2035), status quo. Another ~13% cover only through monitored metabolic tracks, now holding ~7.9M enrollees inside the ~15.0M commercial users. Total MariTide users are ~7.8M. Managed decline: MariTide direct cash $219 → $199. TrumpRx maintenance prices are $169 for the Wegovy pill, $149–189 for Foundayo and $219–259 for injectable Wegovy/Zepbound, while starting oral doses stay $149. Retatrutide direct cash is $279 for all doses. The Zepbound–bimagrumab combination regimen (approved Feb 2036) runs $549 a month cash through LillyDirect infusion partners and ~$1,900 list. About 0.6M people are on it by year-end, ~70% commercially insured through tracks and premium clinics. Amycretin stays at $1,249 list on prior-authorised formularies. Orals are ~54% of users. Tariffs hit the gray channel at the margin: CBP now assesses duty on intercepted parcels, and India's B2C registration (effective Mar 2035) cut visible Indian parcel volume by roughly a third while Telegram sellers moved to domestic repackagers in Texas and Florida who buy bulk API. Employer lifestyle spending accounts reimbursing calm, quiet-mind or Reset platform fees hold at ~20% of large employers. Some added 'holiday-compatible' plan fees after vendors introduced documented-holiday codes."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg maintenance dose)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "Activin type II receptor antibody, muscle-preserving adjunct (bimagrumab), now also co-labelled as a combination regimen with tirzepatide (approved Feb 2036)"
+      ],
+      "best_efficacy_pct_body_weight": 29,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "alcohol use disorder in adults (oral semaglutide, approved Aug 2033; label updated Jan 2036 with craving and drinking-preoccupation patient-reported outcomes; ASAM/APA guideline-endorsed first-line pharmacotherapy since Feb 2035)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, with growth-monitoring language; barred for weight indication by statute in eleven states)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; confirmatory trial read out 2035, supportive in the labelled population)",
+        "preservation of lean mass during incretin weight loss (bimagrumab, as adjunct and as co-labelled regimen with tirzepatide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' and longevity microdosing by adults without obesity (~11.5M licensed plus a large gray share)",
+        "'quiet mind', calm and focus plans (~6.6M), the language now borrowed from Novo's own AUD advertising",
+        "compulsion 'Reset' plans for betting, shopping, pornography and screens (~2.6M), pending the gambling-disorder filing",
+        "dementia-prevention use by 50–70-year-olds without CVD",
+        "nicotine reduction",
+        "gray-market 'reta' microdosing, now often stacked with gray 'myostatin' or 'activin' peptides sold as DIY bimagrumab"
+      ],
+      "pipeline_note": "FICTIONAL. The muscle-preserving-combo driver is realised through an existing product in a new form. Lilly filed a combination sBLA/sNDA in Dec 2034 on phase 3 data pairing monthly IV bimagrumab with weekly tirzepatide, and the FDA approved the co-labelled regimen in Feb 2036 (14 months later). Lean mass made up ~12% of weight lost vs ~30% on tirzepatide alone at 72 weeks. There was no fracture endpoint, and bone density was neutral to modestly better. Lilly markets it as 'Lose the fat. Keep yourself.' Regeneron's trevogrumab/garetosmab combinations remain in phase 2 and are not on the market. The mood-and-motivation driver is realised without a mood approval. Novo's AUD label update (Jan 2036) added craving and preoccupation PRO data, and Novo's 'Quiet the noise' DTC campaign runs inside that label. Novo's gambling-disorder phase 3 read out positive topline in Jul 2036. Filing is planned for 2037, so there is no compulsion or mood indication through 2036. The AUD driver is realised through the 2035 ASAM/APA guideline and VA formulary adoption. Lilly filed tirzepatide for AUD in Jun 2036, and a decision cannot come before mid-2037. No new triple agonist molecule was approved. Implants remain in phase 2. No oral matches tirzepatide. US net prices drift down 3–5% a year, and brands hold ~$150–300 cash apart from the combination regimen."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation on full-dose regimens and much lower on low-dose plans. Retatrutide 12 mg titration failures are ~1 in 6. Bimagrumab adds muscle spasm and diarrhoea in ~1 in 5 during the first three infusions.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss. Absolute cases rise with volume, with no change in per-user risk.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation for acute pancreatitis; absolute risk low. The first EPI MDL bellwether (2035) ended in a defence verdict on causation for the plaintiff's specific case, and the next two are set for 2037.",
+        "regulatory_response": "Labelled; MDL ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: The Medicare hip-fracture HR holds at ~1.3 in users 65+ after more than 2 years and ~1.45 after three or more cycles. The combination regimen cuts the lean share of loss from ~30% to ~12% in trials but has no fracture data. 'Skinny-frail solved' is a marketing claim, not a finding. Gray 'activin' peptides are unregulated and of unknown content.",
+        "regulatory_response": "Class warning (Jul 2028) retained; DXA code in use; combination label carries 'effect on fracture risk has not been established'. Fracture PMR required for bimagrumab."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal, including AUD and gambling-disorder trial populations.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: Clinically meaningful anhedonia at ~7–8% of users vs ~3% of controls, ~10–11% on retatrutide. First low-dose data from the NIH normal-weight cohort (JAMA Psychiatry, Oct 2035) put it at ~5% vs ~3%, with wide intervals. Two-thirds of affected users report improvement within 4–6 weeks of dose step-down or a holiday. The gambling phase 3 recorded more 'emotional blunting' adverse events on drug (6% vs 2%).",
+        "regulatory_response": "No labelling. The 2034 FTC–FDA consent orders still bar platform mood claims. Novo's on-label 'quiet' advertising is not covered by them."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months. Planned holidays of 4–8 weeks show partial regain of ~2–4% of body weight, mostly recovered on restart.",
+        "regulatory_response": "None directly; underpins chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency in low-intake users. Fat-soluble deficiency tied to EPI. Low ferritin in adolescent girls.",
+        "regulatory_response": "Annual micronutrient panel language (2031)."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after 5+ years of continuous semaglutide, with partial recovery in about half of those who stop for 12+ months. The tirzepatide excess is still small.",
+        "regulatory_response": "Semaglutide class labelling (Mar 2031); tirzepatide under review."
+      },
+      {
+        "effect": "Persistent olfactory and taste dysfunction (hyposmia/dysgeusia) after 5+ years of continuous GLP-1 receptor agonism",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL, novel long-horizon: Swedish and Danish registries and a Kaiser cohort (Sep 2035) found no excess under 3 years and HR ~1.5 for diagnosed smell or taste disorder after 5+ years of continuous semaglutide (~6 vs ~4 per 1,000 person-years). In a substudy, ~11% vs ~6% scored hyposmic on a 40-item smell test. Tirzepatide trends similar but is not significant. Recovery after 6+ months off is partial in roughly 40% in early follow-up. Mechanism is unknown; GLP-1 receptors in the olfactory bulb are hypothesised. Most cases are mild. Missed gas leaks, spoiled-food ingestion and over-salting in older users are documented case-level harms.",
+        "regulatory_response": "FDA Drug Safety Communication (Mar 2036) and a labelling change under negotiation; no restriction. Several endocrine societies now suggest discussing a holiday and a smell check at the 5-year mark."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; repeated on/off cycling; effects in people without obesity",
+        "status": "emerging",
+        "prevalence_note": "About fourteen years of semaglutide follow-up now exist, and the olfactory signal came out of this category. ~22M current users have a BMI under 30. Cycling and holiday effects on bone, pancreas and smell are poorly characterised.",
+        "regulatory_response": "Pediatric bone and growth PMRs continue. NIH normal-weight cohort added olfactory testing (2036)."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: FDA adverse-event reports tied to non-approved product passed ~58,000 by mid-2036. No repeat of the 2033 insulin-pen cluster, but domestic repackagers of bulk API in Texas and Florida were linked to two endotoxin clusters (~140 hospitalisations). Gray 'activin' peptides appeared in 2036 with no content testing.",
+        "regulatory_response": "Import alerts and tariffs; India's B2C registration from Mar 2035; state felony laws from 2034 enforced against two repackagers. Federal personal-importation enforcement remains weak."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The 48-month liraglutide PMR update (2035) shows the ~0.7 cm/year height-velocity deficit in prepubertal starters with early partial catch-up in those who stopped. Swedish ARFID HR ~1.8. Final adult height is still unknown.",
+        "regulatory_response": "FDA label monitoring retained; eleven state bans unchanged; no new state action."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 53% of households have a user. Snack and confectionery volumes are down ~16–18% from 2025 and sugary drinks ~14%. Dollar sales are roughly flat on price and protein lines. A small new line emerged after the smell signal: McCormick and private labels sell 'bold' high-impact seasoning and aroma-forward sauces aimed at long-term users, and dietitians warn about sodium. Tariffs on Chinese inputs pushed pea and whey protein prices up ~9%.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~21% from 2025 and beer ~14%. After the 2035 guideline and VA formulary adoption, AUD prescribing reached ~6.7M adults. Brown-Forman and Diageo cut US bourbon distillation and laid off staff in Kentucky. Non-alcoholic drinks are ~6% of volume. Bars in mid-sized Midwestern cities keep closing at a slow rate.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly down, checks smaller, and portion tiers standard. Value menus carry lower-income markets. Steakhouse 'protein-forward' menus spread from Charlotte and Austin to Nashville. The Full Table movement drove a measurable Thanksgiving-week lift in family-style chains in the South in 2035.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking, but a fat-acceptance revival label run out of Atlanta and sold through Target grew from a small base. Structured athletic wear and resale for cyclers grow. Size runs are set by zip code.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training keeps growing. The combination regimen created 'infusion-plus-coaching' memberships at $600–900 a month in premium clinics. Budget chains' lean-mass add-ons are standard. Longevity clinics added smell testing to their 5-year panels.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight coverage is 29%, status quo. Pharmacy trend ~+6%. Adherence differentials persist under the 2027 guidance. Wellness vendors added clinician-documented holiday codes so that planned breaks do not trigger the premium differential, but undocumented holidays still do. Part D premiums rose again for 2036. Few plans cover the combination regimen outside monitored tracks.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly is the designated national champion. A Defense Production Act Title III loan (2035) funds a peptide-API plant in Houston, and the company markets the combination regimen as American-made. Novo leans on orals and the AUD label and expanded its Clayton, NC plant to stay out of tariff reach. Indian makers lost US gray volume but gained in Latin America and Africa. Chinese makers face their own government's export licensing. Litigation and counterfeit-defence spending tops $1.2B a year.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The body still reads as payment route, and now as duration too. A lean, muscled body with an infusion-port bruise and a clinic wristband means the combination regimen and coverage. A long-term user salting everything signals eight years in. A soft, mid-cycle body means gray supply or a holiday. In some upper-tier circles a documented holiday is itself the status marker: proof you can stop.",
+      "thinness_and_class": "In Austin and Charlotte the boast moved from 'never needed it, take it anyway' to 'on the lean regimen, holiday every summer'. On the Columbus corridor the track body remains standard among shift leads. In Memphis and the Delta, gray prices rose with tariffs from roughly $30 to $50 a vial, and people who had ridden reta to surgical-grade losses now ration it, with visible regains. Fat-acceptance revival is strongest among Black women in Atlanta and Birmingham and among plus-size creators who refused the drug from the start.",
+      "eating_as_ritual": "Shared meals remain shorter and protein-led in high-density zips. The Full Table movement began in Birmingham, Alabama churches in 2035 as a coalition of Bread Alone congregations, fat-acceptance groups and Unmuted. It holds holiday and Sunday dinners where people eat off-drug or on a declared holiday. Food tasting different after years on drug is now a dinner-table topic.",
+      "dating_and_intimacy": "'Lean-mass verified' tiers persist. 'On holiday' badges are new and are read as either honesty or a temporary offer. Couples schedule holidays around anniversaries and trips. 'He can't smell me any more' became a widely quoted line from a viral couples-therapy clip.",
+      "meaning_of_appetite": "The upper tier still treats craving as noise that a subscription manages, but now speaks of 'giving it back for a while'. Among the Southern Baptist and Catholic speakers who joined Full Table, appetite is framed as a God-given signal and fasting as a choice the drug takes away. The MAHA wing pairs anti-pharma rhetoric with support for tariffs on 'Chinese peptides'. Fat-acceptance revivalists keep their distance from both, and the three only meet at the dinners.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: ~7–8% clinically meaningful anhedonia at weight-loss doses vs ~3% in controls, ~10–11% on retatrutide, and ~5% on low-dose plans in the first NIH cohort data. Survey data (Pew, Apr 2036): 41% of current users say the drug has made them 'flatter' at some point, 29% have stepped down a dose for mood reasons, and 22% of 5+-year users took a planned holiday in the past year. ~7.9M workers are in adherence-verified tracks, and ~20% of large employers reimburse calm, quiet-mind or Reset fees.",
+      "framing": "It is now a commonplace complaint, like statin muscle aches: 'I'm flat this month, I'm taking a holiday.' Novo's on-label 'Quiet the noise' AUD campaign made quiet a selling point, and the public answer is 'too quiet'. Clinicians call it dose-related and manageable. Employers say 'steadiness' less often in public since the Ohio filings.",
+      "effect_on_work": "In May 2036 the Southern District of Ohio denied the call-centre operator's motion for summary judgment in the promotion-preference ADA case, and trial is set for 2037. Vendors responded with documented-holiday codes, and HR teams now schedule holidays the way they schedule leave. At Columbus 3PLs, track enrollees still get promoted faster. Undocumented holidays show up as 'adherence gaps' in reviews, which is the new grievance.",
+      "effect_on_art_and_play": "Sportsbook handle per active account is down a further ~6% in high-density states. 'Holiday' became a genre: two-week 'return of feeling' vlogs, and a hit HBO limited series about a couple who take a holiday together. Unmuted's off nights merged into Full Table events. Comedians moved from mocking the flat audience to mocking people's holiday announcements.",
+      "effect_on_intimacy": "Desire mismatch remains the top complaint. Couples coordinate holidays for desire. Some therapists report holiday-week conflict spikes, with arguments the drug had been muting. Long-term users' smell loss is a quiet new grief in some long marriages.",
+      "effect_on_politics": "No state acted this step. Restriction energy moved federal and became trade policy. MAHA legislators backed Section 232 peptide tariffs and the Lilly DPA loan as 'American medicine'. Progressive consumer advocates backed the Ohio plaintiffs. Gaming money opposes Novo's gambling filing. The 'sedated electorate' claim still lacks evidence, and Full Table dinners became a stop for Southern candidates in 2036.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Permissive on products and quiet on restriction. The FDA approved the Zepbound–bimagrumab combination regimen and the AUD label update, and issued a Drug Safety Communication on olfactory dysfunction without restricting use. There were no new state laws on incretins in 2035–2036. The eleven under-12 bans and the seven in-person rules stand unchanged. The FTC took no action against Novo's on-label 'quiet' campaign.",
+      "subsidy_or_mandate": "None new for users. TrumpRx operates on manufacturer-set prices. Federal money went to supply instead: a DPA Title III loan to Lilly's Houston peptide-API plant and a Commerce 'strategic peptide capacity' designation. The 2027 30% wellness guidance stands.",
+      "conditioning_or_surveillance": "Unchanged in law. In practice, holiday codes now flow through the same consent pipelines as adherence data, so employers' vendors know who paused and why. Two state Medicaid programmes still condition coverage on adherence and BMI progress.",
+      "workforce_or_military": "TRICARE unchanged. The VA adopted oral semaglutide as first-line AUD pharmacotherapy (2035). DOT guidance treating prescribed incretins as non-disqualifying stands. Gray use remains undisclosed by definition.",
+      "geopolitics_of_supply": "In Apr 2035 a Section 232 action imposed 200% tariffs on China-origin peptide API and finished incretins and 50% on India-origin ones, with exemptions for producers that have US plants. In Jul 2035 Beijing answered with export licensing on GLP-1 APIs, Fmoc-protected amino acids and peptide-synthesis resins. That raised costs for Indian generic makers that rely on Chinese intermediates and caused shortages in Brazil. India's B2C parcel registration took effect in Mar 2035 and New Delhi is negotiating an exemption for registered exporters. The US cash-to-Indian-generic gap narrowed to ~30–45×. Gray supply shifted toward bulk API repackaged domestically.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2035-02",
+        "event": "Addiction-medicine and psychiatric societies endorse GLP-1 drugs as a first-line treatment for moderate-to-severe alcohol use disorder; the VA adds oral semaglutide to its national formulary weeks later",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2035-07",
+        "event": "China imposes export licensing on GLP-1 ingredients and peptide-synthesis chemicals, three months after US tariffs of up to 200% on Chinese and Indian incretin imports; Lilly wins a federal loan for a Houston plant as the 'national peptide champion'",
+        "driver": "market_shock: tariff_geopolitics"
+      },
+      {
+        "date": "2035-09",
+        "event": "Scandinavian and Kaiser registries link more than five years of continuous semaglutide to a 50% higher risk of lasting smell and taste loss; FDA issues a safety communication in March 2036 but restricts nothing",
+        "driver": "safety_signal: novel_long_horizon"
+      },
+      {
+        "date": "2035-11",
+        "event": "'Full Table' Thanksgiving dinners, begun in Birmingham churches, draw people eating off-drug or on declared holidays in more than 300 cities; a Pew survey later finds 22% of long-term users took a planned drug holiday that year",
+        "driver": "cultural_response: backlash_body_politics; personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2036-02",
+        "event": "FDA approves Lilly's tirzepatide–bimagrumab combination regimen, which halved the share of muscle lost in trials; Lilly launches it at $549 a month cash with the line 'Lose the fat. Keep yourself.' and no fracture data",
+        "driver": "next_gen_launch: muscle_preserving_combo; price_path: managed_decline"
+      },
+      {
+        "date": "2036-07",
+        "event": "Novo's gambling-disorder trial succeeds as its on-label 'Quiet the noise' alcohol ads run nationally; the company says it will file in 2037, and sportsbook lobbyists begin opposing the application",
+        "driver": "new_indications: mood_and_motivation"
+      }
+    ],
+    "open_tensions": [
+      "The smell-loss signal and the EPI data both argue for planned holidays after five years, but the 30% adherence-premium guidance still penalises undocumented gaps. Whether 'holiday' becomes a protected clinical decision or another line in an employer's file depends partly on the Ohio ADA trial in 2037.",
+      "The combination regimen is sold as the end of 'skinny-frail' with no fracture data, at $549 cash, while gray 'activin' peptides of unknown content spread among people who cannot pay that.",
+      "Tariffs and Chinese export controls slowed the gray market without shrinking it. Supply shifted from mailed Indian parcels to domestic repackagers of bulk API, which state felony laws reach only occasionally, while 21.5M people depend on that channel.",
+      "Novo's 'quiet' marketing sits legally inside an AUD label while the public complaint is that the drug makes people too quiet. A gambling-disorder filing in 2037 would put a reward-modulation indication on the label for the first time, against organised gaming-industry opposition."
+    ]
+  },
+  "prose": {
+    "headline": "A Hundred Million on the Drug, and Now They Want a Holiday: Smell, Tariffs and the Week You Feel Things Again",
+    "world_in_600_words": "At the end of 2036 a little more than one American adult in three takes an incretin drug, close to a hundred million people, and almost half have tried one. Who pays has not changed. Employers covering weight loss hold at 29 percent, and Medicare still pays only through heart, kidney, diabetes, sleep-apnoea and narrow dementia codes. Its incretin bill has passed thirty-nine billion dollars a year anyway, because the people who already qualify keep getting older. The growth came through cash. A $149 starter pill on TrumpRx, a $169 maintenance pill, MariTide at $199. The box price of Wegovy is still $1,349 and nobody looks at it.\n\nAlcohol is where the drug became ordinary medicine. In February 2035 the addiction psychiatrists made it first-line treatment for heavy drinking, and the VA followed within weeks. Nearly seven million adults now take it for drinking. Spirits volumes are down a fifth from a decade ago, and Kentucky distilleries have cut shifts. Novo's national advertising for the alcohol label says 'Quiet the noise'. It is legal because it sits on an approved label, and it borrowed the vocabulary of the calm plans that regulators had barred from saying the same thing. In July Novo's gambling trial succeeded. It will file next year, and sportsbook lobbyists are already working against it.\n\nThe complaint caught up with the marketing. Four users in ten say the drug has made them flat at some point, and nearly a third have stepped down a dose for it. 'I'm taking a holiday' is now as ordinary a sentence as 'I'm off statins for a bit.' Then, in September 2035, Scandinavian and Kaiser registries found that people on semaglutide continuously for more than five years were half again as likely to lose part of their sense of smell and taste. Most cases are mild, and some do not recover. The FDA issued a communication and restricted nothing. Doctors began suggesting a break and a scratch-and-sniff test at the five-year mark. Employers' wellness vendors added a billing code for a documented holiday so that breaks would not trigger the premium surcharge the 2027 guidance still allows. An undocumented break still does.\n\nLilly's answer to the old fear of wasting away is a monthly infusion of bimagrumab alongside weekly tirzepatide. Approved in February, it halves the share of weight lost as muscle. It costs $549 a month in cash and carries no fracture data. In Austin the new body is lean, muscled and on a summer holiday. In Memphis people who had reached surgical-grade losses on Chinese 'reta' vials are rationing them, because the vials now cost more.\n\nThey cost more because supply became trade policy. In April 2035 Washington put tariffs of up to 200 percent on Chinese and Indian incretins. Beijing answered with export licences on the chemicals peptides are made from, and Brazil ran short. Federal loans went to a Lilly plant in Houston, sold as American medicine. The gray market grew more slowly but still serves twenty-one million people. Much of it now arrives as bulk powder that repackagers in Texas and Florida fill into vials.\n\nNo state passed a new law. The backlash took place at the table instead. Full Table began in Birmingham churches as a dinner where everyone eats off the drug or on a declared holiday, and by Thanksgiving it ran in three hundred cities. It brings together pastors who call appetite a gift, fat-acceptance organisers from Atlanta and the old Unmuted crowd, and they agree on almost nothing but the meal. Southern candidates now stop by. In Ohio a call-centre worker's promotion lawsuit survived summary judgment and goes to trial next year. Spice companies sell louder seasoning.",
+    "a_day_in_the_life": "Renee Okafor wakes at 4:40 in Grove City, Ohio, and does not take her shot. It is day nineteen of twenty-eight. The holiday code is in the vendor portal, approved by Dr. Lusk, so the surcharge stays off her paycheck.\n\nThe kitchen smells of coffee. She stands at the counter longer than she needs to, testing it. Eight years of Wegovy, the last six covered by the warehouse track. At the five-year visit she scored 29 out of 40 on the sniff booklet, and last week she scored 31.\n\nAt the distribution centre she runs the inbound dock. Her lead, Marcus, is on the new infusion regimen and has arms like a recruiting poster. He asks whether she's feeling it yet. She is hungry, actually hungry, at 9 a.m., and annoyed at a driver over a pallet count in a way she hasn't been annoyed in years. She catches herself raising her voice. Two pickers look up.\n\nAt lunch she eats the whole sandwich.\n\nHer daughter Tasha texts a photo from Birmingham, a long church table with paper plates, captioned FULL TABLE SUNDAY. U coming at Xmas?? Renee types maybe, deletes it, and types depends on my dates.\n\nDriving home she smells something burning near the overpass, sharp and immediate, and pulls onto the shoulder to check her own car. It's a field fire, someone clearing brush. She sits there with the engine running and the window down, breathing it in, and cries for a minute without deciding to.\n\nHer restart pen is in the fridge door, dated for the ninth."
+  }
 }

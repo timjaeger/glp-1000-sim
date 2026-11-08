@@ -35,7 +35,320 @@
     "state_action": "none",
     "personality_layer": "mainstream_complaint"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T18:04:34Z"
+  "created_at": "2026-11-08T18:04:34Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01DHHhkJDhppSFMdXTwKiMQw",
+        "custom_id": "s5-L3-r42",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19495,
+        "output_tokens": 24298
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01PSHAi4hqzyPnLKgwnR5c4E",
+        "custom_id": "s5-L3-r42",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 33907,
+        "output_tokens": 13612
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2036,\"fictional\":true,\"still_true\":[\"Wegovy\\'s US list price is still $1,349 a month, and almost nobody pays it.\",\"The FDA has approved no generic semaglutide or tirzepatide in the US; generic liraglutide is still the only generic incretin on the US market.\",\"The TrumpRx cash channel still …"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2036,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US; generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "Medicare still pays for no incretin prescribed for weight loss alone. The Medicare GLP-1 Bridge pilot has not been revived, and Congress has not reopened the ~$41B CBO-scored permanent benefit.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, and Illinois's ban on adherence-conditioned premiums is still the only state ban in force."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 32.7,
+      "us_adults_ever_used_pct": 42.5,
+      "by_income_third_pct": {
+        "top": 40,
+        "middle": 33,
+        "bottom": 25
+      },
+      "by_age_band_pct": {
+        "18_29": 18,
+        "30_49": 31,
+        "50_64": 45,
+        "65_plus": 35
+      },
+      "pediatric_under_18_on_drug_pct": 2.1,
+      "cycled_off_and_on_pct": 49.9,
+      "note": "FICTIONAL. Anyone on a 'drug holiday' of under 8 weeks counts as current. Cycling arithmetic: 42.5% ever-used − 32.7% current = 9.8% of adults who used and are off now. About 55% of current users are on a second or later course (18.0 points), and 3.2 points cycled and are off again, so (18.0 + 3.2) / 42.5 ≈ 49.9% of ever-users have cycled. The other 6.6 points stopped once and have not restarted. First-course current users = 32.7 − 18.0 = 14.7 points. Ever-use rose 7.9 points, inside the 11-point cap. Persistence is still about one-third at one year on cash weekly and oral products and about 60% in tracks and among Medicare dementia-route users. Restart within a year has risen to ~45–50% because normalisation makes stopping the choice you have to explain. Age check (adult weights 0.20/0.33/0.24/0.23): 3.6 + 10.23 + 10.8 + 8.05 ≈ 32.7. Income thirds average 32.7. Users: 32.7% of ~276M adults ≈ 90.3M. FICTIONAL payer mix: Medicare ~19.5M (21.6%; dementia-risk route ~7.0M, of whom ~1.5M moved over from cash 'dementia-prevention' use; AUD ~1.0M); Medicaid ~5.8M (6.4%; AUD ~1.2M, dementia-risk 60–64 ~0.4M, children ~0.75M); commercial ~19.0M (21%; ~10.8M in conditioned tracks); legitimate cash ~41.5M (46%; ~9M on indefinite $149 starting doses, ~6M 'metabolic health'/longevity users without obesity, ~2.7M calm/focus subscribers); imported or counterfeit ~4.5M (5%). Sum: 19.5 + 5.8 + 19.0 + 41.5 + 4.5 = 90.3. About 8.5M users have a BMI under 30 and no obesity-related diagnosis, mostly top-third adults aged 40–69. Adult obesity ~31.4%. About 16.5% of adults have obesity and have never used a drug, concentrated in the bottom third, among uninsured 30–59-year-olds in the rural South and among people priced out of gray vials twice. About 1.3M gray-market users left the channel after the 2035 Chinese export controls, roughly 60% to TrumpRx starting doses or Foundayo and 40% to stopping. Pediatric: 2.1% of under-18s are on a drug (12–17 ~3.8%; 6–11 ~0.8%), about 62% of them on Medicaid/CHIP. About 5.9M children live with a parent who has regained after stopping. About 11M children live in a household where both parents are current users."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare is now the default payer for older adults with obesity, through a label rather than a statute. The Feb 2036 tirzepatide approval to reduce the risk of all-cause dementia in adults 60+ with obesity (no CVD required) makes Zepbound/Mounjaro a covered Part D drug for a medically accepted, non-weight-loss indication. Plans apply PA on age, BMI ≥30 and, for women 70+, a baseline DXA. FICTIONAL arithmetic: 19.5M users × ~$215 average net/month × 12 ≈ $50.3B gross Part D incretin spend before rebate true-up (up from ~$38.3B). Average net fell because Foundayo and Medicare-negotiated semaglutide make up more of the mix. Dementia route: 7.0M × $230 × 12 ≈ $19.3B. AUD route: 1.0M × $205 × 12 ≈ $2.5B. Part D base premiums rose again for 2036 and are proposed up for 2037. Medicaid (~5.8M): AUD and the dementia label are both non-weight-loss uses, so they are covered outpatient drugs in every state under existing rebate law. 5.8M × ~$190 × 12 ≈ $13.2B gross before rebates. 7 states still cover adult weight loss. No state changed its policy. Two state programmes still condition coverage.",
+      "employer_coverage_pct": 35,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide now costs $8–40 a month in India, up from $4–30, because Indian makers synthesise chemically using Chinese Fmoc amino acids and are paying licence premiums. Chinese tirzepatide-analogue vials are scarcer even in unenforced markets, where they sell for $35–80. Delivered to US addresses, gray vials cost ~$150–260. Canadian generics run CAD 55–95 and Brazilian generics BRL 190–320.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. The 2035 shock is in supply. China's Aug 2035 export-licence regime on peptide-synthesis intermediates (Fmoc-protected amino acids, Aib, the C18 diacid side-chain linker, SPPS resins) and on finished peptide APIs hit chemically synthesised peptides hardest: tirzepatide, retatrutide, survodutide, Indian generics and gray vials. Novo's yeast-expressed semaglutide was exposed only through linker sourcing, and orforglipron, a small molecule, was barely touched. Prices: Zepbound vials $299 → $379 on LillyDirect with a 'supply-assurance' surcharge. Retatrutide $399 → $499. Higher tirzepatide strengths were on the FDA shortage list from Oct 2035 to May 2036. Wegovy pill starting dose still $149 on TrumpRx, maintenance $199 → $229. Foundayo stays at $149–229, and Lilly is pushing it as the American pill. Oral amycretin is ~$429 cash with no TrumpRx price. MariTide is $279 direct. Orals are ~60% of users. Employers: Business Group on Health (Nov 2036) finds 35% cover weight management, ~70% of them conditioned, so unconditional coverage is ~10.5% of employers. Tracks hold ~10.8M people. About 6M 'metabolic health' users with BMI under 30 pay cash through telehealth memberships ($49–99 a month plus drug), mostly on starting-dose Wegovy pill or low-dose Foundayo, off-label."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1/amylin unimolecular co-agonist, daily oral (oral amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "Activin type II receptor antibody muscle adjunct (bimagrumab, restricted label)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "moderate-to-severe alcohol use disorder (oral semaglutide / Wegovy pill)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; weekly semaglutide), with growth, Tanner and eating-disorder monitoring",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide, 2032 label)",
+        "reduction of risk of all-cause dementia in adults 60+ with obesity, no CVD required (tirzepatide, approved Feb 2036; baseline and 2-yearly DXA required for women 70+, fracture-risk boxed language)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' and longevity use by adults without obesity (BMI 23–29.9), mostly low-dose Wegovy pill or Foundayo through telehealth memberships (~6M cash, ~8.5M in total)",
+        "'calm' and 'focus' low-dose plans (~2.7M subscribers), now marketed as 'steady' after the anhedonia label",
+        "structured 'drug holidays': weekend skips on daily pills, a skipped shot before weddings, birthdays and holidays, and 'reset months'",
+        "indefinite use of the $149 TrumpRx starting dose (~9M people)",
+        "dementia-prevention use by 50–59-year-olds below the label age, cash-paid",
+        "sub-threshold 'drink less' use, plus nicotine, gambling and shopping reduction",
+        "semaglutide in 12–14-year-olds above label titration in gray channels"
+      ],
+      "pipeline_note": "FICTIONAL. No new class reached market in 2035–36, so the next_gen_launch driver is 'none'. Tirzepatide's dementia extension (60+ without CVD) was resubmitted in Jan 2035 and approved in Feb 2036 (13 months). The approval covers an existing product with a new indication, not a new class. Novo filed oral amycretin for AUD in Mar 2036; a decision is due no earlier than 2037. Implants remain in phase 1–2 and are not on the market. Bimagrumab stays restricted (~240k users). Lilly received DPA Title III awards for a US Fmoc-amino-acid and linker plant in Lebanon, Indiana, due online 2037–38. Global incretin market ~$215B (2035). US branded net prices on Novo and orforglipron products still drift down 2–4% a year. Lilly's synthetic peptides rose 20–25% in the cash channel. This step's price shock is input-driven and concentrated in synthetic peptides and the gray market."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation outside tracks and Medicare. Chronic diarrhoea is routinely worked up for EPI.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and bowel obstruction (persistent delayed gastric emptying)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: The first MDL gastroparesis bellwether (Oct 2035) ended in a defence verdict on causation. The second (Mar 2036) produced a $14M plaintiff verdict for a cycler with documented post-cessation gastric-emptying studies, now on appeal. GI claims number ~44,000.",
+        "regulatory_response": "No new labelling. FDA says persistence after cessation is unestablished."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation; absolute risk low. Still pleaded alongside EPI.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare hip-fracture HR ~1.3 after more than 2 years and ~1.45 after three or more cycles. The dementia trial excess in women 70+ (HR ~1.5) now applies to a newly covered population of millions.",
+        "regulatory_response": "Class warning retained. The tirzepatide 60+ dementia label requires baseline and 2-yearly DXA for women 70+ and recommends resistance training. Bimagrumab remains restricted."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new adult signal, including among AUD-label and dementia-route users. Anhedonia is now handled as a separate entity.",
+        "regulatory_response": "Warning remains removed; the Sep 2035 anhedonia labelling explicitly states no increased risk of suicidal behaviour was found."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: The class labelling (Sep 2035) states clinically meaningful anhedonia at ~7% of maintenance-dose users vs ~3.5% of matched controls, dose-related, ~10% on retatrutide. A sponsor-pooled SHAPS reanalysis of phase 3 trials put starting doses at ~4.5% vs ~3.5%, not statistically distinct. The label says blunting usually resolves within 2–6 weeks of dose reduction or interruption.",
+        "regulatory_response": "Labelled adverse reaction across all incretins, with prevalence figures, a medication-guide paragraph and a recommendation to consider dose reduction. No REMS, no boxed warning. FDA warned that marketing reduced pleasure as a benefit would misbrand the product, and calm platforms rebranded."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. About 0.5M gray users who stopped after the 2035 export controls are regaining now.",
+        "regulatory_response": "None directly; it underpins conditioned coverage."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency, thiamine deficiency in AUD users who keep drinking, low ferritin in adolescent girls. Protein-energy shortfall is now reported in 75+ dementia-route users who live alone.",
+        "regulatory_response": "Annual micronutrient panel language retained; geriatric nutrition counselling added to the tirzepatide 60+ label."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after 5+ years of continuous semaglutide. Tirzepatide HR ~1.3. EPI claims number ~58,000. Novo raised its reserve to ~$7.4B and is in mediated global-settlement talks.",
+        "regulatory_response": "Labelled on semaglutide and tirzepatide. The DOJ civil investigative demand is unresolved and the Form 483 was closed after remediation."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About fourteen years of semaglutide follow-up now exist. The effects of habitual holiday cycling (weekend skips, reset months) on bone, pancreas and GI tolerance are uncharacterised. There are no data on decades of low-dose use in people without obesity.",
+        "regulatory_response": "Pediatric PMRs continue. FDA asked sponsors for a holiday-pattern observational study (2036). No PMR yet for non-obese longevity use, since it is off-label."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Reports tied to non-approved product exceed ~38,000. During the Oct 2035–May 2036 tirzepatide shortage listing, 503B compounding was briefly lawful again but API was scarce, and some outsourcing facilities bought diverted API of unknown origin. A second CDC cluster (Georgia, Alabama; 2036) linked ~90 infections to re-filled vials, with 1 death.",
+        "regulatory_response": "FDA warning letters to four 503B facilities. Compounding window closed in May 2036. The tariffs remain. No statute changed and no state acted."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: Height velocity is still ~0.5–0.6 cm/year below expected in prepubertal starters. The first liraglutide 6–11 cohort is now entering puberty, and Tanner progression lags ~5 months. Swedish registry ARFID HR ~1.8. Final adult height is unknown.",
+        "regulatory_response": "Monitoring language and medication guide; no REMS. AAP keeps lifestyle-first for prepubertal children."
+      },
+      {
+        "effect": "Alcohol-related harms on the AUD label (dehydration, alcoholic ketoacidosis, aspiration with vomiting during binge drinking)",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: ~1 per 2,000 person-years in titration-phase bingers; holiday re-entry adds cases.",
+        "regulatory_response": "Label counselling; postmarketing study ongoing."
+      },
+      {
+        "effect": "Re-initiation GI events after drug holidays (vomiting, dehydration on restarting at full maintenance dose)",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: ED networks report a 'Monday cluster' of vomiting and dehydration visits in users who skip 2+ weeks and restart without re-titrating. ~1 per 1,500 holiday episodes in early data; higher in 75+.",
+        "regulatory_response": "Sep 2035 labelling added re-titration advice after interruptions over 2 weeks for weekly products. No action on daily-pill weekend skipping."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 49% of US households have a user. Snack and confectionery volumes are down ~15–16% from 2025 and sugary drinks ~13%. In Sun Belt retirement counties (Sumter and Marion in Florida, Maricopa's West Valley) the Medicare dementia label drove a 2036 dip of ~4% in grocery baskets for 65+ households. The lower-income 'tariff bounce' faded as users moved to $149 pills. Ingredient suppliers sell 'metabolic' fibre and protein lines to the non-obese longevity buyer. Category dollar sales are down ~1% a year.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volume is down ~20% from 2025 and beer ~13%. The AUD label stayed in place despite the CMS audit. Normalisation means an evening with no drinks is now ordinary. Kentucky bourbon is cutting barrel laydown for a second cycle, and Heaven Hill and smaller Bardstown houses lost another ~900 jobs. Export pushes to the Gulf and Southeast Asia partly offset this. Non-alcoholic drinks are ~6% of category dollars.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat to slightly down. Casual dining in retirement markets now runs 'small plate senior' menus. Bars rely on events rather than pours. QSR value menus hold up in markets where users regained.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking. Mature-women's brands (Chico's-type) re-cut for 65+ customers losing weight on the dementia label. Resale handles cyclers and holiday-takers. Tailoring and structured athletic wear keep growing.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training keeps growing. Medicare Advantage plans bundle resistance classes and DXA referrals with dementia-route PA, and SilverSneakers-type senior strength attendance is up sharply in Florida and Arizona. Track InBody scans are routine. Longevity clinics sell 'muscle insurance' packages to the non-obese.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Part D spending jumped with the dementia label (~$50.3B gross incretin spend), and Part D base premiums rose for 2036 with another rise proposed for 2037. MA plans compete on DXA and strength benefits. Employer pharmacy trend is ~+6%. Conditioned tracks absorbed the anhedonia label by adding 'clinician-approved dose reduction' and 'holiday' codes so premium tiers do not drop. The CMS AUD audit (Jul 2035) recouped from plans and tightened telehealth documentation.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Market still growing. Lilly is the national champion: DPA awards, Medicare dementia volume and Foundayo as the American pill, but it is short on synthetic tirzepatide inputs and runs surcharges and a shortage listing. Novo's recombinant semaglutide pill gained share despite litigation and settlement talks. Indian generic makers' margins are squeezed by Chinese licence costs. CDMOs in North Carolina and Indiana are building Fmoc and linker capacity.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on it is the default reading of an adult body. A heavy body raises the question of why you are not on one, and the answers are cost, a stopped course, a doctor's no, or principle. A 68-year-old's slimness in The Villages reads as Medicare and the dementia code. A lean 44-year-old in Scottsdale with a membership app reads as 'metabolic health'. Regain in Montgomery or Jackson reads as the vial seller vanishing again in 2035.",
+      "thinness_and_class": "Muscle is still the class uniform, and 'lifted and low-dose' is the upper-income ideal: a BMI of 24, a $149 pill nobody needs to explain, a DXA screenshot. 'Off-drug lean' remains the elite boast but now sounds slightly eccentric. Older Medicare women are the new mass user group, and their fracture-risk DXA requirement marks them as a monitored class. The bottom third rose to 25% on $149 pills, but most never-users with obesity are still poor, Southern and uninsured.",
+      "eating_as_ritual": "Shared meals are shorter, and weekend 'holiday dinners', planned for the days a pill is skipped so food tastes like something, have become a middle-class ritual in Chicago and Denver suburbs. Bread Alone has ~1,100 congregations but no longer grows, because members' spouses are on the drug. Retirement-community dining halls in Florida cut portion sizes after resident councils asked for it.",
+      "dating_and_intimacy": "Apps dropped the 'on GLP-1' tag as redundant and added 'off by choice', which reads as a statement. 'On a holiday this weekend' is a common first-date line, meaning more appetite and more feeling. Couples coordinate skip weekends.",
+      "meaning_of_appetite": "Appetite is managed and slightly old-fashioned. The labelled anhedonia figure gave the backlash vindication but cost it novelty: everyone knows someone who feels flat, and the response is to adjust the dose, not to stop. Unmuted's membership is flat. MAHA groups have folded the pediatric fight into school-board races. The 'hunger tax' line returned briefly in Memphis after the 2035 controls, aimed this time at Beijing as much as Washington.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: The label figure is ~7% at maintenance doses vs ~3.5% of controls and ~10% on retatrutide. With ~46M users at maintenance doses, that implies roughly 1.6M excess cases of clinically meaningful anhedonia above background (46M × 3.5 points). Starting and low doses are ~4.5% vs 3.5%, not significant. Surveys (KFF, Apr 2036) find ~38% of current users say they have felt 'flat' at some point, and ~31% have taken a deliberate drug holiday or dose step-down in the past year. Calm subscribers number ~2.7M, ~28% written on the AUD label after the CMS audit (down from ~35%).",
+      "framing": "Since Sep 2035 it has been a labelled side effect that everyone discusses and most people manage. Users say 'flat week', 'dulling' or 'too quiet'. Clinicians say 'dose-related blunting, consider reduction'. The calm platforms sell 'steady', not 'quiet the noise'. HR still says steadiness. Unmuted says 'they admitted it'.",
+      "effect_on_work": "About 10.8M employees are in conditioned tracks. Since early 2036, holiday and step-down codes entered by a clinician protect premium tiers, but self-directed skips still register as non-adherence, so workers need a telehealth note to take a weekend off. Sales and hospitality managers report 'holiday Fridays'. FMCSA is still silent on calm plans. The two EEOC charges remain unresolved.",
+      "effect_on_art_and_play": "'Flat' is now a genre adjective, and Spotify-type services tag 'holiday playlists' for skip weekends. Comedians do 'the label read aloud' bits. Live music in Columbus and Louisville stabilised at a smaller size, with Saturday shows timed to the holiday weekend. Sportsbook handle keeps sliding in insured suburbs. Retirement-community theatre groups report casts losing weight mid-run.",
+      "effect_on_intimacy": "Couples schedule skip weekends for sex and long dinners, and therapists now ask which partner is 'on holiday' this week. The pill window still structures mornings. In 65+ couples where one spouse qualifies under the dementia code and the other does not, the new mismatch is in appetite and in fear of decline.",
+      "effect_on_politics": "No state acted. Congress held one hearing on Part D premium growth and the dementia label but produced no bill. The supply shock became a China story, which let the administration pair the tariff with DPA money and Lilly. The backlash lost its urgency as the drug became ordinary. 'Sedated electorate' arguments still have no turnout evidence. Medicare seniors on the dementia route are a new, large, organised constituency defending the coverage.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "Federal, routine and permissive on labels, with the labelling now franker. FDA approved the dementia 60+ extension, imposed class anhedonia labelling with prevalence figures, put higher tirzepatide strengths on the shortage list and took them off again, and warned 503B facilities. CMS audited AUD coding and recouped from plans. No state legislature or agency acted, and Illinois's ban remains the only one.",
+      "subsidy_or_mandate": "No new statute. Medicare became the de facto payer for older adults with obesity through the Part D covered-drug definition applied to a non-weight-loss indication. DPA Title III awards went to Lilly and two CDMOs for domestic peptide-intermediate capacity. OPM's FEHB adherence and progress conditions continue. The 2027 tri-agency 30% guidance stands.",
+      "conditioning_or_surveillance": "Still deepening. Tracks now ingest clinician-entered holiday codes alongside smart-bottle logs, and wellness vendors analyse skip patterns. Medicare Part D PA for the dementia route requires DXA results for women 70+, so fracture-risk data now flows to plans. CMS's AUD audit pulled telehealth AUDIT-C records. Two state Medicaid programmes still condition coverage.",
+      "workforce_or_military": "TRICARE covers the AUD and dementia labels under existing rules. DoD and VA procurement now prefers US-finished incretins, which favours Lilly's Indiana and North Carolina output. The Army recruit oral pilot continues unexpanded.",
+      "geopolitics_of_supply": "The 2033 Section 232 100% tariff on Chinese and Indian peptide drugs and APIs stays. In Aug 2035 China, citing its stalled WTO complaint, imposed export licensing on Fmoc-protected amino acids, Aib, the semaglutide-class fatty-diacid linker, SPPS resins and finished peptide APIs. Licences now take 60–120 days. Indian generic makers pay premiums, gray vials thinned, and synthetic US peptides were rationed. Washington answered with DPA awards and procurement preferences, and Lilly became the national champion. Novo's yeast-expressed semaglutide and Lilly's small-molecule Foundayo were the least exposed products, and that shifted volume toward pills.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2035-07",
+        "event": "CMS audit finds about 22% of sampled telehealth-originated AUD Part D claims lacked supporting documentation; plans are told to recoup and tighten PA, and calm platforms cut the share of subscribers written on the alcohol label from 35% to 28%",
+        "driver": "baseline"
+      },
+      {
+        "date": "2035-08",
+        "event": "China imposes export licensing on Fmoc amino acids, peptide-linker intermediates, synthesis resins and finished peptide APIs; Indian generic prices rise, US gray vials climb to $150–260 delivered, and about 1.3 million gray users leave the channel",
+        "driver": "market_shock: tariff_geopolitics; price_path: shock_up"
+      },
+      {
+        "date": "2035-09",
+        "event": "FDA orders class labelling for all incretins listing anhedonia and emotional blunting in about 7% of maintenance-dose users against 3.5% of controls, about 10% on retatrutide, and advising dose reduction; calm platforms drop 'quiet the noise' for 'steady'",
+        "driver": "safety_signal: anhedonia_labelled; personality_layer: mainstream_complaint"
+      },
+      {
+        "date": "2035-10",
+        "event": "Higher tirzepatide strengths go on the FDA shortage list for seven months; Lilly adds a supply surcharge that takes Zepbound vials to $379, wins DPA Title III awards for an Indiana intermediates plant, and is named in DoD and VA procurement preferences for US-finished incretins",
+        "driver": "price_path: shock_up; market_shock: tariff_geopolitics"
+      },
+      {
+        "date": "2036-02",
+        "event": "FDA approves tirzepatide to reduce dementia risk in adults 60 and older with obesity, with no CVD required and DXA monitoring for women 70+; because the use is not weight loss, Part D and Medicaid must cover it, and Medicare incretin users reach 19.5 million by December",
+        "driver": "coverage_shift: public_expansion; state_action: none; next_gen_launch: none"
+      },
+      {
+        "date": "2036-05",
+        "event": "KFF poll finds 57% of adults say a healthy adult who refuses the drugs 'should have a reason', and an estimated 8.5 million Americans without obesity now take one for 'metabolic health', mostly on $149 starting-dose pills through membership apps",
+        "driver": "new_indications: longevity_wellness; cultural_response: normalisation"
+      }
+    ],
+    "open_tensions": [
+      "Medicare now pays for obesity in older adults under the name of dementia prevention, at ~$50B a year gross and rising, with no statute behind it and Part D premiums climbing. Millions of the newly covered are women 70+, whose own trial showed a fracture excess.",
+      "The anhedonia label made blunting a managed side effect. Drug holidays are now normal, but conditioned tracks only accept holidays a clinician has coded, and nobody has studied what habitual weekend cycling does to bone, pancreas or tolerance.",
+      "Supply now runs through Beijing's licensing desk and Lilly's unfinished Indiana plant. The shock pushed users toward Novo's pill and Foundayo, but synthetic-peptide rationing and re-filled vials keep the Southern gray market lethal.",
+      "About 8.5M people without obesity take the drug for 'metabolic health' on starting doses that have never been studied for decades of use, while 16.5% of adults have obesity and have never been on one."
+    ]
+  },
+  "prose": {
+    "headline": "One in Three: Medicare Calls It Dementia Prevention, the Label Calls It Anhedonia, and Nobody Asks Why You're On It",
+    "world_in_600_words": "At the end of 2036 a third of American adults take an incretin drug, about ninety million people. Nobody marks it anymore. A heavy body is now the thing that needs explaining, and people treat a refusal of the pill as a stance. More than four in ten adults have tried one, and half of those have stopped at least once and come back.\n\nThe largest new group is older people, and Congress did not put them there. In February the FDA approved tirzepatide to reduce the risk of dementia in anyone sixty or older with obesity, whether or not they had heart disease. The approval rests on a trial that also showed more hip fractures in women over seventy. Because preventing dementia is not weight loss, Medicare's old exclusion does not apply, and Part D plans have to cover it behind prior authorisation. Medicare still pays for nothing prescribed for weight alone, and it now pays for nearly twenty million users, about fifty billion dollars a year before rebates. Women over seventy have to bring a bone scan to the pharmacy counter. In Sumter County, Florida, the dining halls have shrunk their portions and the strength classes have waiting lists. Part D premiums are up again, and next year's are proposed higher.\n\nThe second change came from Beijing. In August 2035, after its trade complaint stalled, China began licensing exports of the building blocks used to make peptides chemically. Drugs synthesised from scratch felt it: Lilly's tirzepatide and retatrutide, India's generics, the gray-market vials. Novo's semaglutide is brewed in yeast in Denmark, and Lilly's Foundayo is a small molecule, so the pills held up and the injectables were rationed. Zepbound went on the shortage list for seven months and picked up a surcharge. Washington answered with defence-production money for a Lilly plant in Indiana and purchasing preferences at the Pentagon and the VA, and Lilly became the national champion. Gray vials now cost two to three times what they did, and in Alabama and Georgia re-filled vials killed someone again.\n\nThe third change was a sentence on the label. Since September every incretin carries a warning that about seven in a hundred people on maintenance doses lose a clinically meaningful amount of pleasure, double the rate in people not on the drug, and more on retatrutide. The label says the effect usually lifts when the dose comes down. People treat it like heartburn. Almost four in ten users say they have felt flat, and a third took a deliberate break last year. Weekend skips on the daily pill are ordinary, and so are holiday dinners on the days food tastes like something again. The calm platforms stopped selling quiet and started selling steady. In the employer tracks a break counts only if a clinician enters the code, so workers ask telehealth for a note before a wedding.\n\nAt the top of the income scale the drug has become hygiene. About eight and a half million people without obesity take a low dose for metabolic health, usually the $149 starting pill through a membership app, and no study covers that use for decades. At the bottom, a quarter of the poorest third are on a drug, more than ever, almost all on the cheapest pill. Most adults with obesity who have never been on one are still poor, Southern and uninsured.\n\nBourbon country has cut another nine hundred jobs. Snack volumes are down by a sixth from 2025. No state passed anything, and Congress held a hearing on premiums. The backlash got what it asked for when the label named the side effect, and since then it has drawn smaller crowds. The children who started at six are reaching puberty a few months late.",
+    "a_day_in_the_life": "Carol Brandt is sixty-seven and she weighs herself before coffee, because the Part D plan wants a number every quarter. At the Publix pharmacy in Wildwood the tech hands her the Zepbound pen box and says forty-seven dollars. Carol says it was covered. The tech says it is, that is the copay, and taps the screen where it says DEMENTIA RISK, Z-code. Carol laughs and says she remembers being told she was just fat.\n\nHer friend June, seventy-two, is in line behind her with a printout of her bone scan folded in quarters. June's prior authorisation came back asking for the scan, and she has been carrying it for a week.\n\nAt home, Walt is at the kitchen counter breaking a Foundayo tablet out of its blister. He pays $189 a month out of their checking account, because his BMI is twenty-seven and Medicare will not touch it. His doctor calls it metabolic maintenance. Walt calls it insurance on his knees. Tomorrow is Saturday, and he will skip it. He has skipped every Saturday since September, since the label, because on Saturdays the grandkids come and he would like to feel the noise.\n\nAt three o'clock Carol goes to strength class at the rec centre. There is a waiting list now. The instructor has them hold a kettlebell to their chest and squat. Half the class is in new pants.\n\nAt dinner Carol eats eleven bites of pork chop and stops. Walt eats two chops. He takes the dog out, and Carol watches him through the window, laughing at something on his phone, and she can't remember whether she laughed today."
+  }
 }

@@ -35,7 +35,313 @@
     "state_action": "none",
     "personality_layer": "mainstream_complaint"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T18:04:34Z"
+  "created_at": "2026-11-08T18:04:34Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01DHHhkJDhppSFMdXTwKiMQw",
+        "custom_id": "s5-L3-r37",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19490,
+        "output_tokens": 18063
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01PSHAi4hqzyPnLKgwnR5c4E",
+        "custom_id": "s5-L3-r37",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 30313,
+        "output_tokens": 12782
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2036,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US; generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "Medicare still pays for no incretin prescribed for weight loss alone; the Bridge pilot has not been revived and Congress has not reopened the ~$41B CBO-scored permanent benefit.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 30.6,
+      "us_adults_ever_used_pct": 41,
+      "by_income_third_pct": {
+        "top": 36.5,
+        "middle": 31.5,
+        "bottom": 24
+      },
+      "by_age_band_pct": {
+        "18_29": 18,
+        "30_49": 31.5,
+        "50_64": 43.5,
+        "65_plus": 26.8
+      },
+      "pediatric_under_18_on_drug_pct": 2,
+      "cycled_off_and_on_pct": 48.3,
+      "note": "FICTIONAL. Cycling arithmetic: 41.0% ever-used − 30.6% current = 10.4% of adults who used and are off now. About 55% of current users are on a second or later course (16.8 points) and 3.0 points cycled and are off again, so (16.8 + 3.0) / 41.0 ≈ 48.3% of ever-users have cycled. The other 7.4 points stopped once and have not restarted. This fits one-year persistence near one-third on daily orals and weekly pens, ~60–65% on monthly MariTide and inside conditioned tracks, and 36–47% restarting within a year. Ever-use rose 6.4 points, driven by the price-step on oral amycretin, the home MariTide pen, growth on the AUD label and former gray-market users returning at $149–179. Age check: 0.20×18 + 0.33×31.5 + 0.24×43.5 + 0.23×26.8 = 3.6 + 10.4 + 10.44 + 6.16 ≈ 30.6. Income thirds average (36.5 + 31.5 + 24) / 3 ≈ 30.7. Users: 30.6% of ~276M adults ≈ 84.5M. FICTIONAL payer mix: commercial ~19.5M (23%, of which ~10.6M are in conditioned tracks); Medicare ~17.0M (20%); Medicaid ~5.6M (6.6%, ~1.4M of them on the AUD label); legitimate cash ~37.4M (44%, including ~3.1M on calm/focus plans and ~7.5M who stay on the $149 starting dose indefinitely); imported or counterfeit ~5.0M (5.9%). Sum: 19.5 + 17.0 + 5.6 + 37.4 + 5.0 = 84.5. On-label AUD users ≈ 4.3M (Medicare 1.1, Medicaid 1.4, commercial 0.6, cash/calm ~1.2). The bottom third rose 17.5 → 24 through $149 starting doses, the $179 TrumpRx maintenance step, Medicaid AUD coverage, and ~0.6M returning regainers. Adult obesity ~30.4% nationally, but by income third it is ~20% top and ~40% bottom (NHANES 2033–34). About 19% of adults have obesity and have never used a drug, concentrated in the bottom third, the rural South and adults 65+ without qualifying codes. Pediatric: 2.0% of under-18s, ~3.7% of 12–17s and ~0.7% of 6–11s; ~62% of 6–11 starts are Medicaid/CHIP under EPSDT. About 6.1M children live with a parent who has regained after stopping, and ~7M with a parent whose premium tier depends on a track log."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Structure unchanged. Medicare (~17.0M users) still pays only through diabetes, CV, CKD, OSA, dementia-risk (obesity plus established CVD) and AUD codes, all behind prior authorisation. FICTIONAL arithmetic: 17.0M × ~$214 average net/month × 12 ≈ $43.7B gross Part D incretin spend before rebate true-up (up from ~$38.3B; more users, lower net price). Dementia route: ~2.5M × $230 × 12 ≈ $6.9B. AUD route: ~1.1M × $195 × 12 ≈ $2.6B. The CMS AUD coding audit (final Aug 2035) found ~19% of telehealth-originated AUD claims lacked documented DSM-5 criteria; Part D sponsors recouped ~$380M; no rule changed. Medicaid (~5.6M): oral semaglutide for AUD remains a covered outpatient drug in every state, and tirzepatide for AUD joined it after its Apr 2036 approval. Children 6–11 still reach semaglutide through EPSDT. 7 states still cover adult weight-loss use; none changed policy. The same two state programmes still condition coverage.",
+      "employer_coverage_pct": 34,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide sells for $4–28 a month in India and 100+ export markets. Chinese tirzepatide-analogue vials are $18–55 where patents are not enforced. Delivered to US addresses under the 2033 tariff and export-licence regime, the same product costs ~$85–170. Canadian and Brazilian generics are CAD 40–75 and BRL 150–260. India and China still supply roughly two-thirds of world incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "daily_oral",
+      "note": "FICTIONAL. Managed decline through negotiated channels: the Jan 2036 TrumpRx round added oral amycretin at $299 (from ~$449 cash direct), cut Wegovy pill maintenance to $179 (from $199), and set injectable Wegovy/Zepbound at $229–279 and retatrutide at $299 (from ~$399). The Wegovy pill starting dose stays $149. Foundayo $149–199. MariTide $229 direct for both the clinic dose and the home monthly pen (approved Jun 2035). Oral amycretin ~8.5M users; MariTide ~9.5M (about 40% on the home pen); orals overall ~54% of users. Brand net prices are ~4–6% lower than in 2034, and no brand sells below $149. Business Group on Health (Nov 2036): 34% of employers cover weight management, ~70% of them with adherence and/or ≥5%-at-six-months conditions; unconditional coverage ~10%. Conditioned tracks ~10.6M enrollees. Many tracks now default new enrollees to monthly MariTide because a monthly dose is easier to verify. After the Amgen settlement, OPM requires FEHB carriers to certify for plan year 2037 that track vendors take no per-patient manufacturer payments. Who pays did not change. The gray market shrank to ~5.0M as $149–179 legitimate doses absorbed price-sensitive users. Domestic re-filling from smuggled API persists in Mississippi, Alabama and east Texas."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro; AUD indication Apr 2036)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1/amylin unimolecular co-agonist, daily oral (oral amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide; clinic dose plus home monthly autoinjector approved Jun 2035)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "Activin type II receptor antibody muscle adjunct (bimagrumab, restricted label)"
+      ],
+      "best_efficacy_pct_body_weight": 24,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "moderate-to-severe alcohol use disorder (oral semaglutide / Wegovy pill, Jan 2033; weekly tirzepatide, approved Apr 2036; ASAM 2035 update lists incretins as first-line alongside naltrexone and acamprosate for patients with comorbid obesity or metabolic disease)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; weekly semaglutide, both with 6-monthly growth-velocity, Tanner staging and eating-disorder screening language)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide); the 60+ without CVD extension was filed Mar 2035, went to a split advisory committee in Oct 2036 over the hip-fracture excess in women 70+, and has a decision due 2037"
+      ],
+      "mainstream_offlabel_uses": [
+        "'calm' and 'focus' low-dose plans via telehealth (~3.1M subscribers, ~38% written on the AUD label), now marketed as 'adjustable' with built-in dose step-downs",
+        "planned 'drug holidays': 'Foundayo weekends' (short half-life) and 2–3 week semaglutide breaks before weddings, holidays and travel",
+        "sub-threshold 'drink less' use by people who do not meet moderate-to-severe AUD criteria",
+        "dementia-prevention use by 50–70-year-olds without CVD, cash-paid",
+        "indefinite use of the $149 TrumpRx starting dose as a 'maintenance' regimen (~7.5M people)",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "semaglutide in 12–14-year-olds at doses above label titration in gray channels"
+      ],
+      "pipeline_note": "FICTIONAL. The monthly/implant driver is realised through an existing product in a new form: Amgen's sBLA for a self-administered monthly MariTide autoinjector, filed Jun 2034, was approved Jun 2035. Implants remain in phase 2 (two programmes reported 6-month phase 2 data in 2036) and are not on the US market; none has filed. Tirzepatide for AUD: phase 3 read out Jan 2035, filed Mar 2035, approved Apr 2036 (13 months). Lilly filed the tirzepatide dementia 60+ extension in Mar 2035 and it is still under review. No oral matches retatrutide's ~24%. Bimagrumab ~260k users. Global incretin market ~$225B (2035). US branded net prices are down a further ~4–6% through TrumpRx and PBM deals. The tariff regime is unchanged."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation outside clinic tracks. Home MariTide pen users report first-week nausea similar to the clinic dose. Chronic diarrhoea is routinely worked up for EPI.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and bowel obstruction (persistent delayed gastric emptying)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: Persistence after stopping is still disputed. The first two MDL bellwethers (2035) split: a defence verdict for Lilly and a $14M plaintiff verdict against Novo that leaned on the 2033 documents. GI claims are ~44,000.",
+        "regulatory_response": "No new labelling. More bellwethers are scheduled for 2036–37."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; unchanged.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Still no causal confirmation for acute pancreatitis; absolute risk low.",
+        "regulatory_response": "Labelled; pleaded with EPI in the mass tort."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Medicare hip-fracture HR ~1.3 after more than 2 years and ~1.45 after three or more cycles; unchanged estimates. The women-70+ excess in the tirzepatide dementia trial is the central issue in the pending 60+ extension.",
+        "regulatory_response": "Class warning retained; DXA code in use; bimagrumab for high-risk users."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal in adults, including three years of AUD-label users. The pediatric psychiatric concern remains restrictive eating.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "FICTIONAL: No new data. The 2033 FDA observational estimate still stands: ~7% clinically meaningful anhedonia on maintenance doses vs ~3.5% of controls, ~10% on retatrutide. A low-dose cohort study required under the AUD-label postmarketing commitments began enrolling in 2035 and has no results yet.",
+        "regulatory_response": "No labelling change."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles. Planned holidays of 2–3 weeks show partial appetite return but little measured regain in early cohort data.",
+        "regulatory_response": "None directly; it underpins conditioned coverage."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron, vitamin D and thiamine (AUD users who keep drinking). Low ferritin in adolescent girls.",
+        "regulatory_response": "Annual micronutrient panel language; thiamine counselling on both AUD labels."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Estimates unchanged at ~2× incidence after more than 5 years of continuous semaglutide and HR ~1.3 for tirzepatide. EPI claims ~58,000. Novo's 2033 Form 483 closed in 2035 after remediation; DOJ's pharmacovigilance inquiry remains open.",
+        "regulatory_response": "Labels on both molecules; no new action."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About fourteen years of semaglutide follow-up exist. Cycling and indefinite starting-dose use remain uncharacterised. Holiday patterns are now a third uncharacterised exposure.",
+        "regulatory_response": "Pediatric bone-density and growth postmarketing requirements continue."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: Adverse-event reports tied to non-approved product passed ~36,000. No new pathogen cluster on the 2034 scale, but sporadic infections from re-filled vials continue in the Deep South. Poison-centre calls are flat.",
+        "regulatory_response": "FDA and DOJ raids on 14 re-filling sites in Mississippi and Alabama (2035). The tariff regime is unchanged and no state acted."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The PMR data still show a ~0.5–0.6 cm/year height-velocity deficit in prepubertal starters, with partial catch-up after stopping. Final adult height is unknown.",
+        "regulatory_response": "Monitoring language and medication guide; no REMS; AAP keeps lifestyle-first for prepubertal children."
+      },
+      {
+        "effect": "Alcohol-related harms on the AUD label (dehydration, alcoholic ketoacidosis, aspiration with vomiting during binge drinking)",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: The rate is still ~1 per 2,000 person-years in ED-network data, unchanged with the tirzepatide label.",
+        "regulatory_response": "Titration and hydration counselling carried onto the tirzepatide AUD label; postmarketing studies ongoing."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 47% of households have a user. Snack and confectionery volumes are down ~15–16% from 2025 and sugary drinks ~13%. The 2033 'tariff bounce' in low-income zips faded as former vial users moved to $149–179 pills. Category dollars are down ~2%. PepsiCo and Mondelez now run two catalogues: protein and fibre minis for the top-third zips, and value multipacks for the zips where never-users and regainers concentrate.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down ~21% from 2025 and beer ~13%. The tirzepatide AUD label and the ASAM first-line listing pushed EAP programmes further into trucking and warehousing. Bardstown-area distillers cut another ~1,100 jobs, and two Kentucky craft houses sold barrel inventory to Asian buyers. Non-alcoholic drinks reach ~6% of category dollars.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat. Late-night bar revenue in Dayton, Toledo and Louisville is still falling. Casual chains run 'half-plate' menus in suburban stores and full portions in exurban ones. QSR value-menu traffic holds in Memphis-type markets.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking; one more national chain went through Chapter 11 in 2035. Holiday cycling feeds stretch and resale. Tailoring and structured athletic wear grow in top-third metros.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength gyms keep growing. InBody scans required by track contracts make budget chains the de facto verification layer. Premium clubs in Charlotte, Austin and Scottsdale sell 'lean-mass guarantees' bundled with bimagrumab referrals.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage 34%, ~70% conditioned. Pharmacy trend ~+6%, damped by lower net prices and offset by volume. Tracks are migrating to monthly MariTide, where adherence is verified by the dose itself. Track holiday policies are now a benefits-season fight: most count a holiday as non-adherence unless a prescriber codes a 'planned dose interruption'. Part D premiums rose again for 2036.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Still growing on volume while net prices step down. Amgen paid a $1.6B False Claims Act settlement and signed a corporate integrity agreement, yet MariTide nearly doubled its users on the home pen. Novo's oral amycretin passed 8M users after its TrumpRx listing. Lilly added the AUD label. Litigation finance stays active in the MDL.",
+        "direction": "growing"
+      },
+      "severity": 5
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The body is now read almost directly as income band. Lean, lifted and scanned means a top-third job, a strength club and possibly bimagrumab. Soft-thin with a monthly pen bruise on the thigh means a conditioned track. Slow-thin on a $149 pill means cash and no titration. Heavy, at 45 in the Delta, means never covered or priced out of the vials in 2033. Since the August 2035 NHANES release, the gradient has a number: about one adult in five with obesity in the top third, about two in five in the bottom.",
+      "thinness_and_class": "Muscle is the class uniform, and 'off-drug lean' remains the top-tier boast in Charlotte and Austin. A new middle-class marker is the scan printout: InBody segment readouts shared in group chats and on dating profiles. Upper-income parents still largely refuse semaglutide for prepubertal children; Medicaid children still make up most 6–11 starts. In Memphis, body size now maps onto ZIP code so closely that local news uses 'the 38126 shape' without explanation.",
+      "eating_as_ritual": "Shared meals are shorter. Holiday cycling has created a new rhythm: families time drug breaks so everyone can eat at Thanksgiving, and 'holiday-off' parties in December are a known thing in suburban Ohio. Bread Alone holds full-table suppers, now ~1,300 congregations. Pill nights at bars persist in Dayton.",
+      "dating_and_intimacy": "Apps carry 'on AUD treatment', 'calm plan' and now 'on holiday' status tags. Body-composition badges, verified through gym scan APIs, launched on two premium apps in 2035 and are read as an income signal as much as a fitness one.",
+      "meaning_of_appetite": "Appetite is treated as something you schedule: suppressed on workdays, restored for weddings. Among upper-tier users, the ability to take a holiday and not regain is itself a status good. In the Delta 'the hunger tax' still names the 2033 tariff. Since the 2036 campaign, both parties' candidates promise to protect TrumpRx prices and neither promises Medicare weight coverage.",
+      "severity": 6
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL: The clinical estimate is unchanged (~7% vs ~3.5% controls on maintenance doses, ~10% on retatrutide, low doses unmeasured). Talk of it is no longer niche. A Pew survey (Jun 2035) found ~37% of current users say they have felt 'flat' on the drug and ~44% took a deliberate holiday or cut their own dose in the past year. Calm platforms (~3.1M subscribers) rebranded from 'quiet the noise' to 'adjustable calm' with built-in step-downs.",
+      "framing": "A side effect everyone is assumed to manage. Clinicians say 'dose-related blunting'. Patients say 'going flat' and 'coming back up'. The Obesity Medicine Association's Feb 2036 statement on planned dose interruptions calls it 'reversible hedonic dampening'. HR, which used to say steadiness, now says 'find your dose'. Unmuted calls the monthly pen 'flatness you can't take off'.",
+      "effect_on_work": "About 10.6M employees are in conditioned tracks. Holidays are now the friction point: a Foundayo weekend leaves a gap in the pill log, and a skipped MariTide month drops the premium tier. Tracks that moved to monthly dosing made holidays impossible, because the drug lasts for weeks. Two large retailers added a 'planned interruption' code in 2036. EAP AUD programmes expanded to tirzepatide. The EEOC charges remain unresolved.",
+      "effect_on_art_and_play": "'Coming back up' is a recognised memoir and stand-up genre: what the first steak or the first concert feels like on day nine of a holiday. Concert promoters in Columbus schedule shows around holiday seasons. Sportsbook handle per account keeps falling in insured suburbs, with small spikes in December.",
+      "effect_on_intimacy": "Couples coordinate holidays, so an anniversary trip is when both come off. Couples therapists now see two common presentations: the partner on a monthly track who cannot come off for the trip, and the partner who is noticeably warmer off the drug and is asked why they don't stay off.",
+      "effect_on_politics": "The complaint is mainstream but has not become a platform. Unmuted grew around the Amgen documents and the holiday fights, Congress held one hearing on track vendors, and no bill moved. No state acted. 'Sedated electorate' claims still lack turnout evidence, though campaigns in 2036 now schedule Ohio rallies for evenings, when people say they feel 'more up'.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Federal, routine and permissive on approvals, enforcement-minded on fraud and imports. FDA approved the MariTide home pen and the tirzepatide AUD label and has the tirzepatide dementia extension under review. DOJ resolved the Amgen qui tam. FDA and DOJ raided re-filling sites. No state legislature or agency acted; Illinois's ban is still the only one.",
+      "subsidy_or_mandate": "No new subsidy and no change in who pays. Price decline came through the Jan 2036 TrumpRx round and PBM deals. Medicaid AUD coverage extended automatically to tirzepatide under existing rebate law. The 2027 tri-agency 30% guidance stands. OPM's FEHB adherence and progress conditions continue, with vendor-neutrality certification added for 2037.",
+      "conditioning_or_surveillance": "More continuous. The monthly pen syncs injection events to track vendors, oral amycretin starter kits carry smart-bottle logs, and gym scan APIs feed progress thresholds. CMS's AUD audit pulled telehealth AUDIT-C records into Part D review. The Amgen documents showed manufacturer payments flowing per enrolled patient to the vendors who hold these feeds.",
+      "workforce_or_military": "TRICARE covers both AUD labels. TRICARE was a False Claims Act payer in the Amgen settlement. The Army recruit oral pilot continues unexpanded. FMCSA's 2033 guidance still covers on-label AUD use and still says nothing on calm plans or holidays.",
+      "geopolitics_of_supply": "The 2033 Section 232 tariff and Indian export-licence checks are unchanged. China's WTO complaint has a panel report pending for 2037. Indian exporters grew Gulf, African and Latin American volume. Smuggled API still feeds domestic re-filling, at lower volume. Novo's Danish and US plants and Lilly's and Amgen's US plants remain exempt.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2035-03",
+        "event": "A qui tam complaint unsealed in Massachusetts federal court alleges Amgen paid three wellness vendors ~$310M in per-patient 'adherence data fees' while they set up FEHB and employer tracks to default enrollees to MariTide and reset the 5% progress clock for anyone who switched to a pill; DOJ intervenes, and in Dec 2035 Amgen settles for $1.6B with a five-year corporate integrity agreement, admitting no liability",
+        "driver": "market_shock: manufacturer_scandal"
+      },
+      {
+        "date": "2035-04",
+        "event": "ASAM's guideline update lists incretins as first-line for alcohol use disorder in patients with obesity or metabolic disease; in April 2036 the FDA approves weekly tirzepatide for moderate-to-severe AUD, 13 months after Lilly's filing",
+        "driver": "new_indications: alcohol_use_disorder"
+      },
+      {
+        "date": "2035-06",
+        "event": "FDA approves a self-administered monthly MariTide autoinjector at $229 direct; within a year about 40% of MariTide's ~9.5M users inject at home and most conditioned tracks make monthly dosing the default because each dose is logged",
+        "driver": "next_gen_launch: monthly_or_implant"
+      },
+      {
+        "date": "2035-08",
+        "event": "CDC's NHANES 2033–34 release shows adult obesity at ~20% in the top income third and ~40% in the bottom, the widest gradient on record; the chart becomes the most-shared public-health graphic of the year",
+        "driver": "cultural_response: class_stratification"
+      },
+      {
+        "date": "2036-01",
+        "event": "The new TrumpRx round lists oral amycretin at $299, cuts Wegovy pill maintenance to $179 and retatrutide to $299, and keeps the $149 starting dose; no branded product goes below $149 and coverage rules do not change",
+        "driver": "price_path: managed_decline; coverage_shift: status_quo"
+      },
+      {
+        "date": "2036-02",
+        "event": "The Obesity Medicine Association issues its first statement on 'planned dose interruptions', endorsing supervised holidays for blunting; large employers' tracks keep counting uncoded holidays as non-adherence, and no state intervenes",
+        "driver": "personality_layer: mainstream_complaint; state_action: none"
+      }
+    ],
+    "open_tensions": [
+      "Holidays are now clinical practice, and tracks still punish them. As tracks move enrollees onto a monthly drug that can't be paused, the people with the least control over their premiums are also the people least able to come off for a week.",
+      "The Amgen settlement showed that manufacturers paid the vendors who hold adherence feeds, but OPM's only response is a vendor-neutrality certification for 2037. The tracks, the 30% differential and the data flows are untouched.",
+      "The income gradient in obesity doubled while adoption rose. Most of the bottom-third gain is the $149 starting dose, a regimen with no efficacy or long-term data that 7.5M people now treat as permanent.",
+      "AUD prescribing now runs on two labels, a first-line guideline and a 19% unsupported-coding rate in telehealth. The low-dose anhedonia study that would show what calm-plan subscribers are buying has no results."
+    ]
+  },
+  "prose": {
+    "headline": "Find Your Dose: 84 million Americans are on the drug, a third say it flattens them, and the monthly pen won't let them take a break",
+    "world_in_600_words": "At the end of 2036 almost one American adult in three takes an incretin drug, about eighty-four million people, and four in ten have tried one. The rise did not come from a new law. Who pays is the same as two years ago. Medicare still covers no one for weight alone, a third of employers cover the drugs, and most of those want proof. What changed was the price at the cheap end and the calendar at the expensive end.\n\nThe cheap end moved in January, when the latest TrumpRx round listed Novo's oral amycretin at $299 and cut the Wegovy pill's maintenance dose to $179. The $149 starting pill did not move. Seven and a half million people now stay on it indefinitely, a regimen nobody has studied, and it accounts for most of the growth in the bottom income third. Some of them are the people the 2033 tariff priced out of Indian vials, now coming back through a legal door. In Mississippi the back-room refillers are still working. There are fewer of them, and federal agents raided fourteen sites last year.\n\nThe calendar changed in June 2035, when Amgen won approval for a monthly MariTide pen people can use at home. A dose a month is easy to verify, so the employer tracks that hold more than ten million workers made it their default. Nine months earlier, a qui tam complaint unsealed in Boston had shown that Amgen was paying the vendors who run those tracks a fee for every enrolled patient, while the vendors steered enrollees to MariTide and restarted the five-percent clock for anyone who switched. Amgen settled for $1.6 billion and admitted nothing. The federal employee programme will make vendors certify their neutrality starting next year. The tracks, the data feeds and the 30 percent premium spread are all still in place, and MariTide's user count nearly doubled.\n\nThe complaint everyone has heard of is flatness. The clinical number has not changed: about seven percent of people on maintenance doses have measurable anhedonia, twice the rate in controls. The conversation has changed. A Pew survey found more than a third of users say they have felt flat, and nearly half took a deliberate break in the past year. Short-acting Foundayo invites a 'weekend', and semaglutide users stop for two weeks before a wedding. In February the obesity medicine society endorsed 'planned dose interruptions'. Employers' tracks still record an uncoded break as non-adherence. The monthly pen cannot be paused at all, so the workers with the least control over their premiums are the ones who cannot come up for air.\n\nAlcohol kept falling. Lilly's tirzepatide got an alcohol use disorder label in April, the addiction society now calls incretins first-line for drinkers with metabolic disease, and Medicaid had to cover the new label under the same rebate rules that brought in the first one. Bardstown lost another eleven hundred distillery jobs. A federal audit found that a fifth of telehealth alcohol diagnoses had no documented criteria behind them. Some money was clawed back and no rule changed.\n\nThe country now has a chart for what everyone could already see. Federal survey data released last August put obesity at one in five adults in the top income third and two in five in the bottom. In Charlotte the boast is muscle and a body-scan printout. In Memphis local news says 'the 38126 shape' without explaining it. Snack companies print two catalogues. Families in suburban Ohio schedule their breaks so they can eat at Thanksgiving. No state passed anything. Both presidential campaigns promised to protect the $149 price, and neither promised to pay for it.",
+    "a_day_in_the_life": "Renee Okafor wakes at 4:50 in Grove City, Ohio, and checks the app before the kettle. Green. Her MariTide pen synced on the 3rd. She is Tier 1 for another twenty-six days.\n\nShe picks at the distribution centre from six to two-thirty. On break, Danielle from returns is eating a gas-station burrito with real attention, eyes half closed. Danielle is on a Foundayo weekend. Renee watches the way you'd watch someone swim.\n\nHer sister's wedding is in Savannah in five weeks. Renee called the track nurse line on Tuesday and asked about skipping October. The nurse was kind. A planned interruption needs a prescriber code, the prescriber is the vendor's telehealth doctor, the next slot is November, and the drug would still be in her anyway. 'It's a long tail,' the nurse said, as if that was good news.\n\nAfter shift she drives her son Theo to his six-month weigh-in at the pediatric clinic. Theo is ten. He isn't on anything. The nurse marks his height and doesn't say anything about it, which Renee has learned to read as fine.\n\nAt dinner she cuts a chicken thigh into eight pieces and eats three. Theo eats the rest of hers. Her husband, Marcus, drinks one beer, slowly, and asks if she wants to watch the thing they used to watch. She says sure. She laughs at the right places. She can hear herself doing it.\n\nIn bed she opens the dress photo her sister sent and zooms in on the cake. She tries to want it. She sets an alarm for 4:50."
+  }
 }
