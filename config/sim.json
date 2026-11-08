@@ -29,10 +29,10 @@
     "judge": "claude-sonnet-5-5",
     "_note": "Judge must differ from generator. claude-fable-5-1 is the tier above Opus if step-1 worlds read thin."
   },
-  "generation": {"temperature": null, "effort": "high", "max_tokens": 32000},
+  "generation": {"temperature": null, "effort": "medium", "max_tokens": 32000},
   "judging": {"temperature": null, "effort": "high", "max_tokens": 8000, "judge_samples": 3},
   "_note_sampling": "temperature is null because both configured models reject it: claude-opus-5-5 returns 400 on any temperature, claude-sonnet-5-5 on any non-default value, and API version 2026-10-21 (anthropic SDK >= 2) on any value at all. Generation at 1.0 was the default, so nothing is lost there; judging at 0.0 has no replacement, so use judge_samples > 1 if score stability matters. A non-null value is sent as-is (for a model that accepts it).",
-  "_note_tokens": "Both models think adaptively and thinking cannot be disabled; thinking tokens count toward max_tokens and are billed as output. 6000/1500 would truncate a full world + prose, and so did 16000 for generation at effort high (step 1 attempt 3: 10/10 calls cut off), hence 32000. effort is the thinking-depth control (Opus 5.5 defaults to medium, so it is set explicitly).",
+  "_note_tokens": "Both models think adaptively and thinking cannot be disabled; thinking tokens count toward max_tokens and are billed as output. 6000/1500 would truncate a full world + prose, and so did 16000 for generation at effort high (step 1 attempt 3: 10/10 calls cut off), hence 32000. effort is the thinking-depth control (Opus 5.5 defaults to medium, so it is set explicitly). In step-1 rerun 2 at effort high, ~two thirds of the 23-29k output tokens were thinking (submit_world content ~6.5-9k) and 1 of 5 runs truncated at 32000; budget_tokens is rejected (400) by claude-opus-5-5, so generation moved to effort medium with max_tokens unchanged.",
   "pricing_usd_per_mtok": {
     "claude-opus-5-5":   {"input": 4.0, "output": 20.0},
     "claude-sonnet-5-5": {"input": 2.0, "output": 10.0},

@@ -100,9 +100,19 @@ def generation_prompt(paths, *, parent_world: dict, parent_prose: dict | None, p
         "parent_world_json": pretty(parent_world),
         "parent_prose_world_in_600_words": (parent_prose or {}).get("world_in_600_words") or NO_PARENT_PROSE,
         "drivers_table": drivers_table(drivers, dcfg, parent_world, parent_year, target_year),
-        **population_bounds(parent_world, drivers),
+        "magnitude_envelope": magnitude_envelope(paths, parent_world, drivers, parent_year, target_year),
     }
     return fill(system_t, values), fill(user_t, values)
+
+
+def magnitude_envelope(paths, parent_world: dict, drivers: dict, parent_year: int, target_year: int) -> str:
+    """prompts/envelope.md rendered for one run. The generator and the judge get this same text."""
+    text = (paths.prompts / "envelope.md").read_text(encoding="utf-8")
+    lines = text.splitlines(keepends=True)
+    sep = next(i for i, l in enumerate(lines) if l.strip() == "---")
+    body = "".join(lines[sep + 1:]).strip() + "\n"
+    return fill(body, {"parent_year": parent_year, "target_year": target_year,
+                       **population_bounds(parent_world, drivers)})
 
 
 def _pct(x: float) -> str:
@@ -110,12 +120,12 @@ def _pct(x: float) -> str:
 
 
 def population_bounds(parent_world: dict, drivers: dict) -> dict:
-    """The numbers behind generate.md rule 3: current use = parent + adoption_delta_pp ±2;
-    ever-use rises by at most adoption_delta_pp + 6 and never falls (so the rise is capped
-    at no less than 0 when adoption_delta_pp < -6)."""
+    """The numbers in the magnitude envelope: current use = parent + adoption_delta_pp ±2;
+    ever-use rises by at most adoption_delta_pp + 3 and never falls (so the rise is capped
+    at no less than 0 when adoption_delta_pp < -3)."""
     pop = parent_world["population"]
     on, ever, delta = pop["us_adults_on_drug_pct"], pop["us_adults_ever_used_pct"], drivers["adoption_delta_pp"]
-    rise = max(delta + 6, 0)
+    rise = max(delta + 3, 0)
     return {
         "parent_on_drug_pct": _pct(on),
         "adoption_delta_pp": _pct(delta),
@@ -140,6 +150,7 @@ def judge_prompt(paths, *, parent_world: dict, parent_year: int, target_year: in
         "candidate_headline": candidate_prose["headline"],
         "candidate_world_in_600_words": candidate_prose["world_in_600_words"],
         "candidate_a_day_in_the_life": candidate_prose["a_day_in_the_life"],
+        "magnitude_envelope": magnitude_envelope(paths, parent_world, drivers, parent_year, target_year),
     }
     return fill(system_t, values), fill(user_t, values)
 

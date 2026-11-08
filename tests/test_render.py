@@ -261,8 +261,8 @@ def test_population_bounds_render_into_the_prompt(baseline):
     from glpsim import render
     b = render.population_bounds(baseline, {"adoption_delta_pp": 7.1})   # parent 11% on, 15% ever
     assert b == {"parent_on_drug_pct": "11", "adoption_delta_pp": "7.1", "current_use_low": "16.1",
-                 "current_use_high": "20.1", "parent_ever_used_pct": "15", "ever_rise_max": "13.1",
-                 "ever_use_max": "28.1"}
+                 "current_use_high": "20.1", "parent_ever_used_pct": "15", "ever_rise_max": "10.1",
+                 "ever_use_max": "25.1"}
     neg = render.population_bounds(baseline, {"adoption_delta_pp": -8})
     assert (neg["current_use_low"], neg["current_use_high"]) == ("1", "5")
     assert neg["ever_rise_max"] == "0" and neg["ever_use_max"] == "15"   # ever-use never falls
@@ -279,8 +279,28 @@ def test_generation_prompt_carries_the_new_rules(baseline):
                                        parent_year=2026, target_year=2028, drivers=drivers,
                                        dcfg=load_drivers_config(Paths(ROOT)))
     assert "{{" not in user
-    assert "between **16.1** and\n     **20.1**" in user and "**28.1**" in user
+    assert "between **16.1** and\n  **20.1**" in user and "**25.1**" in user
     for phrase in ("no earlier than 12 months after its stated filing", "before 2031",
-                   "one named\n   demographic, city or industry", "fill `still_true` with\n    five",
+                   "One demographic, one city, one industry — name\n   them.",
+                   "Coverage shares, public spending and subscriber counts",
+                   "fill `still_true` with\n    five",
                    "must all be possible under the `access`, `drugs`\n    and `state` you wrote"):
         assert phrase in user, phrase
+    assert "Phoenix" not in user and "Atlanta" not in user          # no place examples
+
+
+def test_judge_gets_exactly_the_generators_envelope(baseline, fixture_run):
+    from glpsim import render
+    from glpsim.common import load_drivers_config
+    drivers = fixture_run["drivers"]
+    env = render.magnitude_envelope(Paths(ROOT), baseline, drivers, 2026, 2028)
+    _, gen = render.generation_prompt(Paths(ROOT), parent_world=baseline, parent_prose=None,
+                                      parent_year=2026, target_year=2028, drivers=drivers,
+                                      dcfg=load_drivers_config(Paths(ROOT)))
+    _, judge = render.judge_prompt(Paths(ROOT), parent_world=baseline, parent_year=2026,
+                                   target_year=2028, drivers=drivers,
+                                   candidate_world=fixture_run["world"], candidate_prose=fixture_run["prose"])
+    assert env.startswith("### Magnitude envelope (2026 → 2028)")
+    assert env in gen and env in judge
+    assert "Within the stipulated envelope and internally reconciled" in judge
+    assert "Do not penalise movement the drivers or the\n  envelope stipulate" in judge

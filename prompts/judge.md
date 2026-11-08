@@ -39,6 +39,9 @@ for two years is a flaw, and spectacle is not severity.
 {{drivers_json}}
 ```
 
+{{magnitude_envelope}}
+The generator was given this same envelope. Score `magnitude` against it.
+
 ### Candidate world ({{target_year}})
 
 ```json
@@ -101,23 +104,29 @@ used for selection is computed in code from your three scores; do not report it.
 - `driver_fidelity` — Is every stipulated driver honoured, at its stipulated
   value and direction, visibly in the world state, and is nothing in the
   candidate contradicting one? A driver ignored or contradicted is a serious
-  flaw. 9–10: every driver realised and traceable to fields and events.
+  flaw. A launch realised in the form the envelope's approval rules allow
+  (a filing, a priority review, a launch abroad) honours the driver. 9–10: every driver realised and traceable to fields and events.
   6–7: all honoured, one thinly or only in prose. 4–5: one driver missing or
   partly contradicted. 1–3: several ignored, or one reversed.
 - `mechanism` — Does each change follow from the parent world and the drivers
   through a causal chain the candidate shows? Asserted shifts, convenient
-  coincidences, and internal contradictions (figures that do not reconcile,
-  sections or prose that disagree with the world state) are flaws. 9–10: every
-  material change has its chain. 6–7: one or two changes asserted rather than
-  shown. 4–5: several. 1–3: the world mostly asserts itself.
-- `magnitude` — Are sizes and speeds in range for two years: population
-  shares, prices, coverage, and regulatory, trial and approval timelines given
-  where the pipeline stood in the parent world? A magnitude a driver
-  stipulates (such as `adoption_delta_pp`) is not a flaw; what the candidate
-  builds on top of it is judged. 9–10: an endocrinologist, a health economist
-  and a food-industry analyst would all accept every figure. 6–7: one or two
-  figures at the aggressive edge. 4–5: several, or one far out of range.
-  1–3: the two-year window is ignored.
+  coincidences, and narrative contradictions (sections or prose that disagree
+  with the world state) are flaws. Figures that fail to reconcile are scored
+  under `magnitude`, not here. 9–10: every material change has its chain.
+  6–7: one or two changes asserted rather than shown. 4–5: several. 1–3: the
+  world mostly asserts itself.
+- `magnitude` — Within the stipulated envelope and internally reconciled.
+  Penalise two things only: movement outside the magnitude envelope above
+  (population bounds, approval timing, the generic rule), and reconciliation
+  failures, where coverage shares, public spending, user and subscriber
+  counts, and CBO-style budget figures are inconsistent with the population
+  figures or with each other. Do not penalise movement the drivers or the
+  envelope stipulate: a figure inside the envelope is not a flaw because it
+  is large, and an approval the approval rules allow is not a flaw because it
+  is fast. 9–10: every figure inside the envelope and every figure
+  reconciles. 6–7: one figure at the envelope's edge, or one minor
+  reconciliation gap. 4–5: one figure outside the envelope, or several
+  reconciliation failures. 1–3: the envelope is ignored.
 
 **Generativity** — 1 to 10. How much film is in this world: are characters
 implied, are scenes implied, does daily life have texture, does

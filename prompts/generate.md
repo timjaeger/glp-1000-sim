@@ -45,6 +45,7 @@ the world in which all of them hold.
 |---|---|---|
 {{drivers_table}}
 
+{{magnitude_envelope}}
 ### Your task
 
 Produce the world state of {{target_year}} as JSON matching the schema, plus
@@ -60,45 +61,20 @@ Rules you must follow:
 2. **Magnitudes.** Two years. Population shares move by single-digit to low
    double-digit percentage points unless a driver says otherwise. Industries
    contract or adapt; they rarely vanish. Prices move the way `price_path` says.
-3. **Population arithmetic.** These are bounds, not suggestions:
-   - `us_adults_on_drug_pct` = parent {{parent_on_drug_pct}} + `adoption_delta_pp`
-     {{adoption_delta_pp}}, ±2: between **{{current_use_low}}** and
-     **{{current_use_high}}**.
-   - `us_adults_ever_used_pct` rises by at most `adoption_delta_pp` + 6 points
-     ({{ever_rise_max}}) and never falls: between **{{parent_ever_used_pct}}** and
-     **{{ever_use_max}}**.
-   - `cycled_off_and_on_pct` (share of ever-users who stopped and restarted) is
-     reconciled to the gap: ever − current is the share of adults who used and
-     are off now. Together with the restarters among current users, it must fit
-     the parent's persistence and restart figures. Write that arithmetic in one
-     line of `population.note`.
-   - `by_income_third_pct`, if you give figures, brackets the national figure:
-     the lowest third at or below `us_adults_on_drug_pct`, the highest at or above.
-4. **Approvals follow the parent pipeline.** Read the parent's
-   `drugs.pipeline_note` and apply it product by product:
-   - Under FDA review in the parent: may be approved this step.
-   - In phase 3: approved no earlier than 12 months after its stated filing. If
-     no filing is stated, the filing is itself an event this step, and approval
-     comes no earlier than 12 months after it.
-   - In phase 2 or earlier, or only "in development": cannot be on the US market
-     at the end of {{target_year}}.
-   - No US generic semaglutide or tirzepatide before 2031 (`access.generic_us`
-     stays false), unless `price_path` is `generic_collapse`, and then the
-     mechanism (the settlement, ruling or authorised generic) is one of the
-     `events`.
-   - If a driver calls for a launch these rules forbid, realise it with what they
-     allow: the filing, a priority review, a launch outside the US, or an
-     existing product in a new form. Say so in `pipeline_note`. Do not break the
-     rule to honour the driver.
+3. **Stay inside the magnitude envelope above.** Its population bounds and
+   approval rules are limits, not suggestions. An independent judge scores your
+   magnitudes against the same envelope.
+4. **Figures reconcile.** Coverage shares, public spending and subscriber counts
+   must be consistent with the population figures and with each other, as the
+   envelope's reconciliation paragraph says. Give a spending or budget figure
+   only if you show its arithmetic.
 5. **Carry the ledger.** `safety_ledger` keeps every prior entry (status may
    change) and adds what `safety_signal` requires. Nothing is forgotten.
 6. **Off-drug is a population.** Account for people who stopped, who cycle, who
    were never able to afford it, and the children growing up inside this. The
    `population` object must make these visible.
-7. **Culture moves locally.** A cultural shift this step shows up in one named
-   demographic, city or industry (for example "nurses in Phoenix" or "the
-   Atlanta restaurant trade"), not as a national mood. No national survey
-   figure for a cultural shift; no "Americans now …".
+7. **Culture moves locally.** One demographic, one city, one industry — name
+   them.
 8. **The interior life is a field, not a flourish.** `interior_life` must follow
    from `personality_layer` and the indications in play. Be specific about work,
    art, intimacy and politics. Do not moralise; describe.

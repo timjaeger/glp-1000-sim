@@ -105,8 +105,19 @@ for two years; would an informed skeptic (an endocrinologist, a health economist
 a food-industry analyst) accept it as a live possibility rather than dismiss it.
 Scored (rubric v2) as three separate sub-axes, each 1–10: **driver fidelity**
 (every stipulated driver honoured, none contradicted), **mechanism** (every
-change has a shown causal chain; no internal contradictions) and **magnitude**
-(sizes and speeds in range for two years). The `plausibility` used by the floor
+change has a shown causal chain; no narrative contradictions) and **magnitude**
+(within the stipulated envelope and internally reconciled). The **magnitude
+envelope** (`prompts/envelope.md`) is rendered per run from the parent world
+and the drawn drivers: current use = parent + `adoption_delta_pp` ± 2;
+ever-use rises by at most `adoption_delta_pp` + 3 and never falls; cycling
+reconciled to the ever − current gap; income thirds bracket the national
+figure; approvals follow the parent pipeline (phase 3 no earlier than 12
+months after filing, phase 2 or earlier not on market, no US generic before
+2031 unless `price_path` is `generic_collapse` with the mechanism as an event);
+coverage shares, public spending and subscriber counts reconcile with the
+population and each other. The generator and the judge receive the identical
+text. Magnitude penalises only movement outside the envelope and
+reconciliation failures, never movement the drivers or envelope stipulate. The `plausibility` used by the floor
 and tie-break in §7 is the weighted composite **0.2 × driver fidelity + 0.3 ×
 mechanism + 0.5 × magnitude**, computed in code (`config/sim.json:
 plausibility_weights`). Magnitude carries half the weight because a world can
@@ -123,8 +134,9 @@ scenes implied, a visible texture of daily life. Used only as a tie-break.
 - Judge model is a different model from the generator (e.g. generator
   `claude-opus-4-5`, judge `claude-sonnet-4-5` — set in `config/sim.json`;
   check current model IDs before running).
-- The judge sees the parent world, the drawn drivers and the run. It does not
-  see other runs, scores, the step's axis weighting or lineage identity.
+- The judge sees the parent world, the drawn drivers, the magnitude envelope
+  derived from those two (§5) and the run. It does not see other runs, scores,
+  the step's axis weighting or lineage identity.
 - Judging runs at temperature 0 where the model allows it (the configured judge
   does not; see `config/sim.json: _note_sampling`). `judge_samples: 3` (the
   setting) averages three judge calls per run for stability: each badness
