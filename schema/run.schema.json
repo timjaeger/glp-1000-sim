@@ -10,7 +10,16 @@
     "step": {"type": "integer", "minimum": 1, "maximum": 5},
     "year": {"type": "integer"},
     "parent_lineage": {"type": "string", "description": "L0 for step 1 (the baseline), else the parent's lineage id"},
-    "seed": {"type": "integer"},
+    "seed": {"type": "integer", "description": "base seed; this run's RNG is random.Random(seed + step*1000 + run_index)"},
+    "run_index": {"type": "integer", "minimum": 0, "description": "index of the run within its step (the rNN of run_id)"},
+    "driver_modifiers": {
+      "type": "array",
+      "description": "parent-state modifiers from config/drivers.json that fired for this run's draw",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["driver", "if", "set"],
+        "properties": {"driver": {"type": "string"}, "if": {"type": "object"}, "set": {"type": "object"}}
+      }
+    },
     "drivers": {
       "type": "object", "additionalProperties": false,
       "required": ["adoption_delta_pp", "price_path", "coverage_shift", "new_indications", "safety_signal", "next_gen_launch", "market_shock", "cultural_response", "state_action", "personality_layer"],
