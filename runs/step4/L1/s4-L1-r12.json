@@ -20,7 +20,303 @@
     "state_action": "benefits_conditioning",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T17:29:43Z"
+  "created_at": "2026-11-08T17:29:43Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015ciC7E9nYxhB2DQvrSsPqs",
+        "custom_id": "s4-L1-r12",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19216,
+        "output_tokens": 19789
+      }
+    ]
+  },
+  "world": {
+    "year": 2034,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 29.7,
+      "us_adults_ever_used_pct": 40.6,
+      "by_income_third_pct": {
+        "top": 34.5,
+        "middle": 30,
+        "bottom": 24.6
+      },
+      "by_age_band_pct": {
+        "18_29": 17,
+        "30_49": 32,
+        "50_64": 46,
+        "65_plus": 20.4
+      },
+      "pediatric_under_18_on_drug_pct": 1.6,
+      "cycled_off_and_on_pct": 45,
+      "note": "FICTIONAL. One-line reconciliation: ever 40.6 − current 29.7 = 10.9 pts used-and-off; new ever-users 3.6 pts (2.9 on, 0.7 off) + 2032 ever-cohort 37.0 (26.8 on, 10.2 off): of the 27.9 on in 2032, 17.3 stayed on (62%), 10.6 stopped, joining 9.1 already off for a pool of 19.7, of whom 9.5 restarted (48%, down from 57% because Medicaid 12-month lockouts and verified-administration rules ended skip-but-fill as a way to keep coverage) → 17.3 + 9.5 + 2.9 = 29.7 on and 10.2 + 0.7 = 10.9 off; cycled = 13.4 pts by 2032 + ~4.6 first-time restarters + ~0.2 among new starters = 18.2 / 40.6 = 45%. Current users ≈ 80.2M of ~270M adults. Age bands weighted by adult shares (20/33/24/23%): 3.40 + 10.56 + 11.04 + 4.69 = 29.7. The 65+ figure (20.4% × ~62.1M ≈ 12.7M) is consistent with Medicare's 13.6M covered users once ~0.9M disabled under-65s are added. Income thirds: (34.5 + 30 + 24.6)/3 = 29.7. Bottom-third use rose most (21.7 → 24.6) through the enhanced Medicaid match. Top-third use has saturated. Off-drug: ~29.4M adults have used and stopped. About a third of them are locked out by a conditioning rule rather than having stopped by choice. ~160M adults have never used, including the organised refusers, people with contraindications (now including prior NAION and crowded-disc findings), and the uninsured in the 19 states that have not taken the enhanced match. Pediatric: 1.6% of ~73M under-18s ≈ 1.17M. About 260k of them are aged 6–11, up from ~150k after the Mar 2034 semaglutide approval for that age group. A cohort of teenagers has now spent most of its childhood at tables where the adults eat half-plates."
+    },
+    "access": {
+      "cash_price_usd_month_low": 139,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "The Medicare GLP-1 Bridge expired into a permanent Part D anti-obesity benefit under the Medicare Obesity Treatment and Readiness Act (Nov 2033), effective Jan 2034. Medicare pays a blended $199/month net and the copay stays $50. Continuation is still conditional: ≥5% loss at month 6, verified adherence, and annual DEXA for 65+. From 2034 it also requires a documented eye exam for users with diabetes or a prior optic finding. Obesity-indication enrollees ≈ 5.6M × $199 × 12 ≈ $13.4B/yr. Medicare overall pays 17% of incretin fills ≈ 13.6M users. Medicaid: the same Act offers an 80% federal match for states that cover anti-obesity medication with verified adherence. 31 states plus DC have opted in (the seven waiver states among them). Medicaid pays 16% of fills ≈ 12.8M users × $199 × 12 ≈ $30.6B/yr, of which ≈ $24.5B is federal at 80%. HRSA Community Incretin Access Program: FY2034 $5.0B flat, still conditioned on refill pickup only. It serves ≈3.6M: 2.4M generic liraglutide × $65 × 12 ≈ $1.9B plus 1.2M semaglutide for cessation/AUD × $169 × 12 ≈ $2.4B ≈ $4.3B. TRICARE/VA/DoD cover ≈2.6M, including ~150k active duty in the Metabolic Readiness Program (150k × $149 × 12 ≈ $270M/yr). Public channels together pay 40.7% of fills, more than commercial insurance (34%) for the first time.",
+      "employer_coverage_pct": 64,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 90+ semaglutide brands at $6–35/month, and generic tirzepatide is now sold across India, Brazil, Turkey, Mexico and Indonesia. Generic semaglutide is standard in Canada, China and most of Latin America and Asia. China exports originator triple agonists to ASEAN markets. The WTO panel on US Section 232 pharmaceutical duties, requested by India, is constituted but has not reported.",
+      "gray_market": "contained",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Payer mix of ~80.2M users: commercial 34% (27.3M), Medicare 17% (13.6M), Medicaid 16% (12.8M), HRSA 4.5% (3.6M), TRICARE/VA/DoD 3.2% (2.6M), cash/direct 15.8% (12.7M), gray 9.5% (7.6M) = 100%. Managed decline continued under the Strategic Supply Agreement II (Mar 2033). TrumpRx/direct prices: semaglutide injection $219, tirzepatide $269, retatrutide $299 (from $399), oral starting doses $139, and Amgen's monthly MariTide $279. Public net is a blended $199, with orals at $119 inside that blend. List prices are unchanged at $1,349 for Wegovy and $1,499 for retatrutide, and nobody pays them. The 2033 patent-settlement entry dates for US generic semaglutide arrived, but FDA had issued CRLs on two ANDAs over peptide-impurity immunogenicity data, so no generic is sold. Coverage, not price, still rations access. Employer coverage rose only from 63% to 64%, and ~60% of covering employers attach conditions. Adherence verification changed form. CMS's Jan 2034 rule accepts logged administration (pharmacist- or clinic-given monthly injections, or connected-pen telemetry) as verified adherence and phases out refill-based PDC for public programmes. Large PBMs followed for employer plans. Skip-but-fill no longer works where verification is administration-based. Gray use fell from ~9.0M to ~7.6M as Medicaid expanded and retatrutide reached $299. 503A compounders survive mainly in the 19 non-opt-in states."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic; ages 6–11 from Mar 2034)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg maintenance)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular agonist, weekly injectable (amycretin, approved Oct 2033, limited supply)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo, incl. low-dose BED)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. US generics)",
+        "GLP-1 agonist / GIPR antagonist antibody-peptide conjugate, monthly injectable (maridebart cafraglutide: MariTide, supply expanded 2033)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, obesity with MASH)",
+        "Activin type II receptor antibody, monthly IV infusion, in combination with tirzepatide (bimagrumab, approved May 2034 for adults ≥60 at high sarcopenia risk)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide 2031)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics, Apr 2029; semaglutide, Mar 2034)",
+        "smoking cessation adjunct (semaglutide, Mar 2029)",
+        "alcohol use disorder (semaglutide, Jun 2030)",
+        "binge-eating disorder (orforglipron low dose, Jun 2032)",
+        "reduction in risk of dementia in adults ≥55 with type 2 diabetes or obesity plus established cardiovascular disease (semaglutide, Jun 2032)",
+        "preservation of lean mass during incretin-mediated weight loss in adults ≥60 at high sarcopenia risk (bimagrumab + tirzepatide, May 2034)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'brain health' semaglutide for 50–65-year-olds outside the dementia label, now further constrained by the eye-exam and DEXA conditions in public plans",
+        "MariTide off-label for under-18s, because a monthly clinic dose suits school-age adherence; not labelled under 18",
+        "low-dose Foundayo for 'food noise' in people without BED, through brief telehealth screens",
+        "gambling, compulsive shopping and cannabis reduction, still without a label",
+        "antiresorptive 'bone cover' co-prescribing in 65+ and postmenopausal women, guideline-standard"
+      ],
+      "pipeline_note": "FICTIONAL. The monthly_or_implant driver is realised through an existing product at scale, not through an implant. No incretin implant was in the 2032 pipeline, and none is on the US market. Amgen's Ohio and North Carolina fill-finish expansion (Jul 2033) took MariTide from ~0.6M to ~4.4M users by end-2034. CMS's verified-administration rule then made monthly pharmacist-given dosing the preferred route in Medicaid opt-in states and the DoD programme. Amycretin was approved Oct 2033 on its resubmission and is in limited supply (~0.3M users). The bimagrumab + tirzepatide BLA (filed Mar 2032) was approved May 2034, more than 12 months after filing, narrowly for ≥60s at high sarcopenia risk. It is a monthly IV infusion at ~$2,100/month list. Medicare covers it with prior authorisation, and fewer than 100k use it. Semaglutide for ages 6–11 was approved Mar 2034 on STEP Young plus registry data, with baseline and annual DEXA required in Warnings. Global incretin market ≈ $182B in 2034: US volume +12%, US net price −10%."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. On MariTide, GI effects can last for weeks after a monthly dose because the drug cannot be stopped mid-cycle. Clinics now pretreat with antiemetics on first doses.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and intestinal obstruction (mass tort)",
+        "status": "established",
+        "prevalence_note": "MDL 3094 has ~74,000 filed and tolled claims. Novo settled its gastroparesis track in 2033 for an undisclosed sum reported near $2B. Lilly is still litigating.",
+        "regulatory_response": "Ileus labelled. FDA still declines to label persistent gastroparesis."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Absolute cases track retatrutide 12 mg volume and faster loss.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Registries still show low absolute risk without causal confirmation.",
+        "regulatory_response": "Labelled; consolidated in MDL 3094."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Persistent population-level deficit in 65+ long-term users. Early Medicare Advantage strength-programme data suggest partial mitigation where attendance exceeds twice weekly.",
+        "regulatory_response": "Class Warnings retained. Part D continuation requires a resistance-training referral. Bimagrumab combination approved May 2034 for high-risk ≥60s. HRSA sites still have no requirement."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Medicare hip-fracture admissions rose a further ~2% in 2032–33, then flattened in 2034 as antiresorptive co-prescription reached ~40% of women 65+ on drug. Modelled excess ≈ 12.7M users 65+ × ~0.5%/yr × HR ~0.28 ≈ 18,000/yr, flat in absolute terms despite more users. Adolescent BMD-accrual deficit of ~0.2 SD confirmed in the final registry analysis. Its attribution between drug and weight loss is still disputed.",
+        "regulatory_response": "Baseline DEXA in Warnings for 65+, postmenopausal women and now ages 6–17. Pediatric labels updated Mar 2034."
+      },
+      {
+        "effect": "NAION and optic-nerve ischaemia",
+        "status": "established",
+        "prevalence_note": "A Sentinel/VA target-trial emulation of ~9M users and a pooled ophthalmology substudy across seven RCTs found HR ~1.7 versus SGLT2-inhibitor comparators. The excess is ~3–4 per 100,000 person-years, highest in users with diabetes, sleep apnoea and crowded optic discs. Across ~80M users that is roughly 2,500–3,000 excess cases a year, mostly unilateral and permanent.",
+        "regulatory_response": "Class Warnings-section label (Feb 2033) for all GLP-1-receptor agonists, replacing 'very rare'. It advises a baseline eye exam in high-risk users and immediate discontinuation on sudden vision loss. That advice cannot be followed immediately for MariTide's monthly exposure. Part D continuation requires an eye exam for diabetic users. FAA added a fundus exam to special issuance. An NAION track opened in MDL 3094."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association across BED, AUD, adolescent or 6–11 populations.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening",
+        "status": "established",
+        "prevalence_note": "FDA's pooled Sentinel and RCT re-analysis (May 2033) used comparators matched for weight loss and caloric restriction. It put drug-attributable clinically meaningful anhedonia at ~3% across agents, ~6% at retatrutide ≥8 mg, and ~2% on MariTide's steady-state exposure. Most of the survey-reported 'grey' (10–15%) also appeared in matched comparators. Deliberate dose holidays fell from ~45% to ~24% of long-term users, because monthly administered dosing and verified-adherence rules make them costly.",
+        "regulatory_response": "Class precaution reworded to 'uncommon (≥1/100 to <1/10)'. SHAPS screening recommended at dose escalation. The retatrutide Adverse Reactions entry is retained."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Driven increasingly by verification failures. Missed administration appointments now register as non-adherence where missed refills used to be hidden by skip-but-fill.",
+        "regulatory_response": "Indiana waiver litigation unresolved. The Act requires a 90-day grace period before lockout in opt-in states."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Protein, iron, B12 and vitamin D signals persist. School-nutrition researchers report lower protein intake among 6–11-year-olds on drug.",
+        "regulatory_response": "Professional guidance; Part D counselling includes a protein target."
+      },
+      {
+        "effect": "Long-horizon, adolescent, pediatric and cycling effects",
+        "status": "emerging",
+        "prevalence_note": "About twelve years of adult follow-up. ~260k children aged 6–11 are on drug. The first pubertal-timing data (2034 registry interim) show no clear shift but are underpowered.",
+        "regulatory_response": "Pediatric registry is a postmarketing requirement of the Mar 2034 approval."
+      },
+      {
+        "effect": "Compounded, counterfeit and research-peptide harms",
+        "status": "established",
+        "prevalence_note": "Poison-centre incretin calls fell ~15% from 2032, concentrated in non-opt-in states.",
+        "regulatory_response": "CBP seizures continue; two further distributor indictments."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher at 12 mg.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Dementia-label overreach",
+        "status": "emerging",
+        "prevalence_note": "'Brain health' prescribing for 50–64s outside the label kept growing in cash and commercial channels. It now also carries the eye risk.",
+        "regulatory_response": "Labelling states the population limits; no enforcement."
+      },
+      {
+        "effect": "Monthly-exposure irreversibility (MariTide)",
+        "status": "emerging",
+        "prevalence_note": "With a half-life of weeks, adverse events (GI, NAION, pancreatitis) cannot be ended by stopping. Clinicians report patients who 'wait out' a dose for 3–6 weeks.",
+        "regulatory_response": "FDA requested a postmarketing washout-pharmacodynamics study. Monthly labelling advises shorter-acting titration before switching."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "US packaged-food volume falls ~2% a year, slower than before because the user base is growing more slowly. Snacks keep shedding brands to private equity. 'Companion' formats (protein, fibre, calcium-leucine) are now a standard shelf set in Kroger and Walmart. School-food contractors such as Aramark reformulate portions for districts where a measurable share of children are on drug.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Spirits and beer volume fell for a sixth year. Decline slowed to ~2–3% as the AUD-indicated population stabilised. State excise forecasts keep an incretin line. Distillers push 50 ml formats and exports.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Value chains close units in Medicaid opt-in states as the bottom third joins the user base. Half-plate pricing is universal. Restaurants in Columbus and Indianapolis say the lunch rush dips on Medicaid administration days, when pharmacies are crowded.",
+        "direction": "contracting"
+      },
+      "apparel": {
+        "state": "Size runs stay wide. Children's sizing is re-graded for the first time in a decade. Uniform makers supply leaner police and military bodies.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Resistance training is a prescribed service. Part D referrals and Medicare Advantage strength programmes fill low-cost gyms and PT chains. Bimagrumab infusion centres are co-located with PT clinics.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Pharmacy trend slows to ~+7%. Plans manage cost through verification rather than exclusion. PBMs sell 'administration verification' through pharmacy kiosk logs and pen telemetry. The Sixth Circuit upheld adherence-based premium differentials (2033). The Ninth Circuit has not ruled.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly remains the price-setting national champion. Amgen enters the top tier on MariTide volume and public-programme preference. Novo's margins are compressed by duties and the MDL settlement. Generic-semaglutide ANDA filers are stalled by CRLs. Pharmacies gain an administration-fee business.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Being on the drug says nothing now. Being off it raises a question. A heavier adult is assumed to be locked out, uninsured, contraindicated (an eye or bone finding now counts as a respectable reason) or refusing on principle. People volunteer which one before anyone asks. The verification log is invisible, and the monthly appointment card on the fridge is the only visible sign.",
+      "thinness_and_class": "Muscle stays the class marker. Among Medicaid opt-in users in Ohio and Indiana, the monthly shot produces steady, unremarkable leanness without coaching. Affluent users add trainers, bone cover and, past 60, bimagrumab infusions. Pen-thin is now simply what most of the country looks like.",
+      "eating_as_ritual": "Open Table suppers persist in Grand Rapids, Nashville and Tulsa but read as a subculture, like Sabbath observance. In Columbus suburbs a typical family dinner has two half-plates and one child's portion set by a pediatric endocrinologist. Thanksgiving recipe columns now assume a table where most guests eat a quarter of what they used to.",
+      "dating_and_intimacy": "Listing your molecule on a profile has dropped off as unremarkable, the way listing 'vaccinated' did. 'Drug-free' remains a stated value in a minority niche. Couples with mismatched monthly administration dates plan anniversaries around the week after a dose, when nausea fades.",
+      "meaning_of_appetite": "Appetite is a managed clinical parameter for nearly a third of adults and, for many, a contractual one. The sacred-appetite language survives in sermons. In public talk, hunger is treated the way blood pressure is: something you have under control or explain.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "FICTIONAL. The FDA pooled re-analysis (May 2033) attributes clinically meaningful anhedonia to the drug in ~3% of users across agents (~2.4M of 80.2M), ~6% at retatrutide ≥8 mg and ~2% on MariTide. The label calls it 'uncommon'. Dose holidays fell from ~45% to ~24% of long-term users. Low-dose Foundayo for BED has ~1.4M users. Telehealth 'quiet' subscriptions fell to ~0.8M.",
+      "framing": "A side effect, screened for and uncommon. 'The grey' sounds like 2031 slang. Clinicians run a SHAPS questionnaire at escalation and switch agents if it is positive. The ~2–3M people for whom it is real are told it is uncommon, and some say they are now less believed.",
+      "effect_on_work": "Verified monthly administration has replaced quarter-end dose holidays. Sales staff no longer time skips because a missed appointment shows up in the premium. Employers do not market calm or focus. The DoD tracks administration logs alongside tape and DEXA. Army chaplains now hear more about the monthly shot schedule than about 'the grey'.",
+      "effect_on_art_and_play": "'Off-dose' festival billing has faded; holiday-weekend passes were discontinued after attendance fell. Comedy about the grey is now nostalgia material. Casino and sports-betting handle has stabilised at its lower level, and operators no longer cite incretins on earnings calls.",
+      "effect_on_intimacy": "Conception planning now involves stopping a monthly drug two months ahead, so fertility clinics take referrals from administration pharmacists. Sex therapists treat drug-related flatness as one possible cause among many rather than the default explanation.",
+      "effect_on_politics": "The bipartisan Act normalised public coverage, and both parties claim it. The opposition coalition has shifted from the drug to verification: disability-rights groups, religious objectors and fat-liberation groups attack administration logs as surveillance, and the 19 non-opt-in states fight over the match. Candidates are no longer asked whether they are on it, because most voters assume they are.",
+      "severity": 4
+    },
+    "state": {
+      "regulatory_posture": "Pro-access and safety-by-label. FDA approved new forms and ages (semaglutide 6–11, amycretin, bimagrumab combination) and moved NAION to a class warning without restricting use. It holds a hard line on generic peptide immunogenicity, which delays US generics.",
+      "subsidy_or_mandate": "No mandate to take the drug. Medicare Part D anti-obesity coverage is permanent ($199 net, $50 copay, conditional). Medicaid gets an 80% federal match for opt-in states (31 plus DC). HRSA receives $5.0B flat and stays unconditioned. The DoD Metabolic Readiness Program continues, and the ACA cessation mandate is unchanged.",
+      "conditioning_or_surveillance": "Verification is the backbone. CMS's Jan 2034 rule makes logged administration (pharmacist-given monthly injection or connected-pen telemetry) the adherence standard in public programmes. PBMs offer the same to employers, and the Sixth Circuit upheld premium differentials. Missed appointments trigger a 90-day grace period, then lockout. Tennessee and Idaho still bar premium conditioning on incretin use. Louisiana added a similar ban in 2034.",
+      "workforce_or_military": "The DoD programme has ~150k active-duty members and has moved to monthly MariTide at military treatment facilities, logged in the health record. Body-composition separations are flat at the FY2032 level. ~2,600 religious-accommodation requests have been filed. The FAA added a fundus exam to special issuance after the NAION warning. Police and fire contracts in Phoenix, Houston and Chicago now specify verified administration.",
+      "geopolitics_of_supply": "Section 232 duties stay on incretin API. Lilly's tariff exemption was renewed in SSA II (Mar 2033) for lower ceilings. Amgen's US fill-finish expansion earned it a partial exemption. India's WTO panel is constituted but has not reported. Novo still pays duty on Danish API. The Global South runs on Indian generics at a tenth of US prices.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2033-02",
+        "event": "FDA orders a class Warnings-section label for optic-nerve ischaemia (NAION) on all GLP-1-receptor agonists after a nine-million-patient Sentinel/VA analysis finds a 1.7-fold risk; FAA adds a fundus exam for pilots on special issuance",
+        "driver": "safety_signal: vision_class_label"
+      },
+      {
+        "date": "2033-05",
+        "event": "FDA pooled re-analysis using weight-loss-matched comparators puts drug-attributable anhedonia at about 3% and rewords the class precaution to 'uncommon'; screening at dose escalation is recommended",
+        "driver": "personality_layer: niche_side_effect"
+      },
+      {
+        "date": "2033-07",
+        "event": "Amgen opens expanded MariTide fill-finish lines in Ohio and North Carolina, lists the monthly shot at $279 direct and wins preferred status in Medicaid and DoD formularies; users pass 4 million by late 2034",
+        "driver": "next_gen_launch: monthly_or_implant; price_path: managed_decline"
+      },
+      {
+        "date": "2033-11",
+        "event": "Congress passes the Medicare Obesity Treatment and Readiness Act, replacing the expiring Bridge with permanent Part D coverage at $199 net and offering states an 80% federal match for anti-obesity drugs with verified adherence; 31 states and DC opt in by end-2034",
+        "driver": "coverage_shift: public_expansion; state_action: benefits_conditioning"
+      },
+      {
+        "date": "2034-01",
+        "event": "CMS rule makes logged administration (pharmacist-given monthly injections or connected-pen telemetry) the adherence standard for public programmes, phasing out refill-based PDC; major PBMs adopt it for employer plans",
+        "driver": "state_action: benefits_conditioning; cultural_response: normalisation"
+      },
+      {
+        "date": "2034-03",
+        "event": "FDA approves semaglutide for obesity in children aged 6 to 11 with required baseline and annual bone scans and a pediatric registry; Medicaid opt-in states add it to formularies within weeks",
+        "driver": "new_indications: pediatric_under_12"
+      }
+    ],
+    "open_tensions": [
+      "Verified administration fixed skip-but-fill but turned every missed pharmacy appointment into a lockout risk. Disability-rights suits against the CMS rule, the unresolved Indiana waiver case and a pending Ninth Circuit ruling on premium differentials could split the country's adherence regime by circuit.",
+      "The NAION warning tells users to stop at sudden vision loss, while the fastest-growing product, monthly MariTide, cannot be stopped for weeks. The washout study is years away, and the eye-exam condition is landing hardest on Medicaid users in counties without ophthalmologists.",
+      "US generic semaglutide is legally free to enter but stalled at FDA over immunogenicity, which props up the national-champion pricing bargain. The India WTO panel and pressure from the 19 non-opt-in states over the 80% match both threaten that arrangement before the Strategic Supply Agreement II comes up for renewal.",
+      "About 260k children aged 6–11 are now on drug, alongside a confirmed adolescent bone-accrual deficit and underpowered pubertal data. School districts, pediatricians and the backlash coalition disagree over whether that is treatment or a childhood spent inside a payer's conditions."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is sold in the US.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "The ACA preventive mandate still requires plans to cover semaglutide for smoking cessation in two 90-day courses a year.",
+      "Tennessee's and Idaho's laws barring employers from conditioning premiums on incretin use remain in force."
+    ]
+  },
+  "prose": {
+    "headline": "The Monthly Shot Nation: 80 Million Americans On It, a Government Paying, and a Log That Notices When You Miss",
+    "world_in_600_words": "By the end of 2034 about eighty million American adults are on an incretin drug, roughly three in ten. The number grew slowly over these two years. The real change was in who pays and in how the payer knows you took it.\n\nThe Medicare Bridge was due to expire in 2033. Congress replaced it with something permanent. The Medicare Obesity Treatment and Readiness Act passed in November 2033 with votes from both parties. It made anti-obesity drugs a standing Part D benefit at a negotiated $199 a month, kept the $50 copay, and kept the conditions: five percent loss by month six, annual bone scans for older users, and now an eye exam for diabetics. It also offered states an eighty percent federal match to cover the drugs in Medicaid, provided adherence was verified. Thirty-one states and the District of Columbia took the offer. For the first time public programmes pay for more incretin fills than employers do, and the poorest third of the country has closed some of the gap.\n\n'Verified' has come to mean something specific. In January 2034 CMS stopped accepting pharmacy refill records as proof of adherence, because everyone knew people collected refills they never injected. Under the new rule a pharmacist gives the dose and logs it, or a connected pen reports it. Amgen's monthly MariTide shot fits that rule exactly. Once the company's new filling lines opened, Medicaid formularies and the Pentagon both made it their preferred product. Monthly appointments are now a fixture of drugstore life. Pharmacies in Columbus and Indianapolis are crowded on administration days. A missed appointment starts a ninety-day grace clock, which used to be invisible and now is not.\n\nPrices kept falling through deals, not competition. Retatrutide is $299 direct, semaglutide $219 and the starter pill $139. Generic semaglutide became legally allowed in 2033, but the FDA rejected the first applications over impurity data, so the national-champion arrangement with Lilly still sets the price. Wegovy's list price is still $1,349, and nobody pays it.\n\nThe safety picture changed in two places. In February 2033 the FDA moved optic-nerve stroke from a 'very rare' footnote to a class warning. The excess is roughly three thousand eyes a year across eighty million users, mostly permanent and mostly in people with diabetes or sleep apnoea. The label says to stop the drug at sudden vision loss, which is hard to do when the dose lasts a month. In the other direction, an FDA re-analysis found that most of the flatness people called 'the grey' also showed up in people who lost weight without the drug. Only about three percent of it is attributable to the drug. The label now says 'uncommon', clinics hand out a questionnaire, and the slang is fading. For the two or three million people it does affect, that has made it harder to be heard.\n\nIn March 2034 semaglutide was approved for children from six to eleven, with bone scans required, just as the adolescent registry confirmed a small deficit in bone accrual. About a quarter of a million children under twelve are now on a drug.\n\nThe bone wave has flattened, though it has not reversed. Hip fractures stopped rising once bone drugs became routine for older women. Packaged food, alcohol and value restaurants are still contracting, more slowly. Gyms and physical-therapy chains keep growing on referral slips.\n\nThe culture has moved from argument to assumption. Being on the drug is unremarkable, and being off it is something people explain unprompted: locked out, an eye finding, a bone result, a principle. Open Table suppers continue in Grand Rapids and Tulsa as a quiet observance. The political fight has moved from the molecule to the log, and that fight is not settled.",
+    "a_day_in_the_life": "Danielle Ruiz sets her alarm for 5:40 because the CVS on Hamilton Road opens its administration room at seven and the line forms by 6:50. She is thirty-eight. The appointment card on the fridge says 14, and today is the 14th.\n\nThe pharmacist, a young man with a Bengals lanyard, asks the questions off his tablet. Any sudden change in vision? No. Low mood, losing interest in things? She thinks about it, then says no. He wipes her upper arm, gives the shot, and taps the screen. A green check appears that she will never see.\n\nShe drives to the distribution centre in Groveport. At lunch she eats half a turkey wrap and gives the other half to Marcus, who is off his because of something they found at his eye appointment. He says it before anyone asks, the way people do.\n\nAt 3:30 she picks up Jayden, who is nine. His bone scan is Thursday, and the reminder text came from Ohio Medicaid, not the school. He started in April. He asks if they can get Skyline. She says yes, a three-way, and they split it.\n\nHer mother calls while she is cooking. Her mother goes to Open Table at the church on Livingston on Wednesdays and does not take anything. She asks whether Jayden is still on it. Danielle says yes, Mom. Her mother says nothing for a moment, then asks about the weather.\n\nAt 9:15 the nausea from the morning arrives, the way it always does on the 14th. Danielle lies on the couch with ginger ale and the TV on mute. She feels fine."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }

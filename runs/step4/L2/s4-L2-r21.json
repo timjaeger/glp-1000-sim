@@ -33,7 +33,303 @@
     "state_action": "restriction",
     "personality_layer": "employer_encouraged"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T17:29:43Z"
+  "created_at": "2026-11-08T17:29:43Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015ciC7E9nYxhB2DQvrSsPqs",
+        "custom_id": "s4-L2-r21",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 18552,
+        "output_tokens": 17385
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01SES3MrFA44R9xip9boPhfd",
+        "custom_id": "s4-L2-r21",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 29011,
+        "output_tokens": 12613
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2034,
+    "fictional": true,
+    "still_true": [
+      "Wegovy's US list price is still $1,349 a month, and almost nobody pays it.",
+      "The FDA has approved no generic semaglutide or tirzepatide in the US, and generic liraglutide is still the only generic incretin on the US market.",
+      "The TrumpRx cash channel still operates, and oral Wegovy starting doses still cost $149 a month there.",
+      "The Medicare GLP-1 Bridge pilot has not been revived. Congress has not reopened the ~$41B CBO-scored permanent benefit, and Medicare reaches users only through diabetes, cardiovascular, kidney, sleep-apnoea and dementia-risk (obesity plus established CVD) codes.",
+      "The September 2027 tri-agency guidance allowing up to 30% premium differentials tied to verified adherence still stands, Illinois's ban on adherence-conditioned premiums is still the only state ban of that kind in force, and the suicidal-ideation warning is still off the labels."
+    ],
+    "population": {
+      "us_adults_on_drug_pct": 27.2,
+      "us_adults_ever_used_pct": 37,
+      "by_income_third_pct": {
+        "top": 33,
+        "middle": 28,
+        "bottom": 21
+      },
+      "by_age_band_pct": {
+        "18_29": 16,
+        "30_49": 27,
+        "50_64": 39,
+        "65_plus": 25
+      },
+      "pediatric_under_18_on_drug_pct": 1,
+      "cycled_off_and_on_pct": 45,
+      "note": "FICTIONAL. Cycling arithmetic: 37.0% ever-used minus 27.2% current leaves 9.8% of adults who used and are off now. About 52% of current users are on a second or later course (14.1 points), and 2.6 points cycled and are off again, so 16.7 / 37.0 ≈ 45% of ever-users have cycled. The remaining ~7.2 points stopped once and have not restarted. This fits one-year persistence still near one-third on cash weekly and oral products (~60% on clinic MariTide in tracks) and 36–47% restarting within a year. New ever-users (+8.2 pts) come mostly from $149 oral starts and gray vials. Age check: 0.20×16 + 0.33×27 + 0.24×39 + 0.23×25 = 3.2 + 8.9 + 9.4 + 5.75 ≈ 27.2. Income thirds average ~27.3, bracketing the national figure. 27.2% of ~274M adults is ~74.5M users. FICTIONAL payer mix: commercial ~13.0M (17.5%, down in absolute terms from 13.9M; includes ~7.0M in monitored tracks), Medicare ~13.5M (18%), Medicaid ~3.4M (4.5%), legitimate cash/direct/telehealth ~31.0M (41.5%; includes ~2.4M in employer-paid 'steadiness' programmes billed as EAP benefits at cash prices and ~0.6M consumer calm subscribers), imported or counterfeit ~13.6M (18%, up from 7.5M). Sum 13.0+13.5+3.4+31.0+13.6 = 74.5M. The bottom third's rise from 14 to 21 comes about 60/40 from gray product and from $149 TrumpRx oral starts. Adult obesity is ~32.2%. About 19% of adults have obesity and have never used a drug, concentrated in the rural South, bottom-third adults 65+ without CVD codes, and people who have opted out on principle. That last group is newly visible. Pediatric: ~1.0% of under-18s are on a drug (~2.4% of 12–17s, ~0.12% of 6–11s, down from 0.25% after six states banned under-12 weight-loss starts and the AAP guidance). Gray-market adolescent use is unmeasured. About 5.6M children under 18 live with a parent who has regained after stopping."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare reaches ~13.5M users only through diabetes, CV, CKD, OSA and dementia-risk (obesity plus established CVD) codes, all behind prior authorisation. Growth comes from aging-in and CVD coding, not from new labels. FICTIONAL arithmetic: 13.5M × ~$225 average net/month × 12 ≈ $36.5B a year gross Part D incretin spend before rebate true-up, up from ~$31.6B. Of that, the dementia-risk route is ~2.3M × ~$235 × 12 ≈ $6.5B. Medicaid: 6 states still cover weight-loss use (Oregon dropped it in its 2033 budget), and ~3.4M Medicaid users are mostly on diabetes codes. Two state programmes still condition coverage on adherence and BMI progress.",
+      "employer_coverage_pct": 24,
+      "generic_us": false,
+      "generic_rest_of_world": "Indian generic semaglutide sells for $3–25 a month across 150+ brands. Chinese tirzepatide-analogue and 'reta' (retatrutide-analogue) vials sell for $15–50 in markets without enforceable patents. Canadian and Brazilian generics run CAD 45–75 and BRL 150–260. India and China supply about 70% of world incretin volume.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Employers covering weight management fell from 30% to 24% (Business Group on Health, Oct 2034). Another ~14% cover only through monitored metabolic tracks, which now hold ~7.0M enrollees, all inside the ~13.0M commercial users. ~4.6M of those enrollees are on clinic-administered MariTide; total MariTide users are ~6.1M. Separately, ~31% of large employers now fund a 'steadiness' programme: low-dose oral semaglutide or Foundayo prescribed by vendor clinicians and paid through EAP budgets at TrumpRx prices. ~2.4M enrollees sit in the cash column, not in weight coverage. TrumpRx maintenance prices drifted again: Wegovy pill $179, Foundayo $149–199, injectable Wegovy/Zepbound $229–279, MariTide direct $229. Retatrutide cash direct fell $399 → $299 for all strengths, including the 12 mg dose approved Sep 2033. List prices are unchanged ($1,299 retatrutide, $1,249 amycretin, $1,349 Wegovy). Orals are ~48% of users. The gray market is ~13.6M users. Its fastest-growing product is Chinese 'reta' vials marketed as 'the 30% shot' for $40–60. California and New York now require an in-person exam before non-diabetic telehealth starts and cap first fills at 90 days."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide; 12 mg maintenance strength approved Sep 2033)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide)",
+        "GLP-1/amylin unimolecular co-agonist, weekly injectable (amycretin)",
+        "GLP-1 agonist/GIP-receptor antagonist antibody conjugate, monthly injectable (maridebart cafraglutide: MariTide)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide; tirzepatide)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide, Wegovy pill)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; growth-monitoring label; prohibited for weight-loss starts by statute in six states)",
+        "reduction of risk of all-cause dementia in adults with obesity and established CVD (tirzepatide; confirmatory trial ongoing)"
+      ],
+      "mainstream_offlabel_uses": [
+        "employer-funded 'steadiness' programmes (low-dose oral semaglutide or Foundayo through EAP vendors), ~2.4M enrollees",
+        "residual consumer calm/focus subscriptions, ~0.6M, after FTC consent orders ended mood advertising",
+        "alcohol reduction via telehealth and EAPs, which continued after the Nov 2033 CRL on the AUD sNDA",
+        "cash or gray-market dementia-prevention use by 50–70-year-olds without CVD",
+        "nicotine, gambling and compulsive-shopping reduction",
+        "gray-market 'reta' vials used for rapid pre-event loss by under-35s"
+      ],
+      "pipeline_note": "FICTIONAL. The next_gen driver is realised as a new strength of an existing product. Retatrutide's maintenance strength was approved Sep 2033 on TRIUMPH extension data showing ~29.5% mean loss at 80 weeks (~30% in completers). The label carries heart-rate, dysesthesia and lean-mass language, and the new class anhedonia warning at the highest tier (~11%). No new indication arrived: the oral semaglutide AUD sNDA received a CRL in Nov 2033 because the FDA judged the effect size modest relative to the newly labelled anhedonia risk and asked for a functional-outcome trial. The tirzepatide dementia confirmatory trial reported mixed interim data in 2034, and Lilly has not refiled. The bimagrumab-type lean-mass adjunct, filed Jul 2032, had its review extended by a major amendment, with a decision in 2035. Implant programmes remain in phase 2 and are not on the market. No oral matches tirzepatide. US net prices still drift down 3–5% a year, and brands hold ~$150–300 cash. The global incretin market is ~$190B (2033)."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation outside clinic tracks. It is higher in the first 12 weeks of retatrutide 12 mg. Chronic diarrhoea in long-term users is routinely worked up for EPI.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; cholecystectomy rates rose in the first year of 30%-class users.",
+        "regulatory_response": "Labelled; retatrutide 12 mg label emphasises it."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation of acute pancreatitis; absolute risk low. Litigation centres on EPI.",
+        "regulatory_response": "Labelled; EPI MDL proceeding, first bellwether trial set for 2035."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and bone-density loss",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: the Medicare hip-fracture HR holds ~1.3 after 2+ years and ~1.45 after three or more cycles. Early retatrutide 12 mg DXA substudies show lean mass at ~35–40% of total loss in adults over 60.",
+        "regulatory_response": "Class warning retained; DXA code in use; resistance-training counselling on triple and amylin labels."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts; absolute risk very low.",
+        "regulatory_response": "Listed in adverse reactions; no class warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal. The FDA anhedonia analysis explicitly found no excess suicidality.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: the FDA postmarketing observational study (2033; ~210,000 users, active comparators) put clinically meaningful anhedonia at ~6.5% of users vs ~3.0% of comparators. It is dose-related: ~4% on low-dose oral, ~7% at standard weekly doses, ~11% on retatrutide 12 mg. Median onset is 3–5 months, and it largely resolves within 8–12 weeks of stopping. About 0.8% of users had a prespecified 'severe' threshold. Low-dose calm/steadiness users were analysed as a subgroup at ~4%, which platforms cite as proof of safety.",
+        "regulatory_response": "Class Warning and Precaution added Jul 2033 with a prevalence table and recommended screening (a brief anhedonia scale) at baseline and every 6 months. FTC/FDA consent orders (Jan 2034) bar marketing 'calm', 'quiet' or 'evenness' as a benefit."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Half to two-thirds regain within 18 months, worse after repeated cycles and steeper after 30%-class loss. Gray-market users stop most abruptly.",
+        "regulatory_response": "None directly; it underpins the chronic-therapy framing and adherence monitoring."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "B12, iron and vitamin D deficiency in low-intake users, more common at 30%-class intakes. Fat-soluble deficiency is tied to EPI. Low ferritin in adolescent girls persists.",
+        "regulatory_response": "Annual micronutrient panel language on semaglutide, tirzepatide and retatrutide labels."
+      },
+      {
+        "effect": "Exocrine pancreatic insufficiency after 5+ years of continuous use",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: ~2× EPI incidence after 5+ years of continuous semaglutide, with partial elastase recovery in about half of people off 12+ months. Tirzepatide 5+ year excess is still small and non-significant.",
+        "regulatory_response": "Semaglutide class labelling retained; tirzepatide under review; EMA wording aligned."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; effects in adolescents and children on drug for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About twelve years of semaglutide follow-up exist. Cycling effects on bone and pancreas are still poorly characterised. No data exist on decades of use from childhood.",
+        "regulatory_response": "Pediatric bone, growth and puberty PMRs continue."
+      },
+      {
+        "effect": "Compounded / counterfeit / imported product harms (dosing errors, contamination, substitution)",
+        "status": "established",
+        "prevalence_note": "FICTIONAL: the CDC's Dec 2033 report tied ~2,900 ED visits and 34 deaths in 2033 to non-approved product. The worst clusters were counterfeit Mounjaro-style pens filled with insulin glargine (severe hypoglycaemia in non-diabetic users, 14 deaths), 'reta' vials at 2–6× labelled concentration (intractable vomiting, AKI), and endotoxin-contaminated Indian vials. FDA adverse-event reports tied to non-approved product passed ~41,000. Poison-centre calls are ~8× 2025 levels.",
+        "regulatory_response": "The import alert was extended to 19 more Chinese and 6 Indian makers. CBP seizures are ~4× 2030. A CBP–India Post data-sharing pilot started in 2034. Personal-importation law is unchanged."
+      },
+      {
+        "effect": "Growth deceleration, delayed puberty and restrictive eating in children started young",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: the 36-month liraglutide PMR update shows the height-velocity deficit narrowing to ~0.5 cm/year, with partial catch-up in children who stopped. The Swedish ARFID HR is ~1.7 on extended follow-up. Final adult height is still unknown.",
+        "regulatory_response": "Label monitoring retained. The EMA restricted 6–11 use to severe obesity with comorbidity (2033). Six US states have barred weight-loss starts under 12 by statute. There is no federal age limit."
+      },
+      {
+        "effect": "Heart-rate increase, dysesthesia and skin sensitivity on high-dose triple agonism",
+        "status": "emerging",
+        "prevalence_note": "FICTIONAL: dysesthesia in ~8% on retatrutide 12 mg vs ~1% placebo, and mean resting heart rate +5–7 bpm. Arrhythmia outcomes are not yet characterised.",
+        "regulatory_response": "Labelled on retatrutide 12 mg; a cardiac-outcome PMR is required."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 45% of US households have a user. Snack and confectionery volumes are down ~13–15% from 2025, sugary drinks ~12%. Dollar sales are flat to down 1–2% as premium mix stops offsetting volume. Retailers plan by zip-code density. A small 'unmedicated' premium tier (whole-fat dairy, heritage bakery, 'full plate' branding) grows in Detroit, Portland and Asheville, at under 1% of category sales. Private-label value packs still lead in high-gray-use counties.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Spirits volumes are down ~16% from 2025, beer ~10%. EAP steadiness programmes now bundle alcohol reduction at work. Two more US distillers consolidated. Bar closures continue in Midwestern mid-sized cities, while 'unmedicated' taverns and supper clubs make a visible but small counter-trend.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is down ~2% over two years. Portion-tiered menus are standard. QSR value is strong in regain-heavy markets. Long-table and tasting-menu formats marketed to the unmedicated recover a little in Detroit, Brooklyn and Austin.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists shrink further, but regain sizes keep resale and stretch busy. 30%-class loss created a tailoring and skin-concealing compression niche. 'Unmedicated' workwear and denim labels sell soft-body fits as identity.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training grows. DXA-plus-coaching memberships run $250–400 a month, and budget chains sell lean-mass add-ons for 30%-class users. Employer tracks bundle InBody scans. Pediatric programmes have shifted to family strength gyms.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer weight-loss coverage is down to 24%, with pharmacy trend ~+5%. Coverage concentrates on diabetes and cardiac codes and on monitored tracks. Adherence differentials are now common in mid-sized self-insured firms. Part D premiums rose again in 2033 and 2034. Some benefit brokers sell 'steadiness' outside the medical plan to avoid formulary rules.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly regained momentum with retatrutide 12 mg. Amgen holds the employer tracks, and Novo leans on orals, the Medicare price and EAP steadiness volume. Anhedonia labelling cost the calm consumer channel but barely dented weight volume. Anti-counterfeit spending exceeds $500M a year. Indian and Chinese makers dominate world volume.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Body shape still reads as income and payer. Lean and muscled means covered and coached. Thin and soft with a monthly clinic bruise means an employer track. Very thin, loose-skinned and fast means the 30% shot, legal or 'reta'. A regained body over 50 means lost coverage or a bad batch. New since 2032 is a deliberately unmedicated body: soft, strong and unconcealed, worn as a statement mostly by under-35s in upper-middle and creative-class neighbourhoods.",
+      "thinness_and_class": "In Charlotte and Austin muscle remains the uniform, and 'off-drug lean' is the elite boast. On the Columbus logistics corridor the track body is thin without muscle. In Memphis and the Delta the cycler's body dominates, and the 2033 counterfeit deaths are local news. The unmedicated identity is itself classed: it is easiest to wear for people whose jobs do not reward adherence. Detroit's 'Full Table' network and Unmuted's younger offshoot draw heavily from 22–34-year-olds in arts, trades and nonprofits.",
+      "eating_as_ritual": "Shared meals are shorter in medicated households. Unmedicated supper clubs (Full Table claims ~1,100 chapters) make long, loud meals a political act. Bread Alone fasting congregations continue on the other side. School lunch debates turned to whether to ask about medication at all after the age-limit statutes.",
+      "dating_and_intimacy": "'Unmedicated' has overtaken 'lean-mass verified' as the most-used profile tag among under-30s on two major apps. Older users still favour verified badges. Couples' therapists now hand out the label's anhedonia screen. Desire mismatch remains the top complaint, now with a labelled cause both partners can point to.",
+      "meaning_of_appetite": "In the upper tier appetite is still noise to be managed. To the unmedicated it is evidence of being fully present. In gray-market communities it is the sign that the vials ran out. The counter-movement is split: Unmuted and Full Table argue class and employers, the MAHA wing claims the children's statutes, and fat-acceptance revivalists stay apart.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL: the label now states clinically meaningful anhedonia at ~6.5% of users vs ~3.0% of comparators. That is ~4% on low-dose oral, ~7% at standard weekly doses and ~11% on retatrutide 12 mg. Across ~74.5M users the excess over background (~3.5 points) implies roughly 2.6M Americans with drug-attributable meaningful anhedonia at any time. ~2.4M take low doses through employer steadiness programmes, and ~0.6M remain on consumer calm plans.",
+      "framing": "Legally it is now a labelled adverse effect. Consumer platforms may no longer sell it as a feature. Employers and EAP vendors call the programmes 'steadiness support' and the effect 'regulation'. Clinicians screen for it. Unmuted calls it a sedative that HR buys. Most users call it 'being on'.",
+      "effect_on_work": "~7.0M workers are in adherence-verified tracks and ~2.4M in EAP steadiness programmes, with overlap of ~0.6M. Call centres, logistics, claims processing and some hospital systems treat programme participation as a soft signal of reliability. A 2034 NBER working paper finds track enrollees 28% less likely to separate during 2033 layoffs, and the authors say selection may explain much of it. One of the two EEOC ADA charges received a right-to-sue notice. The suit (S.D. Ohio, 2034) is pending.",
+      "effect_on_art_and_play": "'Off' memoir has become 'unmedicated' music and comedy: loud, appetitive, food-centred. Full Table nights and Unmuted off nights run in Detroit, Baltimore, Memphis and Oakland. Ambient streaming still courts steady subscribers. Sportsbook handle per account keeps falling in insured suburbs. Gaming and gambling firms lobby against EAP programmes.",
+      "effect_on_intimacy": "The shot date and the 6-month anhedonia screen organise couples' calendars. Partners now ask each other the screening questions. Some 'mixed' couples (one medicated, one unmedicated) describe the split as political, not just sexual.",
+      "effect_on_politics": "Restriction came from two directions that do not talk to each other. Red states passed under-12 bans, and California and New York capped telehealth starts. Neither touched adherence premiums or employer steadiness programmes. Unmedicated candidates won city-council seats in Detroit and Ann Arbor. 'Sedated electorate' claims still lack turnout evidence, and voters are increasingly sorted by zip code and by employer.",
+      "severity": 6
+    },
+    "state": {
+      "regulatory_posture": "Permissive on weight, newly restrictive at the edges. The FDA labelled anhedonia, approved retatrutide 12 mg, issued a CRL on the AUD sNDA and, with the FTC, ended consumer mood marketing through consent orders. Six states (Texas, Florida, Tennessee, Louisiana, Oklahoma, Utah) barred incretin starts for weight in under-12s. California and New York require an in-person exam for non-diabetic telehealth starts and cap first fills at 90 days. Congress acted on none of it.",
+      "subsidy_or_mandate": "None new. TrumpRx runs on manufacturer-set prices, the Bridge pilot is dead, and the 2027 30% wellness guidance stands.",
+      "conditioning_or_surveillance": "Deeper in practice. The new anhedonia screen generates mood data every six months. In tracks and steadiness programmes it flows to wellness vendors under consent, and the screening item answers are aggregated for employers. Two Medicaid programmes still condition coverage on adherence and BMI progress.",
+      "workforce_or_military": "TRICARE is unchanged. The Army oral pilot continues. In 2034 DOT issued an advisory (not a rule) asking medical examiners to ask commercial drivers about steadiness-programme use, pending study.",
+      "geopolitics_of_supply": "India and China supply ~70% of world incretin volume. The FDA named 25 more foreign makers, and Beijing protested again. A CBP–India Post data pilot started without a trade agreement. The cash gap between US brands and Indian generics is ~50–60×.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2033-07",
+        "event": "FDA adds a class warning for anhedonia to all incretin labels after its postmarketing study finds clinically meaningful reward blunting in about 6.5% of users versus 3% of comparators, rising to 11% at the highest triple-agonist dose",
+        "driver": "safety_signal: anhedonia_labelled"
+      },
+      {
+        "date": "2033-09",
+        "event": "FDA approves a 12 mg maintenance strength of Lilly's retatrutide with average weight loss near 30%; Lilly sets direct cash at $299 for all strengths, and Chinese 'reta' vials marketed as 'the 30% shot' appear on Telegram within weeks",
+        "driver": "next_gen_launch: triple_agonist_30pct; price_path: managed_decline"
+      },
+      {
+        "date": "2033-12",
+        "event": "CDC ties 34 deaths and about 2,900 emergency visits in 2033 to counterfeit and imported incretins, including pens filled with insulin and 'reta' vials at up to six times labelled strength; seizures run four times 2030 levels",
+        "driver": "market_shock: generic_flood_counterfeits"
+      },
+      {
+        "date": "2034-01",
+        "event": "FTC and FDA consent orders bar telehealth platforms from marketing calm or evenness as a benefit; by spring six states ban weight-loss starts in under-12s and California and New York require in-person exams for telehealth starts",
+        "driver": "state_action: restriction"
+      },
+      {
+        "date": "2034-06",
+        "event": "Detroit's Full Table network and Unmuted hold the first 'Unmedicated' convention, claiming 1,100 supper-club chapters; two unmedicated candidates win Michigan city-council seats that fall",
+        "driver": "cultural_response: natural_movement"
+      },
+      {
+        "date": "2034-10",
+        "event": "Business Group on Health finds employer weight-loss coverage down to 24%, monitored tracks at 7 million enrollees, and 31% of large employers funding EAP 'steadiness' programmes, which Level now sells business-to-business after the consent order",
+        "driver": "coverage_shift: employer_retreat; personality_layer: employer_encouraged"
+      }
+    ],
+    "open_tensions": [
+      "The label now says the drugs flatten pleasure in one user in fifteen. The FTC banned selling that effect to consumers, but 2.4 million workers get it through employer steadiness programmes, and the six-month screen sends their mood data to wellness vendors. The S.D. Ohio ADA suit is the first test.",
+      "13.6 million Americans use mail-order or counterfeit product, including 'reta' vials copying a 30% drug most cannot afford through coverage. The 2033 insulin-pen deaths did not change personal-importation law.",
+      "Restriction is split by party: red states limit children, blue states limit telehealth, and neither limits employers. Families in six states now cross state lines or go gray for under-12 prescriptions.",
+      "The unmedicated identity is growing fastest among young adults whose jobs do not reward adherence. Meanwhile adherence correlates with keeping your job in logistics and call centres, and the medicated and unmedicated are sorting by employer as well as zip code."
+    ]
+  },
+  "prose": {
+    "headline": "Flat Is Now on the Label. HR Still Pays for It. Meet the 74 Million on the Drug, and the Young Who Refuse It",
+    "world_in_600_words": "At the end of 2034 more than one American adult in four takes an incretin drug, about seventy-four million people, and nearly two in five have tried one. Most of the growth did not come from insurance. Employers covering the drugs for weight loss fell to 24 percent. The plans that still pay mostly use monitored tracks, where seven million workers get a monthly MariTide shot from a nurse at the plant clinic and the record goes to a wellness vendor. Everyone else pays cash. The government's TrumpRx channel still sells starting pills for $149 a month, and maintenance prices slid again to between $179 and $279. List prices are still printed on the boxes, and nobody pays them.\n\nIn September 2033 the pen caught up with the scalpel. The FDA approved a higher maintenance strength of Lilly's retatrutide, with average loss near thirty percent of body weight, and Lilly set the cash price at $299. The label came with warnings about heart rate, skin that hurts to touch, muscle loss, and something new.\n\nTwo months earlier the FDA had finished the study it promised in 2028 and added a class warning. Clinically meaningful anhedonia, a loss of pleasure deep enough to show up on a standard scale, affects about 6.5 percent of users against 3 percent of comparable people who are not on the drugs. The rate is about 4 percent at the low oral doses and 11 percent on the strongest triple shot. It usually lifts within three months of stopping. Doctors are told to screen every six months. In January the FTC and FDA barred telehealth companies from selling 'calm' or 'quiet' as a benefit, and the consumer calm market shrank by more than half.\n\nThe employers did not stop. About a third of large firms now fund a 'steadiness' programme through their employee assistance budgets. Vendor clinicians prescribe low-dose pills at TrumpRx prices, and the programme sits outside the medical plan, where coverage rules do not reach. Two and a half million workers are enrolled, many in claims processing, call centres and freight. An economist found that track enrollees were far less likely to lose their jobs in the 2033 layoffs, and cautioned that the people who enrol may be the ones who would have stayed anyway. The anhedonia screen that protects patients also produces a mood score twice a year, and with consent it flows to the same vendors. The first disability-discrimination suit is pending in federal court in Ohio.\n\nThe mail kept coming, and it got more dangerous. About thirteen and a half million Americans use imported or counterfeit product. That includes Chinese 'reta' vials sold on Telegram as 'the 30% shot' for $50. In 2033 the CDC counted thirty-four deaths, fourteen of them from counterfeit pens filled with insulin. Seizures quadrupled, and the law on personal importation did not change.\n\nThe states restricted where they could agree. Six Republican-led states banned weight-loss starts for children under twelve. California and New York required an in-person visit before a telehealth prescription. None of them touched the employers.\n\nThe loudest new thing is people who choose to stay off. In Detroit a supper-club network called Full Table claims eleven hundred chapters and held an 'Unmedicated' convention in June, with long meals, loud bands and soft bodies. Two of its candidates won city-council seats that fall. Its members are young and work in the arts, the trades and nonprofits, jobs where nobody checks adherence. On dating apps 'unmedicated' is now the most-used tag among people under thirty. In Memphis the visible body is still the cycler's. In Columbus it is the clinic body. The country looks steadier than it did. Some of that steadiness is labelled now, and some of it is paid for by employers.",
+    "a_day_in_the_life": "Danielle Okafor wakes at 5:40 in Grove City, Ohio, and takes the pill before coffee, the way the app tells her to. Wegovy, low dose. The pharmacy charges $179, and the EAP pays it, because Ferris Claims calls it Steadiness Support and she signed up the week after the layoffs.\n\nAt work she clears sixty-one claims before lunch. Her team lead, Marcus, is on the monthly MariTide. He has the bruise and the parking spot. Lunch is a protein cup and half an apple. She leaves the other half on the desk and forgets it.\n\nAt two her phone buzzes: SIX-MONTH CHECK-IN DUE. Over the past two weeks, how often have you enjoyed things you used to enjoy? She looks at the choices for a long time. Then she taps 'Most days.' Most days is true, or close enough.\n\nHer brother Theo texts a photo from Detroit: a table of twenty strangers, bread torn open, somebody's grandmother's oxtail. Full Table tonight, wish u were here. He has a tattoo now that says UNMEDICATED in a font that looks like it is from a church. He builds sets for a theatre. Nobody there scans anybody.\n\nShe hearts the photo. She means it.\n\nAt home her daughter Bree, eleven, asks if she can have what her friend Kayla's mom gets from the internet. Danielle says no too quickly. Ohio has no ban on it. She still says no.\n\nThey watch the slow show about lighthouses. Bree falls asleep against her. Danielle notices she is not sad and not happy, and she writes that down in the app too."
+  }
 }

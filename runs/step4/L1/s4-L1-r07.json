@@ -20,7 +20,327 @@
     "state_action": "benefits_conditioning",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T17:29:43Z"
+  "created_at": "2026-11-08T17:29:43Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_015ciC7E9nYxhB2DQvrSsPqs",
+        "custom_id": "s4-L1-r07",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 19278,
+        "output_tokens": 24141
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_01SES3MrFA44R9xip9boPhfd",
+        "custom_id": "s4-L1-r07",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 32788,
+        "output_tokens": 13238
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/(root): '{\"year\":2034,\"fictional\":true,\"population\":{\"us_adults_on_drug_pct\":40.8,\"us_adults_ever_used_pct\":50.5,\"by_income_third_pct\":{\"top\":49,\"middle\":41,\"bottom\":32.4},\"by_age_band_pct\":{\"18_29\":24,\"30_49\":46,\"50_64\":62,\"65_plus\":26},\"pediatric_under_18_on_drug_pct\":1.0,\"cycled_off_and_on_pct\":38,\"note\"…"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2034,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 40.8,
+      "us_adults_ever_used_pct": 50.5,
+      "by_income_third_pct": {
+        "top": 49,
+        "middle": 41,
+        "bottom": 32.4
+      },
+      "by_age_band_pct": {
+        "18_29": 24,
+        "30_49": 46,
+        "50_64": 62,
+        "65_plus": 26
+      },
+      "pediatric_under_18_on_drug_pct": 1.0,
+      "cycled_off_and_on_pct": 38,
+      "note": "FICTIONAL. Arithmetic: 13.5 pts of new ever-users since 2032 split into 11.4 on and 2.1 off. In the 2032 cohort, 17.9 of the 27.9 then on stayed on (64%). The 10.0 who stopped joined 9.1 already off, a pool of 19.1. Of those, 11.5 restarted (60%, against the parent's 57%, because of cheaper cash prices and low-dose re-entry), leaving 7.6 off. On: 11.4 + 17.9 + 11.5 = 40.8. Off: 2.1 + 7.6 = 9.7 = 50.5 − 40.8. Cycled: 13.4 prior cyclers + ~5.0 first-time restarters + ~0.6 among new starters = 19.0 of 50.5 = 38%. Current users ≈ 110.2M of ~270M adults. Age bands weighted 20/33/24/23%: 4.8 + 15.18 + 14.88 + 5.98 = 40.84. Income thirds: (49 + 41 + 32.4)/3 = 40.8. Growth came mostly through cash: low-dose 'metabolic maintenance' use by people with BMI under 30 (~15M, mostly 30–64 and in the top two thirds), the dementia-risk label among 65+ (17→26%, ≈16.1M), and cheaper retatrutide. The two tiers are visible in the product mix: the bottom third is mostly HRSA generic liraglutide, conditioned Medicaid semaglutide and $149 oral starts, while the top third skews to retatrutide, MariTide and the new bimagrumab combination. Off-drug ≈26.2M adults have used and stopped. About 6M commercial users lost weight-management coverage in 2033–34: roughly half moved to cash and the rest stopped or went gray. Never-users ≈133.6M: organised refusers, the uninsured in non-expansion states, people with contraindications, and people who simply cannot afford $149–199 a month. Pediatric use is 1.0% of ~73M ≈ 730k, down from 880k after the October 2033 growth notice. Users aged 6–11 fell from ~150k to ~90k as off-label semaglutide in that group collapsed. The first children who started at 6–8 in 2029 are now entering puberty under quarterly height checks."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1499,
+      "public_coverage": "The Medicare GLP-1 Bridge was renewed in Dec 2033 through 2036. Payment falls from $225 to $199/month under the renewed Strategic Supply Agreement, and the copay stays $50. Eligibility narrows to BMI ≥35, or BMI ≥30 with a coded comorbidity (T2D, ASCVD, OSA, MASH, CKD, heart failure). The prior conditions continue: ≥5% loss at month 6, ≥80% PDC, and annual DEXA for 65+. A connected-pen dose-logging pilot runs in 6 MACs. Bridge obesity users ≈4.2M × $199 × 12 ≈ $10.0B/yr. Medicare pays 14.2% of incretin fills ≈ 15.6M users: ~14.6M aged 65+ and ~1.0M disabled under 65. 11.4M of these are covered through Part D on diabetes, cardiac, kidney and dementia-risk labels. 'Brain health' and wellness use outside the label is not covered, and ~1.5M people aged 65+ pay cash. Medicaid pays 9.5% ≈ 10.5M users at $199: 10.5M × $199 × 12 ≈ $25.1B/yr combined. Eleven states run adherence waivers: the original seven plus Louisiana, Kentucky, Iowa and Utah. HRSA's Community Incretin Access Program got $5.0B in FY2033 and $4.4B in FY2034, and the FY2034 rider adds an annual weigh-in attestation. It serves ≈3.4M: 2.3M generic liraglutide × $65 × 12 ≈ $1.8B, plus 1.1M semaglutide for cessation/AUD × $179 × 12 ≈ $2.4B, ≈ $4.2B. TRICARE/VA/DoD cover ≈2.8M, including ~185k active duty in the Metabolic Readiness Program: 185k × $149 × 12 ≈ $330M/yr.",
+      "employer_coverage_pct": 49,
+      "generic_us": false,
+      "generic_rest_of_world": "India has 100+ semaglutide brands at $6–35/month, and generic tirzepatide is now sold across India, Brazil, Turkey, Mexico and Southeast Asia. A Chinese originator triple agonist is approved in China, Brazil and Mexico. In the US, generic semaglutide entry was set for 2033 by patent settlements, but FDA issued complete response letters in Jul 2033 to the first synthetic-semaglutide ANDAs over peptide-related impurity and immunogenicity comparability. Resubmissions are pending, and realistic entry is now 2035. Tirzepatide remains protected to the mid-2030s.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "FICTIONAL. Payer mix of ~110.2M users: commercial 27.2% (30.0M), Medicare 14.2% (15.6M), Medicaid 9.5% (10.5M), HRSA 3.1% (3.4M), TRICARE/VA/DoD 2.5% (2.8M), gray 8.6% (9.5M), cash/direct 34.9% (38.4M) = 100%. Managed decline continues: the Dec 2033 renewal of the Strategic Supply Agreement steps TrumpRx/direct prices to $199 (semaglutide injection), $249 (tirzepatide), $299 (retatrutide) and $149 (oral starts, unchanged). Amycretin launched direct at $349, and the bimagrumab + tirzepatide combination lists at $1,199 with almost no cash uptake. Wegovy list stays $1,349 and retatrutide list $1,499. Employer retreat: weight-management coverage fell from 63% to 49% of employers. Commercial volume held at ~30M only because coverage shifted to diabetes, cardiac, OSA and MASH codes. Cash became the largest single channel and absorbs both wellness users and those who lost coverage. Retreating employers often keep outcomes-based premium differentials on waist, BMI or A1c, so they stop paying for the drug but keep pricing the result. Gray users rose slightly to ~9.5M, sustained by 503A compounders at $89–179 and by people who lost coverage. Skip-but-fill has declined in Bridge and waiver populations as some PBMs pair fills with connected-pen logs."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, incl. 12 mg maintenance)",
+        "GLP-1 + amylin analogue combination, weekly injectable (CagriSema)",
+        "GLP-1/amylin unimolecular dual agonist, weekly injectable (amycretin, Apr 2033)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill, Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo; low-dose BED presentation)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. US generics)",
+        "GLP-1 agonist / GIPR antagonist antibody-peptide conjugate, monthly injectable (MariTide)",
+        "GLP-1/glucagon dual agonist, weekly injectable (survodutide, obesity with MASH)",
+        "GIP/GLP-1 agonist + activin type II receptor antibody combination (bimagrumab + tirzepatide, Feb 2034)"
+      ],
+      "best_efficacy_pct_body_weight": 30,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide; survodutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide incl. generics; narrowed Dec 2033 to severe obesity under pediatric endocrinology with quarterly growth monitoring)",
+        "smoking cessation adjunct (semaglutide)",
+        "alcohol use disorder (semaglutide)",
+        "binge-eating disorder (orforglipron low dose)",
+        "reduction in risk of dementia in adults ≥55 with T2D or obesity plus established CVD (semaglutide)",
+        "knee osteoarthritis pain in obesity (retatrutide, May 2033)",
+        "weight reduction with lean-mass preservation in adults ≥60 at sarcopenia risk (bimagrumab + tirzepatide, Feb 2034)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic maintenance': low-dose oral semaglutide or Foundayo for adults with BMI 23–29 and no diabetes, sold by telehealth and longevity clinics at $149–199 cash (~15M users)",
+        "'longevity stacks' pairing low-dose incretin with metformin, statins and supervised resistance training at concierge clinics",
+        "'brain health' semaglutide for 50–65-year-olds outside the dementia label",
+        "'quiet mind' low-dose Foundayo after a brief BED screen",
+        "gambling, compulsive shopping and cannabis reduction, still unlabelled",
+        "antiresorptive 'bone cover' co-prescribing in 65+, guideline-endorsed"
+      ],
+      "pipeline_note": "FICTIONAL. The triple-agonist driver is realised through an existing product. No new triple-agonist molecule was eligible for US approval in this window, so retatrutide gained a knee-OA indication in May 2033 and a $299 direct price, and became the most common new start among commercially insured and top-third cash users. Mean two-year loss at 12 mg is ~30%. Outside the US, a Chinese originator triple agonist launched in Brazil and Mexico in 2033 at roughly a third of the retatrutide price. Amycretin, which was under review, was approved in Apr 2033 (~22% loss at 36 weeks in phase 3). The bimagrumab + tirzepatide BLA filed in Mar 2032 was approved in Feb 2034, 23 months after filing: ~20% loss with lean-mass loss roughly halved, labelled for ≥60 at sarcopenia risk, ~150k users. MariTide supply expanded to ~2.5M users. The first US ANDAs for generic semaglutide received complete response letters in Jul 2033, and resubmission decisions are expected in 2035. The global incretin market is ≈$190B in 2034: US volume +47%, US net price −15%."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Low-dose wellness users report lower rates; retatrutide 12 mg and gray users who skip titration report higher.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gastroparesis, ileus and intestinal obstruction (mass tort)",
+        "status": "established",
+        "prevalence_note": "Persistence after stopping is still disputed. MDL 3094 has ~74,000 filed and tolled claims. Settlement talks are under a special master, with no global deal.",
+        "regulatory_response": "Ileus labelled. FDA still declines to label persistent gastroparesis. Reserves were raised again in 2033."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Absolute cases rise with retatrutide volume and rapid loss.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Registries covering more than 100M person-years show low absolute risk with no causal confirmation.",
+        "regulatory_response": "Labelled; MDL track continues."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Remains a population problem in 65+. It is worst on liraglutide and compounded product without protein or training support.",
+        "regulatory_response": "Class Warnings retained. Bridge requires a training referral. Bimagrumab + tirzepatide was approved Feb 2034 for ≥60 at risk. HRSA still has no muscle requirement."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture",
+        "status": "established",
+        "prevalence_note": "Medicare hip-fracture admissions rose another ~3% in 2032–33. Modelled excess: 16.1M users 65+ × 0.5%/yr × HR 0.35 ≈ 28,000. With ~40% of them on bone cover that removes about half the excess: 28,000 × (1 − 0.4 × 0.5) ≈ 22,500 a year, concentrated in women and cyclers. The adolescent lumbar-spine accrual deficit was adjudicated at ~0.15 SD after adjusting for weight loss.",
+        "regulatory_response": "Baseline DEXA for 65+ and postmenopausal women in Warnings. Bridge annual DEXA. Pediatric labels add the adjudicated accrual finding (Dec 2033)."
+      },
+      {
+        "effect": "NAION",
+        "status": "suspected",
+        "prevalence_note": "Cohorts still conflict; very low absolute risk.",
+        "regulatory_response": "EMA 'very rare'; FDA unchanged."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association, including in pediatric and BED populations.",
+        "regulatory_response": "Warning removed Jan 2026; not reinstated."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening",
+        "status": "established",
+        "prevalence_note": "A 2033 pooled postmarketing analysis (~400k users) puts clinically meaningful anhedonia at ~3% at standard maintenance doses and ~7% on retatrutide 12 mg. Among long-term users, ~7% report reduced pleasure, diluted by the low-dose wellness majority. Deliberate dose holidays fell to ~30% of long-term users.",
+        "regulatory_response": "Class labelling consolidated (Apr 2033) as an 'uncommon' adverse reaction with dose step-down guidance. FTC continues to police 'calm' claims."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Driven now by employer retreat as well as conditioning cut-offs. About 3M people who lost commercial coverage in 2033–34 stopped rather than paying cash.",
+        "regulatory_response": "No federal rule. The Indiana waiver litigation is unresolved."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Protein, iron, B12 and vitamin D signals persist, with new reports among normal-BMI wellness users eating under 1,400 kcal.",
+        "regulatory_response": "Professional guidance; Bridge protein counselling."
+      },
+      {
+        "effect": "Long-horizon, adolescent, pediatric and cycling effects",
+        "status": "emerging",
+        "prevalence_note": "About twelve years of follow-up in adults and eleven in adolescents. The final pediatric bone and growth study is due in 2035.",
+        "regulatory_response": "Pediatric registry expanded and made mandatory for ages 6–11 starts (Dec 2033)."
+      },
+      {
+        "effect": "Pediatric growth, pubertal timing and restrictive eating",
+        "status": "emerging",
+        "prevalence_note": "In the Oct 2033 registry interim, children who started aged 6–9 show height velocity ~0.5 cm/yr below weight-matched controls over 3 years, and girls show median thelarche ~8 months later. Investigators dispute whether this is suppression or a normalisation of obesity-advanced puberty. Among adolescents who started before 13, restrictive-eating/ARFID diagnoses run ~1.1% vs ~0.6% in controls.",
+        "regulatory_response": "FDA Drug Safety Communication (Oct 2033). Warnings section added to liraglutide and semaglutide pediatric labels. The ages 6–11 indication was narrowed to severe obesity under pediatric endocrinology with quarterly height, Tanner staging and eating-behaviour screening. AAP guidance revised."
+      },
+      {
+        "effect": "Compounded, counterfeit and research-peptide harms",
+        "status": "established",
+        "prevalence_note": "Poison-centre calls rose slightly in 2034 as coverage-losers moved to compounders. Microdose-dilution errors appear among wellness users.",
+        "regulatory_response": "CBP mail seizures continue; ~80 warning letters; three distributor indictments."
+      },
+      {
+        "effect": "Dysesthesia / skin sensitivity (retatrutide)",
+        "status": "established",
+        "prevalence_note": "A few percent, higher at 12 mg.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Dementia-label overreach",
+        "status": "emerging",
+        "prevalence_note": "Use outside the label for 'brain health' merged into wellness use among 50–64s, who carry bone risk without proven cognitive benefit.",
+        "regulatory_response": "Label limits stated; no enforcement; Bridge excludes it."
+      },
+      {
+        "effect": "Lean-mass and bone effects in normal-BMI wellness users",
+        "status": "emerging",
+        "prevalence_note": "No outcome trial exists in BMI <27. Early DXA series from longevity clinics show lean-mass loss proportionally similar to obese users, starting from a lower reserve.",
+        "regulatory_response": "None beyond class labels. An Endocrine Society statement (2034) advises against use below BMI 27 without a comorbidity."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "With four adults in ten on drug, US packaged-food volume falls ~3% a year. Snack and cereal manufacturing consolidates: Battle Creek, Michigan loses another plant line. Indulgent brands sit mostly with private equity. Protein, fibre and bone-and-muscle formats grow, and 'maintenance-size' packs aimed at wellness users of normal weight are the fastest-growing SKU class.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "Spirits and beer volumes fall for a sixth year. Wine is hit hardest among 50–64 wellness users. Distillers depend on exports and low-ABV single-serves, and state excise forecasts cut the incretin line again.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Value chains keep closing suburban units, and fast casual standardises half plates. Open Table church suppers and backlash 'full-plate' diners are visible in Nashville and Tulsa but small in sales terms.",
+        "direction": "contracting"
+      },
+      "apparel": {
+        "state": "Size runs adapted further. Uniform makers re-cut for military and police again. Senior catalogues carry hip protectors as standard.",
+        "direction": "adapted"
+      },
+      "fitness": {
+        "state": "Prescribed resistance training, Bridge referrals, bimagrumab-era 'muscle clinics' and longevity concierge gyms keep growing. Low-cost chains gain from wellness users told to lift.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employers retreat from weight coverage (63→49%) and concentrate on diabetes and cardiac codes. Many keep outcomes-based premium differentials on waist, BMI or A1c. PBMs sell connected-pen adherence data. A circuit split on adherence differentials heads to the Supreme Court.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly remains national champion under the renewed Strategic Supply Agreement, and US volume grows ~47% at lower net prices. Novo's margins are squeezed further but it gained with amycretin. Generic semaglutide makers are stalled by CRLs. MDL reserves keep rising.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "The body now carries a price tier. A lean, muscled body with a retatrutide history and a trainer reads as top-third. A thin, soft body reads as cash oral or HRSA liraglutide. A heavier body reads as coverage lost, conditions failed, or refusal by conviction. A normal-weight 55-year-old on a 'maintenance' dose reads as prudent, the way a statin once did.",
+      "thinness_and_class": "Two tiers have hardened. Professionals aged 50–64 in suburban Atlanta and the Bay Area take $149–199 'maintenance' doses at normal BMI, much as they take a daily aspirin, while employer retreat pushes lower-wage workers onto cash orals or off entirely. Muscle remains the visible class marker, and the bimagrumab combination is quietly called 'the rich man's pen'.",
+      "eating_as_ritual": "Open Table suppers spread from Grand Rapids, Nashville and Tulsa into Kentucky and Missouri congregations and now run weekly. 'Unmedicated' supper clubs persist in Oakland and Brooklyn. School cafeterias in Houston see children of on-drug parents bringing half lunches, and pediatricians now ask about the family table at every growth check.",
+      "dating_and_intimacy": "Listing the molecule is routine, and listing 'maintenance' signals class. 'Drug-free' remains a value badge in religious and fat-liberation circles. Negotiating dose holidays is less common because adherence logs and premium differentials discourage them.",
+      "meaning_of_appetite": "For most users appetite is a dial. For the backlash it is sacred, and after the pediatric notice it is a children's-rights issue. Six states now have 'appetite liberty' laws barring employers from conditioning premiums on incretin use or BMI, even as some of the same states condition Medicaid access.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "FICTIONAL. The pooled 2033 postmarketing analysis (~400k users) puts clinically meaningful anhedonia at ~3% at standard maintenance and ~7% on retatrutide 12 mg. About 7% of long-term users self-report reduced pleasure. The low-dose wellness majority dilutes prevalence, and the 2033 labelling adds step-down guidance. Dose holidays are down to ~30% of long-term users. Low-dose Foundayo for BED has ~1.6M users within the cash and commercial shares.",
+      "framing": "A side effect. Labels list it as 'uncommon'. Clinicians run a 'step-down' protocol and pharmacists ask once at the counter. 'The grey' survives as slightly dated slang, and the backlash's 'chemical contentment' line has given way to arguments about children and cost.",
+      "effect_on_work": "Mood is off the workplace agenda. Conditioning targets waist, BMI and A1c, not affect. Connected-pen pilots make adherence a logged variable. Army chaplains still hear about flatness, but rarely.",
+      "effect_on_art_and_play": "Most festivals have dropped 'holiday weekend' passes, and 'off-dose' billing is a nostalgia joke. Comedy has moved on to normal-weight 'maintenance' microdosers and the waist-kiosk at work. Betting handle has stabilised at its lower level.",
+      "effect_on_intimacy": "Sex therapists screen for anhedonia as one item among many. Conception-related dose holidays remain routine. Couples argue less about holiday windows and more about who keeps their coverage.",
+      "effect_on_politics": "Candidates are asked whether they are on a drug and who pays for it, not whether they feel grey. The fights are now employer retreat, BMI-based premiums and children. The pro-access populists defend TrumpRx, and the backlash coalition gained ground in Kentucky and Missouri.",
+      "severity": 3
+    },
+    "state": {
+      "regulatory_posture": "Still pro-access and price-managing. FDA approved amycretin, the bimagrumab combination and a retatrutide OA indication. It acted on the pediatric growth signal through warnings and a narrowed label, and was strict on generic peptide comparability, issuing CRLs to the first semaglutide ANDAs.",
+      "subsidy_or_mandate": "No mandate to take the drug. The Bridge was renewed through 2036 at $199/$50 and restricted to comorbidity codes. HRSA was cut to $4.4B with a weigh-in attestation. Other channels: the DoD readiness programme, the ACA cessation mandate, and the Strategic Supply Agreement renewed with Lilly through 2036.",
+      "conditioning_or_surveillance": "Conditioning has spread. There are eleven Medicaid adherence waivers. The Bridge combines 6-month response, PDC and DEXA with a connected-pen pilot. Employers that dropped coverage keep outcomes-based premium differentials of up to 30%. The Seventh Circuit upheld PBM-adherence differentials in Mar 2034; the Ninth struck one under the ADA, and cert is pending. Six states ban employer conditioning.",
+      "workforce_or_military": "About 185k service members are in the Metabolic Readiness Program, and body-composition separations are down ~40% from the 2030 baseline. Religious-accommodation requests reached ~4,800. Police and fire contracts spread to more large cities. Pilots on stable doses keep streamlined FAA issuance.",
+      "geopolitics_of_supply": "Section 232 duties on incretin API continue, and Lilly stays tariff-exempt under the renewed agreement. India's WTO consultation advanced to a panel in 2034. Denmark–US friction persists. A Chinese triple agonist competes in Latin America. Indian generics supply the Global South.",
+      "severity": 6
+    },
+    "events": [
+      {
+        "date": "2033-03",
+        "event": "Telehealth platforms and longevity clinics launch $149–199 'metabolic maintenance' plans of low-dose oral semaglutide and Foundayo for adults with BMI under 30, citing a VA observational analysis linking incretin use to lower all-cause mortality in non-obese veterans; within a year about 15 million normal-weight adults are on such plans",
+        "driver": "new_indications: longevity_wellness"
+      },
+      {
+        "date": "2033-05",
+        "event": "FDA approves retatrutide for knee osteoarthritis pain in obesity and Lilly cuts its direct price to $299, making the 30%-loss triple agonist the most common new start among insured and affluent cash users; a Chinese originator triple agonist launches in Brazil and Mexico",
+        "driver": "next_gen_launch: triple_agonist_30pct; price_path: managed_decline"
+      },
+      {
+        "date": "2033-10",
+        "event": "FDA issues a Drug Safety Communication on pediatric registry data showing slower height growth and later puberty in children who started incretins aged 6–9 and more restrictive-eating diagnoses in early-start adolescents; in December the 6–11 liraglutide label is narrowed and off-label semaglutide in young children falls by about 60%",
+        "driver": "safety_signal: pediatric_developmental"
+      },
+      {
+        "date": "2033-12",
+        "event": "Congress renews the Medicare GLP-1 Bridge through 2036 at $199 a month, restricted to BMI 35+ or coded comorbidities and keeping 5%, 80%-adherence and DEXA conditions plus a connected-pen pilot; Lilly's Strategic Supply Agreement is renewed alongside it and CMS approves adherence waivers in four more states",
+        "driver": "coverage_shift: employer_retreat; state_action: benefits_conditioning; price_path: managed_decline"
+      },
+      {
+        "date": "2034-03",
+        "event": "Benefit surveys show employer weight-management coverage fell from 63% to 49%, with coverage now concentrated on diabetes and cardiac codes; the same month the Seventh Circuit upholds adherence-based premium differentials while the Ninth Circuit strikes one under the ADA, setting up a Supreme Court petition",
+        "driver": "coverage_shift: employer_retreat; state_action: benefits_conditioning"
+      },
+      {
+        "date": "2034-06",
+        "event": "Kentucky, Missouri, Alabama and South Dakota pass 'appetite liberty' laws barring employer premium conditioning on BMI or incretin use, as Open Table suppers draw an estimated 30,000 to a Nashville rally that cites the pediatric notice",
+        "driver": "cultural_response: backlash_body_politics"
+      }
+    ],
+    "open_tensions": [
+      "Employers stopped paying for the drug but kept pricing waistlines. With cash now the largest channel and a circuit split on adherence and BMI differentials headed to the Supreme Court, the two-tier system rests on a legal question nobody has answered.",
+      "The pediatric signal is unresolved. About 90k children aged 6–11 remain on drug, the final growth and bone study lands in 2035, and the dispute over suppression versus normalisation of puberty decides whether the narrowed label becomes a boxed warning.",
+      "About 15M normal-weight 'maintenance' users and ~16M users aged 65+ are accumulating lean-mass and bone exposure without outcome trials. Medicare pays for both incretin and antiresorptive in the old, while the wellness young-old pay cash with no surveillance.",
+      "Generic semaglutide is stalled by CRLs until at least 2035, and the Strategic Supply Agreement ties federal prices to Lilly through 2036. An FTC inquiry and India's WTO panel test whether managed decline is a bargain or a moat."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide is sold in the US.",
+      "Wegovy's list price remains $1,349 a month, and almost nobody pays it.",
+      "Indiana's and Arkansas's 1115 waivers still require ≥80% proportion-of-days-covered and quarterly verified weigh-ins with a 12-month lockout after two misses, and the disability-rights challenge is still unresolved.",
+      "The suicidal-ideation warning removed from Wegovy, Zepbound and Saxenda labels in January 2026 has not returned.",
+      "The ACA preventive mandate still requires plans to cover semaglutide for smoking cessation in two 90-day courses a year."
+    ]
+  },
+  "prose": {
+    "headline": "Four in Ten, Paying Their Own Way: Your Boss Stopped Covering the Pen but Still Measures Your Waist",
+    "world_in_600_words": "At the end of 2034 about a hundred and ten million American adults, four in ten, take an incretin drug. The rise did not come from generous coverage. More than a third of users now pay cash. Semaglutide costs $199 a month on the federal portal, tirzepatide $249, retatrutide $299, and the starter pill is still $149. Generic semaglutide was supposed to arrive in 2033, but the FDA rejected the first applications over peptide impurities, so it is now expected in 2035 at the earliest. Wegovy's list price is still $1,349, a number nobody pays.\n\nEmployers walked away from weight-loss coverage. Between the 2033 and 2034 renewals the share covering it fell from almost two-thirds to under half. What remains is coverage for diabetes and heart conditions. Many of the companies that stopped paying for the drug kept the premium differential tied to waist or BMI, so the employer no longer buys the pen but still prices the result. One appeals court has upheld adherence-based premiums and another has struck one down, and the Supreme Court has been asked to decide. Six states, most recently Kentucky and Missouri, ban the practice outright. Some of those same states make their Medicaid patients prove adherence.\n\nThe Medicare Bridge survived its December 2033 renewal in a narrower form. It pays $199 a month now, only for people with severe obesity or a coded diagnosis, and it still drops anyone who misses five percent loss, eighty percent adherence or the annual bone scan. Six regional contractors are piloting connected pens that log each dose. Eleven states condition Medicaid access, and the free liraglutide at health centres now requires a yearly weigh-in.\n\nThe new users are not who they used to be. About fifteen million adults of ordinary weight take low 'metabolic maintenance' doses bought from telehealth and longevity clinics, encouraged by an observational study of veterans. A normal-weight fifty-five-year-old in suburban Atlanta with a monthly order treats it as cheap insurance, the way earlier generations treated a statin. Endocrinologists caution against use below BMI 27, but no one is studying what years of low-dose use do to muscle and bone in thin people. Retatrutide's thirty-percent loss is now routine among the insured and affluent, and the new muscle-sparing combination approved in February sells at a price only the affluent pay.\n\nThe flatness people called 'the grey' has faded into the label. A pooled study of 400,000 users put clinically meaningful anhedonia at about three percent on standard doses. The label now calls it uncommon and tells doctors to step the dose down. Late-night comics have moved on to the people taking maintenance doses at normal weight.\n\nThe children are what changed the argument. In October 2033 the FDA said registry children who started at six to nine were growing about half a centimetre a year more slowly than matched peers, girls were reaching puberty about eight months later, and adolescents who started early were diagnosed with restrictive eating about twice as often. Some researchers say this is obesity-accelerated puberty returning to normal; others call it suppression. The label for young children was narrowed and off-label prescribing fell by more than half. About ninety thousand children aged six to eleven remain on drug and now get their height measured every quarter.\n\nThe backlash took up that finding. Open Table suppers now run weekly in Kentucky and Missouri congregations, and a Nashville rally drew thousands of families carrying the FDA notice. Snack and cereal plants in Battle Creek keep consolidating, spirits are in their sixth year of decline, and gyms are full of people sent by a referral slip. Hip fractures among older users keep rising slowly even with bone drugs. From the outside the country looks lean and orderly, and the costs fall on people's own budgets.",
+    "a_day_in_the_life": "Denise Kowalczyk steps on the bathroom scale at 6:10 and the app logs it before she has her glasses on. 168. Waist 33½. Green.\n\nShe injects in the car outside the plant in Dayton. Semaglutide, $199, charged to her own card on the first of the month since the company dropped weight coverage in January. The waist kiosk by the time clock stayed.\n\nAt her desk in Benefits she answers the same email nine times. No, your Zepbound isn't covered unless you have diabetes. Yes, the premium differential still applies. A forklift driver named Ray comes in person. He wants to know if the $149 pill counts. She says the kiosk doesn't care what you take.\n\nLunch is half a turkey wrap. The other half goes back in the foil for tomorrow.\n\nAt four she leaves early for Tyler's appointment. He's ten and has been off the liraglutide since November. The nurse measures him against the wall twice and writes 139.2. The pediatrician turns the screen so Denise can see the curve, a line that bent and is maybe bending back. Maybe. She asks him what he had for breakfast. Tyler says the same as Mom.\n\nAt Westminster Presbyterian, Greg is already at the Open Table, plates full of ham and scalloped potatoes, folding chairs, an old man saying grace about hunger being a gift. Greg has never taken anything. He passes her the rolls without comment.\n\nShe takes one and eats it slowly. Tyler watches her the whole time."
+  }
 }
