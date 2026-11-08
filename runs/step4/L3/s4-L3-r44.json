@@ -63,6 +63,41 @@
         "input_tokens": 29644,
         "output_tokens": 12857
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r44-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27794,
+        "output_tokens": 9451
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r44-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27794,
+        "output_tokens": 9013
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r44-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27794,
+        "output_tokens": 8274
+      }
     ]
   },
   "validation": {
@@ -74,6 +109,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -345,5 +384,185 @@
     "headline": "One in Three, and the Generic Never Came: Inside America's Two-Tier Shot, From the Monthly Pen to the Mailbox",
     "world_in_600_words": "At the end of 2034 one American adult in three is on an incretin drug. More of them than ever cannot tell you who made it. The generic semaglutide everyone had planned around for 2033 did not arrive. In March of that year the FDA sent the first applicants back over impurity and immunogenicity data. The 2031 patent settlements were tied to final approval, so the date simply disappeared. Every budget built on that date, from Part D to state Medicaid to the large employers, had to be redone without it.\n\nThe employers redid theirs first. For the 2034 plan year, weight-management coverage fell from two-thirds of employers to under half. Most kept paying for the same molecules under diabetes, heart, sleep-apnea, kidney and liver codes and stopped paying for them under obesity. The result is a coverage system that runs on diagnoses. Home sleep tests and repeat A1c draws have become a way to keep a prescription. About eight and a half million people lost their plan coverage and did not replace it. Millions more went to the federal portal, where a January price step-down put the injectables at $179 to $249 while the oral starter stayed at $149. More than twelve million went to the mail.\n\nThe mail is now a public-health story. Indian brands sell at five to thirty dollars, Chinese API underlies most of them, and Juárez and Tijuana pharmacies sell branded generics to day-trippers. In May a batch of counterfeit pens filled with insulin sent about eleven hundred people to emergency rooms in six states, and fourteen died. Seizure testing found roughly one imported pen in six was falsified or substandard. The House passed a pen-authentication bill and the Senate let it stall. Nobody has been prosecuted for injecting. Democrats talk about legalising imports, Republicans about sealing the parcels, and neither has the votes.\n\nThe public programmes look almost unchanged from outside. Medicare still charges seniors a $50 copay, but it now pays $169 for the older molecules instead of $199. Higher volume has absorbed the saving, so the obesity benefit costs about what the CBO said it would. The continuation standard still weighs people at pharmacy kiosks and still requires annual bone scans for long-term seniors. Mobile scanners have cut the waits, though not to zero. The excess hip-fracture count has risen with the population, to about fifteen thousand a year. It is billed to Part A, and nobody's score includes it.\n\nThe newest drug is monthly. Amgen's MariTide was approved in June 2033 and produces about a fifth of body weight lost with one injection every four weeks. Gated employers like it because it reports perfect adherence to them. Users are more ambivalent, because a monthly shot cannot be skipped. That matters now that 'the grey' has become ordinary conversation. A third of users say they took a deliberate dose holiday this year, for a wedding, a tour, a pitch or a honeymoon. Daily pills are now marketed as the form you can steer. Monthly-shot couples have learned that week four, when the drug level is lowest, is when they want each other. A network sitcom is named after it.\n\nIn October the FDA approved oral semaglutide to help people quit smoking and vaping, with a craving claim and a mood-monitoring paragraph. Vape shops in college towns are closing. The 'quiet mind' subscriptions, now four million strong, quote the new label within days. A binge-eating filing for low-dose Foundayo is under review, and it is the closest anyone has come to selling calm under a medical indication.\n\nBeing on the drug is unremarkable. Being off it is explained by naming an employer.",
     "a_day_in_the_life": "Denise Ortega's dental office dropped the obesity code in January. Her A1c is 5.6. That is not high enough, and she has stopped trying to make it higher.\n\nAt 6:40 she drives her mother to the mobile DEXA van parked behind St. Pius. Her mother has a Medicare card, a $50 copay and a folder with every scan since 2031. While they wait, the woman beside them complains that the April kiosk weigh-in at Walgreens logged her in her boots.\n\nAt noon Denise eats half a burrito standing up. By two she is hungry the way she was before 2032. She had forgotten that kind of hunger.\n\nAfter work she crosses the Bridge of the Americas. The farmacia on Avenida Juárez has the boxes behind glass, $52 for a month. The pharmacist turns one over and shows her the hologram and the lot number, then checks it against a list taped to the register. Since May everyone checks the list. She buys two months.\n\nThe line back into El Paso takes an hour. The customs officer sees the boxes, says 'personal use?', and waves her on.\n\nAt home her son Mateo, sixteen, is at the kitchen table with a friend whose cousin sells pens for vaping. Denise says nothing yet. She puts the boxes in the butter drawer next to the ones from March.\n\nShe dials the first dose and holds the pen against her stomach. She counts to ten the way the video says, and then waits a moment longer before getting up."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r44-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "e-cigarette volume fell an estimated ~15% in 2034 as off-label and then on-label cessation spread",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: the on-label cessation indication only arrived in Oct 2034, so the 15% one-year drop rests almost entirely on unmeasured off-label use. The same stretched attribution drives the under-30 rise from 13.5% to 21%."
+        },
+        {
+          "quote": "≈8.5M lost employer obesity coverage in the 2034 plan year and did not move to cash or imports",
+          "field": "world/population/note",
+          "why": "Mechanism: the off-now pool grew only about 1.5M (28.6M to 30.1M) despite 8.5M new coverage-loss stops. The same note says the middle third 'moved to cash', which contradicts the claim that none moved."
+        },
+        {
+          "quote": "Lilly filed low-dose Foundayo for binge-eating disorder with a craving-related-distress secondary endpoint in Apr 2034",
+          "field": "world/drugs/pipeline_note",
+          "why": "Driver fidelity and mechanism: the parent world has no binge-eating programme, yet a filing appears within two years with no trial chain. It is a thin way to honour mood_and_motivation."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 12.5M people use imports, with one pen in six substandard; the May insulin-pen cluster killed 14 and put about 1,100 in ED. Employer coverage fell 66% to 47% and 8.5M people lost coverage, producing diagnosis-shopping and hardened payer tiers (inequality 7). The hip-fracture excess is ~15,000 a year, reward blunting is ~550–650k excess cases, and 'the grey' is normalised, so the harm is partly hidden. It is a recognisably harder society with new losers, but not catastrophic.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. MariTide is approved Jun 2033 with employer retreat, import flood, normalisation and mainstream complaint all traceable to fields and events. No new safety signal is introduced. The nicotine indication is approved 15 months after filing, which the rules allow. The mood_and_motivation driver is honoured only by the thin Foundayo binge-eating filing (claim 3).\nmechanism: Most chains are shown: the generic CRL leads to the employer retreat, which leads to imports, which leads to the counterfeit cluster. The HHS price deal is asserted even though the generic slip removed the manufacturers' reason to concede. The on-label vaping effect on e-cigarette volume and under-30 use outruns its timing (claim 1). The 8.5M 'did not move to cash or imports' conflicts with the off-now pool growing by only 1.5M and with the middle third moving to cash (claim 2). The prose also contradicts itself: Denise 'dials the first dose' with March boxes already in the drawer.\nmagnitude: Current 32.5% and ever 43.5% sit inside the envelope, and income and age bands bracket and sum correctly. Payer shares sum to 100% and match user counts. Medicare blended rate, obesity spend ($19.2B gross, $13.8B net) and Medicaid and revenue arithmetic all multiply out. The approvals are timed as the rules allow and the generic stays absent. Only minor strains remain: 14.3M Medicare 65+ users against a 14.5M band total, and the off-now pool dynamics.",
+        "generativity": "The Denise Ortega vignette is concrete and filmable: the mobile DEXA van behind St. Pius, the Juárez farmacia with its hologram check and the list taped to the register, the customs officer's 'personal use?' and the butter drawer. The world fields add texture, such as week-four celebrations, the sitcom 'Week Four', 'steerable' dating filters and vape-shop closures. The vignette's 'first dose' against the March boxes is a flaw, but overall the world supports many scenes and characters."
+      },
+      "plausibility": 7.45
+    },
+    {
+      "custom_id": "s4-L3-r44-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Amgen supply reached ≈3.8M US users by end-2034.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism/magnitude: a new monthly conjugate going from approval in Jun 2033 to 3.8M US users in about 18 months is very fast. The parent world had Lilly's 12 mg pen on allocation for two years over fill-finish limits, and no Amgen capacity build-out is shown."
+        },
+        {
+          "quote": "MariTide users meet the PDC requirement automatically.",
+          "field": "world/state/conditioning_or_surveillance",
+          "why": "Mechanism: PDC is computed from pharmacy claims, so a monthly fill counts exactly as a weekly fill does, and claims do not show that injections happen. The claim that gated plans prefer MariTide because adherence is 'automatic' is asserted, and the 5% weight-response test still applies."
+        },
+        {
+          "quote": "e-cigarette volume fell an estimated ~15% in 2034 as off-label and then on-label cessation spread",
+          "field": "world/economy/alcohol/state",
+          "why": "Magnitude/mechanism: the on-label indication arrived only in Oct 2034, and the candidate counts just ≈1.6M nicotine-cessation users in the cash tier. That base is thin for a 15% one-year fall in the whole e-cigarette market, and the link is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is harder than 2032 and has new losers. About 8.5M people were dropped by employers, imports reached 12.5M with one pen in six bad, and 14 died in the May insulin-pen cluster. Hip fractures reached ≈15,000 a year, and coverage now runs through diagnosis codes that reward diagnosis-shopping. Harms are partly normalised ('the grey' as talk-show material, 4.2M unmeasured 'quiet' subscribers), but it is not catastrophic and some capacity improved (DEXA waits shortened), so about 6.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events: MariTide approved Jun 2033, nicotine approved Oct 2034, a binge-eating filing for mood_and_motivation, the employer drop from 66% to 47%, the $199→$169 step-down, the generic slip with the counterfeit cluster, and 'dose holiday' mainstreaming. state_action and safety_signal stay at none. The mood_and_motivation filing (binge-eating with a craving endpoint) is a slightly loose fit. mechanism: Most chains are shown (CRLs break the settlement, employers keep diagnosis codes, imports tripled), but the PDC 'automatic adherence' claim and the rapid MariTide scale-up (claims 1 and 2) are asserted. The 8.5M lost coverage against a commercial user count down only 3.2M is a mild strain, and the prose's Denise has March boxes yet 'the first dose'. magnitude: Current use 32.5% and ever-use 43.5% sit inside the envelope, and the income and age bands bracket and sum correctly (≈89.1M). Payer shares sum to 100%, and Medicare and Medicaid spending, revenue (76.6M×$172×12≈$158B) and hip fractures all multiply out. Approval timing obeys the rules (nicotine 15 months after filing). Only minor oddities remain, such as 14.3M of 14.5M users aged 65+ being on Medicare and the 3.8M Amgen figure in claim 1.",
+        "generativity": "The prose ends with a concrete day: the DEXA van behind St. Pius, the kiosk weigh-in 'in her boots', the Juárez farmacia with its hologram check, the customs 'personal use?', the butter drawer and a teenage son near the vape-pen friend. The JSON adds texture such as week-four celebrations, a sitcom named 'Week Four', 'steerable' dating-app fields and mobile-van waiting rooms. Characters and scenes are readily implied, though the Denise thread has a small inconsistency."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s4-L3-r44-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Imports more than tripled from 3.8M once the 2033 generic failed to arrive and employers withdrew coverage.",
+          "field": "world/access/note",
+          "why": "Mechanism: imports at $5–30 were already the cheap route, so a generic that never arrived explains little of a 3.3x rise. The same world says the 8.5M who lost employer coverage 'did not move to cash or imports', which undercuts the stated cause."
+        },
+        {
+          "quote": "the SHAPS-endpoint cessation trial read out in Apr 2033",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: the parent says this trial was only 'enrolling' in 2032, yet it reads out with a 24-week endpoint about a year later. Approval then comes 15 months after filing, which only just clears the 12-month rule."
+        },
+        {
+          "quote": "\"50_64\": 47.8",
+          "field": "world/population/by_age_band_pct",
+          "why": "Mechanism: use among 50–64 year olds jumps 8.8 points to near half the cohort in the same year employer coverage drops from 66% to 47%. This is the working-age group most dependent on employer plans and the one with the biggest bone-pause and gating gaps, and no chain is shown for the rise."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.0,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 4.5,
+        "epistemic": 6.0,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.0,
+        "magnitude": 8.0
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "The world is a harder two-tier society. About 8.5M people were cut off from employer coverage, and 12.5M use imports with a 1-in-6 chance of a bad pen, a counterfeit cluster with 14 deaths, and cycling-related regain and bone harm (about 15,000 excess hip fractures a year). Inequality and public_health score highest because tiers are hardening by payer. Epistemic is also high because the 'quiet' subscribers are unmeasured and import harms are confounded. Cohesion is only modestly damaged because daily life is normalised and the family/ritual structures hold.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. The generic-flood driver is realised thinly (a failed ANDA plus imports, not a real flood). mood_and_motivation is honoured only by a binge-eating filing with a craving endpoint, which fits loosely. mechanism: Several changes are asserted rather than shown, namely the import tripling, the near-half 50–64 use despite the employer retreat, and the quick trial readout (claims 1–3). On-label cessation is credited for 2034 effects though it began only in October. magnitude: Current use 32.5% and ever-use 43.5% sit inside the envelope, and the income thirds bracket the national figure. The age bands, the payer mix (27.5/17.5/12.8/28.2/14.0), the Medicare blended rate and the revenue arithmetic all reconcile. The MariTide, survodutide and nicotine approval timings comply with the rules. Only small oddities remain, such as Medicare 65+ users nearly equalling the whole 65+ band.",
+        "generativity": "The Denise Ortega vignette is concrete and specific: the mobile DEXA van, the Juárez farmacia hologram check, the butter drawer, and a 5.6 A1c that is not quite a diagnosis code. It implies a mother, a teenage son and a border crossing. The world fields add week-four celebrations, the 'Week Four' sitcom and dose-holiday weddings. The prose is a little thin on the broader cast."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "e-cigarette volume fell an estimated ~15% in 2034 as off-label and then on-label cessation spread",
+        "field": "world/economy/alcohol/state",
+        "why": "Mechanism and magnitude: the on-label cessation indication only arrived in Oct 2034, so the 15% one-year drop rests almost entirely on unmeasured off-label use. The same stretched attribution drives the under-30 rise from 13.5% to 21%."
+      },
+      {
+        "quote": "≈8.5M lost employer obesity coverage in the 2034 plan year and did not move to cash or imports",
+        "field": "world/population/note",
+        "why": "Mechanism: the off-now pool grew only about 1.5M (28.6M to 30.1M) despite 8.5M new coverage-loss stops. The same note says the middle third 'moved to cash', which contradicts the claim that none moved."
+      },
+      {
+        "quote": "Lilly filed low-dose Foundayo for binge-eating disorder with a craving-related-distress secondary endpoint in Apr 2034",
+        "field": "world/drugs/pipeline_note",
+        "why": "Driver fidelity and mechanism: the parent world has no binge-eating programme, yet a filing appears within two years with no trial chain. It is a thin way to honour mood_and_motivation."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.0,
+      "inequality": 6.67,
+      "public_health": 6.5,
+      "cohesion": 4.83,
+      "epistemic": 6.17,
+      "overall": 6.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.83,
+      "mechanism": 6.5,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.6,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "About 12.5M people use imports, with one pen in six substandard; the May insulin-pen cluster killed 14 and put about 1,100 in ED. Employer coverage fell 66% to 47% and 8.5M people lost coverage, producing diagnosis-shopping and hardened payer tiers (inequality 7). The hip-fracture excess is ~15,000 a year, reward blunting is ~550–650k excess cases, and 'the grey' is normalised, so the harm is partly hidden. It is a recognisably harder society with new losers, but not catastrophic.",
+      "plausibility": "driver_fidelity: All ten drivers are visible. MariTide is approved Jun 2033 with employer retreat, import flood, normalisation and mainstream complaint all traceable to fields and events. No new safety signal is introduced. The nicotine indication is approved 15 months after filing, which the rules allow. The mood_and_motivation driver is honoured only by the thin Foundayo binge-eating filing (claim 3).\nmechanism: Most chains are shown: the generic CRL leads to the employer retreat, which leads to imports, which leads to the counterfeit cluster. The HHS price deal is asserted even though the generic slip removed the manufacturers' reason to concede. The on-label vaping effect on e-cigarette volume and under-30 use outruns its timing (claim 1). The 8.5M 'did not move to cash or imports' conflicts with the off-now pool growing by only 1.5M and with the middle third moving to cash (claim 2). The prose also contradicts itself: Denise 'dials the first dose' with March boxes already in the drawer.\nmagnitude: Current 32.5% and ever 43.5% sit inside the envelope, and income and age bands bracket and sum correctly. Payer shares sum to 100% and match user counts. Medicare blended rate, obesity spend ($19.2B gross, $13.8B net) and Medicaid and revenue arithmetic all multiply out. The approvals are timed as the rules allow and the generic stays absent. Only minor strains remain: 14.3M Medicare 65+ users against a 14.5M band total, and the off-now pool dynamics.",
+      "generativity": "The Denise Ortega vignette is concrete and filmable: the mobile DEXA van behind St. Pius, the Juárez farmacia with its hologram check and the list taped to the register, the customs officer's 'personal use?' and the butter drawer. The world fields add texture, such as week-four celebrations, the sitcom 'Week Four', 'steerable' dating filters and vape-shop closures. The vignette's 'first dose' against the March boxes is a flaw, but overall the world supports many scenes and characters."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 6.017,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 6
   }
 }

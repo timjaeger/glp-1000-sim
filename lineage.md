@@ -72,3 +72,26 @@ Runner-up: `s2-L2-r31` (parent L2; axis badness 5.72, plausibility 7.58, generat
 
 Runner-up: `s3-L1-r16` (parent L1; axis badness 5.82, plausibility 8.05, generativity 8) — ranked 4. One in Four, With Strings: The Pill Caught the Needle, Coverage Got a Scale, and Tulsa Set the Table
 <!-- step:3:end -->
+
+<!-- step:4:begin -->
+## Step 4 · 2034 · axis of worst: politics_and_state
+
+- Selected 2026-11-08T17:44:48Z from 50 run(s) of parent lineage(s) L1, L2, L3; seed 20261107
+- Generator claude-opus-5-5 · judge claude-sonnet-5-5
+- Weights: flourishing ×1, autonomy ×2, inequality ×1, public_health ×1, cohesion ×1, epistemic ×2, `state` severity ×2
+- Magnitude floor (hard): 5 · composite plausibility = 0.2×driver_fidelity + 0.3×mechanism + 0.5×magnitude
+- Plausibility floor used: 6
+- Excluded before ranking: 2 status=invalid; below floor: 0; eligible and ranked: 48
+
+| Lineage | Parent | Run | Rank | Axis badness | Plausibility | Generativity | Overall | price_path / cultural_response / personality_layer |
+|---|---|---|---|---|---|---|---|---|
+| **L1** | L2 | `s4-L2-r28` | 1 | 6.25 | 6.95 | 8 | 6.5 | managed_decline / class_stratification / employer_encouraged |
+| **L2** | L3 | `s4-L3-r49` | 2 | 6.22 | 7.8 | 8 | 6.43 | shock_up / class_stratification / marketed_feature |
+| **L3** | L2 | `s4-L2-r23` | 3 | 6.22 | 6.8 | 7.83 | 6.77 | shock_up / backlash_body_politics / marketed_feature |
+
+- **L1** — Twenty-Eight Percent and Steady: America Medicates Its Cravings, Its Bets and Its Bloodwork, and the Boss Prefers It That Way
+- **L2** — The Pill Caught Up, the Pen Got Pricier, and Your Shoulders Now Tell Everyone What You Earn
+- **L3** — The Pill Caught Up. The Vials Got Expensive. And Now Your Nine-Year-Old Qualifies.
+
+Runner-up: `s4-L3-r43` (parent L3; axis badness 6.18, plausibility 7.97, generativity 8) — ranked 4. The Pill Came. The Generic Didn't. Your Boss Stopped Paying. Thirty-Eight Percent of America Is On It Anyway.
+<!-- step:4:end -->

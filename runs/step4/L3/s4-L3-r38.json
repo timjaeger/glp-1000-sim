@@ -51,6 +51,41 @@
         "input_tokens": 18707,
         "output_tokens": 23725
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r38-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28619,
+        "output_tokens": 6900
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r38-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28619,
+        "output_tokens": 8137
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r38-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28619,
+        "output_tokens": 7631
+      }
     ]
   },
   "world": {
@@ -344,6 +379,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r38-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "18–29 use rose fastest in relative terms, through gray-market vials and AUD-route telehealth.",
+          "field": "world/population/note",
+          "why": "Mechanism: the candidate's own age figures contradict this. 18–29 went from 13.5% to 18% (+33%), while 65+ went from 17% to 25% (+47%). The causal story is asserted and the numbers disagree with it."
+        },
+        {
+          "quote": "Seventh straight year of spirits volume decline, now ~4%/yr after AUD use took the heaviest drinkers out of the market.",
+          "field": "world/economy/alcohol/state",
+          "why": "Magnitude and mechanism: the label arrived only in Sep 2034. The only AUD-primary users the candidate counts are ≈0.45M on Medicare and ≈0.6M on Medicaid, a small slice of the heavy-drinking population. That cannot plausibly remove the heaviest drinkers from the market or double tavern closures in about a year."
+        },
+        {
+          "quote": "65+ use rose from 17% to 25% as people aged into Part D's permanent obesity benefit.",
+          "field": "world/population/note",
+          "why": "Mechanism: the 65+ population grew only from 68M to 71M. Ageing-in at a ~25% use rate cannot add ≈6M users in two years, so most of the jump must be existing seniors starting, which the candidate does not show."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "One adult in three is on the drug, with 7M gray-market users, 2.4M of them on unmonitored research-grade retatrutide, and ≈17,800 excess hip fractures a year. A GI mass tort with 52,000 cases is teaching users to read their symptoms as claims. The gating-evasion route through AUD prescribing and diverging quality of care by income add to this. The AUD benefit and the easing of DEXA waits offset some of it, so this is a harder society with new losers rather than a structural catastrophe. Epistemic harm is notable because the gray users are unmeasured and the litigation noise muddies the science.",
+        "plausibility": "driver_fidelity: Every driver is traceable to fields and events. The generic stall is realised through FDA complete response letters, the public expansion through nine more states and CMS guidance, AUD through approval 14 months after filing, the gray resurgence through the Tampa case, and the GI tort through bellwethers. State_action 'none' is respected for conditioning. mechanism: Most chains are shown, but the 65+ jump is credited to 'ageing in', which cannot produce that size of rise, and the heaviest drinkers being 'taken out of the market' is overstated. The 'rose fastest in relative terms' line for 18–29 contradicts the candidate's own age figures. magnitude: Current use of 32.5% and ever-use of 43.0% sit inside the envelope, and income bracketing holds. The payer mix sums to 89.7M, the Medicare, Medicaid and obesity spend figures multiply out, and the age bands sum to ≈89.6M. Only a minor slip remains: ≈20.7M first-time starters against an actual rise of ≈22.1M ever-users.",
+        "generativity": "Tammy and Gary give two textured households, with the vial at the kitchen counter, the Tampa clinic email asking her to update her saved card, the Sprite at the supper club and the lawsuit ad on the news. The world fields add storefronts, Wisconsin taverns, Lower Broadway and the mobile DEXA van, so many scenes are implied. Some of the prose is still summary exposition."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L3-r38-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "65+ use rose from 17% to 25% as people aged into Part D's permanent obesity benefit.",
+          "field": "world/population/note",
+          "why": "Mechanism: the 65+ population grew only about 4% (68M to 71M), so ageing-in cannot explain 11.6M becoming 17.75M users. The benefit was already in place in 2032, and the 47% jump in the 65+ share is asserted without a further chain."
+        },
+        {
+          "quote": "now ~4%/yr after AUD use took the heaviest drinkers out of the market",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism/magnitude: FDA approval came only in Sep 2034, and the AUD-primary users shown are about 1M across Medicare and Medicaid. That cannot remove the top drinking decile, which is about half of volume, and the spirits decline is only ~4%/yr, not a sharp break."
+        },
+        {
+          "quote": "Lapsed users re-entering through the AUD route offset stops caused by gating and bone pauses.",
+          "field": "world/population/note",
+          "why": "Mechanism: AUD-primary use is only about 1M users in the payer mix, and moderate-to-severe AUD is a diagnosis most gated-out obesity patients lack. It is asserted as a population-level offset, but the figures show no volume that large."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is recognisably harder, with new losers. There are about 17,800 excess hip fractures a year, 7M gray-market users (2.4M on unmonitored research-grade molecules), and private gated plans with no bone pause that drop people like the 56-year-old in the prose. A mass-tort advertising environment muddies what users can know about their own symptoms (epistemic, inequality). Use is normalised, access is widening, and AUD treatment is a real benefit, which keeps flourishing and cohesion at mid-range rather than higher.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised. Stalled price comes through the ANDA complete response letters, the AUD indication through the Jul 2033 filing and Sep 2034 approval (14 months), litigation through the MDL and bellwethers, and gray-market resurgence through the Tampa network and 7.0M users. Normalisation and marketed_feature are also present, and next_gen_launch is none with CRLs. One small tension: nine more states adopting the enhanced match, which required the continuation standard, sits uneasily with state_action none and 'no new state conditioning'. mechanism: The gray-market and litigation chains are shown (generic failure, gating drop-offs, peptide clinics, plaintiff ads). The 65+ jump to 25% (claim 1), the sharp alcohol-sector effect before the label existed (claim 2) and the AUD-route offset (claim 3) are asserted rather than shown. The pediatric rise from 0.8% to 1.3% is also unexplained. magnitude: Current 32.5% and ever 43.0% sit inside the envelope, and the income thirds bracket the national figure. The age bands sum to 89.7M, the payer mix sums to 100%, and Medicare, Medicaid, obesity-benefit and market arithmetic all multiply out. The only gap is the minor ≈20.7M 'first-time starters' figure against a net rise of about 22M in ever-users.",
+        "generativity": "The two characters, Tammy at the kitchen counter with her RESEARCH USE ONLY vial and Gary ordering a Sprite at Pat's Supper Club, plus the van outside St. Agnes and the mid-lunch email from the Tampa clinic, give concrete scenes with texture. The world fields supply many more: Wisconsin taverns, Lower Broadway cover charges, peptide storefronts beside vape shops, HR catalogues, and bellwether trials. The prose gestures at some themes, such as Tammy's blunting, rather than dramatising them fully."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L3-r38-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Seventh straight year of spirits volume decline, now ~4%/yr after AUD use took the heaviest drinkers out of the market.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: the candidate counts only ≈1.05M AUD-primary users on public programs (0.45M Medicare, 0.6M Medicaid), and the label arrived in Sep 2034. That is too little and too late to remove the heaviest drinkers from the market and double tavern closure rates within the window."
+        },
+        {
+          "quote": "Lapsed users re-entering through the AUD route offset stops caused by gating and bone pauses.",
+          "field": "world/population/note",
+          "why": "Mechanism: the off-now pool stays at exactly 10.5 pts (≈29M) despite a 22% larger user base and heavy gating and pause churn. The AUD route is asserted to offset all of that, though AUD-primary use is only about 1M users."
+        },
+        {
+          "quote": "65+ use rose from 17% to 25% as people aged into Part D's permanent obesity benefit.",
+          "field": "world/population/note",
+          "why": "Mechanism: a +8 pt rise in 65+ use in two years (11.6M to 17.75M) is credited to aging-in alone. Cohort turnover, net of deaths, accounts for only part of that jump, and the rest is unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a harder version of 2032. Gray-market users rise to ≈7M, with 2.4M on unmonitored research-grade retatrutide. Hip fractures reach ≈17,800 a year and the GI tort exceeds 52,000 cases. Gating without a bone-pause exemption still strands private-plan over-50s, and the AUD side door blurs treatment and wellness. The epistemic score is highest because the harms are poorly measured (gray vials, 'calm' subscribers) and litigation advertising muddies what users can tell about their own symptoms. Nothing is melodramatic; the harm is normalised and structural.",
+        "plausibility": "driver_fidelity: All ten drivers are realised and traceable (AUD approval, GI MDL, gray-vial resurgence, stalled price, no new class). One mild tension is that nine more states adopted the Medicaid match and continuation standard while state_action is 'none', though coverage_shift arguably covers it. mechanism: Most chains are shown (ANDA CRLs, ASAM to sNDA to approval in 14 months, the side-door coding route). Several are asserted: spirits and tavern effects from a small AUD user base, the unchanged 10.5-pt off-now pool, and the 65+ jump attributed to aging-in (the three listed claims). magnitude: Current use 32.5% and ever-use 43.0% are inside the envelope, and income and age bands reconcile. The payer mix sums to 89.7M, Medicare and Medicaid spend multiplies out ($29.1B, $46.0B, $35.8B), and the 82.7M × $190 × 12 ≈ $189B market figure checks. The approval timing is allowed. Only minor oddities remain, such as every 65+ user being counted as Medicare.",
+        "generativity": "The Tammy and Gary vignettes carry strong texture: a vial drawn into an insulin syringe at 6:10, the Sprite at Pat's Supper Club, and the card update for the Tampa clinic. The world supplies many implied scenes (the DEXA van at St. Agnes, Lower Broadway cover charges, fish-fry non-alcoholic old fashioneds, plaintiffs' ads on the evening news). The prose leans somewhat on exposition early, but the closing scenes show rather than explain."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "18–29 use rose fastest in relative terms, through gray-market vials and AUD-route telehealth.",
+        "field": "world/population/note",
+        "why": "Mechanism: the candidate's own age figures contradict this. 18–29 went from 13.5% to 18% (+33%), while 65+ went from 17% to 25% (+47%). The causal story is asserted and the numbers disagree with it."
+      },
+      {
+        "quote": "Seventh straight year of spirits volume decline, now ~4%/yr after AUD use took the heaviest drinkers out of the market.",
+        "field": "world/economy/alcohol/state",
+        "why": "Magnitude and mechanism: the label arrived only in Sep 2034. The only AUD-primary users the candidate counts are ≈0.45M on Medicare and ≈0.6M on Medicaid, a small slice of the heavy-drinking population. That cannot plausibly remove the heaviest drinkers from the market or double tavern closures in about a year."
+      },
+      {
+        "quote": "65+ use rose from 17% to 25% as people aged into Part D's permanent obesity benefit.",
+        "field": "world/population/note",
+        "why": "Mechanism: the 65+ population grew only from 68M to 71M. Ageing-in at a ~25% use rate cannot add ≈6M users in two years, so most of the jump must be existing seniors starting, which the candidate does not show."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 5.67,
+      "inequality": 6.17,
+      "public_health": 6.0,
+      "cohesion": 5.0,
+      "epistemic": 6.33,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.0,
+      "mechanism": 6.0,
+      "magnitude": 8.17
+    },
+    "plausibility": 7.48,
+    "generativity": 7.17,
+    "rationale": {
+      "badness": "One adult in three is on the drug, with 7M gray-market users, 2.4M of them on unmonitored research-grade retatrutide, and ≈17,800 excess hip fractures a year. A GI mass tort with 52,000 cases is teaching users to read their symptoms as claims. The gating-evasion route through AUD prescribing and diverging quality of care by income add to this. The AUD benefit and the easing of DEXA waits offset some of it, so this is a harder society with new losers rather than a structural catastrophe. Epistemic harm is notable because the gray users are unmeasured and the litigation noise muddies the science.",
+      "plausibility": "driver_fidelity: Every driver is traceable to fields and events. The generic stall is realised through FDA complete response letters, the public expansion through nine more states and CMS guidance, AUD through approval 14 months after filing, the gray resurgence through the Tampa case, and the GI tort through bellwethers. State_action 'none' is respected for conditioning. mechanism: Most chains are shown, but the 65+ jump is credited to 'ageing in', which cannot produce that size of rise, and the heaviest drinkers being 'taken out of the market' is overstated. The 'rose fastest in relative terms' line for 18–29 contradicts the candidate's own age figures. magnitude: Current use of 32.5% and ever-use of 43.0% sit inside the envelope, and income bracketing holds. The payer mix sums to 89.7M, the Medicare, Medicaid and obesity spend figures multiply out, and the age bands sum to ≈89.6M. Only a minor slip remains: ≈20.7M first-time starters against an actual rise of ≈22.1M ever-users.",
+      "generativity": "Tammy and Gary give two textured households, with the vial at the kitchen counter, the Tampa clinic email asking her to update her saved card, the Sprite at the supper club and the lawsuit ad on the news. The world fields add storefronts, Wisconsin taverns, Lower Broadway and the mobile DEXA van, so many scenes are implied. Some of the prose is still summary exposition."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.867,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 9
   }
 }

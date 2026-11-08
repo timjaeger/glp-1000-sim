@@ -51,6 +51,41 @@
         "input_tokens": 18754,
         "output_tokens": 25726
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r39-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28888,
+        "output_tokens": 6277
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r39-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28888,
+        "output_tokens": 6380
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r39-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28888,
+        "output_tokens": 7671
+      }
     ]
   },
   "world": {
@@ -331,6 +366,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r39-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "'calm' and 'focus' subscriptions (≈4.0M, flat since the anhedonia label)",
+          "field": "world/drugs/mainstream_offlabel_uses",
+          "why": "mechanism: the world also says telehealth brands renamed 'calm' to 'metabolic', 'selling the same pill and dose under a different story'. If calm plans were rebranded, listing 4.0M calm plus a separate 4.0M metabolic subscriber count in the cash tier looks like double counting, and the narrative contradicts itself."
+        },
+        {
+          "quote": "DEXA waits have eased to 8–14 weeks as mobile capacity grew, but remain longest in the rural South.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "mechanism: long-term 65+ users who need annual DEXA rose from 5.5M to 8.0M, and the Medicare 65+ population grew about 38%. Capacity is said to have caught up in two years because mobile vans grew, but no chain is shown, and the parent said coaching and DEXA staff were the binding constraint."
+        },
+        {
+          "quote": "Imports doubled from 3.8M.",
+          "field": "world/access/note",
+          "why": "magnitude/mechanism: the price rise hit injectables only, while starter orals stayed at $149 and public coverage widened. The doubling to 7.6M, concentrated in the bottom third, is asserted rather than derived, and it is steep next to a largest-ever seizure operation."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The main harms are structural. Body composition now tracks income, with coached regimens for the top third and cycling or counterfeit pens for the bottom (body_and_culture, open_tensions). Excess hip fractures rise to ≈16,800 a year and ≈1.9M seniors are sarcopenic, and costs fall outside any CBO score. Imported-pen deaths and the 38% 'feeling flat' figure add harm. The anhedonia label, DEXA easing and Part D widening soften it, and the harms are named and measured, so epistemic badness stays moderate. This is a recognisably harder society with new losers rather than collapse.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. The pill parity, the shock_up prices, the anhedonia label, class stratification, mainstream_complaint and the Part D widening are all traceable. The longevity_wellness indication is realised only as an off-label JAMA-driven use, 'generic flood' is realised only as counterfeits, and the four-state Medicaid growth sits awkwardly with state_action none, so these are thin. mechanism: most chains are shown, including import alert → parked exclusivity → delayed generics, shortage → higher prices → oral shift, and coverage loss → Medicaid and imports. Weak points are the calm/metabolic double count, the convenient DEXA easing, the imports doubling (claims 1 and 3), and a murky FTC role in the exclusivity fight. magnitude: current 30.4% and ever 41.5% sit inside the envelope, and the income thirds average to the national figure. Age bands, payer mix, Medicare and Medicaid spend, the CBO $29B figure, the market sum and the off-now breakdown all reconcile. The only gaps are the possible subscriber overlap and some unseeded pipeline items such as oral amycretin in phase 3.",
+        "generativity": "The prose has strong scenes: the DEXA van tent, the Saturday recital drug-holiday, the insert folded under Monday's pill, and the Scottsdale/Maryvale contrast. The world fields supply invented practices such as holiday shows, 'kiosk soft' bodies, 'are we off Saturday?', restart packs beside condoms and DEXA percentiles on dating profiles. Many characters and scenes are implied."
+      },
+      "plausibility": 7.7
+    },
+    {
+      "custom_id": "s4-L3-r39-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Most growth came from people restarting: commercial users dropped by employers after the 2033 price rise moved to $149–229 cash orals or to imports instead of stopping.",
+          "field": "world/population/note",
+          "why": "Mechanism: restarters raise current use but not ever-use. Ever-use rose about 17.5M (96.6M to 114.1M) and current use about 15.6M, while the off-now group grew only about 1.9M. The growth was therefore mostly new users, not restarters, so the stated chain contradicts the note's own arithmetic."
+        },
+        {
+          "quote": "A JAMA cohort linking low-dose oral use in adults with BMI 22–27 to lower all-cause mortality drives 'metabolic' subscriptions past 4 million, despite healthy-user-bias warnings.",
+          "field": "world/events/5/event",
+          "why": "Mechanism and magnitude: the 2032 world had no 'metabolic' subscriber count, only concierge practices. This puts a single August study four months before year-end behind about 4M new subscribers. The same world says 'calm' plans were rebranded 'metabolic' and also keeps 'calm/focus' at a separate ≈4.0M, which suggests double counting."
+        },
+        {
+          "quote": "The 65+ band rose from 17% to 25% because Part D obesity eligibility widened in Jan 2034 to BMI ≥27 without a comorbidity (≈1.6M added)",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 65+ users rose from 11.6M to 17.5M (+5.9M), and Medicare obesity users from 6.8M to 11.1M (+4.3M). The stated drivers, ≈1.6M from widening plus ≈1.5M cash users, cover about half the rise. The widening was also effective only in the final year, yet 8.0M 65+ users are counted with more than 2 years' use."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 7.5,
+        "public_health": 7,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is highest (7.5): body composition now tracks income, with Medicaid cycling and fat-dominant regain at one end and coached, scanned regimens at the other. Imported-product harm is shown through the CDC cluster (214 hospitalisations, 7 deaths), imports doubling to 7.6M, and ≈16,800 excess hip fractures a year billed outside any CBO score. About 1.2M excess anhedonia cases and the PDC rule penalising drug holidays add to public health and autonomy burdens. Epistemic harm is lower because the anhedonia is now labelled, measured and openly discussed, so it is no longer hidden.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 30.4% (inside the envelope), the price shock-up occurs in 2033, oral parity is the 50 mg Wegovy pill, anhedonia is labelled in Nov 2033, and counterfeits rise. Longevity_wellness is realised only as off-label use, with no new indication, which is thin. state_action 'none' sits slightly awkwardly beside the 35-state Medicaid expansion, though that is attributed to 2032 laws. mechanism: The price rise to employer drop to public pickup to import chain is shown, and the plant alert to parked exclusivity to generic slip chain is shown. Weak spots are the restarter explanation of growth (claim 1), the single-study 'metabolic' jump and possible double counting (claim 2), and the 65+ surge exceeding its stated causes (claim 3). magnitude: Current and ever-use are inside the envelope. Payer shares sum to 100%, as do the 37.1% public share, the age band arithmetic, the off-now breakdown, the CBO $29B and the $188B US market. The shortfalls are the unreconciled 65+ and Medicare obesity growth, and the ever-use versus restarter inconsistency.",
+        "generativity": "The prose carries a full scene sequence: Denise's holiday Saturday, the DEXA van at Grace Methodist, the recital, the burger and the folded insert. The world fields add texture, including the 'kiosk soft' versus 'lean index' bodies, Maryvale versus Scottsdale, holiday tasting menus, 'Holiday shows', restart packs beside condoms, and 'are we off Saturday?'. Many characters and scenes are implied."
+      },
+      "plausibility": 6.95
+    },
+    {
+      "custom_id": "s4-L3-r39-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Most growth came from people restarting: commercial users dropped by employers after the 2033 price rise moved to $149–229 cash orals or to imports instead of stopping.",
+          "field": "world/population/note",
+          "why": "Mechanism: restarters are already counted in ever-use, so ever-use rising 6.0 points (about 16M people) must come from first-time users. Employers dropping coverage and users switching payer is a change of payer, not a restart, so the stated chain does not explain the growth."
+        },
+        {
+          "quote": "An FTC forfeiture suit is pending, and entry is now expected in 2035.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: forfeiture of a parked 180-day exclusivity is an FDA/FDCA process, not an FTC suit. The same entry also claims an import alert on one plant freezes every other settled filer, which is a convenient chain for delaying generics."
+        },
+        {
+          "quote": "Telehealth brands rebranded from 'calm' to 'metabolic', selling the same pill and dose under a different story.",
+          "field": "world/interior_life/framing",
+          "why": "Mechanism: a rebrand should move subscribers from 'calm' to 'metabolic', yet the world lists ≈4.0M 'calm/focus' as flat and a separate ≈4.0M 'metabolic/longevity' as new. Either the 4.0M is double-counted or the rebrand claim is wrong, and the August JAMA study is asserted as the cause of the 4M threshold."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension: body composition now tracks income, bottom-third users get cycling and fat-dominant regain, and 7.6M use unverified imports, including a 214-hospitalisation/7-death insulin-pen cluster. Public health is also poor: about 16,800 excess hip fractures a year, 1.9M sarcopenic seniors billed outside every CBO score, and a 45% rise in poison-centre calls. Autonomy is constrained by gating (≥80% PDC) that penalises drug holidays, with a 12-month lockout in some states. Epistemic is lower because anhedonia is now labelled, measured and openly discussed. Overall it is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields: adoption at +5.4, price shock-up, public expansion, oral parity via the 50 mg Wegovy pill, anhedonia label, class stratification, mainstream complaint and counterfeits. Two are thin: state_action 'none' sits uneasily with four more states adopting, and longevity_wellness appears only as off-label use plus a JAMA cohort. mechanism: The price, generic-delay and oral-parity chains are mostly shown, but the claims above weaken it: the ever-use growth explained by 'restarting', the FTC forfeiture mislabel, and the calm-to-metabolic rebrand against flat 'calm' counts. magnitude: Current 30.4% and ever 41.5% are inside the envelope, income thirds bracket the national figure, and the age bands sum to 83.6M. Payer shares, Medicare/Medicaid spending, the CBO $29B, the market sum and the hip-fracture arithmetic all multiply out. Approval timing for survodutide, MariTide and bimagrumab is lawful and generic_us stays false.",
+        "generativity": "The prose follows Denise Hollins through one drug-holiday Saturday: the DEXA van outside the church, her mother's bone pause, a grilled-cheese sandwich she tastes, the recital, and the insert folded under Monday's pill. The world adds concrete texture: Scottsdale lean-index gyms against Maryvale kiosks, 'Holiday shows', restart anti-nausea packs sold beside condoms, and dating profiles that list DEXA percentiles. Many implied characters and scenes are available."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "'calm' and 'focus' subscriptions (≈4.0M, flat since the anhedonia label)",
+        "field": "world/drugs/mainstream_offlabel_uses",
+        "why": "mechanism: the world also says telehealth brands renamed 'calm' to 'metabolic', 'selling the same pill and dose under a different story'. If calm plans were rebranded, listing 4.0M calm plus a separate 4.0M metabolic subscriber count in the cash tier looks like double counting, and the narrative contradicts itself."
+      },
+      {
+        "quote": "DEXA waits have eased to 8–14 weeks as mobile capacity grew, but remain longest in the rural South.",
+        "field": "world/safety_ledger/4/prevalence_note",
+        "why": "mechanism: long-term 65+ users who need annual DEXA rose from 5.5M to 8.0M, and the Medicare 65+ population grew about 38%. Capacity is said to have caught up in two years because mobile vans grew, but no chain is shown, and the parent said coaching and DEXA staff were the binding constraint."
+      },
+      {
+        "quote": "Imports doubled from 3.8M.",
+        "field": "world/access/note",
+        "why": "magnitude/mechanism: the price rise hit injectables only, while starter orals stayed at $149 and public coverage widened. The doubling to 7.6M, concentrated in the bottom third, is asserted rather than derived, and it is steep next to a largest-ever seizure operation."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 5.83,
+      "inequality": 7.33,
+      "public_health": 6.67,
+      "cohesion": 5.17,
+      "epistemic": 4.33,
+      "overall": 6.27
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.67,
+      "mechanism": 6.33,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.43,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "The main harms are structural. Body composition now tracks income, with coached regimens for the top third and cycling or counterfeit pens for the bottom (body_and_culture, open_tensions). Excess hip fractures rise to ≈16,800 a year and ≈1.9M seniors are sarcopenic, and costs fall outside any CBO score. Imported-pen deaths and the 38% 'feeling flat' figure add harm. The anhedonia label, DEXA easing and Part D widening soften it, and the harms are named and measured, so epistemic badness stays moderate. This is a recognisably harder society with new losers rather than collapse.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. The pill parity, the shock_up prices, the anhedonia label, class stratification, mainstream_complaint and the Part D widening are all traceable. The longevity_wellness indication is realised only as an off-label JAMA-driven use, 'generic flood' is realised only as counterfeits, and the four-state Medicaid growth sits awkwardly with state_action none, so these are thin. mechanism: most chains are shown, including import alert → parked exclusivity → delayed generics, shortage → higher prices → oral shift, and coverage loss → Medicaid and imports. Weak points are the calm/metabolic double count, the convenient DEXA easing, the imports doubling (claims 1 and 3), and a murky FTC role in the exclusivity fight. magnitude: current 30.4% and ever 41.5% sit inside the envelope, and the income thirds average to the national figure. Age bands, payer mix, Medicare and Medicaid spend, the CBO $29B figure, the market sum and the off-now breakdown all reconcile. The only gaps are the possible subscriber overlap and some unseeded pipeline items such as oral amycretin in phase 3.",
+      "generativity": "The prose has strong scenes: the DEXA van tent, the Saturday recital drug-holiday, the insert folded under Monday's pill, and the Scottsdale/Maryvale contrast. The world fields supply invented practices such as holiday shows, 'kiosk soft' bodies, 'are we off Saturday?', restart packs beside condoms and DEXA percentiles on dating profiles. Many characters and scenes are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.732,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 13
   }
 }

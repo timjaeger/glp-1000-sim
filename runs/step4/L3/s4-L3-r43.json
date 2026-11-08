@@ -51,6 +51,41 @@
         "input_tokens": 18782,
         "output_tokens": 23904
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r43-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28522,
+        "output_tokens": 6076
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r43-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28522,
+        "output_tokens": 5177
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r43-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28522,
+        "output_tokens": 6267
+      }
     ]
   },
   "world": {
@@ -326,6 +361,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r43-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The 65+ band grew more slowly than total use because DEXA pauses and the NAION warning (older, diabetic users carry the most risk) hold it back",
+          "field": "world/population/note",
+          "why": "Fails mechanism and magnitude: the 65+ band went from 17% to 27% (+59%), while total use went from 25.0% to 37.6% (+50%), so it grew faster, not slower. The NAION warning also only landed in May 2034, too late to have held anything back."
+        },
+        {
+          "quote": "The bottom third rose from 21% to 31% through four more Medicaid adopter states and through imports.",
+          "field": "world/population/note",
+          "why": "Fails mechanism: four added states cannot explain a 10-point jump in bottom-third use. Employer retreat, the stipulated driver, should hit the middle and upper thirds hardest, yet the bottom third rises 10 points, the top 15 and the middle 13, with no chain shown."
+        },
+        {
+          "quote": "Thursday night she skips her pill, the way she and Ray agreed in March.",
+          "field": "prose/marisol_scene",
+          "why": "Fails mechanism: Marisol takes the 50 mg Wegovy pill, which is semaglutide with a roughly week-long half-life. Skipping one dose cannot let her 'feel things' by Saturday. The world's own rationale ('Foundayo clears in about two days') applies to a different drug."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Millions are pushed off employer coverage into cash or unsupervised imports (10.5M users, 600 hospitalisations and 19 deaths in 2033). Older users face about 16,000 excess hip fractures a year and about 4,000 NAION cases, and about 600k excess anhedonia cases are implied if causal. Autonomy and inequality score highest: employers still surveil cash-pay claims and kiosk weights for premium discounts, AUD codes leave records visible to DOT examiners and custody courts, and care quality splits by class. Harms are named and discussed (the 'grey', CDC alert, class warning), so epistemic and cohesion score a notch lower, though import users stay blind.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is +12.6 pp exactly, price stays stalled via the April 2033 CRLs, employer coverage falls 66% to 44%, AUD arrives via guidelines plus an sNDA filing, the NAION class label is dated, the pill is an existing product in a new form, the counterfeit cluster is shown, conditioning expands, and 'the grey' is mainstream. magnitude: Current and ever-use, income thirds, age bands (sum 103.05M), Medicare ($28.2B/$7.1B/$21.1B/$44.9B), Medicaid ($33.4B), payer mix, hip-fracture and NAION arithmetic, and the approval timing for survodutide, MariTide and bimagrumab all reconcile and sit inside the envelope. The only blemishes are cosmetic ('fourth lean-mass monitoring requirement' when three labels are listed) and a +10-point 65+ jump. mechanism: Most chains are shown (employer retreat to cash and imports, CRLs to unchanged prices, Seventh Circuit to four new states). Flaws are claim 1 (the 65+ explanation contradicts the figures), claim 2 (pharmacology of the prose scene), and claim 3 (bottom-third growth asserted through four states). Import users also nearly tripling in two years, and an allocated 50 mg pill still driving 46% of fills, are thinly supported.",
+        "generativity": "The Marisol Peña scene in Mesa is vivid and implies a cast: Tomás, Ray, the hygienist, and the kiosk at Fry's with its $31 discount. Objects carry the world: the Hyderabad blister pack with no QR code, the wellness app email, the Thursday skip before the Saturday platter. Supporting texture includes 'holiday sets', Bardstown shift cuts, and Devanagari-print blister packs as a class marker, so there is plenty of film here."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s4-L3-r43-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "The 65+ band grew more slowly than total use because DEXA pauses and the NAION warning (older, diabetic users carry the most risk) hold it back",
+          "field": "world/population/note",
+          "why": "Mechanism: the 65+ band went from 17% to 27% (about +59%, 11.6M to 18.9M), while total use rose about 50%, so it grew faster, not slower. A NAION warning issued in May 2034 also cannot have restrained uptake that was already measured."
+        },
+        {
+          "quote": "Foundayo clears in about two days, so couples skip their Thursday pill to feel things on Saturday.",
+          "field": "prose/the_flattening_paragraph",
+          "why": "Mechanism: the protagonist skips her Thursday dose of the 50 mg Wegovy pill, which is semaglutide, with a roughly one-week half-life. A two-day skip would not lift blunting by Saturday, so the scene contradicts the drug it shows."
+        },
+        {
+          "quote": "DEXA waits have eased to 8–14 weeks as mobile capacity grew.",
+          "field": "world/safety_ledger/4/prevalence_note",
+          "why": "Mechanism: scan demand rose sharply. Long-term 65+ users went from 5.5M to 9.0M, annual DEXA is mandated, and employer drop-offs add more. Waits shortening from 12–20 weeks within two years is asserted, with no capacity figures behind it."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 7,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms are stratified and structural. Employer retreat pushes millions off coverage while kiosk-weight wellness surveillance continues, and there is a regain wave among people aged 45–64. Imports reach 10.5M with a 19-death counterfeit cluster, NAION now carries a class warning with no eye exams for most users, and fractures reach about 16k a year. Care splits three ways by class, and AUD coding creates records that insurers, DOT examiners and custody courts can request. Cohesion is only strained, not broken, and the harm is nameable and widely discussed, so this is a harder society with new losers but not a 7.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. These are stalled price, employer retreat (66% to 44%), AUD via guidelines with an sNDA filed, the NAION class label, oral parity through the 50 mg pill, counterfeit flood, continuation-standard expansion, normalisation and the mainstream-complaint grey. Approvals respect the envelope's timing rules, and no US generic arrives. mechanism: Most chains are shown, including the CRLs for stalled generics, API demand driving pill allocation, and employer trend leading to the retreat. The flaws are the 65+ growth explanation (claims 1) that contradicts its own figures, the Foundayo/Wegovy pill mismatch in the prose (claim 2), and the unexplained DEXA wait improvement (claim 3). magnitude: Current use is 37.6% and ever-use 49.0%, both inside the bounds, and the income thirds bracket the national rate. Age bands sum to 103.0M, payer shares sum to 100% and the counts to 103.0M, and the Medicare, Medicaid, fracture and NAION arithmetic all multiplies out. The import jump from 3.8M to 10.5M is large but tied to the counterfeit-flood driver.",
+        "generativity": "Marisol, Tomás and Ray give a working family with clear scenes: the kiosk at Fry's, the hygienist's remark, the Hyderabad blister pack with no QR code, and the planned Saturday platter. The world fields add texture, such as Devanagari blister packs, holiday sets, the Bardstown shift cuts and Teamsters vision leave. The prose shows more than it explains, and the policy detail supplies further scenes."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s4-L3-r43-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom third rose from 21% to 31% through four more Medicaid adopter states and through imports.",
+          "field": "world/population/note",
+          "why": "Mechanism: four added adopter states (31 to 35) cannot plausibly explain a 10-point jump in the bottom third. The parent's 10.3 to 21 rise took 31 states plus DC, and Medicaid fills actually fell as a share, from 15.0% to 13.6%."
+        },
+        {
+          "quote": "\"employer_coverage_pct\": 44",
+          "field": "world/access/employer_coverage_pct",
+          "why": "Mechanism and magnitude: a one-third cut in covering employers in a single plan year is paired with commercial users falling only from 27.7M to 25.5M while total users grew about 50%. The offsetting AUD and diagnosis-code coverage is asserted, not quantified."
+        },
+        {
+          "quote": "Thursday night she skips her pill, the way she and Ray agreed in March.",
+          "field": "prose/marisol_scene",
+          "why": "Mechanism: Marisol takes the 50 mg Wegovy pill, which is semaglutide with a roughly one-week half-life, so skipping one daily dose would not change how she feels by Saturday. The world's 'clears in about two days' claim is about Foundayo, so the prose contradicts the world state."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers. About 10M people are on unsupervised imports with 19 deaths in the 2033 cluster. Employer retreat has pushed millions off coverage into regain cycles. A NAION warning covers about 103M users, about 16,000 excess hip fractures a year continue, and care splits harder by class. Wellness-surveillance discounts and AUD records visible to insurers, DOT examiners and custody courts add autonomy harms. The harms are named and discussed, which keeps epistemic and cohesion scores moderate rather than severe.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and dated events. Adoption is 37.6, price is stalled with the CRLs, employer coverage fell to 44%, AUD arrives by guideline plus a 2034 sNDA, and the NAION class label is dated May 2034. Oral parity is the 50 mg pill, the counterfeit cluster is shown, and the continuation standard is extended. mechanism: Most chains are shown, including CRLs to employer cost trend to wellness discounts, and the counterfeit cluster to CBP seizures. The bottom-third jump from four more states, the thin offset for employer retreat in commercial user counts, and the Marisol pill-skipping scene (claims 1 to 3) are asserted or inconsistent. magnitude: Current use is 37.6 and ever-use 49.0, both inside the envelope, and the age bands sum to 103.0M. Payer shares sum to about 100%, and the Medicare ($28.2B, $21.1B net, $44.9B) and Medicaid ($33.4B) arithmetic checks. The NAION, fracture and anhedonia figures also reconcile. Approval timing is legal. The only blemish is the note's claim that 65+ grew 'more slowly' than total use, true in points but not in relative terms.",
+        "generativity": "The Marisol and Tomás scenes are concrete: the Fry's kiosk, the Hyderabad blister pack with no QR code, the hygienist's 'Must be nice', and the Thursday-skip ritual. The world adds many implied lives, including Bardstown distillery workers, Teamsters on vision leave, custody lawyers and the Phoenix working class. The day-in-the-life shows rather than explains, though the pill-pharmacology slip weakens one scene."
+      },
+      "plausibility": 8.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The 65+ band grew more slowly than total use because DEXA pauses and the NAION warning (older, diabetic users carry the most risk) hold it back",
+        "field": "world/population/note",
+        "why": "Fails mechanism and magnitude: the 65+ band went from 17% to 27% (+59%), while total use went from 25.0% to 37.6% (+50%), so it grew faster, not slower. The NAION warning also only landed in May 2034, too late to have held anything back."
+      },
+      {
+        "quote": "The bottom third rose from 21% to 31% through four more Medicaid adopter states and through imports.",
+        "field": "world/population/note",
+        "why": "Fails mechanism: four added states cannot explain a 10-point jump in bottom-third use. Employer retreat, the stipulated driver, should hit the middle and upper thirds hardest, yet the bottom third rises 10 points, the top 15 and the middle 13, with no chain shown."
+      },
+      {
+        "quote": "Thursday night she skips her pill, the way she and Ray agreed in March.",
+        "field": "prose/marisol_scene",
+        "why": "Fails mechanism: Marisol takes the 50 mg Wegovy pill, which is semaglutide with a roughly week-long half-life. Skipping one dose cannot let her 'feel things' by Saturday. The world's own rationale ('Foundayo clears in about two days') applies to a different drug."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 6.83,
+      "inequality": 7.0,
+      "public_health": 6.67,
+      "cohesion": 5.17,
+      "epistemic": 5.67,
+      "overall": 6.4
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.97,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Millions are pushed off employer coverage into cash or unsupervised imports (10.5M users, 600 hospitalisations and 19 deaths in 2033). Older users face about 16,000 excess hip fractures a year and about 4,000 NAION cases, and about 600k excess anhedonia cases are implied if causal. Autonomy and inequality score highest: employers still surveil cash-pay claims and kiosk weights for premium discounts, AUD codes leave records visible to DOT examiners and custody courts, and care quality splits by class. Harms are named and discussed (the 'grey', CDC alert, class warning), so epistemic and cohesion score a notch lower, though import users stay blind.",
+      "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is +12.6 pp exactly, price stays stalled via the April 2033 CRLs, employer coverage falls 66% to 44%, AUD arrives via guidelines plus an sNDA filing, the NAION class label is dated, the pill is an existing product in a new form, the counterfeit cluster is shown, conditioning expands, and 'the grey' is mainstream. magnitude: Current and ever-use, income thirds, age bands (sum 103.05M), Medicare ($28.2B/$7.1B/$21.1B/$44.9B), Medicaid ($33.4B), payer mix, hip-fracture and NAION arithmetic, and the approval timing for survodutide, MariTide and bimagrumab all reconcile and sit inside the envelope. The only blemishes are cosmetic ('fourth lean-mass monitoring requirement' when three labels are listed) and a +10-point 65+ jump. mechanism: Most chains are shown (employer retreat to cash and imports, CRLs to unchanged prices, Seventh Circuit to four new states). Flaws are claim 1 (the 65+ explanation contradicts the figures), claim 2 (pharmacology of the prose scene), and claim 3 (bottom-third growth asserted through four states). Import users also nearly tripling in two years, and an allocated 50 mg pill still driving 46% of fills, are thinly supported.",
+      "generativity": "The Marisol Peña scene in Mesa is vivid and implies a cast: Tomás, Ray, the hygienist, and the kiosk at Fry's with its $31 discount. Objects carry the world: the Hyderabad blister pack with no QR code, the wellness app email, the Thursday skip before the Saturday platter. Supporting texture includes 'holiday sets', Bardstown shift cuts, and Devanagari-print blister packs as a class marker, so there is plenty of film here."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 6.184,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 4
   }
 }

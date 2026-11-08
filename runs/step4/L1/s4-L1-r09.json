@@ -34,6 +34,41 @@
         "input_tokens": 19223,
         "output_tokens": 24423
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r09-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28759,
+        "output_tokens": 7898
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r09-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28759,
+        "output_tokens": 7709
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r09-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28759,
+        "output_tokens": 6399
+      }
     ]
   },
   "world": {
@@ -313,6 +348,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r09-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "For the 2034 plan year, more than half the companies that had covered weight loss stopped.",
+          "field": "prose/the_turn_paragraph",
+          "why": "Fails magnitude and mechanism. The world state has employer coverage falling from 63% to 44%, a drop of about 30% in relative terms, so 'more than half' contradicts the candidate's own figure."
+        },
+        {
+          "quote": "The Aug 2033 Third Circuit ruling barred PBM adherence data as a wellness 'reasonable alternative standard' within that circuit and chilled premium differentials elsewhere, and many employers chose exclusion over unconditioned coverage.",
+          "field": "world/access/note",
+          "why": "Fails mechanism. A single-circuit ruling that only bars one data source for premium differentials is asserted to trigger a national drop of weight-only coverage within about four months. Employers could have kept coverage with coaching conditions, and the world itself says the ruling was in Aug 2033 while the event and prose say September."
+        },
+        {
+          "quote": "In the US, the 2033 settlement entry dates passed, but by the end of 2034 FDA had granted only tentative approvals to semaglutide ANDAs, and the settlements key entry to final approval.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Fails mechanism. Tentative approval normally means a patent or exclusivity bar is still in force, so once the settlement entry dates have passed, final approval should follow. A two-year hold with no stated blocker looks contrived to keep generic_us false."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 3.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is harder in a class-stratified way. Employer coverage fell to 44%, the Bridge lapsed, 23.6M people pay about $57B out of pocket, 10.4M use compounders, poison-centre calls rose 12%, and bone and muscle safeguards were lost for former Bridge users. Inequality is the worst dimension: the top-to-bottom gap widened from 12.3 to 17.4 points, and body and eating habits now mark income. Part of this is offset because conditioning collapsed, which eases coercion, and anhedonia became a nameable, measured side effect (interior_life severity 3), so overall badness is a worse-but-not-dystopian 5.5.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is +3.3 to 31.2, prices step down under managed decline, employer coverage falls 63% to 44%, the anhedonia label is dated Feb 2033, there are no new indications or launches (CRLs for bimagrumab and amycretin), and the Section 232/WTO thread continues. mechanism: Most chains are shown, such as the Bridge lapse with its re-coding split and cash-price substitution. The causal link from one Third Circuit ruling to a national exclusion wave is thin, and the Aug/Sep date mismatch, the tentative-approval hold and the household pen inconsistency in the prose (Dele has his own coded Mounjaro) are flaws (claims 2 and 3). magnitude: Everything lands inside the envelope (ever-used 41.8, income thirds bracket the national figure, age bands weight to 31.2). The on/off/cycled arithmetic closes, as do the payer-mix shares, user counts and dollar figures (Medicare $27.3B, Medicaid $24.3B, HRSA $4.7B, DoD $295M). The only visible slip is the prose 'more than half' versus 63→44 (claim 1).",
+        "generativity": "The prose shows rather than explains, through Renée at Groveport, the pen in the butter compartment, the $119 compounder vial photo she deletes then retrieves, and Brandon's forearms. The world fields add Columbus floors with three bodies by shift, 'plan body', dating-app 'build' filters and 'who pays?' politics. Characters, scenes and class texture are strongly implied, though a few elements (pen sharing, the 'pen is in butter compartment' ambiguity) are blurred."
+      },
+      "plausibility": 7.85
+    },
+    {
+      "custom_id": "s4-L1-r09-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "more than half the companies that had covered weight loss stopped",
+          "field": "prose/the_plan_body",
+          "why": "The world state has employer coverage falling from 63% to 44%, so about 30% of covering employers stopped, not more than half. The prose contradicts the world JSON on the central employer_retreat change."
+        },
+        {
+          "quote": "within weeks large employers announce they will drop weight-only GLP-1 coverage for 2034",
+          "field": "world/events/3/event",
+          "why": "The access note says the remaining weight-only coverage sits 'mostly at large employers in finance, tech, health systems and the public sector', which contradicts large employers leading the exit. A single-circuit ruling is also asserted to drive a nationwide 19-point drop in one plan year, and the chain is thin."
+        },
+        {
+          "quote": "but by the end of 2034 FDA had granted only tentative approvals to semaglutide ANDAs, and the settlements key entry to final approval",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Settlement entry dates passed in 2033, yet no reason is given for FDA still withholding final approval 18 months later. The generic stall is asserted rather than caused, a mechanism gap that conveniently keeps generic_us false."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 3,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harms are stratification: a top-bottom gap of 17.4 pts, 23.6M paying about $57B out of pocket, and the body read as an income signal. The Bridge lapse removes DEXA and counselling for roughly 1M older cash users, which raises bone and muscle risk, and about 28.6M adults are off-drug, many involuntarily. Conditioning pressure falls and anhedonia becomes a measured, labelled number, so autonomy and epistemic scores stay moderate. Overall this is a harder, more tiered society, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable: adoption +3.3 to 31.2%, managed price steps to $199/$249/$299, employer coverage 63→44, no new indications, the Feb 2033 anhedonia label, no new launches (CRLs for bimagrumab and amycretin), the Section 232/WTO thread, class-stratified body culture, and anhedonia as a niche effect. mechanism: The Third Circuit ruling is dated Aug 2033 in the access and state fields but Sep 2033 in the events and prose. The prose also overstates the employer exit ('more than half'), the large-employer claim contradicts the access note, the ANDA stall is unexplained, and the hip-fracture HR shifts from 0.35 to 0.30 without comment. magnitude: Population figures are inside the envelope and reconcile: 31.2% on, 41.8% ever, income thirds average 31.2, age bands sum to 31.2, and the on/off arithmetic closes. Payer users sum to 84.2M, the Medicare/Medicaid/HRSA/DoD dollar figures multiply out, and the Bridge's 3.4M splits cleanly. The only flaws are rounding (100.1%) and the silent HR tweak.",
+        "generativity": "The Renée Okafor scene gives concrete texture: the pen in the butter compartment, a Tuesday pen-turn, the Groveport floor with three bodies by pay grade, the compounder vial photo, Dele's $25 Mounjaro, Tobi and the tiger cereal, and the pharmacy leaflet line. The world fields add characters and scenes: 'plan body', build filters on dating apps, cash couples splitting one pen, Sun City gym waitlists, and Columbus recruiters. The 'no, I don't feel it' ending shows the anhedonia theme rather than explaining it."
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s4-L1-r09-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "For the 2034 plan year, more than half the companies that had covered weight loss stopped.",
+          "field": "prose/body",
+          "why": "Fails magnitude: the world state has employer coverage falling from 63% to 44%, so about 30% of covering employers stopped, not more than half. The prose contradicts the figures."
+        },
+        {
+          "quote": "supervisors on covered retatrutide with gym stipends",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Fails mechanism: this is the same Columbus distribution centre that dropped weight-only coverage for 2034. Supervisors still holding covered weight-loss retatrutide is never explained by a tiered plan or any other route, and it is the scene's central example."
+        },
+        {
+          "quote": "large employers announce they will drop weight-only GLP-1 coverage for 2034",
+          "field": "world/events/3/event",
+          "why": "Fails mechanism: a single-circuit ruling is said to trigger a national retreat within weeks. The access note says remaining weight-only coverage sits mostly at large employers, which contradicts large employers being the ones that dropped it. The Aug/Sep date mismatch for the same ruling adds to the looseness."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 7,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harm is stratification. The top-bottom use gap widens from 12.3 to 17.4 points, 23.6M people pay about $57B a year out of pocket, and the bottom third is held down by Medicaid lockouts and a flat HRSA budget. The Bridge lapse removes DEXA and training safeguards for about 1M older cash users, and a new tier of rationed 'household split' pens appears. Epistemics improve somewhat because anhedonia gets a labelled number, though the number may understate what users report. The world is harder with new losers, not catastrophic.",
+        "plausibility": "driver_fidelity: Adoption is 31.2 (27.9+3.3). Employer retreat, the anhedonia label, no new indications or launches, the tariff shock, class stratification and the niche-side-effect framing all appear in fields and events. Nothing contradicts a driver. mechanism: Most chains are shown (Third Circuit to employer exclusion, Bridge lapse to re-coding and cash, CRLs for the pipeline). Three flaws weaken it: an Aug/Sep date mismatch for the ruling, the large-employer inconsistency, and covered supervisors at a plant that dropped coverage (claims 2 and 3). magnitude: Every population figure is inside the envelope and reconciles. Payer shares, Medicare and Medicaid spending, HRSA, DoD and out-of-pocket arithmetic all multiply out, with only 100.1% rounding on payer shares. The prose claim that over half of covering employers stopped contradicts 63→44% (claim 1).",
+        "generativity": "The Renée Okafor day shows rather than explains: the pen in the butter compartment, the sister's compounder vial photo retrieved from the trash, the cereal with the tiger and Dele's $25 Mounjaro. The Columbus distribution-centre floor, the dating-app build filters and the 'plan body' phrase give strong texture and several implied scenes. The prose is somewhat essayistic before the vignette."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "For the 2034 plan year, more than half the companies that had covered weight loss stopped.",
+        "field": "prose/the_turn_paragraph",
+        "why": "Fails magnitude and mechanism. The world state has employer coverage falling from 63% to 44%, a drop of about 30% in relative terms, so 'more than half' contradicts the candidate's own figure."
+      },
+      {
+        "quote": "The Aug 2033 Third Circuit ruling barred PBM adherence data as a wellness 'reasonable alternative standard' within that circuit and chilled premium differentials elsewhere, and many employers chose exclusion over unconditioned coverage.",
+        "field": "world/access/note",
+        "why": "Fails mechanism. A single-circuit ruling that only bars one data source for premium differentials is asserted to trigger a national drop of weight-only coverage within about four months. Employers could have kept coverage with coaching conditions, and the world itself says the ruling was in Aug 2033 while the event and prose say September."
+      },
+      {
+        "quote": "In the US, the 2033 settlement entry dates passed, but by the end of 2034 FDA had granted only tentative approvals to semaglutide ANDAs, and the settlements key entry to final approval.",
+        "field": "world/access/generic_rest_of_world",
+        "why": "Fails mechanism. Tentative approval normally means a patent or exclusivity bar is still in force, so once the settlement entry dates have passed, final approval should follow. A two-year hold with no stated blocker looks contrived to keep generic_us false."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 4.33,
+      "inequality": 7.17,
+      "public_health": 5.17,
+      "cohesion": 5.0,
+      "epistemic": 3.5,
+      "overall": 5.33
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.17,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.57,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world is harder in a class-stratified way. Employer coverage fell to 44%, the Bridge lapsed, 23.6M people pay about $57B out of pocket, 10.4M use compounders, poison-centre calls rose 12%, and bone and muscle safeguards were lost for former Bridge users. Inequality is the worst dimension: the top-to-bottom gap widened from 12.3 to 17.4 points, and body and eating habits now mark income. Part of this is offset because conditioning collapsed, which eases coercion, and anhedonia became a nameable, measured side effect (interior_life severity 3), so overall badness is a worse-but-not-dystopian 5.5.",
+      "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is +3.3 to 31.2, prices step down under managed decline, employer coverage falls 63% to 44%, the anhedonia label is dated Feb 2033, there are no new indications or launches (CRLs for bimagrumab and amycretin), and the Section 232/WTO thread continues. mechanism: Most chains are shown, such as the Bridge lapse with its re-coding split and cash-price substitution. The causal link from one Third Circuit ruling to a national exclusion wave is thin, and the Aug/Sep date mismatch, the tentative-approval hold and the household pen inconsistency in the prose (Dele has his own coded Mounjaro) are flaws (claims 2 and 3). magnitude: Everything lands inside the envelope (ever-used 41.8, income thirds bracket the national figure, age bands weight to 31.2). The on/off/cycled arithmetic closes, as do the payer-mix shares, user counts and dollar figures (Medicare $27.3B, Medicaid $24.3B, HRSA $4.7B, DoD $295M). The only visible slip is the prose 'more than half' versus 63→44 (claim 1).",
+      "generativity": "The prose shows rather than explains, through Renée at Groveport, the pen in the butter compartment, the $119 compounder vial photo she deletes then retrieves, and Brandon's forearms. The world fields add Columbus floors with three bodies by shift, 'plan body', dating-app 'build' filters and 'who pays?' politics. Characters, scenes and class texture are strongly implied, though a few elements (pen sharing, the 'pen is in butter compartment' ambiguity) are blurred."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.8,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 39
   }
 }

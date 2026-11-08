@@ -51,6 +51,41 @@
         "input_tokens": 18506,
         "output_tokens": 23440
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r19-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27231,
+        "output_tokens": 6486
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r19-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27231,
+        "output_tokens": 7694
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r19-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27231,
+        "output_tokens": 6929
+      }
     ]
   },
   "world": {
@@ -310,6 +345,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r19-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Imported or counterfeit product is ~6.4M (10.7%), down from 7.5M as Medicaid AUD and obesity coverage absorbed part of the bottom third.",
+          "field": "world/population/note",
+          "why": "Mechanism: the gray market is said to shrink even as ~1.2M people are cut at Medicare checkpoints and sent to cash or the mail. Medicaid obesity coverage reaches only 13 states, and the chain from those states to the bottom third's switching is asserted, not shown."
+        },
+        {
+          "quote": "Five million older Americans joined in a year, many moving off the cash channel",
+          "field": "prose/paragraph_2",
+          "why": "Magnitude and mechanism: the world gives ~5.0M on the obesity route, yet also removes ~1.2M at the August checkpoint. The prose does not say whether 5M is gross or net, and the first-year ramp of ~5M plus mailed cellular scales is aggressive."
+        },
+        {
+          "quote": "She does the arithmetic on a church bulletin: three days off puts her at 81.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: a proportion-of-days-covered figure measured over a six-month window would fall only ~1–2 points from three missed days, not five. The prose contradicts the world's own PDC mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Federal benefits conditioning (mailed connected scales, PDC ≥80%) removed ~1.2M people at the first checkpoint, creating a visible regain cohort. Added to that are mainstream flatness managed by 'holidays', Novo's concealment scandal, and rising teen oral use with the child growth question unresolved. Offsetting benefits are real: AUD treatment, Medicaid coverage in 13 states and fewer gray-market users soften inequality and public health, so this is a harder society with new losers rather than a structural horror.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and dated events: adoption +2.2pp, managed decline, Medicare/Medicaid expansion, AUD approval, 50 mg pill parity, Novo scandal, normalisation, conditioning, and flatness as a mainstream complaint. 'Safety_signal: none' holds, because the scandal concerns when Novo knew, not new risk. mechanism: the causal chains are mostly shown (AUD to Medicaid mandate, CMS rule to PDC rule to holidays to exception code), but the gray-market shrinkage and the five-million first-year ramp are asserted, and Dolores's 86-to-81 arithmetic does not fit a six-month PDC window. magnitude: all headline figures sit inside the envelope (21.8%, 32.6%, income thirds averaging 21.8, age check, cycling arithmetic, payer mix summing to 59.7M, Part D $43.2B, Medicaid $12.6B), and approval timing respects the 12-month rule. The remaining gaps are the unclear gross/net 5M obesity-route count against the 1.2M removed, and the oral amycretin phase 3 readout, which the parent world never mentioned.",
+        "generativity": "There are many distinct implied scenes: The Villages pickleball gossip over who failed the weigh-in, wedding and Thanksgiving 'holiday' dinners, the interruption-order phone call, and Columbus clinic-shot workers with no flexibility. Dolores's day shows rather than explains, with the scale blinking green, the bulletin arithmetic and the Novo leaflet folded into the drawer. Dating tags ('on', 'holidaying', 'off') and 'holiday-only intimacy' give further texture."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s4-L2-r19-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "enhanced Medicaid match offered to states adopting the same protocol",
+          "field": "world/events/1/event",
+          "why": "Mechanism: an enhanced federal Medicaid match needs statute or a waiver, yet the world says Congress did not legislate and CMS acted only by reinterpreting a Part D rule. No authority is shown for this financing lever, and it is what drives 11 states to adopt the protocol."
+        },
+        {
+          "quote": "65+ check: ~63M adults 65+ × 23.5% ≈ 14.8M, plus ~1.7M disabled under-65 Medicare users ≈ 16.5M.",
+          "field": "world/population/note",
+          "why": "Magnitude: this treats every user aged 65+ as a Medicare user, leaving none in cash, commercial or gray channels. Yet the same note keeps ~16.8M cash users and the world has 50–70-year-olds paying cash for dementia prevention. The 65+ rate and payer mix do not fully reconcile."
+        },
+        {
+          "quote": "Imported or counterfeit product is ~6.4M (10.7%), down from 7.5M as Medicaid AUD and obesity coverage absorbed part of the bottom third.",
+          "field": "world/population/note",
+          "why": "Mechanism: the world says the 1.2M people dropped at Medicare checkpoints mostly went to cash or the gray market. Counterfeit 50 mg tablets also appeared, and cloned-serial pens persist. A fall of 1.1M in gray-market users is asserted against these pressures."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Coverage widens: Medicare is now the largest payer category, and Medicaid covers AUD in every state. Against that, federal conditioning through connected scales and 80% days-covered rules, 1.2M people dropped at checkpoints into a visible regain cohort, ~2.7M with clinically meaningful anhedonia, and unstudied drug-holiday cycling. Pediatric growth uncertainty persists, and the 5M obesity-route beneficiaries rest on a legally exposed rule. This is a harder, more surveilled society with new losers but not a collapse, so overall is mid-range.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is exactly +2.2pp, AUD was approved Jan 2033, the CMS rule and checkpoints appear, the Novo scandal is dated, the 50 mg pill is approved Mar 2034, and holidays and Sentinel carry the mainstream_complaint. 'No new safety finding' is also honoured. mechanism: most chains are shown, including the AUD-to-Medicaid mandate, the pill becoming the Medicare default, and holidays colliding with the 80% rule. The enhanced Medicaid match with no legislation, and the gray-market decline despite 1.2M people dropped, are asserted (claims 1 and 3). magnitude: the population figures sit inside the envelope, the cycling arithmetic closes, the payer mix sums to 59.7M, and Part D $43.2B and Medicaid $12.6B multiply out. Approvals are timed at exactly 12 months after filing. The 65+ equals Medicare shortcut (claim 2) and the gray-market drop are reconciliation gaps, and the 7.0M Medicaid figure is large but arguable.",
+        "generativity": "Dolores's day is rich: the 6:40 pill, the green-blinking scale, the 86% and 81% arithmetic, the interruption order, pickleball gossip and a nephew with Georgia vials. The world fields many implied scenes: The Villages weigh-ins, holiday dinners, Columbus clinic-shot workers, Bardstown distillers, Louisville Medicaid, and Florida and Arizona midterms. Texture is high, with only slight over-explanation in the prose."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s4-L2-r19-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "65+ check: ~63M adults 65+ × 23.5% ≈ 14.8M, plus ~1.7M disabled under-65 Medicare users ≈ 16.5M.",
+          "field": "world/population/note",
+          "why": "magnitude: this equates all 14.8M users aged 65+ with Medicare 65+ users, leaving none of that age on cash, gray-market, commercial or Medicaid. Yet the same note and the dementia-prevention off-label line describe cash and gray use among older adults, so the payer and age figures don't reconcile."
+        },
+        {
+          "quote": "enhanced Medicaid match offered to states adopting the same protocol",
+          "field": "world/events/1/event",
+          "why": "mechanism: a CMS Part D reinterpretation rule gives no obvious authority to raise Medicaid federal matching rates, which normally needs statute or a waiver. The candidate shows no chain for it, yet 11 of 13 states adopt the protocol within a year."
+        },
+        {
+          "quote": "Brief interruptions are widely reported to restore pleasure within days, which feeds the drug-holiday practice.",
+          "field": "world/safety_ledger/6/prevalence_note",
+          "why": "mechanism: semaglutide's half-life is about a week, so skipping a weekend or a few days would barely change drug exposure. The central 'holiday' practice rests on an effect the pharmacology doesn't support, and Dolores's PDC arithmetic (86% to 81% from three days) is also loose."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens: Medicare and Medicaid are now the largest payers, AUD treatment is covered, and the gray market shrinks. But conditioning becomes federal policy (connected scales, PDC ≥80%), and 1.2M people are cut off at checkpoints into a visible regain cohort. Fracture exposure grows among women over 70. Weekday-muted, holiday-hungry appetite and 'being off needs a reason' pressure autonomy and cohesion. Children's growth data stay unresolved, and the Novo scandal erodes trust, though the harms are mostly normalised rather than acute.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. Adoption is +2.2 pp, the AUD approval comes in Jan 2033, the Wegovy pill 50 mg parity form is approved Mar 2034 under the envelope's rules, the CMS rule and Novo scandal are dated events, and no new safety signal appears. mechanism: Most chains are shown (AUD to Medicaid coverage, PDC rule to holidays to exception code, Medicare default to oral share), but the unsupported Medicaid enhanced match and the days-scale 'holiday' pharmacology are asserted rather than shown. magnitude: Population figures sit inside the envelope, and the payer mix, Part D spend ($43.2B) and Medicaid spend ($12.6B) multiply out. The 65+ check absorbs all older users into Medicare, and Medicaid more than doubles to 7.0M in a year, which is aggressive.",
+        "generativity": "The Dolores Reyes scene gives concrete texture: the 6:40 pill, the blinking scale, the church-bulletin PDC arithmetic, the pickleball gossip, the doctor's interruption order for a wedding. The world implies many other scenes: Villages weigh-ins, Columbus clinic-shot workers, Bardstown mothballed lines, and Louisville Medicaid users who can get the pill for drinking but not for weight."
+      },
+      "plausibility": 6.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Imported or counterfeit product is ~6.4M (10.7%), down from 7.5M as Medicaid AUD and obesity coverage absorbed part of the bottom third.",
+        "field": "world/population/note",
+        "why": "Mechanism: the gray market is said to shrink even as ~1.2M people are cut at Medicare checkpoints and sent to cash or the mail. Medicaid obesity coverage reaches only 13 states, and the chain from those states to the bottom third's switching is asserted, not shown."
+      },
+      {
+        "quote": "Five million older Americans joined in a year, many moving off the cash channel",
+        "field": "prose/paragraph_2",
+        "why": "Magnitude and mechanism: the world gives ~5.0M on the obesity route, yet also removes ~1.2M at the August checkpoint. The prose does not say whether 5M is gross or net, and the first-year ramp of ~5M plus mailed cellular scales is aggressive."
+      },
+      {
+        "quote": "She does the arithmetic on a church bulletin: three days off puts her at 81.",
+        "field": "prose/a_day_in_the_life",
+        "why": "Mechanism: a proportion-of-days-covered figure measured over a six-month window would fall only ~1–2 points from three missed days, not five. The prose contradicts the world's own PDC mechanism."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.67,
+      "inequality": 5.17,
+      "public_health": 5.33,
+      "cohesion": 5.17,
+      "epistemic": 5.17,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.5,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.08,
+    "generativity": 8.17,
+    "rationale": {
+      "badness": "Federal benefits conditioning (mailed connected scales, PDC ≥80%) removed ~1.2M people at the first checkpoint, creating a visible regain cohort. Added to that are mainstream flatness managed by 'holidays', Novo's concealment scandal, and rising teen oral use with the child growth question unresolved. Offsetting benefits are real: AUD treatment, Medicaid coverage in 13 states and fewer gray-market users soften inequality and public health, so this is a harder society with new losers rather than a structural horror.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and dated events: adoption +2.2pp, managed decline, Medicare/Medicaid expansion, AUD approval, 50 mg pill parity, Novo scandal, normalisation, conditioning, and flatness as a mainstream complaint. 'Safety_signal: none' holds, because the scandal concerns when Novo knew, not new risk. mechanism: the causal chains are mostly shown (AUD to Medicaid mandate, CMS rule to PDC rule to holidays to exception code), but the gray-market shrinkage and the five-million first-year ramp are asserted, and Dolores's 86-to-81 arithmetic does not fit a six-month PDC window. magnitude: all headline figures sit inside the envelope (21.8%, 32.6%, income thirds averaging 21.8, age check, cycling arithmetic, payer mix summing to 59.7M, Part D $43.2B, Medicaid $12.6B), and approval timing respects the 12-month rule. The remaining gaps are the unclear gross/net 5M obesity-route count against the 1.2M removed, and the oral amycretin phase 3 readout, which the parent world never mentioned.",
+      "generativity": "There are many distinct implied scenes: The Villages pickleball gossip over who failed the weigh-in, wedding and Thanksgiving 'holiday' dinners, the interruption-order phone call, and Columbus clinic-shot workers with no flexibility. Dolores's day shows rather than explains, with the scale blinking green, the bulletin arithmetic and the Novo leaflet folded into the drawer. Dating tags ('on', 'holidaying', 'off') and 'holiday-only intimacy' give further texture."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.418,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 31
   }
 }

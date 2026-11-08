@@ -63,6 +63,41 @@
         "input_tokens": 31656,
         "output_tokens": 12729
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r18-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27442,
+        "output_tokens": 5742
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r18-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27442,
+        "output_tokens": 1273
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r18-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27442,
+        "output_tokens": 6088
+      }
     ]
   },
   "validation": {
@@ -74,6 +109,10 @@
         "(root): must be an object with exactly the keys 'world' and 'prose'"
       ],
       "repaired": true
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
   },
   "world": {
@@ -335,5 +374,185 @@
     "headline": "On Holiday: America's New Pill Matches the Shot, and Eight Million People Have Put the Drugs Down Anyway",
     "world_in_600_words": "At the end of 2034 about one American adult in six takes an incretin drug, some forty-five million people. That is eight million fewer than two years ago, though the share who have ever tried one has not moved. Nobody stopped believing in the drugs. They stopped for ordinary reasons: their employer dropped the coverage, a lawyer advertised during the evening news, the flatness got to them, or they decided to take July off.\n\nIn October 2033 the drug that was supposed to change everything arrived. Novo Nordisk's oral amycretin, sold as Amvela, is a daily pill that took off about a fifth of body weight in its trials, as much as the best weekly shot. The needle stopped being a reason to refuse. Price still is. Amvela lists at $1,199 and sells for $299 a month through the government's cash channel, and most of its three million users are people who switched from an injection. The Wegovy pill's maintenance dose fell to $179, and the starting dose is still $149. Pills now make up well over half of all use.\n\nWho pays changed further. Only a quarter of employers still cover the drugs for weight loss. What remains of commercial coverage sits on diabetes, heart and sleep-apnoea codes, or inside monitored plant-clinic programmes where the monthly shot is logged for the wellness vendor. Medicare still covers only the old codes, at roughly thirty billion dollars a year. The gray market shrank. It shrank because people tired of bad batches, and no enforcement campaign had much to do with it. Six million people still buy by mail, and the newest fakes are pills.\n\nThe flatness now has a name on the label. A federal study found that maintenance doses roughly double the rate of diagnosed anhedonia, and in January every label gained a line about reduced interest. The complaint was already common, and the label made it official. One user in four has turned their dose down or taken a holiday, usually four to twelve weeks off to feel things again: food, wine, sex, grief. Some employers' wellness vendors now code a sanctioned holiday like leave. Others count it as non-adherence and charge for it, so the warehouse worker stays on and the manager takes August off. Meanwhile the same reward-dampening effect has an approved use of its own. Oral semaglutide has been approved for heavy drinking since February 2033, and the telehealth quiet-mind plans now prescribe under that label.\n\nIn Charlotte's southern suburbs nobody remarks on being on. People remark on being off. The question at dinner is whether the host is on this month, and the acceptable answer when someone's face softens is 'holiday'. In Memphis the same face usually means someone stopped and no restart is planned. Grocery planners talk about holiday baskets. Bars and sportsbooks see surges in January and July.\n\nThe courts are busier than the legislatures. Nearly ninety thousand people have sued over gastroparesis, bowel obstruction and pancreatic damage. A Philadelphia jury found the gastroparesis science too thin. A New Jersey jury awarded eleven and a half million dollars to a woman whose pancreatic insufficiency developed before the warning reached the label. Novo has set aside about three billion dollars. No settlement exists.\n\nIn March the FDA approved Wegovy for children as young as six, for severe obesity only, with height checks every six months and a review if growth falls off. The earlier liraglutide children are still growing more slowly than expected three years in. Hearings were held and no bills passed. No state acted. From outside, the country looks settled into its routine: a pill each morning, a break each summer, and a lawyer's number on the screen.",
     "a_day_in_the_life": "Lena Hart takes her Wegovy pill at 5:40 with four ounces of water, standing at the sink, then waits the thirty minutes. It is the $179 one now. The plant-clinic MariTide ended in January, when Kessler Freight dropped weight management and kept the diabetes codes, and she doesn't have diabetes.\n\nAt the Grove City office Marcy from payroll is eating a full turkey club at 10 a.m. 'Holiday,' Marcy says, before anyone asks. 'Six weeks. Coach says I'll hold the lean.' Nobody says anything else about it.\n\nAt lunch Lena eats four crackers and half a cheese stick and feels nothing about it, the same nothing she has felt about most things since spring. Her husband Dale said so last week, not unkindly: you used to laugh at the dog.\n\nOn the drive home the radio runs the ad again. Diagnosed with gastroparesis or pancreatic insufficiency after taking a weight-loss drug? She has had the diarrhoea since 2031, back when she was on Ozempic. She writes the number on a receipt and puts it in the cup holder.\n\nThe pediatrician's portal has a message about Kayla, who is ten. The new approval, it says. Worth a conversation. Growth checks every six months. Lena reads it twice and closes it.\n\nAfter dinner, which she mostly watches, she opens the TrumpRx app and looks at the Amvela price, $299, then at the pause button on her own refill. Dale is in the yard throwing the ball for the dog.\n\nShe taps pause. Eight weeks, it asks. She sets it to six, the same as Marcy."
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r18-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism: it sits badly beside the same entry's \"half to two-thirds regain within 18 months\", because 40% regained in about two months is far faster. It also makes the prestigious 'well-managed holiday' and Marcy's 'I'll hold the lean' hard to believe."
+        },
+        {
+          "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth.",
+          "field": "world/population/note",
+          "why": "Magnitude: this is a convenient reconciliation that pins ever-used at exactly 28.8%. It needs a high death count among ever-users and very low new starts in a window with an oral launch and an AUD label."
+        },
+        {
+          "quote": "~0.18 on Wegovy since its March 2034 6–11 approval",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: 0.18% of 6–11s is roughly 40–45k children within nine months on a severe-obesity-only label with growth-chart prior authorisation. Under-12 starts had been falling and AAP guidance favours lifestyle-first, so the speed is unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Use falls to 16.4% through coverage loss and litigation, while regain rises (obesity 34.6%) and the 2032 inequalities persist in new forms. Penalised 'holidays' cost blue-collar workers up to 30% of the premium differential, and Wegovy is now approved for 6–11-year-olds despite a growth deficit of about 0.5–0.7 cm a year. Anhedonia is nameable and labelled, which keeps the epistemic score lower, and there is no collapse or spectacle, so it sits at a harder-society 5.5.",
+        "plausibility": "driver_fidelity: Every driver is visible and traceable. Adoption is -3.2 pp, employer coverage falls 30→24%, oral amycretin is filed Sep 2032 and approved Oct 2033 (13 months), AUD is approved Feb 2033, Wegovy 6–11 in Mar 2034, the MDL passes 88k claims, there is no shock and no state action, and anhedonia becomes a label complaint. mechanism: Most chains are shown (litigation ads and coverage loss lead to stopping, the pill removes the needle, holidays follow flatness). The unexplained 40% regain in eight weeks, the fast Wegovy 6–11 uptake and the top-third decline attributed to litigation ads are asserted. magnitude: Population figures sit inside the envelope, and payer mix sums to 45.1M, Medicare spend multiplies out, and age, income and cycling arithmetic all reconcile. The ever-used coincidence and the 2.0M-deaths figure are strained but not out of range.",
+        "generativity": "The prose gives strong scenes: Lena at the sink, Marcy's 'Holiday' turkey club, the lawyer-ad number on a receipt, Kayla's portal message, the pause button set to six weeks. The world fields add quarterly 'holiday' promotions, on/off/holiday app fields, 'Eight Weeks' on Netflix, and January and July spikes at bars and sportsbooks. Class and regional texture (Charlotte, Memphis, Columbus) is rich."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L2-r18-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth.",
+          "field": "world/population/note",
+          "why": "Ever-used is held at exactly 28.8% while the note claims ~0.9M net gain in ever-users, and ~2.0M deaths among ~78M ever-users in two years is arithmetic-forced rather than shown; 2.9M first-time starts also looks very low next to ~23% never-used obese adults and the heavy telehealth/oral growth in the same window."
+        },
+        {
+          "quote": "Wegovy is now approved for six-to-eleven-year-olds while the liraglutide growth deficit persists at 36 months",
+          "field": "world/open_tensions/0",
+          "why": "A one-year-after-filing approval for semaglutide in 6–11 despite an FDA Drug Safety Communication and a persistent growth deficit is a thin causal chain; the candidate asserts approval without showing why FDA reversed its caution."
+        },
+        {
+          "quote": "The gray market shrank from ~7.5M to ~6.0M. Nothing new stopped it. Repeat-batch fear, slow attrition and $179–299 legitimate orals drained it.",
+          "field": "world/access/note",
+          "why": "Gray market falling 20% while the $4–30 Indian generic price gap persists, tablets enter the mail, and bottom-third coverage is lost is weakly motivated; a 40–50x price gap cuts the other way, so the shrinkage is asserted rather than caused."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society: anhedonia is normalised and managed through holidays; adherence premiums penalise blue-collar workers who cannot take holidays; a Wegovy 6–11 approval is monitored most closely by those most able to decline; and regain is rising (obesity 34.6%). Harms are nameable and measured (label language, litigation), which keeps epistemic and overall below the structural-and-hidden range, and the net user decline is partly a relief.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised: adoption falls 3.2pp to 16.4, employer coverage drops to 24%, oral amycretin (Amvela), AUD and Wegovy 6–11 approvals, the MDL, no market shock, no state action, and the anhedonia label. The pediatric and mood indications use the permitted filings-plus-12-months timing. mechanism: Most changes have chains (litigation and coverage loss lead to stops, anhedonia leads to holidays), but the gray-market shrinkage, the FDA's approval of Wegovy for 6–11 after its safety communication, and the ever-used flat line are asserted. magnitude: Population is inside the envelope and the payer mix sums to 45.1M, but the ever-used figure is held flat with strained start/death arithmetic, and Amvela's 3.2M users are said to be mostly injectable switchers while the cash/commercial counts (2.3M+0.9M) are only partly reconciled with the legitimate cash 13.7M.",
+        "generativity": "Strong texture: holiday-cycle rituals, the Charlotte versus Memphis face reading, and app on/off/holiday fields. The day-in-the-life with Lena, Marcy, Dale and Kayla implies scenes and relationships, shows rather than explains, and ends on a concrete act (pausing her refill)."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s4-L2-r18-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+          "field": "world/safety_ledger/7/prevalence_note",
+          "why": "Mechanism and magnitude: the parent world says half to two-thirds regain over 18 months, so about 40% back in 8 to 12 weeks is very fast. It is also stated precisely with no cohort or source, despite the 'uncharacterised' caveat elsewhere."
+        },
+        {
+          "quote": "legitimate cash (TrumpRx, direct, telehealth) ~13.7M (including ~1.9M on quiet-mind or AUD-coded telehealth plans)",
+          "field": "world/population/note",
+          "why": "Mechanism: employer retreat and cheaper $179 to $299 orals should push users into the cash channel. Instead cash falls from ~17.6M to 13.7M, even with 2.3M new cash Amvela users and growing telehealth plans, so the rest of cash must have lost over 6M users with no chain shown."
+        },
+        {
+          "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users",
+          "field": "world/population/note",
+          "why": "Magnitude: the ever-used share is pinned at exactly 28.8% by balancing implausibly low new adult starts, during an oral launch that sold 3.2M units, against a roughly 2M death toll. The fit reads as back-solved to the envelope rather than derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a harder society with new losers. Adherence-premium rules penalise holidays, so blue-collar workers stay on while salaried staff take breaks. Regain is concentrated in Memphis and the lost-coverage bottom third, and a 10-year growth registry follows a 6–11 approval whose monitoring is weakest where children are poorest. The harms are named and measured (anhedonia labelling, MDL, registries), which keeps epistemic badness low, and nothing is melodramatic, so it sits near a 5.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption falls by 3.2 points, employer coverage goes 30→24, oral amycretin is approved Oct 2033 after a Sep 2032 filing, and the AUD approval carries mood_and_motivation, which is thin but allowed. The litigation and normalisation drivers are traced through events. mechanism: Most chains are shown, but the 22% drop in cash users despite cheaper orals and employer retreat is unexplained, and the 40% regain during holidays is asserted (claims 1 and 2). magnitude: Adults on drug is 16.4 (inside 14.4–18.4), ever-used is held at 28.8, payer mix sums to 45.1M, and the Medicare arithmetic multiplies out. The cycling arithmetic reconciles, and approval timings obey the 12-month rule. The remaining weakness is the back-solved starts and deaths balance (claim 3).",
+        "generativity": "Concrete scenes imply many characters, such as Marcy's turkey club, the receipt with the lawyer's number, Kayla's portal message and the pause button set to six weeks. The world also supplies texture like holiday nights, 'holiday sex' and January/July wagering surges, so a film could be built from it. The prose leans slightly on explanation in its opening sections."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Planned holidays of 8+ weeks recover ~40% of lost weight on average and restart is slower with each holiday.",
+        "field": "world/safety_ledger/7/prevalence_note",
+        "why": "Mechanism: it sits badly beside the same entry's \"half to two-thirds regain within 18 months\", because 40% regained in about two months is far faster. It also makes the prestigious 'well-managed holiday' and Marcy's 'I'll hold the lean' hard to believe."
+      },
+      {
+        "quote": "About 2.9M first-time starts over two years, minus ~2.0M deaths among ever-users, leave a net gain of ~0.9M, which only keeps pace with population growth.",
+        "field": "world/population/note",
+        "why": "Magnitude: this is a convenient reconciliation that pins ever-used at exactly 28.8%. It needs a high death count among ever-users and very low new starts in a window with an oral launch and an AUD label."
+      },
+      {
+        "quote": "~0.18 on Wegovy since its March 2034 6–11 approval",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: 0.18% of 6–11s is roughly 40–45k children within nine months on a severe-obesity-only label with growth-chart prior authorisation. Under-12 starts had been falling and AAP guidance favours lifestyle-first, so the speed is unexplained."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.5,
+      "inequality": 6.0,
+      "public_health": 5.5,
+      "cohesion": 5.0,
+      "epistemic": 4.33,
+      "overall": 5.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.67,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.37,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Use falls to 16.4% through coverage loss and litigation, while regain rises (obesity 34.6%) and the 2032 inequalities persist in new forms. Penalised 'holidays' cost blue-collar workers up to 30% of the premium differential, and Wegovy is now approved for 6–11-year-olds despite a growth deficit of about 0.5–0.7 cm a year. Anhedonia is nameable and labelled, which keeps the epistemic score lower, and there is no collapse or spectacle, so it sits at a harder-society 5.5.",
+      "plausibility": "driver_fidelity: Every driver is visible and traceable. Adoption is -3.2 pp, employer coverage falls 30→24%, oral amycretin is filed Sep 2032 and approved Oct 2033 (13 months), AUD is approved Feb 2033, Wegovy 6–11 in Mar 2034, the MDL passes 88k claims, there is no shock and no state action, and anhedonia becomes a label complaint. mechanism: Most chains are shown (litigation ads and coverage loss lead to stopping, the pill removes the needle, holidays follow flatness). The unexplained 40% regain in eight weeks, the fast Wegovy 6–11 uptake and the top-third decline attributed to litigation ads are asserted. magnitude: Population figures sit inside the envelope, and payer mix sums to 45.1M, Medicare spend multiplies out, and age, income and cycling arithmetic all reconcile. The ever-used coincidence and the 2.0M-deaths figure are strained but not out of range.",
+      "generativity": "The prose gives strong scenes: Lena at the sink, Marcy's 'Holiday' turkey club, the lawyer-ad number on a receipt, Kayla's portal message, the pause button set to six weeks. The world fields add quarterly 'holiday' promotions, on/off/holiday app fields, 'Eight Weeks' on Netflix, and January and July spikes at bars and sportsbooks. Class and regional texture (Charlotte, Memphis, Columbus) is rich."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.933,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 38
   }
 }

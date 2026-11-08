@@ -52,6 +52,41 @@
         "input_tokens": 18797,
         "output_tokens": 21911
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r42-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28416,
+        "output_tokens": 6374
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r42-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28416,
+        "output_tokens": 6929
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r42-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28416,
+        "output_tokens": 7059
+      }
     ]
   },
   "world": {
@@ -333,6 +368,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r42-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Brands used the reprieve to cut prices step by step rather than face a cliff.",
+          "field": "world/access/note",
+          "why": "mechanism: generic entry slipping to 2035 removes the pricing pressure, so a voluntary cut to $179 the same week is the opposite of what the parent's logic implies. The parent's own stall rested on the government not pressing once generics were settled."
+        },
+        {
+          "quote": "Semaglutide AUD was filed Jan 2033 on two phase 3 drinking-days trials plus the VA pragmatic study, and approved Feb 2034.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: the parent world lists no AUD phase 3 programme, only anecdotal EAP prescribing, and describes a data-demanding FDA. Two completed phase 3 trials and a filing within about 5 months are asserted with no chain."
+        },
+        {
+          "quote": "Roughly two children in five now live with a parent who is on the drug or cycling off it.",
+          "field": "world/population/note",
+          "why": "magnitude: the figure rises from about one in three to two in five, a roughly 20% relative jump. Adult ever-use rose only about 13% relative and current use 2.7 points, so the shift outruns the adult figures it should follow."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms deepen on top of 2032. Excess hip fractures rise to about 15,500 a year, about 1.1M public-plan suspensions occur for missed kiosk weigh-ins, and the 12 mg restriction produces a regain wave in older women. Autonomy is hit hardest through conditioning: drug courts adopt semaglutide, state-employee plans tie premium credits to adherence, and school nurses make referrals for 6–11s. Inequality persists in care quality (kiosks and suspensions versus DEXA and antiresorptives), and about 130k children are exposed to a drug with uncertain growth data. The harms are measured and nameable, and the AUD label even mentions anhedonia, so this reads as a harder society rather than an extreme one.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption rises exactly 2.7 points, managed decline is a ~10% price cut, public expansion adds seven states and a $179 rate, and both new indications and the scandal appear as events. next_gen_launch 'none' is honoured with CRLs and a bimagrumab filing. mechanism: most chains are shown (scandal, label restriction, regain wave, Trustees counting fractures, AUD to drug courts). The $179 price cut after generics slip, and the unexplained AUD phase 3 programme and fast approval, are asserted or run against incentives (claims 1 and 2). A minor inconsistency also exists between 'from Jan 2033' in the note and a March 2033 settlement date in the event. magnitude: current use 27.7% and ever-use 40.0% sit inside the envelope, and the age bands, payer mix (75.9M), Medicare, Medicaid and Trustees dollar figures and the 71.6M × $172 market figure all multiply out. The only blemishes are a 38.2% versus 38.3% public share and the children-with-a-parent jump in claim 3.",
+        "generativity": "The prose follows Krystal through the Walgreens kiosk, Eli's growth check, Mrs. Teague on a bone pause, Mr. Ortiz's Quiet subscription beside his sobriety chip, and the two-table birthday party. These are concrete, filmable scenes, and the fields add more (drug-court menus, mobile DEXA vans, school-nurse referrals, 'sober (sema)' profiles). Some of the prose is still explanatory summary, but the day-in-the-life shows more than it tells."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s4-L3-r42-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Brands used the reprieve to cut prices step by step rather than face a cliff.",
+          "field": "world/access/note",
+          "why": "mechanism: a delayed generic entry removes pricing pressure, so it cannot explain a $199 to $179 cut. HHS talks collapsed in 2031, and nothing shown explains why the deal succeeded in Oct 2033."
+        },
+        {
+          "quote": "Roughly two children in five now live with a parent who is on the drug or cycling off it.",
+          "field": "world/population/note",
+          "why": "magnitude: adult current use rose only 2.7 points, about 11% relative. The parent's one-in-three shares would not plausibly reach two in five in two years without a shown chain."
+        },
+        {
+          "quote": "12 mg users fell from about 2.5M to about 2.0M",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "mechanism: the label restriction covers only women ≥60 with T-score ≤−2.0 who are not on an antiresorptive, plus Medicare prior authorisation. That narrow group cannot account for a 500k (20%) drop in 12 mg users and a 'visible wave' of regain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 6.0,
+        "inequality": 6.0,
+        "public_health": 5.5,
+        "cohesion": 5.0,
+        "epistemic": 5.0,
+        "overall": 5.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, but not structurally hidden harm. Excess hip fractures rise to about 15,500 a year, 1.1M public-plan suspensions for missed kiosk weigh-ins land on the bottom third, and 130k children aged 6–11 are newly exposed with growth signals. Drug courts and premium credits tie adherence to coercion. The Lilly disclosure and the Trustees' fracture counting make the harms more nameable than in 2032, which keeps epistemic and overall scores moderate.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. Adoption is +2.7, price falls by managed decline, public expansion goes from 31 to 38 states, AUD and 6–11 labels are approved, the Lilly scandal and bone wave appear, no new class launches, and normalisation and the marketed personality layer persist. mechanism: the main chains are shown (CRL, scandal, restriction, regain wave, Trustees costing). The price-cut logic is backwards (claim 1), the 12 mg user drop is oversized relative to a narrow restriction (claim 3), and the AUD reclassification of about 0.7M existing users is asserted. magnitude: population figures are inside the envelope (27.7%, ever 40.0%, income thirds bracket). Payer mix, Medicare and Medicaid spend, fracture cost, market revenue and age bands all multiply out, and filing-to-approval gaps exceed 12 months. The only slips are the 38.2% vs 38.3% and 100.1% rounding and the two-in-five child figure (claim 2).",
+        "generativity": "The day-in-the-life gives concrete scenes with named characters: a Medicaid kiosk weigh-in, Eli's growth check, the two-table birthday party, the Tasha cake corner, and Mr. Ortiz's sobriety chip beside his Quiet subscription. The world fields add texture such as community-college lifting certificates, drug-court Vivitrol menus and 'sober (sema)' dating profiles. Some of the prose is summary rather than shown."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s4-L3-r42-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Brands used the reprieve to cut prices step by step rather than face a cliff.",
+          "field": "world/access/note",
+          "why": "mechanism: A reprieve from generic entry removes price pressure, so cutting price to $179 in the same week generics fail to launch runs against the stated logic. The parent's collapsed HHS talks and tariff-cost excuses are never reconciled with the reversal."
+        },
+        {
+          "quote": "total top-dose triple/dual users are about 6M, implying on the order of 400k excess cases of clinically meaningful anhedonia if causal",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "magnitude: The 12% vs 5% SHAPS contrast is stated for 12 mg retatrutide users, who are now about 2.0M. Applying the 7-point excess to 6M overstates the cases about threefold (about 140k on 2.0M), so the figure does not reconcile with the note's own counts."
+        },
+        {
+          "quote": "About 820k are adolescents 12+ (Medicaid EPSDT and commercial).",
+          "field": "world/population/note",
+          "why": "mechanism: The parent had about 580k pediatric users, mostly adolescents. Adolescent use now implies a rise of roughly 300k (about 50%) in two years with no driver or causal chain shown, since the only pediatric driver concerns under-12s."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Rising excess hip fractures (about 15,500 a year), about 1.1M public-plan suspensions for missed kiosk weigh-ins, a 6–11 pediatric label with unresolved growth signals, and drug courts using semaglutide as probation conditions together make a harder society. Autonomy and inequality score highest: conditioning spreads to 38 states, and care quality diverges by income and by gated versus Medicare plans. Cohesion and epistemic harms are real but not extreme. The Lilly data-integrity scandal hurts trust, yet harms are being measured and named, and DEXA waits are improving.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised. These are +2.7pp adoption, managed decline to $179, public expansion to 38 states, AUD and 6–11 labels, the bone wave, a Lilly scandal, normalisation, conditioning, and the marketed-feature personality layer. next_gen_launch 'none' is honoured in pipeline_note. mechanism: Most chains are shown, including exits offsetting enrolment, the scandal leading to the 12 mg restriction and regain, and fractures leading to Trustees costing them and the bone-pause extension. Weak spots are the price cut timed to generic failure, the fast drug-court adoption, and the unexplained jump in adolescent use (claims 1 and 3). magnitude: Current use of 27.7% and ever-use of 40.0% are inside the envelope, and the age bands, income thirds, cycling arithmetic, payer mix, Medicare and Medicaid spend, fracture cost and market revenue all reconcile. AUD and 6–11 approval timing is legal. The deductions are the payer mix summing to 100.1% and the anhedonia estimate applying a 12 mg rate to all top-dose users (claim 2).",
+        "generativity": "The Krystal Moody day is concrete and shows rather than explains: the Walgreens kiosk beside the blood-pressure cuff, Eli's growth check, the two birthday tables and Tasha's slipped cake. It implies several threads with their own stakes, including the second-miss suspension risk, Mrs. Teague on a bone pause, and Mr. Ortiz's 'Quiet' subscription beside his sobriety chip. The world fields add detail on drug courts, school-nurse referrals and the backlash coalition. It leans slightly on staged emotional beats."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Brands used the reprieve to cut prices step by step rather than face a cliff.",
+        "field": "world/access/note",
+        "why": "mechanism: generic entry slipping to 2035 removes the pricing pressure, so a voluntary cut to $179 the same week is the opposite of what the parent's logic implies. The parent's own stall rested on the government not pressing once generics were settled."
+      },
+      {
+        "quote": "Semaglutide AUD was filed Jan 2033 on two phase 3 drinking-days trials plus the VA pragmatic study, and approved Feb 2034.",
+        "field": "world/drugs/pipeline_note",
+        "why": "mechanism: the parent world lists no AUD phase 3 programme, only anecdotal EAP prescribing, and describes a data-demanding FDA. Two completed phase 3 trials and a filing within about 5 months are asserted with no chain."
+      },
+      {
+        "quote": "Roughly two children in five now live with a parent who is on the drug or cycling off it.",
+        "field": "world/population/note",
+        "why": "magnitude: the figure rises from about one in three to two in five, a roughly 20% relative jump. Adult ever-use rose only about 13% relative and current use 2.7 points, so the shift outruns the adult figures it should follow."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.67,
+      "inequality": 6.33,
+      "public_health": 5.83,
+      "cohesion": 5.33,
+      "epistemic": 5.5,
+      "overall": 6.03
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.97,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Harms deepen on top of 2032. Excess hip fractures rise to about 15,500 a year, about 1.1M public-plan suspensions occur for missed kiosk weigh-ins, and the 12 mg restriction produces a regain wave in older women. Autonomy is hit hardest through conditioning: drug courts adopt semaglutide, state-employee plans tie premium credits to adherence, and school nurses make referrals for 6–11s. Inequality persists in care quality (kiosks and suspensions versus DEXA and antiresorptives), and about 130k children are exposed to a drug with uncertain growth data. The harms are measured and nameable, and the AUD label even mentions anhedonia, so this reads as a harder society rather than an extreme one.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption rises exactly 2.7 points, managed decline is a ~10% price cut, public expansion adds seven states and a $179 rate, and both new indications and the scandal appear as events. next_gen_launch 'none' is honoured with CRLs and a bimagrumab filing. mechanism: most chains are shown (scandal, label restriction, regain wave, Trustees counting fractures, AUD to drug courts). The $179 price cut after generics slip, and the unexplained AUD phase 3 programme and fast approval, are asserted or run against incentives (claims 1 and 2). A minor inconsistency also exists between 'from Jan 2033' in the note and a March 2033 settlement date in the event. magnitude: current use 27.7% and ever-use 40.0% sit inside the envelope, and the age bands, payer mix (75.9M), Medicare, Medicaid and Trustees dollar figures and the 71.6M × $172 market figure all multiply out. The only blemishes are a 38.2% versus 38.3% public share and the children-with-a-parent jump in claim 3.",
+      "generativity": "The prose follows Krystal through the Walgreens kiosk, Eli's growth check, Mrs. Teague on a bone pause, Mr. Ortiz's Quiet subscription beside his sobriety chip, and the two-table birthday party. These are concrete, filmable scenes, and the fields add more (drug-court menus, mobile DEXA vans, school-nurse referrals, 'sober (sema)' profiles). Some of the prose is still explanatory summary, but the day-in-the-life shows more than it tells."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.916,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 8
   }
 }

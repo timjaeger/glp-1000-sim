@@ -36,6 +36,41 @@
         "input_tokens": 19246,
         "output_tokens": 25066
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r08-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29713,
+        "output_tokens": 5699
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r08-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29713,
+        "output_tokens": 7081
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r08-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29713,
+        "output_tokens": 7098
+      }
     ]
   },
   "world": {
@@ -331,6 +366,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r08-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "within months eleven states authorise problem-gambling funds drawn from sports-betting taxes to pay for it",
+          "field": "world/events/4/event",
+          "why": "mechanism: eleven state legislatures or agencies redirecting earmarked betting-tax funds to a newly approved drug within about eight months, with no shown process, is a very fast and convenient diffusion."
+        },
+        {
+          "quote": "Deliberate dose holidays in the past year are down to ~25% of long-term users.",
+          "field": "world/safety_ledger/reward blunting",
+          "why": "mechanism: a drop from 45% to 25% in two years is explained only by a guidance document and Bridge de-escalation rules, while the 80% PDC conditions that drove skip-but-fill remain. The change is asserted rather than shown."
+        },
+        {
+          "quote": "$329 (retatrutide, from Sep 2034, now on Bridge and most Medicaid formularies)",
+          "field": "world/access/note",
+          "why": "magnitude: Bridge and Medicaid payment is stated as a flat $199/month, and spending is computed at $199 for all users. Retatrutide is priced at $329 and also has ~9M US users, so the public spending figures do not fully reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 5,
+        "public_health": 6,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Conditioning is still the dominant access tool: about 9M adults have been cut off at least once, seven Medicaid waivers remain, and ~55% of employers attach conditions. Hip fractures (~22,000 excess a year), denosumab rebound, the cycling muscle ratchet and 65+ uptake accumulate quietly. Normalisation makes being off the thing that draws questions, and a child cohort has never eaten at a table without a drug. The harm is more nameable and the grey has faded, which softens epistemic, cohesion and interior-life scores, and the thinness divide narrows. Overall it is a recognisably harder society with new losers, not a catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 10.4 pp exactly. Managed decline appears in the price cuts. The gambling-disorder label covers compulsive behaviour. The bone wave, the Lilly DEXA scandal, normalisation, the HRSA subsidy expansion, retatrutide mass access and the 'niche side effect' framing are all present, and the generic stays blocked. mechanism: Most chains are shown (CRLs, the HRSA expansion, the DEXA disclosure, the persistence arithmetic). The eleven-state gambling-fund adoption and the 45%→25% dose-holiday fall are asserted (claims 1 and 2). magnitude: On-drug 38.3 and ever-used 48.8 are inside the envelope, the income thirds and age bands reconcile, the payer shares sum to 100% with matching counts, and the Bridge, Medicaid, HRSA, DoD and gambling-fund arithmetic checks out. Approval timings are 15, 13 and a Sep 2033 amycretin approval, all legal. The one gap is the $329 retatrutide price against the flat $199 public payment rate (claim 3).",
+        "generativity": "The Rosa Delgado vignette is concrete. The Pueblo kitchen, the cut-down chili, the voucher protein bar, the DEXA 'a little thin for fifty-eight' and the unattended Thursday class all imply a life. Marco's gambling-fund text, Denise's 'She's off?', Luis's refusal and the pen beside the butter add texture and implied scenes, and the world fields (festival billing, HRSA protein vouchers, 'pen day' at school) add more."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L1-r08-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Deliberate dose holidays in the past year are down to ~25% of long-term users.",
+          "field": "world/safety_ledger/reward_blunting_prevalence_note",
+          "why": "mechanism: a drop from ~45% to ~25% in two years rests on an OMA/ADA guidance document and unspecified Bridge de-escalation rules. That is a large behavioural reversal, and it is asserted rather than shown. The Bridge de-escalation rule also sits badly with 'same structure and conditions' and the status_quo coverage driver."
+        },
+        {
+          "quote": "Novo cut first to stay ahead of eventual generics, and Lilly matched under the Strategic Supply Agreement.",
+          "field": "world/access/note",
+          "why": "mechanism: the FDA's complete response letters removed the generic threat (no decision before 2035), so a price cut to pre-empt generics is a weak causal link. Lilly's matching rests on an agreement that was meant to protect it."
+        },
+        {
+          "quote": "Bottom-third use rose most (21.7→32.9) because the FY2034 HRSA expansion added free semaglutide for obesity at health centres, and Medicaid volume grew inside the existing structure.",
+          "field": "world/population/note",
+          "why": "mechanism: an 11-point rise in the bottom third is roughly 10M users. HRSA grew only ~3.4M (3.6M to 7.0M), and the expansion landed around the turn of 2033-34, leaving little time to take effect. The rest of the jump is unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 4.5,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 3.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "About 103M adults are on drug. Conditioning persists in Medicare, seven Medicaid waivers and ~55% of covering employers, producing ~9M payer cut-offs and a ~40% cycler share with a body-composition ratchet. Hip-fracture excess is ~22k a year, with denosumab rebound and a Lilly scandal on top. Offsetting these, the grey fades, HRSA is unconditioned and growing, and the harms are measured and named. The result is a harder but legible society with new losers, so overall 5.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: Lilly DEXA scandal, bone wave, HRSA subsidy to $9.0B, gambling label, normalisation, niche side effect, and retatrutide mass access under the approval rules. Status_quo coverage is slightly strained by the Bridge de-escalation rule. mechanism: most chains are shown, but the three flagged claims are asserted (dose holidays 45% to 25%, the price cut after generics were blocked, the bottom-third jump), and the guidance behind the anhedonia decline is thin. magnitude: on-drug 38.3 and ever-used 48.8 are inside the envelope. The persistence and restart arithmetic, the payer shares (sum to 100%), Bridge, Medicaid, HRSA, DoD and gambling-fund spending, the age and income weightings, and the approval lags of 15 and 13 months all reconcile. Only small gaps remain.",
+        "generativity": "The world is rich in implied scenes: 'is it a pen day' in school lunch lines, 'between pens' on dates, a Pueblo HRSA clinic with protein vouchers, gambling-fund pill recipients, Scottsdale's 'bima build', and Open Table suppers. The Rosa Delgado vignette shows rather than explains, through the chili pounds, the Thursday class she can't attend, her son's text, and the squats counted in Spanish. A few beats are slightly expository, and the 'two years' pen detail strains the HRSA timeline."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s4-L1-r08-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Children born in 2029–30 are entering school having never eaten at a table where no adult was on a drug.",
+          "field": "world/population/note",
+          "why": "Fails mechanism and magnitude. With 38.3% of adults on drug and 51.2% of adults never users, a large share of households have no user, so a universal claim for this cohort contradicts the candidate's own figures."
+        },
+        {
+          "quote": "Bottom-third use rose most (21.7→32.9) because the FY2034 HRSA expansion added free semaglutide for obesity at health centres, and Medicaid volume grew inside the existing structure.",
+          "field": "world/population/note",
+          "why": "Fails mechanism. The stated channels add about 3.4M HRSA users and about 3.9M Medicaid users, while an 11-point rise across roughly 90M bottom-third adults needs about 10M. HRSA also began only in FY2034, so the expansion cannot carry the +11.2 points, and the middle third rose almost as much (+11)."
+        },
+        {
+          "quote": "Deliberate dose holidays in the past year are down to ~25% of long-term users.",
+          "field": "world/safety_ledger/10/prevalence_note",
+          "why": "Fails mechanism. Holidays nearly halve in two years even though conditioning persists and about 9M people are on 12 mg retatrutide. The cause offered is guidance and de-escalation rules, which is asserted rather than shown and sits close to a convenient fit with the niche_side_effect driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is harder but normalised. Conditioning is still the dominant rationing tool, about 9M people have been cut off by a payer condition, and hip-fracture admissions are up about 7%. The cycling body-composition ratchet and denosumab rebound add real, slow-burning harm, and a Lilly scandal sits over the retatrutide supply chain. Offsets are free HRSA access, falling prices, a shrinking 'grey', a narrowing backlash, and thinness no longer marking class, so overall sits near 5 with public_health highest.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is exactly +10.4. Gambling disorder is the compulsive_behaviour indication, the Lilly DEXA disclosure is the scandal, HRSA expansion is the subsidy, and retatrutide 12 mg moving to mass access realises the triple agonist. The reward-blunting framing is niche_side_effect and the 'hundred million on the pen' framing is normalisation. Adding retatrutide to Bridge and Medicaid formularies is a mild stretch of status_quo coverage. mechanism: Most changes have chains, but the bottom-third jump is under-explained by HRSA and Medicaid counts (claim 2). The 'never eaten where no adult was on a drug' line (claim 1) and the fall in dose holidays (claim 3) are asserted, and the FDA generic CRLs are a convenient way to keep generic_us false. magnitude: The envelope is respected: 38.3 on, 48.8 ever, and income thirds that bracket the national figure. The persistence and restart arithmetic, age-band weighting, payer mix (sums to 100%) and spending figures (Bridge $12.4B, Medicaid $30.8B, HRSA $8.78B, DoD $350M) all reconcile. Approval timing (bimagrumab 15 months, gambling 13 months) is allowed, though the gambling filing appears only in the pipeline note and not in the events.",
+        "generativity": "The Rosa Delgado scene in Pueblo has concrete texture: the chili quantities, the protein-bar voucher, the Thursday class she cannot attend, Marco's gambling text, Denise's 'She's off?', and the squats counted in Spanish. The world fields imply many more scenes, including school 'pen day' lunches, sportsbook redesign, chaplains and 'bima build' Scottsdale. A few narrative details, such as the pen sitting in the fridge for two years, strain the timeline."
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "within months eleven states authorise problem-gambling funds drawn from sports-betting taxes to pay for it",
+        "field": "world/events/4/event",
+        "why": "mechanism: eleven state legislatures or agencies redirecting earmarked betting-tax funds to a newly approved drug within about eight months, with no shown process, is a very fast and convenient diffusion."
+      },
+      {
+        "quote": "Deliberate dose holidays in the past year are down to ~25% of long-term users.",
+        "field": "world/safety_ledger/reward blunting",
+        "why": "mechanism: a drop from 45% to 25% in two years is explained only by a guidance document and Bridge de-escalation rules, while the 80% PDC conditions that drove skip-but-fill remain. The change is asserted rather than shown."
+      },
+      {
+        "quote": "$329 (retatrutide, from Sep 2034, now on Bridge and most Medicaid formularies)",
+        "field": "world/access/note",
+        "why": "magnitude: Bridge and Medicaid payment is stated as a flat $199/month, and spending is computed at $199 for all users. Retatrutide is priced at $329 and also has ~9M US users, so the public spending figures do not fully reconcile."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.5,
+      "inequality": 4.5,
+      "public_health": 5.83,
+      "cohesion": 4.0,
+      "epistemic": 3.83,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.67,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.93,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Conditioning is still the dominant access tool: about 9M adults have been cut off at least once, seven Medicaid waivers remain, and ~55% of employers attach conditions. Hip fractures (~22,000 excess a year), denosumab rebound, the cycling muscle ratchet and 65+ uptake accumulate quietly. Normalisation makes being off the thing that draws questions, and a child cohort has never eaten at a table without a drug. The harm is more nameable and the grey has faded, which softens epistemic, cohesion and interior-life scores, and the thinness divide narrows. Overall it is a recognisably harder society with new losers, not a catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 10.4 pp exactly. Managed decline appears in the price cuts. The gambling-disorder label covers compulsive behaviour. The bone wave, the Lilly DEXA scandal, normalisation, the HRSA subsidy expansion, retatrutide mass access and the 'niche side effect' framing are all present, and the generic stays blocked. mechanism: Most chains are shown (CRLs, the HRSA expansion, the DEXA disclosure, the persistence arithmetic). The eleven-state gambling-fund adoption and the 45%→25% dose-holiday fall are asserted (claims 1 and 2). magnitude: On-drug 38.3 and ever-used 48.8 are inside the envelope, the income thirds and age bands reconcile, the payer shares sum to 100% with matching counts, and the Bridge, Medicaid, HRSA, DoD and gambling-fund arithmetic checks out. Approval timings are 15, 13 and a Sep 2033 amycretin approval, all legal. The one gap is the $329 retatrutide price against the flat $199 public payment rate (claim 3).",
+      "generativity": "The Rosa Delgado vignette is concrete. The Pueblo kitchen, the cut-down chili, the voucher protein bar, the DEXA 'a little thin for fifty-eight' and the unattended Thursday class all imply a life. Marco's gambling-fund text, Denise's 'She's off?', Luis's refusal and the pen beside the butter add texture and implied scenes, and the world fields (festival billing, HRSA protein vouchers, 'pen day' at school) add more."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.799,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 40
   }
 }

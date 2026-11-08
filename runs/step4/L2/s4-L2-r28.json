@@ -52,6 +52,41 @@
         "input_tokens": 18533,
         "output_tokens": 19372
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r28-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28160,
+        "output_tokens": 5750
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r28-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28160,
+        "output_tokens": 7952
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r28-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28160,
+        "output_tokens": 6371
+      }
     ]
   },
   "world": {
@@ -313,6 +348,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r28-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Eleven states (Texas, Florida, Louisiana, Tennessee, Oklahoma, Arkansas, Indiana, Ohio, Utah, Missouri, West Virginia) enacted under-12 bans on weight-indication prescribing.",
+          "field": "world/state/regulatory_posture",
+          "why": "Mechanism: it asserts that eleven legislatures all passed bans in the single year 2034, with no bill or trigger shown. Several of these (Texas, for example) do not hold regular sessions in even years, and the parent world had no state action at all."
+        },
+        {
+          "quote": "Licensed 'metabolic health' microdose plans for adults without obesity reach about nine million subscribers",
+          "field": "world/events/2/event",
+          "why": "Mechanism: the 2032 world had no longevity channel beyond cash dementia-prevention use. Going to ~9M licensed subscribers in roughly 18 months is asserted, with only a clinic-lab-panel anecdote as cause. Calm plans took about a year to reach 1.3M."
+        },
+        {
+          "quote": "India agreed to require export registration for B2C pharmaceutical parcels (effective 2035), with no CBP mail agreement.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: in the parent world US–India talks had stalled, and here a quick concession follows the insulin-pen deaths with no negotiation shown. It reads as a convenient plot beat that lets the gray market keep growing."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 77M users, with 15.4M on gray product, produced a ~1,100 ED-visit, 19-death insulin-pen cluster. Employers prefer adherence-verified workers (twice the promotion rate, LSA reimbursement of calm fees), and the unmeasured low-dose anhedonia in ~16M non-obese users is a large unseen exposure. Restriction pushed users toward gray vials, and the ban mostly removed Medicaid children from care. That is a harder, more stratified, more normalised society, but the harms are partly nameable and discussed, so it stops short of the extreme end.",
+        "plausibility": "driver_fidelity: Every driver is visible. Adoption of 28% sits in the envelope, managed decline shows in the MariTide, TrumpRx and retatrutide cuts, and status-quo coverage shows in employers moving 30% to 29%. The longevity and compulsion indications are kept off-label, the retatrutide 12 mg dose realises the 30% triple agonist, the counterfeit shock is the insulin pens, restriction is the 11-state bans and in-person rules, and the employer-encouraged layer is LSA reimbursement. mechanism: Several shifts are asserted rather than shown (claims 1–3), and the gray-market doubling is attributed mostly to 2034 restrictions even though most of the growth predates them. The extra AUD and bimagrumab approvals follow the parent pipeline. magnitude: All headline figures sit inside the envelope (28 and 37.5), and the payer mix, cash breakdown, age and income checks and the Medicare and dementia spend all reconcile. Minor slack remains: the retatrutide sNDA approval about 9 months after filing, the loose pediatric percentages, and AUD fills counted as cash.",
+        "generativity": "Dana's shot day, the BAND CLASS? note, Ray's REAL RETA carton, Owen's ban and Mike's silence give a clear cast, and the plant clinic, huddle board and Telegram vials give daily-life texture. The world fields add many concrete scenes: the Ohio suit, Reset badges, Unmuted off nights, couples' therapists and LSAs. The prose shows rather than explains, though the opening summary section is expository."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s4-L2-r28-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Licensed 'metabolic health' microdose plans for adults without obesity reach about nine million subscribers, as longevity clinics in Austin, Miami and Scottsdale make low-dose semaglutide a standard line on the lab panel",
+          "field": "world/events/2/event",
+          "why": "Mechanism: the 2032 world had no licensed longevity base, and clinics in three cities cannot plausibly produce 9M subscribers within about a year. The ramp is asserted, with no supply, price or demand chain shown."
+        },
+        {
+          "quote": "Adult obesity is ~31.8%. ~19% of adults have obesity and have never used a drug, still concentrated in the bottom third, the rural South and 65+ adults without qualifying codes.",
+          "field": "world/population/note",
+          "why": "Magnitude: about 79% of the 76.7M current users (~60M, ~22% of adults) have BMI of 30 or more. Add 19% of adults who are obese and never used a drug and obesity would be above 41%, not 31.8%. The population figures do not reconcile."
+        },
+        {
+          "quote": "Eleven states (Texas, Florida, Louisiana, Tennessee, Oklahoma, Arkansas, Indiana, Ohio, Utah, Missouri, West Virginia) enacted under-12 bans on weight-indication prescribing.",
+          "field": "world/state/regulatory_posture",
+          "why": "Mechanism: the world implies all eleven bans passed within 2034, but several of these legislatures do not hold regular sessions in even years, Texas's among them. The 2032 world had no state action, and no stepwise chain or special-session path is shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 15M people use counterfeit or gray product, and the insulin-pen cluster killed 19. About 16M non-obese users carry unmeasured low-dose risk, and employers promote enrolees and reimburse calm and Reset fees (`effect_on_work`, `access.note`), which makes the pressure structural. Children lose access by statute, and the main losers are Medicaid children. The harm is normalised ('nothing wrong, nothing happening') and measured only weakly (the FDA study could not speak to low doses). It is a harder, more stratified, more pressured society, but not catastrophic.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Retatrutide 12 mg is a legal existing-product-in-new-form realisation of the triple-agonist driver, and longevity and compulsion appear as off-label uses with the AUD approval as the bridge, which the envelope allows. 'Safety_signal: none' is mostly respected, though the FDA's confirmed anhedonia association is borderline. mechanism: Gray-market growth, cash growth and employer LSAs have credible chains. The 9M longevity ramp (claim 1) and eleven bans in one year (claim 3) are asserted rather than shown. magnitude: Current use of 28% and ever-used of 37.5% are inside the envelope. Payer mix, cash breakdown, Medicare spend and the age and income checks all reconcile. The obesity prevalence versus the 16M non-obese users (claim 2) does not reconcile, and the small rise in off-now users despite one-third persistence is strained.",
+        "generativity": "The Dana Pruitt scene is dense with specific people and details: Kemi the nurse, the BAND CLASS? note, Jalen, Ray's REAL RETA carton, Owen's growth, and Mike off Zepbound. Texture from the Groveport plant clinic, the Memphis vials and the Telegram sellers implies many more scenes. The world fields add couples therapy, comedy and sportsbook angles."
+      },
+      "plausibility": 6.55
+    },
+    {
+      "custom_id": "s4-L2-r28-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "About 16M current users (~21%) have a BMI under 30, and ~5M have a BMI under 25.",
+          "field": "world/population/note",
+          "why": "Fails magnitude (reconciliation). If only ~21% of current users have BMI under 30, then ~22% of adults are current users with obesity. Added to the ~19% of adults with obesity who never used a drug, that gives ~41%, which exceeds the stated adult obesity rate of ~31.8%."
+        },
+        {
+          "quote": "Over 2034 state laws added friction: in-person visit requirements and BMI floors for telehealth prescribing pushed some longevity and calm users from licensed platforms to the gray market.",
+          "field": "world/access/note",
+          "why": "Fails mechanism. These rules cover seven states and took effect during 2034, yet they are offered as the cause of a gray market that doubled by ~7.9M users, including ~4M on Chinese 'reta' vials. The size of the jump is not explained by the stated chain."
+        },
+        {
+          "quote": "Licensed 'metabolic health' microdose plans for adults without obesity reach about nine million subscribers, as longevity clinics in Austin, Miami and Scottsdale make low-dose semaglutide a standard line on the lab panel",
+          "field": "world/events/2/event",
+          "why": "Fails mechanism and magnitude. A segment absent from the 2032 world is asserted to reach ~9M paying licensed subscribers in about 18 months. The only cause given is clinics making it a standard line, with no shown uptake, supply or persistence path."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 7,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Gray-market use doubles to ~15.4M and counterfeit insulin pens kill 19 mostly non-diabetic microdosers. Employers promote adherence-verified enrollees at twice the rate of others (interior_life/effect_on_work) and reimburse calm and Reset fees. About 16M lean users sit on a drug with known lean-mass, bone and EPI exposure and an unmeasured anhedonia rate. The under-12 bans mostly strip Medicaid children, and the restrictions push users toward unsafe vials. The harm is normalised and hard to name, which is why autonomy and epistemic score highest. Nothing is melodramatic, so overall stays at 6.5.",
+        "plausibility": "driver_fidelity: All ten drivers appear in fields and events. Retatrutide 12 mg realises the triple-agonist driver through an existing product in a new form. Longevity and compulsion are realised off-label, with a Novo gambling phase 3 that does not read out until 2036. State restriction, employer encouragement, counterfeit shock and the status-quo coverage figures (29%) are all visible. Safety_signal 'none' is mildly strained by the FDA anhedonia study 'confirming an association', but the ledger status is unchanged. mechanism: Some chains are well shown, including the AUD approval feeding Reset plans, the insulin-pen pathway, the LSA reimbursement route and the ban states' coverage of children. Others are asserted, namely the ~9M longevity plans and the doubling of gray use, which the seven-state 2034 friction cannot explain (claims 2 and 3). magnitude: On-drug 28%, ever-used 37.5%, income thirds, age bands, payer mix (sums to 76.8M), cash breakdown, the Medicare $36.5B and $6.5B figures, and the cycling arithmetic all reconcile and sit inside the envelope. The claimed BMI split of current users contradicts the stated 31.8% obesity rate and the 19% never-used obese share (claim 1). The retatrutide dose approval, ~9–10 months after a mid-2032 sNDA filing, sits near the 12-month edge but concerns an on-market product.",
+        "generativity": "Dana, Kemi, Jalen, Ray, Owen and Mike are distinct, and the scenes show rather than explain: the shot-day clinic, the steadiness board, the sportsbook app that reinstalls, the Telegram carton, the ban-ended liraglutide and Mike's second plate. Details such as 'BAND CLASS?' and the thumbs-up with the deleted 'the insulin ones' text imply further film. The world fields give many hooks, including the Ohio lawsuit, Reset marketing, LSAs and Memphis gray reta."
+      },
+      "plausibility": 6.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Eleven states (Texas, Florida, Louisiana, Tennessee, Oklahoma, Arkansas, Indiana, Ohio, Utah, Missouri, West Virginia) enacted under-12 bans on weight-indication prescribing.",
+        "field": "world/state/regulatory_posture",
+        "why": "Mechanism: it asserts that eleven legislatures all passed bans in the single year 2034, with no bill or trigger shown. Several of these (Texas, for example) do not hold regular sessions in even years, and the parent world had no state action at all."
+      },
+      {
+        "quote": "Licensed 'metabolic health' microdose plans for adults without obesity reach about nine million subscribers",
+        "field": "world/events/2/event",
+        "why": "Mechanism: the 2032 world had no longevity channel beyond cash dementia-prevention use. Going to ~9M licensed subscribers in roughly 18 months is asserted, with only a clinic-lab-panel anecdote as cause. Calm plans took about a year to reach 1.3M."
+      },
+      {
+        "quote": "India agreed to require export registration for B2C pharmaceutical parcels (effective 2035), with no CBP mail agreement.",
+        "field": "world/state/geopolitics_of_supply",
+        "why": "Mechanism: in the parent world US–India talks had stalled, and here a quick concession follows the insulin-pen deaths with no negotiation shown. It reads as a convenient plot beat that lets the gray market keep growing."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.83,
+      "inequality": 6.67,
+      "public_health": 6.5,
+      "cohesion": 5.83,
+      "epistemic": 7.0,
+      "overall": 6.5
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.5,
+      "magnitude": 6.67
+    },
+    "plausibility": 6.95,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 77M users, with 15.4M on gray product, produced a ~1,100 ED-visit, 19-death insulin-pen cluster. Employers prefer adherence-verified workers (twice the promotion rate, LSA reimbursement of calm fees), and the unmeasured low-dose anhedonia in ~16M non-obese users is a large unseen exposure. Restriction pushed users toward gray vials, and the ban mostly removed Medicaid children from care. That is a harder, more stratified, more normalised society, but the harms are partly nameable and discussed, so it stops short of the extreme end.",
+      "plausibility": "driver_fidelity: Every driver is visible. Adoption of 28% sits in the envelope, managed decline shows in the MariTide, TrumpRx and retatrutide cuts, and status-quo coverage shows in employers moving 30% to 29%. The longevity and compulsion indications are kept off-label, the retatrutide 12 mg dose realises the 30% triple agonist, the counterfeit shock is the insulin pens, restriction is the 11-state bans and in-person rules, and the employer-encouraged layer is LSA reimbursement. mechanism: Several shifts are asserted rather than shown (claims 1–3), and the gray-market doubling is attributed mostly to 2034 restrictions even though most of the growth predates them. The extra AUD and bimagrumab approvals follow the parent pipeline. magnitude: All headline figures sit inside the envelope (28 and 37.5), and the payer mix, cash breakdown, age and income checks and the Medicare and dementia spend all reconcile. Minor slack remains: the retatrutide sNDA approval about 9 months after filing, the loose pediatric percentages, and AUD fills counted as cash.",
+      "generativity": "Dana's shot day, the BAND CLASS? note, Ray's REAL RETA carton, Owen's ban and Mike's silence give a clear cast, and the plant clinic, huddle board and Telegram vials give daily-life texture. The world fields add many concrete scenes: the Ohio suit, Reset badges, Unmuted off nights, couples' therapists and LSAs. The prose shows rather than explains, though the opening summary section is expository."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 6.249,
+    "survived": true,
+    "new_lineage": "L1",
+    "floor_used": 6,
+    "rank": 1
   }
 }

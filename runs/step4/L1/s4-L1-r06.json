@@ -36,6 +36,41 @@
         "input_tokens": 19278,
         "output_tokens": 23673
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r06-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29381,
+        "output_tokens": 6582
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r06-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29381,
+        "output_tokens": 5320
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r06-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29381,
+        "output_tokens": 6198
+      }
     ]
   },
   "world": {
@@ -318,6 +353,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r06-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Once the effect had a small labelled number and a sanctioned dose-reduction pathway, it receded from public complaint to clinic footnote.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: a labelling change in Jul 2033 is said to flip a mainstream cultural complaint into a footnote within months, while the note itself says 10–15% of users still report reduced pleasure. The shift is asserted, not shown."
+        },
+        {
+          "quote": "Medicare pays ≈19.8% of incretin fills ≈ 20.0M users (≈18.3M aged 65+ plus ~1.7M disabled under-65).",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: population gives ~18.8M users aged 65+, so Medicare would hold 18.3M of them. That leaves ~0.5M for all commercial, cash, gray, VA and TRICARE users aged 65+, which is implausibly tight against the payer mix."
+        },
+        {
+          "quote": "Medicaid's state 15% share (≈$6.8B/yr across adopting states)",
+          "field": "world/open_tensions/2",
+          "why": "Magnitude: 15% of the stated ~$39.8B is ~$6.0B. The $6.8B figure matches the ~17% implied by the 'blended ~83%' federal share, so the two figures disagree."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Conditioning moves from refill counts to recorded doses across Part D, the Medicaid option and employer plans. DUI-court semaglutide orders and the HRSA check-in end the last unconditioned channels, which is a deep autonomy loss. Stratification is by product (combo build vs 'pen-thin' liraglutide), and fractures keep rising among low-income elders, so inequality and public health carry the harm. Anhedonia is now measured and labelled, which eases epistemic harm, but the 'negotiated' number and surveillance of logs keep it from being low. Overall it is a harder, more surveilled society rather than a collapse.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised in fields and events. Adoption rises by exactly 9.5pp, the AUD driver is realised through guideline and court use on an existing label, as the envelope allows, and the combo is approved 19 months after filing. mechanism: Most chains are shown (Medicaid FMAP option to bottom-third rise, connected caps replacing skip-but-fill, API/CRL stall on generics). The anhedonia receding from public complaint to footnote is asserted (claim 1), and a few details are loose: the WTO panel timing, the HRSA 'check-in' counting as conditioning, and an Oct 2034 CR funding FY2034. magnitude: Population figures sit inside the envelope, and the on/off/cycled arithmetic, payer shares, programme spending and user counts reconcile. The flaws are the near-total overlap of Medicare users with the 65+ band (claim 2) and the 15% vs $6.8B Medicaid state-share slip (claim 3). The prose headline also says Medicare pays for 101M users, against ~20M in the world state.",
+        "generativity": "The prose has concrete characters and texture: Tamika, Dre and Ms. Patel on the cap log, Mr. Abernathy's forearms, the Kroger lot with 'combo shoulders', and the weigh-in text. The world adds Scottsdale vs Mesa, DUI-court probation, and the 'off-log' dating profiles, and daily life shows through scenes rather than explanation. Some summary lines in the prose still explain rather than show."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L1-r06-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Public programmes together pay 42.4% of fills, ahead of commercial's 34.2%, and Medicare is now the largest single payer.",
+          "field": "world/access/note",
+          "why": "Fails magnitude (reconciliation). The same note puts Medicare at 19.8% (20.0M) and commercial at 34.2% (34.5M), so commercial is still the largest single payer. The prose headline 'Medicare pays for 101 million' repeats the error."
+        },
+        {
+          "quote": "Medicaid's state 15% share (≈$6.8B/yr across adopting states)",
+          "field": "world/open_tensions/2",
+          "why": "Fails magnitude (reconciliation). The access section shows Medicaid at ≈$39.8B/yr, and 15% of that is about $6.0B. $6.8B only matches the 'blended ~83%' federal share, which implies 17%, so the FMAP and state-share figures do not agree."
+        },
+        {
+          "quote": "Once the effect had a small labelled number and a sanctioned dose-reduction pathway, it receded from public complaint to clinic footnote.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Fails mechanism. A label table is asserted to end a mainstream complaint within months, even though the same note says 10–15% of users still report reduced pleasure and the backlash says the number was 'negotiated'. The shift from 'grey' as everyday vocabulary to dated slang is stated, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens, but dose-level surveillance becomes universal across Part D, Medicaid-option states and about 70% of conditioned employer plans. DUI-court semaglutide orders (~40k defendants) and HRSA's check-in remove the last unconditioned channel (autonomy 7). The product gap widens: combo bodies at the top, liraglutide and 'pen-thin' bodies with rising Medicaid-dual fractures at the bottom (inequality 6). Anhedonia is measured but downplayed and framed as 'negotiated', which gives a moderate epistemic cost without collapse.",
+        "plausibility": "driver_fidelity: All ten drivers appear in fields and events: public expansion (the Act and 31 states), managed decline (SSA II prices), the muscle-preserving combo, the labelled anhedonia entry, class stratification, conditioning, tariffs, and AUD realised through guidelines. Approval timing for the combo (19 months after filing) and amycretin (already under review) respects the rules. mechanism: Chains are mostly shown (permanent benefit, Medicaid FMAP, dose logs replacing PDC, import alerts blocking generics), but the quick fade of the anhedonia complaint after a label is asserted, and the 45%→30% holiday drop compares self-report with logged data. magnitude: Population figures are inside the envelope and the cohort arithmetic, payer mix and user counts reconcile. The flaws are 'Medicare is now the largest single payer' (commercial is larger), a state-share figure of $6.8B against 15% of $39.8B, and the event dated 2034-08 reporting 31 adopting states that the note dates to Dec 2034.",
+        "generativity": "x"
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s4-L1-r06-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Once the effect had a small labelled number and a sanctioned dose-reduction pathway, it receded from public complaint to clinic footnote.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism: the 2032 'mainstream complaint' (10-15% report reduced pleasure, 45% take holidays, slang in late-night monologues) becomes dated slang within two years because of a label table. Surveys still show 10-15%, so the claimed cause is asserted, not shown."
+        },
+        {
+          "quote": "the bottom third is mostly on generic liraglutide, oral semaglutide and semaglutide injection, while the top holds most retatrutide and nearly all bimagrumab-combination use.",
+          "field": "world/population/note",
+          "why": "Magnitude/mechanism: the bottom third is ~30M users, but generic liraglutide is shown only in HRSA (2.0M). Medicaid's 17.0M users are all costed at the same $195, so a liraglutide-heavy bottom third doesn't reconcile with the payer arithmetic."
+        },
+        {
+          "quote": "Medicare pays ≈19.8% of incretin fills ≈ 20.0M users (≈18.3M aged 65+ plus ~1.7M disabled under-65).",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: this puts about 97% of the 18.8M users 65+ on Medicare, leaving almost none to commercial, cash or TRICARE/VA. That sits badly with ~2.8M TRICARE/VA users, affluent 65+ cash users, and commercial plans said to be 'relieved' by seniors moving to Part D."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.0,
+        "autonomy": 7.0,
+        "inequality": 7.0,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7.0,
+        "magnitude": 8.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Dose-logging caps are required by Part D and 31 Medicaid programmes, ~70% of conditioned employer plans use PBM log feeds, DUI courts impose semaglutide with logs on ~40k defendants, and HRSA's pharmacist check-in ends the last unconditioned channel. Inequality is high because product stratification (combo build vs 'pen-thin' liraglutide bodies), rising fractures among Medicaid-dual elders and the bottom third's bone risk are all named. Epistemic harm is moderate: anhedonia is quantified and labelled, but the backlash says the number was 'negotiated' and surveys still conflict. Flourishing and public health are mixed, since access broadens while fractures (~24,000/yr) and muscle loss persist.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. These include the Part D benefit and Medicaid option, SSA II price steps, the 2033-07 anhedonia label, bimagrumab combo approval, guideline-based AUD realisation, class-stratified bodies, dose-log conditioning and tariff/WTO/CRL dynamics. The AUD driver is realised only by guideline endorsement on an existing label, which is allowed but thin. mechanism: most chains are shown, such as FMAP leading to adoption, caps replacing PDC, and CRLs holding back generics. The anhedonia fade (claim 1) and the liraglutide-heavy bottom third (claim 2) are asserted. magnitude: on-drug 37.4% and ever-used 47.0% are inside the envelope, the cohort arithmetic and payer shares reconcile, and the dollar figures multiply out (Part D $21.1B, Medicaid $39.8B, HRSA $3.35B). Approval timings are legal. The deductions are the near-total Medicare share of 65+ users (claim 3), Medicaid users nearly doubling from 9.0M to 17.0M, and the liraglutide inconsistency.",
+        "generativity": "The prose has a lived-in protagonist (Tamika, the Medicaid-option home health aide in Columbus) with a husband in DUI court, a client with 'combo' forearms, and a weigh-in text. Sensory details such as the cap's blinking light and sage leggings with whey isolate imply many scenes. The world fields supply rich texture (off-log gray segment, Mesa/Paradise Valley contrast, logged holidays, Montana log ban). The article section explains somewhat more than it shows."
+      },
+      "plausibility": 8.05
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Once the effect had a small labelled number and a sanctioned dose-reduction pathway, it receded from public complaint to clinic footnote.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "Mechanism: a labelling change in Jul 2033 is said to flip a mainstream cultural complaint into a footnote within months, while the note itself says 10–15% of users still report reduced pleasure. The shift is asserted, not shown."
+      },
+      {
+        "quote": "Medicare pays ≈19.8% of incretin fills ≈ 20.0M users (≈18.3M aged 65+ plus ~1.7M disabled under-65).",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude: population gives ~18.8M users aged 65+, so Medicare would hold 18.3M of them. That leaves ~0.5M for all commercial, cash, gray, VA and TRICARE users aged 65+, which is implausibly tight against the payer mix."
+      },
+      {
+        "quote": "Medicaid's state 15% share (≈$6.8B/yr across adopting states)",
+        "field": "world/open_tensions/2",
+        "why": "Magnitude: 15% of the stated ~$39.8B is ~$6.0B. The $6.8B figure matches the ~17% implied by the 'blended ~83%' federal share, so the two figures disagree."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 7.0,
+      "inequality": 6.67,
+      "public_health": 5.5,
+      "cohesion": 5.5,
+      "epistemic": 4.83,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 7.0,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.45,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Conditioning moves from refill counts to recorded doses across Part D, the Medicaid option and employer plans. DUI-court semaglutide orders and the HRSA check-in end the last unconditioned channels, which is a deep autonomy loss. Stratification is by product (combo build vs 'pen-thin' liraglutide), and fractures keep rising among low-income elders, so inequality and public health carry the harm. Anhedonia is now measured and labelled, which eases epistemic harm, but the 'negotiated' number and surveillance of logs keep it from being low. Overall it is a harder, more surveilled society rather than a collapse.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised in fields and events. Adoption rises by exactly 9.5pp, the AUD driver is realised through guideline and court use on an existing label, as the envelope allows, and the combo is approved 19 months after filing. mechanism: Most chains are shown (Medicaid FMAP option to bottom-third rise, connected caps replacing skip-but-fill, API/CRL stall on generics). The anhedonia receding from public complaint to footnote is asserted (claim 1), and a few details are loose: the WTO panel timing, the HRSA 'check-in' counting as conditioning, and an Oct 2034 CR funding FY2034. magnitude: Population figures sit inside the envelope, and the on/off/cycled arithmetic, payer shares, programme spending and user counts reconcile. The flaws are the near-total overlap of Medicare users with the 65+ band (claim 2) and the 15% vs $6.8B Medicaid state-share slip (claim 3). The prose headline also says Medicare pays for 101M users, against ~20M in the world state.",
+      "generativity": "The prose has concrete characters and texture: Tamika, Dre and Ms. Patel on the cap log, Mr. Abernathy's forearms, the Kroger lot with 'combo shoulders', and the weigh-in text. The world adds Scottsdale vs Mesa, DUI-court probation, and the 'off-log' dating profiles, and daily life shows through scenes rather than explanation. Some summary lines in the prose still explain rather than show."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.833,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 11
   }
 }

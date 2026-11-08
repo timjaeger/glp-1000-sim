@@ -36,6 +36,41 @@
         "input_tokens": 19218,
         "output_tokens": 25127
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r03-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29603,
+        "output_tokens": 6118
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r03-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29603,
+        "output_tokens": 5328
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r03-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29603,
+        "output_tokens": 6782
+      }
     ]
   },
   "world": {
@@ -311,6 +346,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r03-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "about 2.2× the user count of 2032 at a similar order of spend",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: Medicare users go from 11.0M to 18.1M, which is about 1.65×, not 2.2×. Spend goes from $9.2B (Bridge) to $24.3B, which is not a 'similar order' of spend either."
+        },
+        {
+          "quote": "Deliberate dose holidays among long-term users fell from ~45% to ~24%.",
+          "field": "world/safety_ledger/8/prevalence_note",
+          "why": "Mechanism: a randomised-withdrawal trial measures anhedonia excess, not holiday behaviour. Nearly halving a behaviour in two years, and reattributing an 'established' 10–15% effect to expectation, is asserted from one trial."
+        },
+        {
+          "quote": "Cessation and AUD patients are exempt under 42 CFR Part 2 confidentiality.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Part 2 protects the confidentiality of substance-use records. It does not exempt patients from a program's weigh-in condition, so the stated legal chain is shaky."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 4.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Access broadens and prices collapse, and the reward-blunting complaint is measured and demoted, so the world is less bad than 2032 on flourishing and epistemic clarity. Harms remain: about 20k excess hip fractures a year, 1.39M children on drug, and conditioning that outlived its price rationale (16 state Medicaid plans, an HRSA weigh-in rider, biometric premium differentials that bind non-users, DUI-court pickup mandates). Coercion and surveillance are normalised more than they are severe, and the bottom third gets mostly lower-support use with sarcopenia worst among them.",
+        "plausibility": "driver_fidelity: Adoption (+9.4 pp to 37.3), generic collapse (settlements event, Mar 2033), public expansion, backlash, benefits conditioning and niche side effect are all visible in fields and events. Two are only loosely honoured: AUD already had a 2030 label, so it is realised by guideline, and the hip-fracture rise in a 'none' safety-signal world is a continuation. mechanism: Most chains are shown (generic price → persistence, Medicaid mandate → bottom-third rise, conditions → biometric premiums). Weak points are the single-trial reversal of reward blunting and halved dose holidays (claim 2) and the Part 2 legal rationale (claim 3). magnitude: All population figures sit inside the envelope, and the cycling arithmetic, payer mix (100%), age bands and spending products (Medicare $24.3B, Medicaid $20.5B, HRSA $2.16B, DoD $137M) reconcile. The one error is the '2.2×' Medicare user comparison (claim 1), a minor reconciliation gap.",
+        "generativity": "The Wade Haskins day is concrete: the Kroger pharmacy pickup that doubles as court compliance, the rickhouse schedule cut, the Open Table biscuit, and Kayleigh's PE weigh-in. The world fields add named places and institutions (Bardstown, Sun City, Nashville, Sixth Circuit). Some prose lines still explain rather than show, but many scenes are implied."
+      },
+      "plausibility": 7.3
+    },
+    {
+      "custom_id": "s4-L1-r03-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Deliberate dose holidays among long-term users fell from ~45% to ~24%.",
+          "field": "world/safety_ledger/8/prevalence_note",
+          "why": "mechanism: A trial re-attributing the anhedonia survey figures does not explain why deliberate dose-holiday behaviour nearly halves, and the world itself says skip-but-fill persists. The shift is asserted, not caused."
+        },
+        {
+          "quote": "about 2.2× the user count of 2032 at a similar order of spend",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: The 2032 Medicare figure was 11.0M users, so 18.1M is about 1.65×, not 2.2×. The 2032 baseline spend of $9.2B (obesity-only Bridge) is also not comparable to the $24.3B whole-Medicare figure."
+        },
+        {
+          "quote": "US bariatric surgery volume fell ~35% from 2032.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: A 35% fall is attributed mainly to generics (from Mar 2033) and Part D retatrutide preference (only from Jan 2034). That is too little time for referral pipelines and surgical capacity to shift this much, and the chain is thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 6,
+        "inequality": 4.5,
+        "public_health": 4,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access is broad and cheap, anhedonia is downgraded and drinking is falling, so flourishing and public health are only moderately worse than in 2032. The losses are real but structural: conditioning outlived its price rationale, biometric premium differentials bind non-users, court-mandated semaglutide for DUI offenders, HRSA weigh-ins, and about 20k hip fractures a year. Cohesion strains over Open Table congregations and the split between recovery and backlash churches. Autonomy is the worst dimension, because adherence and body metrics are now recorded and tied to benefits, jobs and probation. Overall it is a harder society with new losers, not a catastrophe.",
+        "plausibility": "driver_fidelity: Adoption is +9.4 pp, the generic collapse has a settlement mechanism event, public expansion arrives via the Act, conditioning continues, backlash appears, and the AUD driver is realised through guideline and generic inheritance of the 2030 label. The triple agonist is realised through existing retatrutide, ex-US launches and a Part D tier. 'Safety_signal: none' and 'market_shock: none' are roughly respected. mechanism: Most changes have shown chains (price to persistence, mandatory Medicaid, conditions moving to premiums). The dose-holiday halving, the trial overturning an 'established' effect, and the quick bariatric fall are asserted rather than shown. magnitude: Every headline figure is inside the envelope (37.3% on drug, 46.5% ever-used, income thirds, 2034 approvals and the generic mechanism), and the cycling, payer-mix and spend arithmetic reconcile. The remaining flaw is the wrong '2.2×' Medicare comparison and a baseline mismatch, plus an implicit assumption that all 65+ users are Medicare-paid.",
+        "generativity": "The day-in-the-life with Wade Haskins is concrete: a rickhouse on short hours, pen day at the counter, pharmacy pickup as a court record, a biscuit at the Open Table supper. Danny, Tammy, Kayleigh and Pastor Doug are implied characters with their own stakes. The world fields (Bardstown, Sun City, Nashville Open Table, DUI dockets) supply many extra scenes. It leans slightly on explanatory prose, but the scenes mostly show."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L1-r03-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Deliberate dose holidays among long-term users fell from ~45% to ~24%.",
+          "field": "world/safety_ledger/8/prevalence_note",
+          "why": "Mechanism: behaviour is said to nearly halve within two years, attributed to a trial published in March 2034 and a label change in July 2034. No causal chain is shown, and the world still says skip-but-fill persists on conditioned plans."
+        },
+        {
+          "quote": "about 2.2× the user count of 2032 at a similar order of spend",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: Medicare users go from 11.0M to 18.1M (about 1.65×), or from 3.4M Bridge obesity users to 18.1M (about 5×). Neither is 2.2×, and the 2032 Bridge spend of $9.2B is not 'similar' to $24.3B. The figure appears to be the Medicaid ratio misapplied."
+        },
+        {
+          "quote": "The following Sunday, Open Table congregations in Nashville serve an estimated 40,000 people",
+          "field": "world/events/5/event",
+          "why": "Mechanism and magnitude: the same world says Open Table runs monthly in only about 900 congregations nationwide, and that the movement is small and outside the restaurant economy. 40,000 meals in one city in one Sunday is a spectacle figure with no supporting count."
+        }
+      ],
+      "badness": {
+        "flourishing": 3.5,
+        "autonomy": 6.0,
+        "inequality": 4.5,
+        "public_health": 4.0,
+        "cohesion": 5.0,
+        "epistemic": 4.0,
+        "overall": 4.6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.0,
+        "mechanism": 6.0,
+        "magnitude": 7.0
+      },
+      "generativity": 7.0,
+      "rationale": {
+        "badness": "Price collapse, mandatory Medicaid generic coverage and a fading 'grey' complaint make this a somewhat better world than 2032 on flourishing and public_health. Autonomy is hurt by court-mandated pharmacy-verified semaglutide for drinkers, biometric premium differentials upheld in the Sixth Circuit, 16 states conditioning Medicaid, and the HRSA weigh-in rider. Bone and muscle harms grow in absolute terms, and the backlash's 'pacification with paperwork' grievance gives cohesion a modest cost. Overall it is a recognisably harder society for non-compliers, but milder than the 2032 parent.",
+        "plausibility": "driver_fidelity: Adoption delta is exactly +9.4 (37.3). The generic collapse is anchored in a March 2033 settlement event with five generic makers plus an authorised generic. Public expansion, benefits conditioning, backlash, the niche side effect (REWARD trial) and the triple agonist (retatrutide Part D preference plus launches abroad) are all visible. AUD is realised only through a guideline and an inherited 2030 label, which is thin but allowed. mechanism: The generic-to-conditions-shifting-to-biometrics chain is well shown. The reversal of the grey (dose holidays 45→24%, a 10–15% survey figure explained away by one trial) and the Nashville 40,000 figure are asserted rather than derived, and the 2.2× phrase is wrong. magnitude: On-drug 37.3 and ever-used 46.5 sit inside the envelope, and the income thirds bracket the national figure. The population, age-band and cycling arithmetic reconcile (41%), and so do the payer mix, Medicaid ($20.5B), HRSA ($2.16B) and TRICARE ($137M). Remaining flaws are the mis-stated '2.2× the user count' and all 16.8M users 65+ sitting under Medicare with none in commercial, cash or gray.",
+        "generativity": "The Wade Haskins day carries a lot of film: Thursday pen day with the Medicaid sticker, the Kroger pickup counter doubling as DUI-court check-in, Danny on the bottling line, Kayleigh weighed in PE class, and Pastor Doug's grace over biscuits. The world fields add specific places and institutions (Bardstown rickhouses, Sun City, Mill Creek Baptist, recovery meetings in Open Table churches). Some beats are explained rather than shown, but the texture is strong."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "about 2.2× the user count of 2032 at a similar order of spend",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude: Medicare users go from 11.0M to 18.1M, which is about 1.65×, not 2.2×. Spend goes from $9.2B (Bridge) to $24.3B, which is not a 'similar order' of spend either."
+      },
+      {
+        "quote": "Deliberate dose holidays among long-term users fell from ~45% to ~24%.",
+        "field": "world/safety_ledger/8/prevalence_note",
+        "why": "Mechanism: a randomised-withdrawal trial measures anhedonia excess, not holiday behaviour. Nearly halving a behaviour in two years, and reattributing an 'established' 10–15% effect to expectation, is asserted from one trial."
+      },
+      {
+        "quote": "Cessation and AUD patients are exempt under 42 CFR Part 2 confidentiality.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: Part 2 protects the confidentiality of substance-use records. It does not exempt patients from a program's weigh-in condition, so the stated legal chain is shaky."
+      }
+    ],
+    "badness": {
+      "flourishing": 3.83,
+      "autonomy": 6.0,
+      "inequality": 4.33,
+      "public_health": 4.33,
+      "cohesion": 5.0,
+      "epistemic": 4.0,
+      "overall": 4.8
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.33,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.2,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "Access broadens and prices collapse, and the reward-blunting complaint is measured and demoted, so the world is less bad than 2032 on flourishing and epistemic clarity. Harms remain: about 20k excess hip fractures a year, 1.39M children on drug, and conditioning that outlived its price rationale (16 state Medicaid plans, an HRSA weigh-in rider, biometric premium differentials that bind non-users, DUI-court pickup mandates). Coercion and surveillance are normalised more than they are severe, and the bottom third gets mostly lower-support use with sarcopenia worst among them.",
+      "plausibility": "driver_fidelity: Adoption (+9.4 pp to 37.3), generic collapse (settlements event, Mar 2033), public expansion, backlash, benefits conditioning and niche side effect are all visible in fields and events. Two are only loosely honoured: AUD already had a 2030 label, so it is realised by guideline, and the hip-fracture rise in a 'none' safety-signal world is a continuation. mechanism: Most chains are shown (generic price → persistence, Medicaid mandate → bottom-third rise, conditions → biometric premiums). Weak points are the single-trial reversal of reward blunting and halved dose holidays (claim 2) and the Part 2 legal rationale (claim 3). magnitude: All population figures sit inside the envelope, and the cycling arithmetic, payer mix (100%), age bands and spending products (Medicare $24.3B, Medicaid $20.5B, HRSA $2.16B, DoD $137M) reconcile. The one error is the '2.2×' Medicare user comparison (claim 1), a minor reconciliation gap.",
+      "generativity": "The Wade Haskins day is concrete: the Kroger pharmacy pickup that doubles as court compliance, the rickhouse schedule cut, the Open Table biscuit, and Kayleigh's PE weigh-in. The world fields add named places and institutions (Bardstown, Sun City, Nashville, Sixth Circuit). Some prose lines still explain rather than show, but many scenes are implied."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.949,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 36
   }
 }

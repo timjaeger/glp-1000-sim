@@ -51,6 +51,41 @@
         "input_tokens": 18506,
         "output_tokens": 29882
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r31-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28789,
+        "output_tokens": 8005
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r31-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28789,
+        "output_tokens": 7545
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r31-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28789,
+        "output_tokens": 8123
+      }
     ]
   },
   "world": {
@@ -324,6 +359,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r31-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Bimagrumab (filed Jul 2032) was approved Jun 2033 as an adjunct, at ~$849/month list",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: bimagrumab was in phase 3 with a stated July 2032 filing, and the envelope bars approval earlier than 12 months after filing. June 2033 is about one month early, so this is an approval-timing violation."
+        },
+        {
+          "quote": "CMS says 9.5 million beneficiaries enrolled in Medicare's obesity benefit in its first ten months, taking use among Americans 65+ past 30%",
+          "field": "world/events/5/event",
+          "why": "Mechanism: the candidate requires a baseline DXA for 65+ users, DXA waits run 6–10 weeks, and technicians are short. Even so, 9.5M enrolled in ten months and 65+ use roughly doubled from 17% to 31%, with no shown capacity to deliver that. The note also says '9.5M enrolled by Dec 2034', which disagrees with the ten-month event date."
+        },
+        {
+          "quote": "The country had been absorbing the gray market's deaths, manufacturers had offered a Medicare net price of $195 a month, and seniors would vote in the 2034 midterms.",
+          "field": "prose/paragraph_2",
+          "why": "Mechanism: the gray-market toll was 11 deaths in 2031, with no new cluster and market_shock set to 'none'. That cannot credibly be the political push for a roughly $186B benefit that the 2032 Congress had refused to reopen."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers, not a collapse. A documented hip-fracture wave (~14,000 excess fractures a year, projected toward ~23,000) hits a Medicare population now at 31% use, and the 2035 Part D premium has risen ~11%. Blunting is normalised through planned holidays, adherence-premium 'holiday codes' and surveillance records flowing to Part D plans. Inequality narrows (bottom third 14→25%) and the harms are measured and nameable, which holds the epistemic score down, but non-expansion states and children's unknown final height remain.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. 'mood_and_motivation' is realised only through an AUD label that the candidate itself says is not a mood or focus indication, and 29% efficacy stands in for '30pct'. mechanism: Most chains are shown, including the Act's terms, step therapy, the Strong Start concession, the FDA anhedonia study and the shift toward drug holidays. The claims about the 9.5M enrollment ramp against DXA constraints, and about the gray-market deaths motivating passage, are asserted more than shown. magnitude: The population figures sit inside the envelope, and the payer mix sums to 77.0M. The Medicare, Medicaid, HRSA and CBO arithmetic also reconciles. The one clear breach is bimagrumab, approved about 11 months after filing against a 12-month minimum, and the 9.5M count is dated inconsistently between the event and the note. The retatrutide 12 mg sNDA, filed Sep 2032 and approved Aug 2033, is also 11 months but is a new dose of an existing product.",
+        "generativity": "The prose supplies named characters (Ray, Lorraine, Hector, the trainer Keisha) and concrete scenes: the Tuesday Strong Start class, the Walgreens protein bay, the quinceañera drug holiday and a final flat-tasting chorizo scene. The world fields add texture such as off-week tasting menus, sync weeks, holiday codes and Mesa DXA waits. These imply many more scenes."
+      },
+      "plausibility": 5.95
+    },
+    {
+      "custom_id": "s4-L2-r31-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Bimagrumab (filed Jul 2032) was approved Jun 2033 as an adjunct, at ~$849/month list",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the starting world says bimagrumab read out phase 3 and was filed Jul 2032, so the approval rules allow approval no earlier than Jul 2033. Jun 2033 is 11 months after filing, which breaks the 12-month rule."
+        },
+        {
+          "quote": "Short planned holidays of under 2 weeks show little regain.",
+          "field": "world/safety_ledger/8/prevalence_note",
+          "why": "Mechanism: this single assertion carries the whole planned-holiday culture (sync weeks, off-week menus, scanner spikes). Weekly semaglutide has about a one-week half-life, so a one-week pause would leave substantial drug on board, and no chain explains why appetite, regain and anhedonia would respond so quickly."
+        },
+        {
+          "quote": "The country had been absorbing the gray market's deaths, manufacturers had offered a Medicare net price of $195 a month, and seniors would vote in the 2034 midterms.",
+          "field": "prose/paragraph_3",
+          "why": "Mechanism: it explains the Act's passage by 'deaths', but the world has 11 deaths from the 2031 clusters, no new cluster in the window, and market_shock is none. The passage rests on convenient coincidence, since Congress had refused to act in 2032."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is mixed. Access broadens (Medicaid 26 states, HRSA free pills, Medicare), which lowers inequality, but a measured hip-fracture wave (~14k to ~23k excess fractures a year) and a ~3M excess-anhedonia burden are normalised. Autonomy suffers from adherence-premium 'holiday codes', Medicare continuation rules that count pauses as gaps, and a KFF poll in which 57% say a person not on a drug should explain why to their doctor. Harms are named and studied (FDA study, CDC data), which keeps epistemic badness moderate, but the 'ration of feeling' and non-expansion-state gray use leave a harder society with new losers.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. Adoption is +8.4 pp against a stipulated 9.3 and is inside the ±2 band. The weakest is mood_and_motivation, realised only through an AUD indication, and the candidate itself admits 'No mood or focus indication exists'. mechanism: Most chains are shown, including the Act, the fracture-driven conditions, the MAHA Strong Start trade, the gray-market decline and the employer-coverage uptick. Two are asserted rather than shown: the premise that the gray market's deaths drove passage of the Act, and the claim that short holidays carry no regain, which supports the whole pause culture. magnitude: Population figures sit inside the envelope, and payer mix (77.0M), the Medicare and Medicaid arithmetic, HRSA spend, the CBO score and the age and income checks all reconcile. The flaw is approval timing: bimagrumab was filed Jul 2032 and approved Jun 2033, 11 months, and the retatrutide 12 mg dose was filed Sep 2032 and approved Aug 2033, also 11 months. Both are against the 12-month rule.",
+        "generativity": ""
+      },
+      "plausibility": 6.45
+    },
+    {
+      "custom_id": "s4-L2-r31-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Bimagrumab (filed Jul 2032) was approved Jun 2033 as an adjunct",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: the envelope allows approval of a phase-3 product no earlier than 12 months after filing, so Jul 2033 at the earliest. Jun 2033 is 11 months, a small breach of the approval-timing rule."
+        },
+        {
+          "quote": "Current first-course users = 28.0 − 12.6 = 15.4 pts, ~7.8 of them first-timers since 2032 (ever-used rose 8.8 pts, ~1.0 of those already stopped)",
+          "field": "world/population/note",
+          "why": "Magnitude/reconciliation: 2032 had 8.8 pts on a first course, so about 7.6 pts of them must still be on that course two years later. That contradicts the note's own one-year persistence near one-third, and it leaves off-now users nearly flat (9.2 to 9.6)."
+        },
+        {
+          "quote": "Pausa reached ~0.9M users in its first year.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism/magnitude: an AUD-labelled oral drug reaching nearly a million users in 12 months is a big uptake for a new addiction-treatment brand. Only off-label gambling and 'motivation' use is offered as the route, and the payer mix never accounts for Pausa."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is harder in new ways. A recognised hip-fracture wave (~14,000 excess a year, projected toward ~23,000) is set against Medicare's expansion, and 'holiday codes' and Medicare continuation rules turn pauses into premium or coverage penalties. The 57% KFF finding that non-users should explain themselves signals social pressure. The ~3M excess-anhedonia burden and the children's unresolved growth deficit add to public_health. Access broadened sharply (bottom third 14 to 25%, gray market down), and the harms are named and measured, so inequality and epistemic scores stay moderate.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and dated events. Two are thin: mood_and_motivation is realised only through the AUD indication (Pausa), and the on-drug rise of 8.4 pp falls short of the stipulated 9.3, though it is inside the envelope. mechanism: Most chains are shown (Act → Medicare, Medicaid and HRSA coverage → gray market down; fracture wave → DXA and Strong Start; FDA study → holidays). Weak points are the employer-coverage rise attributed to retirees moving to Medicare and the fast Pausa uptake (claim 3). magnitude: The population figures sit inside the envelope, and the payer mix sums to 77.0M. The Medicare, CBO, Medicaid and HRSA arithmetic, the age and income checks and the hip-fracture arithmetic all reconcile. Flaws are bimagrumab approved 11 months after filing (claim 1) and the first-course persistence implication (claim 2).",
+        "generativity": "The prose has concrete characters (Ray, Lorraine, Hector, Keisha) and specific scenes: the Mesa Tuesday class, the Walgreens protein bay, the stove-and-chorizo ending. The $47 and $179 bottles, the prior-auth wait and the 'quiet like a song in another room' beat show daily life rather than explain it. The world fields also supply many film hooks: off-week tasting menus, sync weeks, holiday codes, and Mississippi against Tennessee."
+      },
+      "plausibility": 6.7
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Bimagrumab (filed Jul 2032) was approved Jun 2033 as an adjunct, at ~$849/month list",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: bimagrumab was in phase 3 with a stated July 2032 filing, and the envelope bars approval earlier than 12 months after filing. June 2033 is about one month early, so this is an approval-timing violation."
+      },
+      {
+        "quote": "CMS says 9.5 million beneficiaries enrolled in Medicare's obesity benefit in its first ten months, taking use among Americans 65+ past 30%",
+        "field": "world/events/5/event",
+        "why": "Mechanism: the candidate requires a baseline DXA for 65+ users, DXA waits run 6–10 weeks, and technicians are short. Even so, 9.5M enrolled in ten months and 65+ use roughly doubled from 17% to 31%, with no shown capacity to deliver that. The note also says '9.5M enrolled by Dec 2034', which disagrees with the ten-month event date."
+      },
+      {
+        "quote": "The country had been absorbing the gray market's deaths, manufacturers had offered a Medicare net price of $195 a month, and seniors would vote in the 2034 midterms.",
+        "field": "prose/paragraph_2",
+        "why": "Mechanism: the gray-market toll was 11 deaths in 2031, with no new cluster and market_shock set to 'none'. That cannot credibly be the political push for a roughly $186B benefit that the 2032 Congress had refused to reopen."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 5.5,
+      "inequality": 4.0,
+      "public_health": 5.83,
+      "cohesion": 5.0,
+      "epistemic": 4.0,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.67,
+      "mechanism": 6.67,
+      "magnitude": 5.67
+    },
+    "plausibility": 6.37,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a recognisably harder society with new losers, not a collapse. A documented hip-fracture wave (~14,000 excess fractures a year, projected toward ~23,000) hits a Medicare population now at 31% use, and the 2035 Part D premium has risen ~11%. Blunting is normalised through planned holidays, adherence-premium 'holiday codes' and surveillance records flowing to Part D plans. Inequality narrows (bottom third 14→25%) and the harms are measured and nameable, which holds the epistemic score down, but non-expansion states and children's unknown final height remain.",
+      "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. 'mood_and_motivation' is realised only through an AUD label that the candidate itself says is not a mood or focus indication, and 29% efficacy stands in for '30pct'. mechanism: Most chains are shown, including the Act's terms, step therapy, the Strong Start concession, the FDA anhedonia study and the shift toward drug holidays. The claims about the 9.5M enrollment ramp against DXA constraints, and about the gray-market deaths motivating passage, are asserted more than shown. magnitude: The population figures sit inside the envelope, and the payer mix sums to 77.0M. The Medicare, Medicaid, HRSA and CBO arithmetic also reconciles. The one clear breach is bimagrumab, approved about 11 months after filing against a 12-month minimum, and the 9.5M count is dated inconsistently between the event and the note. The retatrutide 12 mg sNDA, filed Sep 2032 and approved Aug 2033, is also 11 months but is a new dose of an existing product.",
+      "generativity": "The prose supplies named characters (Ray, Lorraine, Hector, the trainer Keisha) and concrete scenes: the Tuesday Strong Start class, the Walgreens protein bay, the quinceañera drug holiday and a final flat-tasting chorizo scene. The world fields add texture such as off-week tasting menus, sync weeks, holiday codes and Mesa DXA waits. These imply many more scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.7,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 42
   }
 }

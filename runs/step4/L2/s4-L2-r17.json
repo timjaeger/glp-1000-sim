@@ -52,6 +52,41 @@
         "input_tokens": 18529,
         "output_tokens": 20616
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r17-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27752,
+        "output_tokens": 4161
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r17-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27752,
+        "output_tokens": 6049
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r17-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27752,
+        "output_tokens": 5758
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r17-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Seven million children live with a parent who regained after stopping.",
+          "field": "prose/body",
+          "why": "Fails magnitude and mechanism. The world's own population note says about 5.1M children live with a regained parent, so the prose contradicts the state and offers no cause for the jump to 7M."
+        },
+        {
+          "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial",
+          "field": "world/drugs/pipeline_note",
+          "why": "Fails magnitude. The 2032 pipeline note never mentioned a 50 mg phase 3 or filing, so under the envelope's approval rules approval should come no earlier than 12 months after filing. Nov 2032 to Oct 2033 is 11 months. A 72-week trial reading out by Nov 2032 would also have needed to start before the parent world's timeline."
+        },
+        {
+          "quote": "telehealth 'compulsion' plans pass half a million subscribers within weeks, and calm and focus plans reach 2.4 million",
+          "field": "world/events/4/event",
+          "why": "Fails mechanism. A non-FDA-labelled second-line guideline is said to produce 0.5M paying subscribers within weeks. No intake, clinician or supply chain is shown, so the speed is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.0,
+        "inequality": 6.0,
+        "public_health": 6.5,
+        "cohesion": 5.0,
+        "epistemic": 5.0,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder society. A fracture wave hits older and long-term users (Medicare hip-fracture claims up, DXA waits of 3–5 months, a $1,150 adjunct few can afford). Gray-market use grows to 9.4M, with counterfeit 50 mg tablets, and the one-in-four adoption sits alongside employer premium conditioning. Calm and compulsion plans sell the same molecule as a subscription, and a platform sold compulsion data to a credit analytics firm, which hits autonomy and epistemic clarity. It is not catastrophic, since there is no new outbreak and no mass-death chain, so it lands at about 6 overall, with inequality and public health highest.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +6.4pp, AUD is approved and compulsion is realised as an APA guideline plus off-label plans (no FDA indication, which the rules allow), muscle_bone_wave is the fracture wave, oral_parity is the 50 mg pill, and the Lilly scandal, 'natty' movement and no state action all appear in events. mechanism: Most chains are shown (pill to young adopters, AUD to Medicare and Medicaid under existing statute, bone data to DXA and label changes). Some are asserted, such as the 0.5M compulsion subscribers within weeks, the unsupported 'retatrutide starts among older patients fell', and the 7M children figure in the prose (claim 1). magnitude: Adoption 26 and ever-used 35.5 sit inside the envelope, and the income, age, payer-mix (71.5M), Medicare spend ($37.8B) and cycling (44%) arithmetic all reconcile. The flaws are the prose's 7M children against the world's 5.1M, and the 50 mg approval 11 months after filing, when the rules require at least 12 (claim 2).",
+        "generativity": ""
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L2-r17-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Most of the new users are under fifty, and many never wanted a needle.",
+          "field": "prose/paragraph_1",
+          "why": "The candidate's own age bands (11→16, 19.5→26, 29.5→37, 17→23) weight to about half of new users under 50, with 50–64 and 65+ rising by more points. 'Most' fails on mechanism and internal consistency."
+        },
+        {
+          "quote": "Seven million children live with a parent who regained after stopping.",
+          "field": "prose/paragraph_6",
+          "why": "The world state says about 5.1M children (up from 4.5M), so the prose contradicts the world on a headline figure. This fails mechanism as a narrative contradiction."
+        },
+        {
+          "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial showing ~16.8% weight loss versus ~16.1% for injectable semaglutide 2.4 mg (non-inferior).",
+          "field": "world/drugs/pipeline_note",
+          "why": "Approval in Oct 2033 comes 11 months after the Nov 2032 filing, under the envelope's 12-month minimum. A 72-week head-to-head trial reading out and filing by Nov 2032 also has no precursor in the 2032 pipeline, so it fails magnitude and mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "A measurable fracture wave (about 11–14k extra Medicare fractures a year, 3–5 month DXA waits), a manufacturer that withheld bone data, and compulsion plans selling de-identified data to credit analytics make this clearly harder than 2032. Cash and gray-market older users are the least scanned (open_tensions). Offsets are real: AUD becomes covered treatment, the postmarketing anhedonia study is published, and the label gets mood language. Cohesion strain is moderate, with a generational 'natty' split and desire-mismatch complaints, so overall is about 6.",
+        "plausibility": "driver_fidelity: Every driver is realised at its stipulated value: 26.0% on drug, AUD approved Feb 2033, the bone and fracture wave, the 50 mg pill, the Lilly scandal and natty. Compulsive behaviour is realised only off-label through the APA guideline, which the envelope allows but which is thin. mechanism: Most chains are shown, such as AUD coverage through the weight-loss exclusion, the pill driving 18–29 uptake, and API tightening. The prose's 'most new users under fifty' and the 7M versus 5.1M children contradiction are narrative inconsistencies (claims 1 and 2), and natty emerges quickly. magnitude: Population, income, age and payer figures reconcile (71.5M; 14.0×225×12≈$37.8B). The 50 mg approval lands 11 months after filing (claim 3), and '~14M users 65+' roughly equals the whole 14.0M Medicare count despite under-65 Medicare enrollees and cash or gray 65+ users.",
+        "generativity": "The Tanya Reyes day shows rather than explains: the AUDIT score, the Zepbound pen in the butter dish, the beer cooler that is 'just a light', the HUNGRY button and the blister pack from an unknown website. It touches AUD, the fracture wave, natty and the gray market with implied characters and scenes. The world fields add texture such as the Nashville festival, DraftKings' 'pharmacological churn' and Bread Alone."
+      },
+      "plausibility": 6.55
+    },
+    {
+      "custom_id": "s4-L2-r17-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Seven million children live with a parent who regained after stopping.",
+          "field": "prose/body",
+          "why": "The world state gives ~5.1M children in population.note, so the prose contradicts the candidate's own figure, and nothing explains a jump to 7M. This is a narrative contradiction (mechanism) and a reconciliation slip."
+        },
+        {
+          "quote": "That route reaches ~1.5M of the ~5.0M Medicaid users.",
+          "field": "world/access/public_coverage",
+          "why": "Reaching about 2.6M publicly covered AUD patients within ~22 months of approval, behind prior authorisation and an AUDIT score, is far above real-world medication uptake for AUD. The ramp is asserted rather than shown, so it fails magnitude and mechanism."
+        },
+        {
+          "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032",
+          "field": "world/drugs/pipeline_note",
+          "why": "Approval in Oct 2033 comes 11 months after this filing, short of the envelope's 12-month floor for a phase-3-stage product. The 72-week head-to-head trial behind the filing also appears nowhere in the 2032 pipeline, so the timing is too fast."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 5.5,
+        "inequality": 6.0,
+        "public_health": 6.5,
+        "cohesion": 5.0,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6.5,
+        "magnitude": 6.0
+      },
+      "generativity": 7.0,
+      "rationale": {
+        "badness": "Mass use (26% of adults) comes with a measurable fracture wave (hip-fracture claims +14k, 3–5 month DXA waits, a $1,150 adjunct), 2.4M calm and 0.5M compulsion subscribers, and compulsion-plan data sold to credit analytics. Sun Belt retirees on cash or gray-market supply are the most exposed and the least scanned. Offsetting this, the AUD benefit is real, the harms are named and measured by the FDA study and the CMS analyses, and no state or federal rule has made things structurally worse. The result is a recognisably harder society with new losers (older long-term users, gray-market users) but not a normalised hidden harm.",
+        "plausibility": "driver_fidelity: All ten drivers are visible with dated events: AUD, the muscle_bone_wave, the oral-parity pill, the Lilly scandal, natty, no state action and status-quo employer coverage. Compulsive_behaviour is realised only as an APA guideline and off-label telehealth use, with no filing, which is thin. mechanism: Most chains are shown, for example AUD falling outside the Medicare weight-loss exclusion and the pill driving the 18–29 rise. The prose's 7M children contradicts the world's 5.1M, and the AUD uptake and the APA-to-0.5M-subscribers jump are asserted (claims 1 and 2). magnitude: Adoption, ever-used, income thirds, the age check, the cycled arithmetic, the payer mix summing to 71.5M and the Part D spend arithmetic all reconcile inside the envelope. The deductions are the 50 mg pill approved 11 months after its stated filing (claim 3) and the 7M versus 5.1M children discrepancy.",
+        "generativity": "The Tanya Reyes day moves through concrete scenes: the pill count at 6:10, Mr. Halvorsen's Zepbound pen in the butter dish, the Speedway beer cooler that is now just a light, and Mari's 'HUNGRY' button. These show the AUD, fracture, natty and gray-market threads without explaining them. The world fields add many ready characters (compulsion-plan users, DXA-queue retirees, natty 20-somethings) and settings (Nashville, Phoenix, Toledo). The prose is slightly thinner on the calm-plan and surveillance threads."
+      },
+      "plausibility": 6.45
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Seven million children live with a parent who regained after stopping.",
+        "field": "prose/body",
+        "why": "Fails magnitude and mechanism. The world's own population note says about 5.1M children live with a regained parent, so the prose contradicts the state and offers no cause for the jump to 7M."
+      },
+      {
+        "quote": "Novo filed a supplemental application for 50 mg oral semaglutide in Nov 2032 on a 72-week head-to-head trial",
+        "field": "world/drugs/pipeline_note",
+        "why": "Fails magnitude. The 2032 pipeline note never mentioned a 50 mg phase 3 or filing, so under the envelope's approval rules approval should come no earlier than 12 months after filing. Nov 2032 to Oct 2033 is 11 months. A 72-week trial reading out by Nov 2032 would also have needed to start before the parent world's timeline."
+      },
+      {
+        "quote": "telehealth 'compulsion' plans pass half a million subscribers within weeks, and calm and focus plans reach 2.4 million",
+        "field": "world/events/4/event",
+        "why": "Fails mechanism. A non-FDA-labelled second-line guideline is said to produce 0.5M paying subscribers within weeks. No intake, clinician or supply chain is shown, so the speed is asserted."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 5.33,
+      "inequality": 6.0,
+      "public_health": 6.5,
+      "cohesion": 5.0,
+      "epistemic": 5.0,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.67,
+      "magnitude": 6.33
+    },
+    "plausibility": 6.8,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "The world is a recognisably harder society. A fracture wave hits older and long-term users (Medicare hip-fracture claims up, DXA waits of 3–5 months, a $1,150 adjunct few can afford). Gray-market use grows to 9.4M, with counterfeit 50 mg tablets, and the one-in-four adoption sits alongside employer premium conditioning. Calm and compulsion plans sell the same molecule as a subscription, and a platform sold compulsion data to a credit analytics firm, which hits autonomy and epistemic clarity. It is not catastrophic, since there is no new outbreak and no mass-death chain, so it lands at about 6 overall, with inequality and public health highest.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +6.4pp, AUD is approved and compulsion is realised as an APA guideline plus off-label plans (no FDA indication, which the rules allow), muscle_bone_wave is the fracture wave, oral_parity is the 50 mg pill, and the Lilly scandal, 'natty' movement and no state action all appear in events. mechanism: Most chains are shown (pill to young adopters, AUD to Medicare and Medicaid under existing statute, bone data to DXA and label changes). Some are asserted, such as the 0.5M compulsion subscribers within weeks, the unsupported 'retatrutide starts among older patients fell', and the 7M children figure in the prose (claim 1). magnitude: Adoption 26 and ever-used 35.5 sit inside the envelope, and the income, age, payer-mix (71.5M), Medicare spend ($37.8B) and cycling (44%) arithmetic all reconcile. The flaws are the prose's 7M children against the world's 5.1M, and the 50 mg approval 11 months after filing, when the rules require at least 12 (claim 2).",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.166,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 34
   }
 }

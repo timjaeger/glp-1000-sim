@@ -34,6 +34,41 @@
         "input_tokens": 19247,
         "output_tokens": 26585
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r02-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29244,
+        "output_tokens": 6950
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r02-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29244,
+        "output_tokens": 7608
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r02-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29244,
+        "output_tokens": 6499
+      }
     ]
   },
   "world": {
@@ -320,6 +355,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r02-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Infusion every 4 weeks limits it to ~0.5M users at infusion suites, mostly cash.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude and mechanism: 0.5M people paying $2,450 a month (about $14.7B a year, mostly cash) within roughly 14 months of approval is a very fast ramp. The world shows no chain for infusion-suite capacity or for payers and executive plans funding it."
+        },
+        {
+          "quote": "Incretin market ≈ $190B globally in 2034: US volume +9%, US net price +12–15%.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: gray users rose from ~9M to 16M, so legal users are about 65.0M in 2034 against about 65.8M in 2032, which is flat or slightly down. A +9% US volume figure does not reconcile with the payer mix and population arithmetic."
+        },
+        {
+          "quote": "a contaminated compounded lot carried Burkholderia into infusion bags",
+          "field": "prose/article",
+          "why": "Mechanism: the world state describes a contaminated 503B tirzepatide lot, a subcutaneous pen product. Nothing in it involves infusion bags, so the prose contradicts the world and invents a delivery route."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.0,
+        "inequality": 7.0,
+        "public_health": 6.0,
+        "cohesion": 5.0,
+        "epistemic": 6.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.0,
+        "magnitude": 7.0
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The 2034 world is a harder society with clear new losers. About 32M adults are off drug and cycling after losing employer coverage, 16M depend on gray supply, and a counterfeit and contamination crisis has caused 46 deaths. Tiers are explicit: $2,450 infusion bodies for the top third, 'pen-thin' as a class slur, and middle-third weight cycling around pay periods. Epistemic harm is moderate and structural: PDC data is known to be degraded, reward-blunting is sold as a 'quiet' feature through unregulated channels, and 182k litigation claims run ahead of the science. The harm is mostly normalised rather than catastrophic, which keeps it near 6.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised in fields and events. Price shock, employer retreat, litigation, bimagrumab (filed Mar 2032, approved Oct 2033, over 12 months), counterfeits and generic ANDAs stalled by import alerts, normalisation, restrictions and marketed 'quiet' are all present. Approval timing respects the envelope and amycretin was under review at the start. mechanism: Several chains are asserted rather than shown. One warning letter raises federal prices across both companies. The Sixth Circuit's premium-differential ruling is credited with a 16-point fall in employer coverage. A retatrutide-plant letter produces a tirzepatide shortage. The prose also contradicts the world on Burkholderia in infusion bags (claim 3), and the 'one tenth too good' A1c line is shaky. magnitude: Population, payer-mix, gray-composition, HRSA, Bridge, Medicaid and DoD arithmetic all reconcile and sit inside the envelope, with 29.9% on and 41.8% ever. The gaps are US volume +9% against flat legal users (claim 2) and the 0.5M infusion users within about 14 months (claim 1).",
+        "generativity": "The Marisol Peña thread gives concrete scenes: the 4:40 alarm, the DeConcini crossing, the farmacia with a COFEPRIS licence beside the Virgin of Guadalupe, the Hush supervisor, the Sun City strength class and Teo taking seconds of calabacitas. The world fields add texture too: 'pen portions', cycler apparel lines, infusion lounges and brand names like Hush and Stillwater. The prose partly explains rather than shows in its opening half, and a few details are loose, such as the geography of Sun City against Nogales."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s4-L1-r02-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Teenagers barred by state specialist-only laws are the ones who have to explain why they eat a full plate.",
+          "field": "world/body_and_culture/eating_as_ritual",
+          "why": "Mechanism: under-18 use is only 0.95%, so almost all teenagers are not on the drug. Having to justify a full plate is incoherent with the same world's claim that being on is the unremarked default. The prose scene with Teo, 15, taking seconds and being watched 'like he's done something brave', repeats the contradiction."
+        },
+        {
+          "quote": "a contaminated compounded lot carried Burkholderia into infusion bags",
+          "field": "prose/article",
+          "why": "Mechanism: the world state describes a contaminated 503B tirzepatide lot, and tirzepatide is a subcutaneous pen product. The only infusion product is the bimagrumab regimen, so the prose contradicts the world state with no explanation."
+        },
+        {
+          "quote": "Employer coverage falls from 63% to 47% by end-2034.",
+          "field": "world/events/2/event",
+          "why": "Mechanism and magnitude: a 16-point drop in employer coverage is attributed to one circuit ruling and a price step-up. The ruling only bars premium differentials and does not force employers to drop coverage, so the chain is thin for a change this large in about 18 months."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Coverage loss and the price step-up push about 32M people off drug and 16M into gray supply. Counterfeit and contaminated product caused 46 deaths and about 1,400 hospitalisations, and `safety_ledger` shows about 22,000 excess hip fractures a year continuing. Inequality is the sharpest harm: the bimagrumab infusion at $2,450 a month sorts bodies by class, and middle-third users cycle in and out of coverage. Autonomy and epistemic scores are held down by degraded PDC data and unregulated online sale of 'quiet' subscriptions. Overall it is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. The shock-up repricing, the Sixth Circuit employer retreat, the litigation track, the bimagrumab combination (filed Mar 2032, approved Oct 2033) and the counterfeit flood are all present. The restriction and marketed-feature drivers appear as the pediatric limits, the ad ban and the vacated FTC orders, and no new indication is added. mechanism: the price shock chain is shown, via the Virginia warning letter, the shortage and the SSA repricing. The employer coverage drop (claim 3) is asserted more than shown, the Teo and full-plate passage (claim 1) contradicts the 0.95% pediatric figure, and the 'infusion bags' error (claim 2) contradicts the world state; the Sun City and Nogales geography is also loose. magnitude: the on and ever-used figures sit inside the envelope (29.9 and 41.8). The on, off, ever and cycled arithmetic closes, as do the payer-mix shares (sum to 100%), the Medicaid, Bridge, HRSA and DoD dollar figures and the gray composition. Remaining gaps are minor: the shortage start is dated Feb in the event and Mar in the note, and gray use jumps from 9M to 16M.",
+        "generativity": "The prose has a concrete character, Marisol, with specific places (DeConcini crossing, the farmacia with its Virgin of Guadalupe), objects (lot-number photos, two pens, seven almonds) and a mother in strength class. The world fields supply branded subscriptions (Hush, Stillwater), infusion lounges and 'cycler' apparel. Scenes are shown rather than explained, though the Teo beat does not hold together with the world."
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s4-L1-r02-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer coverage falls from 63% to 47% by end-2034.",
+          "field": "world/events/2/event",
+          "why": "mechanism: A 16-point fall in employer weight-management coverage is pinned on one circuit ruling (binding in four states) plus a price step. The Fifth Circuit upheld the opposite view in Mar 2034, so a split exists and a national retreat of this size is asserted rather than shown."
+        },
+        {
+          "quote": "The twelve and a half million older users who came on for the dementia label",
+          "field": "prose/body",
+          "why": "magnitude/mechanism: The dementia label covers only adults 55+ with T2D or obesity plus established CVD, so it cannot account for most of the 12.5M users aged 65+. The parent world had ~10.5M, so 'came on for' misattributes the growth. Medicare's 12.6M users also barely exceed the 12.5M aged 65+, leaving no room for the ~0.5M disabled under-65s."
+        },
+        {
+          "quote": "'quiet' subscriptions grew from ~1.3M to ~3.4M after the Feb 2034 D.C. Circuit decision vacated the FTC's calm/focus orders",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "mechanism: The subscriber base is said to have more than doubled in under ten months, driven by a court ruling and a move of advertising online. No chain explains the speed of uptake, and the split by drug is stated without a source."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.0,
+        "inequality": 7.0,
+        "public_health": 6.0,
+        "cohesion": 5.0,
+        "epistemic": 6.5,
+        "overall": 6.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.0,
+        "mechanism": 6.0,
+        "magnitude": 7.0
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is harder than 2032 with new losers. Roughly 32M adults are off drug after losing employer coverage, 16M rely on gray supply, counterfeit pens cause 46 deaths, and a two-tier coded-versus-cash system is hardening. Access by income and by diagnosis code is stratified (bimagrumab infusion for the affluent, pen-thin bodies below), and reward blunting is sold on unregulated channels. Offsetting this, being on is normalised, pediatric exposure falls, and harms stay measured and nameable, so the world is a recognisably harder society and not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields (+2.0 pp adoption, price step-up, employer retreat, GI/pancreatic MDL, bimagrumab combination, counterfeits, normalisation, restriction, marketed 'quiet'). The 'generic flood' is only partly realised, because US generics are stalled and the flood is imported and gray product. mechanism: Several changes are asserted rather than shown. These are the single-circuit-driven 63%→47% employer collapse, the 12.5M 'dementia label' older users, the fast rise in 'quiet' subscribers, and the Texas plant ending the shortage within a month. magnitude: Adoption (29.9) and ever-used (41.8, near the 42 cap) sit inside the envelope. The population arithmetic, payer mix (sums to 100%), spending figures ($12.1B, $28.9B, $4.24B, $304M) and the gray composition all reconcile. The only gap is Medicare's 12.6M users against 12.5M aged 65+ plus the disabled.",
+        "generativity": "The Marisol scene sequence gives the world texture: the Nogales crossing, the laminated farmacia sign, comparing pen clicks, the supervisor on Hush, and Teo taking seconds. It implies characters and tiers without explaining them. Some details strain (Nogales to Sun City in a day, a 'DEXA bench' bruise, an A1c threshold that misreads the prediabetes cut-off)."
+      },
+      "plausibility": 6.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Infusion every 4 weeks limits it to ~0.5M users at infusion suites, mostly cash.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude and mechanism: 0.5M people paying $2,450 a month (about $14.7B a year, mostly cash) within roughly 14 months of approval is a very fast ramp. The world shows no chain for infusion-suite capacity or for payers and executive plans funding it."
+      },
+      {
+        "quote": "Incretin market ≈ $190B globally in 2034: US volume +9%, US net price +12–15%.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: gray users rose from ~9M to 16M, so legal users are about 65.0M in 2034 against about 65.8M in 2032, which is flat or slightly down. A +9% US volume figure does not reconcile with the payer mix and population arithmetic."
+      },
+      {
+        "quote": "a contaminated compounded lot carried Burkholderia into infusion bags",
+        "field": "prose/article",
+        "why": "Mechanism: the world state describes a contaminated 503B tirzepatide lot, a subcutaneous pen product. Nothing in it involves infusion bags, so the prose contradicts the world and invents a delivery route."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.5,
+      "autonomy": 6.0,
+      "inequality": 7.0,
+      "public_health": 6.0,
+      "cohesion": 5.0,
+      "epistemic": 6.17,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.0,
+      "magnitude": 7.33
+    },
+    "plausibility": 7.17,
+    "generativity": 7.33,
+    "rationale": {
+      "badness": "The 2034 world is a harder society with clear new losers. About 32M adults are off drug and cycling after losing employer coverage, 16M depend on gray supply, and a counterfeit and contamination crisis has caused 46 deaths. Tiers are explicit: $2,450 infusion bodies for the top third, 'pen-thin' as a class slur, and middle-third weight cycling around pay periods. Epistemic harm is moderate and structural: PDC data is known to be degraded, reward-blunting is sold as a 'quiet' feature through unregulated channels, and 182k litigation claims run ahead of the science. The harm is mostly normalised rather than catastrophic, which keeps it near 6.",
+      "plausibility": "driver_fidelity: All ten drivers are visibly realised in fields and events. Price shock, employer retreat, litigation, bimagrumab (filed Mar 2032, approved Oct 2033, over 12 months), counterfeits and generic ANDAs stalled by import alerts, normalisation, restrictions and marketed 'quiet' are all present. Approval timing respects the envelope and amycretin was under review at the start. mechanism: Several chains are asserted rather than shown. One warning letter raises federal prices across both companies. The Sixth Circuit's premium-differential ruling is credited with a 16-point fall in employer coverage. A retatrutide-plant letter produces a tirzepatide shortage. The prose also contradicts the world on Burkholderia in infusion bags (claim 3), and the 'one tenth too good' A1c line is shaky. magnitude: Population, payer-mix, gray-composition, HRSA, Bridge, Medicaid and DoD arithmetic all reconcile and sit inside the envelope, with 29.9% on and 41.8% ever. The gaps are US volume +9% against flat legal users (claim 2) and the 0.5M infusion users within about 14 months (claim 1).",
+      "generativity": "The Marisol Peña thread gives concrete scenes: the 4:40 alarm, the DeConcini crossing, the farmacia with a COFEPRIS licence beside the Virgin of Guadalupe, the Hush supervisor, the Sun City strength class and Teo taking seconds of calabacitas. The world fields add texture too: 'pen portions', cycler apparel lines, infusion lounges and brand names like Hush and Stillwater. The prose partly explains rather than shows in its opening half, and a few details are loose, such as the geography of Sun City against Nogales."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.984,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 7
   }
 }

@@ -49,6 +49,41 @@
         "input_tokens": 18405,
         "output_tokens": 23371
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r24-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27534,
+        "output_tokens": 6694
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r24-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27534,
+        "output_tokens": 4527
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r24-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27534,
+        "output_tokens": 5319
+      }
     ]
   },
   "world": {
@@ -308,6 +343,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r24-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "~1.9M people are on HD and ~3.4M on retatrutide in total.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Magnitude: 1.9M people on a $449 cash product within about ten months of a February 2034 launch, while Lilly is capacity-bound and meters new starts 'all year', is hard to square. It would mean over half of all retatrutide users moved to HD almost at once."
+        },
+        {
+          "quote": "Lilly's and Novo's US fill-finish expansions are the binding constraint on retatrutide HD and a stated reason for price holds.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: a capacity limit on one injectable does not explain holding prices on oral Wegovy and Foundayo, which are the volume base of CMHP. A firm short of capacity might also be expected to raise prices rather than freeze them. The stalled-price driver is asserted rather than caused."
+        },
+        {
+          "quote": "Stalled prices plus volume growth mean US incretin revenue grew ~20% across 2033–34.",
+          "field": "world/economy/pharma/state",
+          "why": "Magnitude: current users rose about 41% (53.3M to 75.4M) at flat prices, and Medicare spend alone rose about 20% on 20% more users. A total revenue gain of only ~20% is not reconciled, because the shift to cheap oral and CMHP volume is not quantified."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 6.5,
+        "inequality": 4.5,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Mass normalisation ('being off needs a reason'), employer-linked calm plans tied to promotions, and unmeasured anhedonia at low doses (2.9M workers, excluded from the FDA study) drive autonomy and epistemic harms. Teen use is rising while the growth findings stay unresolved, and 1.8M people are waitlisted on a flat-funded grant. Offsetting gains are CMHP access for the bottom third, a slightly smaller gray market (7.5M to 7.0M), no new contamination cluster, and lower adult obesity (33.4% to 32.0%). The result is a harder but not collapsing society, so around 5.5.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 27.5% (19.6 + 7.9), prices are stalled, employer coverage stays at 30%, and no new indications or safety signal appear. The triple agonist arrives as an HD sNDA filed Nov 2032 and approved Dec 2033, which is more than 12 months after filing and so allowed. CMHP is the subsidy, and EEOC no-cause findings plus employer EAP funding give the employer-encouraged personality layer. mechanism: Most chains are shown, including counterfeit-displacement politics for CMHP, the EEOC finding leading to EAP-funded calm plans, and FQHC rollout leading to gray-market decline in Memphis. The price hold is weakly explained by fill-finish capacity (claim 2). Employer-paid calm plans are classed as 'cash', which is convenient. In the prose, Denise has a $0 employer Steady plan available yet uses CMHP. magnitude: Ever-used 37 and on-drug 27.5 sit inside the envelope. The payer mix sums to 75.4M, Medicare ($37.8B) and dementia ($7.1B) multiply out, and the CMHP $7.1B run-rate matches $6.0B plus $1.1B. The age and income checks and the cycling arithmetic reconcile. Gaps are the revenue growth figure (claim 3) and the fast HD ramp (claim 1).",
+        "generativity": "The Denise Harmon scene is strong. It has the HRSA-sticker blister pack, the shoebox of Telegram vials she keeps, Marcus's red dashboard and wings at lunch, the sister's waitlist number 212, daughter Kayla's request, and the refill app's mood prompt. The world also implies many scenes: Memphis FQHC lines, call-centre promotion politics, 'off' tags on dating apps, and union grievances. The prose summary is somewhat explanatory, but the day-in-the-life mostly shows rather than tells."
+      },
+      "plausibility": 7.5
+    },
+    {
+      "custom_id": "s4-L2-r24-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Most of it is on the drug, and whoever is not has to explain why.",
+          "field": "prose/closing_paragraph",
+          "why": "The world state puts 27.5% of adults on the drug and 37% ever-used, so 'most' is false. This is a narrative contradiction with the world state, which fails mechanism."
+        },
+        {
+          "quote": "Apps dropped the 'on a calm plan' tag because nearly everyone had it",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Calm/focus subscribers number ~4.6M of ~274M adults (about 1.7%), so 'nearly everyone' is unsupported. The claimed cause of the app change contradicts the candidate's own figures, which fails mechanism."
+        },
+        {
+          "quote": "Half her class is on it, she says.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Teen use is stated as ~3.3% of 12–17s, so half a 15-year-old's class on the drug is incoherent with the world state. Even as teenage exaggeration, it reads as a prose-versus-state contradiction."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 5.5,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is a recognisably harder society: promotions in call centres and logistics track enrolment in tracks and calm plans (autonomy), and life insurers now ask the untreated to explain themselves. A capped grant leaves 1.8M on waitlists who regain (inequality), teen use is up with the growth findings unresolved, and no one has measured anhedonia at low doses (epistemic). Obesity is falling and the drugs have real health benefits, and there is no spectacle, so I hold it near 6 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is 27.5 (19.6 + 7.9), prices are stalled, and coverage is status quo at 30%. Retatrutide HD realises the triple-agonist driver as an existing product in a new form, approved 13 months after filing. The CMHP realises the subsidy, no new indication is added, and the safety signal is none. mechanism: Cash growth of ~15M users at stalled prices is only loosely tied to normalisation and calm plans. The prose contradicts the world state in 'Most of it is on the drug', 'nearly everyone had it' and 'Half her class is on it'. Also, 1.9M HD users in about ten metered months is asserted rather than shown. magnitude: Figures are inside the envelope and reconcile. The payer mix sums to 75.4M, Medicare spend is 13.4M×235×12≈$37.8B, and CMHP is 3.6M×165×12≈$7.1B against $6.0B plus $1.1B. The age and income checks and the cycling arithmetic also work. Only the fast CMHP ramp and HD uptake are a little aggressive.",
+        "generativity": "Denise gives a concrete texture: the shoebox of Telegram vials, the HRSA-stickered blister pack, the two buses, the red escalation dashboard, and the refill app's mood question. The supporting cast is implied too: Marcus and his wings, the waitlist number 212, and Kayla asking about the drug. The employer-pressure and waitlist threads suggest several scenes, and the prose shows more than it explains, though the front-matter essay is expository."
+      },
+      "plausibility": 7.35
+    },
+    {
+      "custom_id": "s4-L2-r24-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "~1.9M people are on HD and ~3.4M on retatrutide in total.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism and magnitude: HD launched in Feb 2034 with new starts 'metered all year' because fill-finish capacity is binding, yet 1.9M people are already on it at ~$449 cash or behind prior authorisation. The world does not show how metered supply reaches that number in about ten months."
+        },
+        {
+          "quote": "~2.9M workers now have employer-sponsored calm plans and ~7.0M are in adherence-verified tracks.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: employer-sponsored calm plans start from a base of essentially zero in 2032. The EEOC no-cause finding came in Oct 2033 and employers added plans only by mid-2034, so reaching 2.9M workers in about a year is asserted, not shown. It is also in tension with employer coverage staying flat at 30%."
+        },
+        {
+          "quote": "3.6M enrolled × ~$165 blended ($149 starts / $199 maintenance) × 12 ≈ $7.1B annualised run-rate",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: a new grant program, created in Sep 2033 and dispensing from Jan 2034 through FQHCs and voucher pharmacies, enrols 3.6M adults (plus 1.8M waitlisted) within about 12 months. That is an implausibly fast ramp, and the $6.0B FY2034 appropriation only roughly matches an annualised run-rate for a program that ran part of the year."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Being on the drug becomes the default and being off requires an explanation (life-insurer underwriting questions, the 'off' dating tag). Promotions informally track enrolment in employer calm plans, and the 2.9M workers on them are unmeasured for anhedonia. CMHP is capped, with 1.8M waitlisted and a funding cliff, and fracture exposure rises with HD while the lean-mass adjunct was refused. Cohesion and autonomy are damaged, but obesity and EPI are not catastrophic, so this is a harder society with new losers, not a structural nightmare.",
+        "plausibility": "driver_fidelity: All ten drivers are visibly realised. Adoption is 27.5 against a 25.5–29.5 bound. Prices are stalled, HD retatrutide is a new form of an existing product with a filing-to-approval gap over 12 months, and CMHP covers the subsidy. The employer-encouraged and normalisation drivers appear in both fields and events, and there is no safety signal or market shock. mechanism: The chains for CMHP, the EEOC finding and HD are named, but the speed of ramps is asserted. These are the 1.9M HD users under metered supply, 2.9M employer calm plans within a year of the EEOC finding, and 3.6M CMHP enrolees within a year (see claims 1–3). magnitude: Population figures sit inside the envelope. Payer mix sums to 75.4M, Medicare ($37.8B), dementia ($7.1B) and CMHP ($7.1B against $6.0B plus $1.1B) all multiply out, and the age and income checks work. Small gaps remain: the under-18 1.4% is hard to square with 12–17 at 3.3% and 6–11 at 0.2%, and US incretin revenue growth of ~20% is low against a ~40% user rise.",
+        "generativity": "The Denise Harmon vignette has strong texture: the shoebox of Telegram vials, the waitlist number 212, Marcus and the wings, the refill-app mood check and Kayla asking to start. It implies many further scenes (the CMHP clinic, the call-centre floor, the promotion pressure, the teen question). The world fields give a lot to draw on, such as the 'off' tag, the life-insurer question and the Memphis body."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "~1.9M people are on HD and ~3.4M on retatrutide in total.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Magnitude: 1.9M people on a $449 cash product within about ten months of a February 2034 launch, while Lilly is capacity-bound and meters new starts 'all year', is hard to square. It would mean over half of all retatrutide users moved to HD almost at once."
+      },
+      {
+        "quote": "Lilly's and Novo's US fill-finish expansions are the binding constraint on retatrutide HD and a stated reason for price holds.",
+        "field": "world/state/geopolitics_of_supply",
+        "why": "Mechanism: a capacity limit on one injectable does not explain holding prices on oral Wegovy and Foundayo, which are the volume base of CMHP. A firm short of capacity might also be expected to raise prices rather than freeze them. The stalled-price driver is asserted rather than caused."
+      },
+      {
+        "quote": "Stalled prices plus volume growth mean US incretin revenue grew ~20% across 2033–34.",
+        "field": "world/economy/pharma/state",
+        "why": "Magnitude: current users rose about 41% (53.3M to 75.4M) at flat prices, and Medicare spend alone rose about 20% on 20% more users. A total revenue gain of only ~20% is not reconciled, because the shift to cheap oral and CMHP volume is not quantified."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 6.83,
+      "inequality": 5.5,
+      "public_health": 4.83,
+      "cohesion": 5.83,
+      "epistemic": 6.0,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.83,
+      "mechanism": 6.17,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.37,
+    "generativity": 7.5,
+    "rationale": {
+      "badness": "Mass normalisation ('being off needs a reason'), employer-linked calm plans tied to promotions, and unmeasured anhedonia at low doses (2.9M workers, excluded from the FDA study) drive autonomy and epistemic harms. Teen use is rising while the growth findings stay unresolved, and 1.8M people are waitlisted on a flat-funded grant. Offsetting gains are CMHP access for the bottom third, a slightly smaller gray market (7.5M to 7.0M), no new contamination cluster, and lower adult obesity (33.4% to 32.0%). The result is a harder but not collapsing society, so around 5.5.",
+      "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is 27.5% (19.6 + 7.9), prices are stalled, employer coverage stays at 30%, and no new indications or safety signal appear. The triple agonist arrives as an HD sNDA filed Nov 2032 and approved Dec 2033, which is more than 12 months after filing and so allowed. CMHP is the subsidy, and EEOC no-cause findings plus employer EAP funding give the employer-encouraged personality layer. mechanism: Most chains are shown, including counterfeit-displacement politics for CMHP, the EEOC finding leading to EAP-funded calm plans, and FQHC rollout leading to gray-market decline in Memphis. The price hold is weakly explained by fill-finish capacity (claim 2). Employer-paid calm plans are classed as 'cash', which is convenient. In the prose, Denise has a $0 employer Steady plan available yet uses CMHP. magnitude: Ever-used 37 and on-drug 27.5 sit inside the envelope. The payer mix sums to 75.4M, Medicare ($37.8B) and dementia ($7.1B) multiply out, and the CMHP $7.1B run-rate matches $6.0B plus $1.1B. The age and income checks and the cycling arithmetic reconcile. Gaps are the revenue growth figure (claim 3) and the fast HD ramp (claim 1).",
+      "generativity": "The Denise Harmon scene is strong. It has the HRSA-sticker blister pack, the shoebox of Telegram vials she keeps, Marcus's red dashboard and wings at lunch, the sister's waitlist number 212, daughter Kayla's request, and the refill app's mood prompt. The world also implies many scenes: Memphis FQHC lines, call-centre promotion politics, 'off' tags on dating apps, and union grievances. The prose summary is somewhat explanatory, but the day-in-the-life mostly shows rather than tells."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.465,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 27
   }
 }

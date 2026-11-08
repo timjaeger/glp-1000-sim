@@ -52,6 +52,41 @@
         "input_tokens": 18536,
         "output_tokens": 27136
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r23-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28081,
+        "output_tokens": 7282
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r23-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28081,
+        "output_tokens": 10570
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r23-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28081,
+        "output_tokens": 6080
+      }
     ]
   },
   "world": {
@@ -326,6 +361,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r23-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "~6M who stay on the $149 TrumpRx starting dose indefinitely",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: about 6M people (22% of the 27M legitimate-cash users) are said to sit on a starting dose indefinitely. No chain explains why that many stay at a sub-therapeutic dose rather than titrating, and the 'no data at all' on it makes the headcount an assertion."
+        },
+        {
+          "quote": "The bottom third rose only 14 → 17.5: Medicaid AUD coverage and $149 starting doses added users, while about 1.7M gray-market users priced out",
+          "field": "world/population/note",
+          "why": "Magnitude: a 3.5-point rise is roughly +3.2M net users in the bottom third while about 1.7M gray-market users, concentrated there, leave. That needs about 4M gross gains. The named sources (≤0.9M Medicaid AUD plus about 0.85M redirected to $149 doses) do not cover it."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 1.6",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the note gives 3.1% of 12–17s and 0.45% of 6–11s. Equal-width age bands weight these to about 1.2% of under-18s, not 1.6%, and the starting-world pediatric figures have the same gap."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 6,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Premiums, FEHB and 9.4M enrollees are conditioned on pill logs and scans, so autonomy is badly hit (state/conditioning_or_surveillance, effect_on_work). Children on Medicaid are started on a drug with a known growth deficit while the best-resourced parents opt out (open_tensions, thinness_and_class). The tariff produced the 'hunger tax' regain wave and domestic re-filled vials causing Burkholderia deaths. About 90k litigation claims, regain after abrupt stopping and the unmeasured low-dose anhedonia add to this. The result is structural and partly invisible, but it stays a harder 2032 rather than a collapse, so I stop at 7.",
+        "plausibility": "driver_fidelity: Most drivers are visible in events (AUD label, pediatric approval, oral amycretin, Novo scandal and litigation, OPM conditioning, Mall rally). 'shock_up' is realised only in the import channel while branded prices keep drifting down, which is thin. A federal Section 232 tariff and OPM mandate sit awkwardly beside state_action 'none', and the text says no agency acted. mechanism: The tariff, EPSDT, Medicaid AUD and employer-conditioning chains are shown. Employer coverage rising 30→33% amid retreat, indefinite starting-dose use (claim 1) and the ~3% 'tariff bounce' from about 0.85M stoppers are asserted rather than shown. magnitude: Adult use (24.7), ever-use (34.6), age, income, payer-mix, Medicare and Part D arithmetic and approval timing (12–13 months) all reconcile inside the envelope. The pediatric aggregate (claim 3) and the bottom-third net gain (claim 2) are the two real gaps.",
+        "generativity": "The prose gives concrete scenes: Lorna's 5:10 pill ritual, the depot driver asking about drug tests, Kiara's height chart with its bend, and the cooking-channel switch. The world fields add specific places, such as Bardstown, Dayton pill nights, Memphis and the Delta, and Bethesda versus South Memphis. Many characters and conflicts are implied, and the day-in-the-life mostly shows rather than explains."
+      },
+      "plausibility": 6.4
+    },
+    {
+      "custom_id": "s4-L2-r23-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Six million people now stay on that starting dose indefinitely because it is what they can afford, a regimen nobody has studied.",
+          "field": "prose/paragraph_2",
+          "why": "Mechanism and magnitude: no chain shows why ~6M people, about a fifth of cash users, stay on a starting dose designed for titration, or why makers and pharmacies keep refilling it. The headcount is asserted to make the cash payer line (+9.4M) reconcile."
+        },
+        {
+          "quote": "delivered prices for mail-order semaglutide vials roughly triple to $90–180 and an estimated 1.7 million US gray-market users drop out or switch",
+          "field": "world/events/1/event",
+          "why": "Mechanism: a 100% tariff roughly doubles a landed price, so tripling needs the licence checks to carry the rest, and this is not shown. A Section 232 action plus an India deal inside about 15 months also sits awkwardly with `state_action: none`. The 1.7M exit figure is a bare estimate."
+        },
+        {
+          "quote": "Oral amycretin (approved Feb 2034) has a $1,299 list price and is ~$449 cash direct, with no TrumpRx price yet; ~2.2M users by Dec 2034.",
+          "field": "world/access/note",
+          "why": "Magnitude and mechanism: 2.2M users within about ten months of launch, at $449 cash with prior authorisation everywhere else, has no payer breakdown behind it. The 2032 pipeline note never mentions oral amycretin or a phase 3 filing, so the Jan 2033 filing appears from nowhere."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 6,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Usage reaches 24.7% of adults and premium tiers hinge on pill logs for ~9.4M workers (`effect_on_work`). Medicaid children make up most new 6–11 starts on a drug with a known ~0.5 cm/year growth deficit, while upper-income parents opt out (`thinness_and_class`). The tariff pushes the poorest into regain or back-room vials that killed three people, and ~90k litigants plus the Novo documents add distrust. This is a harder society with clear new losers and quiet normalisation, but no collapse, so it sits at 6.5, not higher.",
+        "plausibility": "driver_fidelity: Most drivers are visibly realised in fields and events: AUD and 6–11 approvals, oral amycretin parity, the Novo scandal, EPI/GI litigation, the rally and OPM conditioning. `price_path: shock_up` is met only in the import channel, since branded prices still drift down, and the tariff and OPM mandate are heavy federal actions despite `state_action: none` (claim 2). mechanism: Most changes have chains: the AUD label forces Medicaid coverage, the tariff pushes users to $149 starting doses or regain, and AUDIT-C routes calm plans onto the AUD label. The 6M indefinite starting-dose users and the fast oral amycretin uptake are asserted rather than shown (claims 1 and 3). magnitude: Adult use of 24.7% and ever-use of 34.6% are inside the envelope, and the approval timings (12–13 months from filing) obey the rules. The age bands, income thirds, payer mix (sums to 67.7M), cycling arithmetic and Medicare spend ($38.3B, $6.0B and $2.0B) all reconcile. Minor gaps are the tripling arithmetic and a pediatric 1.6% headline that exceeds what the age-band figures imply, as in 2032.",
+        "generativity": "The prose scene is a Memphis dispatcher on the $149 pill, a driver asking about drug tests, a ten-year-old with a bending growth chart and a rally on TV. It shows rather than explains, and each beat ties to a world field. The JSON adds texture too: pill nights in Dayton, the 'hunger tax', 'dry' stand-up and smart-pill-bottle bundles."
+      },
+      "plausibility": 7.3
+    },
+    {
+      "custom_id": "s4-L2-r23-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "because AUD is not a weight-loss use, the optional weight-loss exclusion does not apply, so oral semaglutide for AUD is a covered outpatient drug in every state under existing rebate law, behind existing PA criteria",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: it asserts that Medicaid AUD coverage became effectively mandatory in all states with no statute, rule or litigation. States can still restrict through formulary and PA, and the candidate shows no chain for ~0.9M Medicaid AUD users."
+        },
+        {
+          "quote": "~2.2M users by Dec 2034",
+          "field": "world/access/note",
+          "why": "Magnitude and mechanism: a $449 cash, prior-authorisation-gated oral reaches 2.2M users in under ten months. The candidate shows no payer or channel path for that uptake, and the figure is hard to square with the payer mix."
+        },
+        {
+          "quote": "tripled delivered gray-market prices",
+          "field": "world/access/note",
+          "why": "Mechanism and driver fidelity: a 100% tariff plus licence checks would roughly double a price, yet the world has it tripling ($40 to $90–180). The tariff and India trade deal are sweeping federal executive actions that sit uneasily with `state_action: none`, and branded prices do not move at all, which makes `shock_up` thin."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7.5,
+        "inequality": 7,
+        "public_health": 6.5,
+        "cohesion": 6,
+        "epistemic": 6,
+        "overall": 6.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Premium tiers tied to adherence logs for ~9.4M workers, plus smart-pill-bottle feeds and CMS audits of AUDIT-C records, push autonomy and surveillance harms high. Inequality is also high: the bottom third is priced out of the gray market into mass regain, Medicaid children make up most new 6–11 starts while Bethesda parents opt out, and Burkholderia vials killed people in the South. Harm is partly visible and discussed (rally, MDL, FDA study), which holds epistemic and cohesion scores in the mid-range. It is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: All drivers are traceable to events and fields, with the AUD, pediatric 6–11 and oral amycretin approvals falling inside the allowed timing windows. `shock_up` is realised only in the import channel while branded prices are unchanged, and a tariff/trade deal and OPM mandate sit awkwardly with `state_action: none`. mechanism: The Medicaid-AUD 'mandatory under existing rebate law' chain is asserted, the tripling of prices from a 100% tariff is stretched, and rapid oral amycretin uptake has no shown path. The 2033-06 event also cites claims 'by late 2034', and the prose says Lorna's $149 dose has run 14 months when the tariff was about 20 months earlier. magnitude: Adult use (24.7), ever-use (34.6), income thirds, age bands, payer sum (67.7M) and Medicare spend arithmetic all reconcile inside the envelope. The pediatric figures (1.6% under 18 vs 3.1% of 12–17 and 0.45% of 6–11) do not quite multiply out, and the 2.2M amycretin figure is aggressive.",
+        "generativity": "The prose has a concrete protagonist with a 5:10 pill routine and a Memphis bus depot, a dispatcher exchange about drug tests and TennCare, and a child's growth-chart line, all grounded in specific places. The world fields add many implied scenes: pill nights in Dayton, the Mall rally, bourbon layoffs and the 'hunger tax'. The final scene shows rather than explains, though a few ending beats lean on irony."
+      },
+      "plausibility": 6.7
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "~6M who stay on the $149 TrumpRx starting dose indefinitely",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: about 6M people (22% of the 27M legitimate-cash users) are said to sit on a starting dose indefinitely. No chain explains why that many stay at a sub-therapeutic dose rather than titrating, and the 'no data at all' on it makes the headcount an assertion."
+      },
+      {
+        "quote": "The bottom third rose only 14 → 17.5: Medicaid AUD coverage and $149 starting doses added users, while about 1.7M gray-market users priced out",
+        "field": "world/population/note",
+        "why": "Magnitude: a 3.5-point rise is roughly +3.2M net users in the bottom third while about 1.7M gray-market users, concentrated there, leave. That needs about 4M gross gains. The named sources (≤0.9M Medicaid AUD plus about 0.85M redirected to $149 doses) do not cover it."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 1.6",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude: the note gives 3.1% of 12–17s and 0.45% of 6–11s. Equal-width age bands weight these to about 1.2% of under-18s, not 1.6%, and the starting-world pediatric figures have the same gap."
+      }
+    ],
+    "badness": {
+      "flourishing": 6.0,
+      "autonomy": 7.33,
+      "inequality": 7.0,
+      "public_health": 6.5,
+      "cohesion": 6.0,
+      "epistemic": 6.0,
+      "overall": 6.77
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 6.33,
+      "mechanism": 6.5,
+      "magnitude": 7.17
+    },
+    "plausibility": 6.8,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "Premiums, FEHB and 9.4M enrollees are conditioned on pill logs and scans, so autonomy is badly hit (state/conditioning_or_surveillance, effect_on_work). Children on Medicaid are started on a drug with a known growth deficit while the best-resourced parents opt out (open_tensions, thinness_and_class). The tariff produced the 'hunger tax' regain wave and domestic re-filled vials causing Burkholderia deaths. About 90k litigation claims, regain after abrupt stopping and the unmeasured low-dose anhedonia add to this. The result is structural and partly invisible, but it stays a harder 2032 rather than a collapse, so I stop at 7.",
+      "plausibility": "driver_fidelity: Most drivers are visible in events (AUD label, pediatric approval, oral amycretin, Novo scandal and litigation, OPM conditioning, Mall rally). 'shock_up' is realised only in the import channel while branded prices keep drifting down, which is thin. A federal Section 232 tariff and OPM mandate sit awkwardly beside state_action 'none', and the text says no agency acted. mechanism: The tariff, EPSDT, Medicaid AUD and employer-conditioning chains are shown. Employer coverage rising 30→33% amid retreat, indefinite starting-dose use (claim 1) and the ~3% 'tariff bounce' from about 0.85M stoppers are asserted rather than shown. magnitude: Adult use (24.7), ever-use (34.6), age, income, payer-mix, Medicare and Part D arithmetic and approval timing (12–13 months) all reconcile inside the envelope. The pediatric aggregate (claim 3) and the bottom-third net gain (claim 2) are the two real gaps.",
+      "generativity": "The prose gives concrete scenes: Lorna's 5:10 pill ritual, the depot driver asking about drug tests, Kiara's height chart with its bend, and the cooking-channel switch. The world fields add specific places, such as Bardstown, Dayton pill nights, Memphis and the Delta, and Bethesda versus South Memphis. Many characters and conflicts are implied, and the day-in-the-life mostly shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 6.216,
+    "survived": true,
+    "new_lineage": "L3",
+    "floor_used": 6,
+    "rank": 3
   }
 }

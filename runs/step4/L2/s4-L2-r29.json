@@ -49,6 +49,41 @@
         "input_tokens": 18476,
         "output_tokens": 24148
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r29-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27746,
+        "output_tokens": 5700
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r29-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27746,
+        "output_tokens": 8540
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r29-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27746,
+        "output_tokens": 7150
+      }
     ]
   },
   "world": {
@@ -314,6 +349,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r29-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The cheapest legitimate drug in the country now costs less than the mail-order vials that had carried the poorest third into the market.",
+          "field": "prose/paragraph_1",
+          "why": "Mechanism: the starting world puts Indian generic vials at $4–30 and a 40–50× gap to US cash prices, so gray vials were not dearer than $45 generics. The sentence contradicts the parent state and the world's own account of why users moved."
+        },
+        {
+          "quote": "About 4.8M new users since 2032 roughly match the 4.8-point rise in ever-use.",
+          "field": "world/population/note",
+          "why": "Magnitude: a 4.8-point rise in ever-use among ~274M adults is about 13M people, not 4.8M. Current users rose from ~53.3M to ~63.0M, about 9.7M. The reconciliation sentence does not reconcile."
+        },
+        {
+          "quote": "In Memphis, gray-market cyclers became Medicaid generic users within a year, and the cycler's face is starting to soften into the steadier, plain thinness of covered users.",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "Mechanism: Memphis is in a non-expansion state where most adult cyclers would not qualify for Medicaid. The world also says state plan amendments were filed during 2034, so a within-a-year Medicaid transition is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 4.5,
+        "inequality": 4.0,
+        "public_health": 5.0,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7.0,
+        "magnitude": 6.5
+      },
+      "generativity": 8.0,
+      "rationale": {
+        "badness": "On balance this world is somewhat better than 2032 on access and inequality. Generic semaglutide at $45, Medicare and Medicaid coverage, and a gray market cut from 7.5M to 4.0M reduce stratification and contamination harms. Real costs remain: ~5M new Medicare users with no DXA baselines against a known fracture signal, rising adolescent Medicaid starts in clinics without paediatric endocrinology, and ~2,100 ED visits from holiday re-escalation. Premium-credit penalties for dose gaps under the 2027 guidance persist. The harm is now labelled and discussable, which lowers epistemic badness, but about 19.5M users are self-managing blunting with erratic dosing.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Generic semaglutide arrives via settlement and an authorised generic (event 2033-02). The CMS rule covers public expansion. The scandal, anhedonia label, backlash and mainstream-complaint framing all have events. No new indication and no next-gen launch, and the pipeline note explains why. The CMS rule and the Medicaid state plan amendments sit slightly awkwardly beside state_action: none, but the world frames them as federal action. mechanism: most chains are shown, including settlement dates to generics, the rule to payer-mix shift, unsealed documents to labelling, and the label to holidays. Claims 1 and 3 are weak. The $45 versus gray-vial price claim contradicts the starting prices, and the Memphis Medicaid transition ignores non-expansion eligibility and the 2034 timing. magnitude: adults on drug 23.0 and ever-used 33.6 are inside the envelope. The age, income, cycling and payer-mix arithmetic checks, and the Medicare ($21.9B) and Medicaid ($5.4B) spend arithmetic multiplies out, including the 5.3M user bridge. The one clear failure is the '4.8M new users vs 4.8-point rise' statement (claim 2), a minor reconciliation gap.",
+        "generativity": "The world has many scene-ready details: Friday-night bar surges in Austin and Nashville, cake-mix spikes on holiday weekends, couples synchronising holidays, and 'going off for Q4' in Charlotte. Full Volume weekends and a pharmacist's refill screening question add more. The day-in-the-life with Denise Harlan shows rather than explains, through the skipped Thursday shot, the shoe box of unopened vials, the pharmacist's anhedonia question, the lift in her chest and the licked bowl. The ending is a little tidy and thematic."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s4-L2-r29-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "so the 43 states that had excluded these drugs now cover generic semaglutide through state plan amendments filed during 2034",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: Medicaid drug exclusions are optional under state authority, so a CMS reinterpretation cannot compel 43 states to cover. Plan amendments filed during 2034 also cannot already produce ~4.5M generic Medicaid users by late 2034, which is roughly a doubling of Medicaid users."
+        },
+        {
+          "quote": "Employer coverage rose from 30% to 37%, almost entirely through generic-only tiers.",
+          "field": "world/access/note",
+          "why": "Mechanism: a 7-point reversal of the 2031 retreat is asserted in one sentence. With $45 cash generics available, the obvious employer response is to stop covering, and no chain explains why they add coverage. The pharmacy-trend and track-shrinkage figures also sit uneasily with it."
+        },
+        {
+          "quote": "The cheapest legitimate drug in the country now costs less than the mail-order vials that had carried the poorest third into the market.",
+          "field": "prose/paragraph_1",
+          "why": "Mechanism and internal consistency: the world gives Indian vials at $3–25 and imports at a ~40–50× discount to US cash prices, with no stated gray-market US price. A $45 generic is not shown to be cheaper than those vials, so the claim is unsupported."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.0,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 4.5,
+        "cohesion": 4.0,
+        "epistemic": 3.0,
+        "overall": 4.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.0,
+        "mechanism": 6.0,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Access broadens: gray-market use falls to ~4.0M, bottom-third use rises to 19.5%, and the anhedonia effect is now on the label, so the harm is nameable (epistemic ~3). Costs remain: about 5M new older users without DXA baselines in a known fracture cohort, rising adolescent starts in clinics without endocrinology, re-escalation ED visits (~2,100), and adherence records that penalise holiday gaps under the 2027 guidance. This is a harder society with new losers, but a better-informed and cheaper one than 2032, so overall ~4.",
+        "plausibility": "driver_fidelity: Every driver is traceable to an event or field. These include the 2033-02 generic settlement, the CMS rule, the Novo scandal, the anhedonia label, the backlash weekends, and no new indications or launches (AUD CRL, bimagrumab not approved). The only tension is that CMS and FDA acted while state_action is 'none', which reads as state-level inaction. mechanism: Generic price to switching to Part D spend decline is well shown. The legal route by which a rule compels Medicaid coverage, and employer coverage rising from 30% to 37%, are asserted (claims 1 and 2). The prose line about $45 being cheaper than mail-order vials is unsupported (claim 3). magnitude: Adults on drug 23.0, ever used 33.6, income thirds and the age band all fall inside the envelope and reconcile. Payer mix sums to 63.0M, and the Medicare ($21.9B) and Medicaid ($5.4B) arithmetic multiplies out. Minor strain: Medicaid roughly doubles within a year of SPAs being filed, and the branded net price falls ~10% against the stated ~8%.",
+        "generativity": ""
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s4-L2-r29-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "About 4.8M new users since 2032 roughly match the 4.8-point rise in ever-use.",
+          "field": "world/population/note",
+          "why": "Fails magnitude: a 4.8-point rise in ever-use is about 13M adults, and the note's own current-user figures rise from ~53.3M to ~63.0M (~9.7M). The stated 4.8M 'match' does not reconcile with either."
+        },
+        {
+          "quote": "so the 43 states that had excluded these drugs now cover generic semaglutide through state plan amendments filed during 2034",
+          "field": "world/access/public_coverage",
+          "why": "Fails mechanism: every excluding state is shown amending its plan within one year, and Medicaid use is shown doubling to ~6.5M. No chain of state action is given, and this sits uneasily with state_action 'none' and the claim that no state agency acted."
+        },
+        {
+          "quote": "In the afternoon she sits on the porch while the neighbour's radio plays Al Green, and around three something in her chest lifts that she had not noticed was gone.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Fails mechanism: she has only just skipped a weekly dose on the same day, and the world says blunting reverses over 2–6 weeks of dose reduction. Relief within hours contradicts the candidate's own pharmacology."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 3,
+        "overall": 4
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Compared with 2032 this is mostly a lesser-harm world. Generics at $45 and Medicare/Medicaid coverage cut gray-market users from 7.5M to 4.0M, narrow the class gradient, and anhedonia is now labelled and discussed openly (epistemic is low). The new harms are real but moderate: ~5M older Medicare users without DXA baselines in a cohort with a fracture signal, ~2,100 holiday re-escalation ED visits, adolescent starts through EPSDT in clinics without paediatric endocrinology, and adherence records that penalise gaps under the 2027 guidance. Overall it is a harder society for some groups but not worse than 2032.",
+        "plausibility": "driver_fidelity: Every driver is visible: 23.0% adults (19.6 + 3.4), a generic collapse via the Feb 2033 settlement event, a CMS rule, anhedonia labelling, a Novo scandal, backlash events, and no new indications or next-gen launch. The 43-state plan-amendment filings sit slightly awkwardly with state_action 'none'. mechanism: Most chains are shown (generics to cheaper Medicare spend, labelling to renamed calm plans, holidays to ED visits and scanner spikes). Gaps are the unexplained 43-state Medicaid adoption in one year (claim 2) and Denise's same-day relief (claim 3), which contradicts the candidate's own 2–6 week reversal. magnitude: Figures sit inside the envelope, and the age, income, cycling, payer-mix and Part D/Medicaid dollar arithmetic all reconcile. The exception is the population note's '4.8M new users' versus a 4.8-point rise in ever-use (claim 1), a minor reconciliation error.",
+        "generativity": "The prose gives a specific character, Denise Harlan in Whitehaven, with objects (the pen behind the eggs, two unopened Telegram vials in a shoe box) and a pharmacist screening scene. The world also implies many scenes: holiday-week scanner data, Full Volume weekends, salespeople going off for Q4, and Medicaid teens in underserved clinics. It rests on more than a dozen named places and institutions, and daily life has real texture."
+      },
+      "plausibility": 6.95
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The cheapest legitimate drug in the country now costs less than the mail-order vials that had carried the poorest third into the market.",
+        "field": "prose/paragraph_1",
+        "why": "Mechanism: the starting world puts Indian generic vials at $4–30 and a 40–50× gap to US cash prices, so gray vials were not dearer than $45 generics. The sentence contradicts the parent state and the world's own account of why users moved."
+      },
+      {
+        "quote": "About 4.8M new users since 2032 roughly match the 4.8-point rise in ever-use.",
+        "field": "world/population/note",
+        "why": "Magnitude: a 4.8-point rise in ever-use among ~274M adults is about 13M people, not 4.8M. Current users rose from ~53.3M to ~63.0M, about 9.7M. The reconciliation sentence does not reconcile."
+      },
+      {
+        "quote": "In Memphis, gray-market cyclers became Medicaid generic users within a year, and the cycler's face is starting to soften into the steadier, plain thinness of covered users.",
+        "field": "world/body_and_culture/thinness_and_class",
+        "why": "Mechanism: Memphis is in a non-expansion state where most adult cyclers would not qualify for Medicaid. The world also says state plan amendments were filed during 2034, so a within-a-year Medicaid transition is asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.5,
+      "inequality": 3.67,
+      "public_health": 4.67,
+      "cohesion": 4.17,
+      "epistemic": 3.17,
+      "overall": 4.1
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.67,
+      "magnitude": 6.83
+    },
+    "plausibility": 7.05,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "On balance this world is somewhat better than 2032 on access and inequality. Generic semaglutide at $45, Medicare and Medicaid coverage, and a gray market cut from 7.5M to 4.0M reduce stratification and contamination harms. Real costs remain: ~5M new Medicare users with no DXA baselines against a known fracture signal, rising adolescent Medicaid starts in clinics without paediatric endocrinology, and ~2,100 ED visits from holiday re-escalation. Premium-credit penalties for dose gaps under the 2027 guidance persist. The harm is now labelled and discussable, which lowers epistemic badness, but about 19.5M users are self-managing blunting with erratic dosing.",
+      "plausibility": "driver_fidelity: every driver is realised and traceable. Generic semaglutide arrives via settlement and an authorised generic (event 2033-02). The CMS rule covers public expansion. The scandal, anhedonia label, backlash and mainstream-complaint framing all have events. No new indication and no next-gen launch, and the pipeline note explains why. The CMS rule and the Medicaid state plan amendments sit slightly awkwardly beside state_action: none, but the world frames them as federal action. mechanism: most chains are shown, including settlement dates to generics, the rule to payer-mix shift, unsealed documents to labelling, and the label to holidays. Claims 1 and 3 are weak. The $45 versus gray-vial price claim contradicts the starting prices, and the Memphis Medicaid transition ignores non-expansion eligibility and the 2034 timing. magnitude: adults on drug 23.0 and ever-used 33.6 are inside the envelope. The age, income, cycling and payer-mix arithmetic checks, and the Medicare ($21.9B) and Medicaid ($5.4B) spend arithmetic multiplies out, including the 5.3M user bridge. The one clear failure is the '4.8M new users vs 4.8-point rise' statement (claim 2), a minor reconciliation gap.",
+      "generativity": "The world has many scene-ready details: Friday-night bar surges in Austin and Nashville, cake-mix spikes on holiday weekends, couples synchronising holidays, and 'going off for Q4' in Charlotte. Full Volume weekends and a pharmacist's refill screening question add more. The day-in-the-life with Denise Harlan shows rather than explains, through the skipped Thursday shot, the shoe box of unopened vials, the pharmacist's anhedonia question, the lift in her chest and the licked bowl. The ending is a little tidy and thematic."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 3.985,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 48
   }
 }

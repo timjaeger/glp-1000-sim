@@ -52,6 +52,41 @@
         "input_tokens": 18795,
         "output_tokens": 22151
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r40-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28611,
+        "output_tokens": 6479
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r40-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28611,
+        "output_tokens": 7111
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r40-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28611,
+        "output_tokens": 7753
+      }
     ]
   },
   "world": {
@@ -335,6 +370,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r40-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "≈6.6M diabetes, ≈10.2M obesity, ≈0.7M AUD under compendia listing",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: Medicare would hold 0.7M of the ≈1.6M AUD users, about 44%, while ~40% of AUD users are under 35. That leaves almost no room for Medicaid, VA and commercial users in a first year after a Nov 2033 guideline, so the counts do not reconcile."
+        },
+        {
+          "quote": "The under-30 jump from 13.5% to 22% is not about weight.",
+          "field": "world/population/note",
+          "why": "mechanism: the listed causes (the 50 mg pill, 2.5M added 'calm' subscribers, ~0.6M AUD users under 35, gray copies) do not obviously add up to +4.4M under-30 users. The pill is a weight drug and the inversion discourages thinness, so the denial is asserted rather than shown."
+        },
+        {
+          "quote": "The 50 mg pill raised one-year persistence among new oral starters to ~45%, but the larger long-term 65+ population added more bone pauses, and the two roughly cancel.",
+          "field": "world/population/note",
+          "why": "mechanism: the cycling share lands at exactly the parent's 45% only because two opposing effects are said to cancel. That is a convenient coincidence with no quantified chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 7,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms are large and compounding: ~18,000 excess hip fractures a year, 2.1M older users with sarcopenia, DEXA waits of 16–24 weeks against a coverage rule requiring the scan, and private gating with no bone pause. Pediatric exposure (150k under 12 with slowed growth in a minority), gray-market harms (+40% poison calls, liver-enzyme cluster) and unequal quality of care add to it. Harm is measured and discussable, so it stays at a harder society with new losers (6, near the 'society most would refuse' anchor) rather than a hidden structural one.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events. These include the managed-decline step to $175, the AUD and under-12 indications, the muscle-bone wave, the 50 mg oral-parity pill, gray-market growth to 9.8%, the aesthetic inversion, no new state action and status-quo coverage. mechanism: most chains are shown (missed generic leading to the step-down, the guideline leading to Medicaid coverage in all states, cheap copies leading to gray share). The under-30 jump and the cycling share that conveniently stays at 45% are asserted (claims 2 and 3). magnitude: the headline figures are inside the envelope and the payer mix, Medicare and Medicaid spend, market size and fracture arithmetic all multiply out. The Medicare AUD count (claim 1) is a reconciliation failure, and Medicare's 17.5M users barely exceeds the 17.3M aged 65+ on the drug, leaving ~0.2M disabled under-65 users against 1.2M in 2032.",
+        "generativity": "The day-in-the-life implies distinct characters and scenes: a medical assistant, a child's growth check, a mother waiting 19 weeks for DEXA, a coworker performing appetite, a brother with a Shenzhen capsule bottle and a 'DEXA verified' app badge. The world fields add texture, such as appetite rooms, 'colour' nights and mobile DEXA vans. The prose shows rather than explains, with only a few expository lines."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s4-L3-r40-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "≈0.7M AUD under compendia listing",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: Medicare would hold 0.7M of the ≈1.6M AUD users, yet the population note says ~40% of those users are under 35 and Medicare is mostly 65+, where AUD prevalence is lowest. The split does not reconcile, and 1.6M new AUD users within about 13 months of the guideline is also fast."
+        },
+        {
+          "quote": "Pharmacy trend is ~+5% as volume growth outpaces a ~10% net price fall.",
+          "field": "world/economy/insurance/state",
+          "why": "magnitude: the world states volume up ~45% (68.0M to 99.2M users) against a ~10% net price fall. That is roughly +30% over two years, about +14% a year, so a +5% trend does not multiply out even if employer plans grew more slowly."
+        },
+        {
+          "quote": "'Quiet', 'Even' and 'Unhooked' now cost $129–169 a month after the step-down",
+          "field": "world/interior_life/framing",
+          "why": "mechanism: the world's own `cash_price_usd_month_low` is 139 and starting pills are $139 after the step-down, so a $129 low-dose product contradicts the price fields. The text asserts the price with no chain behind it."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 36% of adults are on an incretin. The ledger shows ~18,000 excess hip fractures a year, 2.1M sarcopenic seniors and 16–24 week DEXA waits, with private gated plans still lacking a pause exemption (state/conditioning, safety_ledger). Gray-market use is up to 9.7M with 40% more poison-centre calls, and ~150k children under 12 are treated amid open growth and bone questions. Reward modulation is endorsed clinically and sold to ~6M non-obese people, which adds to the inequality and autonomy load. Offsetting this, the first independent 'calm' cohort and DEXA data make the harms somewhat more measurable, so this is a harder society with new losers (~6) rather than a structurally hidden one.",
+        "plausibility": "driver_fidelity: every driver appears in fields and events: the 50 mg Wegovy pill (oral_parity, realised as an existing product in a new form), the $199 to $175 step-down (managed_decline), the AUD guideline and under-12 label (new_indications), the hip-fracture and DEXA-wait updates (muscle_bone_wave), the gray-share rise (gray_market_resurgence), and the 'built' and appetite-room culture (aesthetic_inversion). Coverage and state action are unchanged, though all-state Medicaid AUD coverage is a mild coverage expansion. mechanism: most changes have chains, such as the FDA rejection of generics leading to the price deal and the cheap oral copies driving the gray share. Some are asserted, notably the cycling share staying exactly 45% because two effects 'roughly cancel' and the $129 price from claim 3. magnitude: population figures sit inside the envelope (36.2, 48.5, income and age bands). Payer shares, Medicare and Medicaid dollar arithmetic and the market figure ($185B) all multiply out, and the approval timings are legal. The gaps are the Medicare/AUD split (claim 1), the +5% pharmacy trend against +45% volume (claim 2), and Medicare's 17.5M users barely exceeding the 17.3M aged 65+, which leaves no room for under-65 disabled enrollees.",
+        "generativity": "The day-in-the-life gives Renée a clear arc: the 5:40 pill, the kiosk weigh-in, Theo's 0.4 cm growth check, Danielle eating brisket slowly for an audience, her mother's 19-week DEXA wait marked 'ordered', and Marcus's unlabelled Shenzhen capsules. World fields add scenes such as mobile DEXA van waiting rooms, appetite rooms, 'DEXA verified' badges and school arguments over birthday cake. The texture is concrete and each scene points at a different tension."
+      },
+      "plausibility": 6.7
+    },
+    {
+      "custom_id": "s4-L3-r40-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The under-30 jump from 13.5% to 22% is not about weight.",
+          "field": "world/population/note",
+          "why": "Mechanism: the named drivers (≈1.6M AUD users, ~40% under 35, i.e. ~0.64M; +2.5M subscribers across all ages) cannot supply the ~4.4M added under-30 users. The aesthetic-inversion driver should also dampen urban under-30 uptake, so the biggest age-band jump is largely asserted."
+        },
+        {
+          "quote": "Pharmacy trend is ~+5% as volume growth outpaces a ~10% net price fall.",
+          "field": "world/economy/insurance/state",
+          "why": "Magnitude: a ~46% rise in users (68M to 99.2M) with ~10% lower net price gives US spend up ~28% over two years ($145B to $185B), about 13% a year. A +5% trend does not reconcile, and 'volume outpaces price fall' does not explain it."
+        },
+        {
+          "quote": "compendia listing follows, Medicaid programmes in all states begin covering it, and the VA adopts it",
+          "field": "world/events/2/event",
+          "why": "Mechanism: coverage in all 50 state Medicaid programmes immediately after a guideline, with state_action 'none' and 19 states that refused the obesity match, is a convenient jump. The compendia-to-coverage link and its timing are not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6,
+        "inequality": 6.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms deepen along the existing trajectory with new losers. Excess hip fractures reach ~18,000 a year, with 16–24-week DEXA waits colliding with the annual-scan rule. About 9.7M people use gray-market product with rising poison-centre calls and some overdoses. About 150k children under 12 are treated with open growth questions. The bottom third's thinness now 'reads as cheap', private gated plans have no pause exemption, and reward modulation is normalised for 6M 'calm' subscribers and blessed clinically for AUD. Cheap thinness and some AUD benefit soften it, so this is a harder society rather than a refusable one.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: adoption +11.2, managed decline ($199 to $175), status-quo coverage and no new state action, the AUD and under-12 indications, the bone wave, the 50 mg pill as an existing product in a new form, gray-market resurgence (5.6% to 9.8%), aesthetic inversion, and the marketed-feature personality layer. The only strain is the AUD all-state Medicaid coverage sitting uneasily with 'none' for state action. mechanism: Most chains are shown (missed generic, then step-down, pill parity, compendia listing, inversion), but the under-30 surge (claim 1) and instant all-state AUD coverage (claim 3) are asserted rather than derived. The $129–169 subscription price also sits below the $139 cash floor. magnitude: Current 36.2% and ever 48.5% are inside the envelope, income thirds bracket the national figure, age bands sum to 99.2M, and payer mix, Medicare/Medicaid spend, the 18,000 fractures and the $185B market all reconcile. The deductions are the +5% pharmacy trend that fails to match the volume and price figures (claim 2) and pediatric approvals with no filing events.",
+        "generativity": "The prose vignette (Renée, Theo's 0.4 cm growth check, Danielle eating brisket slowly, the mother's 19-week DEXA wait, Marcus's Shenzhen capsules, the 'DEXA verified' badge) implies many scenes and people. Texture in the world fields (appetite rooms, 'colour' nights, restart packs, the school birthday-cake fights) is strong, and the day shows rather than explains."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "≈6.6M diabetes, ≈10.2M obesity, ≈0.7M AUD under compendia listing",
+        "field": "world/access/public_coverage",
+        "why": "magnitude: Medicare would hold 0.7M of the ≈1.6M AUD users, about 44%, while ~40% of AUD users are under 35. That leaves almost no room for Medicaid, VA and commercial users in a first year after a Nov 2033 guideline, so the counts do not reconcile."
+      },
+      {
+        "quote": "The under-30 jump from 13.5% to 22% is not about weight.",
+        "field": "world/population/note",
+        "why": "mechanism: the listed causes (the 50 mg pill, 2.5M added 'calm' subscribers, ~0.6M AUD users under 35, gray copies) do not obviously add up to +4.4M under-30 users. The pill is a weight drug and the inversion discourages thinness, so the denial is asserted rather than shown."
+      },
+      {
+        "quote": "The 50 mg pill raised one-year persistence among new oral starters to ~45%, but the larger long-term 65+ population added more bone pauses, and the two roughly cancel.",
+        "field": "world/population/note",
+        "why": "mechanism: the cycling share lands at exactly the parent's 45% only because two opposing effects are said to cancel. That is a convenient coincidence with no quantified chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 5.83,
+      "inequality": 6.33,
+      "public_health": 6.67,
+      "cohesion": 5.33,
+      "epistemic": 5.33,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 7.0,
+      "magnitude": 6.67
+    },
+    "plausibility": 7.17,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Harms are large and compounding: ~18,000 excess hip fractures a year, 2.1M older users with sarcopenia, DEXA waits of 16–24 weeks against a coverage rule requiring the scan, and private gating with no bone pause. Pediatric exposure (150k under 12 with slowed growth in a minority), gray-market harms (+40% poison calls, liver-enzyme cluster) and unequal quality of care add to it. Harm is measured and discussable, so it stays at a harder society with new losers (6, near the 'society most would refuse' anchor) rather than a hidden structural one.",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events. These include the managed-decline step to $175, the AUD and under-12 indications, the muscle-bone wave, the 50 mg oral-parity pill, gray-market growth to 9.8%, the aesthetic inversion, no new state action and status-quo coverage. mechanism: most chains are shown (missed generic leading to the step-down, the guideline leading to Medicaid coverage in all states, cheap copies leading to gray share). The under-30 jump and the cycling share that conveniently stays at 45% are asserted (claims 2 and 3). magnitude: the headline figures are inside the envelope and the payer mix, Medicare and Medicaid spend, market size and fracture arithmetic all multiply out. The Medicare AUD count (claim 1) is a reconciliation failure, and Medicare's 17.5M users barely exceeds the 17.3M aged 65+ on the drug, leaving ~0.2M disabled under-65 users against 1.2M in 2032.",
+      "generativity": "The day-in-the-life implies distinct characters and scenes: a medical assistant, a child's growth check, a mother waiting 19 weeks for DEXA, a coworker performing appetite, a brother with a Shenzhen capsule bottle and a 'DEXA verified' app badge. The world fields add texture, such as appetite rooms, 'colour' nights and mobile DEXA vans. The prose shows rather than explains, with only a few expository lines."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.848,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 10
   }
 }

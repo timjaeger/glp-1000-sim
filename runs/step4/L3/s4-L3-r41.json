@@ -51,6 +51,41 @@
         "input_tokens": 18771,
         "output_tokens": 25513
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r41-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27767,
+        "output_tokens": 7498
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r41-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27767,
+        "output_tokens": 9460
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r41-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27767,
+        "output_tokens": 8706
+      }
     ]
   },
   "world": {
@@ -327,6 +362,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r41-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The top third is flat because its under-40s are quitting or dosing down as thinness loses status, which offsets more older users.",
+          "field": "world/population/note",
+          "why": "The top third moves from 28% to 31% in the same table, so 'flat' contradicts the figures. The inversion is also asserted to bite hard within two years, while the same note says the 18–29 band rose 1.5 points. This fails mechanism and reconciliation."
+        },
+        {
+          "quote": "The 65+ band rose from 17% to 24% through Medicare's $0 generic copay (Jan 2034).",
+          "field": "world/population/note",
+          "why": "The $0 copay applies only to new obesity starts, and existing branded users are grandfathered. A 7-point jump, about 5M additional older users, in under one year of that policy is asserted without a new-start flow, and the 45% generic share of Medicare obesity users does not follow from new starts alone."
+        },
+        {
+          "quote": "'Covered till August,' he writes. 'Then I start the second quit.'",
+          "field": "prose/a_day_in_the_life",
+          "why": "The prose frames the world as the end of 2034, and the cessation label was approved only in May 2034. Dale is six weeks into a 90-day course, so 'covered till August' does not fit a late-2034 date. The narrative disagrees with the world-state timeline."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 3.5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 4,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a mixed one with a harder tier structure. Cheap generics, the free CMHP and the $0 Medicare copay widen access and improve autonomy. Against that, bone and fall harms rise (about 15,800 excess hip fractures, 1.7M with sarcopenia), and the free program has no DEXA or fall screening. Gray 'research peptide' harms are up about 20% in poison-centre calls, and a two-tier system now puts 30%-loss regimens behind diagnosis codes or $349+ prices. 'The grey' is normalised and talked about but still unmeasured at low dose. That makes a recognisably harder society with new losers, not a refusal-worthy one, so about 5.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events. Generic collapse is the Jan 2033 launch and $39–59 cash prices. Employer retreat is 66% to 41%. The nicotine approval, oral parity (the 50 mg pill matching the injectable), gray resurgence, aesthetic inversion, CMHP subsidy and mainstream complaint are all present. Safety_signal 'none' is respected, since the ledger adds no new entry. mechanism: Most chains are shown, such as generic cheapness leading employers to drop coverage and the ACA rule pulling the cessation pill back into plans. Weak spots are the 'top third is flat' note contradicting its own 28→31 figure, the 65+ jump attributed to a new-starts-only copay, Novo moving patients to a $129 pill against $45 generics, and the Dale timeline error (claims 1–3). magnitude: All headline figures are inside the envelope (30.1% current, 41.5% ever, approvals timed 12+ months after filing). The age bands, payer mix (100% and 82.4M), Medicare $16.2B/$12.7B, Medicaid $12.3B, CMHP $1.4B and the $112B market all reconcile. The only blemish is the loose 'flat' wording for the top third and a slightly tight 65+ to Medicare fit.",
+        "generativity": "The world and prose yield many scenes: the Walmart receipt in Mesa, the 'proudly unmedicated' hygienist with a lean-mass printout, the cooler bag of unlabelled vials in the garage fridge, a quinceañera dose skip, and Austin appetite dinners. Employer-code audits, peptide clinics and the three-tier access system give a rich daily texture. The prose shows rather than explains, and the closing exchange between Renee and Dale lands with some ambiguity."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s4-L3-r41-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "ACA preventive rules require most plans to cover two 90-day courses a year at no cost",
+          "field": "world/events/4/event",
+          "why": "mechanism: the mandate takes effect in the same month as FDA approval, with no USPSTF grade, rulemaking or plan-year lag shown. ACA preventive coverage normally lags a recommendation by a year or more."
+        },
+        {
+          "quote": "The 65+ band rose from 17% to 24% through Medicare's $0 generic copay (Jan 2034).",
+          "field": "world/population/note",
+          "why": "mechanism: a seven-point jump is credited to a copay change that applies only to new starts, with existing users grandfathered at $199. $39 cash generics had already been available since Jan 2033, so one policy does not explain the jump."
+        },
+        {
+          "quote": "The top third is flat because its under-40s are quitting or dosing down as thinness loses status, which offsets more older users.",
+          "field": "world/population/note",
+          "why": "mechanism: the top third rises from 28% to 31%, so it is not flat. The explanation contradicts the candidate's own income figures."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "The world is a mixed one. The core drug is cheap and nearly universal, but the tiers are hardening: 30%-loss regimens sit behind diagnosis codes or a $349+ price, and about 5M people use gray product. Excess hip fractures reach about 15,800 a year, sarcopenia affects about 1.7M, and the free program has no DEXA or fall screening. Autonomy and epistemic scores are lower because 'the grey' is named and discussed, the continuation standard is under political challenge, and the free program is light-touch.",
+        "plausibility": "driver_fidelity: Every driver is traceable to events and fields. These include generic collapse, employer retreat, nicotine approval, oral parity via the 50 mg pill, gray resurgence, aesthetic inversion, the CMHP subsidy and the mainstream-complaint survey. Safety signal 'none' is respected, since the safety ledger only scales existing entries. Gray resurgence is modest, going from 3.8M to 5.0M users. mechanism: Most changes have chains, such as cheap generics leading employers to drop coverage and Indian ANDA supply shrinking the semaglutide gray trade. Three claims are asserted or inconsistent: the ACA mandate timing, the 65+ jump from a new-starts copay, and the 'flat' top third that actually rose 3 points. magnitude: Current use of 30.1% and ever-use of 41.5% sit inside the envelope, and the age bands sum to 82.3M. Payer mix, Medicare spend (about $16.2B gross, $12.7B net), Medicaid (about $12.3B), CMHP (about $1.4B) and market revenue (about $112B) all multiply out. Approval timing is legal, with the nicotine approval exactly 12 months after filing, and only the Medicare 65+ count is tight.",
+        "generativity": "The prose has a clear ensemble: Renee at the Walmart receipt, Kayla's lean-mass printout, Dale's pill with a covered-until-August deadline, and Marisol's unlabelled vials in the garage fridge. The world implies many more scenes, including appetite dinners, peptide clinics, DEXA vans and weekend dose holidays. The quinceañera ending shows the 'grey' without explaining it."
+      },
+      "plausibility": 8.15
+    },
+    {
+      "custom_id": "s4-L3-r41-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The top third is flat because its under-40s are quitting or dosing down as thinness loses status, which offsets more older users.",
+          "field": "world/population/note",
+          "why": "Mechanism: the top third is shown rising from 28% to 31%, so calling it 'flat' contradicts the world's own figures. The offsetting story explains a stall that the numbers do not show."
+        },
+        {
+          "quote": "cigarette volume is down about 9% in 2034",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: the cessation label arrived in May 2034 and the ACA coverage mandate only just followed. A same-year 9% cigarette volume drop credited to it has no shown chain, and the usual lag for preventive-services coverage to reach plans is ignored."
+        },
+        {
+          "quote": "The 65+ band rose from 17% to 24% through Medicare's $0 generic copay (Jan 2034).",
+          "field": "world/population/note",
+          "why": "Mechanism: the $0 copay applies only to new starts from January 2034, and existing branded users are grandfathered at $50. A policy that new, so late in the window and so narrow, is asked to explain a 7-point two-year jump, while generics had been available since January 2033."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 5.5,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Cheap generics widen access and the free program (4.6M enrolled) reduces coercion, but the costs concentrate on identifiable losers. Excess hip fractures rise to about 15,800 a year, the free program has no DEXA or fall screening, and gray 'research' retatrutide causes dosing-error and endotoxin cases (poison calls up about 20%). A hardened two-tier system, with 30%-loss regimens behind diagnosis codes or $349+, and a mass flatness complaint (a third of users) keep this a recognisably harder society. The harms are named and discussed, which keeps the epistemic score low, but the adolescent bone data are still unreleased and the free-program and generic-cash channels are largely unmonitored.",
+        "plausibility": "driver_fidelity: every driver is visibly realised: the January 2033 generic launch, the employer retreat from 66% to 41%, the CMHP subsidy, the Wegovy pill 50 mg, the May 2034 nicotine approval, gray 'research peptide' growth, the aesthetic inversion and 'the grey' as a mainstream complaint. 'safety_signal: none' is respected, since the bone and sarcopenia entries are existing signals scaling with users, though the continued fracture growth sits slightly uneasily with it. mechanism: most chains are shown (cheap drug leads employers to drop cover, which leads to cash generics, and the oral approval leads to the cessation mandate), but the top-third 'flat' contradiction, the immediate 9% cigarette decline and the 65+ attribution to a January 2034 copay are weak (see the claims above). magnitude: all headline figures are inside the envelope (30.1%, 41.5%, income thirds bracketing the national figure). The payer shares sum to 100% and 82.4M, Medicare ($16.2B gross, $12.7B net), Medicaid ($12.3B), CMHP ($1.4B) and the $112B market all multiply out, and the approvals follow the filing-to-approval rules.",
+        "generativity": "The Renee, Dale, Kayla and Marisol scenes imply a whole social fabric: the Walmart receipt, the cessation-covered pill, the unlabelled vials in the garage fridge next to the Topo Chico, and a skipped dose for a quinceañera. The world fields add texture, including 'appetite rooms', lean-mass printouts, 'holiday mode' schedules and 'restart' anti-nausea packs, and the generational and urban split gives many implied scenes. Some prose beats are tidy and expository, but the day-in-the-life mostly shows rather than explains."
+      },
+      "plausibility": 7.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The top third is flat because its under-40s are quitting or dosing down as thinness loses status, which offsets more older users.",
+        "field": "world/population/note",
+        "why": "The top third moves from 28% to 31% in the same table, so 'flat' contradicts the figures. The inversion is also asserted to bite hard within two years, while the same note says the 18–29 band rose 1.5 points. This fails mechanism and reconciliation."
+      },
+      {
+        "quote": "The 65+ band rose from 17% to 24% through Medicare's $0 generic copay (Jan 2034).",
+        "field": "world/population/note",
+        "why": "The $0 copay applies only to new obesity starts, and existing branded users are grandfathered. A 7-point jump, about 5M additional older users, in under one year of that policy is asserted without a new-start flow, and the 45% generic share of Medicare obesity users does not follow from new starts alone."
+      },
+      {
+        "quote": "'Covered till August,' he writes. 'Then I start the second quit.'",
+        "field": "prose/a_day_in_the_life",
+        "why": "The prose frames the world as the end of 2034, and the cessation label was approved only in May 2034. Dale is six weeks into a 90-day course, so 'covered till August' does not fit a late-2034 date. The narrative disagrees with the world-state timeline."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.0,
+      "inequality": 5.5,
+      "public_health": 5.33,
+      "cohesion": 4.17,
+      "epistemic": 4.17,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.67,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.87,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The world is a mixed one with a harder tier structure. Cheap generics, the free CMHP and the $0 Medicare copay widen access and improve autonomy. Against that, bone and fall harms rise (about 15,800 excess hip fractures, 1.7M with sarcopenia), and the free program has no DEXA or fall screening. Gray 'research peptide' harms are up about 20% in poison-centre calls, and a two-tier system now puts 30%-loss regimens behind diagnosis codes or $349+ prices. 'The grey' is normalised and talked about but still unmeasured at low dose. That makes a recognisably harder society with new losers, not a refusal-worthy one, so about 5.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and events. Generic collapse is the Jan 2033 launch and $39–59 cash prices. Employer retreat is 66% to 41%. The nicotine approval, oral parity (the 50 mg pill matching the injectable), gray resurgence, aesthetic inversion, CMHP subsidy and mainstream complaint are all present. Safety_signal 'none' is respected, since the ledger adds no new entry. mechanism: Most chains are shown, such as generic cheapness leading employers to drop coverage and the ACA rule pulling the cessation pill back into plans. Weak spots are the 'top third is flat' note contradicting its own 28→31 figure, the 65+ jump attributed to a new-starts-only copay, Novo moving patients to a $129 pill against $45 generics, and the Dale timeline error (claims 1–3). magnitude: All headline figures are inside the envelope (30.1% current, 41.5% ever, approvals timed 12+ months after filing). The age bands, payer mix (100% and 82.4M), Medicare $16.2B/$12.7B, Medicaid $12.3B, CMHP $1.4B and the $112B market all reconcile. The only blemish is the loose 'flat' wording for the top third and a slightly tight 65+ to Medicare fit.",
+      "generativity": "The world and prose yield many scenes: the Walmart receipt in Mesa, the 'proudly unmedicated' hygienist with a lean-mass printout, the cooler bag of unlabelled vials in the garage fridge, a quinceañera dose skip, and Austin appetite dinners. Employer-code audits, peptide clinics and the three-tier access system give a rich daily texture. The prose shows rather than explains, and the closing exchange between Renee and Dale lands with some ambiguity."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.617,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 44
   }
 }

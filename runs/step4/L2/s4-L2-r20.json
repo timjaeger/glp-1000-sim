@@ -51,6 +51,41 @@
         "input_tokens": 18388,
         "output_tokens": 17756
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r20-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26588,
+        "output_tokens": 5487
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r20-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26588,
+        "output_tokens": 6228
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r20-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26588,
+        "output_tokens": 4983
+      }
     ]
   },
   "world": {
@@ -311,6 +346,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r20-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Oral semaglutide needs far more API per patient than injectables, and low-dose wellness fills now compete for that capacity.",
+          "field": "world/access/note",
+          "why": "Mechanism: the stall is the stipulated driver, but its stated cause is backwards. Low-dose wellness fills use little API per patient, so they cannot plausibly squeeze supply enough to freeze every maker's cash price for two years."
+        },
+        {
+          "quote": "\"65_plus\": 20.5",
+          "field": "world/population/by_age_band_pct/65_plus",
+          "why": "Magnitude: 20.5% of about 63M adults 65+ is roughly 12.9M users, but Medicare alone is 12.4M. That leaves almost no room for the ~6.3M mostly cash-paying longevity users, many aged 60–75, so the age bands and payer mix do not fully reconcile."
+        },
+        {
+          "quote": "two House challengers in Idaho and Utah won primaries partly on it",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "Mechanism: a movement with a few hundred supper-club chapters is asserted to win federal primaries within about a year. No chain links the movement to electoral wins, and the attribution is unsupported."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 65M adults are on the drugs, including ~6.3M healthy 60–75-year-olds on indefinite low-dose protocols with no DXA baselines and uncharacterised fracture and EPI risk. The low-dose anhedonia null that cannot rule out a doubling is now used as ad copy. Stratification persists: 8.5M gray-market users, a 50–60× price gap, and the world sorting 'by county' into medicated and Natural. It is a harder society with new losers, but no structural catastrophe, and there is no new safety signal and no state action, which caps severity.",
+        "plausibility": "driver_fidelity: every driver is traceable. Price is frozen (event 2033-01), coverage is flat at 30%, longevity use is realised off-label, the Natural movement is present, safety signal and market shock are absent, and the personality layer is marketed. Approval timing obeys the envelope's rules. mechanism: the price stall rests on the API-allocation story (claim 1), which runs the wrong way for low-dose fills. The leap to ~6.3M longevity users and the Natural primary wins (claim 3) are partly asserted rather than shown. The husband 'moved to prior auth' line in the prose sits oddly with Medicare PA already being in place. magnitude: 23.7% on drug and 34.4% ever-used are inside the envelope, and payer mix, Medicare spend ($35.0B, dementia $6.2B), age and income checks and the cycled-share arithmetic all reconcile. The one gap is 65+ users against Medicare plus older longevity cash users (claim 2).",
+        "generativity": "Dana Ruiz is a concrete scene-bearing character, with the chime, the $49 Baseline fee, the half-eaten wrap and the Natural daughter's supper invitation. Her husband's regain adds texture. The world supplies many implied scenes: Boise supper clubs, the urine test strip, the Columbus clinic shot and the Memphis cycler. The day-in-the-life mostly shows rather than explains."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s4-L2-r20-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Oral semaglutide needs far more API per patient than injectables, and low-dose wellness fills now compete for that capacity.",
+          "field": "world/access/note",
+          "why": "Mechanism: low-dose wellness pills use far less API per patient than the 25 mg maintenance pill. It is odd that ~10M low-dose users would be the thing that ends discounting, and the 'far more API' premise does not support that conclusion."
+        },
+        {
+          "quote": "In the 2034 midterms a handful of Mountain West candidates campaigned as 'unmedicated' and two House challengers in Idaho and Utah won primaries partly on it.",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "Mechanism and magnitude: a lifestyle identity that began after 2032 is shown winning federal primaries within two years. Nothing in the world shows the political vehicle, the electorate or the counts behind it."
+        },
+        {
+          "quote": "He took a semaglutide pen for his heart until it moved to prior auth, and he quit in March.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world says coverage is status quo and Medicare CV codes were already behind prior authorisation in 2032. A cardiac user losing a pen because it 'moved to prior auth' contradicts the unchanged structure and is a narrative-world inconsistency."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 7,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 10.5M non-obese adults, many aged 60–75, take incretins indefinitely with no DXA baselines (safety_ledger, open_tensions). Calm plans advertise an underpowered null result, and 8.5M gray-market users keep regaining after bad batches, so epistemic harm is the worst dimension (7). Stratification by income, county and 'Natural' identity is real but mostly familiar from 2032, so the world is a harder society with new losers rather than a refusable one. Median flourishing is only modestly worse and no new harm signal appears.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +4.1 exactly, prices stall (event 2033-01), coverage is flat at 30%, longevity is off-label with the May 2034 resubmission, the safety signal is none, there is no launch or shock, the Natural movement is present, and personality stays a marketed feature. mechanism: The price-stall chain via API allocation is weak (claim 1). The political escalation of the Naturals is asserted rather than shown (claim 2), and the husband's 'moved to prior auth' contradicts the status-quo coverage world (claim 3). The prose's 'six million workers get their monthly shot at the plant clinic' also overstates the 4.2M clinic-MariTide figure. magnitude: Population figures sit inside the envelope (23.7 current, 34.4 ever, income thirds bracket, age check ≈23.7). The payer mix sums to 64.9M, Medicare ($35.0B) and dementia ($6.2B) arithmetic reconciles, and non-obese subgroups sum to 10.5M. The CRL and approval timings obey the rules. Only the pace of growth in non-obese users is steep.",
+        "generativity": "The Dana Ruiz scene is concrete: the 6:10 pill, the Baseline chime, the bus dispatch, the half wrap thrown away, Kels with sourdough and the Grange supper invitation, and a husband who regained. The world supplies place-specific textures (Boise, Austin, Columbus, Memphis), dating-app filters, tested sports and platform ads. Several implied films exist, though the prose summary is partly explanatory."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L2-r20-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly resubmitted the 60+ non-CVD extension in May 2034, with a decision due 2035.",
+          "field": "world/drugs/pipeline_note",
+          "why": "mechanism: The 2031 CRL asked for confirmatory-trial data and a fracture/EPI mitigation plan. The trial that read out in Dec 2033 was in the obesity-plus-CVD population, so it cannot support a non-CVD extension. No mitigation plan is shown, and a six-month turnaround to resubmit is asserted rather than explained."
+        },
+        {
+          "quote": "He took a semaglutide pen for his heart until it moved to prior auth, and he quit in March.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: The world says Medicare coverage is unchanged and was already behind prior authorisation in 2032, with coverage_shift status_quo. A 'move to prior auth' in 2034 is a coverage change that appears nowhere in the world state, so the prose contradicts it."
+        },
+        {
+          "quote": "In the 2034 primaries two Mountain West challengers ran as unmedicated and won.",
+          "field": "world/interior_life/effect_on_politics",
+          "why": "mechanism: A lifestyle identity that started with supper clubs in 2033 is said to have helped win two House primaries within a year. No district, electorate or causal link is shown, and 'partly on it' is asserted."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 9
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "About 65M adults, or 40% of households, are exposed. Roughly 6.3M normal-weight 60–75-year-olds are on indefinite low-dose use with no DXA baselines (fracture HR ~1.3) and no trial, and ~2.4M buy calm plans on a null result that cannot exclude a doubling of anhedonia. Gray-market use is 8.5M, the price gap is 50–60×, and employer records feed wellness vendors, with county-level sorting into 'medicated' and 'Natural'. It is a harder society with new losers rather than a catastrophe, and the epistemic and inequality harms are the most structural.",
+        "plausibility": "driver_fidelity: Every driver is visible. Prices are stalled (no cuts in the 2033 event), coverage is status quo at 30% (2034-05), longevity_wellness runs entirely off-label, and the Naturals fill the cultural_response. No market shock or new state action appears, and the anhedonia study adds no new signal. mechanism: The price stall has a shown three-part cause, and the longevity surge is traced to the Dec 2033 dementia readout and the clinic marketing built on it. Three links are asserted: the non-CVD resubmission built on a CVD-population trial, the husband's 'prior auth' move that contradicts the unchanged coverage, and the primary wins within a year of the movement's start. magnitude: Current use of 23.7% and ever-used 34.4% sit inside the envelope. The payer mix sums to 64.9M, Medicare spend (~$35.0B) and the dementia route (~$6.2B) multiply out, the cycled share is 42.6%, and the age and income checks reconcile. The approval timing is legal. The only blemish is a small pediatric rounding gap.",
+        "generativity": "The Dana Ruiz scene is specific and shows the world: the 6:10 chime, the $49 fee and the green ferritin leaf, the sourdough and the Natural sticker, the husband's regain. The world adds city and county texture (Boise, Austin, Columbus, Memphis), dating filters, test strips, supper clubs and primaries, so many scenes are implied. The prose still explains more than it shows in its first half."
+      },
+      "plausibility": 8.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Oral semaglutide needs far more API per patient than injectables, and low-dose wellness fills now compete for that capacity.",
+        "field": "world/access/note",
+        "why": "Mechanism: the stall is the stipulated driver, but its stated cause is backwards. Low-dose wellness fills use little API per patient, so they cannot plausibly squeeze supply enough to freeze every maker's cash price for two years."
+      },
+      {
+        "quote": "\"65_plus\": 20.5",
+        "field": "world/population/by_age_band_pct/65_plus",
+        "why": "Magnitude: 20.5% of about 63M adults 65+ is roughly 12.9M users, but Medicare alone is 12.4M. That leaves almost no room for the ~6.3M mostly cash-paying longevity users, many aged 60–75, so the age bands and payer mix do not fully reconcile."
+      },
+      {
+        "quote": "two House challengers in Idaho and Utah won primaries partly on it",
+        "field": "world/interior_life/effect_on_politics",
+        "why": "Mechanism: a movement with a few hundred supper-club chapters is asserted to win federal primaries within about a year. No chain links the movement to electoral wins, and the attribution is unsupported."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.0,
+      "inequality": 6.0,
+      "public_health": 5.83,
+      "cohesion": 5.17,
+      "epistemic": 6.33,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.5,
+      "magnitude": 8.5
+    },
+    "plausibility": 7.93,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "About 65M adults are on the drugs, including ~6.3M healthy 60–75-year-olds on indefinite low-dose protocols with no DXA baselines and uncharacterised fracture and EPI risk. The low-dose anhedonia null that cannot rule out a doubling is now used as ad copy. Stratification persists: 8.5M gray-market users, a 50–60× price gap, and the world sorting 'by county' into medicated and Natural. It is a harder society with new losers, but no structural catastrophe, and there is no new safety signal and no state action, which caps severity.",
+      "plausibility": "driver_fidelity: every driver is traceable. Price is frozen (event 2033-01), coverage is flat at 30%, longevity use is realised off-label, the Natural movement is present, safety signal and market shock are absent, and the personality layer is marketed. Approval timing obeys the envelope's rules. mechanism: the price stall rests on the API-allocation story (claim 1), which runs the wrong way for low-dose fills. The leap to ~6.3M longevity users and the Natural primary wins (claim 3) are partly asserted rather than shown. The husband 'moved to prior auth' line in the prose sits oddly with Medicare PA already being in place. magnitude: 23.7% on drug and 34.4% ever-used are inside the envelope, and payer mix, Medicare spend ($35.0B, dementia $6.2B), age and income checks and the cycled-share arithmetic all reconcile. The one gap is 65+ users against Medicare plus older longevity cash users (claim 2).",
+      "generativity": "Dana Ruiz is a concrete scene-bearing character, with the chime, the $49 Baseline fee, the half-eaten wrap and the Natural daughter's supper invitation. Her husband's regain adds texture. The world supplies many implied scenes: Boise supper clubs, the urine test strip, the Columbus clinic shot and the Memphis cycler. The day-in-the-life mostly shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.266,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 32
   }
 }

@@ -37,6 +37,41 @@
         "input_tokens": 19317,
         "output_tokens": 29772
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r00-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29522,
+        "output_tokens": 6233
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r00-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29522,
+        "output_tokens": 6106
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r00-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29522,
+        "output_tokens": 8312
+      }
     ]
   },
   "world": {
@@ -318,6 +353,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r00-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Deliberate dose holidays fell from ~45% to ~28% as verified-dose pens made them visible.",
+          "field": "world/safety_ledger/reward blunting",
+          "why": "Mechanism: connected pens only launched in Jan 2034 and the CMS rule is dated the same month, so they cannot account for a 17-point fall in a year-long survey measure. Making holidays 'visible' also changes what gets logged, not necessarily the behaviour; skip-but-fill style evasion is left unaddressed."
+        },
+        {
+          "quote": "Medicare pays, Lilly apologizes, and America splits into the medicated and the 'natty'",
+          "field": "prose/headline",
+          "why": "Mechanism: the world state shows no Lilly apology. Lilly 'declines to join' the settlement, is under a DOJ demand, and 'has not settled', so the headline contradicts the world state."
+        },
+        {
+          "quote": "The blended plan payment is $195/month across semaglutide, tirzepatide, retatrutide and oral products, including dispensing, with a $35 copay.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: a $195 blend sits below the stated direct prices for tirzepatide ($249) and retatrutide ($299), and retatrutide is the most common new start. No rebate or mix logic is shown to explain a payer paying less than the cash channel."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 4,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension. Coverage now rests on connected-pen logs under a Jan 2034 CMS rule, twelve Medicaid verified-dose waivers, PBM-resold feeds and 'coded planned interruptions', with lockouts pushing people to 503A compounders. Cohesion falls through natty versus medicated splits and 'one adult eating' at family dinner. Epistemic badness is lower than in 2032 because harms are named: a gastric-emptying label, anhedonia screening and an MDL with ~148,000 claims. Access broadens (Medicaid option, Part D), so inequality and flourishing sit near 5.",
+        "plausibility": "driver_fidelity: every driver is visible in the fields and events: the Lilly scandal and the MDL surge, the Medicare/Medicaid expansion, the gambling and AUD indications, the natty movement, the niche-side-effect anhedonia framing, and retatrutide delivered via an existing product with approval timing inside the rules. mechanism: the chains are mostly shown (scandal to MDL growth to label change to Novo settlement; the Act to Medicaid adoption; the circuit split to pen data), but the Lilly-apologizes headline contradicts the world state and the dose-holiday decline is asserted (claims 1 and 2). magnitude: 32.1% on drug and 41.8% ever are inside the envelope, and the income, age, cycling and payer-mix arithmetic all reconcile. Spending also reconciles ($34.4B gross and $28.2B net Medicare, $28.9B Medicaid, HRSA $3.65B), and amycretin and bimagrumab timing is allowed. The only flaw is the blended $195 price below the direct prices (claim 3), and a slightly high share of 65+ users routed through Medicare.",
+        "generativity": "The day-in-the-life gives a clear protagonist, Denise in Tulsa on SoonerCare, who is on drug, works as a care worker, and has a natty sister. It has concrete scenes: the 6:10 pen log, Mr. Okafor asking again at eleven, the open-circle pin at Braum's, and the Broken Arrow supper with a banjo. The world fields add texture such as natty denim, coded interruptions, gym attendance logs and Medicaid-versus-appetite-liberty hypocrisy. It shows more than it explains, though the prose summary section is expository."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L1-r00-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly launches retatrutide in its 'Link' pen at $299, and it becomes the most common new start for BMI ≥35",
+          "field": "world/events/3/event",
+          "why": "Mechanism and magnitude: the drug becomes the dominant new start in the same month as the pen launch. That happens while its 12 mg dose carries a fresh persistent-gastric-emptying label and the scandal docket has doubled, and the cheaper $199 semaglutide is available."
+        },
+        {
+          "quote": "Medicare Part D premiums rise ~$4/month on the new benefit.",
+          "field": "world/economy/insurance/state",
+          "why": "Magnitude: net Medicare spend of about $28.2B a year spread over Part D enrollees is far more than $4/month, even allowing for the federal subsidy. The figure does not reconcile with the stated spending."
+        },
+        {
+          "quote": "Deliberate dose holidays fell from ~45% to ~28% as verified-dose pens made them visible.",
+          "field": "world/safety_ledger/9/prevalence_note",
+          "why": "Mechanism: pens only make pauses visible and penalised for users on connected pens in Medicare and the waiver states, from Jan 2034. A fall in reported holidays could simply reflect concealment or coded interruptions. The candidate asserts a behavioural change within a year without showing how it was measured."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Autonomy is the worst dimension: conditioning has moved to connected-pen logs that Medicare, twelve Medicaid waivers and PBM-fed employer plans use. Verified-dose lockouts push people to 503A compounders, and 'coded interruptions' are the only way to pause without being flagged. Inequality is also severe: 'pen-thin' without a trainer marks Medicaid and Medicare users, and the HRSA budget is cut. Public health and flourishing are strained by the 148k-claim MDL, persistent hip-fracture burden and a 45% cycler share. Some offsets (fewer anhedonia complaints, AUD and gambling treatment, flat fractures) keep it from being worse than a recognisably harder society.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption rises 4.2 pp, prices follow managed decline, and Medicare and Medicaid expand. AUD and gambling indications are added, the Lilly scandal drives the litigation surge, and the natty movement and connected-pen conditioning are present. Anhedonia is reframed as a niche side effect. mechanism: Most chains are shown, such as the scandal leading to the label change and the surge in claims, the Ninth Circuit ruling leading to pen data, and Medicaid at 80% FMAP leading to adoption. Some are asserted: retatrutide becoming the top start immediately despite the scandal, the fast drop in holidays and reward blunting, and the quick gambling approval on two 26-week RCTs. The prose headline 'Lilly apologizes' contradicts the world, in which Lilly is still fighting and has not settled. magnitude: Population figures (32.1% on, 41.8% ever) sit inside the envelope, and the age, income, cycling and payer arithmetic reconciles. Spending lines also multiply out (Medicare $34.4B gross and $28.2B net; Medicaid $28.9B; HRSA $3.65B; DoD $255M). Approvals follow the rules (amycretin 2033, bimagrumab 12+ months after filing, no US generic). Minor gaps remain: the $4/month Part D premium rise, Medicare's 13.3M 65+ users against 13.7M total 65+ users, and the Chinese triple agonist 'NMPA 2033' when the parent already had it approved domestically.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s4-L1-r00-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Deliberate dose holidays fell from ~45% to ~28% as verified-dose pens made them visible.",
+          "field": "world/safety_ledger/reward blunting",
+          "why": "mechanism: connected pens launched only in Jan 2034, and the world itself says skip-but-fill persists on older pens, orals and gray product. A 17-point drop in under a year is asserted rather than shown."
+        },
+        {
+          "quote": "The Act also created an optional Medicaid 'metabolic health option' at 80% FMAP, adopted by 40 states plus DC.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude and mechanism: 40 states plus DC adopting an optional, costly benefit within about 13 months of enactment, adding roughly 4M Medicaid users, is very fast, and no state-level budget or administrative chain is shown."
+        },
+        {
+          "quote": "Medicare pays 17% of fills ≈ 14.7M users (≈13.3M aged 65+ plus ~1.4M disabled under-65).",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: 13.3M of the ~13.7M users aged 65+ is about 97%. That leaves almost no 65+ users on employer, cash, VA or gray channels, which sits oddly against the payer mix and the 2.6M TRICARE/VA users."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Coverage expands and the anhedonia complaint recedes, which softens the world. The harms are structural: verified-dose pen logs now gate Medicare and Medicaid access, and lockouts push people to compounders (access.note, state.conditioning_or_surveillance). MDL 3094 has ~148k claims, 65+ users carry bone and muscle risk, and 'natty' identity politics divides people by body and class. Harms are mostly nameable and measured, so epistemic badness stays moderate; autonomy takes the highest score because surveillance is normalised.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in specific fields and events. Examples are the Lilly scandal and MDL surge, the Medicare Act and Medicaid option, connected-pen conditioning, the gambling-disorder approval, the natty movement, and anhedonia relabelled 'uncommon'. Retatrutide stands in for the triple-agonist launch as an existing product. mechanism: Most chains are shown, including the scandal to label change to claims to Novo settlement, and the price steps to Part D uptake. The weak ones are the 28% dose-holiday figure (claim 1), the fast Medicaid adoption (claim 2), and users stepped down to the lowest dose while 12 mg retatrutide is the most common new start. magnitude: On-drug 32.1%, ever-used 41.8%, the age bands, income thirds, payer shares and the Medicare, Medicaid, HRSA and DoD arithmetic all reconcile and sit inside the envelope. Approvals (amycretin, bimagrumab, no generic) obey the rules. The only gap is the near-total Medicare share of 65+ users (claim 3).",
+        "generativity": "The prose follows Denise through a dose-verified Medicaid morning, a client on a zoledronic card, a gambling-indication client and her natty sister's supper. These imply many scenes with texture: the pen app ping, the open-circle pin, the pie eaten whole. The world fields supply rich detail too: coded planned interruptions, natty apparel, and gyms selling attendance logs."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Deliberate dose holidays fell from ~45% to ~28% as verified-dose pens made them visible.",
+        "field": "world/safety_ledger/reward blunting",
+        "why": "Mechanism: connected pens only launched in Jan 2034 and the CMS rule is dated the same month, so they cannot account for a 17-point fall in a year-long survey measure. Making holidays 'visible' also changes what gets logged, not necessarily the behaviour; skip-but-fill style evasion is left unaddressed."
+      },
+      {
+        "quote": "Medicare pays, Lilly apologizes, and America splits into the medicated and the 'natty'",
+        "field": "prose/headline",
+        "why": "Mechanism: the world state shows no Lilly apology. Lilly 'declines to join' the settlement, is under a DOJ demand, and 'has not settled', so the headline contradicts the world state."
+      },
+      {
+        "quote": "The blended plan payment is $195/month across semaglutide, tirzepatide, retatrutide and oral products, including dispensing, with a $35 copay.",
+        "field": "world/access/public_coverage",
+        "why": "Magnitude: a $195 blend sits below the stated direct prices for tirzepatide ($249) and retatrutide ($299), and retatrutide is the most common new start. No rebate or mix logic is shown to explain a payer paying less than the cash channel."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 7.0,
+      "inequality": 5.5,
+      "public_health": 5.0,
+      "cohesion": 5.83,
+      "epistemic": 4.5,
+      "overall": 5.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.72,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "Autonomy is the worst dimension. Coverage now rests on connected-pen logs under a Jan 2034 CMS rule, twelve Medicaid verified-dose waivers, PBM-resold feeds and 'coded planned interruptions', with lockouts pushing people to 503A compounders. Cohesion falls through natty versus medicated splits and 'one adult eating' at family dinner. Epistemic badness is lower than in 2032 because harms are named: a gastric-emptying label, anhedonia screening and an MDL with ~148,000 claims. Access broadens (Medicaid option, Part D), so inequality and flourishing sit near 5.",
+      "plausibility": "driver_fidelity: every driver is visible in the fields and events: the Lilly scandal and the MDL surge, the Medicare/Medicaid expansion, the gambling and AUD indications, the natty movement, the niche-side-effect anhedonia framing, and retatrutide delivered via an existing product with approval timing inside the rules. mechanism: the chains are mostly shown (scandal to MDL growth to label change to Novo settlement; the Act to Medicaid adoption; the circuit split to pen data), but the Lilly-apologizes headline contradicts the world state and the dose-holiday decline is asserted (claims 1 and 2). magnitude: 32.1% on drug and 41.8% ever are inside the envelope, and the income, age, cycling and payer-mix arithmetic all reconcile. Spending also reconciles ($34.4B gross and $28.2B net Medicare, $28.9B Medicaid, HRSA $3.65B), and amycretin and bimagrumab timing is allowed. The only flaw is the blended $195 price below the direct prices (claim 3), and a slightly high share of 65+ users routed through Medicare.",
+      "generativity": "The day-in-the-life gives a clear protagonist, Denise in Tulsa on SoonerCare, who is on drug, works as a care worker, and has a natty sister. It has concrete scenes: the 6:10 pen log, Mr. Okafor asking again at eleven, the open-circle pin at Braum's, and the Broken Arrow supper with a banjo. The world fields add texture such as natty denim, coded interruptions, gym attendance logs and Medicaid-versus-appetite-liberty hypocrisy. It shows more than it explains, though the prose summary section is expository."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.616,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 18
   }
 }

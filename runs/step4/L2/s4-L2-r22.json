@@ -52,6 +52,41 @@
         "input_tokens": 18544,
         "output_tokens": 27057
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r22-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28304,
+        "output_tokens": 11065
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r22-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28304,
+        "output_tokens": 7534
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r22-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28304,
+        "output_tokens": 10104
+      }
     ]
   },
   "world": {
@@ -320,6 +355,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r22-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Medicaid: 29 states plus DC now cover generic semaglutide for obesity at a 90% federal match",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism and magnitude: Medicaid obesity coverage goes from 7 states to 29 plus DC in about 17 months, and 4.4M new obesity users are enrolled. The 90% match is a credible lever, but no state-budget or enrolment-ramp chain is shown for a jump this fast."
+        },
+        {
+          "quote": "Part D spending fell by a third when diabetics were switched to generic.",
+          "field": "prose/paragraph_8",
+          "why": "Magnitude: the world's own figures give $31.6B falling to $18.6B, a 41% drop, not a third. The prose also credits the whole fall to diabetes switching, although about 1.5M branded Medicare users simply disappear from the count."
+        },
+        {
+          "quote": "legitimate cash 9.4M (18.5%)",
+          "field": "world/population/note",
+          "why": "Mechanism: legitimate cash users nearly halve from ~17.6M, while generic injectables at $29-69 make self-pay cheaper than ever. The listed causes (holidays, forced brand-to-generic switches, NAION stops) would not make people leave a cheaper cash channel. Cash buyers would more likely stay in it or move to generics."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens through generics, Medicaid and HRSA, which narrows the class gap, so inequality and flourishing are only moderately bad. The harms are real and growing: a NAION class warning, a counterfeit cluster with ~2,100 ED visits and 14 deaths, and holidays that are widespread and unstudied for bone, pancreas and optic nerve. Children aged 6-11 are now started on semaglutide with monitoring that depends on weak Medicaid clinics. The poorest users are the most measured, through the HRSA registry and two adherence-conditioned Medicaid programmes, and employer tracks penalise holidays. This is a harder society with new losers, but not a structurally hidden one, since the flatness complaint is named and measured.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption lands at -1.1 pp exactly (19.6 to 18.5). Generic collapse comes through a Jan 2033 settlement-entry event, and retatrutide 12 mg realises the ~30% triple agonist (29% mean weight loss, approved Nov 2033, filed Oct 2032) as an existing product in a new dose. Semaglutide 6-11, the gambling label, the NAION class label, the Generic Incretin Access Act and the counterfeit cluster all appear as dated events. mechanism: most chains are shown, such as generics to Part D savings, flat premiums and Novo's revenue fall, and holidays and NAION stops explaining the fall in users. Weaker are the 29-state Medicaid jump (claim 1), the near-halving of cash users (claim 3), and employer coverage rising 30% to 41% while commercial users fall. magnitude: population figures sit inside the envelope, and the age, income and cycling arithmetic and the Medicare, Medicaid and HRSA spending arithmetic all check out. Approval timings obey the 12-month rule. Gaps: the payer lines sum to 50.5M against a stated 50.7M, the prose says Part D fell 'by a third' when the figures give 41% (claim 2), and ever-used at 30.4 sits near the 30.7 edge.",
+        "generativity": "The Denise Coleman prose is a full day with film-ready beats: the yellow eye-exam sheet, the pencil line on the doorframe for the nine-year-old, the RETA vial text from her sister, and the bus laugh. The world fields add many implied scenes, including 'August Off', holiday dinners, track rules that penalise holidays, and the sportsbook lobbying fight. Daily life has real texture and the prose shows rather than explains, with only a brief explanatory opening."
+      },
+      "plausibility": 6.9
+    },
+    {
+      "custom_id": "s4-L2-r22-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Commercial is 12.6M (25%), legitimate cash 9.4M (18.5%) and imported or counterfeit 6.5M (12.8%). Total 50.7M.",
+          "field": "world/population/note",
+          "why": "Magnitude: the components sum to 50.5M, not 50.7M, and the shares sum to 99.7%. Legitimate cash users also fall from ~17.6M to 9.4M while cash prices collapse to $29–69, which cuts against the stated driver."
+        },
+        {
+          "quote": "the top third fell from 25 to 21 on holidays and 'off-drug lean' maintenance",
+          "field": "world/population/note",
+          "why": "Mechanism: a four-point drop in the highest-income third, the group best placed to use cheap generics, is asserted from holidays and a status fad. The 2032 world already had 'off-drug lean', and no chain shows it driving a ~16% relative decline in two years."
+        },
+        {
+          "quote": "Medicaid: 29 states plus DC now cover generic semaglutide for obesity at a 90% federal match",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude and mechanism: coverage goes from 7 states in 2032 to 29 within roughly 18 months of the Act. This includes budget-cutting states that dropped coverage in 2031, and the candidate shows no state-by-state process or enrolment ramp."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens through generics, the Medicaid match and HRSA free provision, which narrows the class gap relative to 2032. Costs remain: a NAION class warning, 14 counterfeit deaths and ~2,100 ED visits, and 6.5M users on untracked gray product. The poorest users are the most surveilled (the HRSA registry plus two adherence-conditioned Medicaid programmes), and flatness is normalised. Millions run unstudied holiday cycles, and under-12 semaglutide starts are monitored by the clinics least able to do it. That makes a harder but not dystopian society, around 5.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Adoption is at 18.5 (-1.1). Generic collapse comes through Jan 2033 settlement entries, and the Generic Incretin Access Act supplies both the public expansion and the subsidy. Semaglutide 6–11 and the gambling label are approved more than 12 months after filing, retatrutide 12 mg reaches 29%, the NAION class label arrives in Feb 2034, counterfeits appear in Jun 2034, and holidays normalise the complaint. mechanism: Generics to Part D, Medicaid and HRSA spending, and the NAION-to-stops chain, are shown with arithmetic. The top-third fall, the halving of legitimate cash users despite $29–69 prices, and the employer coverage jump from 30% to 41% while commercial users fall are asserted (claim 2). The prose also says Part D spending fell 'by a third' when the world shows ~41%. magnitude: Current use, ever-use, income thirds and age bands all sit inside the envelope and reconcile, and the Medicare, Medicaid and HRSA spending figures multiply out. The payer mix sums to 50.5M against a stated 50.7M (claim 1), pediatric shares imply under 1.2% overall, and the 7→29 state jump is aggressive (claim 3).",
+        "generativity": "The prose shows a home aide's day: the clinic pick-up, the yellow eye-exam sheet, her sister's RETA vial photo, the doorframe growth line and the call to the eye doctor. The world fields add texture through the holiday economy, Memphis and Charlotte contrasts, the 'August Off' genre and the sportsbook lobbying, and they imply many more scenes and characters."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s4-L2-r22-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Commercial is 12.6M (25%), legitimate cash 9.4M (18.5%) and imported or counterfeit 6.5M (12.8%). Total 50.7M.",
+          "field": "world/population/note",
+          "why": "magnitude: the six payer figures (12.6+7.2+2.2 public, 12.6 commercial, 9.4 cash, 6.5 gray) sum to 50.5M, not 50.7M, and the shares sum to about 99.6%. It is a small reconciliation gap, but it sits in the headline arithmetic."
+        },
+        {
+          "quote": "the top third fell from 25 to 21 on holidays and 'off-drug lean' maintenance;",
+          "field": "world/population/note",
+          "why": "mechanism: a 4-point fall in the top third, which has the cheapest and most accessible drug and the most cash users, is explained only by holidays and maintenance. Holidays are said to total 2.1 points across all adults, so this does not account for legitimate cash users falling from 17.6M to 9.4M while generic prices collapsed to $39–69."
+        },
+        {
+          "quote": "the Feb 2034 NAION warning drove stops among 50–64s with diabetes;",
+          "field": "world/population/note",
+          "why": "mechanism and magnitude: the absolute NAION risk is 2–4 per 10,000 person-years, and diabetics have strong cardiometabolic reasons to stay on. The warning came in February 2034, so a measurable drop in prevalence in the 50–64 band (29.5 to 26.5) within the year is asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access is wider and the class gap is narrower: generics cost $29–69, Medicaid covers the drug in 29 states plus DC, and HRSA provides it free. The harms are still real: a mainstream blunting complaint (~48% of users say the drug dulls pleasures), cycling effects on bone and pancreas that are uncharacterised, semaglutide approved for 6–11-year-olds with unknown adult height, 14 counterfeit deaths and about 2,100 ED visits, and surveillance and adherence conditioning aimed at the poorest users. That is a harder and more measured society than 2032 but not a worse one overall, so overall is about 4.5.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable to an event. Generic collapse comes via the Jan 2033 settlement event. Public expansion and subsidy come via the Generic Incretin Access Act. The NAION class label, the pediatric under-12 and gambling approvals, the retatrutide 12 mg dose at 29%, and the counterfeits are all present, with approval timing within the rules. Normalisation and mainstream complaint show up in the holiday culture. mechanism: most chains are shown (generic entry to Part D spending, Act to Medicaid and HRSA users, holidays to the 2.1-point off-drug share). Weaker are the 8.2M fall in legitimate cash users despite price collapse and the 4-point top-third drop (claim 2), and the stops attributed to a small-absolute-risk NAION warning (claim 3). magnitude: the headline figures sit inside the envelope (18.5% on drug, 30.4% ever, income thirds, age check, cycling arithmetic, Medicare, Medicaid and HRSA spend all multiply out). The gaps are small: payer mix sums to 50.5M against a stated 50.7M (claim 1), the prose says Part D fell 'by a third' when the note shows ~41%, and the 'less than fifty dollars' price in the prose is below the note's $39–69 chain range.",
+        "generativity": "The Denise vignette gives a lot of film: the yellow eye-exam sheet, Mr. Albright's daughter on holiday, Tanya's RETA vial photo and the deleted texts, the pencil mark on the doorframe at the six-month growth check, and the laughing man on the bus. The world fields add scene hooks such as Netflix's 'August Off', holiday dinners, track rules that penalise holidays, and the New Jersey and Ohio self-exclusion referrals. Daily life has strong texture and implies many characters."
+      },
+      "plausibility": 7.25
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Medicaid: 29 states plus DC now cover generic semaglutide for obesity at a 90% federal match",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism and magnitude: Medicaid obesity coverage goes from 7 states to 29 plus DC in about 17 months, and 4.4M new obesity users are enrolled. The 90% match is a credible lever, but no state-budget or enrolment-ramp chain is shown for a jump this fast."
+      },
+      {
+        "quote": "Part D spending fell by a third when diabetics were switched to generic.",
+        "field": "prose/paragraph_8",
+        "why": "Magnitude: the world's own figures give $31.6B falling to $18.6B, a 41% drop, not a third. The prose also credits the whole fall to diabetes switching, although about 1.5M branded Medicare users simply disappear from the count."
+      },
+      {
+        "quote": "legitimate cash 9.4M (18.5%)",
+        "field": "world/population/note",
+        "why": "Mechanism: legitimate cash users nearly halve from ~17.6M, while generic injectables at $29-69 make self-pay cheaper than ever. The listed causes (holidays, forced brand-to-generic switches, NAION stops) would not make people leave a cheaper cash channel. Cash buyers would more likely stay in it or move to generics."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.5,
+      "autonomy": 4.83,
+      "inequality": 3.83,
+      "public_health": 5.33,
+      "cohesion": 4.33,
+      "epistemic": 4.5,
+      "overall": 4.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.67,
+      "magnitude": 6.5
+    },
+    "plausibility": 7.05,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Access broadens through generics, Medicaid and HRSA, which narrows the class gap, so inequality and flourishing are only moderately bad. The harms are real and growing: a NAION class warning, a counterfeit cluster with ~2,100 ED visits and 14 deaths, and holidays that are widespread and unstudied for bone, pancreas and optic nerve. Children aged 6-11 are now started on semaglutide with monitoring that depends on weak Medicaid clinics. The poorest users are the most measured, through the HRSA registry and two adherence-conditioned Medicaid programmes, and employer tracks penalise holidays. This is a harder society with new losers, but not a structurally hidden one, since the flatness complaint is named and measured.",
+      "plausibility": "driver_fidelity: every driver is visibly realised. Adoption lands at -1.1 pp exactly (19.6 to 18.5). Generic collapse comes through a Jan 2033 settlement-entry event, and retatrutide 12 mg realises the ~30% triple agonist (29% mean weight loss, approved Nov 2033, filed Oct 2032) as an existing product in a new dose. Semaglutide 6-11, the gambling label, the NAION class label, the Generic Incretin Access Act and the counterfeit cluster all appear as dated events. mechanism: most chains are shown, such as generics to Part D savings, flat premiums and Novo's revenue fall, and holidays and NAION stops explaining the fall in users. Weaker are the 29-state Medicaid jump (claim 1), the near-halving of cash users (claim 3), and employer coverage rising 30% to 41% while commercial users fall. magnitude: population figures sit inside the envelope, and the age, income and cycling arithmetic and the Medicare, Medicaid and HRSA spending arithmetic all check out. Approval timings obey the 12-month rule. Gaps: the payer lines sum to 50.5M against a stated 50.7M, the prose says Part D fell 'by a third' when the figures give 41% (claim 2), and ever-used at 30.4 sits near the 30.7 edge.",
+      "generativity": "The Denise Coleman prose is a full day with film-ready beats: the yellow eye-exam sheet, the pencil line on the doorframe for the nine-year-old, the RETA vial text from her sister, and the bus laugh. The world fields add many implied scenes, including 'August Off', holiday dinners, track rules that penalise holidays, and the sportsbook lobbying fight. Daily life has real texture and the prose shows rather than explains, with only a brief explanatory opening."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.465,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 45
   }
 }

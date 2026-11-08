@@ -49,6 +49,41 @@
         "input_tokens": 18748,
         "output_tokens": 23694
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r49-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28334,
+        "output_tokens": 5044
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r49-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28334,
+        "output_tokens": 5818
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r49-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28334,
+        "output_tokens": 5554
+      }
     ]
   },
   "world": {
@@ -331,6 +366,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r49-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Because that company holds 180-day exclusivity, no other generic can launch, and the 2033 US entry date passes with no generic on shelves.",
+          "field": "world/events/0/event",
+          "why": "mechanism: A warning letter at one plant is asserted to freeze every filer and move settlement dates to mid-2035. The candidate does not show why exclusivity is not forfeited or why the fixed settlement date shifts, so this is a convenient reversal of the 2033 entry the parent fixed."
+        },
+        {
+          "quote": "Lilly leads on retatrutide (off allocation), tirzepatide, Foundayo and MariTide uptake via partnership ... no: Amgen sells MariTide.",
+          "field": "world/economy/pharma/state",
+          "why": "mechanism: The world state contains a visible self-correction that leaves the MariTide attribution contradictory. This is a narrative inconsistency in the record and weakens trust in the pharma-share claims built on it."
+        },
+        {
+          "quote": "About 85% of covering employers now use gated designs, and about a third of those add tenure gates.",
+          "field": "world/access/note",
+          "why": "mechanism: Gating rises from 75% to 85% and tenure gates reach about a third of gated plans, yet the events show only two administrators launching tenure designs in Sep 2034. That cannot plausibly produce this penetration, so the spread is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 6.5,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 9
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The harms are concrete and mostly mechanism-backed. These are the NAION warning covering about 2,000 excess cases a year, the contaminated-vial cluster, about 14,700 excess hip fractures, and tenure-gated coverage that works as job lock with kiosk weights feeding premiums. Inequality is the heaviest dimension: bodies now signal income, and 7.1M people use imports as a coping route. Cohesion and epistemic harms are real but moderate, since the backlash coalition is about the same size and unmeasured 'calm' exposure persists, and nothing here is melodramatic.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +3.5pp, the price shock is dated and explained, tenure gating and kiosk-priced premiums carry the conditioning driver, the NAION class label carries the vision driver, the 50 mg pill is an existing product in a new form, counterfeit vials and tablets carry the market shock, and body-shape stratification carries the cultural driver. state_action 'none' is respected. mechanism: Several chains are asserted rather than shown. Generic parking is the first claim listed, the rapid spread of tenure gates is the third, and the pharma field has a visible drafting contradiction (the second). The prose also has timeline slips: 'last summer' for the 2033 recall, and 'September, if she lasts' on a 12-month gate begun in March. magnitude: Current use of 28.5% and ever-use of 40.0% sit inside the envelope. The payer mix, Medicare and Medicaid dollar arithmetic, age-band sum, income-third average, cycling share and US market revenue all multiply out, and survodutide and MariTide approvals are allowed. Only a minor net-price wobble ('private net price up ~8%' against PBM net rising about 5–14%) is inexact.",
+        "generativity": "The Marisol day-in-the-life shows rather than explains: lot-number checks, a Nogales pen seller, an eye leaflet printed in Hindi, a DEXA van at a Lutheran church, and a kiosk with no plan to report to. The fields also imply many scenes: tenure vesting, apparel 'cycle' ranges, pill-counterfeit seizures, and harm-reduction Telegram lists. Characters and class contrasts are distinct, with a daughter in Tucson, Mrs. Halvorsen and the golf-shirt man."
+      },
+      "plausibility": 8.0
+    },
+    {
+      "custom_id": "s4-L3-r49-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Because that company holds 180-day exclusivity, no other generic can launch, and the 2033 US entry date passes with no generic on shelves.",
+          "field": "world/events/0/event",
+          "why": "mechanism: the parent's settlement fixed 2033 entry, and exclusivity forfeiture rules would normally release other filers if the first filer cannot market. An indefinitely parked exclusivity is a convenient device to produce the price shock."
+        },
+        {
+          "quote": "Imported or counterfeit users rose from ≈3.8M to ≈7.1M.",
+          "field": "world/safety_ledger/11/prevalence_note",
+          "why": "mechanism: a near-doubling in two years is attributed to a ~$50 portal price rise, tenure gates and a shortage, with no quantified chain. The import gap was already $5–30 against $199+, so the jump looks asserted."
+        },
+        {
+          "quote": "She switched agencies in March for two dollars more an hour. The new plan covers the drug after twelve months. September, if she lasts.",
+          "field": "prose/a_day_in_the_life",
+          "why": "mechanism: a March start plus a twelve-month wait cannot give September. The scene also sits at 'the end of 2034', where September would already have passed, so the prose contradicts itself."
+        }
+      ],
+      "badness": {
+        "flourishing": 6,
+        "autonomy": 7,
+        "inequality": 7.5,
+        "public_health": 6.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Inequality is the worst dimension. Body shape becomes an income marker (coached Scottsdale against import-using Maryvale), and the fat-dominant regain pattern and vertebral-fracture tail fall on women 50–64 who were cut off. Autonomy is hurt by tenure-gated coverage ('metabolic tenure' job lock) and kiosk-weight premiums. The ledger adds ≈14,700 excess hip fractures, ≈2,000 excess NAION cases, a contamination cluster with 11 deaths, and ≈4.6M unmeasured 'calm' users. It reads as a recognisably harder society with new losers, not a collapse, and harms are partly nameable (a label warning now exists), so epistemic stays moderate.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Shock-up pricing, tenure-gate conditioning, the 50 mg Wegovy pill (oral parity), the NAION class label, the counterfeit and import surge, class stratification and the marketed 'calm' layer all appear in events and fields, and no state action is added. mechanism: the generic-exclusivity block, the 'lapsing' 2029 price commitments and the near-doubling of imports are convenient or thinly shown (claims 1 and 2). The Marisol timeline is arithmetically inconsistent (claim 3), and the pharma note has a leftover 'no: Amgen sells MariTide' glitch. magnitude: figures reconcile and sit inside the envelope. Adults on drug 28.5%, ever-used 40.0%, payer shares sum to 100% and multiply to the user counts, the Medicare and Medicaid spend arithmetic is correct, and the bone and NAION estimates compute. Survodutide and MariTide approvals fit the timing rules. Only minor slippage remains, such as the claimed ~8% net price rise against a computed ~5%.",
+        "generativity": "The day-in-the-life gives concrete characters (Marisol, Mrs. Halvorsen, the daughter in Tucson) and settings (Maryvale, the Lutheran-church DEXA van, the Fry's kiosk). It has specific details such as the Telegram lot-check list, the Hindi eye leaflet and the strip-cut toast. The world fields supply further scene hooks: apparel 'cycle' ranges, Memphis no-gram rooms, 'metabolic tenure', and sex therapists screening for sourcing."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s4-L3-r49-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Lilly leads on retatrutide (off allocation), tirzepatide, Foundayo and MariTide uptake via partnership ... no: Amgen sells MariTide.",
+          "field": "world/economy/pharma/state",
+          "why": "Mechanism: a visible drafting artifact with an in-line self-correction, which contradicts itself and the MariTide launch described elsewhere. It is a narrative contradiction inside the world state."
+        },
+        {
+          "quote": "The 65+ band rose more slowly (17→21%) because roughly one in five older ever-users is on a medically advised bone pause or a post-NAION stop.",
+          "field": "world/population/note",
+          "why": "Mechanism: a +4 pp rise for 65+ is as large as any band (30–49 also +4, 50–64 +3.5, 18–29 +2), so 'more slowly' is false. The offered cause is also unquantified, and the NAION warning only arrived in May 2034."
+        },
+        {
+          "quote": "She switched agencies in March for two dollars more an hour. The new plan covers the drug after twelve months. September, if she lasts.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: a March start plus a twelve-month tenure gate gives March 2035, not September, so the vignette's own arithmetic breaks. It is a narrative-versus-state inconsistency in the central illustration of tenure gating."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 7.5,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 6,
+        "overall": 6.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Stratification hardens along class lines: tenure-gated 'metabolic tier' plans make the drug a job-lock instrument and push kiosk weight data into private premiums (conditioning_or_surveillance, effect_on_work). Imports nearly double to 7.1M, with ~410 hospitalisations and 11 deaths from contaminated vials. The NAION warning reaches ~4.6M unmeasured 'calm' subscribers, and bone harm worsens at ~14,700 excess hip fractures a year. Median wellbeing is only modestly worse, and bodies-as-income-proxy plus pen poverty drive inequality and autonomy highest. The mechanisms are mostly shown, so this is a recognisably harder society, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Price shock is in access.note and events. Private conditioning is the coverage shift, and state_action stays 'none'. Oral parity is the 50 mg pill, the NAION class label is in the safety ledger, imports and counterfeits are the market shock, and class stratification and marketed_feature appear throughout. mechanism: the price, recall and import chains are shown, but the pharma text contains a self-correction artifact, the '65+ rose more slowly' claim contradicts the age figures, and the prose tenure arithmetic is off (claims 1–3). Gating rising from 75% to 85% in two years and the 180-day-exclusivity parking of all generics are thinly argued. magnitude: all figures sit inside the envelope (28.5% current, 40.0% ever, income thirds bracket the national figure, no illegal approvals, generic_us false). Payer shares sum to 100%, the Medicare and Medicaid dollar arithmetic multiplies out, and the 65+ band totals reconcile. Cycling is (14.5+4.5)/40 = 47.5%, and the fracture and NAION counts check. Only small seams remain, such as the retatrutide list price rising $150 against a stated ~$50 increase.",
+        "generativity": "The prose follows Marisol through a single day with concrete detail: the pen lot-number check, the Telegram blacklist, the Hindi leaflet, the DEXA van at the Lutheran church, and the kiosk that has no plan to report to. Characters are implied (Mrs. Halvorsen, the daughter in Tucson, the golf-shirt man), and the world fields add Phoenix and Dayton texture. It shows more than it explains."
+      },
+      "plausibility": 7.65
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Because that company holds 180-day exclusivity, no other generic can launch, and the 2033 US entry date passes with no generic on shelves.",
+        "field": "world/events/0/event",
+        "why": "mechanism: A warning letter at one plant is asserted to freeze every filer and move settlement dates to mid-2035. The candidate does not show why exclusivity is not forfeited or why the fixed settlement date shifts, so this is a convenient reversal of the 2033 entry the parent fixed."
+      },
+      {
+        "quote": "Lilly leads on retatrutide (off allocation), tirzepatide, Foundayo and MariTide uptake via partnership ... no: Amgen sells MariTide.",
+        "field": "world/economy/pharma/state",
+        "why": "mechanism: The world state contains a visible self-correction that leaves the MariTide attribution contradictory. This is a narrative inconsistency in the record and weakens trust in the pharma-share claims built on it."
+      },
+      {
+        "quote": "About 85% of covering employers now use gated designs, and about a third of those add tenure gates.",
+        "field": "world/access/note",
+        "why": "mechanism: Gating rises from 75% to 85% and tenure gates reach about a third of gated plans, yet the events show only two administrators launching tenure designs in Sep 2034. That cannot plausibly produce this penetration, so the spread is asserted rather than shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.83,
+      "autonomy": 6.67,
+      "inequality": 7.5,
+      "public_health": 6.33,
+      "cohesion": 5.5,
+      "epistemic": 5.83,
+      "overall": 6.43
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.0,
+      "magnitude": 8.67
+    },
+    "plausibility": 7.8,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "The harms are concrete and mostly mechanism-backed. These are the NAION warning covering about 2,000 excess cases a year, the contaminated-vial cluster, about 14,700 excess hip fractures, and tenure-gated coverage that works as job lock with kiosk weights feeding premiums. Inequality is the heaviest dimension: bodies now signal income, and 7.1M people use imports as a coping route. Cohesion and epistemic harms are real but moderate, since the backlash coalition is about the same size and unmeasured 'calm' exposure persists, and nothing here is melodramatic.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +3.5pp, the price shock is dated and explained, tenure gating and kiosk-priced premiums carry the conditioning driver, the NAION class label carries the vision driver, the 50 mg pill is an existing product in a new form, counterfeit vials and tablets carry the market shock, and body-shape stratification carries the cultural driver. state_action 'none' is respected. mechanism: Several chains are asserted rather than shown. Generic parking is the first claim listed, the rapid spread of tenure gates is the third, and the pharma field has a visible drafting contradiction (the second). The prose also has timeline slips: 'last summer' for the 2033 recall, and 'September, if she lasts' on a 12-month gate begun in March. magnitude: Current use of 28.5% and ever-use of 40.0% sit inside the envelope. The payer mix, Medicare and Medicaid dollar arithmetic, age-band sum, income-third average, cycling share and US market revenue all multiply out, and survodutide and MariTide approvals are allowed. Only a minor net-price wobble ('private net price up ~8%' against PBM net rising about 5–14%) is inexact.",
+      "generativity": "The Marisol day-in-the-life shows rather than explains: lot-number checks, a Nogales pen seller, an eye leaflet printed in Hindi, a DEXA van at a Lutheran church, and a kiosk with no plan to report to. The fields also imply many scenes: tenure vesting, apparel 'cycle' ranges, pill-counterfeit seizures, and harm-reduction Telegram lists. Characters and class contrasts are distinct, with a daughter in Tucson, Mrs. Halvorsen and the golf-shirt man."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 6.216,
+    "survived": true,
+    "new_lineage": "L2",
+    "floor_used": 6,
+    "rank": 2
   }
 }

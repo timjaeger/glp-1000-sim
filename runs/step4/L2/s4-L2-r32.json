@@ -51,6 +51,41 @@
         "input_tokens": 18508,
         "output_tokens": 23337
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r32-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27886,
+        "output_tokens": 5591
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r32-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27886,
+        "output_tokens": 5929
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r32-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 27886,
+        "output_tokens": 5598
+      }
     ]
   },
   "world": {
@@ -313,6 +348,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r32-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The bottom third's gain (14 → 22) came mostly through Medicaid addiction codes, conditional Medicaid programmes, military enlistment and shift-work tracks.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the bottom third gains 8 points, roughly 7M adults. The stated routes are far too small for that. Total Medicaid grows only ~2.3M, active-duty enrolment is ~0.21M, and the two other routes are not quantified."
+        },
+        {
+          "quote": "About a million people on public coverage now take the drug for a craving rather than for their weight.",
+          "field": "prose/body",
+          "why": "Narrative contradicts the world state. The access note gives ~1.1M Medicare users on AUD and gambling codes and ~1.3M Medicaid users on alcohol or gambling codes, about 2.4M together, so the prose understates by more than half."
+        },
+        {
+          "quote": "Sportsbook handle per active account fell again in states that fund gambling-disorder prescriptions from betting-tax problem-gambling funds (New Jersey, Massachusetts).",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism: the gambling-disorder indication was approved only in April 2034, so state-funded prescriptions had at most months to run. No chain is shown for a measurable fall in per-account handle attributable to them."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 4.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The main harm is structural: ~11.5M track enrollees, federal employees, five Medicaid programmes and service members keep the drug only while their records stay clean. Commanders can see enrolment, and lapses become lost premiums or lost coverage (`conditioning_or_surveillance`, `workforce_or_military`, 'forced cyclers'). Offsetting this, anhedonia is better measured and labelled, the gray-market cycler body is rarer, and AUD and gambling treatment widens real access. Children's growth deficits persist and no new harm appeared, so this reads as a harder society with new losers, not a refusal-level one.",
+        "plausibility": "driver_fidelity: All ten drivers appear in fields and events. Adoption is 26.7%, inside the 24.7–28.7 envelope. The gambling-disorder, bimagrumab and retatrutide 12 mg approvals all respect the 12-month rule, and the triple-agonist driver is realised as a new strength of an existing product. Minor strain comes from the anhedonia relabelling against safety_signal 'none'. mechanism: Tariffs leading to stalled prices, and conditioning leading to tracks, are shown well. Several links are asserted instead: the bottom-third gain (claim 1), the prose understating public-coverage addiction users (claim 2), and per-account sportsbook handle falling within months (claim 3). The anhedonia estimate falling from 7–8% to ~2 points on confounding is convenient. magnitude: Population, age and income arithmetic reconciles, payer mix sums to 73.3M, Part D spend multiplies out, and cycling reconciles at 44%. Deductions are for the bottom-third attribution being too small for the 8-point rise, the prose-versus-field user-count gap, and a commercial user jump of +7M against falling formulary coverage.",
+        "generativity": "The prose gives a full set of scenes: Tanya's badge swipe and the 'green through March' premium, Kelvin's honey buns and the 'off in solidarity' line, Marcus's gambling-code pill and 'weather' flatness, and DeShawn ticking the Metabolic Readiness box. The world fields add Fort Bragg, Memphis hubs, and the NJ and MA betting-tax funds, which suggest further scenes. A few lines slip into explaining instead of showing."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s4-L2-r32-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Green keeps Tanya's premium at $96 instead of $212.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism: the world says adherence differentials are capped at 30% under the 2027 guidance, but $96 versus $212 is a gap of about 55%. The prose contradicts the world state."
+        },
+        {
+          "quote": "Sportsbook handle per active account fell again in states that fund gambling-disorder prescriptions from betting-tax problem-gambling funds (New Jersey, Massachusetts).",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism: the gambling indication was approved only in April 2034, and the states then had to direct funds, enrol patients and wait for a measurable effect on handle. No time or chain is shown for a drop attributed to these states."
+        },
+        {
+          "quote": "The bottom third's gain (14 → 22) came mostly through Medicaid addiction codes, conditional Medicaid programmes, military enlistment and shift-work tracks.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: an 8-point gain in the bottom third is roughly 7M users. Medicaid adds about 2.3M in total and only ~0.21M active-duty members are enrolled, so military enlistment cannot be a main driver. The attribution is asserted and does not reconcile."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5.5,
+        "public_health": 5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6.5,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens, but through compliance. About 11.5M workers, federal employees, five Medicaid programmes and the military keep the drug only while their records stay clean. Commanders see readiness records, a lapse costs up to 30% of premium, and Medicaid fill data is tied to community-engagement reporting. Forced cycling is a new harm and a further loss of autonomy. The blunting estimate shrinks (~2 points adjusted), which makes harms more nameable and lowers the epistemic score. Pediatric growth effects persist, and the bottom third gains access at the price of surveillance and administrative regain risk.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +7.1, prices are stalled by the tariff event, conditioning shows in the FEHB, NDAA and Medicaid fields, and gambling disorder is approved in April 2034, 13 months after filing. The triple-agonist driver is realised as the retatrutide 12 mg strength, which the approval rules allow. The anhedonia relabelling and 'established' status sit slightly awkwardly against safety_signal: none. mechanism: The tariff and licensing chain to flat prices and a smaller gray-market share is well shown, as is the Part D route through addiction codes. The prose premium of $96 versus $212 breaks the 30% cap (claim 1). The sportsbook-handle effect is asserted with no time lag (claim 2). The bottom-third attribution to military enlistment is thin (claim 3). The prose also says 'end of 2034' yet calls a September 2033 approval 'last autumn', and it cites about a million public-coverage addiction users against a world figure of ~2.4M. magnitude: On-drug 26.7, ever-used 36, the income thirds and the age check all sit inside the envelope. The payer mix sums to ~73.3M, Part D spend multiplies out to ~$41.8B, and the cycling arithmetic closes. All approval timings meet the 12-month rule, and the minor reconciliation issue is the ~2.4M addiction-code users within months of approval. The bottom-third attribution (claim 3) is the weakest figure.",
+        "generativity": "The Tanya, Kelvin, Marcus and DeShawn scenes imply a full cast: the badge swipe at the clinic window, the premium tier, the honey-bun solidarity lie, the gambling-code pill that makes the games 'feel like weather', and the Army form with the box already checked. The world fields add texture, such as 'what are you on' as a host's question and shot-date calendars. Some prose summary is still explanatory rather than shown."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s4-L2-r32-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Green keeps Tanya's premium at $96 instead of $212.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism and magnitude: a $96 vs $212 gap is a ~55% differential. The world's own insurance field says adherence differentials top out at the 30% ceiling set by the 2027 guidance, which still stands."
+        },
+        {
+          "quote": "Sportsbook handle per active account fell again in states that fund gambling-disorder prescriptions from betting-tax problem-gambling funds (New Jersey, Massachusetts).",
+          "field": "world/interior_life/effect_on_art_and_play",
+          "why": "Mechanism: the gambling indication was approved only in April 2034, and the states only then directed funds to cover it. A measurable per-account handle decline attributable to those prescriptions within months is asserted, not shown."
+        },
+        {
+          "quote": "AUD and gambling codes are ~1.1M × $230 × 12 ≈ $3.0B",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: about 1.1M Medicare users on AUD and gambling codes, with 1.3M more in Medicaid, within about 15 months of the AUD approval and a few months of the gambling approval, behind prior authorisation, is a very fast uptake. The prose then says 'About a million people on public coverage', which understates the world's own ~2.4M."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 6,
+        "epistemic": 4.5,
+        "overall": 6.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Access now depends on compliance. About 11.5M track enrollees, FEHB, five Medicaid programmes and the military (commanders can see enrolment) get the drug only while their record stays clean. Lapses become lost premiums, lost standing and forced cycling, and surveillance deepens. Children's growth deficits persist and gray-market harm persists but is flat. Anhedonia is now measured and labelled, and calm marketing is curtailed, so the epistemic score is lower than the autonomy score. This is a recognisably harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: every driver is traceable to events and fields: stalled prices, conditioning, behavioural-compulsion indication, a triple-agonist 12 mg form, tariffs, normalisation, the NDAA, a niche side effect. The label change on blunting sits a little awkwardly beside 'safety_signal: none'. mechanism: the tariff, Chinese licensing, price-hold and employer-conditioning chains are shown, but the $96 vs $212 premium against the 30% ceiling and the quick sportsbook-handle effect (claims 1 and 2) are asserted or contradictory. magnitude: population, income-third, age, payer-mix (sums to ~73.3M), cycling, Part D spend and approval timing (13–14 months from filing) all reconcile and sit inside the envelope. The deductions are the fast AUD and gambling uptake and the 'about a million' prose mismatch (claim 3), and the bottom third's +8 points leans on thin sources.",
+        "generativity": "The Memphis hub scene is vivid: a badge swipe, a bruise rotated to the other side, the 'green through March' chime and the premium stakes. Kelvin and the honey buns, Marcus on TennCare's gambling code with the barbecue 'tasting like weather', and DeShawn ticking the Army box each imply a separate story. The world fields add texture, such as 'what are you on' as a host's question and life insurers asking why you stopped."
+      },
+      "plausibility": 7.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The bottom third's gain (14 → 22) came mostly through Medicaid addiction codes, conditional Medicaid programmes, military enlistment and shift-work tracks.",
+        "field": "world/population/note",
+        "why": "Magnitude and mechanism: the bottom third gains 8 points, roughly 7M adults. The stated routes are far too small for that. Total Medicaid grows only ~2.3M, active-duty enrolment is ~0.21M, and the two other routes are not quantified."
+      },
+      {
+        "quote": "About a million people on public coverage now take the drug for a craving rather than for their weight.",
+        "field": "prose/body",
+        "why": "Narrative contradicts the world state. The access note gives ~1.1M Medicare users on AUD and gambling codes and ~1.3M Medicaid users on alcohol or gambling codes, about 2.4M together, so the prose understates by more than half."
+      },
+      {
+        "quote": "Sportsbook handle per active account fell again in states that fund gambling-disorder prescriptions from betting-tax problem-gambling funds (New Jersey, Massachusetts).",
+        "field": "world/interior_life/effect_on_art_and_play",
+        "why": "Mechanism: the gambling-disorder indication was approved only in April 2034, so state-funded prescriptions had at most months to run. No chain is shown for a measurable fall in per-account handle attributable to them."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 7.17,
+      "inequality": 5.67,
+      "public_health": 5.0,
+      "cohesion": 5.83,
+      "epistemic": 4.33,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.5,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.17,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The main harm is structural: ~11.5M track enrollees, federal employees, five Medicaid programmes and service members keep the drug only while their records stay clean. Commanders can see enrolment, and lapses become lost premiums or lost coverage (`conditioning_or_surveillance`, `workforce_or_military`, 'forced cyclers'). Offsetting this, anhedonia is better measured and labelled, the gray-market cycler body is rarer, and AUD and gambling treatment widens real access. Children's growth deficits persist and no new harm appeared, so this reads as a harder society with new losers, not a refusal-level one.",
+      "plausibility": "driver_fidelity: All ten drivers appear in fields and events. Adoption is 26.7%, inside the 24.7–28.7 envelope. The gambling-disorder, bimagrumab and retatrutide 12 mg approvals all respect the 12-month rule, and the triple-agonist driver is realised as a new strength of an existing product. Minor strain comes from the anhedonia relabelling against safety_signal 'none'. mechanism: Tariffs leading to stalled prices, and conditioning leading to tracks, are shown well. Several links are asserted instead: the bottom-third gain (claim 1), the prose understating public-coverage addiction users (claim 2), and per-account sportsbook handle falling within months (claim 3). The anhedonia estimate falling from 7–8% to ~2 points on confounding is convenient. magnitude: Population, age and income arithmetic reconciles, payer mix sums to 73.3M, Part D spend multiplies out, and cycling reconciles at 44%. Deductions are for the bottom-third attribution being too small for the 8-point rise, the prose-versus-field user-count gap, and a commercial user jump of +7M against falling formulary coverage.",
+      "generativity": "The prose gives a full set of scenes: Tanya's badge swipe and the 'green through March' premium, Kelvin's honey buns and the 'off in solidarity' line, Marcus's gambling-code pill and 'weather' flatness, and DeShawn ticking the Metabolic Readiness box. The world fields add Fort Bragg, Memphis hubs, and the NJ and MA betting-tax funds, which suggest further scenes. A few lines slip into explaining instead of showing."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.433,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 29
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 18727,
         "output_tokens": 23514
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r46-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28344,
+        "output_tokens": 8533
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r46-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28344,
+        "output_tokens": 5644
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r46-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28344,
+        "output_tokens": 8070
+      }
     ]
   },
   "world": {
@@ -334,6 +369,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r46-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Large employers in logistics, call centres, banking back offices and fleets run monthly on-site MariTide injection days.",
+          "field": "world/interior_life/effect_on_work",
+          "why": "Mechanism: branded MariTide at $349 direct, plus a $25–50 credit, for call-centre and warehouse workers sits badly beside the world's own statements that employers 'steer to generic first' and that commercial pharmacy trend is only ~+2%. No chain shows why cost-sensitive low-wage employers would pay roughly ten times the generic price to monitor attendance."
+        },
+        {
+          "quote": "Tirzepatide's cognition indication brings seniors who are lighter at baseline into the CMS continuation standard, whose 5% response threshold was written for obesity.",
+          "field": "world/open_tensions/0",
+          "why": "Mechanism: access.public_coverage says Part D covers the cognition indication 'outside the obesity benefit'. The continuation standard is defined for Part D obesity users, so applying it to cognition users is a narrative contradiction. The prose scene with Ana's kiosk weigh-in relies on it."
+        },
+        {
+          "quote": "the April 2034 tirzepatide cognitive-decline indication (≈1.1M Medicare starts in eight months, some with BMI too low for the obesity benefit)",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: the indication requires BMI ≥27 plus a vascular risk factor, which matches the obesity benefit's own threshold (≥27 with a comorbidity), so 'BMI too low' is internally inconsistent. 1.1M starts within eight months of a risk-reduction label with a limitation of use is also a very fast ramp."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 5.5,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 78M users, ~1.0M excess anhedonia cases, ~16,800 excess hip fractures a year and 1.8M sarcopenic older users make this a harder society than 2032. The employer credits and adherence records from on-site MariTide days (effect_on_work, conditioning_or_surveillance) add real autonomy pressure. Offsets: use has nearly converged across income thirds, anhedonia is labelled and measurable (which lowers the epistemic score), and DEXA waits have eased. The backlash is visible but has no legal effect, so this is a recognisably harder society, not a collapse.",
+        "plausibility": "driver_fidelity: All the major drivers are visible and traceable: generic semaglutide in Mar 2033, MariTide approved Jun 2033, the Oct 2033 anhedonia label, the Apr 2034 cognition indication, the employer layer and the Atlanta march. Eight more states adopting the continuation standard sits a little awkwardly with state_action 'none'.\nmechanism: The employer MariTide chain at branded prices conflicts with the 'generic-first' employer story (claim 1). The cognition indication is described as covered both outside the obesity benefit and inside the continuation standard (claim 2). 'BMI too low' contradicts the indication's own BMI ≥27 requirement (claim 3). The prose also calls tirzepatide 'Lilly's triple agonist'. The rest (price collapse, import decline, backlash after the label) is causally shown.\nmagnitude: Everything is inside the envelope: 28.6% current, 40.5% ever, income thirds bracketing the national figure, approvals timed within the rules. The payer mix sums to 78.4M, Medicare and Medicaid dollar figures multiply out, the $119B market reconciles, and the 16,800 fracture figure and the cycling arithmetic check. The only slight strains are commercial users flat at ~27.5M despite employer coverage rising to 71%, and the fast 1.1M cognition ramp.",
+        "generativity": "Marisol, Ana and Teo give three generations with distinct stakes: the continuity credit, a kiosk weigh-in that flags 'CLINICIAN REVIEW REQUIRED', and an unmuted show. Concrete details such as the badge-app green tick, the first-Tuesday injection line and 'dose sovereignty' clauses imply many further scenes. The day-in-the-life is short but shows rather than explains."
+      },
+      "plausibility": 7.15
+    },
+    {
+      "custom_id": "s4-L3-r46-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "In a dozen Southern states it costs nothing on Medicaid.",
+          "field": "prose/paragraph_1",
+          "why": "This fails mechanism and magnitude. The world state has Medicaid users costing states about $3.50 per user-month on generic, and only 8 states newly adopted the match. 'A dozen Southern states' at zero cost is unsupported and contradicts the JSON."
+        },
+        {
+          "quote": "the April 2034 tirzepatide cognitive-decline indication (≈1.1M Medicare starts in eight months, some with BMI too low for the obesity benefit)",
+          "field": "world/population/note",
+          "why": "This fails mechanism. 1.1M branded-tirzepatide Medicare starts within eight months of approval is asserted with no uptake chain. The world also says Part D covers the indication outside the obesity benefit, yet applies the obesity continuation standard's 5% threshold to the same users."
+        },
+        {
+          "quote": "The gap with the top third is now 3 points, against 7 in 2032.",
+          "field": "world/population/note",
+          "why": "This fails mechanism and magnitude. The bottom third rises 6 points in two years, with the top third up only 2, driven by generics, 8 states and fewer imports. The candidate also says 11 non-adopting states, rural uninsured people and gating dropouts remain. Near-convergence this fast is aggressive and thinly shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 4,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Harms persist and grow in absolute terms: about 1.0M excess anhedonia cases, about 16,800 excess hip fractures a year, and rising sarcopenia (1.8M). Employer continuity credits and monthly on-site injection days add soft pressure toward adherence (autonomy 6). Offsetting this, access is cheap and use converges across income, DEXA waits ease to 6–12 weeks, imports and poison-centre calls fall, and anhedonia is labelled and discussed openly (epistemic 4). Overall this is a recognisably harder society with new losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: All drivers are visibly realised in fields and events (generic settlement, MariTide Jun 2033, anhedonia label Oct 2033, tirzepatide cognition Apr 2034, employer credits, backlash march). The only friction is that 8 states adopting the continuation standard sits awkwardly with state_action 'none', which the world papers over by saying no new mandate. mechanism: Most chains are shown, such as the $3.50 state share driving Medicaid adoption and MariTide injection days giving employers adherence data. The claims listed above are asserted or contradictory: Medicaid at 'nothing' in a dozen states, 1.1M cognition starts in eight months, and cognition users being both outside the obesity benefit and subject to its 5% threshold. magnitude: Population figures sit inside the envelope (28.6%, ever 40.5%, thirds bracket the national figure). The payer mix, Medicare and Medicaid dollar arithmetic, age-band sums, cycling arithmetic, 104.1B+14.9B market and the 1.0M anhedonia figure all reconcile. The bottom-third jump is large but within the envelope.",
+        "generativity": "The prose follows Marisol, her mother Ana and her son Teo through MariTide injection day, the kiosk weigh-in and the 'Feel Everything' show, which gives concrete scenes and implied relationships. The world adds texture through badge-app ticks, continuity credits, DEXA vans, 'unmuted' nights and Baptist resolutions. It shows more than it explains, though the opening is expository."
+      },
+      "plausibility": 7.8
+    },
+    {
+      "custom_id": "s4-L3-r46-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Generics are largely exempt from the Section 232 pharmaceutical tariffs, which helped the price fall and leaves the cheap tier exposed to any change in tariff policy.",
+          "field": "world/state/geopolitics_of_supply",
+          "why": "Mechanism: the parent world says Section 232 tariffs were the reason manufacturers refused to cut prices. A convenient exemption for generics is asserted with no legal or policy chain, and it explains the price collapse by fiat."
+        },
+        {
+          "quote": "the April 2034 tirzepatide cognitive-decline indication (≈1.1M Medicare starts in eight months, some with BMI too low for the obesity benefit)",
+          "field": "world/population/note",
+          "why": "Mechanism: the indication requires BMI ≥27 plus a vascular risk factor, which is essentially the obesity benefit's own ≥27-with-comorbidity criterion, so 'BMI too low' contradicts it. This also undercuts the 'lighter at baseline' tension."
+        },
+        {
+          "quote": "Tirzepatide, Lilly's triple agonist and Amgen's new monthly MariTide are all still branded at between one hundred eighty and four hundred fifty dollars.",
+          "field": "prose/lede",
+          "why": "Mechanism (narrative contradiction): the world state lists tirzepatide as a dual GIP/GLP-1 agonist and retatrutide as the triple agonist. The prose mislabels the drug and omits retatrutide."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics and near-converged uptake (bottom 27% vs top 30%) ease the access harms, and the anhedonia label makes the main harm nameable and measured. Against that, ≈1.0M excess anhedonia cases, ≈16,800 excess hip fractures, 1.8M older users with sarcopenia, and employer-run continuity credits and injection-day adherence records that select for the blunted raise autonomy and public-health costs. Backlash polarisation and a new generic-switch dosing-error signal add cohesion strain, so this is a harder society with new losers rather than a catastrophe.",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: the March 2033 generic settlement, the Medicare/Medicaid expansion, the tirzepatide cognition indication, the Oct 2033 anhedonia label, MariTide, the Atlanta march, and employer credits. The only blemish is that eight more states adopting the standard sits slightly awkwardly with state_action 'none'. mechanism: most chains are shown (settlement → price → public uptake; monthly clinic dosing → employer adherence data). Three flaws remain: the convenient tariff exemption for generics, the 'BMI too low' contradiction in the cognition-indication cohort, and the prose calling tirzepatide a triple agonist. magnitude: 28.6% on drug and 40.5% ever-used are inside the envelope, and MariTide and survodutide approvals fit the approval rules. The age bands, payer mix (17.6+14.5+27.5+16.0+2.8=78.4M), Medicare/Medicaid spend, the $119B market, the 16,800 fractures and the 1.0M anhedonia cases all multiply out.",
+        "generativity": "The call-centre injection day, the kiosk screen reading CLINICIAN REVIEW REQUIRED, the mother's override, and the son's 'unmuted' show give concrete scenes and characters. The world fields add texture: the 'Feel Everything' march, the DEXA vans, 'dose sovereignty' clauses, and 'unmuted nights'. The prose shows the flattening ('a wave on sand') rather than explaining it."
+      },
+      "plausibility": 7.8
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Large employers in logistics, call centres, banking back offices and fleets run monthly on-site MariTide injection days.",
+        "field": "world/interior_life/effect_on_work",
+        "why": "Mechanism: branded MariTide at $349 direct, plus a $25–50 credit, for call-centre and warehouse workers sits badly beside the world's own statements that employers 'steer to generic first' and that commercial pharmacy trend is only ~+2%. No chain shows why cost-sensitive low-wage employers would pay roughly ten times the generic price to monitor attendance."
+      },
+      {
+        "quote": "Tirzepatide's cognition indication brings seniors who are lighter at baseline into the CMS continuation standard, whose 5% response threshold was written for obesity.",
+        "field": "world/open_tensions/0",
+        "why": "Mechanism: access.public_coverage says Part D covers the cognition indication 'outside the obesity benefit'. The continuation standard is defined for Part D obesity users, so applying it to cognition users is a narrative contradiction. The prose scene with Ana's kiosk weigh-in relies on it."
+      },
+      {
+        "quote": "the April 2034 tirzepatide cognitive-decline indication (≈1.1M Medicare starts in eight months, some with BMI too low for the obesity benefit)",
+        "field": "world/population/note",
+        "why": "Mechanism and magnitude: the indication requires BMI ≥27 plus a vascular risk factor, which matches the obesity benefit's own threshold (≥27 with a comorbidity), so 'BMI too low' is internally inconsistent. 1.1M starts within eight months of a risk-reduction label with a limitation of use is also a very fast ramp."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 6.33,
+      "inequality": 4.0,
+      "public_health": 5.33,
+      "cohesion": 5.33,
+      "epistemic": 4.17,
+      "overall": 5.27
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.83,
+      "mechanism": 6.17,
+      "magnitude": 8.33
+    },
+    "plausibility": 7.58,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About 78M users, ~1.0M excess anhedonia cases, ~16,800 excess hip fractures a year and 1.8M sarcopenic older users make this a harder society than 2032. The employer credits and adherence records from on-site MariTide days (effect_on_work, conditioning_or_surveillance) add real autonomy pressure. Offsets: use has nearly converged across income thirds, anhedonia is labelled and measurable (which lowers the epistemic score), and DEXA waits have eased. The backlash is visible but has no legal effect, so this is a recognisably harder society, not a collapse.",
+      "plausibility": "driver_fidelity: All the major drivers are visible and traceable: generic semaglutide in Mar 2033, MariTide approved Jun 2033, the Oct 2033 anhedonia label, the Apr 2034 cognition indication, the employer layer and the Atlanta march. Eight more states adopting the continuation standard sits a little awkwardly with state_action 'none'.\nmechanism: The employer MariTide chain at branded prices conflicts with the 'generic-first' employer story (claim 1). The cognition indication is described as covered both outside the obesity benefit and inside the continuation standard (claim 2). 'BMI too low' contradicts the indication's own BMI ≥27 requirement (claim 3). The prose also calls tirzepatide 'Lilly's triple agonist'. The rest (price collapse, import decline, backlash after the label) is causally shown.\nmagnitude: Everything is inside the envelope: 28.6% current, 40.5% ever, income thirds bracketing the national figure, approvals timed within the rules. The payer mix sums to 78.4M, Medicare and Medicaid dollar figures multiply out, the $119B market reconciles, and the 16,800 fracture figure and the cycling arithmetic check. The only slight strains are commercial users flat at ~27.5M despite employer coverage rising to 71%, and the fast 1.1M cognition ramp.",
+      "generativity": "Marisol, Ana and Teo give three generations with distinct stakes: the continuity credit, a kiosk weigh-in that flags 'CLINICIAN REVIEW REQUIRED', and an unmuted show. Concrete details such as the badge-app green tick, the first-Tuesday injection line and 'dose sovereignty' clauses imply many further scenes. The day-in-the-life is short but shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.266,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 33
   }
 }

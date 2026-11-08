@@ -51,6 +51,41 @@
         "input_tokens": 18528,
         "output_tokens": 29517
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r30-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26833,
+        "output_tokens": 6037
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r30-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26833,
+        "output_tokens": 6918
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r30-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 26833,
+        "output_tokens": 6943
+      }
     ]
   },
   "world": {
@@ -318,6 +353,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r30-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "~5.5M adults have used continuously for 5+ years, the population exposed to the new long-horizon signal.",
+          "field": "world/population/note",
+          "why": "Mechanism/magnitude: the world keeps one-year persistence near one-third and 45% of ever-users cycling, so about 10% of all current users staying continuous for 5+ years looks too high. Nothing in the world shows how this group was sustained."
+        },
+        {
+          "quote": "~5.0M Medicaid users × ~$70 average net × 12 ≈ $4.2B a year.",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: Medicaid users rise from 3.2M to 5.0M, but the five conditioned waivers were only approved in Feb 2034 and enrolment is gated by verified fills. The $70 average net also sits oddly with $41 generic vials and mostly diabetes-coded brand use."
+        },
+        {
+          "quote": "Novo's oral amycretin phase 3 (Sep 2033) showed 20.6% weight loss at 72 weeks, non-inferior to an injectable tirzepatide arm at 20.9%.",
+          "field": "world/drugs/pipeline_note",
+          "why": "Mechanism: the 2032 pipeline had no oral amycretin, yet a 72-week phase 3 reads out by Sep 2033 and is filed Jan 2034. That timeline is too fast for a program that did not exist in the parent world, and it is asserted without a chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics shrink the gray market and cut poison-centre calls, so access harms ease. Against that, adherence verification becomes normal for about 9M workers and seven Medicaid programmes (employer stipends, conditioned waivers), and a post-discontinuation anhedonia signal ('the lock-in') puts about 5.5M long-term users in a bind where stopping is feared and staying is rewarded. Teenage generic starts with thin growth monitoring and the 'why are you off?' social pressure add to the harder, more conditional society. It is not catastrophic, so overall is about 6.",
+        "plausibility": "driver_fidelity: every driver is visibly realised and traceable. The generic collapse has its settlement event, the AUD approval is Apr 2033, the protracted-flatness signal comes with an FDA communication, and oral parity is realised by readout and filing, which the envelope allows. The Novo $2.4B DOJ settlement, the Medicaid waivers and the stipend model are all shown. mechanism: most chains are shown, such as generic price to gray-market shrinkage and employer retreat to stipends. Three are thin: the 5.5M continuous 5+ year users against one-third persistence, the Medicaid jump to 5.0M with waivers only from Feb 2034, and the oral amycretin program appearing and reading out within two years. magnitude: on-drug 20.9% and ever-used 32% are inside the envelope. The cycling arithmetic, the payer mix summing to 57.3M, Medicare $25.7B, AUD $1.6B and Medicaid $4.2B all multiply out. Bimagrumab approval at exactly 12 months after filing is allowed. Only minor soft spots remain.",
+        "generativity": "The Renee Okafor day shows rather than explains. It has the QR-scanned vial, the stipend window, the blue 'reliable' column, the break-room question 'if he's off', and Dele's laughing and crying after stopping. Secondary figures such as Marcus, Tasha, the sister in Memphis and the closed Polish bar imply scenes. The world fields add Doe v. Tellus, the Georgia suit, taper support circles and Ohio DUI courts."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L2-r30-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "~5.5M adults have used continuously for 5+ years, the population exposed to the new long-horizon signal.",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: the 2032 world has one-year persistence near one-third and 45% of ever-users cycling, so 5.5M (about 10% of current users) still continuous after 5+ years looks high. It is asserted without a persistence calculation, and the whole protracted-flatness story depends on it."
+        },
+        {
+          "quote": "~5.0M Medicaid users × ~$70 average net × 12 ≈ $4.2B a year.",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: Medicaid users rise from ~3.2M to ~5.0M, but the five conditioned 1115 waivers were only approved in Feb 2034. Adding about 1.8M enrollees in under a year, under quarterly-verification rules, is implausibly fast, and the bottom-third gain is partly credited to it."
+        },
+        {
+          "quote": "About 0.2% of 6–11s take liraglutide, down further after the EMA restriction.",
+          "field": "world/population/note",
+          "why": "Mechanism: the US decline in 6–11 use is attributed to a European regulator's restriction, while the FDA imposed none. The US chain (growth label, AAP guidance) is not what the text cites."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 7,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Price collapse widens access and shrinks the gray market, which softens inequality and public-health harm compared with 2032. Autonomy worsens: adherence-verified fills now cover ~9.2M workers, seven conditioned Medicaid programmes use QR-scanned vials, and logistics postings list track participation as 'preferred'. The protracted-flatness signal affects ~5.5M long-term users who are rewarded for staying on, and teen generic starts get little monitoring. It is a harder, more conditioned society but not catastrophic; epistemic harm is moderate because the harms are named and measured.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and tied to events. Generic collapse comes via the Feb 2033 settlement, AUD via the Apr 2033 approval, the novel long-horizon signal via the Nov 2033 Sentinel DSC, oral parity via the Jan 2034 filing with a Q1 2035 action date, the scandal via the $2.4B DOJ settlement, benefits conditioning via the Feb 2034 waivers, employer-encouraged steadiness, and adoption +1.3pp. Normalisation shows in the body/culture section. mechanism: Most chains are shown (price → gray-market shrinkage, coverage retreat → stipends). The DOJ scandal over Novo platform payments is not seeded in the 2032 world. Commercial track enrolment rises (5.6M → 6.8M) while employer coverage falls from 30% to 24%, with little explanation. The 5.5M continuous-use figure and the EMA-driven US pediatric drop are asserted (claims 1 and 3). The prose also says TennCare weigh-ins are monthly while the waivers require quarterly ones. magnitude: Adult use (20.9), ever-used (32), income thirds, age bands and the cycling arithmetic all fall inside the envelope and reconcile. The payer mix sums to 57.3M, and the Medicare ($25.7B), AUD ($1.6B) and Medicaid ($4.2B) arithmetic checks out. Bimagrumab approved exactly 12 months after filing is allowed. The Medicaid jump of ~1.8M within the waiver window is the main strain (claim 2).",
+        "generativity": "The day-in-the-life scene is concrete and gets its stakes from small details: the QR scan chiming green, the stipend app, the blue 'reliable' column, Marcus's pancreas excuse, Dele's laughing and crying after stopping, and Renee counting years on her fingers. The world fields supply many more implied scenes, including taper circles, TennCare weigh-in day, the Doe v. Tellus suit, DUI courts and the Ohio bar leagues. Characters and relationships are implied throughout."
+      },
+      "plausibility": 7.65
+    },
+    {
+      "custom_id": "s4-L2-r30-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Apps dropped the 'on a calm plan' tag because it no longer distinguished anyone.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "Mechanism: the same world counts only ~2.0M calm-plan subscribers, under 1% of ~274M adults, so a tag that 'no longer distinguished anyone' is contradicted by its own figures. The prose repeats it as 'because everyone has it', and 'nearly everyone is' medicated also overstates 20.9% of adults."
+        },
+        {
+          "quote": "~5.5M adults have used continuously for 5+ years, the population exposed to the new long-horizon signal.",
+          "field": "world/population/note",
+          "why": "Magnitude: the same note fits one-year persistence of ~one-third on brand products and ~38% on generics. At those rates only a small fraction of 2029-era starters would still be continuous after five years, so ~10% of all current users is hard to reconcile with them."
+        },
+        {
+          "quote": "~0.7M Medicare AUD users on the brand pill",
+          "field": "world/access/public_coverage",
+          "why": "Magnitude: this implies a very large share of Medicare adults with AUD are on the $190 brand pill within about 18 months of approval. That is despite a $41 generic and a first-line label only where metabolic disease coexists, and it is asserted without a uptake chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6.5,
+        "inequality": 5,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Cheap generics shrink the gray market and the infection clusters, and the AUD indication helps heavy drinkers, so physical harm is somewhat better than in 2032. The harms are structural. Medicaid coverage is suspended after two missed verifications (`state/subsidy_or_mandate`). Employer 'reliability' scoring and stipend apps push people onto the drug. Roughly 5.5M people face a 'lock-in' anhedonia signal that employers, Medicaid and partners all reward staying on for. Teen generic starts rise with little monitoring. Overall this is a harder society with new losers, though it is not extreme.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events: generic settlement, employer coverage 30→24%, AUD approval, the protracted-flatness signal, an oral amycretin readout and filing, the Novo $2.4B DOJ settlement, Medicaid conditioning waivers, and 20.9% adult use (+1.3). Oral parity is realised by filing rather than approval, as the envelope allows. mechanism: The generic-price chain to gray-market decline to stipends is well shown. Some links are asserted: 'nearly everyone' medicated and the calm-tag claim, an EMA restriction lowering US 6–11 liraglutide use, a monthly TennCare weigh-in against quarterly waiver terms, and Medicaid users jumping to 5.0M within months of the Feb 2034 waivers. magnitude: Everything is inside the envelope, and the payer mix, cycling arithmetic, age and income checks, and Medicare ($25.7B), Medicaid ($4.2B) and AUD spend figures all multiply out. Docked for the 5.5M continuous 5+ year users against the stated persistence rates, and the 0.7M Medicare AUD users as a very fast uptake figure.",
+        "generativity": "The Renee Okafor day shows rather than explains, with the 4:40 alarm, the QR code chiming green at the vial, the blue 'reliable' column, the 'are you off?' question at lunch and Dele's laughing and crying. The world fields add many implied scenes: taper support circles, TennCare weigh-in day, DUI courts, the Doe v. Tellus suit, and stipend apps. Several characters have clear stakes."
+      },
+      "plausibility": 7.4
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "~5.5M adults have used continuously for 5+ years, the population exposed to the new long-horizon signal.",
+        "field": "world/population/note",
+        "why": "Mechanism/magnitude: the world keeps one-year persistence near one-third and 45% of ever-users cycling, so about 10% of all current users staying continuous for 5+ years looks too high. Nothing in the world shows how this group was sustained."
+      },
+      {
+        "quote": "~5.0M Medicaid users × ~$70 average net × 12 ≈ $4.2B a year.",
+        "field": "world/access/public_coverage",
+        "why": "Mechanism: Medicaid users rise from 3.2M to 5.0M, but the five conditioned waivers were only approved in Feb 2034 and enrolment is gated by verified fills. The $70 average net also sits oddly with $41 generic vials and mostly diabetes-coded brand use."
+      },
+      {
+        "quote": "Novo's oral amycretin phase 3 (Sep 2033) showed 20.6% weight loss at 72 weeks, non-inferior to an injectable tirzepatide arm at 20.9%.",
+        "field": "world/drugs/pipeline_note",
+        "why": "Mechanism: the 2032 pipeline had no oral amycretin, yet a 72-week phase 3 reads out by Sep 2033 and is filed Jan 2034. That timeline is too fast for a program that did not exist in the parent world, and it is asserted without a chain."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.17,
+      "autonomy": 6.67,
+      "inequality": 5.0,
+      "public_health": 5.17,
+      "cohesion": 5.17,
+      "epistemic": 5.17,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 7.0,
+      "magnitude": 7.5
+    },
+    "plausibility": 7.65,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "Cheap generics shrink the gray market and cut poison-centre calls, so access harms ease. Against that, adherence verification becomes normal for about 9M workers and seven Medicaid programmes (employer stipends, conditioned waivers), and a post-discontinuation anhedonia signal ('the lock-in') puts about 5.5M long-term users in a bind where stopping is feared and staying is rewarded. Teenage generic starts with thin growth monitoring and the 'why are you off?' social pressure add to the harder, more conditional society. It is not catastrophic, so overall is about 6.",
+      "plausibility": "driver_fidelity: every driver is visibly realised and traceable. The generic collapse has its settlement event, the AUD approval is Apr 2033, the protracted-flatness signal comes with an FDA communication, and oral parity is realised by readout and filing, which the envelope allows. The Novo $2.4B DOJ settlement, the Medicaid waivers and the stipend model are all shown. mechanism: most chains are shown, such as generic price to gray-market shrinkage and employer retreat to stipends. Three are thin: the 5.5M continuous 5+ year users against one-third persistence, the Medicaid jump to 5.0M with waivers only from Feb 2034, and the oral amycretin program appearing and reading out within two years. magnitude: on-drug 20.9% and ever-used 32% are inside the envelope. The cycling arithmetic, the payer mix summing to 57.3M, Medicare $25.7B, AUD $1.6B and Medicaid $4.2B all multiply out. Bimagrumab approval at exactly 12 months after filing is allowed. Only minor soft spots remain.",
+      "generativity": "The Renee Okafor day shows rather than explains. It has the QR-scanned vial, the stipend window, the blue 'reliable' column, the break-room question 'if he's off', and Dele's laughing and crying after stopping. Secondary figures such as Marcus, Tasha, the sister in Memphis and the closed Polish bar imply scenes. The world fields add Doe v. Tellus, the Georgia suit, taper support circles and Ohio DUI courts."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.419,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 30
   }
 }

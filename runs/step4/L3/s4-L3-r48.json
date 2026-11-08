@@ -52,6 +52,41 @@
         "input_tokens": 18839,
         "output_tokens": 27361
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r48-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28996,
+        "output_tokens": 7397
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r48-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28996,
+        "output_tokens": 7363
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L3-r48-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28996,
+        "output_tokens": 7314
+      }
     ]
   },
   "world": {
@@ -341,6 +376,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L3-r48-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "(4) Off-label 'metabolic health' use among non-obese adults, ≈3.9M users, concentrated in the top third, which is why the top third rose most.",
+          "field": "world/population/note",
+          "why": "The stated mechanism contradicts the candidate's own figures: the top third rose 28→30 (+2), the middle 26→28.5 (+2.5) and the bottom 21→24 (+3). That makes this a mechanism failure, and it also undercuts the claim that the gap 'widened at the top'."
+        },
+        {
+          "quote": "mostly in the 10 states without enhanced match plus DC's neighbours",
+          "field": "world/population/note",
+          "why": "With 33 states plus DC on the 90% match, 17 states are outside it, not 10. 'DC's neighbours' is also an odd, unexplained geography for the free-provision programme. This is a reconciliation slip."
+        },
+        {
+          "quote": "Keystra roughly halves the lean share of loss in trials, but only ≈0.5M people use it",
+          "field": "world/safety_ledger/3/prevalence_note",
+          "why": "The pipeline note gives lean mass at 10–12% of weight lost against 30–40%, which cuts the share by about two-thirds, not half. The 0.5M users reached within about ten months of a Feb 2034 approval at $749 a month is also asserted, not shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4,
+        "overall": 5.7
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7.5,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a harder society with new losers. Excess hip fractures reach about 16,000 a year, sarcopenia affects about 1.7M older users, and about 2.4M people lose access through price rises or gating. Employer coverage falls to 61%, with a 30% premium differential for 'treated or explained' status (state/conditioning_or_surveillance). Autonomy and inequality score highest because 58-year-olds in gated plans have no bone-pause exemption while top-third users get Keystra and scheduled DEXA. The score is held down because the harms are now named and labelled (anhedonia label, fracture warnings, Novo disclosures), CMAP adds free provision, and the epistemic picture has improved.",
+        "plausibility": "driver_fidelity: All ten drivers appear in fields and events. Keystra is a filing-then-approval path the rules allow, and CMAP and the LIS copay cut realise the subsidy driver. The AUD indication is only a guideline endorsement plus a Jun 2034 sNDA, and longevity is purely off-label prose, so those two are thin. mechanism: Most changes have chains, such as the tariff to the price rise to coverage losses and the Novo documents to the Ohio vote. The weaker points are the claim that the top third rose most when the bottom rose most (claim 1), a 2033 class-wide anhedonia label that arrives with no shown chain from the observational 12 mg data, and the stacked coincidences of both first filers failing sterility checks, a tariff hike and the scandal. magnitude: Current use of 27.5% and ever-use of 39.5% are inside the envelope. Age bands, payer mix, Medicare and Medicaid dollars, the CMAP and LIS arithmetic, the hip-fracture count and the $176B market figure all reconcile. Survodutide, MariTide and Keystra timings obey the approval rules. Deductions are for the '10 states without enhanced match' error (claim 2) and the Keystra lean-share figure that does not match the pipeline note (claim 3).",
+        "generativity": "The Carla Wendt vignette is rich: socks at the Kroger kiosk, the 6:10 a.m. weigh-in, the plan that replied to her rheumatologist with a form, half portions at lunch, and her mother saying 'They knew about the hips'. Darnell, the sister driving to Cincinnati for Keystra, the lawn signs and the potluck 'off dish' convention add texture, and the pharmacy and kiosk details imply further scenes. The vignette shows rather than explains."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s4-L3-r48-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "FDA withheld final ANDA approval for both first filers in Feb 2033 after sterility findings at their Hyderabad and New Jersey fill-finish sites.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "Mechanism: the generic cliff is cancelled by two independent first filers failing sterility inspection at once, with Novo's authorised generic conveniently tied to a first-filer launch. This coincidence is asserted rather than shown, and it exists mainly to deliver the shock_up driver."
+        },
+        {
+          "quote": "Off-label 'metabolic health' use among non-obese adults, ≈3.9M users, concentrated in the top third, which is why the top third rose most.",
+          "field": "world/population/note",
+          "why": "Magnitude: about 3.9M new cash-pay non-obese users, mostly in the top third, exceeds the top third's whole net rise (28→30%, roughly +2M). It also implies a very large cash-pay market built in two years with no outcome-trial support."
+        },
+        {
+          "quote": "mostly in the 10 states without enhanced match plus DC's neighbours",
+          "field": "world/population/note",
+          "why": "Magnitude: the same world says 33 states plus DC adopted the enhanced match, which leaves about 17 non-adopting states, not 10. The geography used to explain CMAP uptake does not reconcile with the Medicaid adoption count."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 6.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is harder than 2032 and has new losers. There are about 16,000 excess hip fractures a year, price-driven involuntary stops (≈2.4M) with adverse body-composition cycling, and employer coverage down to 61%. Weigh-in conditioning spreads through the 2033 wellness rule and Continuation standard 2.0, and a 58-year-old like Carla has no bone-pause protection. The pressure is partly offset by CMAP, the LIS copay cut, and harms that are now labelled and discussable (the anhedonia label, fracture warnings), which keeps epistemic badness and overall severity moderate, not extreme. The Keystra class gap and the Ohio standoff add inequality and cohesion costs.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised. Adoption is +2.5pp. The price shock is $199→$279–349. The conditioning rule is 2.0 plus the wellness rule. AUD and longevity enter via the guideline, the sNDA and off-label use. The muscle-preserving combo is filed Jan 2033 and approved 13 months later, within the rules. The scandal, the third bone wave, the backlash, CMAP and the niche side effect are all traceable. mechanism: Most chains are shown, but the simultaneous sterility failure of both generic filers is a convenient coincidence (claim 1). Distillers backing a weigh-in ban and the fast congressional response to the price rise are thinly argued. magnitude: Headline figures sit inside the envelope (27.5% current, 39.5% ever, income thirds bracket the national figure). The payer mix, Medicare and Medicaid arithmetic, CMAP $3.59B and the hip-fracture figures all multiply out. Gaps remain: the '10 states' claim contradicts 33 states plus DC (claim 3), the 3.9M non-obese users exceed the top third's net rise (claim 2), and the $205 average net is a little low for the payer mix.",
+        "generativity": "The Carla Wendt scene is vivid: the socks at the Kroger kiosk, the form from the plan, half portions at lunch, Darnell's weather-report remark about Fridays, and the lawn sign and 'They knew about the hips' from her mother. Her sister travels to Cincinnati for Keystra, and the portal price check with the $149 oral starter in the cart without buying it. The world fields add texture too: 'bring an off dish' potlucks, AUD-prescribed club nights, 'mood pause' union clauses. Many further scenes are implied."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s4-L3-r48-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "concentrated in the top third, which is why the top third rose most",
+          "field": "world/population/note",
+          "why": "magnitude: the candidate's own income figures contradict this. The top third rose 28→30 (+2) and the bottom third rose 21→24 (+3), so the top third did not rise most. Also, 3.9M non-obese cash users appear from a near-zero base within two years."
+        },
+        {
+          "quote": "FDA withheld final ANDA approval for both first filers in Feb 2033 after sterility findings at their Hyderabad and New Jersey fill-finish sites.",
+          "field": "world/access/generic_rest_of_world",
+          "why": "mechanism: this is a convenient coincidence. Two first filers fail at once, and it is assumed that nothing else (other ANDA filers, a fixed authorised generic) fills the gap for almost two years. It exists mainly to make the price shock_up work."
+        },
+        {
+          "quote": "Alcohol-use-disorder prescribing after the guideline endorsement, ≈1.4M users, mostly 30–64 men.",
+          "field": "world/population/note",
+          "why": "magnitude: 1.4M users within about 13 months of a Nov 2033 guideline is aggressive, because the use is off-label with no FDA label until a 2035 decision. Gated commercial plans and Medicaid would be slow to cover it, and the payer mix does not show who pays."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 4.5,
+        "overall": 5.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 7.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder society with new losers. About 16,000 excess hip fractures a year, price- and gating-driven involuntary stops (≈2.4M) with fat-dominant regain, and 30% premium differentials for 'treated or explained' status make conditioning and affordability sharper (autonomy, inequality). Epistemic harm is partly eased because anhedonia is labelled and a fracture warning exists, but about 3.9M non-obese longevity users are on a drug with no outcome trial. Cohesion is strained by the Ohio standoff and the family splits shown in the Carla scene.",
+        "plausibility": "driver_fidelity: all ten drivers are visible in fields and events. The longevity indication is only off-label with no filing, which is thin but allowed under the approval rules, and Keystra is filed Jan 2033 and approved 13 months later, within the rules. mechanism: the scandal chain (Novo documents → DOJ settlement → class warnings → backlash → Ohio vote) and the tariff-driven price rise are shown, but the generic-failure story (claim 2) is a convenient coincidence, and the 'top third rose most' explanation is asserted and wrong. magnitude: adoption (27.5%) and ever-use (39.5%) are inside the envelope. The age bands, cycling arithmetic, payer mix, Medicare/Medicaid/CMAP/LIS spending and the $176B market all reconcile. Flaws are the top-third contradiction (claim 1), the '10 states without enhanced match' figure that does not fit 33 states plus DC, and the aggressive AUD and Keystra uptake (claim 3).",
+        "generativity": "The Carla Wendt scene is strong: the socks-on kiosk weigh-in, the half portions at the cafeteria line, 'They knew about the hips' and the $349 portal against the $149 cart. Darnell's 'weather report' remark and the sister who drives to Cincinnati for Keystra add more characters. The world fields hold many concrete textures (lawn signs, 'bring an off dish', Columbus alcohol-free nights, mobile DEXA waits)."
+      },
+      "plausibility": 7.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "(4) Off-label 'metabolic health' use among non-obese adults, ≈3.9M users, concentrated in the top third, which is why the top third rose most.",
+        "field": "world/population/note",
+        "why": "The stated mechanism contradicts the candidate's own figures: the top third rose 28→30 (+2), the middle 26→28.5 (+2.5) and the bottom 21→24 (+3). That makes this a mechanism failure, and it also undercuts the claim that the gap 'widened at the top'."
+      },
+      {
+        "quote": "mostly in the 10 states without enhanced match plus DC's neighbours",
+        "field": "world/population/note",
+        "why": "With 33 states plus DC on the 90% match, 17 states are outside it, not 10. 'DC's neighbours' is also an odd, unexplained geography for the free-provision programme. This is a reconciliation slip."
+      },
+      {
+        "quote": "Keystra roughly halves the lean share of loss in trials, but only ≈0.5M people use it",
+        "field": "world/safety_ledger/3/prevalence_note",
+        "why": "The pipeline note gives lean mass at 10–12% of weight lost against 30–40%, which cuts the share by about two-thirds, not half. The 0.5M users reached within about ten months of a Feb 2034 approval at $749 a month is also asserted, not shown."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.33,
+      "inequality": 6.0,
+      "public_health": 5.67,
+      "cohesion": 5.5,
+      "epistemic": 4.33,
+      "overall": 5.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.17,
+      "mechanism": 6.17,
+      "magnitude": 7.17
+    },
+    "plausibility": 7.07,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a harder society with new losers. Excess hip fractures reach about 16,000 a year, sarcopenia affects about 1.7M older users, and about 2.4M people lose access through price rises or gating. Employer coverage falls to 61%, with a 30% premium differential for 'treated or explained' status (state/conditioning_or_surveillance). Autonomy and inequality score highest because 58-year-olds in gated plans have no bone-pause exemption while top-third users get Keystra and scheduled DEXA. The score is held down because the harms are now named and labelled (anhedonia label, fracture warnings, Novo disclosures), CMAP adds free provision, and the epistemic picture has improved.",
+      "plausibility": "driver_fidelity: All ten drivers appear in fields and events. Keystra is a filing-then-approval path the rules allow, and CMAP and the LIS copay cut realise the subsidy driver. The AUD indication is only a guideline endorsement plus a Jun 2034 sNDA, and longevity is purely off-label prose, so those two are thin. mechanism: Most changes have chains, such as the tariff to the price rise to coverage losses and the Novo documents to the Ohio vote. The weaker points are the claim that the top third rose most when the bottom rose most (claim 1), a 2033 class-wide anhedonia label that arrives with no shown chain from the observational 12 mg data, and the stacked coincidences of both first filers failing sterility checks, a tariff hike and the scandal. magnitude: Current use of 27.5% and ever-use of 39.5% are inside the envelope. Age bands, payer mix, Medicare and Medicaid dollars, the CMAP and LIS arithmetic, the hip-fracture count and the $176B market figure all reconcile. Survodutide, MariTide and Keystra timings obey the approval rules. Deductions are for the '10 states without enhanced match' error (claim 2) and the Keystra lean-share figure that does not match the pipeline note (claim 3).",
+      "generativity": "The Carla Wendt vignette is rich: socks at the Kroger kiosk, the 6:10 a.m. weigh-in, the plan that replied to her rheumatologist with a form, half portions at lunch, and her mother saying 'They knew about the hips'. Darnell, the sister driving to Cincinnati for Keystra, the lawn signs and the potluck 'off dish' convention add texture, and the pharmacy and kiosk details imply further scenes. The vignette shows rather than explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.582,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 19
   }
 }

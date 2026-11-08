@@ -37,6 +37,41 @@
         "input_tokens": 19262,
         "output_tokens": 25002
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r10-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28984,
+        "output_tokens": 4905
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r10-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28984,
+        "output_tokens": 5531
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r10-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28984,
+        "output_tokens": 6115
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r10-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The gray market regrew from ~9M to ~15.8M users even as branded prices fell, for four reasons.",
+          "field": "world/access/note",
+          "why": "magnitude/mechanism: a 76% jump in gray users in two years is large while branded prices fell, CBP seizures continued and Section 232 duties squeezed supply. The four reasons are asserted, and the claim that bulk freight easily evades enforcement and reaches 5.5M triple-agonist users is thinly supported."
+        },
+        {
+          "quote": "≈ 17,900",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "mechanism: hip-fracture excess stays flat at ~18,000 because the hazard ratio is adjusted from 0.35 to 0.25 on ~45% antiresorptive uptake. The adjustment is asserted to cancel a 36% rise in older users, and the prose's 'levelled off' rests on it. It reads as a convenient coincidence."
+        },
+        {
+          "quote": "The grey, the flatness that a quarter of long-term users complain about",
+          "field": "prose/article",
+          "why": "mechanism: the world state puts reduced pleasure at ~10–15% of long-term users, so the prose contradicts its own ledger, which also means the narrative and the world disagree."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About a third of adults are on drug, and conditioning cut-offs push people to the gray market. About 15.8M users are invisible to any adherence or safety data, and payers penalise the breaks that appear to protect against smell loss. Pediatric use is up (about 420k aged 6–11, bone-accrual effects half-attributable), ~450k excess hyposmia cases are emerging, and poison-centre calls are up 30%. This is a recognisably harder society with new losers, but it is not structurally hidden or catastrophic, so I score it 6.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +9.2 pp, managed decline comes from the second SSA step, and status-quo coverage is stated. Pediatric semaglutide (Apr 2033) and gambling-disorder orforglipron cover the two indications, and the smell-loss signal, Chinese powder gray resurgence, Southern Baptist backlash and 'grey' complaint cover the rest. The triple-agonist driver is realised via an existing product plus exports abroad, as the envelope allows. mechanism: Most changes have chains (conditioning to cut-offs to gray, the 5-year smell cohort, the pediatric label to the backlash). The weaker points are the gray surge (claim 1), the convenient flat hip-fracture figure (claim 2), and the prose 'quarter' versus 10–15% contradiction (claim 3). magnitude: On-drug 37.1 and ever-used 48.5 are inside the envelope, ever-used near the upper edge. The population arithmetic, income thirds, age bands, payer shares (sum 100%), Bridge, Medicaid, HRSA and DoD spending, gray composition and 74.8M→100.2M volume all reconcile. Amycretin and the generic timing obey the approval rules.",
+        "generativity": "The Ray Dombrowski scene is strong, with a Thursday injection, a 'personalised' vial from the Coldwater Road clinic, and a Medicaid lockout. Kaylee's pen in the butter compartment, the Open Table supper and the coffee that 'tastes like hot water' add texture. The world implies many more characters (chefs, sportsbook traders, pediatric endocrinologists, pastors) and scenes. The day-in-the-life shows more than it explains."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s4-L1-r10-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "the flatness that a quarter of long-term users complain about",
+          "field": "prose/article",
+          "why": "Fails mechanism, as a narrative contradiction. The world state and ledger hold reward blunting at ~10–15% of long-term users, and nothing shows how it reached 25%."
+        },
+        {
+          "quote": "HR now ~0.25 (with ~45% antiresorptive uptake) ≈ 17,900",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "Fails mechanism. The fracture hazard ratio is lowered from 0.35 to 0.25 with no shown chain, and the result happens to hold excess hip fractures at the parent's ~18,000 despite 36% more older users."
+        },
+        {
+          "quote": "$299 retatrutide, $299 amycretin and $129 oral starts",
+          "field": "world/access/note",
+          "why": "Fails mechanism, as an internal timing inconsistency. The June 2033 price step lists a direct price for amycretin, which the pipeline note says was not approved until Sep 2033."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Autonomy is the main loss. Conditioning remains the dominant access tool, the seven Medicaid waivers still lock people out for a year, and ~15.8M gray users sit outside every data system. Public health worsens through the new smell-loss signal (~450k excess cases), a ~30% rise in poison-centre calls, 420k children aged 6–11 on drug, and rules that penalise the breaks that appear protective. It is harder than 2032 with new losers, but not structural collapse. The harm is measured and discussed, so epistemic stays moderate.",
+        "plausibility": "driver_fidelity: Every driver is traceable: +9.2pp adoption, managed-decline price steps, gray resurgence to 15.8M, the pediatric semaglutide 6–11 label, the gambling indication, the smell-loss signal, and the SBC backlash. The triple-agonist driver is realised through Chinese exports and the retatrutide 12 mg dose, with a pipeline note, and no generic US launch occurs. mechanism: Gray growth has a four-part causal chain, and the smell signal sets up a credible tension with PDC rules. It is weakened by the shifted fracture hazard ratio, the 25% flatness claim contradicting the 10–15% in the ledger, and the amycretin price listed before approval. magnitude: 37.1% on drug and 48.5% ever used are inside the envelope. The age bands, income thirds, restart arithmetic, payer mix (sums to 100%), Bridge, Medicaid, HRSA and DoD spending, and pediatric and gray counts all reconcile. Only the amycretin dating is a minor blemish.",
+        "generativity": "The Ray Dombrowski vignette shows rather than explains: Thursday injections, the clinic on Coldwater Road, the pen in the butter compartment, the coffee that tastes like hot water, and Kaylee checking whether a second roll is allowed. It implies Benny, the mother, the pastor and the lockout letter. The world fields add many further scenes: off-dose festivals, chefs and the smell loss, and sportsbook earnings calls."
+      },
+      "plausibility": 8.05
+    },
+    {
+      "custom_id": "s4-L1-r10-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The Danish national registry and the VA cohort (Mar 2034) report objectively tested hyposmia in ~6% of users with ≥5 years' continuous use",
+          "field": "world/safety_ledger/16/prevalence_note",
+          "why": "Mechanism: national registries do not usually hold objective olfactory test results. The signal also arrives fully formed with a stated hazard ratio, a dose-break gradient and a proposed olfactory-bulb mechanism, and the candidate shows no chain for how this was measured."
+        },
+        {
+          "quote": "14.3M users 65+ × ~0.5%/yr baseline × HR now ~0.25 (with ~45% antiresorptive uptake) ≈ 17,900",
+          "field": "world/safety_ledger/5/prevalence_note",
+          "why": "Mechanism: the hazard ratio is moved from 0.35 to 0.25 so that excess fractures come out almost exactly flat at ~18,000 despite 36% more older users. That is a convenient coincidence, and the 45% uptake and its effect on fractures are asserted rather than derived."
+        },
+        {
+          "quote": "the flatness that a quarter of long-term users complain about",
+          "field": "prose/article",
+          "why": "Mechanism: this contradicts the world state, which gives ~10–15% of long-term users reporting reduced pleasure. It is a narrative-versus-data mismatch."
+        }
+      ],
+      "badness": {
+        "flourishing": 5.5,
+        "autonomy": 6.5,
+        "inequality": 6,
+        "public_health": 6,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "One in six users now sits outside every PBM, Bridge or Medicaid data system, in the gray market. Conditioning cuts people off, and long-term users are penalised for the breaks that look protective against the smell-loss signal. About 420k children aged 6–11 are on drug with unresolved pubertal data, and bottom-third children get daily liraglutide with no strength programme. This is a recognisably harder society with new losers, but it is not structural collapse, and the harms are measured and discussed, so I score it 6.",
+        "plausibility": "driver_fidelity: every driver is visibly realised. Adoption is +9.2 pp, with gray resurgence, the semaglutide 6–11 label, the gambling-disorder low dose, the smell-loss signal, backlash events, and the triple agonist realised via Chinese exports and existing retatrutide. Coverage stays status quo and no new state programmes appear. mechanism: gray growth has a clear four-part causal chain, and the CRL-driven generic delay is shown. However, the smell-loss signal appears fully formed (claim 1), hip fractures land flat by convenience (claim 2), and the prose contradicts the 10–15% reward-blunting figure (claim 3). magnitude: 37.1% on drug and 48.5% ever used sit inside the envelope. Age bands, income thirds, payer shares, Bridge, Medicaid, HRSA and DoD spending, and the persistence and restart arithmetic all reconcile. Amycretin approval in 2033 and the bimagrumab hold follow the approval rules. The only minor oddity is the 38% parental-use figure for teen users, which is below the base rate.",
+        "generativity": "Ray Dombrowski's day (Thursday injections, a gray clinic vial, the Open Table supper, coffee that tastes like hot water, Kaylee's pen in the butter compartment) implies many scenes and characters. The world fields also supply textures such as flavour houses, off-dose festivals, chefs' unions and church resolutions."
+      },
+      "plausibility": 8.15
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The gray market regrew from ~9M to ~15.8M users even as branded prices fell, for four reasons.",
+        "field": "world/access/note",
+        "why": "magnitude/mechanism: a 76% jump in gray users in two years is large while branded prices fell, CBP seizures continued and Section 232 duties squeezed supply. The four reasons are asserted, and the claim that bulk freight easily evades enforcement and reaches 5.5M triple-agonist users is thinly supported."
+      },
+      {
+        "quote": "≈ 17,900",
+        "field": "world/safety_ledger/5/prevalence_note",
+        "why": "mechanism: hip-fracture excess stays flat at ~18,000 because the hazard ratio is adjusted from 0.35 to 0.25 on ~45% antiresorptive uptake. The adjustment is asserted to cancel a 36% rise in older users, and the prose's 'levelled off' rests on it. It reads as a convenient coincidence."
+      },
+      {
+        "quote": "The grey, the flatness that a quarter of long-term users complain about",
+        "field": "prose/article",
+        "why": "mechanism: the world state puts reduced pleasure at ~10–15% of long-term users, so the prose contradicts its own ledger, which also means the narrative and the world disagree."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.33,
+      "autonomy": 6.33,
+      "inequality": 6.0,
+      "public_health": 6.0,
+      "cohesion": 5.33,
+      "epistemic": 5.17,
+      "overall": 6.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 7.0,
+      "magnitude": 8.5
+    },
+    "plausibility": 8.08,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "About a third of adults are on drug, and conditioning cut-offs push people to the gray market. About 15.8M users are invisible to any adherence or safety data, and payers penalise the breaks that appear to protect against smell loss. Pediatric use is up (about 420k aged 6–11, bone-accrual effects half-attributable), ~450k excess hyposmia cases are emerging, and poison-centre calls are up 30%. This is a recognisably harder society with new losers, but it is not structurally hidden or catastrophic, so I score it 6.",
+      "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +9.2 pp, managed decline comes from the second SSA step, and status-quo coverage is stated. Pediatric semaglutide (Apr 2033) and gambling-disorder orforglipron cover the two indications, and the smell-loss signal, Chinese powder gray resurgence, Southern Baptist backlash and 'grey' complaint cover the rest. The triple-agonist driver is realised via an existing product plus exports abroad, as the envelope allows. mechanism: Most changes have chains (conditioning to cut-offs to gray, the 5-year smell cohort, the pediatric label to the backlash). The weaker points are the gray surge (claim 1), the convenient flat hip-fracture figure (claim 2), and the prose 'quarter' versus 10–15% contradiction (claim 3). magnitude: On-drug 37.1 and ever-used 48.5 are inside the envelope, ever-used near the upper edge. The population arithmetic, income thirds, age bands, payer shares (sum 100%), Bridge, Medicaid, HRSA and DoD spending, gray composition and 74.8M→100.2M volume all reconcile. Amycretin and the generic timing obey the approval rules.",
+      "generativity": "The Ray Dombrowski scene is strong, with a Thursday injection, a 'personalised' vial from the Coldwater Road clinic, and a Medicaid lockout. Kaylee's pen in the butter compartment, the Open Table supper and the coffee that 'tastes like hot water' add texture. The world implies many more characters (chefs, sportsbook traders, pediatric endocrinologists, pastors) and scenes. The day-in-the-life shows more than it explains."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.566,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 22
   }
 }

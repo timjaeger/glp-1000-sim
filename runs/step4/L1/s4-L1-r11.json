@@ -36,6 +36,41 @@
         "input_tokens": 19276,
         "output_tokens": 28457
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r11-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29888,
+        "output_tokens": 7220
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r11-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29888,
+        "output_tokens": 6216
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r11-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 29888,
+        "output_tokens": 6595
+      }
     ]
   },
   "world": {
@@ -331,6 +366,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r11-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "The top (34→41) grew through cash retatrutide and the bimagrumab add-on.",
+          "field": "world/population/note",
+          "why": "Mechanism: bimagrumab was approved in Feb 2034 and is an add-on to tirzepatide, so its users are already on drug. It cannot explain a 7-point rise in top-third prevalence, and the chain from the add-on to new adoption is asserted."
+        },
+        {
+          "quote": "Within two benefit cycles, employer weight-management coverage falls from 63% to 50%, and plans shift coverage to diagnosis codes.",
+          "field": "world/events/0/event",
+          "why": "Mechanism: the ruling vacated only the premium-differential use of adherence feeds, not coverage gating itself. The starting world says conditions were on coverage, so the jump to a 13-point drop in coverage is asserted rather than shown."
+        },
+        {
+          "quote": "Low-dose Foundayo BED users peaked at ~3.4M in mid-2033 against an estimated ~1.5–2M treatable BED population, then fell to ~2.2M after the settlement.",
+          "field": "world/safety_ledger/16/prevalence_note",
+          "why": "Magnitude and mechanism: the parent had ~0.9M users at end-2032, so this implies roughly a quadrupling in about six months. The telehealth steering that would produce it is not shown, and a peak far above the treatable population is a convenient fit for the scandal driver."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5.5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is more stratified and harder than 2032. About 6–7M people lost weight-only coverage and now regain weight in sawtooth cycles, and body shape reads as income ('muscle tier' bimagrumab at $849 cash). The Bridge and seven Medicaid waivers still ration with unreliable adherence data, and ~19,500 excess hip fractures a year plus a 148,000-claim tort add to the load. It is a recognisably harder society with new losers, not a structural catastrophe, so the inequality score is highest and the overall score is about 6.",
+        "plausibility": "driver_fidelity: All drivers appear in fields and events: employer_retreat, managed_decline, compulsive_behaviour (gambling label), the GI/pancreatic tort, the triple agonist via retatrutide's T2D label, the Lilly scandal and class stratification. The only softness is state_action 'none', since the Bridge extension and the DOJ settlement are arguably state acts, though both are framed as unchanged or enforcement. mechanism: Several chains are asserted. The Sixth Circuit ruling is said to cut coverage 63→50% although it removed only premium differentials (claim 2), the bimagrumab add-on is credited with top-third adoption (claim 1), and BED users surge to 3.4M with no shown path (claim 3). Gray-market behaviour is explained by a small price step ($249→$199). The litigation, price, code-shopping and prose-world links are otherwise sound. magnitude: On-drug 32.5%, ever-used 44.4% (near the 44.6 edge), the age and income weightings, and the persistence and restart arithmetic (15.9+10.6+6.0) all reconcile. The payer mix sums to 87.8M and 100%, and the Bridge, Medicaid, HRSA and DoD dollar figures multiply out. Approval timing is allowed and generic_us stays false; the only drag is the fast Foundayo swing noted in claim 3.",
+        "generativity": "The prose vignette (Dana's dental office, the Dr. Halvorsen shaker and 'personal' infusion, Marisol's 40-minute telehealth screen, Golden Corral versus the empty strength studio) gives concrete, class-coded scenes. The world fields add texture in Dayton/Toledo regain, Open Table suppers, diagnosis-code shopping and sportsbook jokes. The ending is a little flat and the framing paragraph is explanatory, but there are many implied characters and scenes."
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L1-r11-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer retreat: weight-management coverage fell from 63% to 50% of employers after the May 2033 Sixth Circuit ruling removed PBM adherence feeds as a basis for premium differentials.",
+          "field": "world/access/note",
+          "why": "Mechanism: one regional circuit ruling on premium differentials is asserted to cut national employer coverage by 13 points in two benefit cycles. The Fifth Circuit upheld the same guidance, and employers could have kept covering the drug without differentials."
+        },
+        {
+          "quote": "The top (34→41) grew through cash retatrutide and the bimagrumab add-on.",
+          "field": "world/population/note",
+          "why": "Mechanism: bimagrumab was approved only in Feb 2034 and costs about $1,098 a month in cash with tirzepatide. It is an add-on for people already on drug, so it cannot explain a 7-point rise in top-third use."
+        },
+        {
+          "quote": "Commercial users fell from 28.8M to 27.2M even as total use rose. About 6–7M people lost weight-only coverage, about half moved to cash, and the rest stopped or went gray.",
+          "field": "world/access/note",
+          "why": "Magnitude: a loss of 6–7M with about half moving to cash implies roughly 3M new cash users, yet cash users rose from 11.1M to 20.4M. Commercial users fell only 1.6M, so about 5M of commercial additions and about 6M of the cash rise are unexplained."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 6,
+        "inequality": 7,
+        "public_health": 5.5,
+        "cohesion": 5.5,
+        "epistemic": 5,
+        "overall": 5.8
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8.5,
+        "mechanism": 6,
+        "magnitude": 7
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a harder but recognisable society. Employer withdrawal displaces about 6–7M users into sawtooth weight cycling, and bimagrumab makes the body a visible class marker ('muscle tier' versus 'pen-thin'). Mass-tort scale litigation (148,000 claims), about 19,500 excess hip fractures a year, and parity-driven diagnosis-code shopping add real harm. Inequality scores highest. Conditioning still rations the public channels, but commercial surveillance receded and the harms are named and measured, so epistemic and autonomy scores are moderate.",
+        "plausibility": "driver_fidelity: Every driver is traceable. Adoption is +4.6 pp (32.5%), managed_decline is realised through the $199/$249/$299 steps, and employer_retreat through coverage falling to 50%. Gambling is the compulsive_behaviour indication, the MDL 3094 growth and jury verdict cover litigation, the Lilly settlement is the scandal, and muscle-tier stratification is the class response. The triple agonist is realised through an existing product (retatrutide T2D label, price cut) and UBT251 is not on the US market. state_action 'none' is mostly respected, though FDA and DOJ actions are numerous. mechanism: The employer retreat chain (claim 1) is thin, because a Sixth Circuit ruling on premium differentials is made to drive a national 13-point coverage drop despite the Fifth Circuit split. Attributing top-third growth to a four-month-old add-on (claim 2) is an asserted shift. The BED user peak of 3.4M, up from about 0.9M, is also lightly justified, though the whistleblower and settlement chain is otherwise well shown. magnitude: Population figures are inside the envelope (32.5% on, 44.4% ever, ever is near the 44.6 edge), and the persistence and restart arithmetic, age bands, income thirds, payer mix and Bridge, Medicaid, HRSA and TRICARE dollar figures all multiply out. The cash and commercial flows do not reconcile with the 6–7M displaced (claim 3).",
+        "generativity": "The prose gives a vivid, concrete day: Dana in Kettering with the plan letter on the corkboard, the off-month hunger and clementines, Dr. Halvorsen's 'personal' bimagrumab infusion, Marisol's 40-minute Foundayo screen, and the full Golden Corral beside the nearly empty $340 strength studio. The world fields add many implied scenes: code-shopping telehealth, sportsbooks citing handle softness, Dayton and Toledo bodies regaining weight, and mismatched couples arguing over cash prescriptions. The ending with the lawyer's ad and 'restart Sunday' is strong, though the news-style first half explains more than it shows."
+      },
+      "plausibility": 7.0
+    },
+    {
+      "custom_id": "s4-L1-r11-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "The top (34→41) grew through cash retatrutide and the bimagrumab add-on.",
+          "field": "world/population/note",
+          "why": "Mechanism and magnitude: bimagrumab was approved only in Feb 2034 and costs about $1,098 a month in cash. It cannot account for a 7-point rise in top-third use, roughly 6M adults, when the window had under a year of it on the market."
+        },
+        {
+          "quote": "Within two benefit cycles, employer weight-management coverage falls from 63% to 50%, and plans shift coverage to diagnosis codes.",
+          "field": "world/events/0/event",
+          "why": "Mechanism: the ruling only removes premium differentials, which only some conditioning employers used, and the Fifth Circuit upheld the same guidance. Vacating a wellness-differential tool does not obviously cause 13 points of employers to drop coverage, so the chain is asserted. Commercial users fall only 1.6M, which fits that weak link poorly."
+        },
+        {
+          "quote": "Low-dose Foundayo BED users peaked at ~3.4M in mid-2033 against an estimated ~1.5–2M treatable BED population, then fell to ~2.2M after the settlement.",
+          "field": "world/safety_ledger/16/prevalence_note",
+          "why": "Magnitude: the parent had about 0.9M users at end-2032, so the peak implies roughly a 3.8x rise in six months. The commercial user count fell over the same period, and the candidate does not reconcile the two."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5.5,
+        "inequality": 7.5,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 5,
+        "overall": 6
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 8.5,
+      "rationale": {
+        "badness": "Inequality is the worst dimension: the body now reads as income ('muscle tier' vs 'pen-thin' vs the cycler's sawtooth), and there is a 14.5-point top-to-bottom use gap. About 6–7M people were displaced by employer withdrawal, cycling reached 46%, and rising hip fractures plus the 148k-claim mass tort add health harm. Autonomy and epistemic harms are moderate: conditioning recedes commercially but persists in the Bridge and the Medicaid waivers, and diagnosis-code shopping and screen inflation blur what is medically real. Nothing is melodramatic; it is a harder, more stratified society, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. Employer retreat is 63→50%. Compulsive behaviour is the Aug 2034 gambling label. Litigation, the Lilly scandal, class stratification and managed decline are all in the events, state_action 'none' holds, and the triple agonist is realised through the retatrutide T2D label and price within the approval rules. mechanism: Most chains are shown, but the employer-coverage collapse from a differential-vacating ruling is asserted (claim 2). Top-third growth credited to bimagrumab is weak (claim 1), and the Foundayo user spike is thinly explained (claim 3). magnitude: On-drug 32.5% and ever-used 44.4% sit inside the envelope, the latter near its edge. The persistence/restart arithmetic, age and income weighting, payer-mix shares (sum 100%, 87.8M users) and public spending ($9.55B, $25.1B, $268M) all reconcile. Approval timing is legal, so the remaining gaps are the unreconciled Foundayo jump (claim 3) and a mild reconciliation strain on top-third use (claim 1).",
+        "generativity": ""
+      },
+      "plausibility": 7.75
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "The top (34→41) grew through cash retatrutide and the bimagrumab add-on.",
+        "field": "world/population/note",
+        "why": "Mechanism: bimagrumab was approved in Feb 2034 and is an add-on to tirzepatide, so its users are already on drug. It cannot explain a 7-point rise in top-third prevalence, and the chain from the add-on to new adoption is asserted."
+      },
+      {
+        "quote": "Within two benefit cycles, employer weight-management coverage falls from 63% to 50%, and plans shift coverage to diagnosis codes.",
+        "field": "world/events/0/event",
+        "why": "Mechanism: the ruling vacated only the premium-differential use of adherence feeds, not coverage gating itself. The starting world says conditions were on coverage, so the jump to a 13-point drop in coverage is asserted rather than shown."
+      },
+      {
+        "quote": "Low-dose Foundayo BED users peaked at ~3.4M in mid-2033 against an estimated ~1.5–2M treatable BED population, then fell to ~2.2M after the settlement.",
+        "field": "world/safety_ledger/16/prevalence_note",
+        "why": "Magnitude and mechanism: the parent had ~0.9M users at end-2032, so this implies roughly a quadrupling in about six months. The telehealth steering that would produce it is not shown, and a peak far above the treatable population is a convenient fit for the scandal driver."
+      }
+    ],
+    "badness": {
+      "flourishing": 5.0,
+      "autonomy": 5.83,
+      "inequality": 7.17,
+      "public_health": 5.5,
+      "cohesion": 5.33,
+      "epistemic": 5.17,
+      "overall": 5.93
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.5,
+      "mechanism": 6.17,
+      "magnitude": 7.67
+    },
+    "plausibility": 7.39,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The world is more stratified and harder than 2032. About 6–7M people lost weight-only coverage and now regain weight in sawtooth cycles, and body shape reads as income ('muscle tier' bimagrumab at $849 cash). The Bridge and seven Medicaid waivers still ration with unreliable adherence data, and ~19,500 excess hip fractures a year plus a 148,000-claim tort add to the load. It is a recognisably harder society with new losers, not a structural catastrophe, so the inequality score is highest and the overall score is about 6.",
+      "plausibility": "driver_fidelity: All drivers appear in fields and events: employer_retreat, managed_decline, compulsive_behaviour (gambling label), the GI/pancreatic tort, the triple agonist via retatrutide's T2D label, the Lilly scandal and class stratification. The only softness is state_action 'none', since the Bridge extension and the DOJ settlement are arguably state acts, though both are framed as unchanged or enforcement. mechanism: Several chains are asserted. The Sixth Circuit ruling is said to cut coverage 63→50% although it removed only premium differentials (claim 2), the bimagrumab add-on is credited with top-third adoption (claim 1), and BED users surge to 3.4M with no shown path (claim 3). Gray-market behaviour is explained by a small price step ($249→$199). The litigation, price, code-shopping and prose-world links are otherwise sound. magnitude: On-drug 32.5%, ever-used 44.4% (near the 44.6 edge), the age and income weightings, and the persistence and restart arithmetic (15.9+10.6+6.0) all reconcile. The payer mix sums to 87.8M and 100%, and the Bridge, Medicaid, HRSA and DoD dollar figures multiply out. Approval timing is allowed and generic_us stays false; the only drag is the fast Foundayo swing noted in claim 3.",
+      "generativity": "The prose vignette (Dana's dental office, the Dr. Halvorsen shaker and 'personal' infusion, Marisol's 40-minute telehealth screen, Golden Corral versus the empty strength studio) gives concrete, class-coded scenes. The world fields add texture in Dayton/Toledo regain, Open Table suppers, diagnosis-code shopping and sportsbook jokes. The ending is a little flat and the framing paragraph is explanatory, but there are many implied characters and scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 5.5,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 26
   }
 }

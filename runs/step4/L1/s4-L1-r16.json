@@ -36,6 +36,41 @@
         "input_tokens": 19213,
         "output_tokens": 25732
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r16-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28765,
+        "output_tokens": 7532
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r16-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28765,
+        "output_tokens": 9539
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L1-r16-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28765,
+        "output_tokens": 6806
+      }
     ]
   },
   "world": {
@@ -325,6 +360,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L1-r16-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "cigarette volume fell ~9% in 2033–34 and vape and pouch volume ~6%",
+          "field": "world/economy/alcohol/state",
+          "why": "The nicotine label was approved in Oct 2033 and the candidate's own figure is ~1.1M young adults on drug. That cannot plausibly cut national cigarette volume by 9% within about a year; the mechanism and size don't match (mechanism)."
+        },
+        {
+          "quote": "The top third fell (34→30.5) but keeps the 30% molecule, retatrutide, through cash or diabetes codes.",
+          "field": "world/population/note",
+          "why": "Generic semaglutide costs $39–69 and retatrutide is $349, so the highest-income third would be the group least likely to drop out. A 3.5-point fall in that group is asserted without a causal chain (mechanism)."
+        },
+        {
+          "quote": "The cessation label has brought ~1.1M adults 18–29 onto drug, mostly lean or normal weight.",
+          "field": "world/safety_ledger/17/prevalence_note",
+          "why": "1.1M new young-adult users is hard to square with the 18–29 band falling from 16% to 15%, which is about 0.5M fewer users. It also takes most of the ~2.2M new ever-users, leaving little room for the other flows in the population arithmetic (magnitude/reconciliation)."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.0,
+        "inequality": 6.0,
+        "public_health": 5.5,
+        "cohesion": 4.5,
+        "epistemic": 4.5,
+        "overall": 5.0
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9.0,
+        "mechanism": 6.0,
+        "magnitude": 8.0
+      },
+      "generativity": 7.0,
+      "rationale": {
+        "badness": "The world is a harder society with new losers but also real gains. It has a two-tier molecule system (population/note, open_tensions) and ~32M used-and-off adults, many cut off by coverage loss or conditioning. About 1M minors are on drug, with off-label vaping use and a pediatric bone signal. Hip fractures rise further and the GI mass tort is large. Against that, free unconditional generic access, the dismantling of employer conditioning, and a visible, discussable harm ledger keep it near 5 rather than higher.",
+        "plausibility": "driver_fidelity: Every driver is traceable. The adoption delta is exactly −2.0 (27.9→25.9). Generic collapse has a settlement event and an authorised generic. Employer retreat is the Sixth Circuit ruling and 63→41%. Nicotine is the Oct 2033 approvals. GI litigation is the $6.5B settlement. The triple-agonist driver is met through the retatrutide T2D approval, which the approval rules allow. Normalisation, subsidy and mainstream_complaint all appear. mechanism: Most chains are shown, but several are thin. The 22-point employer coverage drop is attributed to a ruling on premium differentials only. 'employers no longer see adherence data' is asserted. The top-third decline and the 9% cigarette-volume drop (claims 1–2) have no real chain. The prose also says the user drop 'follows from the price drop', while the world state attributes it to employer retreat. magnitude: On drug 25.9, ever-used 37.8, the income thirds and the approval timings (amycretin, bimagrumab >12 months after filing) are all inside the envelope. The payer shares sum to 100%, and the Bridge, Medicaid, HRSA, DoD and MDL figures all multiply out. The population arithmetic closes (14.5+10.8+0.6=25.9). The one gap is the 1.1M nicotine users against the falling 18–29 band (claim 3).",
+        "generativity": ""
+      },
+      "plausibility": 7.6
+    },
+    {
+      "custom_id": "s4-L1-r16-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Weight coverage falls from 63% to 41% of employers.",
+          "field": "world/events/2/event",
+          "why": "mechanism: a single Sixth Circuit ruling, with the other circuit case stayed, is said to cut employer weight-management coverage nationwide by about a third within months. Employers could simply keep covering without the premium differential, and a much cheaper drug lowers the cost of coverage rather than raising it."
+        },
+        {
+          "quote": "Profiles have stopped listing the molecule because everyone is on something.",
+          "field": "world/body_and_culture/dating_and_intimacy",
+          "why": "mechanism: the world's own figures show 25.9% of adults on drug, falling from 27.9%, and about 169M never users. 'Everyone is on something' and heavier bodies being the ones that 'need explaining' overstate normalisation and conflict with the population state."
+        },
+        {
+          "quote": "cigarette volume fell ~9% in 2033–34 and vape and pouch volume ~6%.",
+          "field": "world/economy/alcohol/state",
+          "why": "magnitude: the nicotine label was approved in Oct 2033 and the world credits it with only ~1.1M young adults. A 9% cigarette volume drop attributed to the drug within about a year is hard to reconcile with that user count, and the pre-existing smoking decline is ignored."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6,
+        "magnitude": 8
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "The world is harder in new ways but easier in others. Private conditioning is dismantled, free generic access is unconditional, and nicotine cessation helps. Against that: ~32M used-and-off adults, 48% cycling, a two-tier molecule divide (generic vs retatrutide on T2D codes), unsupported cash-generic users with no muscle or protein support, ~20,000 hip fractures a year, ~1M minors on drug, and a tort system that bars generic-injury claims. Autonomy and cohesion are slightly better than in 2032, so overall sits at about 5.",
+        "plausibility": "driver_fidelity: every driver is realised and traceable. Generic semaglutide enters via a settlement event (2033-03), employer coverage falls to 41%, the nicotine approval, litigation settlement, retatrutide T2D (an existing product in a new form), subsidy via HRSA, and normalisation and mainstream complaint all appear. The normalisation language is overdone (claim 2) but does not contradict a driver. mechanism: most chains are shown (patent settlements to price collapse, ruling to stipend, preemption to the tort gap), but the nationwide 63→41% employer exit from one circuit ruling (claim 1) and the cigarette-volume attribution (claim 3) are asserted more than shown. The prose also puts $49 pens by summer 2033, while the events place that price at mid-2034. magnitude: all headline figures sit inside the envelope (25.9 on, 37.8 ever, income thirds bracket the national figure), and the population arithmetic, payer mix (sums to 100%, matches 70.2M), Bridge, Medicaid, HRSA and readiness spending, and the settlement ($6.5B ≈ 118k × $55k) all multiply out. Minor strain: 1.1M new young nicotine users alongside a falling 18–29 share, and 4.5 pts of employer-driven quitters.",
+        "generativity": "placeholder"
+      },
+      "plausibility": 7.4
+    },
+    {
+      "custom_id": "s4-L1-r16-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Weight coverage falls from 63% to 41% of employers.",
+          "field": "world/events/2/event",
+          "why": "mechanism: One circuit's ruling against premium differentials is said to cut weight-management coverage by 22 points within months. Employers could still use non-premium conditions such as the 5% loss and coaching gates, and the newly cheap generic lowers the cost of coverage, so the chain is asserted rather than shown."
+        },
+        {
+          "quote": "coworkers can see who kept tirzepatide through a spouse's diabetes code",
+          "field": "world/body_and_culture/thinness_and_class",
+          "why": "mechanism: A spouse's diabetes diagnosis would not make a non-diabetic worker eligible for tirzepatide or retatrutide under the world's own audited T2D-code coverage. The prose repeats the claim with Terri, who gets 'onto the triple' this way."
+        },
+        {
+          "quote": "~4.5 pts of adults stopped when employer weight coverage ended, and only about half moved to cash generic.",
+          "field": "world/safety_ledger/weight_regain_on_discontinuation/prevalence_note",
+          "why": "magnitude: 4.5 pts of adults is about 12M people, and 'half moved to cash' implies about 24M lost coverage. That is nearly all of the 28.8M commercial users in 2032, yet commercial still holds 18.3M in 2034, and the commercial drop is only about 10.5M."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 7.5
+      },
+      "generativity": 7,
+      "rationale": {
+        "badness": "Access is cheaper and employer and private conditioning is dismantled, so autonomy improves on 2032. Against that, there is a two-tier molecule divide (30% vs 15% drug), about 32M used-and-off adults who must explain themselves, and a 48% cycler share. Further harms are a $6.5B GI tort settlement that excludes pancreatitis and generic-harm claims, rising hip fractures, off-label 16–17 vaping use, and unsupported cash-generic users. It is a harder society with new losers, not a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: generic collapse via the settlement dates, employer retreat via the Sixth Circuit, nicotine labels, the MDL settlement, retatrutide on T2D codes (an existing product in a new form), HRSA subsidy, normalisation, and the complaint layer. Section 232 duties and the WTO panel persist, which strains 'market_shock: none' only slightly. mechanism: The generic price chain is well shown, but the employer collapse of 63% to 41% from one circuit ruling is asserted (claim 1), and the spouse's-diabetes-code route to the triple is implausible (claim 2). The smaller changes (bottom-third rise, MSA revenue loss, preemption of generic claims) do have chains. magnitude: Headline figures sit inside the envelope (25.9, 37.8, income ordering, age-band arithmetic), the payer mix sums to 100%, and the Bridge, Medicaid, HRSA and DoD spending multiplies out. Approval timing is allowed, and generics are backed by an event. The employer-loss accounting of about 4.5 pts stopped and 'half moved to cash' does not reconcile with the commercial user counts (claim 3).",
+        "generativity": "The Dana Kowalczyk day is concrete and shows rather than explains: the pen behind the mustard, the $40 stipend stub, the donut holes nobody takes, Terri's lanyard, the two back-to-back TV ads, Caleb's mango vapor, and the silent empty plate. The world fields imply many further scenes: Dayton warehouse staff, tobacco-state budget offices, Open Table hosts, and annotated 'off' dating profiles."
+      },
+      "plausibility": 7.5
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "cigarette volume fell ~9% in 2033–34 and vape and pouch volume ~6%",
+        "field": "world/economy/alcohol/state",
+        "why": "The nicotine label was approved in Oct 2033 and the candidate's own figure is ~1.1M young adults on drug. That cannot plausibly cut national cigarette volume by 9% within about a year; the mechanism and size don't match (mechanism)."
+      },
+      {
+        "quote": "The top third fell (34→30.5) but keeps the 30% molecule, retatrutide, through cash or diabetes codes.",
+        "field": "world/population/note",
+        "why": "Generic semaglutide costs $39–69 and retatrutide is $349, so the highest-income third would be the group least likely to drop out. A 3.5-point fall in that group is asserted without a causal chain (mechanism)."
+      },
+      {
+        "quote": "The cessation label has brought ~1.1M adults 18–29 onto drug, mostly lean or normal weight.",
+        "field": "world/safety_ledger/17/prevalence_note",
+        "why": "1.1M new young-adult users is hard to square with the 18–29 band falling from 16% to 15%, which is about 0.5M fewer users. It also takes most of the ~2.2M new ever-users, leaving little room for the other flows in the population arithmetic (magnitude/reconciliation)."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.0,
+      "inequality": 6.0,
+      "public_health": 5.17,
+      "cohesion": 4.5,
+      "epistemic": 4.17,
+      "overall": 5.0
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.67,
+      "mechanism": 6.17,
+      "magnitude": 7.83
+    },
+    "plausibility": 7.5,
+    "generativity": 7.0,
+    "rationale": {
+      "badness": "The world is a harder society with new losers but also real gains. It has a two-tier molecule system (population/note, open_tensions) and ~32M used-and-off adults, many cut off by coverage loss or conditioning. About 1M minors are on drug, with off-label vaping use and a pediatric bone signal. Hip fractures rise further and the GI mass tort is large. Against that, free unconditional generic access, the dismantling of employer conditioning, and a visible, discussable harm ledger keep it near 5 rather than higher.",
+      "plausibility": "driver_fidelity: Every driver is traceable. The adoption delta is exactly −2.0 (27.9→25.9). Generic collapse has a settlement event and an authorised generic. Employer retreat is the Sixth Circuit ruling and 63→41%. Nicotine is the Oct 2033 approvals. GI litigation is the $6.5B settlement. The triple-agonist driver is met through the retatrutide T2D approval, which the approval rules allow. Normalisation, subsidy and mainstream_complaint all appear. mechanism: Most chains are shown, but several are thin. The 22-point employer coverage drop is attributed to a ruling on premium differentials only. 'employers no longer see adherence data' is asserted. The top-third decline and the 9% cigarette-volume drop (claims 1–2) have no real chain. The prose also says the user drop 'follows from the price drop', while the world state attributes it to employer retreat. magnitude: On drug 25.9, ever-used 37.8, the income thirds and the approval timings (amycretin, bimagrumab >12 months after filing) are all inside the envelope. The payer shares sum to 100%, and the Bridge, Medicaid, HRSA, DoD and MDL figures all multiply out. The population arithmetic closes (14.5+10.8+0.6=25.9). The one gap is the 1.1M nicotine users against the falling 18–29 band (claim 3).",
+      "generativity": ""
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.684,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 43
   }
 }

@@ -51,6 +51,41 @@
         "input_tokens": 18511,
         "output_tokens": 28482
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r26-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28191,
+        "output_tokens": 6409
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r26-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28191,
+        "output_tokens": 6305
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01R87y6U1GTXVPyKLqUiCXsG",
+        "custom_id": "s4-L2-r26-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 28191,
+        "output_tokens": 8155
+      }
     ]
   },
   "world": {
@@ -319,6 +354,190 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
     }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s4-L2-r26-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "Half of tenth grade is on them.",
+          "field": "prose/a_day_in_the_life",
+          "why": "The world's own figure is ~3.1% of 12–17s on a drug, so this contradicts the world state. It fails mechanism as a narrative contradiction, since nothing in the world supports a jump from ~3% to half of a grade."
+        },
+        {
+          "quote": "+2.4M AUD route",
+          "field": "world/population/note",
+          "why": "Medicaid AUD-route users reach 2.4M within about 18 months of the June 2033 approval. That is a huge uptake of an AUD pharmacotherapy and rests on an asserted 'code drift' with no shown clinical or administrative pathway. It fails mechanism and strains magnitude."
+        },
+        {
+          "quote": "gray-market use, down to ~6M after generics, is back near 9.5M on demand for retatrutide copies",
+          "field": "world/events/4/event",
+          "why": "The gray market drops by about 1.5M and then rebuilds past its starting size of 7.5M within roughly a year. That includes ~3.5M new compounded retatrutide users, and the supply chain and demand shift are asserted rather than shown. It fails mechanism."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 5,
+        "inequality": 4,
+        "public_health": 6,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "About 30% of adults are on the drugs, with ~2.5–3M excess anhedonia cases and a fracture/EPI burden that grows with 65+ use. Gray-market harms move up the efficacy ladder (depot-vial cluster, ~9.5M users), and Medicaid adolescents are monitored poorly (growth checks in ~55% of charts). Surveillance deepens through wellness-app mood data and sales of 'motivation cohorts' to political data firms. Offsetting this, access broadens, the class gradient flattens, and the harm is now measured and labelled, so inequality and epistemic scores come in lower than in 2032. The result is a harder society with new losers rather than a structural catastrophe.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and dated events. These include the generic mechanism (Feb 2033 settlements), AUD coverage as the public-expansion path, the gambling label, the anhedonia warning, the home MariTide pen, the gray-market rebuild, the Full Range movement and no state action. Full Range reads the 'natural movement' driver somewhat narrowly, as a pledge not to take the drugs. mechanism: Most chains are shown, notably generics lowering prices, which let plans drop prior authorisation, plus mandatory Medicaid coverage of the AUD and gambling indications. Several are asserted rather than shown, namely the 2.4M Medicaid AUD users, the fast gray-market rebuild (claim 3), and the prose line that half of tenth grade is on the drugs, which contradicts the 3.1% figure (claim 1). magnitude: Adoption (30.1), ever-used (39.5), income thirds and age bands all sit inside the envelope and reconcile. The payer mix sums to 82.5M, Medicare ($33.0B) and Medicaid ($8.6B) spending multiply out, the flow and cycling arithmetic closes to 44%, and approval timings (16, 15 and 17 months) respect the 12-month rule. Remaining flaws are minor: the pediatric 1.4% is slightly high against its own age bands, Medicare 19.5M is tight against 65+ use, and the Medicaid gambling uptake of 0.5M is fast.",
+        "generativity": "The prose carries a scene-level day with named characters (Tanya, Mr. Odom, Luis, Marisol, Dee) and concrete props: a pen in the butter compartment, a Telegram vial, and a leaflet reading Section 5.9. The world gives a Full Range scene, TennCare code drift, sportsbook churn, and Memphis, Nashville and Whitehaven as places. Many implied films exist. The closing lines on not wanting the wine, and not knowing whether she likes the quiet, show interior life instead of explaining it."
+      },
+      "plausibility": 7.9
+    },
+    {
+      "custom_id": "s4-L2-r26-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "Half of tenth grade is on them.",
+          "field": "prose/a_day_in_the_life",
+          "why": "Mechanism/magnitude: the world state puts adolescent use at ~3.1% of 12–17s, so \"half of tenth grade\" contradicts the candidate's own figures by more than an order of magnitude."
+        },
+        {
+          "quote": "Medicare is now the largest single payer, at ~19.5M users, all through non-weight codes",
+          "field": "world/access/public_coverage",
+          "why": "Mechanism: a 74% rise in Medicare users in two years, all through non-weight codes, is attributed to dropped prior authorisation and the AUD route. That chain is thin, and 19.5M sits awkwardly beside the 65+ user share of 29%."
+        },
+        {
+          "quote": "Thin used to signal money and now signals almost nothing, because a $29 generic and a Medicaid copay put it within reach of most people.",
+          "field": "world/body_and_culture/what_the_body_signals",
+          "why": "Mechanism: only 30% of adults are on the drug, and gray-market cycling and retatrutide chasing still stratify bodies. The claim that thinness has stopped carrying class meaning overstates what two years and a $29 price would do."
+        }
+      ],
+      "badness": {
+        "flourishing": 5,
+        "autonomy": 4.5,
+        "inequality": 4,
+        "public_health": 5.5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 6.5,
+        "magnitude": 8
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is mixed. Cheap generics and public coverage cut cost-driven stopping and counterfeit semaglutide, and narrow class gaps (the bottom third rose 14 → 27). Against that, about 2.5–3M excess anhedonia cases, a persistent fracture excess among 65+ users, ~9.5M on gray retatrutide and depot vials with ~410 overdose-pattern cases, and Medicaid adolescent growth with growth checks charted in only ~55% of cases. Calm-plan marketing, mood-data surveillance and AUD 'code drift' add autonomy and epistemic costs, but the harm is now measured and labelled, which keeps epistemic badness moderate.",
+        "plausibility": "driver_fidelity: Every driver is realised and traceable. Generic collapse comes with a Feb 2033 settlement event, public expansion with the Restiva AUD event, and compulsive behaviour with the Nov 2032 filing and Mar 2034 approval (16 months, inside the approval rules). Anhedonia labelling, the MariTide home pen, gray-market resurgence, Full Range and no state action are all present.\nmechanism: Most chains are shown, including generics lowering prior authorisation, the CMS reading of existing Medicaid law, and demand moving up the efficacy ladder. Weak points are the 74% Medicare rise through non-weight codes only, the thin-signals-nothing claim, and the prose line 'Half of tenth grade is on them', which contradicts the 3.1% adolescent figure.\nmagnitude: Everything sits inside the envelope (30.1% on drug, 39.5% ever, income thirds bracketing). The flow arithmetic, payer mix (82.5M), Medicare $33.0B, Medicaid $8.6B, Medicaid growth components, gray-market components and cycled 44% all reconcile. Remaining gaps are small: the generic-maker lists differ between fields, and a 3.9-point excess on ~82M is about 3.2M against the stated 2.5–3M.",
+        "generativity": "The day-in-the-life gives a specific, believable household: Tanya, TennCare, a mild-AUD code, the leaflet's Section 5.9, Luis's Telegram reta, Marisol's growth checks and Dee at a Full Range dinner. The world fields add many implied scenes, including supper clubs, DraftKings risk factors, motivation check-ins and EEOC charges. The ending, 'she can't tell whether she likes it', carries the central theme, and only the 'half of tenth grade' line jars."
+      },
+      "plausibility": 7.75
+    },
+    {
+      "custom_id": "s4-L2-r26-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Half of tenth grade is on them.",
+          "field": "prose/a_day_in_the_life",
+          "why": "The world state puts use at ~3.1% of 12–17s and 1.4% of under-18s, so 'half of tenth grade' contradicts the candidate's own population figures. This is a narrative-versus-state contradiction, scored under mechanism."
+        },
+        {
+          "quote": "+2.4M AUD route",
+          "field": "world/population/note",
+          "why": "This asserts 2.4M new Medicaid users via an AUD route within about 18 months of the June 2033 approval. The chain is thin: Restiva is oral, yet the state preferred-drug lists steer to generic injectable semaglutide, and the 'code drift' is only gestured at. Mechanism is the weak axis."
+        },
+        {
+          "quote": "Roughly 15% of adults have obesity and have never used a drug, down from ~23%",
+          "field": "world/population/note",
+          "why": "It implies about 8 of the 10.7 new ever-user points came from untreated adults with obesity, with no shown chain for why new users were drawn so heavily from that pool. This is asserted rather than derived, and it sits awkwardly with the new users spread across all income and age bands."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 3.5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 3.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7,
+        "magnitude": 8
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "Access broadens sharply through $29 generics and public coverage, which lowers inequality, but harms accumulate. About 2.5–3M excess anhedonia cases, Medicaid adolescent starts with growth checks documented in only ~55% of charts, a 9.5M gray market with a 2034 depot-vial cluster, and calm plans marketed on a labelled adverse effect. Harms are measured and labelled (Sentinel study, label section), so epistemic stays low, but the world is still a harder society with new losers, not a collapse.",
+        "plausibility": "driver_fidelity: Every driver is visible in fields and events: generic settlement, Medicare/Medicaid expansion, the gambling indication (Restiva), the anhedonia label, the MariTide home pen, the gray-market rebuild, Full Range, and no state action. The CMS guidance is the only item that could be read as action, and it is federal. mechanism: The chains are mostly shown: generic price, then dropped prior authorisation, then code-driven public coverage; the FDA study, then the label, then ads. They weaken at the Medicaid AUD route (+2.4M), the obesity-pool drop from 23% to 15%, and the prose line 'Half of tenth grade' that contradicts the 3.1% adolescent figure. magnitude: Population figures sit inside the envelope (30.1% current, 39.5% ever). The flow arithmetic, age check, payer mix (sums to 82.5M), Medicare ($33.0B) and Medicaid ($8.6B) spend all multiply out, and the approval timings (15 and 16 months) and the generic mechanism comply. The only gap is a minor one: a 3.9-point excess across ~82M users is ~3.2M, against the stated 2.5–3M.",
+        "generativity": ""
+      },
+      "plausibility": 7.9
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "Half of tenth grade is on them.",
+        "field": "prose/a_day_in_the_life",
+        "why": "The world's own figure is ~3.1% of 12–17s on a drug, so this contradicts the world state. It fails mechanism as a narrative contradiction, since nothing in the world supports a jump from ~3% to half of a grade."
+      },
+      {
+        "quote": "+2.4M AUD route",
+        "field": "world/population/note",
+        "why": "Medicaid AUD-route users reach 2.4M within about 18 months of the June 2033 approval. That is a huge uptake of an AUD pharmacotherapy and rests on an asserted 'code drift' with no shown clinical or administrative pathway. It fails mechanism and strains magnitude."
+      },
+      {
+        "quote": "gray-market use, down to ~6M after generics, is back near 9.5M on demand for retatrutide copies",
+        "field": "world/events/4/event",
+        "why": "The gray market drops by about 1.5M and then rebuilds past its starting size of 7.5M within roughly a year. That includes ~3.5M new compounded retatrutide users, and the supply chain and demand shift are asserted rather than shown. It fails mechanism."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.83,
+      "autonomy": 4.67,
+      "inequality": 3.83,
+      "public_health": 5.5,
+      "cohesion": 4.83,
+      "epistemic": 3.83,
+      "overall": 4.83
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 9.0,
+      "mechanism": 6.83,
+      "magnitude": 8.0
+    },
+    "plausibility": 7.85,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "About 30% of adults are on the drugs, with ~2.5–3M excess anhedonia cases and a fracture/EPI burden that grows with 65+ use. Gray-market harms move up the efficacy ladder (depot-vial cluster, ~9.5M users), and Medicaid adolescents are monitored poorly (growth checks in ~55% of charts). Surveillance deepens through wellness-app mood data and sales of 'motivation cohorts' to political data firms. Offsetting this, access broadens, the class gradient flattens, and the harm is now measured and labelled, so inequality and epistemic scores come in lower than in 2032. The result is a harder society with new losers rather than a structural catastrophe.",
+      "plausibility": "driver_fidelity: Every driver is visible in fields and dated events. These include the generic mechanism (Feb 2033 settlements), AUD coverage as the public-expansion path, the gambling label, the anhedonia warning, the home MariTide pen, the gray-market rebuild, the Full Range movement and no state action. Full Range reads the 'natural movement' driver somewhat narrowly, as a pledge not to take the drugs. mechanism: Most chains are shown, notably generics lowering prices, which let plans drop prior authorisation, plus mandatory Medicaid coverage of the AUD and gambling indications. Several are asserted rather than shown, namely the 2.4M Medicaid AUD users, the fast gray-market rebuild (claim 3), and the prose line that half of tenth grade is on the drugs, which contradicts the 3.1% figure (claim 1). magnitude: Adoption (30.1), ever-used (39.5), income thirds and age bands all sit inside the envelope and reconcile. The payer mix sums to 82.5M, Medicare ($33.0B) and Medicaid ($8.6B) spending multiply out, the flow and cycling arithmetic closes to 44%, and approval timings (16, 15 and 17 months) respect the 12-month rule. Remaining flaws are minor: the pediatric 1.4% is slightly high against its own age bands, Medicare 19.5M is tight against 65+ use, and the Medicaid gambling uptake of 0.5M is fast.",
+      "generativity": "The prose carries a scene-level day with named characters (Tanya, Mr. Odom, Luis, Marisol, Dee) and concrete props: a pen in the butter compartment, a Telegram vial, and a leaflet reading Section 5.9. The world gives a Full Range scene, TennCare code drift, sportsbook churn, and Memphis, Nashville and Whitehaven as places. Many implied films exist. The closing lines on not wanting the wine, and not knowing whether she likes the quiet, show interior life instead of explaining it."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
+    }
+  },
+  "selection": {
+    "axis": "politics_and_state",
+    "axis_badness": 4.399,
+    "survived": false,
+    "new_lineage": null,
+    "floor_used": 6,
+    "rank": 46
   }
 }
