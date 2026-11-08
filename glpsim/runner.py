@@ -729,8 +729,10 @@ def summarise(paths, step: int, kind: str, state: dict) -> int:
         k = r["status"] if kind == "generate" else ("scored" if r.get("scores") else
                                                      ("unscored" if r["status"] == "ok" else f"skipped ({r['status']})"))
         counts[k] = counts.get(k, 0) + 1
-    spent = sum(b["actual_usd"] or 0 for b in state["batches"])
-    print(f"{kind} step {step} done: {counts}; this command's batches cost ${spent:.2f}; "
+    # this pass = the last main batch and any repair after it (the judge state file keeps every pass)
+    last_main = max(i for i, b in enumerate(state["batches"]) if b["role"] == "main")
+    spent = sum(b["actual_usd"] or 0 for b in state["batches"][last_main:])
+    print(f"{kind} step {step} done: {counts}; this pass's batches cost ${spent:.2f}; "
           f"step total recorded ${step_spent(paths, step):.2f}")
     print("next: " + (f"python sim.py judge --step {step}" if kind == "generate"
                       else f"python sim.py select --step {step}"))
