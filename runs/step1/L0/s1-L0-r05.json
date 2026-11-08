@@ -18,7 +18,284 @@
     "state_action": "subsidy",
     "personality_layer": "niche_side_effect"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:23:29Z"
+  "created_at": "2026-11-08T06:23:29Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01Qb8yCsC4kjWpUWhmeURU2J",
+        "custom_id": "s1-L0-r05",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 13439,
+        "output_tokens": 15151
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_017XpvLFmrT8pos6bbmBRHAu",
+        "custom_id": "s1-L0-r05",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 21439,
+        "output_tokens": 10167
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "(root): must be an object with exactly the keys 'world' and 'prose'"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2028,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 14.8,
+      "us_adults_ever_used_pct": 21,
+      "by_income_third_pct": {
+        "top": 19,
+        "middle": 15,
+        "bottom": 10.5
+      },
+      "by_age_band_pct": {
+        "18_29": 7,
+        "30_49": 14,
+        "50_64": 25,
+        "65_plus": 12
+      },
+      "pediatric_under_18_on_drug_pct": 0.5,
+      "cycled_off_and_on_pct": 38,
+      "note": "FICTIONAL estimates. 14.8% of ~262M adults is about 38.8M current users. By payer: employer/commercial 13.5M, Medicare 7.3M (1.7M under the obesity Bridge, the rest on Part D for diabetes), Medicaid 4.0M, cash via TrumpRx and manufacturer direct 10.5M, free HRSA provision 0.35M, imported/gray 3.0M; total 38.65M, close enough to 38.8M. Cycling arithmetic: ever 21% minus current 14.8% leaves 6.2% of adults who used and are off now. About 5.5 pp of the 14.8 pp current users have stopped and restarted at least once, and about 2.5 pp of the 6.2 pp off-now group restarted earlier and then stopped again, so (5.5+2.5)/21 = 38% of ever-users have cycled. That fits ~1/3 one-year persistence and 36–47% restart. Age bands weighted by adult population shares (20/33/24/23%) give about 14.8%. 65+ rose from 9 to 12 through the Medicare Bridge. Income thirds average 14.8 (19/15/10.5). Most of the bottom third's gap is cost; imported generics are concentrated in the middle and bottom thirds. Pediatric: about 0.5% of under-18s (~365k), mostly 12–17 on label, skewed to commercially insured households. The off-drug population (about 16M adults who have used and are not using now) is mostly made up of people who lost employer coverage, people who stopped because of GI effects, and, since 2027, older users who stopped on medical advice after bone-density findings."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare GLP-1 Bridge extended at the same terms through Dec 2029 ($245/month to Medicare, $50 copay). 1.7M obesity enrollees × $245 × 12 = $5.0B/yr in Medicare outlays, plus $1.0B/yr in beneficiary copays. This is in line with CBO's ≥$35B over 2026–2034. The Medicare negotiated price for semaglutide ($274) took effect Jan 2027 for diabetes Part D claims. Medicaid: 17 states cover obesity at the $245 rate. About 1.1M obesity enrollees × $245 × 12 = $3.2B/yr, federal and state combined. New HRSA Metabolic Health Access Program (May 2028): free oral semaglutide at federally qualified health centres for uninsured adults with BMI≥30 plus a comorbidity, at a government price of $149/month. 350k enrolled × $149 × 12 = $626M/yr against a $750M appropriation, capped at 400k slots.",
+      "employer_coverage_pct": 56,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 60+ generic brands at $8–48/month, now exporting to 100+ countries. Canada: generic semaglutide at CAD 88–120/month; Health Canada restricted bulk export to US buyers in 2027 to protect domestic supply. Brazil, Mexico and much of Asia have generics. Cost-plus injectable generics are widely available in about 160 countries. No generic tirzepatide anywhere in major markets.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Prices stalled. TrumpRx injectables sit at $299–349/month and never reached the $245 cash target. Oral Wegovy is $149 for starter doses and $199–299 for maintenance, including the 50 mg dose. Foundayo is $149–349 by dose. List Wegovy is $1,349, paid by almost nobody. Why prices stalled: oral demand exceeds active-ingredient capacity at both manufacturers (oral semaglutide needs ~10–20× the peptide of a weekly injection), and Novo's US formulation patents were upheld in 2027. Employer coverage drifted from 60% to 56% as the drops announced in 2026 took effect. There were no new structural shifts. Gray market: about 3.0M US adults (8% of users) use mailed Indian generics at $30–80 landed, Canadian product bought across the border, or unlabelled social-media vials. The FDA finalised the 503B exclusion in 2027, so legal compounding is essentially over. Route: pills are about 55% of new starts and about 35% of all users. Weekly injectables are still the majority of the installed base, mostly tirzepatide."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg and, from 2027, 50 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema, approved Dec 2026)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 21,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction: RCT-supported, still unapproved; widely prescribed by addiction clinics and primary care",
+        "microdosing / 'metabolic maintenance' by people without obesity, now mostly on low-dose pills",
+        "pediatric under-12 use off-label under specialist care",
+        "nicotine and gambling craving reduction: observational and anecdotal",
+        "post-cycling 'maintenance' at low oral doses to limit regain"
+      ],
+      "pipeline_note": "Oral parity was reached with an existing product in a new form. The FDA approved oral Wegovy 50 mg in Jul 2027 on OASIS-1 and head-to-head data showing ~15% loss, matching injectable semaglutide 2.4 mg. No pill matches tirzepatide's ~21%. CagriSema was approved Dec 2026 (~20%) with modest uptake after losing to tirzepatide head-to-head. Retatrutide's BLA was filed Mar 2027. The FDA extended review to collect bone-density and lean-mass data from the phase 3 DXA substudy plus more on dysesthesia, and the decision is now expected H1 2029. Survodutide filed for obesity Sep 2027 and is under review. Amycretin is in phase 3 with no filing. MariTide monthly is in phase 3 with no filing. Bimagrumab and other muscle-preserving adjuncts are in phase 2/3 and not marketed. Global incretin market ~$118B (2028). Growth is now driven by volume, not price."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common class effect and leading cause of discontinuation. Lower with slow oral titration.",
+        "regulatory_response": "Labelled; gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "Absolute risk low; pooled long-term data still not conclusive.",
+        "regulatory_response": "Labelled; MDL litigation ongoing, no verdicts against manufacturers."
+      },
+      {
+        "effect": "Lean mass (muscle) loss",
+        "status": "established",
+        "prevalence_note": "Now treated as a population problem. In the 65+ group, about 25–40% of lost weight is lean mass. Sarcopenia diagnoses in users over 65 rose markedly in VA and Medicare claims analyses. Cycling users who regain weight regain it disproportionately as fat.",
+        "regulatory_response": "FDA class labelling (Mar 2028) recommends resistance exercise, protein intake, and assessment of frailty before and during treatment in older adults. American Geriatrics Society guidance (2027) advises against routine initiation in frail adults over 75."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fracture (new entry)",
+        "status": "established",
+        "prevalence_note": "Large Medicare and Nordic registry cohorts (2027) show 3–5% hip BMD loss over two years. Hip-fracture risk is roughly 1.3× in users over 65 on therapy more than 2 years compared with matched non-users, highest in women after menopause. Absolute excess is about 2–4 fractures per 1,000 person-years in that group.",
+        "regulatory_response": "Class label update (Mar 2028). DXA advised at baseline for users ≥65 and after 2 years. Medicare Bridge prior authorisation now asks for a baseline DXA or fracture-risk score. This is an eligibility step, not a change of payer."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Conflicting cohorts persist; absolute risk very low.",
+        "regulatory_response": "EMA 'very rare' label; no US class label."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association in subsequent pooled data.",
+        "regulatory_response": "Warning removal (Jan 2026) stands."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia, apathy)",
+        "status": "established",
+        "prevalence_note": "Pooled trial and pharmacovigilance data put clinically reported apathy or anhedonia at roughly 0.3–1% of users. That makes it uncommon, and it is often relieved by lowering the dose.",
+        "regulatory_response": "Listed as an uncommon adverse reaction ('apathy, decreased interest') on the 2027 oral Wegovy 50 mg label and in EMA product information. Other labels are following."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Real-world regain is smaller than trial regain but substantial. With 38% of ever-users having cycled, regain-then-restart is the modal pattern.",
+        "regulatory_response": "None beyond chronic-therapy framing."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Iron, B12, vitamin D and protein shortfalls reported. Vitamin D overlaps with the bone signal.",
+        "regulatory_response": "Professional guidance only; no label change."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years; adolescents on decades-long therapy; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About six years of rigorous follow-up now exist. Adolescent bone accrual and cycling body-composition effects are open questions.",
+        "regulatory_response": "Postmarketing requirements; FDA asked for an adolescent bone-accrual study (2028)."
+      },
+      {
+        "effect": "Compounded, imported and counterfeit product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "CDC tracked 212 hospitalisations in 14 states (Jun 2027–Mar 2028) tied to counterfeit or mis-labelled semaglutide: 5–10× overdoses, bacterial contamination of unlabelled vials, and tablets with no or variable active ingredient. 9 deaths. FDA adverse-event reports for non-approved product exceed 4,000.",
+        "regulatory_response": "CDC Health Advisory (Feb 2028); FDA import alert covering mailed semaglutide from unregistered sources; CBP mail seizures; 503B exclusion finalised 2027."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households are about 28% of US households. Volume in snacks, confectionery and sugary drinks is down low single digits a year. Protein, fibre and small-format SKUs carry growth. Bone-health messaging (calcium, vitamin D, 'muscle and bone' protein drinks) became the 2028 marketing callout. Companies are using price and mix to defend revenue.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "Spirits and beer volumes keep declining among the heaviest-drinking decile. Off-label alcohol prescribing by addiction clinics adds to the pressure. Premium single-serve and no/low-alcohol products partially offset. Brown-Forman and Diageo restructured US distribution.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is roughly flat. Smaller plates, a la carte proteins and shareable formats are standard. Houston office-lunch catering contracts have shrunk about 15% since 2026. Wedding and event caterers sell 'tasting' menus instead of buffets.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists closed stores (Torrid announced 120 closures in 2027). Mainstream retailers carry fewer extended sizes. Re-buying at smaller sizes has largely played out, and the cycling population supports a 'two-size wardrobe' resale market.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Resistance training has gone from optional to prescribed. The bone and muscle wave pushed physicians to refer older users to strength programmes. Chains sell 'GLP-1 strength' memberships, and senior-centre resistance classes expanded under Medicare Advantage supplemental benefits.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "No structural change. Employer coverage is 56%, and the drops announced in 2026 have been absorbed. Prior authorisation now commonly adds DXA, fracture-risk scoring for older members and step-therapy to oral semaglutide. GLP-1s are about 12% of claims where covered, and pharmacy trend is around +9%.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Lilly leads on tirzepatide and Foundayo. Novo regained share with the 50 mg pill but its margins are squeezed, because oral peptide uses far more active ingredient. Both are building API capacity, and prices are flat because capacity, not competition, sets them. Ex-US generic makers (Dr. Reddy's, Sun, Biocon) are growing fast.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "In middle-aged, insured America a slim body no longer signals anything. A large body in a 55-year-old professional now prompts a question, and being off the drug is what needs explaining. Common answers are 'insurance', 'bones', 'cycling' and 'nausea'.",
+      "thinness_and_class": "Use runs 19% in the top income third and 10.5% in the bottom. The bottom third reaches the drug through Medicaid in 17 states, HRSA clinics or mailed Indian generics. Thinness in a low-income adult is now as likely to come from a $40 packet from abroad as from a prescription.",
+      "eating_as_ritual": "Shared meals are smaller and shorter. Women 50–64 in Houston's suburbs are the reference demographic: book clubs and church suppers have moved to tasting plates, and the potluck casserole is a joke about 2019. Ordering a full plate is read as either off-drug or making a statement.",
+      "dating_and_intimacy": "Profiles on major dating apps routinely mention status ('on oral', 'cycling', 'off by choice'). Some couples describe asymmetry when one partner is on the drug and the other isn't. Reports of reduced desire stay anecdotal outside the small labelled apathy rate.",
+      "meaning_of_appetite": "Appetite is now treated as something to manage, like blood pressure. Wanting seconds is framed as a symptom, and 'food noise' has become a clinical-sounding everyday term. A small, mostly younger and urban 'appetite-positive' counter-scene treats big shared meals as a stance.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "niche_side_effect",
+      "reward_blunting_prevalence_note": "Labelled as uncommon (about 0.3–1% clinically reported). Most users notice nothing. A larger, unmeasured group reports milder flattening that never reaches a clinician. Dose reduction is the standard response.",
+      "framing": "A side effect, sitting on the label next to the drug's off-label use against alcohol. Clinicians describe it as 'the same dial turned too far'. It isn't marketed and employers don't encourage it.",
+      "effect_on_work": "No measurable productivity effect in employer data. Some HR benefit vendors added a screening question on 'motivation changes' to GLP-1 support programmes. Sales and creative workers more often report dose-lowering to 'keep their edge'.",
+      "effect_on_art_and_play": "Small and specific. Musicians and comedians discuss dose timing before performances. Bars report fewer late nights among regulars. Ultra-sour, spicy and high-intensity flavours keep growing in snacks.",
+      "effect_on_intimacy": "Uncommon clinically, but now discussable. Couples therapists ask about GLP-1 status at intake, and reduced desire is a recognised reason for dose adjustment.",
+      "effect_on_politics": "Indirect. The politics are about price, imports and fractures in older voters, not mood. Drug pricing and the India price gap feature in 2028 campaign ads. Reward blunting is not a political subject.",
+      "severity": 2
+    },
+    "state": {
+      "regulatory_posture": "Pro-access for approved products and fast review of new forms of existing drugs (oral Wegovy 50 mg). Enforcement against imports and counterfeits, with an FDA import alert and CBP mail seizures. Caution on next-generation agents: the retatrutide review was extended for bone and muscle data.",
+      "subsidy_or_mandate": "Direct subsidy: the HRSA Metabolic Health Access Program gives free oral semaglutide at FQHCs to uninsured adults with obesity plus comorbidity (350k of 400k slots filled; $626M/yr at $149/month). The Medicare Bridge was extended unchanged. No mandate.",
+      "conditioning_or_surveillance": "Eligibility gates now include DXA or fracture-risk scores for older Medicare and Medicaid patients. HRSA enrolment requires quarterly clinic visits to stay in the programme. No adherence surveillance beyond refill data.",
+      "workforce_or_military": "No workforce or military programme.",
+      "geopolitics_of_supply": "The US–India price gap ($299–349 vs $8–48) is a trade and campaign issue. India protests US mail seizures as a non-tariff barrier. Canada restricts bulk export. US brand exclusivity holds to ~2031–32, and both manufacturers point to US API plant investment to justify flat prices.",
+      "severity": 3
+    },
+    "events": [
+      {
+        "date": "2027-02",
+        "event": "Federal court upholds Novo Nordisk's US semaglutide formulation patents. Lilly and Novo both say oral demand exceeds API capacity, and TrumpRx injectable prices stay at $299–349 with no further cuts scheduled.",
+        "driver": "price_path"
+      },
+      {
+        "date": "2027-07",
+        "event": "FDA approves oral Wegovy 50 mg, showing weight loss matching weekly injectable semaglutide. The label lists apathy/decreased interest as an uncommon adverse reaction, and within a year pills make up a majority of new US starts.",
+        "driver": "next_gen_launch; personality_layer"
+      },
+      {
+        "date": "2027-10",
+        "event": "Medicare and Nordic registry studies link more than two years of GLP-1 use in adults over 65 to hip-density loss and higher fracture risk. AGS issues guidance and the FDA adds a class label on lean mass and bone density in Mar 2028.",
+        "driver": "safety_signal"
+      },
+      {
+        "date": "2028-02",
+        "event": "CDC Health Advisory ties 212 hospitalisations and 9 deaths in 14 states to counterfeit and mis-dosed semaglutide. The FDA issues an import alert on mailed product from unregistered foreign sources.",
+        "driver": "market_shock"
+      },
+      {
+        "date": "2028-05",
+        "event": "HHS launches the HRSA Metabolic Health Access Program giving free oral semaglutide at community health centres, and extends the Medicare GLP-1 Bridge through 2029 on unchanged terms.",
+        "driver": "state_action"
+      },
+      {
+        "date": "2028-07",
+        "event": "Gallup: 14.8% of US adults are on an incretin drug and 21% have ever used one. Pew finds 'being off it' is now the status respondents in their 50s say they most often have to explain.",
+        "driver": "cultural_response; adoption_delta_pp"
+      }
+    ],
+    "open_tensions": [
+      "Fractures against access: the fastest-growing user group is the over-65s, which is also the group with the bone signal, and Medicare keeps paying $245 a month for a drug it now asks clinicians to screen against.",
+      "Price against the border: US cash prices are stuck at $299–349 while Indian generics cost $8–48. About 3M Americans import anyway, and enforcement pushes some of them toward counterfeits.",
+      "Cycling as the norm: 38% of ever-users have cycled, and regained weight comes back disproportionately as fat. No one knows what a decade of on/off use does to body composition, especially in adolescents.",
+      "Retatrutide's delayed decision: the next efficacy jump arrives with larger lean-mass losses, just as the system has started counting them."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide in the US; brand exclusivity still runs to roughly 2031–32.",
+      "Wegovy list price remains $1,349/month, paid by almost no one.",
+      "Medicare GLP-1 Bridge pays ~$245/month with a ~$50 beneficiary copay.",
+      "Oral GLP-1 starter doses are still $149–150/month through TrumpRx and manufacturer channels.",
+      "Novo Nordisk and Eli Lilly remain the only US sellers of branded incretins for obesity."
+    ]
+  },
+  "prose": {
+    "headline": "One in seven of us is on it. Pills are now the default and the price is stuck. The new question is what it's doing to Grandma's hips.",
+    "world_in_600_words": "At the end of 2028 roughly one American adult in seven takes an incretin drug, and most of them no longer think about it. The jump from 11 to nearly 15 percent did not come from a price collapse. It came from a pill. When the FDA approved a 50-milligram oral Wegovy in the summer of 2027, the drug matched the weekly semaglutide shot on weight loss for the first time, and the needle stopped being a reason to say no. Within a year more than half of new prescriptions were tablets. The installed base still leans on injectables, tirzepatide above all, because people who are doing well on a weekly pen rarely switch.\n\nPrices have not followed volume down. A 2027 ruling upheld Novo's formulation patents. Oral semaglutide needs many times more active ingredient than an injection, and both manufacturers say, plausibly, that demand runs ahead of their plants. TrumpRx injectables sit at $299 to $349 a month, oral starter doses at $149, and the $1,349 list price survives mainly as a number in campaign ads. Nobody's job changed who pays. Employers that announced retreats in 2026 followed through, and coverage drifted to 56 percent. Medicare's Bridge pilot was extended unchanged at $245 a month with a $50 copay, and seventeen state Medicaid programmes pay the same rate. The one real novelty is a federal subsidy. Since May, community health centres hand free oral semaglutide to uninsured adults with obesity and a qualifying condition, about 350,000 people on a capped $750 million line.\n\nAcross the border the arithmetic is different. Indian generics cost $8 to $48 a month and are posted to a hundred countries. About three million Americans buy them anyway, through mail-order sites, Canadian pharmacies or social-media sellers. Most of what arrives is real. Some is not. The CDC's February advisory counted 212 hospitalisations and nine deaths from overdosed vials, contaminated product and tablets with nothing in them. The FDA answered with an import alert and customs seizures, which India calls a trade barrier and which, clinicians say, pushes some buyers further down the supply chain.\n\nThe safety story of the window is quieter and larger. Muscle loss was a footnote in 2026. By 2028 it is a ledger entry with a bone-density line beneath it. Registry studies in Medicare and the Nordic countries found measurable hip-density loss and a modest rise in fractures among over-65s on therapy for more than two years. The absolute numbers are small: a few extra fractures per thousand women each year. But the over-65s are exactly the group the Bridge pilot has been enrolling. The FDA's class label now asks for strength training, protein and a baseline DXA scan. Medicare prior authorisation now asks for the scan too, and gyms and senior centres have turned resistance training into something closer to a prescription. The next-generation drug, retatrutide, is held up while the agency counts its users' muscle.\n\nThe drug's other quiet effect has a name and a line on the label. The 50-milligram pill's prescribing information lists apathy and decreased interest as uncommon, something under one user in a hundred, usually eased by lowering the dose. Clinicians describe it as the mechanism that helps heavy drinkers turned slightly too far. Most users notice nothing, and nobody markets the effect.\n\nSocially, the drug has become as unremarkable as a statin. In Houston's suburbs, women in their fifties host book clubs on tasting plates, and the potluck casserole is a joke. In those circles a slim body means nothing. A large one invites a question, and being off the drug, because of insurance, nausea or bones, is what people now find themselves explaining.",
+    "a_day_in_the_life": "Linda Varga, sixty-seven, retired from the attendance office at Pasadena ISD, takes her pill at 6:10 with four ounces of water and waits the thirty minutes on the back step. She hasn't missed a dose in nineteen months. The bottle says 50 mg. The copay is fifty dollars.\n\nAt nine the imaging centre on Fairmont slides her onto the DXA table. The tech is young and says nothing about the screen. Linda watches the arm sweep over her hips and thinks about her mother's walker.\n\nFrank stopped his shots in March. He says the plan dropped him, which is half true. He also missed beer. He's put back eleven pounds and claims he feels like himself. At lunch she makes him a full sandwich and herself half a turkey wrap, and neither of them comments.\n\nThe afternoon resistance class at the senior centre is new and full. Twelve women hold eight-pound dumbbells. The instructor counts in English, then in Spanish, and calls them her bone girls. Linda is the only one who laughs.\n\nHer daughter Kristin calls from Beaumont. Kristin's job has no coverage, so she orders tablets from a site in Gujarat for forty-one dollars a month. Linda reads her the CDC paragraph again. Kristin says hers come in blister packs with foil, Mom, they're real.\n\nThe portal pings at 7:40. Hip T-score minus 1.9. Osteopenia. Dr. Huang wants to talk about lowering the dose, maybe a bone drug, maybe stopping.\n\nLinda closes the laptop. Frank is eating ice cream from the carton. She finds she doesn't want any, and isn't sure whether that's her or the pill."
+  }
 }

@@ -18,7 +18,292 @@
     "state_action": "benefits_conditioning",
     "personality_layer": "mainstream_complaint"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:23:29Z"
+  "created_at": "2026-11-08T06:23:29Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01Qb8yCsC4kjWpUWhmeURU2J",
+        "custom_id": "s1-L0-r17",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 13497,
+        "output_tokens": 20080
+      },
+      {
+        "role": "repair",
+        "batch_id": "msgbatch_017XpvLFmrT8pos6bbmBRHAu",
+        "custom_id": "s1-L0-r17",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 24705,
+        "output_tokens": 11131
+      }
+    ]
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "raw_output": null,
+      "repair_attempted": true,
+      "first_errors": [
+        "world/access: Additional properties are not allowed ('public_coverage_note' was unexpected)"
+      ],
+      "repaired": true
+    }
+  },
+  "world": {
+    "year": 2028,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 25,
+      "us_adults_ever_used_pct": 32,
+      "by_income_third_pct": {
+        "top": 29,
+        "middle": 27,
+        "bottom": 19
+      },
+      "by_age_band_pct": {
+        "18_29": 12,
+        "30_49": 26,
+        "50_64": 36,
+        "65_plus": 22
+      },
+      "pediatric_under_18_on_drug_pct": 0.9,
+      "cycled_off_and_on_pct": 28,
+      "note": "FICTIONAL. ~25% of ~262M US adults (~65.5M) currently on an incretin, 32% ever. Payer split of current users: Medicare ~9M, Medicaid ~6M, employer/commercial ~32M, cash-only ~18.5M (sum 65.5M). Age bands weighted by adult population shares (0.20×12 + 0.33×26 + 0.24×36 + 0.23×22 ≈ 24.7). The rise among people 65+ from 9% to 22% follows the Medicare Bridge pilot and the model that replaced it. Arithmetic: ever 32 − current 25 = 7 pts used and now off; restarters among current users ≈ 9 pts; cycled = 9/32 ≈ 28%; ever-stopped = 7 + 9 = 16 pts, of whom 9 restarted (≈56% cumulative over up to four years, against 36–47% within one year in 2026). Ever-used rose 17 pts while current rose 14. That only fits if one-year persistence has risen to ~55%, and it has, for three reasons: authorised-generic semaglutide at $49–69 cash since Jan 2028, adherence-conditioned coverage that makes stopping cost money, and the fact that much of the 2028 uptake is too recent to have lapsed. Off-drug is a population: ~18M adults are off after using; ~19% of bottom-third adults are on, compared with 29% of the top third. The gap sits among the uninsured in non-expansion states and among people who lost conditioned coverage after missing targets. Young men 18–29 are the lowest-use group. Pediatric: ~0.9% of under-18s are on a drug, about 5% of children with obesity (up from ~0.6%), still skewed to upper-income households. Roughly 4 in 10 US children now live with at least one adult on the drug."
+    },
+    "access": {
+      "cash_price_usd_month_low": 49,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare: the GLP-1 Bridge pilot ended Dec 2027. CMMI's Metabolic Outcomes Model replaced it from Jan 2028: brand at the negotiated $245/month with a $50 copay, authorised-generic semaglutide at $55/month with a $10 copay. Continuation requires ≥5% weight loss or HbA1c improvement at 6 months, refill adherence (proportion of days covered) ≥80%, and for beneficiaries 65+ a baseline DEXA scan plus an annual grip-strength/DEXA check. Spend: ~9M users × (0.6×$55 + 0.4×$245 = $131) × 12 ≈ $14.1B/yr gross before copays. Medicaid: covered in ~38 states, generic-first at ~$55; ~6M users × $55 × 12 ≈ $4.0B/yr. Eleven states attach adherence and outcome conditions through 1115 waivers.",
+      "employer_coverage_pct": 70,
+      "generic_us": true,
+      "generic_rest_of_world": "India: 60+ brands at $6–40/month and the main exporter of semaglutide finished product to Africa and Southeast Asia. Canada, Brazil, Mexico, Turkey and China are generic; oral generic semaglutide is in ~40 countries. Tirzepatide is still branded everywhere except via gray exports.",
+      "gray_market": "contained",
+      "dominant_route": "mixed",
+      "note": "US generic is authorised semaglutide only: injectable Ozempic/Wegovy-equivalent, sold under the 2027 Novo–Viatris–Teva settlement terms since Jan 2028. Cash runs $49 (Cost Plus-type pharmacies, TrumpRx) to $69 (retail). No generic tirzepatide. Brand prices: Wegovy list still $1,349 (almost no one pays it); Zepbound vials via LillyDirect $299–449; Foundayo starter $149 on TrumpRx. Employer coverage recovered from 60% to 70% because generic-first formularies cut the per-member cost by ~80%. Nearly all coverage is now conditional: BMI or comorbidity entry, refill-adherence tracking, and at ~35% of large employers an outcome-based wellness premium differential. Compounding ended when the FDA finalised the 503B exclusion in Mar 2027. With a legal $49 product, the gray market has shrunk to imported tirzepatide and 'research peptide' retatrutide sold online. Fills by volume: ~55% generic semaglutide injectable, ~25% tirzepatide injectable, ~15% daily orals, ~5% other. Orals are favoured by people who take short 'drug holidays' because their shorter half-life lets appetite return within days."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide brand: Wegovy/Ozempic; authorised generic semaglutide from Jan 2028)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide, generic)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema, approved Dec 2026)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, approved Apr 2028, BMI≥35 or ≥30 with comorbidity)",
+        "Co-packaged 'muscle-preserving' regimen: tirzepatide plus prescription resistance-training digital therapeutic plus leucine/HMB medical food (Lilly 'Zepbound Strong', Jun 2028)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)"
+      ],
+      "mainstream_offlabel_uses": [
+        "alcohol reduction: widely prescribed off-label after further positive trials; still no FDA approval, and the sponsor's phase 3 in AUD reads out 2029",
+        "microdosing and 'maintenance dosing' at sub-label doses of generic semaglutide by people without obesity, via telehealth",
+        "scheduled 'drug holidays' (skipped doses before holidays, weddings, travel), endorsed by obesity-medicine society guidance as a dose-management strategy",
+        "pediatric under-12 use under specialist care",
+        "nicotine, gambling and compulsive-shopping reduction: observational and anecdotal"
+      ],
+      "pipeline_note": "CagriSema was approved Dec 2026 and has modest uptake because tirzepatide matches it at lower net price. Retatrutide's BLA was filed Mar 2027 and approved Apr 2028, 13 months later, with dysesthesia and lean-mass warnings; Medicare covers it only at BMI≥35. The drawn muscle-preserving combination is realised in a form the approval rules allow. Lilly's 'Zepbound Strong' is existing tirzepatide co-packaged with an FDA-cleared digital therapeutic and a medical food. It is marketed on a DEXA substudy showing lean mass at ~18% of weight lost against ~27% on tirzepatide alone, a result critics attribute mostly to the supervised training. The true pharmacological combinations are still in trials: bimagrumab + semaglutide/tirzepatide entered phase 3 in Q2 2027, no filing before 2029, so they are not on the US market. Amycretin is in phase 3 with no filing yet. Survodutide filed Sep 2028, so no approval before Sep 2029. MariTide, the monthly injectable, is in phase 3. No new indication was granted in this window."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common class effect. Repeated holiday-and-restart cycles re-trigger initiation-phase nausea, a new source of complaints.",
+        "regulatory_response": "Labelled; severe gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid loss; higher absolute numbers with retatrutide.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation in long-term data; absolute risk low.",
+        "regulatory_response": "Labelled; most litigation consolidated, unresolved."
+      },
+      {
+        "effect": "Lean mass (muscle) loss and sarcopenia",
+        "status": "established",
+        "prevalence_note": "Now treated as a population problem rather than a trial footnote. Medicare claims show sarcopenia and frailty diagnosis codes among users 65+ up ~40% between 2026 and 2028. Pooled DEXA cohorts show 25–40% of weight lost is lean mass in over-65s, worst in those losing >15%. Grip-strength declines are measurable in long-term users who do no resistance training.",
+        "regulatory_response": "FDA class safety labelling change (Oct 2027): lean-mass warning, with resistance training and protein recommended. CMS requires a baseline DEXA scan and annual grip-strength check for beneficiaries 65+. The industry response is co-packaged 'muscle-preserving' regimens and bimagrumab phase 3."
+      },
+      {
+        "effect": "Bone mineral density loss and fragility fractures",
+        "status": "established",
+        "prevalence_note": "Medicare cohort (published Aug 2027): users 65+ with ≥2 years of continuous use and ≥15% loss have hip/vertebral fracture HR ~1.3, about 3 extra fractures per 1,000 person-years. Hip BMD falls ~1–2% per year in the first two years. Across ~13M older users this means thousands of excess fractures a year.",
+        "regulatory_response": "Included in the Oct 2027 class labelling; USPSTF draft recommends DEXA for older adults starting therapy; osteoporosis co-prescribing is rising."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "suspected",
+        "prevalence_note": "Larger cohorts suggest small relative increase, very low absolute risk.",
+        "regulatory_response": "EMA 'very rare' label; FDA added to postmarketing section 2027; no boxed warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No new signal at 25% population exposure.",
+        "regulatory_response": "Warning remains removed."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "suspected",
+        "prevalence_note": "Prospective patient-reported cohort (Apr 2027, n≈22,000): ~16% of users report clinically meaningful anhedonia on validated scales, against ~7% at baseline. It is dose-related and mostly reversible within 2–4 weeks of dose reduction. This is the same mechanism behind the off-label alcohol use.",
+        "regulatory_response": "No label change. Obesity Medicine Association guidance (2027) recommends screening and endorses dose reduction or scheduled drug holidays; manufacturers fund 'mood and motivation' substudies."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Real-world data converge at ~50–65% of lost weight regained within a year of full cessation; short holidays of ≤2 weeks show little regain.",
+        "regulatory_response": "Underpins chronic-therapy framing and adherence-conditioned coverage."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "established",
+        "prevalence_note": "Iron, B12, vitamin D and protein insufficiency documented in long-term users with low intake.",
+        "regulatory_response": "Included in Oct 2027 labelling as nutritional counselling recommendation."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; adolescents on decades-long therapy; repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About six years of follow-up now exist for early cohorts. Cycling is near-universal (28% of ever-users have restarted), and whether repeated regain-and-loss cycles worsen body composition ('weight cycling sarcopenia') is under study, with early signals.",
+        "regulatory_response": "Postmarketing requirements; NIH-funded 10-year adolescent registry launched 2027."
+      },
+      {
+        "effect": "Compounded / counterfeit product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "Compounded semaglutide reports fell after the 503B exclusion. Remaining harms come from online 'research peptide' retatrutide and imported tirzepatide.",
+        "regulatory_response": "503B exclusion finalised Mar 2027; FDA import alerts on peptide vendors."
+      },
+      {
+        "effect": "Dysesthesia (skin sensitivity/pain) with triple agonist",
+        "status": "established",
+        "prevalence_note": "Seen in phase 3 retatrutide data; postmarketing reports are accumulating.",
+        "regulatory_response": "Labelled at retatrutide approval (Apr 2028)."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "About 38–40% of US households now include a user. US salty-snack and confectionery volumes are down ~5–7% cumulative since 2025, and full-sugar soda keeps losing volume. Price/mix and protein-forward lines partly offset the losses. Packaged-food majors run 'on-drug' sub-brands with high-protein, small-format, fibre-fortified products. Columbus, Ohio, the industry's traditional test market, is where single-serve 120-calorie formats now outsell family packs in snacks. Category revenue is flat to slightly down in real terms rather than collapsing.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volumes are down a further ~4% and beer ~3% over two years, with heavy-drinker attrition the largest component. Off-label alcohol prescribing reinforces it. Brands lean into premium single-occasion drinks and 'holiday weekend' marketing timed around skipped doses. Distributor consolidation and craft-distillery closures continue.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is roughly flat. Average check per guest is down in casual dining and up in premium. 'Small plate' and half-portion menus are standard at major chains. Buffets and all-you-can-eat formats are closing faster. Dessert attach rates are down; protein add-ons are up.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists continue shrinking, with store closures and one major chain restructuring. Mainstream retailers have expanded the size range downward and benefit from re-buying. Alterations and 'resize' services are a growth niche, and resale markets are flooded with larger sizes.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "The muscle-and-bone safety wave made strength training a medical recommendation. Medicare Advantage plans and employers fund resistance-training benefits; strength-focused gym chains and physical-therapy 'GLP-1 strength' clinics are expanding. Grip-strength kiosks appear in pharmacies, and digital therapeutic co-packs bring app-based coaching.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Generic semaglutide at ~$55 net cut covered-member cost by ~80%, so coverage rebounded from 60% to 70% of employers. Most of it is generic-first and conditional, enforced through PBM adherence reporting. Outcome-based wellness premium differentials (legal up to 30% of premium under ACA health-contingent rules, with a 'reasonable alternative standard') appear at ~35% of large employers. Pharmacy trend has moderated to ~7%. Brand tirzepatide and retatrutide sit behind step therapy.",
+        "direction": "adapted"
+      },
+      "pharma": {
+        "state": "Volumes are up sharply and US net prices are down. Novo's US revenue falls despite volume as the authorised generic cannibalises the brand, and its strategy shifts to CagriSema and ex-US. Lilly leads on tirzepatide, orals, retatrutide and the 'Strong' co-pack. Viatris and Teva gain from the generic. Global incretin revenue is ~$105B in 2028, below earlier forecasts on price erosion, though volume beat them.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "A thin body signals nothing in particular now; a heavy body after age 40 is read as a coverage problem or a choice. Being off the drug is what needs explaining: pregnancy, a gastroparesis diagnosis, a holiday, a surcharge you chose to pay, or ideology.",
+      "thinness_and_class": "Price is no longer the gate. The gate is now whether you have conditioned coverage, a clinician, and the schedule to show up for DEXA scans and refill checks. Upper-income users buy the 'Strong' co-pack, trainers and DEXA; lower-income users get generic semaglutide and lose more muscle. Sarcopenia is becoming the new class marker among the old, the way obesity was.",
+      "eating_as_ritual": "Thanksgiving and weddings are now 'skip weeks' for many families, the one time appetite comes back on schedule. Church potlucks across the South have shifted to smaller dishes and more leftovers. Restaurants train servers to offer half portions without being asked.",
+      "dating_and_intimacy": "Dating profiles commonly state on/off/holiday status. Couples coordinate skipped doses around anniversaries and trips. Libido complaints are common enough to have entered sitcom jokes. Among young men, a 'natty' (never-on) identity has hardened in gym culture as a status claim.",
+      "meaning_of_appetite": "Appetite is treated as a setting, dialled down by default and briefly turned up for occasions. Craving of any kind is assumed to be optional, which makes the people who still feel it, or who choose to, legible as outliers.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "mainstream_complaint",
+      "reward_blunting_prevalence_note": "FICTIONAL. ~16% of users report clinically meaningful anhedonia on validated scales (2027 cohort), which at 65M users is ~10M people. Dose reduction is the first-line response, and an estimated 30–40% of users take at least one scheduled 'drug holiday' a year. Adherence-conditioned coverage tolerates holidays only inside the 80% refill threshold, about six missed days a month, and users know the arithmetic.",
+      "framing": "A side effect that is managed like a dosage, the way people talk about caffeine or SSRIs: 'I'm running low this month,' 'I'm on holiday for the wedding.' At the same time, off-label alcohol prescribing frames the same flattening as the point of the drug.",
+      "effect_on_work": "Managers in sales and creative agencies report flatter pitch energy, while compliance-heavy and shift workplaces describe calmer, steadier staff. Some employees time holidays for quarter-end drives. Employers do not track mood, only refills.",
+      "effect_on_art_and_play": "Stand-up and late-night comedy has a running 'flat affect' genre. Music listening data show modest shifts toward louder, higher-tempo playlists among users. Bars and clubs report 'holiday weekend' spikes, and the sour-and-spicy snack category keeps growing as a reward workaround.",
+      "effect_on_intimacy": "Reduced desire is a commonly cited reason couples schedule holidays together. Sex therapists list GLP-1 dose review alongside SSRIs as a standard intake question. Some partners report the relationship steadier and less volatile.",
+      "effect_on_politics": "No measurable turnout effect, though pollsters now ask about use. The politics comes from conditioning, not mood. An odd coalition of privacy advocates, fat-acceptance groups and MAHA-aligned conservatives opposes adherence tracking and wellness surcharges; the administration that negotiated the prices defends them as fiscal prudence.",
+      "severity": 4
+    },
+    "state": {
+      "regulatory_posture": "Pro-access on price and speed (the Novo–Viatris–Teva settlement allowed to stand; retatrutide approved), restrictive on compounding, and newly cautious on body composition after the Oct 2027 class labelling. HHS leadership is split publicly between the price-deal framing and MAHA scepticism of lifelong pharmacotherapy.",
+      "subsidy_or_mandate": "No mandate to take the drug. Public coverage is conditioned: the Medicare Metabolic Outcomes Model ($245 brand / $55 generic; $50 / $10 copays) and Medicaid generic-first coverage in ~38 states. Federal tri-agency guidance (Mar 2028) confirms that health-contingent wellness programmes may use PBM refill data as an adherence standard if a reasonable alternative is offered.",
+      "conditioning_or_surveillance": "Continuation depends on refill adherence (proportion of days covered ≥80%), a 6-month response threshold, and for 65+ DEXA and grip strength. Eleven Medicaid states attach these conditions through 1115 waivers. PBMs report adherence to employers in aggregate and to wellness vendors individually with consent forms that are effectively mandatory. Connected-pen data are an optional 'premium discount' channel at some employers.",
+      "workforce_or_military": "DoD accession policy (2027) admits applicants who met body-composition standards on a drug only after 90 days of stability off it, which recruiters say shrinks the eligible pool. Some large employers fold GLP-1 programme enrolment into wellness surcharges; trucking and airline medical examiners add muscle and strength questions for older pilots and drivers on therapy.",
+      "geopolitics_of_supply": "US authorised generic semaglutide relies partly on peptide API from India and China, now a tariff and supply-security issue in Congress. India exports cheap semaglutide to ~100 countries. US tirzepatide prices remain far above any foreign comparator and are the new political price gap.",
+      "severity": 5
+    },
+    "events": [
+      {
+        "date": "2027-04",
+        "event": "Prospective cohort of ~22,000 users finds ~16% report clinically meaningful anhedonia, largely reversible with dose reduction; Obesity Medicine Association guidance endorses screening and scheduled 'drug holidays'",
+        "driver": "personality_layer"
+      },
+      {
+        "date": "2027-06",
+        "event": "Novo Nordisk settles US semaglutide patent litigation with Viatris and Teva; authorised generic injectable semaglutide to launch January 2028. First fills in Jan 2028 price at $49–69 cash",
+        "driver": "price_path"
+      },
+      {
+        "date": "2027-10",
+        "event": "After a Medicare cohort links long-term use in over-65s to ~30% higher fragility-fracture risk, FDA orders class labelling on lean-mass and bone-density loss and recommends DEXA for older patients",
+        "driver": "safety_signal"
+      },
+      {
+        "date": "2028-01",
+        "event": "CMS launches the Medicare Metabolic Outcomes Model to replace the expired Bridge pilot: coverage continues only with ≥80% refill adherence, a 6-month response threshold and DEXA/grip-strength checks for 65+",
+        "driver": "coverage_shift"
+      },
+      {
+        "date": "2028-03",
+        "event": "Tri-agency guidance lets employer wellness programmes use pharmacy refill data as an adherence standard for premium differentials; eleven state Medicaid programmes add adherence conditions via 1115 waivers; Gallup puts current use at one in four adults",
+        "driver": "state_action"
+      },
+      {
+        "date": "2028-06",
+        "event": "Lilly launches 'Zepbound Strong', tirzepatide co-packaged with a cleared training app and medical food, marketed as preserving muscle; critics note the drug itself is unchanged",
+        "driver": "next_gen_launch"
+      }
+    ],
+    "open_tensions": [
+      "Adherence tracking rewards uninterrupted dosing, while clinical guidance now endorses drug holidays for anhedonia. The 80% refill threshold is where those two collide, and patients are the ones doing the arithmetic.",
+      "Generic semaglutide made the drug cheap, but the cheap version is the one most associated with muscle and bone loss in people without trainers or DEXA scans. Sarcopenia is becoming a class-graded harm.",
+      "A quarter of adults are on a chronic drug whose effects over decades and over repeated cycling are unknown; adolescents and the 28% who cycle are the population no trial covers.",
+      "The conditioning regime has an unstable political base: an administration that brokered cheap drugs, an HHS sceptical of lifelong pharmacotherapy, and a privacy/fat-acceptance/MAHA coalition against surveillance."
+    ],
+    "still_true": [
+      "Wegovy's US list price remains $1,349/month, which almost no one pays.",
+      "Medicare beneficiaries pay a $50 monthly copay for brand GLP-1s at the negotiated $245 rate, carried over from the 2025 Trump–Lilly–Novo deal.",
+      "Foundayo (orforglipron) starting doses are still sold at $149 through the TrumpRx cash channel.",
+      "There is no FDA-approved generic tirzepatide; Zepbound/Mounjaro remain Lilly-exclusive in the US.",
+      "Alcohol use disorder is still not an approved indication for any GLP-1 drug; it remains off-label."
+    ]
+  },
+  "prose": {
+    "headline": "One in Four: Generic Ozempic costs $49, your boss tracks your refills, and the new worry is your grandmother's hip",
+    "world_in_600_words": "By the end of 2028 a quarter of American adults take an incretin drug, and almost nobody remarks on it. What people remark on is not being on one. A pregnant woman, a man with gastroparesis, a twenty-four-year-old who lifts and calls himself 'natty', a colleague who has chosen to pay the wellness surcharge: these are the people who get asked.\n\nPrice did most of this. In June 2027 Novo Nordisk settled its semaglutide patent fight with Viatris and Teva, and in January 2028 authorised generic injectable semaglutide reached pharmacies at $49 to $69 a month. Wegovy's list price still says $1,349, a number that now exists mainly in court filings. Tirzepatide stays branded and dearer, Lilly's oral Foundayo still starts at $149 on TrumpRx, and retatrutide, the triple agonist approved in April, takes off another quarter of body weight for people sick enough to qualify. Compounding pharmacies are gone; the gray market has dwindled to online 'research peptide' vendors.\n\nCheap did not mean unconditional. When the Medicare Bridge pilot expired, CMS replaced it with an outcomes model. Coverage continues only if refills cover 80 percent of days, weight or HbA1c moves within six months, and anyone over 65 has a DEXA scan and squeezes a grip dynamometer once a year. At roughly nine million Medicare users and a blended $131 a month, the programme costs about $14 billion a year. Employers that dropped coverage in 2026 came back because the generic costs a fifth as much, but they came back with terms attached. In March, federal guidance confirmed that wellness programmes could use pharmacy refill data as an adherence standard, and about a third of large employers now charge a premium differential to staff who miss their targets and do not take the 'reasonable alternative'. Eleven state Medicaid programmes attach similar conditions. Access is now limited less by income than by keeping up with the paperwork, which falls hardest on the uninsured poor in non-expansion states and on anyone whose life is too irregular to refill on schedule.\n\nThe worry that grew fastest was not appetite but bones. A Medicare cohort published in August 2027 found that older long-term users who lost more than 15 percent of their weight had about 30 percent more hip and vertebral fractures, and the FDA added lean-mass and bone warnings across the class that October. Sarcopenia codes are up by two-fifths among older users. Strength gyms, physical-therapy clinics and pharmacy grip-strength kiosks are the growth businesses. In June Lilly launched 'Zepbound Strong', tirzepatide boxed with a training app and a leucine medical food, advertised as solving the 'skinny-frail' problem. The drug inside is unchanged, and the pharmacological muscle drugs are still in phase three. Affluent users buy the co-pack and a trainer; most others get the generic and a pamphlet.\n\nThe flattening that was a curiosity in 2026 is now a routine complaint. A 2027 cohort put clinically meaningful anhedonia at about one user in six, mostly reversible with a lower dose. Obesity-medicine guidance now endorses scheduled 'drug holidays', and families plan them around Thanksgiving, weddings and anniversaries. Insurers tolerate them only within the 80 percent rule, which works out to roughly six missed days a month, and people do that sum in their heads. Sex therapists ask about doses at intake. Bars report busy holiday weekends.\n\nThe food industry has adapted rather than collapsed. In Columbus, Ohio, single-serve snack packs outsell family bags, and casual chains offer half plates without being asked. Spirits keep losing their heaviest drinkers, partly to off-label prescriptions the FDA has still not approved. Politically, the drug has unusual opponents. Privacy advocates, fat-acceptance groups and MAHA conservatives all oppose refill surveillance, while the administration that negotiated the prices defends the conditions as the cost of making the drug cheap.",
+    "a_day_in_the_life": "Denise Alvarado wakes at 5:40 in San Antonio and checks the app before the coffee. Adherence: 83 percent. Green. She took the holiday for Marisol's baby shower, and it cost her four points.\n\nThe generic pen is in the butter compartment. Tuesday is pen day. She pinches her belly, counts ten, and drops the pen in the coffee can of sharps on top of the fridge.\n\nAt the hospital payroll office, Teresa from benefits is walking the floor with a clipboard. Open enrollment. Forty-five dollars a paycheck if you're not in the program or haven't hit target. Teresa says it nicely. Denise is in the program.\n\nLunch is half a turkey wrap. She wraps the other half for later and forgets it.\n\nAfter work she drives her mother to the Walgreens on Bandera for the grip test. Her mother is eighty-one, on the Medicare generic, ten dollars a month. She squeezes the handle with both hands though the tech says one. Fourteen kilograms. Last year it was seventeen. The tech prints a sheet that says RESISTANCE TRAINING in capitals and recommends a bone scan.\n\n'I lift the laundry,' her mother says.\n\nAt home, her son Mateo is eating cereal from a mixing bowl at the counter, a bowl the size of a hubcap. He's twenty-four and has never been on it. He's proud of that, the way her father was proud of never seeing a doctor.\n\n'You want some?' he says.\n\nShe watches him eat and feels nothing in particular, which she has learned to notice. Then she takes her mother's sheet and sticks it to the fridge."
+  }
 }

@@ -21,7 +21,270 @@
     "state_action": "subsidy",
     "personality_layer": "employer_encouraged"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:23:29Z"
+  "created_at": "2026-11-08T06:23:29Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01Qb8yCsC4kjWpUWhmeURU2J",
+        "custom_id": "s1-L0-r25",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 13527,
+        "output_tokens": 21711
+      }
+    ]
+  },
+  "world": {
+    "year": 2028,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 18.5,
+      "us_adults_ever_used_pct": 25,
+      "by_income_third_pct": {
+        "top": 24,
+        "middle": 19,
+        "bottom": 12.5
+      },
+      "by_age_band_pct": {
+        "18_29": 8,
+        "30_49": 18,
+        "50_64": 30,
+        "65_plus": 16.5
+      },
+      "pediatric_under_18_on_drug_pct": 1.3,
+      "cycled_off_and_on_pct": 40,
+      "note": "FICTIONAL. Current use counts any incretin, any reason. 18.5% of ~263M adults ≈ 48.7M users. Cycling arithmetic: ever 25 − current 18.5 = 6.5 pts used-and-off now; 15 pts (60% of ever-users) have stopped at least once; 8.5 pts restarted and are back on, 1.5 pts restarted then stopped again, 5 pts stopped and never restarted → restarted at least once = 10/25 = 40%; never-stopped current users = 18.5 − 8.5 = 10 pts. Cumulative multi-year restart rate among stoppers (10/15 = 67%) exceeds the parent's 36–47% within-one-year figure because the window is longer and orals lower the cost of re-entry. Age check (adult shares 20/33/24/23%): 1.6+5.94+7.2+3.8 = 18.5. Income check: (24+19+12.5)/3 = 18.5. Who pays for the 48.7M: Medicare 9.0M (5.0M diabetes/cardiac codes, 4.0M GLP-1 Bridge obesity); Medicaid 5.5M (3.5M diabetes, 2.0M obesity at $245); federal free provision at health centres 1.2M; commercial insurance 15.0M (mostly diabetes/cardiac/OSA codes); employer direct-contract oral programmes outside the medical plan 4.5M; brand cash-pay (LillyDirect, NovoCare, TrumpRx) 7.5M; gray market (compounded, personally imported Indian/Chinese generics, counterfeits) 6.0M — total 48.7M. About 6.5M users (13%) have BMI <30 and no diabetes: the 'metabolic health'/longevity cohort, concentrated in the top income third and ages 30–49. The bottom third's 12.5% is held up by Medicaid, the health-centre programme and the gray market; roughly a third of bottom-third users are on non-FDA product. Children: ~950k under-18s on drug, mostly 12–17; ages 6–11 approved Mar 2028 (semaglutide) and 2027 (liraglutide), fewer than 60k children under 12 on therapy by Dec 2028. Adult obesity estimated ~33% (from 36.4%)."
+    },
+    "access": {
+      "cash_price_usd_month_low": 199,
+      "cash_price_usd_month_high": 1349,
+      "public_coverage": "Medicare GLP-1 Bridge extended by CMMI through Dec 2029 at the same $245/month Medicare payment and ~$50 copay; ~4.0M beneficiaries enrolled for obesity: 4.0M × $245 × 12 ≈ $11.8B/yr gross Medicare spend (well above the CBO $35B/2026–2034 path, which assumed slower uptake). Medicaid: 31 states cover obesity at the $245 rate; ~2.0M enrollees: 2.0M × $245 × 12 ≈ $5.9B/yr total, ~$3.8B federal at ~65% blended FMAP. Federal Metabolic Health Access Program (HRSA, from Oct 2027): free Foundayo (orforglipron) at federally qualified health centres for uninsured adults with BMI ≥35, or ≥30 plus comorbidity, bought at $120/month: 1.2M × $120 × 12 ≈ $1.7B/yr from a $2B appropriation line.",
+      "employer_coverage_pct": 45,
+      "generic_us": false,
+      "generic_rest_of_world": "India: 60+ brands, $6–40/month; China's semaglutide generics launched 2026–27 and are the main API source for gray-market product; Canada generic semaglutide ~CAD 75–110/month; Brazil, Mexico, Turkey generics widespread; generic semaglutide available in ~165 countries. The US remains the only large market with no generic.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Price shock: the Mar 2027 sterility recall at Novo's Bloomington, Indiana fill-finish site put Wegovy/Ozempic pens back on the FDA shortage list for seven months; Novo withdrew the $149 oral starter price for new patients and lifted the NovoCare/TrumpRx injectable cash price from $349 to $449; Lilly matched oral entry at $199 and held Zepbound vials at $399–549. Effective median cash price paid by brand-cash users rose from ~$350 (2026) to ~$430 (2028) — the $245 target was never reached. Shortage re-listing briefly reopened 503A compounding, undoing a year of FDA enforcement. Employer coverage for weight management fell to 45% (Business Group on Health, 2028); coverage concentrates on diabetes, cardiovascular, OSA, MASH and CKD codes. In place of coverage, ~1 in 5 large employers runs a direct-contract oral programme ($149–199/month negotiated, employer-paid or shared) tied to wellness incentives. Route: weekly injectables ~50% of US fills, orals ~45% and rising after the 50 mg Wegovy pill; ~5% daily liraglutide."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg and 50 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1/amylin combination, weekly injectable (CagriSema, approved Dec 2026)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)",
+        "GIP/GLP-1/glucagon triple agonist (retatrutide) — approved Oct 2028, US launch Q1 2029"
+      ],
+      "best_efficacy_pct_body_weight": 28.3,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "pediatric obesity ages 6–11 (liraglutide 2027; semaglutide Mar 2028)",
+        "heart failure with preserved ejection fraction and obesity (tirzepatide, 2027)"
+      ],
+      "mainstream_offlabel_uses": [
+        "'metabolic health' and longevity use by people without obesity — ~6.5M US adults, mostly low-dose orals through telehealth and concierge longevity clinics, often bundled with DEXA scans, protein plans and strength coaching",
+        "alcohol reduction — semaglutide sNDA for alcohol use disorder filed Jun 2028, decision 2029; widely prescribed off-label for 'drinking less' meanwhile",
+        "nicotine and other craving reduction — observational and anecdotal",
+        "employer-programme use described as 'craving control' among people at the BMI threshold"
+      ],
+      "pipeline_note": "Oral parity realised as an existing product in a new form: Wegovy pill 50 mg approved Mar 2028 after a head-to-head 68-week trial showing non-inferiority to weekly injectable semaglutide 2.4 mg (16.4% vs 16.9%). No pill yet matches tirzepatide (~21%) or retatrutide. Novo moved capacity toward the pill partly because pills skip sterile fill-finish, the step that failed in 2027; new API capacity in Clayton, NC came online in 2027. CagriSema approved Dec 2026 (~20%), modest uptake given the REDEFINE-4 result. Retatrutide BLA filed Mar 2027, approved Oct 2028 with a dysesthesia warning; supply-limited launch 2029. Amycretin still in phase 3, no filing. Survodutide phase 3, no US filing. MariTide (monthly) and bimagrumab-type muscle-preserving adjuncts in trials, not marketed. Global incretin market ~$115B (2028)."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the most common class effect and leading cause of discontinuation; oral 50 mg shows similar GI rates to injection.",
+        "regulatory_response": "Labelled; severe-gastroparesis language retained and extended to the 50 mg pill."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss; expected to rise with retatrutide.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation in long-term RCTs; absolute risk low; counterfeit-product cases muddy pharmacovigilance.",
+        "regulatory_response": "Labelled; multidistrict litigation ongoing."
+      },
+      {
+        "effect": "Lean mass (muscle) loss",
+        "status": "established",
+        "prevalence_note": "~25–30% of lost weight; concern sharpened by pediatric approval and older Medicare users; bone-density signal under study; outcomes differ sharply by whether users strength-train and eat adequate protein.",
+        "regulatory_response": "None beyond label advice; muscle-preserving adjuncts still in trials."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "established",
+        "prevalence_note": "Pooled 2027 analysis of US and Nordic registries: roughly a doubling of a rare baseline (~2–10 per 100,000 per year), on the order of 1,000–2,000 excess cases a year at current US use; risk higher with diabetes and rapid dose escalation.",
+        "regulatory_response": "FDA class labelling change (Nov 2027) adds a NAION warning to all GLP-1 receptor agonists; patients told to report sudden painless vision loss; EMA upgraded from 'very rare' to warning."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association in EMA, MHRA and systematic review data; no new signal.",
+        "regulatory_response": "Warning remains removed from Saxenda, Wegovy and Zepbound labels."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "emerging",
+        "prevalence_note": "First quantification: a 2027 prospective cohort (n≈9,000) found ~11% of users on drug ≥6 months had clinically meaningful increases in anhedonia scores vs ~6% in matched non-users; dose-dependent; partly reversible on dose reduction. Same mechanism as the AUD effect.",
+        "regulatory_response": "FDA requested anhedonia measures in postmarketing studies; no label language."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "Trial and real-world figures still conflict; regain is the engine of the cycling population (40% of ever-users have restarted).",
+        "regulatory_response": "None; underpins chronic-therapy framing and employer adherence incentives."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Further observational signal, especially in older adults and low-income users on low-quality diets.",
+        "regulatory_response": "None; professional societies issue nutrition-monitoring guidance."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; effects in children and adolescents who may take these for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About six years of RCT follow-up now exists; no decade data; children aged 6–11 now an approved population.",
+        "regulatory_response": "Postmarketing requirements on every new approval, incl. a 10-year pediatric registry tied to the 6–11 approval."
+      },
+      {
+        "effect": "Pediatric growth, pubertal timing and bone accrual",
+        "status": "emerging",
+        "prevalence_note": "Not detected in STEP Young (68 weeks) but trial too short; raised by pediatric endocrinologists.",
+        "regulatory_response": "Required registry; label recommends growth monitoring."
+      },
+      {
+        "effect": "Compounded / counterfeit product harms (dosing errors, contamination, mislabelled contents)",
+        "status": "established",
+        "prevalence_note": "Gray-market users ~6M. Oct 2027 CDC health alert: counterfeit 'semaglutide' pens containing insulin caused 212 hospitalisations for severe hypoglycaemia and 11 deaths in 19 states; separate clusters of injection-site infections from non-sterile vials; FDA adverse-event reports tied to compounded or counterfeit product passed 4,000.",
+        "regulatory_response": "503B exclusion finalised; CBP mail-seizure surge; FDA import alert on unapproved semaglutide; shortage listing (Mar–Oct 2027) temporarily re-legalised 503A compounding, then closed again."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households ~30% of US households. Salty snack and confectionery volumes down ~4–5% cumulative since 2026, partly masked by price; sugary drinks down; protein, fibre and 'small-format' SKUs keep growing. Two-tier shelves: premium high-protein lines aimed at affluent on-drug shoppers, value packs still selling in lower-income zip codes. Big CPG firms divesting candy and snack brands to private equity.",
+        "direction": "contracting"
+      },
+      "alcohol": {
+        "state": "US spirits and beer volumes fell again in 2027–28; heavy drinkers in the top decile are the most likely to be on drug; brewers pivot to non-alcoholic and 'one good drink' premium formats; AUD sNDA filing reinforces the trend.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic roughly flat; smaller-plate menus, half portions and protein bowls standard in fast casual; fine dining sells tasting menus as 'occasion'; bar revenue per head down in affluent neighbourhoods.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists shrinking (store closures at Torrid and peers); mainstream brands sell 'transition' wardrobes; athleisure that displays muscle is the growth line in upper-income markets.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength training is a status good: premium gyms and coached 'muscle preservation' programmes sold as on-drug companions, priced $150–400/month; budget gyms flat; DEXA scanning a consumer product.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Weight-management coverage at 45% of employers; pharmacy trend still high-single-digit; coverage concentrated on diabetes/cardiac codes with strict prior auth; employers shift obesity spend to cheaper direct-contract oral programmes outside the medical plan.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Duopoly intact; Lilly widened its lead after Novo's 2027 recall; Novo recovering on the 50 mg pill; global market ~$115B; political pressure over the US–India price gap and the failure to reach $245.",
+        "direction": "growing"
+      },
+      "severity": 4
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "Lean-and-muscular reads as insured, salaried and coached; soft-thin reads as on-drug without the gym; heavy bodies read increasingly as uninsured or rural. Being on the drug is unremarkable; how you look on it is the tell.",
+      "thinness_and_class": "Top-third use is 24% vs 12.5% in the bottom third, and the top third's users pair the drug with strength coaching, protein and DEXA scans. In Scottsdale, Austin and Miami, the 30–49 'metabolic health' crowd treats low-dose orals as maintenance, like a statin. In the Mississippi Delta and Appalachian Ohio, users are more likely on health-centre Foundayo or a WhatsApp pen, and lose more muscle.",
+      "eating_as_ritual": "Shared meals shrink: half portions, protein-first plates, 'tasting' instead of eating. Family dinners split between on-drug parents and children who aren't, or now are. Thanksgiving is a running joke about leftovers.",
+      "dating_and_intimacy": "Dating profiles list fitness and, more quietly, medication; 'on it, and lifting' is a class signal. Couples therapists report mismatched desire between on-drug and off-drug partners as a common presenting issue.",
+      "meaning_of_appetite": "Appetite is managed like blood pressure. Visible hunger, for food, drink or anything else, reads as a lack of access or of discipline, and those readings overlap with class.",
+      "severity": 5
+    },
+    "interior_life": {
+      "personality_layer": "employer_encouraged",
+      "reward_blunting_prevalence_note": "FICTIONAL. 2027 cohort: ~11% of users ≥6 months show meaningful anhedonia increases vs ~6% of non-users (~2.5M excess Americans at current use if it generalises). Dose-dependent; most are not distressed by it; some describe it as relief.",
+      "framing": "In HR and wellness-vendor language it is 'craving control' and 'steadiness', a feature. Clinicians call it a side effect. In the AUD filing it is the treatment. Users call it 'the quiet'.",
+      "effect_on_work": "Large self-insured employers in logistics, call centres and hospital systems run direct oral programmes with premium credits (up to $600/year) for ≥80% refill adherence, tracked by wellness vendors under ADA wellness limits. Vendor reports show lower absenteeism, fewer alcohol-related incidents and fewer workplace injuries. A 2028 claims analysis finds programme users twice as persistent as cash payers, and job loss is the strongest predictor of stopping, so adherence and employment now track each other. Some sales and creative firms complain privately of flat drive; a few quietly let employees opt for lower doses.",
+      "effect_on_art_and_play": "Nightlife contracts in affluent districts; bar-centred music scenes lose money while daytime run clubs and lifting meets grow. Comedians mine 'the quiet'. Some musicians and writers publicly come off the drug to 'get the hunger back', and the drug-free artist is becoming a recognisable persona.",
+      "effect_on_intimacy": "Reduced libido and emotional connection reported by a minority of users; mismatched couples are a therapy staple; some couples time doses around anniversaries and holidays.",
+      "effect_on_politics": "Drug price and counterfeits are a 2028 campaign issue ('why does India pay $20?'). A Teamsters grievance and an EEOC charge challenge adherence-linked premium credits as coercive. Speculation about a 'blunted electorate' circulates without evidence; turnout data show nothing.",
+      "severity": 5
+    },
+    "state": {
+      "regulatory_posture": "Pro-access and pro-speed on brands (priority vouchers, pediatric approval, 50 mg pill), hard enforcement on compounders and imports. The 2027 shortage briefly forced FDA to tolerate the compounding it had just shut down.",
+      "subsidy_or_mandate": "Direct subsidy without mandate: Medicare GLP-1 Bridge extended to 2029 ($245/$50), Medicaid in 31 states, and free Foundayo through the HRSA Metabolic Health Access Program for ~1.2M uninsured adults. The subsidy depends on US-made small-molecule supply, which kept running through the semaglutide shortage.",
+      "conditioning_or_surveillance": "Public programmes require BMI/comorbidity criteria and prior auth; HRSA programme requires quarterly visits. Private conditioning is where the surveillance is: employer wellness vendors track refill data to pay adherence incentives. Legal within ADA/HIPAA wellness rules but contested.",
+      "workforce_or_military": "DoD allows medically supervised GLP-1 use in pre-accession fitness programmes for recruits above weight standards, requiring 90 days off-drug at standard before shipping. Some states fund GLP-1 programmes for public-employee plans in place of weight coverage.",
+      "geopolitics_of_supply": "The US–India price gap (~$430 cash median vs $6–40) drives personal importation; Chinese API feeds counterfeit pens; CBP seizures and an FDA import alert are the response. Novo's Danish and US capacity was strained after the recall; Lilly's US-built oral capacity became strategically favoured, and HHS bought from it.",
+      "severity": 4
+    },
+    "events": [
+      {
+        "date": "2027-03",
+        "event": "FDA warning letter and sterility recall at Novo Nordisk's Bloomington, Indiana fill-finish site; Wegovy and Ozempic pens return to the shortage list for seven months; Novo raises cash injectable price to $449 and ends the $149 oral starter price for new patients",
+        "driver": "price_path: shock_up"
+      },
+      {
+        "date": "2027-09",
+        "event": "HHS extends the Medicare GLP-1 Bridge through 2029 and launches the Metabolic Health Access Program, providing free Foundayo at federally qualified health centres to uninsured adults with obesity",
+        "driver": "state_action: subsidy"
+      },
+      {
+        "date": "2027-10",
+        "event": "CDC health alert: counterfeit semaglutide pens containing insulin linked to 212 hospitalisations and 11 deaths in 19 states; FDA import alert on unapproved semaglutide; CBP seizures of mailed pens triple",
+        "driver": "market_shock: generic_flood_counterfeits"
+      },
+      {
+        "date": "2027-11",
+        "event": "FDA orders class labelling for NAION on all GLP-1 receptor agonists after pooled registry analysis shows roughly doubled risk",
+        "driver": "safety_signal: vision_class_label"
+      },
+      {
+        "date": "2028-03",
+        "event": "FDA approves 50 mg Wegovy pill as non-inferior to weekly injectable semaglutide, and approves semaglutide for obesity in children aged 6–11",
+        "driver": "next_gen_launch: oral_parity; new_indications: pediatric_under_12"
+      },
+      {
+        "date": "2028-06",
+        "event": "Business Group on Health: employer weight-management coverage falls to 45% while 1 in 5 large employers runs a direct-contract oral GLP-1 programme with adherence-linked premium credits; Teamsters file first grievance",
+        "driver": "coverage_shift: employer_retreat; personality_layer: employer_encouraged"
+      }
+    ],
+    "open_tensions": [
+      "Employers are paying less for coverage and more for adherence: premium credits tied to refill data link drug use to employment, and the EEOC charge and union grievances will test whether that is voluntary.",
+      "The shortage ended but the cash price stayed up ($430 median vs a $245 target and $6–40 in India); ~6M Americans are on gray-market product and enforcement is not closing the gap.",
+      "Children aged 6–11 can now start a drug that may run for decades, with NAION now on the label, no growth data beyond 68 weeks, and uptake skewed to affluent families.",
+      "Reward blunting has been measured at ~1 in 10 long-term users. Employers call it a benefit, the AUD filing calls it a treatment, and nothing regulates which framing wins."
+    ],
+    "still_true": [
+      "No FDA-approved generic semaglutide or tirzepatide; US semaglutide exclusivity still runs to roughly 2031–32",
+      "Wegovy list price remains $1,349/month",
+      "Medicare pays ~$245/month with a ~$50 beneficiary copay under the GLP-1 Bridge",
+      "Novo Nordisk and Eli Lilly remain the only makers of approved branded incretins in the US",
+      "The suicidal-ideation warning remains removed from Saxenda, Wegovy and Zepbound labels"
+    ]
+  },
+  "prose": {
+    "headline": "The Body Is the Pay Stub: In 2028 the pill comes with the job, the muscle comes with the money, and the cheap pens come by mail",
+    "world_in_600_words": "Nearly one American adult in five is on an incretin drug, about 48 million people, and a quarter have tried one. In most of the country the drug is no longer the story. What gets talked about is who pays for it, which version people take, and what they look like on it.\n\nThe cheap era Americans were promised never arrived. In March 2027 Novo Nordisk's fill-finish plant in Bloomington, Indiana failed an FDA inspection, and pens went back on the shortage list for seven months. When supply returned the price didn't come back down. Cash injectables now cost about $449, the oral entry price moved from $149 to $199, and the $245 that Washington had talked about became a Medicare number, not a pharmacy one. In India the same molecule costs about twenty dollars. That gap is the main reason roughly six million Americans now inject something that came by mail from a WhatsApp seller, a Canadian-looking website or a cousin's suitcase. In October 2027 counterfeit pens filled with insulin put 212 people in hospital and killed eleven. Customs seizures tripled after that. The orders kept coming.\n\nEmployers kept retreating. Fewer than half now cover weight management, and what coverage remains is tied to diabetes, heart and sleep-apnoea codes behind prior authorisation. Something else is filling the gap. About one large employer in five, mostly in logistics, call centres and hospital systems, buys oral pills directly at $149 to $199 a month and pays workers a premium credit for refilling on time. The vendor reports show fewer sick days, fewer injuries and less drinking. The claims data show that programme users stay on the drug twice as long as cash payers, and that losing a job is the surest predictor of stopping. A Teamsters local in Memphis has filed a grievance calling the credit a tax on refusal.\n\nThe state is subsidising, unevenly. Medicare's Bridge was extended to 2029, Medicaid covers obesity in 31 states, and since late 2027 federally qualified health centres hand out free Foundayo to uninsured adults. That programme runs on Lilly's US-made small molecule, which the 2027 recall never touched. The bottom income third uses the drug at about half the rate of the top third, and a third of those users are on gray-market product.\n\nThe pill has caught up. In March 2028 a 50-milligram Wegovy tablet matched the weekly injection head to head, and for most new patients the needle is now optional. The same month, the FDA approved semaglutide for children aged six to eleven. A ten-year registry is the only long-term promise attached. Optic-nerve damage, NAION, now carries a class warning on every GLP-1 drug. Retatrutide was approved in October with a warning of its own and reaches pharmacies next year.\n\nWhat people look like on the drug now sorts them by class. In Scottsdale and Austin, people in their thirties and forties with no obesity take low-dose pills as 'metabolic maintenance' and pair them with coached lifting and DEXA scans. The look is lean, visibly muscular and expensive. In the Delta, users on health-centre pills or mailed pens get thinner and softer and lose more muscle. Snack volumes and spirits keep falling. Plus-size chains close stores. Premium gyms are growing.\n\nThe flatness has been measured. About one long-term user in ten shows a meaningful rise in anhedonia, almost twice the rate in matched non-users. Human-resources vendors call it steadiness. Novo's alcohol-use-disorder filing calls it treatment. Users call it the quiet. Nobody has decided which of these it is, and most people's days go on much as before, with smaller lunches.",
+    "a_day_in_the_life": "Marisol Reyes wakes at 4:40, takes the white Foundayo tablet with water, and waits the thirty minutes before coffee. On the fridge is the refill calendar from the wellness portal: 94 percent this quarter, which means the fifty-dollar credit on her next paycheck.\n\nAt the distribution centre in Southaven she runs inventory on the cold-chain aisle. Her break-room locker holds a protein shake and half a tortilla. She used to bring two. Her supervisor jokes that the aisle hasn't had a forklift scrape since spring. Marisol laughs a beat late, the way she does now.\n\nAt lunch her sister Dani texts a photo of a pen with Hindi on the box. Forty dollars, two months. Marisol types not after the insulin thing, deletes it, and sends a heart.\n\nAt 3:30 she picks up Mateo, ten, from school. The pediatrician says he qualifies now. Her plan covers his asthma inhaler but not this. The NovoCare price is $449. She has the tab open on her phone in the pickup line and closes it when he gets in.\n\nThey stop at the gym her cousin manages. Women from the Germantown side are deadlifting in matching sets. Marisol walks on a treadmill for twenty minutes and notices she doesn't mind and doesn't enjoy it either.\n\nDinner is rice, chicken, a bag of pan dulce for Mateo. She eats one piece slowly, waiting for the pull she used to fight. It doesn't come. She wraps the rest for tomorrow, checks the refill app, and at 9:10 the screen says: On track."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }

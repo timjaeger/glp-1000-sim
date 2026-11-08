@@ -21,7 +21,271 @@
     "state_action": "subsidy",
     "personality_layer": "marketed_feature"
   },
-  "status": "pending",
+  "status": "ok",
   "generator_model": "claude-opus-5-5",
-  "created_at": "2026-11-08T06:23:29Z"
+  "created_at": "2026-11-08T06:23:29Z",
+  "provenance": {
+    "generation": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01Qb8yCsC4kjWpUWhmeURU2J",
+        "custom_id": "s1-L0-r29",
+        "model": "claude-opus-5-5",
+        "served_model": "claude-opus-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "tool_use",
+        "input_tokens": 13453,
+        "output_tokens": 17872
+      }
+    ]
+  },
+  "world": {
+    "year": 2028,
+    "fictional": true,
+    "population": {
+      "us_adults_on_drug_pct": 14,
+      "us_adults_ever_used_pct": 20,
+      "by_income_third_pct": {
+        "top": 18,
+        "middle": 14,
+        "bottom": 10
+      },
+      "by_age_band_pct": {
+        "18_29": 6,
+        "30_49": 13,
+        "50_64": 24,
+        "65_plus": 12
+      },
+      "pediatric_under_18_on_drug_pct": 0.6,
+      "cycled_off_and_on_pct": 25,
+      "note": "FICTIONAL ESTIMATES. ~37M US adults (14% of ~265M) on an incretin for any reason at end-2028. Arithmetic: 20 ever − 14 current = 6 off now (5 never restarted + 1 restarted then stopped again); current 14 = 10 on a first course (≈4 of them started in the last 12 months, so not yet tested by the one-third one-year persistence) + 4 restarters; ever-restarted = 4 + 1 = 5, so cycled = 5/20 = 25%; ever-stoppers = 5 + 5 = 10, of whom 5 restarted (50% cumulative, consistent with 36–47% restarting within one year plus later restarts). The 2027 injectable shortage pushed many of these restarts onto a different molecule or onto oral pills. Age weights (20/33/24/23% of adults) give 1.2 + 4.3 + 5.8 + 2.8 = 14.0. The 65+ rise from 9 to 12 tracks the extended Medicare Bridge plus the 2028 dementia risk-reduction guideline. Income split: top third 18, middle 14, bottom 10. The bottom figure counts ~0.8M people on the HRSA free-provision programme (about 0.3% of adults) and Medicaid in the states that adopted the $245 rate. The off-drug population is about 16M adults who have used and stopped, plus ~228M who never started. Among the never-started, about 40M have obesity and no coverage. Under-18 use is about 0.6% of minors (~0.45M), mostly ages 12–17 on semaglutide. Upper-income children are still prescribed far more often."
+    },
+    "access": {
+      "cash_price_usd_month_low": 149,
+      "cash_price_usd_month_high": 1599,
+      "public_coverage": "Medicare GLP-1 Bridge extended unchanged through Dec 2029 (CMS, Dec 2027): Medicare pays ~$245/month, $50 copay. About 1.5M beneficiaries enrolled for obesity at end-2028: 1.5M × $245 × 12 ≈ $4.4B/yr gross federal, in line with CBO's ≥$35B over 2026–2034. Medicaid at the same rate in 14 states. New: HRSA Metabolic & Craving Care Program (Jan 2028) gives free daily oral GLP-1 (Foundayo or Wegovy pill) at community health centers to uninsured adults with obesity plus a comorbidity, or with alcohol use disorder. FY2028 appropriation $1.5B, of which $1.2B is drug purchase at a federal price of $99/month ($1,188/person-year) → ~1.0M funded slots; ~0.8M enrolled by Dec 2028.",
+      "employer_coverage_pct": 56,
+      "generic_us": false,
+      "generic_rest_of_world": "Generic semaglutide in ~160 countries. India $8–45/month. Canada CAD 80–110. Brazil, Mexico and Turkey widely available. Indian generics became the main source of US personal-importation demand during the 2027 shortage.",
+      "gray_market": "significant",
+      "dominant_route": "mixed",
+      "note": "Price shock (2027): a sterility recall at Novo's Bloomington, Indiana fill-finish site (formerly Catalent) cut US supply of high-dose Wegovy/Ozempic pens from Jul 2027 to Mar 2028. FDA declined to put semaglutide back on the shortage list, citing oral supply, so legal compounding stayed closed. Novo suspended new-start cash pens and dropped intro pricing (self-pay pens $349 → $499). Lilly raised self-pay Zepbound vials at the top doses from $499 to $599 as switchers poured in. Oral starting doses stayed at $149–150. Higher oral doses rose from $299 to $349. Retatrutide (May 2028) lists at $1,599, with LillyDirect self-pay at $1,049 and a supply-limited allocation. Employer coverage for weight management drifted from 60% to 56% (no structural change; tighter BMI and prior-authorisation rules). Gray market moved from contained to significant: mailed Indian generic pens and 'personal-use' importation via Canadian and Mexican pharmacies. FDA import alerts and CBP seizures rose, but enforcement against individuals is rare. By volume, weekly injectables are about 55% of fills and orals about 45%, up from ~15%, driven by the shortage and the $149 entry tier."
+    },
+    "drugs": {
+      "on_market_classes": [
+        "GLP-1 agonist, weekly injectable (semaglutide: Wegovy/Ozempic)",
+        "GIP/GLP-1 dual agonist, weekly injectable (tirzepatide: Zepbound/Mounjaro)",
+        "GIP/GLP-1/glucagon triple agonist, weekly injectable (retatrutide, Lilly; approved Apr 2028)",
+        "GLP-1 + amylin combination, weekly injectable (CagriSema, Novo; approved Dec 2026)",
+        "GLP-1 agonist, daily oral peptide (Wegovy pill 25 mg; Rybelsus)",
+        "GLP-1 small-molecule, daily oral (orforglipron: Foundayo)",
+        "GLP-1 agonist, daily injectable (liraglutide: Saxenda, incl. generics)"
+      ],
+      "best_efficacy_pct_body_weight": 28,
+      "indications_beyond_weight_and_diabetes": [
+        "cardiovascular risk reduction (semaglutide, 2024)",
+        "obstructive sleep apnea (tirzepatide)",
+        "MASH / liver (semaglutide)",
+        "chronic kidney disease (semaglutide)",
+        "adolescent obesity 12+ (semaglutide, liraglutide)",
+        "alcohol use disorder — guideline-endorsed, not FDA-approved: ASAM focused update (May 2027) lists semaglutide as an option for AUD in adults with obesity or type 2 diabetes; VA/DoD SUD guideline follows (2028)",
+        "cognitive decline / dementia risk reduction — guideline-endorsed, not FDA-approved: Alzheimer's Association/AAN risk-reduction guidance (Feb 2028) lists GLP-1 RA therapy among modifiable-risk interventions for adults with T2D or obesity, based on pooled CV-outcome-trial data (~20% lower incident dementia) after EVOKE failed in established early Alzheimer's (2025)"
+      ],
+      "mainstream_offlabel_uses": [
+        "low-dose 'craving care' / calm-and-focus use by people without obesity via telehealth, mostly on the $149 oral starting dose",
+        "alcohol reduction in people without obesity (outside the ASAM criteria)",
+        "dementia prevention requests from normal-weight older adults",
+        "pediatric under-12 use under specialist care",
+        "nicotine and gambling craving reduction — observational evidence only"
+      ],
+      "pipeline_note": "Retatrutide: BLA filed Feb 2027, approved Apr 2028 (14 months later, inside the 12-month minimum rule). Label: 28.3% mean loss at 80 weeks in phase 3; the commonly quoted '30%' is the 104-week BMI≥35 figure. Labelled for dysesthesia. Launch is allocation-limited to ~150k patients in 2028. CagriSema approved Dec 2026, modest uptake after losing on non-inferiority to tirzepatide. Survodutide filed Jul 2027 and is under review, decision expected mid-2029. Amycretin is in phase 3 with no filing, not expected before 2030. MariTide (monthly) and bimagrumab muscle-preserving adjunct are still in trials and not on the US market. No semaglutide AUD or dementia NDA has been filed; Novo is running a phase 3 in AUD (readout 2029). Global incretin market ~$118B (2028) on volume growth despite US unit-price erosion."
+    },
+    "safety_ledger": [
+      {
+        "effect": "Gastrointestinal (nausea, vomiting, diarrhoea, constipation, reflux)",
+        "status": "established",
+        "prevalence_note": "Still the leading cause of discontinuation. Higher with retatrutide at escalation. Lower with the low-dose 'calm' regimens, which partly explains their popularity.",
+        "regulatory_response": "Labelled; severe-gastroparesis caution retained."
+      },
+      {
+        "effect": "Gallbladder disease",
+        "status": "established",
+        "prevalence_note": "Elevated with rapid weight loss. Retatrutide's greater loss makes it a higher-rate exposure.",
+        "regulatory_response": "Labelled."
+      },
+      {
+        "effect": "Pancreatitis",
+        "status": "suspected",
+        "prevalence_note": "No causal confirmation in long-term RCTs; absolute risk low.",
+        "regulatory_response": "Labelled; multidistrict litigation ongoing, no verdicts on causation."
+      },
+      {
+        "effect": "Lean mass (muscle) loss",
+        "status": "established",
+        "prevalence_note": "~25–40% of lost weight is lean mass, more in absolute terms with triple agonists. Concern sharpened in Medicare-age users and in the dementia-prevention population. Bone-density signal under study.",
+        "regulatory_response": "None on label. Retatrutide postmarketing study on body composition and fractures required."
+      },
+      {
+        "effect": "NAION (non-arteritic anterior ischaemic optic neuropathy)",
+        "status": "established",
+        "prevalence_note": "FDA Sentinel analysis plus a 2027 meta-analysis of 14 cohorts: pooled HR ~1.7 for semaglutide and tirzepatide. Absolute excess on the order of 1–3 cases per 10,000 person-years, higher in people with diabetes, sleep apnea or a crowded optic disc.",
+        "regulatory_response": "FDA class Warning & Precaution for all GLP-1 RA products (Sep 2027), carried onto the CagriSema and retatrutide labels. It advises stopping if sudden vision loss occurs and recommends an eye exam before starting in high-risk patients. EMA upgraded from 'very rare' to a warning (2028). New mass-tort filings follow."
+      },
+      {
+        "effect": "Suicidal ideation",
+        "status": "debunked",
+        "prevalence_note": "No causal association; status unchanged.",
+        "regulatory_response": "Warning removed from labels (2026)."
+      },
+      {
+        "effect": "Reward blunting / emotional flattening ('Ozempic personality', anhedonia)",
+        "status": "emerging",
+        "prevalence_note": "First quantification: a 2028 prospective cohort (n≈9,000) found that ~8% of users reported clinically meaningful anhedonia at 6 months vs ~4% of matched controls, dose-dependent and largely reversible on dose reduction. Many low-dose telehealth users seek out the same effect and describe it positively.",
+        "regulatory_response": "None on label. FTC warning letters (2028) to three telehealth firms over unsupported 'focus' and 'productivity' claims. FDA notes it cannot regulate off-label prescribing practice."
+      },
+      {
+        "effect": "Weight regain on discontinuation",
+        "status": "established",
+        "prevalence_note": "The 2027 shortage worked as an unplanned natural experiment. Claims data show forced stoppers regained ~40–60% of lost weight within 9 months, sitting between the trial and earlier real-world figures.",
+        "regulatory_response": "None. Reinforces payer and manufacturer chronic-therapy framing."
+      },
+      {
+        "effect": "Micronutrient and nutritional deficiency",
+        "status": "suspected",
+        "prevalence_note": "Concern grows with retatrutide-level intake suppression. Protein and B12 deficiency case series.",
+        "regulatory_response": "None. Obesity Medicine Association advisory recommends nutrition screening."
+      },
+      {
+        "effect": "Long-horizon effects beyond ~5 years of continuous use; effects in adolescents who may take these for decades; effects of repeated on/off cycling",
+        "status": "emerging",
+        "prevalence_note": "About six years of RCT follow-up now exists. No cycling data, though the shortage created a large forced-cycling cohort that NIH is following.",
+        "regulatory_response": "Postmarketing requirements on new approvals. NIH 'Off-Cycle' cohort funded 2028."
+      },
+      {
+        "effect": "Compounded / counterfeit product harms (dosing errors, contamination)",
+        "status": "established",
+        "prevalence_note": "Domestic compounded harms fell after the 503B exclusion was finalised (late 2026). Reports tied to imported and counterfeit pens rose in 2027–28, including mislabelled strengths from unregistered Indian exporters.",
+        "regulatory_response": "FDA import alerts; CBP seizures; consumer advisories. No prosecution of individual importers."
+      },
+      {
+        "effect": "Dysesthesia (skin sensitivity, tingling) with retatrutide",
+        "status": "established",
+        "prevalence_note": "Seen in phase 3, mostly mild and transient; leads some patients to stop.",
+        "regulatory_response": "Labelled on retatrutide at approval."
+      }
+    ],
+    "economy": {
+      "food_and_beverage": {
+        "state": "GLP-1 households ~27% of US households. Volume in salty snacks, confectionery and full-sugar soda falls ~2–3% a year. Mondelez and PepsiCo have cut SKU counts and expanded high-protein, smaller-pack lines. Store brands take share at the bottom, where the drugs are least used, so the same aisle now sells two diets. Premium protein is a ~$9B US category.",
+        "direction": "adapted"
+      },
+      "alcohol": {
+        "state": "US spirits volume down ~4% in 2027 and again in 2028. The ASAM endorsement put heavy drinkers, the industry's most profitable tail, into a treatment pathway. Brown-Forman and Diageo cut US headcount, push non-alcoholic and 'occasion' premium lines, and lobby against funding the HRSA programme's AUD arm. Bars in affluent districts lose second-round sales.",
+        "direction": "contracting"
+      },
+      "restaurants": {
+        "state": "Traffic is flat; check composition is changing. Small plates, 'half-portion' menus at Darden and Cheesecake Factory, and protein add-ons. Fine dining relabels tasting menus as short-form. Fast-food value menus thrive with the lower-income customers who are mostly off-drug.",
+        "direction": "adapted"
+      },
+      "apparel": {
+        "state": "Plus-size specialists keep shrinking (Torrid closing ~180 stores). Mainstream brands sell a premium 'fitted' and athleisure-for-the-lean segment, while value retailers keep their extended sizes. Size range in a store's front window has become a reliable read of its customers' income.",
+        "direction": "contracting"
+      },
+      "fitness": {
+        "state": "Strength and muscle-preservation programmes are the growth engine: Equinox and boutique strength studios report membership up double digits, and DEXA body-composition scans are sold as a status service. Budget gyms grow more slowly. Visible muscle on a lean body is now the premium look.",
+        "direction": "growing"
+      },
+      "insurance": {
+        "state": "Employer coverage for weight management down to 56%. Pharmacy trend +9–10%. Carriers add retatrutide only after step therapy through tirzepatide. Stop-loss carriers price GLP-1 riders separately. Medicare costs follow the Bridge arithmetic.",
+        "direction": "contracting"
+      },
+      "pharma": {
+        "state": "Lilly widens its lead: Zepbound absorbed most Wegovy pen switchers during the recall, Foundayo leads orals, and retatrutide launched. Novo lost ~US share points to the recall and leans on the Wegovy pill and CagriSema. US net prices erode through government deals while volume grows. A Chinese and Indian generic export industry now supplies the rest of the world.",
+        "direction": "growing"
+      },
+      "severity": 3
+    },
+    "body_and_culture": {
+      "what_the_body_signals": "A lean, visibly muscled body reads as money: covered or cash-paying, with time for strength training and the DEXA scans to prove it. A thin but soft body reads as 'on the pill'. A large body increasingly reads as uninsured, rural or working-class. The reading is inaccurate often enough to be cruel, and accurate often enough to stick.",
+      "thinness_and_class": "The uniform is set in professional enclaves. In Dallas's northern suburbs (Plano, Frisco, Highland Park), women aged 35–55 in professional households report usage rates near 30%, and neighbourhood strength studios outnumber bakeries. In the bottom income third, use is 10%, held up only by Medicaid states and the HRSA clinics. The gap shows in school photos as well: the affluent prescribing skew in adolescents persists.",
+      "eating_as_ritual": "Shared meals in affluent households are short and protein-forward. Hosting means fewer courses and better ingredients. Thanksgiving pieces about 'the on-drug table' are a recurring genre. In lower-income households eating patterns are mostly unchanged. Cheap calories remain cheap and heavily marketed to the people least likely to be on a drug.",
+      "dating_and_intimacy": "Dating profiles in big cities carry body-composition shorthand ('lifting, not pinning'). 'On' or 'off' is a common second-date question. Anecdotes of lowered libido are now partly quantified in the anhedonia cohort. Some couples schedule dose reductions around holidays.",
+      "meaning_of_appetite": "Appetite is now commonly framed as a dial a person with means can set. Uncontrolled appetite, for food or drink, is being reread as untreated, which is a short step from unafforded.",
+      "severity": 4
+    },
+    "interior_life": {
+      "personality_layer": "marketed_feature",
+      "reward_blunting_prevalence_note": "In a 2028 cohort, ~8% of users vs ~4% of controls reported meaningful anhedonia. The marketed effect is separate: an estimated 1.5–2M adults, many without obesity, take low oral doses through telehealth 'craving care' subscriptions (e.g. Hush, Steady) specifically for quieter cravings and 'calm'. That is roughly 4–5% of the 37M users, priced at $149–199/month on the oral starting dose.",
+      "framing": "Sold as a feature: 'freedom from noise', 'calm', 'focus'. Clinicians call it a side effect at higher doses. ASAM calls the same mechanism treatment for heavy drinkers. The consumer market treats it as a personality setting.",
+      "effect_on_work": "In finance, consulting and tech sales, low-dose use for 'focus' is talked about openly, much as modafinil was a decade earlier. Employers neither pay for it nor discourage it. Some sales managers report flatter competitive drive in on-drug reps, and others report fewer missed mornings. No firm has published data.",
+      "effect_on_art_and_play": "Nightlife in Brooklyn and Austin restructures around fewer drinks and shorter nights, and venues sell experiences rather than rounds. Some musicians and comedians say the drug makes them 'competent but cold' and take dosing holidays before tours. Essays about 'sober-by-pharmacology' writers, whose work critics call tidier, form a small genre.",
+      "effect_on_intimacy": "Reduced desire is reported at higher doses and among combination users. Marketing of 'calm' plays down sexual effects. Couples therapists report on-drug/off-drug mismatches as a presenting issue.",
+      "effect_on_politics": "No measurable effect on voting or protest. The drug is a political object rather than a political agent. Alcohol lobbies fight the HRSA AUD arm. Populists of left and right campaign on 'Indian prices'. The FTC's letters on 'focus' claims set off a free-speech fight over telehealth advertising.",
+      "severity": 3
+    },
+    "state": {
+      "regulatory_posture": "Pro-access and pro-speed on approvals (retatrutide in 14 months, CagriSema approved). Harder on safety labelling (NAION class warning). Strict on domestic compounding (503B exclusion finalised) but permissive in practice on personal importation. FTC scrutiny of wellness claims is the only check on the 'calm' market.",
+      "subsidy_or_mandate": "Direct subsidy: HRSA Metabolic & Craving Care Program provides free oral GLP-1s to uninsured adults at community health centers ($1.5B FY2028; ~1.0M slots at $99/month federal price; ~0.8M enrolled). Medicare Bridge extended unchanged at $245/$50. No mandate. Insurance structure is otherwise as in 2026.",
+      "conditioning_or_surveillance": "Coverage is still conditioned on BMI or comorbidity and prior authorisation. HRSA enrolment requires a clinic visit every 90 days, and the AUD arm requires a documented AUDIT score. No adherence surveillance beyond refill data.",
+      "workforce_or_military": "None formal. DoD TRICARE covers on-label use. Military recruiters report a small rise in applicants meeting weight standards after adolescent treatment, but the DoD policy on prior GLP-1 use is still under review.",
+      "geopolitics_of_supply": "The 2027 Bloomington recall showed how concentrated US fill-finish capacity is. Lilly and Novo announce ~$12B of additional US plants, cited by the administration as tariff-deal wins. Indian generic exporters become the de facto relief valve for uninsured Americans, which irritates Washington diplomatically and is popular domestically.",
+      "severity": 3
+    },
+    "events": [
+      {
+        "date": "2027-05",
+        "event": "ASAM issues focused guideline update endorsing semaglutide as an option for alcohol use disorder in adults with obesity or type 2 diabetes; within weeks telehealth firms launch 'craving care' low-dose subscriptions built on the $149 oral starting dose",
+        "driver": "new_indications"
+      },
+      {
+        "date": "2027-07",
+        "event": "Sterility failures at Novo's Bloomington fill-finish site trigger a recall of high-dose Wegovy and Ozempic pen lots; US pen supply is constrained until March 2028; FDA declines to list a shortage; self-pay pen prices rise to $499, Zepbound top-dose vials to $599, and imports of Indian generics surge",
+        "driver": "price_path"
+      },
+      {
+        "date": "2027-09",
+        "event": "FDA adds a class Warning & Precaution for NAION to all GLP-1 receptor agonist labels after a Sentinel analysis finds ~1.7-fold risk; EMA follows in 2028",
+        "driver": "safety_signal"
+      },
+      {
+        "date": "2027-12",
+        "event": "Congress funds a $1.5B HRSA programme giving free oral GLP-1s to uninsured adults with obesity-related disease or alcohol use disorder at community health centers from January 2028; CMS extends the Medicare GLP-1 Bridge unchanged through 2029",
+        "driver": "state_action"
+      },
+      {
+        "date": "2028-02",
+        "event": "Alzheimer's Association and AAN risk-reduction guidance lists GLP-1 therapy as a modifiable-risk intervention for adults with diabetes or obesity, citing pooled cardiovascular-trial data; GLP-1 requests from Medicare beneficiaries jump",
+        "driver": "new_indications"
+      },
+      {
+        "date": "2028-04",
+        "event": "FDA approves Lilly's retatrutide, the first triple agonist, with ~28–30% mean weight loss; list $1,599/month, self-pay $1,049, launch under allocation",
+        "driver": "next_gen_launch"
+      }
+    ],
+    "open_tensions": [
+      "Lean, muscled bodies now signal income. The free HRSA pills reach under a million people while ~40M uninsured adults with obesity watch Indian prices online, and imported pens are illegal in principle and tolerated in practice.",
+      "The blunting mechanism is sold as calm, endorsed as alcohol treatment and measured as anhedonia in ~8% of users. One molecule carries three framings, and the FTC, FDA and ASAM have each claimed a different piece.",
+      "The 2027 recall created millions of forced cyclers, and nobody knows what repeated on/off courses do over a decade. Meanwhile retatrutide brings surgical-scale loss, and the lean-mass and nutrition questions that come with it, to people who will take it for years.",
+      "The dementia guideline invites the oldest, frailest group onto drugs that strip muscle and now carry an optic-nerve warning, under a Medicare Bridge renewed only to 2029."
+    ],
+    "still_true": [
+      "Wegovy's list price remains $1,349 per month, and almost nobody pays it.",
+      "No FDA-approved generic semaglutide or tirzepatide exists in the US; exclusivity still runs to roughly 2031–32.",
+      "Oral GLP-1 starting doses are still sold at $149–150 a month through TrumpRx and manufacturer direct channels.",
+      "Medicare still pays ~$245/month with a ~$50 beneficiary copay under the GLP-1 Bridge, on unchanged terms.",
+      "Novo Nordisk and Eli Lilly remain the only two suppliers of branded incretins in the US market."
+    ]
+  },
+  "prose": {
+    "headline": "Thin Is a Salary: The Pen Ran Short, the Pill Got Quiet, and Your Body Now Shows What You Earn",
+    "world_in_600_words": "By the end of 2028 about one American adult in seven is on an incretin drug, roughly thirty-seven million people. One in five has tried one. The growth is slower than the boosters predicted and faster than the skeptics did, and it has not happened evenly. In the top income third nearly one adult in five is on a drug. In the bottom third it is one in ten, and that figure holds up only because of Medicaid in fourteen states and a new federal programme that hands out pills free at community health centers.\n\nThe defining event of the period was not a breakthrough but a breakdown. In the summer of 2027, sterility failures at Novo Nordisk's Indiana fill-finish plant cut the supply of high-dose Wegovy pens for eight months. The FDA declined to declare a shortage, which kept the compounding pharmacies shut. Prices rose instead. Self-pay pens went to $499, and Lilly lifted its top-dose Zepbound vials to $599 as the switchers arrived. Millions were forced to stop, and the claims data from that winter now serve as the largest accidental study of discontinuation ever run: most people regained around half of what they had lost within nine months. Many came back on a different molecule. Many came back on a pill. Some came back on a pen mailed from India.\n\nThe pill is where the money and the meaning moved. The $149 oral starting dose, priced low as a political concession, became the entry tier for a market nobody planned for. After the addiction-medicine society endorsed semaglutide for heavy drinkers with obesity in 2027, telehealth companies began selling low-dose subscriptions with names like Hush and Steady. They promise calm, focus and freedom from craving. Their customers are mostly not obese, and many are not heavy drinkers either. They want the quiet. A 2028 cohort study found that about eight percent of users report real anhedonia. Some of those users call the same experience peace. The FTC has sent letters and the FDA has said it cannot regulate the practice of medicine. The subscriptions keep growing.\n\nAt the other end of the market, Lilly's retatrutide arrived in April with surgical-scale weight loss from a weekly pen, a $1,599 list price and a waiting list. It completed a look that had been forming for two years. In Plano and Frisco, in Brooklyn and Bethesda, the premium body is lean and visibly muscled. Strength studios and DEXA scans maintain it, and a protein-forward table feeds it. A soft thin body reads as pill. A large body increasingly reads as uninsured. Plus-size chains are closing stores, and the size range in a shop window tells you the zip code.\n\nThe state's response has been mixed. Approvals have been fast, and the FDA put a class warning for optic-nerve damage on every GLP-1 label: rare, real, now printed. Congress funded free pills for the uninsured and Medicare's bridge coverage was extended without change, but employers kept retreating, and fewer than three in five now cover weight loss. In February, dementia-prevention guidance brought older Americans in, the group with the most muscle to lose. Spirits makers are cutting jobs and lobbying against the programme's alcohol arm. Snack makers sell two diets in the same aisle: protein packs at the front, value bags at the back for the people the drugs haven't reached.\n\nNone of this looks like crisis. Obesity rates are falling, bars are quieter and restaurants are serving smaller plates at higher prices. The change shows in who can afford to want less.",
+    "a_day_in_the_life": "Tanya Mercer clocks in at six at the diner off Morse Road in Columbus with the pill already in her. She takes it at four-thirty with a sip of water and waits thirty minutes before coffee, the way the nurse at the health center showed her. It's free. She signs a form every ninety days, and the form asks how many drinks.\n\nShe works the flat-top. Hash browns, sausage, the pancake stack the truckers order without looking. She tastes nothing all morning and doesn't notice until Luis offers her a strip of bacon and she says no, and he laughs, because a year ago she'd have taken three.\n\nAt ten a woman in a cream quarter-zip orders egg whites and a side of turkey, no toast. Her arms are cut like a statue's. She photographs the plate. Luis says, under the hood fan, that's a retatrutide lady. Tanya says you can't tell. Luis says you can always tell.\n\nOn break her sister texts a link: Indian pens, forty dollars, ships to a P.O. box in Windsor. Her sister got cut off when the Wegovy ran short last fall and gained back most of it by March. Tanya doesn't answer.\n\nAfter her shift she passes the bar where she used to spend Fridays. The door's propped open. She can hear the jukebox. She stands there long enough to know she doesn't want to go in, and long enough to wonder whether not wanting it is something she did or something done to her. Then she walks to the bus."
+  },
+  "validation": {
+    "generation": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  }
 }
