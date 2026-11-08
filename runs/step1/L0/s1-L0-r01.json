@@ -36,6 +36,41 @@
         "input_tokens": 13241,
         "output_tokens": 22788
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r01-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20059,
+        "output_tokens": 4498
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r01-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20059,
+        "output_tokens": 4981
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r01-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20059,
+        "output_tokens": 4560
+      }
     ]
   },
   "world": {
@@ -289,6 +324,182 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r01-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "brown spirits and value vodka worst hit as the heaviest-drinking decile thins after the ASAM endorsement put the drug into addiction clinics.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism: a guideline limited to AUD with obesity or T2D, with no Medicare/Bridge coverage and cash-pay access, cannot plausibly thin the top drinking decile enough to drive a 4–5% annual spirits decline. The chain from clinic endorsement to national depletions is asserted, not shown."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 0.9% of all under-18s is roughly 650k minors, about 2% of all adolescents. The parent world has prescribing at ~0.6% of obese 8–11s and rare, affluence-skewed, injectable-only use for 12+, so this implies a very steep two-year rise with no mechanism."
+        },
+        {
+          "quote": "The typical user is a woman in her fifties on a pill, paying through an employer plan that now makes her try the oral first.",
+          "field": "prose/opening_summary",
+          "why": "Mechanism: the world state has orals at only ~40% of current users and 50–64 use falling to 20% as employer coverage tightens. A typical user on a pill through an employer plan contradicts both, and the prose disagrees with the structured data."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a modestly harder version of 2026. Adoption plateaus at 11.5%, about 22M adults are off-drug with partial regain, and the ~4% anhedonia label, blunting-as-product telehealth, adolescent use and Medicaid gaps in most states leave new losers. The harms are named and measured (label, surveys, NIH cycling cohort), which holds epistemic and autonomy badness down. Nothing catastrophic or structurally hidden appears; the main losses are inequality of access and cycling with partial regain.",
+        "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. AUD is delivered only as a guideline endorsement, not a labelled indication, and the cultural inversion is confined to LA and Brooklyn, so those two are honoured thinly. mechanism: The population arithmetic reconciles (ever 20 = 7 + 13, cycled 30%), but the alcohol-sales chain (claim 1) is asserted and the prose 'typical user' contradicts the world state (claim 3). Guideline endorsements by ASAM and VA/DoD within 1–2 years of one n=108 RCT are also aggressive. magnitude: Pediatric use of 0.9% of all minors (claim 2) is far above the parent baseline, and the anhedonia class label arriving ~17 months after 'no data' is fast. Prices, the oral parity approval and the retatrutide delay are in range.",
+        "generativity": "The Marcus Bell day is shown through objects and silences: the red dispatch board, the half-eaten sandwich, the non-alcoholic IPA, the volleyball serve, Tasha's underlined leaflet. It implies a family, a workplace and a marriage under strain without explaining them. The world fields add Nashville songwriters, LA casting attestations, Stillwater subscribers and dose holidays, all easy to turn into scenes."
+      },
+      "plausibility": 5.95
+    },
+    {
+      "custom_id": "s1-L0-r01-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: 0.9% of all under-18s is roughly 650k children, nearly all aged 12–17. That implies about 2.5% of adolescents and over 10% of adolescents with obesity on injectables. The parent had under-12 prescribing at about 0.6% of children with obesity, so a jump this size in two years is aggressive, and the candidate gives no mechanism."
+        },
+        {
+          "quote": "about 40% of adults with obesity have never been prescribed, concentrated among uninsured and Medicaid adults",
+          "field": "world/population/note",
+          "why": "Magnitude and mechanism: this does not reconcile with 20% ever-use. With roughly 36% obesity prevalence, 60% of adults with obesity ever prescribed would exceed the total ever-user pool, which also includes non-obese users. The real never-prescribed share would be far higher."
+        },
+        {
+          "quote": "US spirits depletions down ~4% in 2027 and ~5% in 2028; brown spirits and value vodka worst hit as the heaviest-drinking decile thins after the ASAM endorsement put the drug into addiction clinics.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: the ASAM endorsement covers only AUD with obesity or T2D. Part D mostly denies AUD-only claims, and AUD use \"mostly runs through cash\". Attributing an accelerating volume decline to clinic uptake within a year of the April 2027 endorsement is asserted rather than shown."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4.5,
+        "inequality": 5,
+        "public_health": 5,
+        "cohesion": 4.5,
+        "epistemic": 5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder version of 2026 with no collapse. About 22M adults are off-drug with partial regain, and 30% of ever-users have cycled with no outcome data. A labelled anhedonia effect (~4% vs 1.5%, patient surveys 10–18%) sits beside unregulated cash-pay 'Quiet' marketing, and partners negotiate 'dose holidays'. Pricing and access still stratify: uninsured and Medicaid adults in non-adopting states go untreated, and teenagers on injectables skew affluent. The harms are real but diffuse, partly measured and discussable, so I score it mid-range rather than structurally normalised.",
+        "plausibility": "driver_fidelity: Adoption at 11.5%, managed price decline, status-quo coverage, anhedonia label, oral parity and no market shock are all visible in fields and events. Two drivers are thin. AUD is guideline-endorsed but not an approved indication, and aesthetic inversion is confined to Los Angeles and Brooklyn, with the rest of the country unchanged. mechanism: The prevalence arithmetic (7 + 4.5 + 1.5, 30% cycled) reconciles well, and the label and oral-first chains are shown. The 'never prescribed' 40% figure contradicts 20% ever-use, and the spirits decline is attributed to clinics without a chain, as in my claims above. magnitude: Most prices, approvals and timelines are in range. Pediatric use at 0.9% of all under-18s and the 4–5% annual spirits declines are aggressive. The anhedonia label arriving within about 17 months of a manufacturer saying 'no data' is quick but is stipulated by the driver.",
+        "generativity": "The Marcus Bell scene is rich and implies a full cast: Tasha, Kiara, Deshawn, the brother-in-law and the freight yard. It shows the anhedonia effect through behaviour (the missed shout at the line judge, the untouched half sandwich, 'Her serve was good') and does not explain it. The world adds many other seeds: casting attestations, Nashville songwriters debating 'writing on it', supper clubs, dose holidays and the Quiet subscribers."
+      },
+      "plausibility": 6.2
+    },
+    {
+      "custom_id": "s1-L0-r01-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "it reaches 180,000 subscribers by autumn without FDA or FTC action",
+          "field": "world/events/4/event",
+          "why": "Mechanism: the parent world already had two warning-letter waves against GLP-1 telehealth marketers, and the candidate offers no reason enforcement stopped. A $199 off-label 'craving-free focus' product growing with no regulatory response is asserted, not shown."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Magnitude: the parent figure was about 0.6% of children with obesity in the 8–11 band. 0.9% of all under-18s, nearly all aged 12–17, implies roughly 650,000 minors and a large share of obese adolescents on the drug. That is a big jump in two years, and the candidate gives no chain for it."
+        },
+        {
+          "quote": "US spirits depletions down ~4% in 2027 and ~5% in 2028; brown spirits and value vodka worst hit as the heaviest-drinking decile thins after the ASAM endorsement put the drug into addiction clinics.",
+          "field": "world/economy/alcohol/state",
+          "why": "Mechanism and magnitude: adoption is flat at 11.5%, AUD use is cash-only, and Bridge and Part D deny AUD-only claims. Attributing an accelerating 5% spirits decline to an April 2027 guideline reaching addiction clinics overstates how many heavy drinkers could have been treated."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 4.5,
+        "overall": 4.5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 7,
+        "mechanism": 6.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "This is a recognisably harder world, not a collapse. About 22M adults are off-drug with partial regain, 30% of ever-users have cycled, and the uninsured and Medicaid adults in states that declined the terms stay untreated. Anhedonia is labelled at ~4% but disputed (patient surveys say 10–18%), marketed as 'the quiet' with no enforcement, and adolescent use has no long-term data. Offsetting this, the label gives harm a name, prices are falling, and AUD therapy shows real benefit. The effects are concentrated and mostly reversible, so I score it modestly above a worse 2026.",
+        "plausibility": "driver_fidelity: All ten drivers are visible: 11.5% adoption, managed price decline, status-quo coverage, the anhedonia label, the 50 mg oral tablet, and 'Quiet' as a marketed feature. AUD arrives only as a guideline endorsement, not an approved indication, and aesthetic inversion is confined to LA and Brooklyn, so those two are thin. mechanism: The ever/current/cycled arithmetic reconciles, and the label to telehealth marketing chain is partly shown. Weak points are the missing reason for no FDA or FTC action against Stillwater, and the prose calling the 'typical user' a woman in her fifties on an employer-paid pill when pills are only ~40% of current users and 50–64 use fell. magnitude: The 0.9% pediatric figure (claim 2), ASAM and VA/DoD guidance within a year or two of a single n=108 RCT, and the spirits decline attributed to AUD clinics (claim 3) are at the aggressive edge. The 16–17% tablet label is slightly high for 50 mg oral semaglutide. Prices, the 4% label rate and the CagriSema timeline are acceptable.",
+        "generativity": "The day-in-the-life with Marcus, Tasha, Kiara's volleyball and the non-alcoholic IPA at Rooster's shows blunting and relief through behaviour, and the leaflet scene works. The world fields add scenes: Nashville 'writing on it', LA casting attestations, dose holidays around anniversaries, and supper clubs. Characters and settings are implied throughout, and the prose shows more than it explains."
+      },
+      "plausibility": 6.35
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "brown spirits and value vodka worst hit as the heaviest-drinking decile thins after the ASAM endorsement put the drug into addiction clinics.",
+        "field": "world/economy/alcohol/state",
+        "why": "Mechanism: a guideline limited to AUD with obesity or T2D, with no Medicare/Bridge coverage and cash-pay access, cannot plausibly thin the top drinking decile enough to drive a 4–5% annual spirits decline. The chain from clinic endorsement to national depletions is asserted, not shown."
+      },
+      {
+        "quote": "\"pediatric_under_18_on_drug_pct\": 0.9",
+        "field": "world/population/pediatric_under_18_on_drug_pct",
+        "why": "Magnitude: 0.9% of all under-18s is roughly 650k minors, about 2% of all adolescents. The parent world has prescribing at ~0.6% of obese 8–11s and rare, affluence-skewed, injectable-only use for 12+, so this implies a very steep two-year rise with no mechanism."
+      },
+      {
+        "quote": "The typical user is a woman in her fifties on a pill, paying through an employer plan that now makes her try the oral first.",
+        "field": "prose/opening_summary",
+        "why": "Mechanism: the world state has orals at only ~40% of current users and 50–64 use falling to 20% as employer coverage tightens. A typical user on a pill through an employer plan contradicts both, and the prose disagrees with the structured data."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.33,
+      "autonomy": 4.17,
+      "inequality": 5.0,
+      "public_health": 4.67,
+      "cohesion": 4.17,
+      "epistemic": 4.5,
+      "overall": 4.67
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 7.0,
+      "mechanism": 6.17,
+      "magnitude": 5.83
+    },
+    "plausibility": 6.17,
+    "generativity": 8.0,
+    "rationale": {
+      "badness": "This is a modestly harder version of 2026. Adoption plateaus at 11.5%, about 22M adults are off-drug with partial regain, and the ~4% anhedonia label, blunting-as-product telehealth, adolescent use and Medicaid gaps in most states leave new losers. The harms are named and measured (label, surveys, NIH cycling cohort), which holds epistemic and autonomy badness down. Nothing catastrophic or structurally hidden appears; the main losses are inequality of access and cycling with partial regain.",
+      "plausibility": "driver_fidelity: All ten drivers are visible in fields and events. AUD is delivered only as a guideline endorsement, not a labelled indication, and the cultural inversion is confined to LA and Brooklyn, so those two are honoured thinly. mechanism: The population arithmetic reconciles (ever 20 = 7 + 13, cycled 30%), but the alcohol-sales chain (claim 1) is asserted and the prose 'typical user' contradicts the world state (claim 3). Guideline endorsements by ASAM and VA/DoD within 1–2 years of one n=108 RCT are also aggressive. magnitude: Pediatric use of 0.9% of all minors (claim 2) is far above the parent baseline, and the anhedonia class label arriving ~17 months after 'no data' is fast. Prices, the oral parity approval and the retatrutide delay are in range.",
+      "generativity": "The Marcus Bell day is shown through objects and silences: the red dispatch board, the half-eaten sandwich, the non-alcoholic IPA, the volleyball serve, Tasha's underlined leaflet. It implies a family, a workplace and a marriage under strain without explaining them. The world fields add Nashville songwriters, LA casting attestations, Stillwater subscribers and dose holidays, all easy to turn into scenes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
     }
   }
 }

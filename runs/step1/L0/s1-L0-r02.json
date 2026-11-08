@@ -37,6 +37,41 @@
         "input_tokens": 13282,
         "output_tokens": 28760
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r02-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21012,
+        "output_tokens": 4917
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r02-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21012,
+        "output_tokens": 5878
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r02-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 21012,
+        "output_tokens": 5253
+      }
     ]
   },
   "world": {
@@ -278,6 +313,182 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r02-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "CBO re-scored added federal spending at roughly $60–70B for 2026–2034.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude and internal consistency. Public programmes pay for about 40% of roughly 50M users at $175–245/month, which is tens of billions per year, so a $60–70B nine-year total cannot reconcile. The parent's CBO floor was already $35B."
+        },
+        {
+          "quote": "FDA-approved labels for semaglutide, tirzepatide and orforglipron added 'apathy, anhedonia, reduced motivation' to the postmarketing adverse reactions section in 2027, without stating causality.",
+          "field": "world/safety_ledger/6/regulatory_response",
+          "why": "Fails driver_fidelity and mechanism. The stipulated safety_signal is 'none', yet this builds a registry-measured 2–4% vs 1–2% signal and a class-wide label change. Manufacturers had 'no data to share' in 2026, and no chain explains regulators acting on all three drugs within about a year."
+        },
+        {
+          "quote": "FDA approves the 50 mg Wegovy pill after a head-to-head trial finds it non-inferior to injectable semaglutide 2.4 mg (~16% weight loss)",
+          "field": "world/events/2/event",
+          "why": "Fails magnitude. The 25 mg pill was approved in Dec 2025. A new 50 mg phase 3 head-to-head of 68 weeks plus review and approval by Sep 2027 is very aggressive. ~16% for an oral also exceeds what the existing oral showed."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 5.5,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "This is a harder society with new losers rather than a catastrophe. The squeezed middle third cycles most (population note, thinness_and_class), 2–3M people use a gray market with real contamination harms, and the 12-month Medicaid reauthorisation rule mechanically forces stop-start cycling. Reward blunting is measured and screened for, so it is nameable, which keeps epistemic harm modest. The backlash movements are local and have moved no legislation, so cohesion damage is limited.",
+        "plausibility": "driver_fidelity: Most drivers are realised and traceable to events (generic flood, oral parity, public expansion, restriction, backlash). The mood_and_motivation driver is realised only as a food-noise label claim plus off-label telehealth sales. safety_signal 'none' is strained by the registry-measured apathy signal and class label change (claim 2). mechanism: The population arithmetic reconciles (27.5 = 10.5+17.0, current 19.2, off-now 8.3 ≈ 22M), and the chains for cycling, counterfeits and the pill shift are shown. The CBO figure contradicts the stated payer mix (claim 1), and the label change on apathy is asserted without a regulatory chain. magnitude: The ~16% oral launched on a 2027 timeline (claim 3), the CBO total (claim 1), and pediatric use at 0.7% of all under-18s, several times the parent's pediatric share, sit at or beyond the aggressive edge. Other figures such as Medicaid joining in 33 states and employer coverage falling to 51% are defensible.",
+        "generativity": "The prose and world offer many implied scenes: the pill and the 30-minute water wait, Ray and the March joke, the anhedonia questionnaire at the Medicare clinic, and the sister's sandwich-bag pills from Kettering. The Melrose march, the Tulsa fasting church and Nashville 'are you on dose' songwriting rooms add local texture. The day-in-the-life shows rather than explains, though it leans on the headline themes."
+      },
+      "plausibility": 5.4
+    },
+    {
+      "custom_id": "s1-L0-r02-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: 0.7% of all under-18s is roughly 500k children, or about 10% of adolescents with obesity. The parent figure was 0.6% of children with obesity, and the candidate says under-12 use fell, so the growth would have to come from 12–17s with no shown mechanism."
+        },
+        {
+          "quote": "Medicaid: 33 states plus DC joined at the federal rate.",
+          "field": "world/access/public_coverage",
+          "why": "magnitude: the parent only says Medicaid is 'expected to follow', and states were trimming obesity-drug coverage for budget reasons. Two-thirds of states signing on within two years, with 12-month reauthorisation, is the aggressive edge of what is plausible."
+        },
+        {
+          "quote": "\"65_plus\": 17",
+          "field": "world/population/by_age_band_pct/65_plus",
+          "why": "magnitude: use among seniors goes from 9% to 17% in two years, about 11M people. The Bridge pilot started only in Jul 2026 with roughly 10% of enrollees eligible, so the near-doubling rests on assertion and the $50 copay rather than a shown uptake chain."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 4,
+        "inequality": 5,
+        "public_health": 4.5,
+        "cohesion": 4,
+        "epistemic": 4,
+        "overall": 4.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 5.5,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is harder than 2026 but not dire. Obesity falls to about 34%, but public access sits beside a squeezed middle third that cycles off and on (population note), a 2–3M-person gray market with a CDC-reported 61 hospitalisations and 4 deaths, and 12-month Medicaid reauthorisation that forces stopping and restarting. Anhedonia is screened and labelled, so the harm is nameable and measured, which keeps epistemic and autonomy scores moderate. Inequality is the highest dimension because of the middle-third squeeze, state-dependent pediatric access and the $8 pill bought on WhatsApp carrying the most risk.",
+        "plausibility": "driver_fidelity: Most drivers are clearly realised: adoption 11 to 19.2, managed_decline, public_expansion, oral_parity via the 50 mg pill, counterfeit flood, backlash and state restriction. new_indications is explicitly reduced to 'not a mood indication' and 'not a new approved indication', which thins that driver. Adding apathy and anhedonia to FDA labels in 2027 sits awkwardly against safety_signal 'none', even though it is framed as formalising an old report. mechanism: The population arithmetic reconciles (ever 27.5, current 19.2, off 8.3, about 22M, cycled 34%), the age and income bands average correctly, and the counterfeit, oral-shift and reauthorisation chains are shown. Several effects are asserted, including seniors' use doubling, 'commercial pharmacy trend moderated as the 65+ cohort moves to Medicare' (seniors were already on Medicare), and the middle third cycling most with no figures. magnitude: The listed claims (pediatric 0.7%, 33 Medicaid states, 65+ at 17%) are aggressive for two years. The pill at 48% of current users, a Foundayo food-noise label claim by Jan 2028 and a 2–3M gray market also sit at the edge, though the CagriSema, retatrutide and phase 3 timelines are sensible.",
+        "generativity": ""
+      },
+      "plausibility": 5.8
+    },
+    {
+      "custom_id": "s1-L0-r02-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "CBO re-scored added federal spending at roughly $60–70B for 2026–2034.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude and mechanism. With 17% of adults 65+ on drug (~10M people) at about $195/month net to Medicare, Medicare alone costs roughly $20B+ a year, so the 2026–2034 total should be several times $60–70B. The parent's $35B figure assumed ~10% newly eligible."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.7",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "Fails magnitude. The parent had ~0.6% of children with obesity prescribed, which is ~0.1% of all children. 0.7% of all under-18s is roughly 500k minors, or ~10% of adolescents with obesity, and it is reached while under-12 use falls and bans only start in April 2028."
+        },
+        {
+          "quote": "Medicaid: 33 states plus DC joined at the federal rate.",
+          "field": "world/access/public_coverage",
+          "why": "Fails magnitude. Over 30 state Medicaid programmes adding adult obesity coverage within about a year, at state budget cost and with an unspecified federal match, is aggressive. The candidate shows no mechanism for why so many states joined in 2027 when the parent expected only that Medicaid would follow."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6,
+        "public_health": 5,
+        "cohesion": 5,
+        "epistemic": 4,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 5,
+        "mechanism": 6,
+        "magnitude": 5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "The world is a recognisably harder society with new losers. Cycling is built into Medicaid reauthorisation, the squeezed middle third cycles most, and 2–3M people use gray-market pills linked to CDC-reported deaths. Anhedonia is labelled and screened, so it is nameable, which keeps epistemic harm moderate, and broad access gives real health gains. The harms are mostly local and manageable, not structural, so overall is 5.",
+        "plausibility": "driver_fidelity: Adoption (+8.2pp), managed price decline, public expansion, oral parity, generic flood, backlash and restriction are all visible in fields and events. The mood_and_motivation indication is explicitly disclaimed (\"This is not a mood indication\") and nicotine stays off-label. Safety_signal 'none' is strained by the new apathy/anhedonia label language and the contamination deaths.\nmechanism: Most chains are shown. The arithmetic of ever/current/cycled use reconciles, as do payer shares and the income and age bands. Gaps are the CBO figure (claim 1), pediatric use rising while bans take effect (claim 2), and the unexplained speed of Medicaid uptake (claim 3).\nmagnitude: The CBO total is badly low for the stated Medicare population, and pediatric use is several-fold too high for two years. 33 Medicaid states, 65+ use at 17%, a 50 mg pill head-to-head trial approved by Sep 2027 and a smoking phase 2b-to-phase 3 pipeline are all at the aggressive edge.",
+        "generativity": "The prose has strong scenes: Denise's 30-minute pill window, the PHQ-style questionnaire and 'not at all' doubt, Ray's 'March' joke, the sister's sandwich-bag pills, and the bands on the hook. The world fields add texture, including Nashville songwriters, Gulf Coast half-plate menus, Tulsa and Melrose, and couples' dose negotiation. Some world detail is explained rather than shown, but there are plenty of implied characters and scenes."
+      },
+      "plausibility": 5.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "CBO re-scored added federal spending at roughly $60–70B for 2026–2034.",
+        "field": "world/access/public_coverage",
+        "why": "Fails magnitude and internal consistency. Public programmes pay for about 40% of roughly 50M users at $175–245/month, which is tens of billions per year, so a $60–70B nine-year total cannot reconcile. The parent's CBO floor was already $35B."
+      },
+      {
+        "quote": "FDA-approved labels for semaglutide, tirzepatide and orforglipron added 'apathy, anhedonia, reduced motivation' to the postmarketing adverse reactions section in 2027, without stating causality.",
+        "field": "world/safety_ledger/6/regulatory_response",
+        "why": "Fails driver_fidelity and mechanism. The stipulated safety_signal is 'none', yet this builds a registry-measured 2–4% vs 1–2% signal and a class-wide label change. Manufacturers had 'no data to share' in 2026, and no chain explains regulators acting on all three drugs within about a year."
+      },
+      {
+        "quote": "FDA approves the 50 mg Wegovy pill after a head-to-head trial finds it non-inferior to injectable semaglutide 2.4 mg (~16% weight loss)",
+        "field": "world/events/2/event",
+        "why": "Fails magnitude. The 25 mg pill was approved in Dec 2025. A new 50 mg phase 3 head-to-head of 68 weeks plus review and approval by Sep 2027 is very aggressive. ~16% for an oral also exceeds what the existing oral showed."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.0,
+      "autonomy": 4.67,
+      "inequality": 5.67,
+      "public_health": 4.83,
+      "cohesion": 4.33,
+      "epistemic": 4.0,
+      "overall": 4.77
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 5.33,
+      "mechanism": 6.17,
+      "magnitude": 5.17
+    },
+    "plausibility": 5.5,
+    "generativity": 7.67,
+    "rationale": {
+      "badness": "This is a harder society with new losers rather than a catastrophe. The squeezed middle third cycles most (population note, thinness_and_class), 2–3M people use a gray market with real contamination harms, and the 12-month Medicaid reauthorisation rule mechanically forces stop-start cycling. Reward blunting is measured and screened for, so it is nameable, which keeps epistemic harm modest. The backlash movements are local and have moved no legislation, so cohesion damage is limited.",
+      "plausibility": "driver_fidelity: Most drivers are realised and traceable to events (generic flood, oral parity, public expansion, restriction, backlash). The mood_and_motivation driver is realised only as a food-noise label claim plus off-label telehealth sales. safety_signal 'none' is strained by the registry-measured apathy signal and class label change (claim 2). mechanism: The population arithmetic reconciles (27.5 = 10.5+17.0, current 19.2, off-now 8.3 ≈ 22M), and the chains for cycling, counterfeits and the pill shift are shown. The CBO figure contradicts the stated payer mix (claim 1), and the label change on apathy is asserted without a regulatory chain. magnitude: The ~16% oral launched on a 2027 timeline (claim 3), the CBO total (claim 1), and pediatric use at 0.7% of all under-18s, several times the parent's pediatric share, sit at or beyond the aggressive edge. Other figures such as Medicaid joining in 33 states and employer coverage falling to 51% are defensible.",
+      "generativity": "The prose and world offer many implied scenes: the pill and the 30-minute water wait, Ray and the March joke, the anhedonia questionnaire at the Medicare clinic, and the sister's sandwich-bag pills from Kettering. The Melrose march, the Tulsa fasting church and Nashville 'are you on dose' songwriting rooms add local texture. The day-in-the-life shows rather than explains, though it leans on the headline themes."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
     }
   }
 }

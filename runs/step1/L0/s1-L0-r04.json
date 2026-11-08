@@ -34,6 +34,41 @@
         "input_tokens": 13232,
         "output_tokens": 27291
       }
+    ],
+    "judge": [
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r04-j0",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20878,
+        "output_tokens": 1328
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r04-j1",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20878,
+        "output_tokens": 4186
+      },
+      {
+        "role": "main",
+        "batch_id": "msgbatch_01GArbKd7kwpnVSYnegS7Lkp",
+        "custom_id": "s1-L0-r04-j2",
+        "model": "claude-sonnet-5-5",
+        "served_model": "claude-sonnet-5-5",
+        "result_type": "succeeded",
+        "stop_reason": "end_turn",
+        "input_tokens": 20878,
+        "output_tokens": 1268
+      }
     ]
   },
   "world": {
@@ -275,6 +310,182 @@
     "generation": {
       "errors": [],
       "repair_attempted": false
+    },
+    "judge": {
+      "errors": [],
+      "repair_attempted": false
+    }
+  },
+  "judge_samples": [
+    {
+      "custom_id": "s1-L0-r04-j0",
+      "least_plausible_claims": [
+        {
+          "quote": "\"us_adults_ever_used_pct\": 27",
+          "field": "world/population/us_adults_ever_used_pct",
+          "why": "Magnitude: ever-use rises from 15% to 27% in two years, and the candidate has 8.9% off now and 37% cycled. This is a very aggressive build on the 7.1pp adoption delta. Adding 7.1pp of current use would more plausibly raise ever-use by roughly 10–12pp, not 12."
+        },
+        {
+          "quote": "Employer coverage for weight management fell to 43% (BGH, 2028 plan year)",
+          "field": "world/access/note",
+          "why": "Magnitude: a drop from 60% to 43% in two years is steep, though the driver stipulates employer retreat. The related claim that nearly all dropping employers keep diabetes and CVD coverage is convenient, and the candidate also reports a sharp 'cash price stalled' but the '$245 never reached the cash channel' contradicts the parent's stated trend to $245."
+        },
+        {
+          "quote": "Roughly 350,000 people are subscribed to programs that sell it as the point.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism and magnitude: 200,000 subscribers within a year of a March 2027 launch, 350,000 by 2028, sold off-label to non-obese adults at $199 under FDA ad enforcement. The growth is asserted, and the 'passes 200,000 subscribers' event and the 70% 'less noise' claim rest on unpublished surveys."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5.3
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is a recognisably harder two-tier society: coding at diagnosis decides who pays, obesity concentrates in the bottom third, there is a gray-market importation of unverifiable pens, and 350k people are sold chosen flatness with no trial measuring it. Offsetting this, adult obesity falls and the large majority is better off, so it stays near the middle of the scale. Inequality and epistemic scores carry most of the weight (the blunting effect is unmeasured and FDA governs only the ads).",
+        "plausibility": "driver_fidelity: every driver is visible in fields and events: adoption of 18.1% matches 11 + 7.1, price stalled with $299–349 cash, employer retreat to 43%, triple agonist at 28.7%, aesthetic inversion, restriction, and marketed-feature personality. Gaps are thin: 'safety_signal: none' is honoured, but the Medicare Bridge extension and the 65+ doubling are not driven by any listed driver. mechanism: most changes have chains (503B closure to importation, coding to coverage), and the ever-used arithmetic is shown and reconciles. Weaker are the culture inversion, sorted to niche LA/Brooklyn/Austin circles yet asserted to reshape casting, and the Quiet subscriber growth. magnitude: ever-use at 27% and cycled-off numbers are aggressive, the 65+ jump from 9% to 17% is large for a $50-copay pilot with ~10% newly eligible, and the 43% employer figure falls fast. Retatrutide filing and approval timing is plausible given the 2027 BLA plan.",
+        "generativity": "Marisol, Hector, the Long Table at East Cesar Chavez, the Windsor pen link and the Quiet ad give concrete scenes with strong texture and implied conflict about cost and coding. The world fields add casting, comedy, couples-therapy and dosing-negotiation vignettes that could each become a film. The day-in-the-life shows rather than explains, though the ending is slightly neat."
+      },
+      "plausibility": 6.3
+    },
+    {
+      "custom_id": "s1-L0-r04-j1",
+      "least_plausible_claims": [
+        {
+          "quote": "\"us_adults_ever_used_pct\": 27",
+          "field": "world/population/us_adults_ever_used_pct",
+          "why": "magnitude: ever-use rises from 15% (Gallup, 2026) to 27% in two years, +12 pp against a current-use rise of only +7.1 pp. Reconciling that needs roughly 9 points of stopped users plus heavy cycling, which is at the aggressive edge for 24 months."
+        },
+        {
+          "quote": "Age: 65+ nearly doubled (9%→17%) on the extended Medicare Bridge",
+          "field": "world/population/note",
+          "why": "magnitude: only ~10% of Medicare enrollees were newly eligible under the BMI/comorbidity criteria, and the Bridge has a $50 copay and prior authorisation. Reaching 17% use among over-65s within ~18 months of launch assumes near-immediate uptake and is aggressive."
+        },
+        {
+          "quote": "\"pediatric_under_18_on_drug_pct\": 0.8",
+          "field": "world/population/pediatric_under_18_on_drug_pct",
+          "why": "magnitude: the parent figure was ~0.6% of children with obesity. 0.8% of all under-18s implies roughly 2–3% of adolescents, or about a tenth of those with obesity, on drug. That is hard to square with the claimed fall in under-12 use, six state bans and 'more defensive' specialist prescribing."
+        }
+      ],
+      "badness": {
+        "flourishing": 4,
+        "autonomy": 5,
+        "inequality": 6.5,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 9,
+        "mechanism": 7.5,
+        "magnitude": 6
+      },
+      "generativity": 8,
+      "rationale": {
+        "badness": "The world is recognisably harder, with new losers. A two-tier access system is set by diagnosis coding. A large off-drug cycling population (~9% of adults) is cost-driven. Obesity concentrates in the bottom income third, with the Bridge expiring and nothing permanent behind it. Gray-market importation of unverifiable pens is a further public-health loss. 'Quiet' is sold to ~350k people with no trial measuring blunting, which worsens the epistemic picture. Offsets are real: obesity falls to ~34.5%, no mass-harm claims are made, and nothing here is collapse-level.",
+        "plausibility": "driver_fidelity: Every driver is visibly realised and traceable. Adoption is 11→18.1, prices are stalled at $299–349, employer coverage falls 60→43, retatrutide is approved at 28.7%, the 503B exclusion and state limits are in place, 'Quiet' is the marketed feature, and no new indication or safety signal appears. mechanism: Most changes have chains: employer retreat leads to cash orals, which lead to thinness reaching the middle; compounding closure leads to mail importation; the cycling arithmetic reconciles. The aesthetic inversion rests on niche LA/Brooklyn/Austin anecdotes extrapolated to a social 'status' shift. The garbled retatrutide review line ('>12 months after filing as required') is also a flaw. magnitude: Ever-use of 27%, 65+ use of 17% and pediatric use of 0.8% (the claims above) are aggressive for two years, as is a 17-point employer drop in one cycle; the pipeline timing (CagriSema Dec 2026, retatrutide Apr 2028) and prices are in range.",
+        "generativity": "The Marisol vignette shows rather than explains: coffee after the pill, the card that pays the electric bill, the coding-dependent coverage, the Long Table, the Windsor pen text, and the Quiet ad on the TV. Implied characters include Hector, the sister, the chef and the photographing diner. Scenes are implied by the casting breakdown, the comedy rooms, couples therapists negotiating dose timing and DoD recruiters."
+      },
+      "plausibility": 7.05
+    },
+    {
+      "custom_id": "s1-L0-r04-j2",
+      "least_plausible_claims": [
+        {
+          "quote": "Employer coverage for weight management fell to 43% (BGH, 2028 plan year); nearly all employers that dropped it retain coverage under diabetes and CVD codes, so coding at diagnosis now decides who pays.",
+          "field": "world/access/note",
+          "why": "Magnitude: a 17-point drop in one year is faster than the 12-point drop of 2025-26, and it is paired with the claim that nearly all droppers keep T2D/CVD coverage, which is asserted rather than shown. The 2027-08 event is also dated before the BGH 2028 survey would normally be fielded."
+        },
+        {
+          "quote": "\"us_adults_on_drug_pct\": 18.1",
+          "field": "world/population/us_adults_on_drug_pct",
+          "why": "Magnitude: this is consistent with the +7.1pp driver, but the candidate then stacks a 27% ever-used figure and 37% cycling on it. Those sit uneasily with employer retreat, stalled prices and a cash tier at $299-349 that supposedly lifted the middle income third to 20%."
+        },
+        {
+          "quote": "Roughly 350,000 people are subscribed to programs that sell it as the point.",
+          "field": "world/interior_life/reward_blunting_prevalence_note",
+          "why": "Mechanism/magnitude: Stillwell alone passes 200k subscribers in a year and the total is 350k. The drivers stipulate no new FDA approval, the FDA bars drug-name claims, and Stillwell's own subscriber surveys are the only evidence, so this uptake in about 18 months is asserted, not derived."
+        }
+      ],
+      "badness": {
+        "flourishing": 4.5,
+        "autonomy": 5.5,
+        "inequality": 6.5,
+        "public_health": 4.5,
+        "cohesion": 4.5,
+        "epistemic": 5.5,
+        "overall": 5.2
+      },
+      "plausibility_axes": {
+        "driver_fidelity": 8,
+        "mechanism": 6.5,
+        "magnitude": 5.5
+      },
+      "generativity": 7.5,
+      "rationale": {
+        "badness": "Inequality is the main harm: the two-tier coding system, obesity concentrating in the bottom third, hourly workers losing coverage, and a gray market of unverifiable imported pens (world/access/note, thinness_and_class). Epistemic harm comes from 'quiet' marketing resting on unpublished surveys while no trial measures blunting, and from cycling with no data. Offsets are large: obesity falls, Medicare coverage doubles in the 65+ group, and the inversion is a niche. It reads as a harder society with new losers, not a refusal-level one.",
+        "plausibility": "driver_fidelity: All ten drivers are visible. Adoption is 18.1% (+7.1), prices are stalled, employer coverage retreats, retatrutide is approved at ~28.7%, the inversion is shown in LA/Brooklyn/Austin, restriction appears as age limits, telehealth BMI floors and the 503B exclusion, and Quiet is a marketed feature. The one soft spot is that retatrutide is described as the ~30% pen, though its approval is only Apr 2028. mechanism: Most chains are shown, including the arithmetic reconciling ever/current/cycled, income, and cash orals for the middle. Weaker links: the 'aesthetic inversion' rests on narrow trade niches, Quiet's subscriber uptake is asserted, and the price paradox (stalled prices yet middle-income uptake) is only partly explained. magnitude: The 17-point employer drop, 27% ever-used, 17% in the 65+ group and 37% cycled are all at the aggressive edge, and the retatrutide 14-month review plus a Dec 2026 CagriSema approval are plausible but tight. These correspond to claims 1-3, and several of these figures compound one another.",
+        "generativity": ""
+      },
+      "plausibility": 6.3
+    }
+  ],
+  "scores": {
+    "judge_model": "claude-sonnet-5-5",
+    "rubric": "v2",
+    "least_plausible_claims": [
+      {
+        "quote": "\"us_adults_ever_used_pct\": 27",
+        "field": "world/population/us_adults_ever_used_pct",
+        "why": "Magnitude: ever-use rises from 15% to 27% in two years, and the candidate has 8.9% off now and 37% cycled. This is a very aggressive build on the 7.1pp adoption delta. Adding 7.1pp of current use would more plausibly raise ever-use by roughly 10–12pp, not 12."
+      },
+      {
+        "quote": "Employer coverage for weight management fell to 43% (BGH, 2028 plan year)",
+        "field": "world/access/note",
+        "why": "Magnitude: a drop from 60% to 43% in two years is steep, though the driver stipulates employer retreat. The related claim that nearly all dropping employers keep diabetes and CVD coverage is convenient, and the candidate also reports a sharp 'cash price stalled' but the '$245 never reached the cash channel' contradicts the parent's stated trend to $245."
+      },
+      {
+        "quote": "Roughly 350,000 people are subscribed to programs that sell it as the point.",
+        "field": "world/interior_life/reward_blunting_prevalence_note",
+        "why": "Mechanism and magnitude: 200,000 subscribers within a year of a March 2027 launch, 350,000 by 2028, sold off-label to non-obese adults at $199 under FDA ad enforcement. The growth is asserted, and the 'passes 200,000 subscribers' event and the 70% 'less noise' claim rest on unpublished surveys."
+      }
+    ],
+    "badness": {
+      "flourishing": 4.33,
+      "autonomy": 5.33,
+      "inequality": 6.5,
+      "public_health": 4.5,
+      "cohesion": 4.5,
+      "epistemic": 5.5,
+      "overall": 5.17
+    },
+    "plausibility_axes": {
+      "driver_fidelity": 8.33,
+      "mechanism": 6.83,
+      "magnitude": 5.67
+    },
+    "plausibility": 6.55,
+    "generativity": 7.83,
+    "rationale": {
+      "badness": "The world is a recognisably harder two-tier society: coding at diagnosis decides who pays, obesity concentrates in the bottom third, there is a gray-market importation of unverifiable pens, and 350k people are sold chosen flatness with no trial measuring it. Offsetting this, adult obesity falls and the large majority is better off, so it stays near the middle of the scale. Inequality and epistemic scores carry most of the weight (the blunting effect is unmeasured and FDA governs only the ads).",
+      "plausibility": "driver_fidelity: every driver is visible in fields and events: adoption of 18.1% matches 11 + 7.1, price stalled with $299–349 cash, employer retreat to 43%, triple agonist at 28.7%, aesthetic inversion, restriction, and marketed-feature personality. Gaps are thin: 'safety_signal: none' is honoured, but the Medicare Bridge extension and the 65+ doubling are not driven by any listed driver. mechanism: most changes have chains (503B closure to importation, coding to coverage), and the ever-used arithmetic is shown and reconciles. Weaker are the culture inversion, sorted to niche LA/Brooklyn/Austin circles yet asserted to reshape casting, and the Quiet subscriber growth. magnitude: ever-use at 27% and cycled-off numbers are aggressive, the 65+ jump from 9% to 17% is large for a $50-copay pilot with ~10% newly eligible, and the 43% employer figure falls fast. Retatrutide filing and approval timing is plausible given the 2027 BLA plan.",
+      "generativity": "Marisol, Hector, the Long Table at East Cesar Chavez, the Windsor pen link and the Quiet ad give concrete scenes with strong texture and implied conflict about cost and coding. The world fields add casting, comedy, couples-therapy and dosing-negotiation vignettes that could each become a film. The day-in-the-life shows rather than explains, though the ending is slightly neat."
+    },
+    "plausibility_weights": {
+      "driver_fidelity": 0.2,
+      "mechanism": 0.3,
+      "magnitude": 0.5
     }
   }
 }
