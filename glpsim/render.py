@@ -137,8 +137,35 @@ def population_bounds(parent_world: dict, drivers: dict) -> dict:
     }
 
 
+def badness_reference(reference_world: dict | None, parent_year: int, target_year: int) -> dict:
+    """The three badness placeholders in judge.md. Without a reference world (rubric v2) they
+    render to the v2 text exactly; with the researched 2026 baseline (rubric v3) badness is an
+    absolute state measured against it."""
+    if reference_world is None:
+        return {"badness_reference_block": "", "badness_scope": "",
+                "badness_top": "as bad as a plausible two-year world can be",
+                "badness_anchor_year": parent_year}
+    ref_year = reference_world["year"]
+    return {
+        "badness_reference_block": (
+            f"### Reference world for badness ({ref_year}, researched)\n\n"
+            f"The real world as of November {ref_year}, from sourced research. Score badness against "
+            f"this world. The starting world below is the ground for plausibility only.\n\n"
+            f"```json\n{pretty(reference_world)}\n```\n\n"),
+        "badness_scope": (
+            f"**Badness is absolute, measured against the {ref_year} reference world.** Score the "
+            f"state the candidate is in by {target_year}, with everything it inherited: harms that "
+            f"were already present in {parent_year} count in full, not only what changed since. A "
+            f"world that kept every harm of its starting world and added little is as bad as it "
+            f"is.\n\n"),
+        "badness_top": f"as bad as a plausible {target_year} can be",
+        "badness_anchor_year": f"{ref_year} (the reference world)",
+    }
+
+
 def judge_prompt(paths, *, parent_world: dict, parent_year: int, target_year: int, drivers: dict,
-                 candidate_world: dict, candidate_prose: dict) -> tuple[str, str]:
+                 candidate_world: dict, candidate_prose: dict,
+                 reference_world: dict | None = None) -> tuple[str, str]:
     """Only what METHOD §6 allows the judge to see: parent world, drivers, the candidate."""
     system_t, user_t = load_template(paths, "judge")
     values = {
@@ -151,6 +178,7 @@ def judge_prompt(paths, *, parent_world: dict, parent_year: int, target_year: in
         "candidate_world_in_600_words": candidate_prose["world_in_600_words"],
         "candidate_a_day_in_the_life": candidate_prose["a_day_in_the_life"],
         "magnitude_envelope": magnitude_envelope(paths, parent_world, drivers, parent_year, target_year),
+        **badness_reference(reference_world, parent_year, target_year),
     }
     return fill(system_t, values), fill(user_t, values)
 

@@ -95,7 +95,19 @@ pays for it.
 5. Social cohesion — trust, family, eating as ritual, solidarity
 6. Epistemic health — can people tell what is happening to them; is the harm nameable
 
-Worst means worse *for people*, not more spectacular. The rubric instructs the
+Worst means worse *for people*, not more spectacular.
+
+**Badness reference.** In steps 1–4 (rubric v2) the judge sees the parent world
+and scores badness with the anchors written against it ("3 = a worse version of
+the parent year"), so each step largely measures how much harder life got in its
+two years. In step 5 (rubric v3, `config/sim.json:
+judging.absolute_badness_from_step = 5`) the judge also receives the researched
+2026 baseline and scores badness as the candidate's absolute state against it,
+inherited harm included: the final selection picks the worst 2036, not the
+sharpest last two years. Plausibility is still judged against the parent world
+in every step. Selection only ever compares runs within one step, so the change
+of scale between steps 4 and 5 does not affect any selection; each run's
+`scores.rubric` records which scale it was judged on, and `lineage.md` says so. The rubric instructs the
 judge to penalise melodrama: mass death, collapse and cartoon villains lower
 plausibility and do not raise badness unless the mechanism is shown.
 

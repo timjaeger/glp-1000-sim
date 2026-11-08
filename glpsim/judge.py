@@ -21,6 +21,16 @@ from .world import MissingParentError, load_parents
 
 
 JUDGE_RUBRIC = "v2"   # prompts/judge.md: plausibility sub-axes + three quoted least-plausible claims
+JUDGE_RUBRIC_ABSOLUTE = "v3"   # v2 + badness absolute against the 2026 baseline
+
+
+def absolute_badness(cfg: dict, step: int) -> bool:
+    start = cfg["judging"].get("absolute_badness_from_step")
+    return start is not None and step >= start
+
+
+def judge_rubric(cfg: dict, step: int) -> str:
+    return JUDGE_RUBRIC_ABSOLUTE if absolute_badness(cfg, step) else JUDGE_RUBRIC
 
 
 def judge_custom_ids(run_id: str, samples: int) -> list[str]:
@@ -29,6 +39,7 @@ def judge_custom_ids(run_id: str, samples: int) -> list[str]:
 
 def build(paths, cfg: dict, step: int, runs: list[dict]) -> list[dict]:
     parents = load_parents(paths, cfg, step)
+    reference = load_json(paths.baseline) if absolute_badness(cfg, step) else None
     schema = batch.judge_api_schema(paths)
     samples = cfg["judging"].get("judge_samples", 1)
     requests = []
@@ -37,7 +48,7 @@ def build(paths, cfg: dict, step: int, runs: list[dict]) -> list[dict]:
         system, user = render.judge_prompt(
             paths, parent_world=parent["world"], parent_year=parent["year"],
             target_year=step_year(cfg, step), drivers=run["drivers"],
-            candidate_world=run["world"], candidate_prose=run["prose"])
+            candidate_world=run["world"], candidate_prose=run["prose"], reference_world=reference)
         for cid in judge_custom_ids(run["run_id"], samples):
             requests.append(batch.build_request(cid, model=cfg["models"]["judge"],
                                                 call_cfg=cfg["judging"], system=system, user=user,

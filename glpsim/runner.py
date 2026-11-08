@@ -564,7 +564,7 @@ def judge_batch_files(paths, step: int, state: dict | None, resuming: bool = Fal
 
 
 def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
-    from .judge import judge_custom_ids
+    from .judge import judge_custom_ids, judge_rubric
     state = load_state(paths, step, "judge")
     msg = check_resume(state, args, "judge", step)
     if msg:
@@ -621,7 +621,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                 p, run = by_id[rid]
                 if rid not in pending:
                     finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"],
-                                     judge_min_completed(cfg))
+                                     judge_min_completed(cfg), judge_rubric(cfg, step))
                 dump_json(p, run)
             state["repair_ids"] = sorted(repair_ids)
             state["phase"] = "awaiting_repair" if repair_ids else "done"
@@ -672,7 +672,7 @@ def run_judge(paths, cfg, args, step, loaded, runs, requests) -> int:
                 if not rec["errors"]:
                     rec["repaired"] = True
                 finish_judgement(run, judge_model, samples_n, rid, cfg["plausibility_weights"],
-                                 judge_min_completed(cfg))
+                                 judge_min_completed(cfg), judge_rubric(cfg, step))
                 dump_json(p, run)
             state["phase"] = "done"
             save_state(paths, state)
@@ -760,7 +760,7 @@ def judge_min_completed(cfg: dict) -> int:
 
 
 def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str, weights: dict,
-                     min_completed: int | None = None) -> None:
+                     min_completed: int | None = None, rubric: str | None = None) -> None:
     """Fold the completed samples (parked in run['judge_samples'], tagged by custom_id) into
     `scores`, called once the run has no sample waiting for a repair or retry. A run needs at
     least `min_completed` completed samples; the mean is over those only, never over partial
@@ -768,6 +768,7 @@ def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str, weig
     `min_completed` stays unscored (so `select` excludes it), with the reasons in
     validation.judge.errors."""
     from .judge import JUDGE_RUBRIC, judge_custom_ids
+    rubric = rubric or JUDGE_RUBRIC
     if min_completed is None:
         min_completed = samples_n
     got = {s["custom_id"]: s for s in run.get("judge_samples", [])}
@@ -779,7 +780,7 @@ def finish_judgement(run: dict, judge_model: str, samples_n: int, rid: str, weig
                              f"(need {min_completed}); unscored")
         return
     samples = [{k: v for k, v in got[c].items() if k != "custom_id"} for c in done]
-    run["scores"] = {"judge_model": judge_model, "rubric": JUDGE_RUBRIC,
+    run["scores"] = {"judge_model": judge_model, "rubric": rubric,
                      **mean_scores(samples, weights), "plausibility_weights": dict(weights)}
     if samples_n == 1:
         run.pop("judge_samples", None)

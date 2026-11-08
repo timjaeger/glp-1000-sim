@@ -646,3 +646,16 @@ def test_rejudge_appends_to_the_call_history(repo, client, monkeypatch):
     monkeypatch.setattr(runner, "get_client", lambda: jc)
     assert J.main(repo, jargs(rejudge=True)) == 0
     assert len(run(repo, "s1-L0-r00")["provenance"]["judge"]) == 6       # 3 from each pass
+
+
+
+def test_finish_judgement_records_the_rubric_it_was_given():
+    w = load_sim_config(ROOT_PATHS)["plausibility_weights"]
+    run = {"judge_samples": [{"custom_id": f"r-j{i}", **scores()} for i in range(3)],
+           "validation": {"judge": {"errors": [], "repair_attempted": False}}}
+    runner.finish_judgement(run, "judge", 3, "r", w, 2, "v3")
+    assert run["scores"]["rubric"] == "v3"
+    run2 = {"judge_samples": [{"custom_id": "r", **scores()}],
+            "validation": {"judge": {"errors": [], "repair_attempted": False}}}
+    runner.finish_judgement(run2, "judge", 1, "r", w)
+    assert run2["scores"]["rubric"] == "v2"

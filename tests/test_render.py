@@ -32,7 +32,7 @@ def test_templates_split_into_system_and_user_without_preamble(name):
     system, user = render.load_template(Paths(ROOT), name)
     assert system.startswith("You are ")
     assert "Rendered by" not in system + user and "## User" not in system
-    assert user.startswith("### ")
+    assert user.removeprefix("{{badness_reference_block}}").startswith("### ")   # judge: optional v3 block
 
 
 def test_fill_rejects_missing_values():
@@ -310,3 +310,36 @@ def test_judge_gets_exactly_the_generators_envelope(baseline, fixture_run):
     assert env in gen and env in judge
     assert "Within the stipulated envelope and internally reconciled" in judge
     assert "Do not penalise movement the drivers or the\n  envelope stipulate" in judge
+
+
+def _judge_user(fixture_run, baseline, reference):
+    return render.judge_prompt(Paths(ROOT), parent_world=baseline, parent_year=2034, target_year=2036,
+                               drivers=fixture_run["drivers"], candidate_world=fixture_run["world"],
+                               candidate_prose=fixture_run["prose"], reference_world=reference)[1]
+
+
+def test_v2_judge_prompt_is_unchanged_by_the_v3_placeholders(fixture_run, baseline):
+    user = _judge_user(fixture_run, baseline, None)
+    assert user.startswith("### Starting world (2034)")
+    assert "Reference world for badness" not in user and "Badness is absolute" not in user
+    assert "1 (benign) to 10 (as bad as a plausible two-year world can be)" in user
+    assert "Anchors: 3 = a worse version of 2034;" in user
+
+
+def test_v3_judge_prompt_scores_badness_against_the_2026_baseline(fixture_run, baseline):
+    user = _judge_user(fixture_run, baseline, baseline)
+    assert user.startswith("### Reference world for badness (2026, researched)")
+    assert render.pretty(baseline) in user.split("### Starting world")[0]
+    assert "**Badness is absolute, measured against the 2026 reference world.**" in user
+    assert "harms that were already present in 2034 count in full" in user
+    assert "1 (benign) to 10 (as bad as a plausible 2036 can be)" in user
+    assert "Anchors: 3 = a worse version of 2026 (the reference world);" in user
+    assert "### Starting world (2034)" in user and "Score `magnitude` against it" in user   # plausibility unchanged
+
+
+def test_absolute_badness_switches_on_at_the_configured_step():
+    from glpsim import judge as Jm
+    cfg = load_json(ROOT / "config" / "sim.json")
+    assert cfg["judging"]["absolute_badness_from_step"] == 5
+    assert [Jm.judge_rubric(cfg, s) for s in range(1, 6)] == ["v2", "v2", "v2", "v2", "v3"]
+    assert not Jm.absolute_badness(dict(cfg, judging={}), 5)

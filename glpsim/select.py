@@ -250,6 +250,7 @@ def lineage_section(sel: Selection, cfg: dict, year: int, runs: list[dict], sele
     seeds = sorted({r["seed"] for r in runs if r.get("seed") is not None})
     gen_models = sorted({r["generator_model"] for r in runs if r.get("generator_model")})
     judge_models = sorted({r["scores"]["judge_model"] for r in runs if r.get("scores", {}).get("judge_model")})
+    rubrics = sorted({r["scores"].get("rubric", "v1") for r in runs if r.get("scores")})
 
     reasons: dict[str, int] = {}
     for r in sel.excluded.values():
@@ -260,7 +261,9 @@ def lineage_section(sel: Selection, cfg: dict, year: int, runs: list[dict], sele
          f"## Step {sel.step} · {year} · axis of worst: {sel.axis}", "",
          f"- Selected {selected_at} from {n_runs} run(s) of parent lineage(s) {', '.join(parents)}"
          + (f"; seed {', '.join(map(str, seeds))}" if seeds else ""),
-         f"- Generator {', '.join(gen_models) or '?'} · judge {', '.join(judge_models) or '?'}",
+         f"- Generator {', '.join(gen_models) or '?'} · judge {', '.join(judge_models) or '?'}"
+         + (f" · rubric {', '.join(rubrics)}" if rubrics else "")
+         + (" (badness absolute against the 2026 baseline)" if "v3" in rubrics else ""),
          f"- Weights: {_weights_line(axis_cfg, cfg['section_severity_weight'])}",
          f"- Magnitude floor (hard): {cfg['magnitude_floor']:g} · composite plausibility = "
          + " + ".join(f"{w:g}×{k}" for k, w in cfg["plausibility_weights"].items()),

@@ -11,6 +11,12 @@ repair attempt.
 
 Rubric v2: plausibility is three separately-scored sub-axes, and the judge lists
 the three least plausible specific claims, quoted, before it scores anything.
+Rubric v3 (steps >= `config/sim.json: judging.absolute_badness_from_step`, i.e.
+step 5): v2 plus absolute badness. The judge also sees the researched 2026
+baseline and scores badness as the candidate's absolute state against it,
+inherited harm included, instead of against the starting world. Plausibility is
+still judged against the starting world. In v2 steps the three badness
+placeholders render to exactly the v2 text.
 Rubric v1 (a single plausibility score) judged step 1 pass 1; those scores are
 kept in each run's `superseded_scores`.
 
@@ -27,7 +33,7 @@ for two years is a flaw, and spectacle is not severity.
 
 ## User
 
-### Starting world ({{parent_year}})
+{{badness_reference_block}}### Starting world ({{parent_year}})
 
 ```json
 {{parent_world_json}}
@@ -79,7 +85,7 @@ For each give:
 The drivers are stipulated as true; a claim that only restates a driver is not
 eligible. Choose three different claims, not three facets of one.
 
-**Badness** — 1 (benign) to 10 (as bad as a plausible two-year world can be),
+**Badness** — 1 (benign) to 10 ({{badness_top}}),
 scored *for people*, not for spectacle. Score six dimensions and an `overall`
 that is your own judgment, not an average:
 
@@ -90,7 +96,7 @@ that is your own judgment, not an average:
 - `cohesion` — trust, family, eating as ritual, solidarity, intergenerational relations
 - `epistemic` — can people tell what is happening to them; is the harm nameable, measured, discussable
 
-Anchors: 3 = a worse version of {{parent_year}}; 5 = a recognisably harder
+{{badness_scope}}Anchors: 3 = a worse version of {{badness_anchor_year}}; 5 = a recognisably harder
 society with new losers; 7 = a society most present-day readers would refuse
 to live in if they understood it; 9 = the harm is structural, normalised and
 hard to see from inside. **Melodrama rule:** mass death, collapse, villains
