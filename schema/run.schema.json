@@ -177,7 +177,9 @@
         "first_errors": {"type": "array", "items": {"type": "string"}, "description": "errors in the original response, kept after a repair"},
         "raw_output": {"type": ["string", "null"], "description": "the failing response text (null once a run is valid)"},
         "repair_attempted": {"type": "boolean"},
-        "repaired": {"type": "boolean"}
+        "repaired": {"type": "boolean"},
+        "decoded_string_fields": {"type": "array", "items": {"type": "string", "enum": ["world", "prose"]},
+                                  "description": "top-level fields that arrived as JSON-encoded strings and were decoded (no content change)"}
       }
     }
   }

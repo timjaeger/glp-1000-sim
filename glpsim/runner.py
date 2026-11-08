@@ -278,6 +278,24 @@ def parse_json(text: str | None) -> tuple[object, list[str]]:
                       "the response may have been cut off by max_tokens"]
 
 
+def decode_string_fields(obj, keys=("world", "prose")) -> tuple[object, list[str]]:
+    """A tool call sometimes carries `world` or `prose` as a JSON-encoded string rather than
+    an object. Decoding it changes no content, so do that instead of spending a repair; the
+    decoded keys are recorded in validation.generation.decoded_string_fields."""
+    decoded = []
+    if isinstance(obj, dict):
+        for k in keys:
+            if isinstance(obj.get(k), str):
+                try:
+                    v = json.loads(obj[k])
+                except json.JSONDecodeError:
+                    continue
+                if isinstance(v, dict):
+                    obj[k] = v
+                    decoded.append(k)
+    return obj, decoded
+
+
 def check_generation(paths, obj, year: int) -> list[str]:
     if not isinstance(obj, dict) or set(obj) != {"world", "prose"}:
         return ["(root): must be an object with exactly the keys 'world' and 'prose'"]
@@ -438,6 +456,7 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
                         "raw_output": res["text"], "repair_attempted": False}
                 else:
                     obj, errs = parse_json(res["text"])
+                    obj, decoded = decode_string_fields(obj)
                     errs = errs or check_generation(paths, obj, year)
                     if not errs:
                         run.update(status="ok", world=obj["world"], prose=obj["prose"])
@@ -447,6 +466,8 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
                         run.setdefault("validation", {})["generation"] = {
                             "errors": errs, "raw_output": res["text"], "repair_attempted": False}
                         repair_ids.append(rid)
+                    if decoded:
+                        run["validation"]["generation"]["decoded_string_fields"] = decoded
                 dump_json(p, run)
             missing = [rid for rid, (_, r) in runs.items() if r["status"] == "pending" and rid not in results]
             for rid in missing:
@@ -491,6 +512,9 @@ def run_generate(paths, cfg, args, step, seed, plan, requests, batch_path) -> in
                         v.update(errors=[f"repair: {res['error'] or 'refusal ' + str(res['refusal'])}"], repaired=False)
                     else:
                         obj, errs = parse_json(res["text"])
+                        obj, decoded = decode_string_fields(obj)
+                        if decoded:
+                            v["decoded_string_fields"] = sorted(set(v.get("decoded_string_fields", [])) | set(decoded))
                         errs = errs or check_generation(paths, obj, year)
                         if errs:
                             v.update(errors=errs, raw_output=res["text"], repaired=False)

@@ -552,3 +552,23 @@ def test_three_samples_average_sub_axes_then_weight_the_composite():
     assert out["plausibility_axes"] == {"driver_fidelity": 8, "mechanism": 7, "magnitude": 5}
     assert out["plausibility"] == pytest.approx(0.2 * 8 + 0.3 * 7 + 0.5 * 5)   # 6.2
     assert out["least_plausible_claims"] == s[0]["least_plausible_claims"]
+
+
+def test_world_sent_as_a_json_string_is_decoded_not_repaired(repo, monkeypatch):
+    def responder(bid, req):
+        cid = req["custom_id"]
+        return tool_result(cid, {"world": json.dumps(GOOD["world"]), "prose": GOOD["prose"]})
+    c = FakeClient(responder)
+    monkeypatch.setattr(runner, "get_client", lambda: c)
+    monkeypatch.setattr(runner.time, "sleep", lambda s: None)
+    assert G.main(repo, gargs()) == 0
+    assert list(c.messages.batches.created) == ["msgbatch_01"]           # no repair batch
+    r0 = run(repo, "s1-L0-r00")
+    assert r0["status"] == "ok" and r0["world"] == GOOD["world"]
+    assert r0["validation"]["generation"]["decoded_string_fields"] == ["world"]
+    assert validate_tree(repo)[1] == []
+
+
+def test_decode_leaves_non_json_strings_for_validation_to_reject():
+    obj, decoded = runner.decode_string_fields({"world": "not json", "prose": "[1, 2]"})
+    assert decoded == [] and obj == {"world": "not json", "prose": "[1, 2]"}
